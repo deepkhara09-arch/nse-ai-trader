@@ -1,0 +1,78 @@
+name: NSE AI Trader
+
+on:
+  # ── 3 sessions per weekday (IST = UTC+5:30) ──────────────────────────────
+  schedule:
+    - cron: "0 4 * * 1-5"    # 09:30 IST — market open
+    - cron: "30 6 * * 1-5"   # 12:00 IST — midday review
+    - cron: "30 9 * * 1-5"   # 15:00 IST — pre-close decisions
+
+  # Manual trigger (you can also pick a session from the UI)
+  workflow_dispatch:
+    inputs:
+      session:
+        description: "Session to run"
+        required: false
+        default: "morning"
+        type: choice
+        options: [morning, midday, preclose]
+
+permissions:
+  contents: write   # needed to commit brain + dashboard back to repo
+
+jobs:
+  trade:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Detect session from schedule
+        id: session
+        run: |
+          # If manually triggered, use the input; otherwise detect from UTC hour
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "name=${{ github.event.inputs.session }}" >> $GITHUB_OUTPUT
+          else
+            HOUR=$(date -u +%H)
+            MIN=$(date -u +%M)
+            if [ "$HOUR" = "04" ]; then
+              echo "name=morning" >> $GITHUB_OUTPUT
+            elif [ "$HOUR" = "06" ]; then
+              echo "name=midday" >> $GITHUB_OUTPUT
+            else
+              echo "name=preclose" >> $GITHUB_OUTPUT
+            fi
+          fi
+
+      - name: Run agent
+        env:
+          SESSION: ${{ steps.session.outputs.name }}
+        run: python -m agent.main
+
+      - name: Commit brain files and dashboard
+        run: |
+          git config user.name  "NSE AI Trader Bot"
+          git config user.email "bot@nse-ai-trader.local"
+          git add brain/ docs/ STRATEGY_REPORT.md README.md
+          if ! git diff --cached --quiet; then
+            SESSION="${{ steps.session.outputs.name }}"
+            DATE=$(date +"%Y-%m-%d")
+            git commit -m "[$DATE $SESSION] brain update + dashboard refresh"
+            git push
+          else
+            echo "Nothing changed — skipping commit."
+          fi

@@ -10,10 +10,11 @@ SESSIONS = {
     "preclose":  {"utc_hour": 9,  "utc_min": 30, "ist": "15:00"},   # pre-close decisions
 }
 
-# ── Phase durations (calendar days) ──────────────────────────────────────────
-EXPLORATION_DAYS   = 5    # watch full universe
-ANALYSIS_DAYS      = 10   # deep watch selected stocks
-PAPER_TRADING_DAYS = 20   # paper trade & learn
+# ── Phase durations (trading sessions) ───────────────────────────────────────
+# Longer phases = more data = better decisions. We'd rather wait.
+EXPLORATION_DAYS   = 7    # raised from 5 → 7 days watching full universe
+ANALYSIS_DAYS      = 14   # raised from 10 → 14 days deep watching selected stocks
+PAPER_TRADING_DAYS = 30   # raised from 20 → 30 days paper trading before alerting
 # After paper trading, agent cycles back to keep signals fresh
 
 # ── Universe — Nifty 100 stocks (CMP filter ≤ ₹5000 applied at runtime) ───────
@@ -64,8 +65,19 @@ FLAT_STOP_PCT          = 0.035     # fallback if ATR unavailable
 FLAT_TARGET_PCT        = 0.07
 
 # Win rate needed before alerting you
-WIN_RATE_THRESHOLD     = 0.57
-MIN_TRADES_FOR_SIGNAL  = 12
+# Conservative thresholds — we'd rather wait longer and be right than rush
+WIN_RATE_THRESHOLD     = 0.60      # raised from 0.57 — need 60%+ win rate
+MIN_TRADES_FOR_SIGNAL  = 25        # raised from 12 — need 25 closed paper trades
+
+# Recommendation validity — how long a rec stays "fresh" after generation
+# If price moves more than this % away from entry zone, rec is flagged as STALE
+REC_STALE_PRICE_MOVE_PCT = 0.8    # flag if CMP has moved >0.8% from entry midpoint
+# Session validity windows (IST) — what each session's recs are valid until
+REC_SESSION_VALID_UNTIL = {
+    "morning":  "12:00 IST",   # morning recs valid until midday run
+    "midday":   "15:00 IST",   # midday recs valid until preclose run
+    "preclose": "09:30 IST",   # preclose recs valid until next morning (next trading day)
+}
 
 # ── Technical indicator parameters ───────────────────────────────────────────
 EMA_SHORT    = 9

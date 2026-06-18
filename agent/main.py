@@ -304,7 +304,7 @@ def _refresh_outputs(state: dict, market_health: dict, session: str) -> None:
         # Regenerate recommendations every preclose session or on first run
         if session == "preclose" or not os.path.exists("brain/recommendations.json"):
             prev_recs = load_recommendations()
-            recs = generate_recommendations(state, sd, pats, nd, book, market_health, fund)
+            recs = generate_recommendations(state, sd, pats, nd, book, market_health, fund, session=session)
             # Compute and persist what changed vs previous recommendations
             changes = compute_changes(prev_recs, recs)
             if changes:

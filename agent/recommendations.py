@@ -19,12 +19,13 @@ positive expectancy, confidence gets a small boost. It is NOT a gate.
 
 import json
 import os
-from datetime import date
+from datetime import date, datetime
 from typing import Dict, List
 
 from agent.config import (
     BRAIN_DIR, INITIAL_CAPITAL,
     ATR_STOP_MULTIPLIER, ATR_TARGET_MULTIPLIER,
+    REC_STALE_PRICE_MOVE_PCT, REC_SESSION_VALID_UNTIL,
 )
 from agent.support_resistance import compute_levels, nearest_strong_support, nearest_strong_resistance
 from agent.brain import analyse_stock, get_reliable_patterns_list
@@ -95,6 +96,7 @@ def generate_recommendations(
     book: dict,
     market_health: dict,
     fundamentals: Dict = None,
+    session: str = "preclose",
 ) -> List[dict]:
     focus       = state.get("focus_stocks", [])
     trade_ok    = market_health.get("trade_allowed", True)
@@ -273,11 +275,27 @@ def generate_recommendations(
 
         rank_info = rank_table.get(ticker, {})
 
+        # Validity metadata — tells the user when this rec expires and if it's stale
+        generated_at    = datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC")
+        valid_until_ist = REC_SESSION_VALID_UNTIL.get(session, "next session")
+        entry_mid       = round((entry_low + entry_high) / 2, 2)
+        price_moved_pct = round(abs(close - entry_mid) / entry_mid * 100, 2) if entry_mid else 0
+        is_stale        = price_moved_pct > REC_STALE_PRICE_MOVE_PCT
+        stale_reason    = (
+            f"CMP ₹{close:,.2f} has moved {price_moved_pct:.1f}% from entry zone midpoint ₹{entry_mid:,.2f}"
+            if is_stale else ""
+        )
+
         rec = {
             "ticker":       ticker,
             "nse_code":     ticker.replace(".NS", ""),
             "company_name": STOCK_NAMES.get(ticker, ticker),
             "date":         date.today().isoformat(),
+            "generated_at": generated_at,
+            "valid_until":  valid_until_ist,
+            "session":      session,
+            "is_stale":     is_stale,
+            "stale_reason": stale_reason,
             "signal":       opinion["signal"],
             "style":        style,
             "hold_period":  hold,

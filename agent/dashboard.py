@@ -1501,20 +1501,42 @@ def _section_recommendations(recs) -> str:
         support    = rec.get("nearest_support",    0)
         resistance = rec.get("nearest_resistance", 0)
         cmp        = rec.get("cmp", 0)
+        is_stale      = rec.get("is_stale", False)
+        stale_reason  = rec.get("stale_reason", "")
+        generated_at  = rec.get("generated_at", "")
+        valid_until   = rec.get("valid_until", "")
+
+        stale_banner = ""
+        if is_stale:
+            stale_banner = f"""<div style="background:#3a1a1a;border:1px solid var(--bear);border-radius:8px;padding:8px 12px;margin-bottom:10px;display:flex;align-items:center;gap:8px">
+  <span style="font-size:1rem">⚠️</span>
+  <div>
+    <div style="font-size:.73rem;font-weight:700;color:var(--bear)">STALE — Price Has Moved</div>
+    <div style="font-size:.67rem;color:#cc8888;margin-top:2px">{stale_reason}. Wait for the next session's fresh recommendation before acting.</div>
+  </div>
+</div>"""
+
+        validity_line = ""
+        if generated_at or valid_until:
+            validity_line = f'<span style="font-size:.62rem;color:var(--muted)">Generated {generated_at} &nbsp;·&nbsp; Valid until <strong style="color:var(--cyan)">{valid_until}</strong></span>'
 
         cards += f"""<div class="rec-card {cls}">
   <div class="rec-header">
     <div>
       <div class="rec-name">{rec.get('company_name','')}</div>
       <div class="rec-code">NSE: <strong>{rec.get('nse_code','')}</strong> &nbsp;&middot;&nbsp; {rec.get('date','')}</div>
+      {validity_line}
     </div>
     <div style="display:flex;gap:5px;flex-wrap:wrap;justify-content:flex-end;align-items:center">
       <span class="badge {sig_badge_cls}">{signal}</span>
       <span class="badge badge-blue">{rec.get('style','').capitalize()}</span>
       <span class="badge badge-cyan">{rec.get('hold_period','')}</span>
       {f'<span class="badge" style="background:#1a2233;color:#7eb3ff">#{focus_rank} {delta_html}</span>' if focus_rank else ""}
+      {'<span class="badge badge-red">⚠ STALE</span>' if is_stale else ""}
     </div>
   </div>
+
+  {stale_banner}
 
   <div style="display:flex;gap:10px;margin-bottom:10px;flex-wrap:wrap">
     <div style="flex:1;min-width:120px;background:var(--card2);border-radius:8px;padding:8px 10px">

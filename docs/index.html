@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NSE AI Trader</title>
+<meta http-equiv="refresh" content="300">
+<style>
+:root{
+  --bg:#090c14;--card:#111827;--card2:#1a2035;--card3:#0d1628;
+  --green:#10b981;--red:#ef4444;--yellow:#f59e0b;--blue:#6366f1;
+  --cyan:#06b6d4;--purple:#a855f7;
+  --text:#f1f5f9;--muted:#64748b;--border:#1e293b;
+  --font:'Inter',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:var(--font);font-size:14px;line-height:1.6;min-height:100vh}
+a{color:inherit;text-decoration:none}
+h2{font-size:1rem;font-weight:600;color:var(--text);margin-bottom:14px;
+   display:flex;align-items:center;gap:8px}
+h2 span{font-size:.7rem;color:var(--muted);font-weight:400}
+h3{font-size:.88rem;font-weight:600}
+.header{background:linear-gradient(135deg,#0f172a,#1e1b4b);
+  border-bottom:1px solid var(--border);padding:14px 24px;
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;
+  position:sticky;top:0;z-index:100;backdrop-filter:blur(10px)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo h1{font-size:1.25rem;font-weight:700;background:linear-gradient(90deg,#818cf8,#34d399);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.badge{padding:2px 9px;border-radius:20px;font-size:.72rem;font-weight:600;white-space:nowrap}
+.badge-green{background:#10b98120;color:var(--green);border:1px solid #10b98140}
+.badge-yellow{background:#f59e0b20;color:var(--yellow);border:1px solid #f59e0b40}
+.badge-blue{background:#6366f120;color:#818cf8;border:1px solid #6366f140}
+.badge-red{background:#ef444420;color:var(--red);border:1px solid #ef444440}
+.badge-cyan{background:#06b6d420;color:var(--cyan);border:1px solid #06b6d440}
+.container{max-width:1440px;margin:0 auto;padding:20px 16px}
+.section{margin-bottom:32px;scroll-margin-top:70px}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:16px}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.grid4{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.grid5{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px;position:relative}
+.card:hover{border-color:#334155}
+.stat-card{background:var(--card3);border:1px solid var(--border);border-radius:10px;
+  padding:16px;transition:border-color .2s}
+.stat-card:hover{border-color:#334155}
+.stat-val{font-size:1.65rem;font-weight:700;line-height:1.1;margin-bottom:4px}
+.stat-label{font-size:.72rem;color:var(--muted);font-weight:500;text-transform:uppercase;letter-spacing:.05em}
+.green{color:var(--green)} .red{color:var(--red)} .yellow{color:var(--yellow)}
+.blue{color:#818cf8} .cyan{color:var(--cyan)} .muted{color:var(--muted)}
+table{width:100%;border-collapse:collapse}
+th{color:var(--muted);font-size:.72rem;font-weight:500;text-transform:uppercase;
+  letter-spacing:.05em;padding:9px 12px;border-bottom:1px solid var(--border);text-align:left;white-space:nowrap}
+td{padding:9px 12px;border-bottom:1px solid #0f172a;font-size:.82rem;vertical-align:middle}
+tr:last-child td{border:none}
+tr:hover td{background:#0f1628}
+.pill{display:inline-flex;align-items:center;gap:3px;padding:2px 8px;border-radius:4px;
+  font-size:.72rem;font-weight:600;white-space:nowrap}
+.pill-green{background:#10b98118;color:var(--green);border:1px solid #10b98130}
+.pill-red{background:#ef444418;color:var(--red);border:1px solid #ef444430}
+.pill-yellow{background:#f59e0b18;color:var(--yellow);border:1px solid #f59e0b30}
+.pill-blue{background:#6366f118;color:#818cf8;border:1px solid #6366f130}
+.pill-cyan{background:#06b6d418;color:var(--cyan);border:1px solid #06b6d430}
+.irow{display:flex;justify-content:space-between;align-items:center;
+  padding:5px 0;border-bottom:1px solid #0f172a;font-size:.82rem}
+.irow:last-child{border:none}
+.nav{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:22px;padding:10px 0;
+  border-bottom:1px solid var(--border)}
+.nav a{color:var(--muted);padding:4px 12px;border-radius:6px;font-size:.78rem;
+  border:1px solid transparent;transition:all .18s}
+.nav a:hover{color:var(--text);border-color:var(--border);background:var(--card)}
+.progress{height:4px;border-radius:2px;background:#1e293b;overflow:hidden}
+.progress-fill{height:100%;border-radius:2px;transition:width .5s}
+.market-bar{background:var(--card3);border:1px solid var(--border);border-radius:10px;
+  padding:12px 18px;margin-bottom:20px;display:flex;flex-wrap:wrap;gap:20px;align-items:center}
+.mkt-item{display:flex;flex-direction:column;gap:2px}
+.mkt-val{font-size:1.05rem;font-weight:700}
+.mkt-lbl{font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.rec-card{border-radius:12px;padding:18px;border:1px solid;margin-bottom:14px;position:relative}
+.rec-buy{background:#10b98108;border-color:#10b98130}
+.rec-sell{background:#ef444408;border-color:#ef444430}
+.rec-header{display:flex;justify-content:space-between;align-items:start;margin-bottom:12px;flex-wrap:wrap;gap:8px}
+.rec-name{font-size:1.05rem;font-weight:700}
+.rec-code{font-size:.78rem;color:var(--muted);margin-top:2px}
+.rec-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:12px 0}
+.rec-field{background:var(--card);border-radius:8px;padding:10px 12px}
+.rec-field-val{font-size:1rem;font-weight:700}
+.rec-field-lbl{font-size:.68rem;color:var(--muted);margin-top:2px}
+.conf-bar{margin-top:10px}
+.reasons-list{margin-top:10px;padding:10px 12px;background:var(--card);border-radius:8px}
+.reasons-list li{font-size:.78rem;color:var(--muted);margin-bottom:3px;list-style:none;padding-left:12px;position:relative}
+.reasons-list li::before{content:"›";position:absolute;left:0;color:#6366f1}
+.stock-card{background:var(--card);border:1px solid var(--border);border-radius:10px;
+  padding:14px;transition:border-color .2s}
+.stock-card:hover{border-color:#6366f1}
+.timeline{display:flex;align-items:center;gap:0;flex-wrap:wrap;margin-top:10px}
+.tphase{display:flex;align-items:center;gap:6px;padding:6px 10px;border-radius:6px;font-size:.78rem}
+.tphase-done{background:#10b98112;color:var(--green)}
+.tphase-active{background:#f59e0b12;color:var(--yellow)}
+.tphase-future{color:var(--muted)}
+.tarrow{color:var(--muted);margin:0 2px;font-size:.75rem}
+.warn-banner{background:#ef444410;border:1px solid #ef444430;border-radius:8px;
+  padding:10px 14px;margin-bottom:12px;font-size:.82rem;color:var(--red)}
+.alert-banner{background:linear-gradient(135deg,#10b98112,#6366f112);
+  border:1px solid #10b98140;border-radius:10px;padding:14px 18px;
+  margin-bottom:20px;display:flex;align-items:center;gap:12px}
+.note-line{padding:6px 0;border-bottom:1px solid #0f172a;font-size:.78rem;color:var(--muted)}
+.note-line:last-child{border:none}
+.note-line strong{color:var(--text)}
+@media(max-width:640px){
+  .stat-val{font-size:1.2rem}
+  .header h1{font-size:1rem}
+  td,th{padding:7px 8px}
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <div class="logo">
+    <h1>📊 NSE AI Trader</h1>
+    <span class="badge badge-blue">Exploration</span>
+    <span class="badge badge-cyan">Day 1</span>
+    <span class="badge badge-yellow">↔ Market Neutral</span>
+  </div>
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+    <span class="badge badge-green">✓ Trading Allowed</span>
+    <span class="muted" style="font-size:.72rem">2026-06-18 07:41 UTC · auto-refresh 5min</span>
+  </div>
+</div>
+<div class="container">
+  <div class="nav">
+  <a href="#status">📌 Status</a>
+  <a href="#portfolio">💰 Portfolio</a>
+  <a href="#recommendations">🎯 Recommendations</a>
+  <a href="#watchlist">🔭 Watchlist</a>
+  <a href="#trades">📋 Paper Trades</a>
+  <a href="#research">📝 Research Log</a>
+  <a href="#brain">🧠 Brain Insights</a>
+</div>
+  
+  
+<div class="market-bar">
+  <div class="mkt-item">
+    <div class="mkt-val green">
+      —
+      <span style="font-size:.78rem">(+0.00%)</span>
+    </div>
+    <div class="mkt-lbl">Nifty 50</div>
+  </div>
+  <div class="mkt-item">
+    <div class="mkt-val green">15.0 <span style="font-size:.72rem">[normal]</span></div>
+    <div class="mkt-lbl">India VIX</div>
+  </div>
+  <div class="mkt-item">
+    <div class="mkt-val" style="color:var(--yellow)">
+      Neutral
+    </div>
+    <div class="mkt-lbl">Market Mood</div>
+  </div>
+  <div class="mkt-item" style="flex:1">
+    <div class="mkt-val" style="font-size:.88rem;color:var(--cyan)">—</div>
+    <div class="mkt-lbl">Leading Sectors</div>
+  </div>
+</div>
+  <div class="section" id="status">
+  <h2>📌 Agent Status <span>What the agent is doing right now</span></h2>
+  <div class="card">
+    <div class="timeline"><div class="tphase tphase-active">▶ 1. Explore Universe</div><span class="tarrow">→</span><div class="tphase tphase-future">2. Deep Analysis</div><span class="tarrow">→</span><div class="tphase tphase-future">3. Paper Trade</div><span class="tarrow">→</span><div class="tphase tphase-future">4. Signal Ready</div></div>
+    <div style="margin-top:14px;display:flex;flex-wrap:wrap;gap:24px">
+      <div><div class="stat-label">Started</div><div style="font-weight:600">2026-06-18</div></div>
+      <div><div class="stat-label">Phase since</div><div style="font-weight:600">2026-06-18</div></div>
+      <div><div class="stat-label">Total days run</div><div style="font-weight:600">1</div></div>
+    </div>
+    
+  </div>
+</div>
+  <div class="section" id="portfolio">
+  <h2>💰 Paper Portfolio <span>Virtual ₹1,00,000 — no real money</span></h2>
+  <div class="grid5" style="margin-bottom:14px">
+    <div class="stat-card">
+  <div class="stat-val class="green"">₹100,000</div>
+  <div class="stat-label">Portfolio Value</div>
+</div>
+    <div class="stat-card">
+  <div class="stat-val class="green"">₹+0 (+0.0%)</div>
+  <div class="stat-label">Total P&L</div>
+</div>
+    <div class="stat-card">
+  <div class="stat-val class="yellow"">0.0%</div>
+  <div class="stat-label">Win Rate</div>
+</div>
+    <div class="stat-card">
+  <div class="stat-val class="red"">₹+0</div>
+  <div class="stat-label">Expectancy/Trade</div>
+</div>
+    <div class="stat-card">
+  <div class="stat-val">0 (0W / 0L)</div>
+  <div class="stat-label">Total Trades</div>
+</div>
+  </div>
+  <div style="margin-bottom:14px">
+    <div style="display:flex;justify-content:space-between;font-size:.72rem;color:var(--muted);margin-bottom:4px">
+      <span>Win rate progress toward 57% target</span>
+      <span>0.0% / 57%</span>
+    </div>
+    <div class="progress">
+      <div class="progress-fill" style="width:0.0%;background:var(--yellow)"></div>
+    </div>
+  </div>
+  <div class="grid2">
+    <div><div class="card" style="padding:20px;text-align:center;color:var(--muted)">
+  Equity curve will appear after the first trading day.
+</div></div>
+    <div class="card">
+      <h3 style="margin-bottom:10px">Trade Stats</h3>
+      <div class="irow"><span class="muted">Avg winning trade</span><span class="green">₹+0</span></div>
+      <div class="irow"><span class="muted">Avg losing trade</span><span class="red">₹+0</span></div>
+      <div class="irow"><span class="muted">Win Rate</span><span class="yellow">0.0%</span></div>
+      <div class="irow"><span class="muted">Expectancy</span><span class="red">₹+0/trade</span></div>
+      <div class="irow"><span class="muted">Free capital</span><span>₹100,000</span></div>
+      <div class="irow"><span class="muted">Open positions</span><span class="blue">0</span></div>
+    </div>
+  </div>
+  
+</div>
+  <div class="section" id="recommendations">
+  <h2>🎯 Stock Recommendations <span>High-confidence setups with full trade details</span></h2>
+  <div class="card" style="padding:20px">
+  <div style="color:var(--muted);text-align:center;line-height:2">
+    <div style="font-size:2rem;margin-bottom:8px">🔬</div>
+    <div style="font-weight:600;color:var(--text);margin-bottom:6px">Agent is still learning</div>
+    <div>No recommendations yet. The agent needs to:<br>
+    1. Complete exploration &amp; analysis phases<br>
+    2. Accumulate at least 12 paper trades<br>
+    3. Achieve ≥57% win rate with positive expectancy<br>
+    <br>Check the Portfolio section for progress.</div>
+  </div>
+</div>
+</div>
+  <div class="section" id="watchlist">
+  <h2>🔭 Watchlist <span>Focus stocks under deep monitoring</span></h2>
+  <div class="card" style="padding:20px;text-align:center;color:var(--muted)">
+    Stocks will appear here after the exploration phase selects the best candidates.
+  </div>
+</div>
+  <div class="section" id="trades">
+  <h2>📋 Paper Trade History</h2>
+  <div class="card" style="padding:20px;text-align:center;color:var(--muted)">
+    Paper trades will appear here once the agent enters the trading phase.
+  </div>
+</div>
+  <div class="section" id="research">
+  <h2>📝 Research Log <span>Agent's autonomous notes and decisions</span></h2>
+  <div class="card"><div class="muted" style="padding:10px">No brain notes yet.</div></div>
+  
+</div>
+  <div class="section" id="brain">
+  <h2>🧠 Brain Insights <span>What the agent has learned</span></h2>
+  <div class="card" style="padding:20px;text-align:center;color:var(--muted)">
+    Pattern learning begins after paper trades start resolving.
+  </div>
+</div>
+</div>
+<script>
+document.querySelectorAll('[data-spark]').forEach(el => {
+  const vals = JSON.parse(el.dataset.spark || '[]');
+  if (!vals.length) return;
+  const mn = Math.min(...vals), mx = Math.max(...vals), rng = mx - mn || 1;
+  const W = el.offsetWidth || 280, H = parseInt(el.style.height) || 50;
+  const pts = vals.map((v, i) =>
+    `${(i / (vals.length - 1) * W).toFixed(1)},${(H - ((v - mn) / rng) * (H - 4) - 2).toFixed(1)}`
+  ).join(' ');
+  const col = el.dataset.color || (vals[vals.length-1] >= vals[0] ? '#10b981' : '#ef4444');
+  const gradId = 'g' + Math.random().toString(36).slice(2,7);
+  el.innerHTML = `<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" style="width:100%;height:${H}px;display:block">
+    <defs>
+      <linearGradient id="${gradId}" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="${col}" stop-opacity="0.2"/>
+        <stop offset="100%" stop-color="${col}" stop-opacity="0"/>
+      </linearGradient>
+    </defs>
+    <polygon points="${pts} ${W},${H} 0,${H}" fill="url(#${gradId})"/>
+    <polyline points="${pts}" fill="none" stroke="${col}" stroke-width="1.8" stroke-linejoin="round"/>
+  </svg>`;
+});
+</script>
+</body>
+</html>

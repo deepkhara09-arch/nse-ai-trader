@@ -1,17 +1,29 @@
 # NSE AI Trader — Strategy Report
-
-> The agent has not yet completed enough paper trades to generate a confident strategy.
-> Check back after a few weeks of automated runs.
-
-## Current Status
-
-The agent is in its **learning phase**. It is:
-1. Watching 50 NSE stocks daily
-2. Computing technical indicators (EMA, RSI, MACD, Bollinger Bands, ATR)
-3. Fetching news sentiment from free RSS feeds
-4. Learning which candlestick/indicator patterns are reliable for each stock
-5. Simulating paper trades to validate its strategy before telling you anything
+> Updated: 2026-06-18 &nbsp;|&nbsp; Day 1 &nbsp;|&nbsp; Phase: exploration
 
 ---
 
-*This file will be automatically updated by the GitHub Actions workflow once the agent is confident.*
+## Paper Trading Performance
+
+| Metric | Value |
+|--------|-------|
+| Trades | 0 (0 wins / 0 losses) |
+| Win Rate | 0.0% |
+| Total P&L | ₹+0 |
+| Avg Win | ₹+0 |
+| Avg Loss | ₹+0 |
+| Expectancy / trade | ₹+0 |
+
+---
+
+## Recommendations
+
+The agent has not yet generated confident recommendations.
+Check back after the paper trading phase accumulates enough data.
+
+## Focus Stocks Being Monitored
+
+
+---
+
+*Live dashboard with charts and details: enable GitHub Pages on this repo (Settings → Pages → /docs)*

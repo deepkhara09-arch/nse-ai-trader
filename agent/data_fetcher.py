@@ -78,12 +78,17 @@ def _stooq_download(ticker: str, start: str, end: str) -> pd.DataFrame:
         r = _STOOQ.get(url, timeout=15)
         if r.status_code != 200 or len(r.text) < 50:
             return pd.DataFrame()
-        df = pd.read_csv(StringIO(r.text), parse_dates=["Date"], index_col="Date")
-        df = df.sort_index()
-        df.columns = [c.strip().title() for c in df.columns]  # Open/High/Low/Close/Volume
+        df = pd.read_csv(StringIO(r.text))
+        df.columns = [c.strip() for c in df.columns]
+        # Stooq uses "Date" but sometimes returns an error HTML page
+        date_col = next((c for c in df.columns if c.lower() == "date"), None)
+        if date_col is None:
+            return pd.DataFrame()
+        df[date_col] = pd.to_datetime(df[date_col])
+        df = df.set_index(date_col).sort_index()
+        df.columns = [c.strip().title() for c in df.columns]
         return df
-    except Exception as e:
-        print(f"[stooq] {ticker}: {e}")
+    except Exception:
         return pd.DataFrame()
 
 

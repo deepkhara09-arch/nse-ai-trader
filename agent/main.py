@@ -31,6 +31,7 @@ from agent.paper_trader   import (
     compute_stats, is_ready_to_alert,
 )
 from agent.recommendations import generate_recommendations, load_recommendations
+from agent.fundamentals_fetcher import fetch_fundamentals, load_fundamentals, save_fundamentals
 from agent.dashboard       import build_dashboard
 from agent.report_generator import generate_report
 
@@ -69,6 +70,10 @@ def run():
                 scores_str = " | ".join(f"{t.replace('.NS','')}={s:.0f}" for t, s in top)
                 note = f"Selected {len(top)} focus stocks. Scores: {scores_str}"
                 state = add_brain_note(state, note)
+                # Fetch fundamentals for the selected focus stocks
+                print("[main] Fetching fundamentals for focus stocks...")
+                fund_data = fetch_fundamentals([t for t, _ in top])
+                save_fundamentals(fund_data)
                 state = set_phase(state, "analysis", note)
         else:
             state = advance_session(state, session) if session == "midday" else state
@@ -83,6 +88,10 @@ def run():
         if session == "preclose":
             news = fetch_news(focus)
             save_news(news)
+            # Refresh fundamentals weekly (every 5 preclose sessions in analysis)
+            if state.get("day", 1) % 5 == 0:
+                fund_data = fetch_fundamentals(focus)
+                save_fundamentals(fund_data)
 
             patterns  = load_patterns()
             decisions = load_decisions()
@@ -184,8 +193,8 @@ def _refresh_outputs(state: dict, market_health: dict, session: str) -> None:
 
         # Regenerate recommendations every preclose session
         if session == "preclose" or not os.path.exists("brain/recommendations.json"):
-            recs = generate_recommendations(state, sd, pats, nd, book, market_health)
-            print(f"[recs] {len(recs)} recommendation(s) generated")
+            fund = load_fundamentals()
+            recs = generate_recommendations(state, sd, pats, nd, book, market_health, fund)
             generate_report(state, sd, pats, nd, book)
         else:
             recs = load_recommendations()

@@ -1,0 +1,4 @@
+# Brain data files are written exclusively by GitHub Actions.
+# Treat them as binary so Git never attempts a text merge on them.
+# On rebase conflicts the rebase will surface them and you can `git checkout --theirs brain/`
+brain/*.json binary

@@ -72,7 +72,13 @@ jobs:
             SESSION="${{ steps.session.outputs.name }}"
             DATE=$(date +"%Y-%m-%d")
             git commit -m "[$DATE $SESSION] brain update + dashboard refresh"
-            git push
+            # Pull with rebase to absorb any code changes pushed while this run was executing
+            # Retry up to 3 times in case of a simultaneous push race
+            for attempt in 1 2 3; do
+              git pull --rebase origin main && git push && break
+              echo "Push attempt $attempt failed — retrying in 10s..."
+              sleep 10
+            done
           else
             echo "Nothing changed — skipping commit."
           fi

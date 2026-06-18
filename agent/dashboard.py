@@ -88,7 +88,7 @@ def _build_html(
   {_alert_banner(alert, stats) if alert else ""}
   {_market_bar(nifty, vix, mood, mkt_warn, market_health)}
   {_section_heatmap(stock_data)}
-  {_section_status(state, phase, day, focus)}
+  {_section_status(state, phase, day, focus, stock_data)}
   {_section_portfolio(stats, portfolio, pnl_total, pnl_pct, book)}
   {_section_recommendations(recommendations)}
   {_section_watchlist(focus, stock_data, news_data, patterns)}
@@ -373,7 +373,8 @@ def _section_heatmap(stock_data: dict) -> str:
 </div>'''
 
 
-def _section_status(state, phase, day, focus) -> str:
+def _section_status(state, phase, day, focus, stock_data=None) -> str:
+    stock_data = stock_data or {}
     phase_order = ["exploration", "analysis", "paper_trading", "alerting"]
     phase_labels = {
         "exploration": "1. Explore Universe",
@@ -433,15 +434,56 @@ def _section_status(state, phase, day, focus) -> str:
         if i < len(phase_order) - 1:
             phase_step_html += '<div class="phase-line"></div>'
 
+    # What is the agent actively doing right now?
+    if phase == "exploration":
+        stocks_fetched = len(stock_data)
+        days_left = max(0, 5 - day)
+        next_milestone = f"Focus stock selection in ~{days_left} day(s)" if days_left > 0 else "Focus stock selection due at next preclose"
+        activity_lines = [
+            f"Watching all {stocks_fetched} stocks 3× per day — building price, volume, and indicator baselines",
+            "Detecting candlestick patterns on every bar: hammer, engulfing, morning star, doji, and 25+ more",
+            "Scoring each stock on: momentum trend, RSI zone, MACD direction, volume strength",
+            f"Next milestone: {next_milestone} — top 12 by momentum score will be selected for deep analysis",
+        ]
+    elif phase == "analysis":
+        days_left = max(0, 15 - day)
+        activity_lines = [
+            f"Deep-analysing {len(focus)} focus stocks — running full pattern detection each session",
+            "Building pattern reliability database — learning which patterns work on which stocks",
+            "Fetching quarterly fundamentals: P/E, ROE, debt ratio, revenue growth, promoter holding",
+            f"Paper trading phase starts in ~{days_left} day(s)",
+        ]
+    elif phase in ("paper_trading", "alerting"):
+        activity_lines = [
+            f"Paper trading {len(focus)} focus stocks with ₹1,00,000 virtual capital",
+            "Each session: opening new positions, updating stops, closing completed trades",
+            "4-layer scoring active: Technical (40) + Fundamental (30) + News (20) + Pattern (10)",
+            "Recommendations appear when any stock scores ≥65/100 with R:R ≥ 2:1",
+        ]
+    else:
+        activity_lines = ["Agent initialising — check back after first run."]
+
+    activity_html = "".join(
+        f'<div style="display:flex;gap:8px;padding:6px 0;border-bottom:1px solid var(--border)">'
+        f'<span style="color:var(--cyan);margin-top:1px">›</span>'
+        f'<span style="font-size:.82rem;color:var(--text)">{line}</span></div>'
+        for line in activity_lines
+    )
+
     return f"""<div class="section" id="status">
   <h2>📌 Agent Status <span>What the agent is doing right now</span></h2>
   <div class="card">
     <div class="timeline">{timeline_html}</div>
     <div class="phase-progress">{phase_step_html}</div>
+    <div style="margin-top:16px;background:var(--card3);border-radius:8px;padding:12px 14px">
+      <div style="font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px">Current activity</div>
+      {activity_html}
+    </div>
     <div style="margin-top:14px;display:flex;flex-wrap:wrap;gap:24px">
       <div><div class="stat-label">Started</div><div style="font-weight:600">{start}</div></div>
       <div><div class="stat-label">Phase since</div><div style="font-weight:600">{phase_start}</div></div>
       <div><div class="stat-label">Total days run</div><div style="font-weight:600">{day}</div></div>
+      <div><div class="stat-label">Stocks in database</div><div style="font-weight:600">{len(stock_data)}</div></div>
     </div>
     {f'<div style="margin-top:12px"><div class="stat-label" style="margin-bottom:6px">Focus Stocks</div>{focus_html}</div>' if focus else ""}
   </div>
@@ -608,10 +650,11 @@ def _section_recommendations(recs) -> str:
     <div style="font-size:2rem;margin-bottom:8px">🔬</div>
     <div style="font-weight:600;color:var(--text);margin-bottom:6px">Agent is still learning</div>
     <div>No recommendations yet. The agent needs to:<br>
-    1. Complete exploration &amp; analysis phases<br>
-    2. Accumulate at least 12 paper trades<br>
-    3. Achieve ≥57% win rate with positive expectancy<br>
-    <br>Check the Portfolio section for progress.</div>
+    1. Complete 5-day exploration → 12 focus stocks selected<br>
+    2. Complete 10-day deep analysis on those stocks<br>
+    3. Find a setup scoring ≥65/100 across Technical + Fundamental + News + Pattern<br>
+    4. Confirm R:R ≥ 2:1 with clear stop loss and target<br>
+    <br>Check the Watchlist below to see which stocks are being scored right now.</div>
   </div>
 </div>"""
         return f"""<div class="section" id="recommendations">
@@ -742,16 +785,20 @@ def _section_recommendations(recs) -> str:
 
 
 def _section_watchlist(focus, stock_data, news_data, patterns) -> str:
-    if not focus:
+    # During exploration (no focus stocks yet), show ALL fetched stocks
+    display_tickers = focus if focus else sorted(stock_data.keys())
+    phase_label = "deep monitoring" if focus else "exploration — all 50 stocks being scored"
+
+    if not display_tickers:
         return f"""<div class="section" id="watchlist">
-  <h2>🔭 Watchlist <span>Focus stocks under deep monitoring</span></h2>
+  <h2>🔭 Watchlist <span>Waiting for first data fetch</span></h2>
   <div class="card" style="padding:20px;text-align:center;color:var(--muted)">
-    Stocks will appear here after the exploration phase selects the best candidates.
+    The agent hasn't fetched any stock data yet. Check back after the next scheduled run.
   </div>
 </div>"""
 
     cards = ""
-    for ticker in focus:
+    for ticker in display_tickers:
         entry  = stock_data.get(ticker, {})
         d      = entry.get("latest", {})
         news   = news_data.get(ticker, {}).get("latest", {})
@@ -773,18 +820,33 @@ def _section_watchlist(focus, stock_data, news_data, patterns) -> str:
         style  = tk_pat.get("preferred_style", "learning")
 
         hl = news.get("headlines", [])
-        news_html = f'<div class="note-line" style="margin-top:6px;font-size:.72rem">{hl[0][:65]}...</div>' if hl else ""
+        news_html = f'<div class="note-line" style="margin-top:6px;font-size:.72rem;color:var(--muted)">{hl[0][:70]}…</div>' if hl else ""
 
-        spark_svg = _sparkline(ph) if ph else ""
+        spark_svg    = _sparkline(ph) if ph else ""
         rsi_bar_html = _rsi_bar(rsi)
+        is_focus     = ticker in focus
+
+        # Exploration score: simple momentum proxy visible on card
+        expl_score = 0
+        if trend in ("strong_up",): expl_score += 3
+        elif trend in ("up",):      expl_score += 2
+        if rsi > 45 and rsi < 65:   expl_score += 2
+        if macd_h > 0:              expl_score += 1
+        if vol_r >= 1.3:            expl_score += 2
+        expl_score = min(expl_score, 8)
+        expl_bar_pct = expl_score / 8 * 100
+        expl_color = "#10b981" if expl_score >= 6 else ("#f59e0b" if expl_score >= 3 else "#64748b")
+
+        focus_badge = '<span class="badge badge-cyan" style="font-size:.62rem">FOCUS</span>' if is_focus else ""
+        style_badge = f'<span class="pill pill-blue" style="margin-left:4px;font-size:.62rem">{style}</span>' if is_focus else ""
 
         cards += f"""<div class="stock-card">
   <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
-    <div>
+    <div style="display:flex;align-items:center;gap:4px;flex-wrap:wrap">
       <strong style="font-size:.95rem">{short}</strong>
-      <span class="pill pill-blue" style="margin-left:6px;font-size:.65rem">{style}</span>
+      {focus_badge}{style_badge}
     </div>
-    <span class="pill {'pill-green' if ns>0.08 else ('pill-red' if ns<-0.08 else 'pill-yellow')}" style="font-size:.65rem">
+    <span class="pill {'pill-green' if ns>0.08 else ('pill-red' if ns<-0.08 else 'pill-yellow')}" style="font-size:.62rem">
       news {ns:+.2f}
     </span>
   </div>
@@ -794,7 +856,15 @@ def _section_watchlist(focus, stock_data, news_data, patterns) -> str:
   </div>
   <div style="margin:6px 0;overflow:hidden">{spark_svg}</div>
   {rsi_bar_html}
-  <div class="irow"><span class="muted">MACD hist</span>
+  <div style="margin-top:6px">
+    <div style="display:flex;justify-content:space-between;font-size:.65rem;color:#64748b;margin-bottom:2px">
+      <span>Momentum score</span><span style="color:{expl_color}">{expl_score}/8</span>
+    </div>
+    <div style="height:3px;background:#1e293b;border-radius:2px">
+      <div style="width:{expl_bar_pct:.0f}%;height:100%;background:{expl_color};border-radius:2px"></div>
+    </div>
+  </div>
+  <div class="irow" style="margin-top:6px"><span class="muted">MACD hist</span>
     <span class="{m_cls}">{macd_h:+.4f}</span></div>
   <div class="irow"><span class="muted">ATR%</span><span>{atr_p:.2f}%</span></div>
   <div class="irow"><span class="muted">Rel Volume</span>
@@ -803,7 +873,7 @@ def _section_watchlist(focus, stock_data, news_data, patterns) -> str:
 </div>"""
 
     return f"""<div class="section" id="watchlist">
-  <h2>🔭 Watchlist <span>{len(focus)} stocks under deep monitoring</span></h2>
+  <h2>🔭 Watchlist <span>{len(display_tickers)} stocks — {phase_label}</span></h2>
   <div class="grid3">{cards}</div>
 </div>"""
 

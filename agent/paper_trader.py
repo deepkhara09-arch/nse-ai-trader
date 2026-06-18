@@ -18,6 +18,8 @@ from agent.config import (
 )
 from agent.brain import learn_from_trade
 
+Tuple2 = tuple   # (book, patterns_db)
+
 
 def load_book() -> dict:
     if os.path.exists(PAPER_TRADES_FILE):

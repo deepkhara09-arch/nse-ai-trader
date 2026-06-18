@@ -221,7 +221,9 @@ def _fetch_one(ticker: str, session: str) -> dict:
     if not daily_summary:
         return {}
 
-    latest = daily_summary["latest"].copy()
+    latest    = daily_summary["latest"].copy()
+    prev_bar  = _bar_dict(df_daily, -2)
+    prev2_bar = _bar_dict(df_daily, -3)
 
     return {
         "ticker":             ticker,
@@ -232,7 +234,31 @@ def _fetch_one(ticker: str, session: str) -> dict:
         "intraday":           {},
         "price_history_60d":  daily_summary.get("price_history_60d", []),
         "volume_history_20d": daily_summary.get("volume_history_20d", []),
+        "prev_bar":           prev_bar,
+        "prev2_bar":          prev2_bar,
     }
+
+
+def _bar_dict(df: pd.DataFrame, idx: int) -> dict:
+    """Extract one bar's indicator values as a lowercase-keyed dict."""
+    if df is None or df.empty or len(df) < abs(idx):
+        return {}
+    row = df.iloc[idx]
+    name_map = {
+        'Close': 'close', 'Open': 'open', 'High': 'high', 'Low': 'low', 'Volume': 'volume',
+        'ema_short': 'ema_short', 'ema_long': 'ema_long', 'ema_trend': 'ema_trend',
+        'rsi': 'rsi', 'macd': 'macd', 'macd_signal': 'macd_signal', 'macd_hist': 'macd_hist',
+        'bb_pct': 'bb_pct', 'atr': 'atr', 'atr_pct': 'atr_pct', 'vol_rel': 'vol_rel',
+        'body_pct': 'body_pct', 'upper_wick_pct': 'upper_wick_pct', 'lower_wick_pct': 'lower_wick_pct',
+    }
+    result = {}
+    for src, dst in name_map.items():
+        if src in row.index:
+            try:
+                result[dst] = round(float(row[src]), 4)
+            except (TypeError, ValueError):
+                pass
+    return result
 
 
 def _compute_indicators(df: pd.DataFrame) -> pd.DataFrame:

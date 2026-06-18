@@ -62,7 +62,7 @@ def save_decisions(decisions: List) -> None:
 # PATTERN DETECTION — rule-based, computed entirely from OHLCV
 # ═══════════════════════════════════════════════════════════════════════════════
 
-def detect_all_patterns(d: dict, prev: dict = None) -> List[str]:
+def detect_all_patterns(d: dict, prev: dict = None, prev2: dict = None) -> List[str]:
     """
     Detects candlestick + indicator patterns from a stock's latest data.
     Returns list of pattern name strings.
@@ -148,6 +148,28 @@ def detect_all_patterns(d: dict, prev: dict = None) -> List[str]:
     if body_pct > 0.75 and bearish_candle:
         patterns.append("strong_bearish_marubozu")
 
+    # Dragonfly doji: very long lower wick, tiny upper wick, body at top
+    if body_pct < 0.1 and lw_pct > 0.7 and uw_pct < 0.1:
+        patterns.append("dragonfly_doji")
+
+    # Gravestone doji: very long upper wick, tiny lower wick, body at bottom
+    if body_pct < 0.1 and uw_pct > 0.7 and lw_pct < 0.1:
+        patterns.append("gravestone_doji")
+
+    # Spinning top: both wicks significant, small body
+    if body_pct < 0.25 and uw_pct > 0.3 and lw_pct > 0.3:
+        patterns.append("spinning_top")
+
+    # Inverted hammer (at bottom of downtrend): small body, long upper wick
+    if uw_pct > 0.6 and body_pct < 0.25 and lw_pct < 0.1 and bullish_candle:
+        patterns.append("inverted_hammer")
+
+    # Volume climax signals
+    if vol_rel > 3.0 and rsi < 35:
+        patterns.append("volume_climax_bottom")
+    if vol_rel > 3.0 and rsi > 65:
+        patterns.append("volume_climax_top")
+
     # ── Intraday alignment (from 5-min data) ─────────────────────────────────
     if intra_trend == "bullish" and above_vwap is True:
         patterns.append("intraday_bullish_vwap")
@@ -155,6 +177,93 @@ def detect_all_patterns(d: dict, prev: dict = None) -> List[str]:
         patterns.append("intraday_bearish_vwap")
     if d.get("intraday_vol_surge") and intra_trend == "bullish":
         patterns.append("intraday_vol_surge_up")
+
+    # ── Multi-candle patterns (require prev bar) ──────────────────────────────
+    if prev:
+        p_close = prev.get("close", close)
+        p_open  = prev.get("open",  p_close)
+        p_high  = prev.get("high",  p_close)
+        p_low   = prev.get("low",   p_close)
+        p_body  = abs(p_close - p_open)
+        curr_body = abs(close - open_)
+
+        # Bullish engulfing: prev bearish, current bullish body engulfs prev
+        if p_close < p_open and close > open_ and open_ < p_close and close > p_open:
+            patterns.append("engulfing_bullish")
+
+        # Bearish engulfing
+        if p_close > p_open and close < open_ and open_ > p_close and close < p_open:
+            patterns.append("engulfing_bearish")
+
+        # Bullish harami: small bullish inside large bearish
+        if p_close < p_open and p_body > 0 and close > open_:
+            if open_ > p_close and close < p_open and curr_body < p_body * 0.5:
+                patterns.append("bullish_harami")
+
+        # Bearish harami
+        if p_close > p_open and p_body > 0 and close < open_:
+            if open_ < p_close and close > p_open and curr_body < p_body * 0.5:
+                patterns.append("bearish_harami")
+
+        # Tweezer bottom: both lows nearly equal, bullish reversal
+        if abs(low - p_low) / (p_low + 1e-9) < 0.002 and close > open_ and p_close < p_open:
+            patterns.append("tweezer_bottom")
+
+        # Tweezer top
+        if abs(high - p_high) / (p_high + 1e-9) < 0.002 and close < open_ and p_close > p_open:
+            patterns.append("tweezer_top")
+
+        # Inside bar (consolidation)
+        if high < p_high and low > p_low:
+            patterns.append("inside_bar")
+
+        # Outside bar (volatility expansion)
+        if high > p_high and low < p_low:
+            patterns.append("outside_bar")
+
+        # Piercing line: prev bearish, current opens below prev low, closes above prev midpoint
+        if p_close < p_open:
+            p_mid = (p_open + p_close) / 2
+            if open_ < p_low and close > p_mid and close < p_open:
+                patterns.append("piercing_line")
+
+        # Dark cloud cover
+        if p_close > p_open:
+            p_mid = (p_open + p_close) / 2
+            if open_ > p_high and close < p_mid and close > p_close:
+                patterns.append("dark_cloud_cover")
+
+    # ── Three-candle patterns (require prev2) ────────────────────────────────
+    if prev and prev2:
+        p2_close = prev2.get("close", close)
+        p2_open  = prev2.get("open",  p2_close)
+        p_close2 = prev.get("close", close)
+        p_open2  = prev.get("open",  p_close2)
+
+        # Morning star: bearish, small/doji, bullish
+        p2_bearish = p2_close < p2_open
+        p_small    = abs(p_close2 - p_open2) < abs(p2_close - p2_open) * 0.3
+        curr_bull  = close > open_
+        p2_mid     = (p2_open + p2_close) / 2
+        if p2_bearish and p_small and curr_bull and close > p2_mid:
+            patterns.append("morning_star")
+
+        # Evening star: bullish, small/doji, bearish
+        p2_bullish = p2_close > p2_open
+        curr_bear  = close < open_
+        p2_mid2    = (p2_open + p2_close) / 2
+        if p2_bullish and p_small and curr_bear and close < p2_mid2:
+            patterns.append("evening_star")
+
+        # Three white soldiers: 3 consecutive bullish, each higher close
+        if (close > open_ and p_close2 > p_open2 and p2_close > p2_open
+                and close > p_close2 > p2_close):
+            patterns.append("three_white_soldiers")
+
+        # Three black crows
+        if (close < open_ and p_close2 < p_open2 and p2_close < p2_open
+                and close < p_close2 < p2_close):
+            patterns.append("three_black_crows")
 
     return list(set(patterns))   # deduplicate
 
@@ -178,9 +287,9 @@ def analyse_stock(
         return {"ticker": ticker, "signal": "NO_DATA", "score": 0}
 
     d = stock_entry["latest"]
-    prev = None   # TODO: could pull from intraday_snapshots if needed
-
-    patterns = detect_all_patterns(d, prev)
+    prev  = stock_entry.get("prev_bar", {})
+    prev2 = stock_entry.get("prev2_bar", {})
+    patterns = detect_all_patterns(d, prev if prev else None, prev2 if prev2 else None)
     tk_known  = patterns_db.get(ticker, {})
     reliable  = tk_known.get("reliable_patterns", {})
 
@@ -270,6 +379,23 @@ def analyse_stock(
                 _score(p, "buy", 1.5, f"Learned bullish pattern: {p} (rel={rel:.0%})")
             elif rel <= 0.40:
                 _score(p, "sell", 1.5, f"Learned bearish context: {p} (rel={rel:.0%})")
+
+    # Multi-candle bullish patterns — high conviction signals
+    BULLISH_MULTI = {"engulfing_bullish", "morning_star", "three_white_soldiers",
+                     "bullish_harami", "piercing_line", "tweezer_bottom", "dragonfly_doji", "inverted_hammer"}
+    BEARISH_MULTI = {"engulfing_bearish", "evening_star", "three_black_crows",
+                     "bearish_harami", "dark_cloud_cover", "tweezer_top", "gravestone_doji"}
+
+    for p in patterns:
+        if p in BULLISH_MULTI:
+            buy_score += 2.5; buy_reasons.append(f"Candlestick: {p.replace('_', ' ')}")
+        elif p in BEARISH_MULTI:
+            sell_score += 2.5; sell_reasons.append(f"Candlestick: {p.replace('_', ' ')}")
+
+    if "volume_climax_bottom" in patterns:
+        buy_score += 1.5; buy_reasons.append("Volume climax at low — potential capitulation reversal")
+    if "volume_climax_top" in patterns:
+        sell_score += 1.5; sell_reasons.append("Volume climax at high — potential distribution")
 
     buy_score  = round(buy_score,  2)
     sell_score = round(sell_score, 2)

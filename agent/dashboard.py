@@ -87,6 +87,7 @@ def _build_html(
   {_nav()}
   {_alert_banner(alert, stats) if alert else ""}
   {_market_bar(nifty, vix, mood, mkt_warn, market_health)}
+  {_section_heatmap(stock_data)}
   {_section_status(state, phase, day, focus)}
   {_section_portfolio(stats, portfolio, pnl_total, pnl_pct, book)}
   {_section_recommendations(recommendations)}
@@ -207,6 +208,22 @@ tr:hover td{background:#0f1628}
 .note-line{padding:6px 0;border-bottom:1px solid #0f172a;font-size:.78rem;color:var(--muted)}
 .note-line:last-child{border:none}
 .note-line strong{color:var(--text)}
+.heatmap-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(90px,1fr));gap:6px;margin-bottom:8px}
+.hmap-cell{border:1px solid;border-radius:8px;padding:8px 6px;text-align:center;cursor:default;transition:transform .15s}
+.hmap-cell:hover{transform:scale(1.05);z-index:10;position:relative}
+.hmap-name{font-size:.72rem;font-weight:700;color:var(--text);margin-bottom:2px}
+.hmap-chg{font-size:.85rem;font-weight:700}
+.hmap-rsi{font-size:.65rem;color:var(--muted);margin-top:2px}
+.phase-progress{display:flex;align-items:flex-start;gap:0;margin:16px 0;overflow-x:auto;padding:8px 0}
+.phase-step{display:flex;flex-direction:column;align-items:center;gap:4px;min-width:100px;position:relative}
+.phase-step span{font-size:.75rem;font-weight:600;color:var(--muted);text-align:center}
+.phase-step small{font-size:.65rem;color:var(--muted)}
+.phase-step.active span{color:var(--cyan)}
+.phase-step.done span{color:var(--green)}
+.phase-dot{width:12px;height:12px;border-radius:50%;background:var(--border);border:2px solid var(--muted)}
+.phase-step.active .phase-dot{background:var(--cyan);border-color:var(--cyan);box-shadow:0 0 8px var(--cyan)}
+.phase-step.done .phase-dot{background:var(--green);border-color:var(--green)}
+.phase-line{flex:1;height:2px;background:var(--border);margin-top:5px;min-width:30px}
 @media(max-width:640px){
   .stat-val{font-size:1.2rem}
   .header h1{font-size:1rem}
@@ -246,6 +263,7 @@ def _header(phase, day, now_utc, mood, trade_ok) -> str:
 def _nav() -> str:
     return """<div class="nav">
   <a href="#status">📌 Status</a>
+  <a href="#heatmap">🌡 Heatmap</a>
   <a href="#portfolio">💰 Portfolio</a>
   <a href="#recommendations">🎯 Recommendations</a>
   <a href="#watchlist">🔭 Watchlist</a>
@@ -311,6 +329,50 @@ def _market_bar(nifty, vix, mood, warnings, market_health) -> str:
 </div>"""
 
 
+def _section_heatmap(stock_data: dict) -> str:
+    if not stock_data:
+        return ""
+    cells = []
+    for ticker, entry in sorted(stock_data.items()):
+        d = entry.get("latest", {})
+        close = d.get("close", 0)
+        ph = entry.get("price_history_60d", [])
+        if len(ph) >= 2:
+            chg = (ph[-1] - ph[-2]) / ph[-2] * 100 if ph[-2] else 0
+        else:
+            chg = 0
+        rsi = d.get("rsi", 50)
+        code = ticker.replace(".NS", "")
+
+        # Color: map chg -3..+3 to red..green
+        intensity = max(-1, min(1, chg / 3))
+        if intensity >= 0:
+            r = int(16 + (1 - intensity) * 60)
+            g = int(185 - (1 - intensity) * 80)
+            b = int(129 - intensity * 100)
+        else:
+            r = int(239 - (1 + intensity) * 100)
+            g = int(68 + (1 + intensity) * 60)
+            b = int(68 + (1 + intensity) * 30)
+        bg = f"#{r:02x}{g:02x}{b:02x}22"
+        border = f"#{r:02x}{g:02x}{b:02x}55"
+        chg_color = "var(--green)" if chg >= 0 else "var(--red)"
+        sign = "+" if chg >= 0 else ""
+        rsi_color = "var(--green)" if rsi < 40 else ("var(--red)" if rsi > 65 else "var(--yellow)")
+
+        cells.append(f'''<div class="hmap-cell" style="background:{bg};border-color:{border}"
+          title="{code}: Rs.{close:.2f} | RSI {rsi:.0f}">
+          <div class="hmap-name">{code}</div>
+          <div class="hmap-chg" style="color:{chg_color}">{sign}{chg:.1f}%</div>
+          <div class="hmap-rsi" style="color:{rsi_color}">RSI {rsi:.0f}</div>
+        </div>''')
+
+    return f'''<div class="section" id="heatmap">
+  <h2>🌡 Market Snapshot <span>all monitored stocks</span></h2>
+  <div class="heatmap-grid">{"".join(cells)}</div>
+</div>'''
+
+
 def _section_status(state, phase, day, focus) -> str:
     phase_order = ["exploration", "analysis", "paper_trading", "alerting"]
     phase_labels = {
@@ -339,10 +401,43 @@ def _section_status(state, phase, day, focus) -> str:
     for t in focus:
         focus_html += f'<span class="badge badge-cyan" style="margin:2px">{t.replace(".NS","")}</span>'
 
+    # Phase progress bar
+    def _phase_cls(p_name):
+        if p_name == phase:
+            return "active"
+        idx = phase_order.index(p_name) if p_name in phase_order else 0
+        if idx < current_idx:
+            return "done"
+        return ""
+
+    phase_step_html = ""
+    phase_descs = {
+        "exploration": "Days 1-5",
+        "analysis": "Days 6-15",
+        "paper_trading": "Days 16+",
+        "alerting": "Live",
+    }
+    phase_names = {
+        "exploration": "Exploration",
+        "analysis": "Analysis",
+        "paper_trading": "Paper Trading",
+        "alerting": "Recommendations",
+    }
+    for i, p_name in enumerate(phase_order):
+        cls = _phase_cls(p_name)
+        phase_step_html += f'''<div class="phase-step {cls}">
+          <div class="phase-dot"></div>
+          <span>{phase_names[p_name]}</span>
+          <small>{phase_descs[p_name]}</small>
+        </div>'''
+        if i < len(phase_order) - 1:
+            phase_step_html += '<div class="phase-line"></div>'
+
     return f"""<div class="section" id="status">
   <h2>📌 Agent Status <span>What the agent is doing right now</span></h2>
   <div class="card">
     <div class="timeline">{timeline_html}</div>
+    <div class="phase-progress">{phase_step_html}</div>
     <div style="margin-top:14px;display:flex;flex-wrap:wrap;gap:24px">
       <div><div class="stat-label">Started</div><div style="font-weight:600">{start}</div></div>
       <div><div class="stat-label">Phase since</div><div style="font-weight:600">{phase_start}</div></div>
@@ -460,6 +555,52 @@ def _open_positions_table(book) -> str:
 </div>"""
 
 
+def _sparkline(prices: list, width=180, height=40) -> str:
+    if len(prices) < 2:
+        return ""
+    prices = prices[-30:]
+    mn, mx = min(prices), max(prices)
+    rng = mx - mn or 1
+    pts = []
+    for i, p in enumerate(prices):
+        x = i / (len(prices) - 1) * width
+        y = height - (p - mn) / rng * height
+        pts.append(f"{x:.1f},{y:.1f}")
+    color = "#10b981" if prices[-1] >= prices[0] else "#ef4444"
+    path = "M" + " L".join(pts)
+    grad_id = f"sg{abs(hash(str(prices[0]))) % 9999}"
+    return (f'<svg width="{width}" height="{height}" viewBox="0 0 {width} {height}" '
+            f'style="display:block;overflow:visible">'
+            f'<defs><linearGradient id="{grad_id}" x1="0" y1="0" x2="0" y2="1">'
+            f'<stop offset="0%" stop-color="{color}" stop-opacity="0.3"/>'
+            f'<stop offset="100%" stop-color="{color}" stop-opacity="0"/>'
+            f'</linearGradient></defs>'
+            f'<path d="{path} L{width},{height} L0,{height} Z" fill="url(#{grad_id})"/>'
+            f'<path d="{path}" fill="none" stroke="{color}" stroke-width="1.5"/>'
+            f'</svg>')
+
+
+def _rsi_bar(rsi: float) -> str:
+    pct = max(0, min(100, rsi))
+    color = "#10b981" if rsi < 40 else ("#ef4444" if rsi > 65 else "#f59e0b")
+    return (f'<div style="margin-top:6px">'
+            f'<div style="display:flex;justify-content:space-between;font-size:.65rem;color:#64748b;margin-bottom:2px">'
+            f'<span>RSI</span><span style="color:{color}">{rsi:.0f}</span></div>'
+            f'<div style="height:4px;background:#1e293b;border-radius:2px">'
+            f'<div style="width:{pct}%;height:100%;background:{color};border-radius:2px;transition:width .3s"></div>'
+            f'</div></div>')
+
+
+def _score_bar(label, score, max_score, color):
+    pct = min(100, score / max_score * 100) if max_score > 0 else 0
+    return (f'<div style="margin-bottom:4px">'
+            f'<div style="display:flex;justify-content:space-between;font-size:.65rem;color:#64748b;margin-bottom:1px">'
+            f'<span>{label}</span><span style="color:{color}">{score:.0f}/{max_score}</span></div>'
+            f'<div style="height:3px;background:#1e293b;border-radius:2px">'
+            f'<div style="width:{pct:.1f}%;height:100%;background:{color};border-radius:2px"></div>'
+            f'</div></div>')
+
+
 def _section_recommendations(recs) -> str:
     if not recs:
         no_recs = """<div class="card" style="padding:20px">
@@ -500,6 +641,18 @@ def _section_recommendations(recs) -> str:
         warn_html = ""
         for w in rec.get("market_warning", []):
             warn_html += f'<div class="warn-banner" style="margin-top:8px;font-size:.75rem">⚠ {w}</div>'
+
+        # Score breakdown bars
+        tech_score = rec.get("buy_score", rec.get("sell_score", 0))
+        fund_score = rec.get("fundamental_score", 0)
+        news_score_val = rec.get("news_score_display", 0)
+        pat_score = rec.get("pattern_score", 0)
+        score_breakdown = (
+            _score_bar("Technical", min(tech_score, 40), 40, "#6366f1") +
+            _score_bar("Fundamental", min(fund_score, 30), 30, "#10b981") +
+            _score_bar("News", min(news_score_val, 20), 20, "#f59e0b") +
+            _score_bar("Pattern", min(pat_score, 10), 10, "#06b6d4")
+        )
 
         cards += f"""<div class="rec-card {cls}">
   <div class="rec-header">
@@ -557,6 +710,11 @@ def _section_recommendations(recs) -> str:
     </div>
   </div>
 
+  <div style="margin-top:10px;padding:10px 12px;background:var(--card);border-radius:8px">
+    <div style="font-size:.65rem;color:var(--muted);margin-bottom:6px;text-transform:uppercase;letter-spacing:.05em">Score Breakdown</div>
+    {score_breakdown}
+  </div>
+
   {f'<div style="margin-top:8px">{pat_badges}</div>' if pat_badges else ""}
 
   <div class="reasons-list">
@@ -605,7 +763,7 @@ def _section_watchlist(focus, stock_data, news_data, patterns) -> str:
         vol_r  = d.get("vol_rel", 1)
         close  = d.get("close", 0)
         short  = ticker.replace(".NS","")
-        spark  = json.dumps(entry.get("price_history_60d", []))
+        ph     = entry.get("price_history_60d", [])
         t_cls  = {"strong_up":"green","up":"green","sideways":"yellow",
                   "down":"red","strong_down":"red"}.get(trend,"muted")
         n_cls  = "green" if ns > 0.08 else ("red" if ns < -0.08 else "muted")
@@ -616,6 +774,9 @@ def _section_watchlist(focus, stock_data, news_data, patterns) -> str:
 
         hl = news.get("headlines", [])
         news_html = f'<div class="note-line" style="margin-top:6px;font-size:.72rem">{hl[0][:65]}...</div>' if hl else ""
+
+        spark_svg = _sparkline(ph) if ph else ""
+        rsi_bar_html = _rsi_bar(rsi)
 
         cards += f"""<div class="stock-card">
   <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
@@ -631,9 +792,8 @@ def _section_watchlist(focus, stock_data, news_data, patterns) -> str:
     ₹{close:,.2f}
     <span class="{t_cls}" style="font-size:.75rem;font-weight:400"> {trend.replace('_',' ')}</span>
   </div>
-  <div data-spark='{spark}' style="height:45px;margin:6px 0"></div>
-  <div class="irow"><span class="muted">RSI 14</span>
-    <span class="{r_cls}">{rsi:.1f}{'  ↑' if rsi<40 else (' ↓' if rsi>65 else '')}</span></div>
+  <div style="margin:6px 0;overflow:hidden">{spark_svg}</div>
+  {rsi_bar_html}
   <div class="irow"><span class="muted">MACD hist</span>
     <span class="{m_cls}">{macd_h:+.4f}</span></div>
   <div class="irow"><span class="muted">ATR%</span><span>{atr_p:.2f}%</span></div>

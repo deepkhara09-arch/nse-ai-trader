@@ -9,16 +9,24 @@ from datetime import date, timedelta
 from typing import Dict
 
 import pandas as pd
+import requests
 import yfinance as yf
 
 from agent.config import BRAIN_DIR
 
-# Shared curl_cffi session
-try:
-    from curl_cffi.requests import Session as CurlSession
-    _SESSION = CurlSession(impersonate="chrome110")
-except Exception:
-    _SESSION = None
+# Browser-spoofed session — same approach as data_fetcher
+_SESSION = requests.Session()
+_SESSION.headers.update({
+    "User-Agent": (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/124.0.0.0 Safari/537.36"
+    ),
+    "Accept":          "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Connection":      "keep-alive",
+})
 
 SECTOR_PROXIES = {
     "IT":     "ITBEES.NS",
@@ -90,40 +98,35 @@ def load_market_health() -> dict:
             "nifty": {}, "vix": {}, "sectors": {}, "leading_sectors": []}
 
 
-def _download(symbol: str, **kwargs) -> pd.DataFrame:
-    kwargs.setdefault("progress", False)
-    kwargs.setdefault("auto_adjust", True)
-    if _SESSION is not None:
-        kwargs["session"] = _SESSION
-    try:
-        return yf.download(symbol, **kwargs)
-    except Exception as e:
-        print(f"[market] download {symbol}: {e}")
-        return pd.DataFrame()
+def _ticker(symbol: str) -> yf.Ticker:
+    return yf.Ticker(symbol, session=_SESSION)
 
 
 def _fetch_index(symbol: str) -> dict:
     try:
         today = date.today()
-        df = _download(symbol,
-                       start=(today - timedelta(days=20)).isoformat(),
-                       end=today.isoformat(),
-                       interval="1d")
+        t = _ticker(symbol)
+        df = t.history(
+            start=(today - timedelta(days=20)).isoformat(),
+            end=today.isoformat(),
+            interval="1d",
+            auto_adjust=True,
+        )
         if df is None or df.empty or len(df) < 2:
             return {}
         if isinstance(df.columns, pd.MultiIndex):
             df.columns = df.columns.get_level_values(0)
-        close     = df["Close"].squeeze()
-        today_c   = float(close.iloc[-1])
-        prev_c    = float(close.iloc[-2])
-        day_chg   = (today_c - prev_c) / prev_c * 100
+        close   = df["Close"].squeeze()
+        today_c = float(close.iloc[-1])
+        prev_c  = float(close.iloc[-2])
+        day_chg = (today_c - prev_c) / prev_c * 100
 
         def trend(n):
             if len(close) < n + 1: return "unknown"
             p = (close.iloc[-1] - close.iloc[-n]) / close.iloc[-n] * 100
-            if p > 3:  return "strong_up"
-            if p > 0.8: return "up"
-            if p < -3: return "strong_down"
+            if p > 3:    return "strong_up"
+            if p > 0.8:  return "up"
+            if p < -3:   return "strong_down"
             if p < -0.8: return "down"
             return "sideways"
 
@@ -141,7 +144,8 @@ def _fetch_index(symbol: str) -> dict:
 
 def _fetch_vix() -> dict:
     try:
-        df = _download("^INDIAVIX", period="5d", interval="1d")
+        t  = _ticker("^INDIAVIX")
+        df = t.history(period="5d", interval="1d", auto_adjust=True)
         if df is None or df.empty:
             return {"value": 15.0, "level": "normal"}
         if isinstance(df.columns, pd.MultiIndex):
@@ -177,4 +181,4 @@ def _print_health(h: dict) -> None:
           f"| VIX={vix.get('value','?')} [{vix.get('level','?')}] "
           f"| Mood={h.get('market_mood')} | Trade={'YES' if h.get('trade_allowed') else 'NO'}")
     for w in h.get("warnings", []):
-        print(f"  ⚠ {w}")
+        print(f"  [!] {w}")

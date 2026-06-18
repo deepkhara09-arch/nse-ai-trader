@@ -1,6 +1,9 @@
 """
-Data fetcher — downloads OHLCV using yfinance with curl_cffi to bypass
-Yahoo Finance's Cloudflare block on GitHub Actions IPs.
+Data fetcher — downloads OHLCV using yfinance 0.2.48.
+
+Yahoo Finance blocks GitHub Actions IPs via Cloudflare. The fix:
+use a requests.Session with real browser headers injected into yfinance.
+This is the approach that works with yfinance 0.2.48 on all platforms.
 """
 
 import json
@@ -10,6 +13,7 @@ from datetime import date, datetime, timedelta
 from typing import Dict, List
 
 import pandas as pd
+import requests
 import yfinance as yf
 
 from agent.config import (
@@ -19,18 +23,44 @@ from agent.config import (
     BB_PERIOD, BB_STD, ATR_PERIOD, VOLUME_MA,
 )
 
-# Build a shared curl_cffi session once — yfinance accepts it as a drop-in
-# requests-compatible session, bypassing Yahoo's bot detection.
-try:
-    from curl_cffi.requests import Session as CurlSession
-    _SESSION = CurlSession(impersonate="chrome110")
-    print("[data] curl_cffi session active")
-except Exception:
-    _SESSION = None
-    print("[data] curl_cffi unavailable — using default requests")
+# ── Browser-spoofed session — bypasses Yahoo's bot detection ──────────────────
+_SESSION = requests.Session()
+_SESSION.headers.update({
+    "User-Agent": (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/124.0.0.0 Safari/537.36"
+    ),
+    "Accept":          "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Connection":      "keep-alive",
+})
 
 
-# ── Public API ─────────────────────────────────────────────────────────────────
+def _download(ticker: str, **kwargs) -> pd.DataFrame:
+    """Download via yfinance with our browser-spoofed session."""
+    kwargs.setdefault("progress", False)
+    kwargs.setdefault("auto_adjust", True)
+    # yfinance 0.2.x passes session to its internal downloader
+    t = yf.Ticker(ticker, session=_SESSION)
+    if "period" in kwargs:
+        df = t.history(
+            period=kwargs["period"],
+            interval=kwargs.get("interval", "1d"),
+            auto_adjust=kwargs.get("auto_adjust", True),
+        )
+    else:
+        df = t.history(
+            start=kwargs.get("start"),
+            end=kwargs.get("end"),
+            interval=kwargs.get("interval", "1d"),
+            auto_adjust=kwargs.get("auto_adjust", True),
+        )
+    return df if df is not None else pd.DataFrame()
+
+
+# ── Public API ────────────────────────────────────────────────────────────────
 
 def fetch_stock_data(tickers: List[str], session: str = "morning") -> Dict:
     result = {}
@@ -39,7 +69,7 @@ def fetch_stock_data(tickers: List[str], session: str = "morning") -> Dict:
             entry = _fetch_one(ticker, session)
             if entry:
                 result[ticker] = entry
-            time.sleep(0.5)
+            time.sleep(0.6)
         except Exception as e:
             print(f"[data] {ticker}: {e}")
     print(f"[data] fetched {len(result)}/{len(tickers)} tickers  session={session}")
@@ -72,22 +102,12 @@ def merge_stock_data(existing: Dict, fresh: Dict) -> Dict:
     return merged
 
 
-# ── Internal ───────────────────────────────────────────────────────────────────
-
-def _download(ticker: str, **kwargs) -> pd.DataFrame:
-    """Download via yfinance, injecting curl_cffi session when available."""
-    kwargs.setdefault("progress", False)
-    kwargs.setdefault("auto_adjust", True)
-    if _SESSION is not None:
-        kwargs["session"] = _SESSION
-    return yf.download(ticker, **kwargs)
-
+# ── Internal ──────────────────────────────────────────────────────────────────
 
 def _fetch_one(ticker: str, session: str) -> dict:
     today       = date.today()
     start_daily = today - timedelta(days=120)
 
-    # ── Daily bars ────────────────────────────────────────────────────────────
     df_daily = _download(
         ticker,
         start=start_daily.isoformat(),
@@ -97,10 +117,9 @@ def _fetch_one(ticker: str, session: str) -> dict:
     if df_daily is None or df_daily.empty or len(df_daily) < 20:
         return {}
 
-    df_daily       = _compute_indicators(df_daily)
-    daily_summary  = _summarize_daily(df_daily, ticker)
+    df_daily      = _compute_indicators(df_daily)
+    daily_summary = _summarize_daily(df_daily, ticker)
 
-    # ── Intraday bars (5-min) ─────────────────────────────────────────────────
     intraday_summary = {}
     try:
         df_intra = _download(ticker, period="1d", interval="5m")
@@ -122,14 +141,14 @@ def _fetch_one(ticker: str, session: str) -> dict:
         })
 
     return {
-        "ticker":            ticker,
-        "fetched_at":        datetime.utcnow().isoformat(),
-        "session":           session,
-        "latest":            latest,
-        "daily":             daily_summary,
-        "intraday":          intraday_summary,
-        "price_history_60d": daily_summary.get("price_history_60d", []),
-        "volume_history_20d":daily_summary.get("volume_history_20d", []),
+        "ticker":             ticker,
+        "fetched_at":         datetime.utcnow().isoformat(),
+        "session":            session,
+        "latest":             latest,
+        "daily":              daily_summary,
+        "intraday":           intraday_summary,
+        "price_history_60d":  daily_summary.get("price_history_60d", []),
+        "volume_history_20d": daily_summary.get("volume_history_20d", []),
     }
 
 
@@ -153,14 +172,14 @@ def _compute_indicators(df: pd.DataFrame) -> pd.DataFrame:
     rs    = gain / loss.replace(0, 1e-9)
     df["rsi"] = 100 - (100 / (1 + rs))
 
-    ema_f         = close.ewm(span=MACD_FAST,   adjust=False).mean()
-    ema_s         = close.ewm(span=MACD_SLOW,   adjust=False).mean()
+    ema_f             = close.ewm(span=MACD_FAST,   adjust=False).mean()
+    ema_s             = close.ewm(span=MACD_SLOW,   adjust=False).mean()
     df["macd"]        = ema_f - ema_s
     df["macd_signal"] = df["macd"].ewm(span=MACD_SIGNAL, adjust=False).mean()
     df["macd_hist"]   = df["macd"] - df["macd_signal"]
 
-    sma = close.rolling(BB_PERIOD).mean()
-    std = close.rolling(BB_PERIOD).std()
+    sma            = close.rolling(BB_PERIOD).mean()
+    std            = close.rolling(BB_PERIOD).std()
     df["bb_upper"] = sma + BB_STD * std
     df["bb_lower"] = sma - BB_STD * std
     df["bb_pct"]   = (close - (sma - BB_STD * std)) / (2 * BB_STD * std + 1e-9)
@@ -179,8 +198,8 @@ def _compute_indicators(df: pd.DataFrame) -> pd.DataFrame:
     df["daily_ret"]      = close.pct_change() * 100
     df["volatility_10d"] = df["daily_ret"].rolling(10).std()
 
-    body         = (close - open_).abs()
-    candle_range = (high - low).replace(0, 1e-9)
+    body             = (close - open_).abs()
+    candle_range     = (high - low).replace(0, 1e-9)
     df["body_pct"]       = body / candle_range
     df["upper_wick_pct"] = (high - pd.concat([close, open_], axis=1).max(axis=1)) / candle_range
     df["lower_wick_pct"] = (pd.concat([close, open_], axis=1).min(axis=1) - low) / candle_range
@@ -195,18 +214,21 @@ def _summarize_daily(df: pd.DataFrame, ticker: str) -> dict:
     l = df.iloc[-1]
 
     def f(x):
-        try: return round(float(x), 4)
-        except: return 0.0
+        try:
+            return round(float(x), 4)
+        except Exception:
+            return 0.0
 
     close = df["Close"].squeeze()
 
     def trend(n):
-        if len(close) < n + 1: return "unknown"
+        if len(close) < n + 1:
+            return "unknown"
         pct = (close.iloc[-1] - close.iloc[-n]) / close.iloc[-n] * 100
-        if pct > 4:  return "strong_up"
-        if pct > 1:  return "up"
-        if pct < -4: return "strong_down"
-        if pct < -1: return "down"
+        if pct > 4:   return "strong_up"
+        if pct > 1:   return "up"
+        if pct < -4:  return "strong_down"
+        if pct < -1:  return "down"
         return "sideways"
 
     return {
@@ -254,14 +276,15 @@ def _summarize_intraday(df: pd.DataFrame, session: str) -> dict:
     low    = df["Low"].squeeze()
     volume = df["Volume"].squeeze()
 
-    tp   = (high + low + close) / 3
-    vwap = float((tp * volume).cumsum().iloc[-1] / volume.cumsum().iloc[-1]) if volume.sum() > 0 else float(close.iloc[-1])
+    tp      = (high + low + close) / 3
+    vol_sum = volume.cumsum().iloc[-1]
+    vwap    = float((tp * volume).cumsum().iloc[-1] / vol_sum) if vol_sum > 0 else float(close.iloc[-1])
 
-    current   = float(close.iloc[-1])
-    vol_avg   = float(volume.mean()) or 1
-    vol_last  = float(volume.iloc[-3:].mean()) if len(volume) >= 3 else vol_avg
-    ema9      = close.ewm(span=9,  adjust=False).mean()
-    ema21     = close.ewm(span=21, adjust=False).mean()
+    current  = float(close.iloc[-1])
+    vol_avg  = float(volume.mean()) or 1
+    vol_last = float(volume.iloc[-3:].mean()) if len(volume) >= 3 else vol_avg
+    ema9     = close.ewm(span=9,  adjust=False).mean()
+    ema21    = close.ewm(span=21, adjust=False).mean()
 
     if ema9.iloc[-1] > ema21.iloc[-1] and current > vwap:
         trend = "bullish"
@@ -276,7 +299,7 @@ def _summarize_intraday(df: pd.DataFrame, session: str) -> dict:
         "current_price": round(current, 2),
         "vwap":          round(vwap, 2),
         "session_high":  round(float(high.max()), 2),
-        "session_low":   round(float(low.min()), 2),
+        "session_low":   round(float(low.min()),  2),
         "trend":         trend,
         "vol_surge":     vol_last > vol_avg * 1.5,
         "above_vwap":    current > vwap,

@@ -33,7 +33,7 @@ RANK_HISTORY_FILE    = "brain/rank_history.json"
 WATCHLIST_FILE       = "brain/watchlist_signals.json"
 DECISIONS_FILE       = "brain/decisions.json"
 
-CURRENT_SCHEMA_VERSION = 2   # bump this when you add a new migration
+CURRENT_SCHEMA_VERSION = 3   # bump this when you add a new migration
 
 
 # ── Migration functions ────────────────────────────────────────────────────────
@@ -93,10 +93,53 @@ def _migrate_v2(state, stock_data, patterns, book, fundamentals, decisions):
     return state, stock_data, patterns, book, fundamentals, decisions
 
 
+def _migrate_v3(state, stock_data, patterns, book, fundamentals, decisions):
+    """
+    v3: sector tracker, earnings calendar, RSI divergence, ATR auto-tuning,
+    drawdown tracking, recommendation changelog, news sentiment momentum.
+
+    - Adds atr_stop_hits / atr_target_hits / atr_multiplier to every patterns entry
+    - Adds max_drawdown_pct / current_drawdown_pct / portfolio_peak to book
+    - Adds price_history / rsi_history / week52_* stubs to stock latest dicts
+      (real values populate on next data fetch — stubs prevent KeyError)
+    - Ensures news history keeps up to 10 entries (old cap was 6)
+    """
+    from agent.config import ATR_STOP_MULTIPLIER
+
+    # Patterns: add ATR tuning fields per ticker
+    for ticker, tk in patterns.items():
+        tk.setdefault("atr_stop_hits",   0)
+        tk.setdefault("atr_target_hits", 0)
+        tk.setdefault("atr_multiplier",  ATR_STOP_MULTIPLIER)
+
+    # Paper book: add drawdown fields
+    book.setdefault("max_drawdown_pct",     0.0)
+    book.setdefault("current_drawdown_pct", 0.0)
+    book.setdefault("portfolio_peak",       book.get("capital", 100_000))
+    book.setdefault("sessions_since_peak",  0)
+
+    # Stock data: add stub fields to latest dicts so brain doesn't KeyError
+    for ticker, entry in stock_data.items():
+        if "latest" not in entry:
+            continue
+        d = entry["latest"]
+        d.setdefault("price_history",        [])
+        d.setdefault("rsi_history",          [])
+        d.setdefault("week52_high",          0.0)
+        d.setdefault("week52_low",           0.0)
+        d.setdefault("week52_position_pct",  50.0)
+        d.setdefault("sector",               "Other")
+        d.setdefault("sector_momentum",      0.0)
+        d.setdefault("days_to_earnings",     None)
+
+    return state, stock_data, patterns, book, fundamentals, decisions
+
+
 # ── Registry: maps schema version → migration that brings data UP to that version
 MIGRATIONS = {
     1: _migrate_v1,
     2: _migrate_v2,
+    3: _migrate_v3,
 }
 
 

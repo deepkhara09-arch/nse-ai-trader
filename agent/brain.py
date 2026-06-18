@@ -170,6 +170,28 @@ def detect_all_patterns(d: dict, prev: dict = None, prev2: dict = None) -> List[
     if vol_rel > 3.0 and rsi > 65:
         patterns.append("volume_climax_top")
 
+    # ── RSI divergence (requires price history in d) ──────────────────────────
+    # Bullish divergence: price makes lower low but RSI makes higher low
+    ph = d.get("price_history", [])   # last N closes stored in latest dict
+    rh = d.get("rsi_history", [])
+    if len(ph) >= 5 and len(rh) >= 5:
+        if ph[-1] < ph[-3] and rh[-1] > rh[-3]:
+            patterns.append("rsi_bullish_divergence")
+        if ph[-1] > ph[-3] and rh[-1] < rh[-3]:
+            patterns.append("rsi_bearish_divergence")
+
+    # ── 52-week proximity ─────────────────────────────────────────────────────
+    wk52_high = d.get("week52_high", 0)
+    wk52_low  = d.get("week52_low",  0)
+    wk52_pos  = d.get("week52_position_pct", 50)
+    if wk52_high and close > 0:
+        if close >= wk52_high * 0.98:
+            patterns.append("near_52w_high")        # potential breakout zone
+        if close <= wk52_low * 1.03:
+            patterns.append("near_52w_low")         # potential reversal zone
+        if close > wk52_high * 1.001 and vol_rel > 1.5:
+            patterns.append("52w_breakout")         # strong breakout above annual high
+
     # ── Intraday alignment (from 5-min data) ─────────────────────────────────
     if intra_trend == "bullish" and above_vwap is True:
         patterns.append("intraday_bullish_vwap")
@@ -361,12 +383,18 @@ def analyse_stock(
         else:
             sell_score += 1; sell_reasons.append(f"High volume confirmation ({vol_rel:.1f}x avg)")
 
-    # News sentiment
-    news_score = sentiment.get("score", 0) if sentiment else 0
+    # News sentiment — use weighted score if available, else raw
+    news_score = sentiment.get("weighted_score",
+                               sentiment.get("score", 0)) if sentiment else 0
+    news_trend = sentiment.get("trend", "stable") if sentiment else "stable"
     if news_score > 0.15:
         buy_score += 0.5; buy_reasons.append(f"Positive news sentiment ({news_score:.2f})")
+        if news_trend == "improving":
+            buy_score += 0.3; buy_reasons.append("News sentiment improving across sessions")
     elif news_score < -0.15:
         sell_score += 0.5; sell_reasons.append(f"Negative news sentiment ({news_score:.2f})")
+        if news_trend == "worsening":
+            sell_score += 0.3; sell_reasons.append("News sentiment worsening across sessions")
 
     # Learned pattern scores
     for p in patterns:
@@ -397,6 +425,34 @@ def analyse_stock(
     if "volume_climax_top" in patterns:
         sell_score += 1.5; sell_reasons.append("Volume climax at high — potential distribution")
 
+    # ── RSI divergence (strong reversal signals) ──────────────────────────────
+    if "rsi_bullish_divergence" in patterns:
+        buy_score += 2.0; buy_reasons.append("RSI bullish divergence — price lower but RSI higher")
+    if "rsi_bearish_divergence" in patterns:
+        sell_score += 2.0; sell_reasons.append("RSI bearish divergence — price higher but RSI lower")
+
+    # ── 52-week position signals ──────────────────────────────────────────────
+    if "52w_breakout" in patterns:
+        buy_score += 2.5; buy_reasons.append("52-week breakout on high volume — strong momentum")
+    if "near_52w_high" in patterns and buy_score > sell_score:
+        buy_score += 0.8; buy_reasons.append("Near 52-week high — potential breakout zone")
+    if "near_52w_low" in patterns and rsi < 40:
+        buy_score += 1.2; buy_reasons.append("Near 52-week low with oversold RSI — reversal setup")
+
+    # ── Earnings risk penalty ─────────────────────────────────────────────────
+    days_to_earnings = d.get("days_to_earnings")
+    if days_to_earnings is not None and 0 <= days_to_earnings <= 5:
+        buy_score  *= 0.6   # reduce conviction near earnings — gap risk
+        sell_score *= 0.6
+        buy_reasons.append(f"⚠ Earnings in {days_to_earnings}d — position size reduced")
+
+    # ── Sector momentum bonus/penalty ─────────────────────────────────────────
+    sector_momentum = d.get("sector_momentum", 0.0)   # -1 to +1, set by sector tracker
+    if sector_momentum > 0.3 and buy_score > sell_score:
+        buy_score += 0.5; buy_reasons.append(f"Sector tailwind (momentum={sector_momentum:.2f})")
+    elif sector_momentum < -0.3 and buy_score > sell_score:
+        buy_score -= 0.5; buy_reasons.append(f"Sector headwind (momentum={sector_momentum:.2f})")
+
     buy_score  = round(buy_score,  2)
     sell_score = round(sell_score, 2)
     gap = abs(buy_score - sell_score)
@@ -412,16 +468,19 @@ def analyse_stock(
     # ── Compute entry / stop / target via ATR ─────────────────────────────────
     close = d.get("close", 0)
     atr   = d.get("atr", close * FLAT_STOP_PCT)
+    # Use per-stock learned ATR multiplier if available, else config default
+    atr_mult   = tk_known.get("atr_multiplier", ATR_STOP_MULTIPLIER)
+    atr_target = ATR_TARGET_MULTIPLIER
 
     if signal == "BUY":
         entry     = close
-        stop_loss = round(close - atr * ATR_STOP_MULTIPLIER, 2)
-        target    = round(close + atr * ATR_TARGET_MULTIPLIER, 2)
+        stop_loss = round(close - atr * atr_mult, 2)
+        target    = round(close + atr * atr_target, 2)
         style     = tk_known.get("preferred_style", "swing")
     elif signal == "SELL":
         entry     = close
-        stop_loss = round(close + atr * ATR_STOP_MULTIPLIER, 2)
-        target    = round(close - atr * ATR_TARGET_MULTIPLIER, 2)
+        stop_loss = round(close + atr * atr_mult, 2)
+        target    = round(close - atr * atr_target, 2)
         style     = tk_known.get("preferred_style", "swing")
     else:
         entry = stop_loss = target = close
@@ -468,6 +527,7 @@ def learn_from_trade(
     won: bool,
     style: str,
     patterns_db: Dict,
+    **kwargs,
 ) -> Dict:
     """
     Updates pattern reliability for a ticker based on a closed trade outcome.
@@ -481,6 +541,9 @@ def learn_from_trade(
             "swing_losses":      0,
             "intraday_wins":     0,
             "intraday_losses":   0,
+            "atr_stop_hits":     0,
+            "atr_target_hits":   0,
+            "atr_multiplier":    ATR_STOP_MULTIPLIER,   # per-stock tuned value
             "last_updated":      None,
         }
 
@@ -517,6 +580,27 @@ def learn_from_trade(
     sw  = tk["swing_wins"]    / max(tk["swing_wins"]    + tk["swing_losses"],   1)
     inw = tk["intraday_wins"] / max(tk["intraday_wins"] + tk["intraday_losses"],1)
     tk["preferred_style"] = "swing" if sw >= inw else "intraday"
+
+    # ── Per-stock ATR multiplier auto-tuning ──────────────────────────────────
+    # Track how often stop gets hit vs target. If stops hit >50% → widen multiplier.
+    # If target hit consistently → tighten stop to lock in profits faster.
+    exit_reason = kwargs.get("exit_reason", "")
+    if exit_reason == "stop_hit":
+        tk["atr_stop_hits"]   = tk.get("atr_stop_hits", 0) + 1
+    elif exit_reason == "target_hit":
+        tk["atr_target_hits"] = tk.get("atr_target_hits", 0) + 1
+
+    total_exits = tk.get("atr_stop_hits", 0) + tk.get("atr_target_hits", 0)
+    if total_exits >= 5:
+        stop_rate = tk["atr_stop_hits"] / total_exits
+        current_mult = tk.get("atr_multiplier", ATR_STOP_MULTIPLIER)
+        if stop_rate > 0.60:
+            # Too many stops hit → widen stop
+            tk["atr_multiplier"] = min(round(current_mult + 0.1, 2), 3.0)
+        elif stop_rate < 0.30:
+            # Rarely stopped → can tighten stop
+            tk["atr_multiplier"] = max(round(current_mult - 0.05, 2), 1.0)
+
     tk["last_updated"] = today
 
     # Decay reliability of patterns not seen recently

@@ -26,6 +26,8 @@ def build_dashboard(
     recommendations: List = None,
     fundamentals: Dict = None,
     ranked_stocks: List = None,
+    sector_scores: Dict = None,
+    changelog: List = None,
 ) -> None:
     os.makedirs("docs", exist_ok=True)
     if market_health is None:
@@ -36,6 +38,10 @@ def build_dashboard(
         fundamentals = {}
     if ranked_stocks is None:
         ranked_stocks = []
+    if sector_scores is None:
+        sector_scores = {}
+    if changelog is None:
+        changelog = []
 
     stats   = compute_stats(book)
     now_utc = datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC")
@@ -62,6 +68,7 @@ def build_dashboard(
         stock_data, focus, phase, day, alert, now_utc,
         portfolio, pnl_total, pnl_pct, nifty, vix, mood,
         trade_ok, mkt_warn, recommendations, market_health, fundamentals,
+        ranked_stocks, sector_scores, changelog,
     )
 
     with open(DASHBOARD_FILE, "w", encoding="utf-8") as f:
@@ -77,9 +84,12 @@ def _build_html(
     state, stats, book, patterns, decisions, news_data, stock_data,
     focus, phase, day, alert, now_utc, portfolio, pnl_total, pnl_pct,
     nifty, vix, mood, trade_ok, mkt_warn, recommendations, market_health,
-    fundamentals=None,
+    fundamentals=None, ranked_stocks=None, sector_scores=None, changelog=None,
 ):
-    fundamentals = fundamentals or {}
+    fundamentals  = fundamentals  or {}
+    ranked_stocks = ranked_stocks or []
+    sector_scores = sector_scores or {}
+    changelog     = changelog     or []
     nifty_val = nifty.get("value", "")
     vix_val   = vix.get("value", "")
     nifty_str = f"{nifty_val:,.0f}" if isinstance(nifty_val, (int, float)) else "—"
@@ -104,8 +114,10 @@ def _build_html(
   {_section_status(state, phase, day, focus, stock_data)}
   {_section_heatmap(stock_data)}
   {_section_portfolio(stats, portfolio, pnl_total, pnl_pct, book)}
+  {_section_sectors(sector_scores)}
   {_section_rankings(ranked_stocks)}
   {_section_recommendations(recommendations)}
+  {_section_changelog(changelog)}
   {_section_watchlist(focus, stock_data, news_data, patterns, fundamentals)}
   {_section_trades(book)}
   {_section_research(state, decisions)}
@@ -652,8 +664,10 @@ def _nav() -> str:
   <a href="#status">Status</a>
   <a href="#heatmap">Heatmap</a>
   <a href="#portfolio">Portfolio</a>
+  <a href="#sectors">Sectors</a>
   <a href="#rankings">Rankings</a>
   <a href="#recommendations">Recommendations</a>
+  <a href="#changelog">Changelog</a>
   <a href="#watchlist">Watchlist</a>
   <a href="#trades">Paper Trades</a>
   <a href="#research">Research Log</a>
@@ -912,6 +926,13 @@ def _section_portfolio(stats, portfolio, pnl_total, pnl_pct, book) -> str:
     equity_html   = _equity_curve(book)
     open_pos_html = _open_positions_table(book)
 
+    max_dd      = book.get("max_drawdown_pct", 0.0)
+    curr_dd     = book.get("current_drawdown_pct", 0.0)
+    peak_val    = book.get("portfolio_peak", portfolio)
+    sess_peak   = book.get("sessions_since_peak", 0)
+    dd_cls      = "red" if curr_dd > 5 else "yellow" if curr_dd > 2 else "green"
+    max_dd_cls  = "red" if max_dd > 10 else "yellow" if max_dd > 5 else "green"
+
     return f"""<div class="section" id="portfolio">
   <h2>Paper Portfolio <span>Virtual &#8377;1,00,000 &mdash; no real money</span></h2>
   <div class="grid4" style="margin-bottom:13px">
@@ -919,6 +940,12 @@ def _section_portfolio(stats, portfolio, pnl_total, pnl_pct, book) -> str:
     {sc("Total P&amp;L",    f"&#8377;{pnl_total:+,.0f} ({pnl_pct:+.1f}%)", p_cls)}
     {sc("Win Rate",          f"{wr_pct:.1f}%", wr_cls)}
     {sc("Total Trades",      f"{stats['total']} ({stats['wins']}W / {stats['losses']}L)")}
+  </div>
+  <div class="grid4" style="margin-bottom:13px">
+    {sc("Peak Value",        f"&#8377;{peak_val:,.0f}")}
+    {sc("Current Drawdown",  f"{curr_dd:.1f}%", dd_cls)}
+    {sc("Max Drawdown",      f"{max_dd:.1f}%", max_dd_cls)}
+    {sc("Sessions Since Peak", f"{sess_peak}")}
   </div>
   <div style="margin-bottom:13px">
     <div style="display:flex;justify-content:space-between;font-size:.68rem;color:var(--muted);margin-bottom:3px">
@@ -939,6 +966,7 @@ def _section_portfolio(stats, portfolio, pnl_total, pnl_pct, book) -> str:
       <div class="irow"><span class="muted">Expectancy / trade</span><span class="{exp_cls}">&#8377;{stats['expectancy']:+,.0f}</span></div>
       <div class="irow"><span class="muted">Free capital</span><span>&#8377;{book.get('capital', INITIAL_CAPITAL):,.0f}</span></div>
       <div class="irow"><span class="muted">Open positions</span><span class="blue">{len(book.get('open_positions', []))}</span></div>
+      <div class="irow"><span class="muted">Max drawdown</span><span class="{max_dd_cls}">{max_dd:.1f}%</span></div>
     </div>
   </div>
   {open_pos_html}
@@ -1126,6 +1154,96 @@ def _fund_table(fund: dict) -> str:
         + "".join(rows)
         + '</div>'
     )
+
+
+def _section_sectors(sector_scores: dict) -> str:
+    if not sector_scores:
+        return ""
+
+    def mom_bar(m):
+        pct  = round((m + 1) / 2 * 100)   # -1→0%, 0→50%, +1→100%
+        col  = "var(--bull)" if m > 0.15 else "var(--bear)" if m < -0.15 else "var(--muted)"
+        lbl  = "Bullish" if m > 0.15 else "Bearish" if m < -0.15 else "Neutral"
+        return (
+            f'<div style="display:flex;align-items:center;gap:8px">'
+            f'<div style="flex:1;height:5px;background:#23232e;border-radius:3px">'
+            f'<div style="width:{pct}%;height:5px;background:{col};border-radius:3px"></div>'
+            f'</div>'
+            f'<span style="font-size:.68rem;color:{col};min-width:48px">{lbl}</span>'
+            f'</div>'
+        )
+
+    # Sort by momentum descending
+    sorted_sectors = sorted(
+        [(s, v["latest"]) for s, v in sector_scores.items() if "latest" in v],
+        key=lambda x: x[1].get("momentum", 0),
+        reverse=True
+    )
+
+    cards = ""
+    for sector, info in sorted_sectors:
+        mom   = info.get("momentum", 0)
+        rsi   = info.get("avg_rsi", 50)
+        n     = info.get("stock_count", 0)
+        col   = "var(--bull)" if mom > 0.15 else "var(--bear)" if mom < -0.15 else "var(--muted)"
+        cards += (
+            f'<div class="card" style="padding:12px 14px">'
+            f'<div style="display:flex;justify-content:space-between;margin-bottom:6px">'
+            f'<strong style="font-size:.82rem">{sector}</strong>'
+            f'<span style="font-size:.72rem;color:{col};font-weight:600">{mom:+.2f}</span>'
+            f'</div>'
+            f'{mom_bar(mom)}'
+            f'<div style="font-size:.68rem;color:var(--muted);margin-top:5px">'
+            f'RSI {rsi:.0f} &middot; {n} stocks'
+            f'</div>'
+            f'</div>'
+        )
+
+    return f"""<div class="section" id="sectors">
+  <h2>Sector Rotation <span>Real-time sector momentum — updates every session</span></h2>
+  <div class="grid3">{cards}</div>
+</div>"""
+
+
+def _section_changelog(changelog: list) -> str:
+    if not changelog:
+        return ""
+
+    recent = list(reversed(changelog))[:20]   # show last 20 events, newest first
+
+    type_styles = {
+        "new":     ("var(--bull)",  "NEW"),
+        "removed": ("var(--bear)",  "REMOVED"),
+        "updated": ("var(--cyan)",  "UPDATED"),
+    }
+
+    rows = ""
+    for c in recent:
+        ctype  = c.get("type", "updated")
+        color, label = type_styles.get(ctype, ("var(--muted)", ctype.upper()))
+        signal = c.get("signal", "")
+        sig_col = "var(--bull)" if signal == "BUY" else "var(--bear)" if signal == "SELL" else "var(--muted)"
+        rows += (
+            f'<tr>'
+            f'<td style="color:var(--muted);font-size:.7rem;white-space:nowrap">{c.get("date","")}</td>'
+            f'<td><span style="color:{color};font-size:.7rem;font-weight:600">{label}</span></td>'
+            f'<td><strong style="font-size:.8rem">{c.get("nse_code","")}</strong></td>'
+            f'<td style="color:{sig_col};font-size:.74rem">{signal}</td>'
+            f'<td style="font-size:.74rem;color:var(--fg)">{c.get("detail","")}</td>'
+            f'</tr>'
+        )
+
+    return f"""<div class="section" id="changelog">
+  <h2>Recommendation Changelog <span>What changed and why — session by session</span></h2>
+  <div class="card table-wrap">
+    <table>
+      <thead><tr>
+        <th>Date</th><th>Event</th><th>Stock</th><th>Signal</th><th>Detail</th>
+      </tr></thead>
+      <tbody>{rows}</tbody>
+    </table>
+  </div>
+</div>"""
 
 
 def _section_rankings(ranked: list) -> str:

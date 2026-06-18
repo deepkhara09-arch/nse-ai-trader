@@ -340,6 +340,10 @@ def _summarize_daily(df: pd.DataFrame, ticker: str) -> dict:
         if pct < -1: return "down"
         return "sideways"
 
+    price_hist = [round(float(p), 2) for p in close.tail(60).tolist()]
+    rsi_hist   = [round(float(r), 2) for r in df["rsi"].tail(60).tolist()
+                  if pd.notna(r)]
+
     return {
         "ticker": ticker,
         "date":   str(df.index[-1].date()) if hasattr(df.index[-1], "date") else str(df.index[-1])[:10],
@@ -366,11 +370,22 @@ def _summarize_daily(df: pd.DataFrame, ticker: str) -> dict:
             "body_pct":       f(l["body_pct"]),
             "upper_wick_pct": f(l["upper_wick_pct"]),
             "lower_wick_pct": f(l["lower_wick_pct"]),
+            # Short histories for divergence detection in brain.py
+            "price_history":  price_hist[-10:],
+            "rsi_history":    rsi_hist[-10:],
+            # 52-week computed from the fetched window (~120 days, best available)
+            "week52_high":    round(float(df["High"].tail(252).max()), 2),
+            "week52_low":     round(float(df["Low"].tail(252).min()), 2),
+            "week52_position_pct": round(
+                (float(l["Close"]) - float(df["Low"].tail(252).min())) /
+                max(float(df["High"].tail(252).max()) - float(df["Low"].tail(252).min()), 0.01)
+                * 100, 1
+            ),
         },
         "trend_30d":          trend(30),
         "trend_10d":          trend(10),
         "trend_5d":           trend(5),
-        "price_history_60d":  [round(float(p), 2) for p in close.tail(60).tolist()],
+        "price_history_60d":  price_hist,
         "volume_history_20d": [int(v) if pd.notna(v) else 0 for v in df["Volume"].squeeze().tail(20).tolist()],
         "avg_volume_20d":     int(df["Volume"].squeeze().tail(20).mean()),
     }

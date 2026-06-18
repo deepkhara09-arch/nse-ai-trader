@@ -148,7 +148,7 @@ def _fetch_one(ticker: str, session, crumb: str) -> dict:
     modules = (
         "financialData,defaultKeyStatistics,summaryDetail,"
         "earningsTrend,incomeStatementHistoryQuarterly,"
-        "cashflowStatementHistoryQuarterly"
+        "cashflowStatementHistoryQuarterly,calendarEvents"
     )
     url = (
         f"https://query1.finance.yahoo.com/v11/finance/quoteSummary/{ticker}"
@@ -169,6 +169,7 @@ def _fetch_one(ticker: str, session, crumb: str) -> dict:
         sd  = res.get("summaryDetail", {})
         et  = res.get("earningsTrend", {})
         ish = res.get("incomeStatementHistoryQuarterly", {})
+        cal = res.get("calendarEvents", {})
 
         def v(d, key):
             x = d.get(key, {})
@@ -233,6 +234,22 @@ def _fetch_one(ticker: str, session, crumb: str) -> dict:
         trends = et.get("trend", [])
         earnings_trend = _earnings_trend(trends)
 
+        # ── Earnings date & days to results ──────────────────────────────────
+        earnings_date = None
+        days_to_earnings = None
+        try:
+            earn_dates = cal.get("earnings", {}).get("earningsDate", [])
+            if earn_dates:
+                raw_ts = earn_dates[0]
+                raw_val = raw_ts.get("raw") if isinstance(raw_ts, dict) else raw_ts
+                if raw_val:
+                    from datetime import date as _date
+                    earn_dt = _date.fromtimestamp(int(raw_val))
+                    earnings_date = earn_dt.isoformat()
+                    days_to_earnings = (earn_dt - _date.today()).days
+        except Exception:
+            pass
+
         # ── Analyst target & upside ───────────────────────────────────────────
         target_price = v(fd, "targetMeanPrice")
         analyst_upside = None
@@ -294,8 +311,10 @@ def _fetch_one(ticker: str, session, crumb: str) -> dict:
             "analyst_recommendation": fd.get("recommendationKey", ""),
             "analyst_count":        v(fd, "numberOfAnalystOpinions"),
 
-            # Earnings quality
+            # Earnings quality & calendar
             "earnings_trend":       earnings_trend,
+            "earnings_date":        earnings_date,
+            "days_to_earnings":     days_to_earnings,
             "beta":                 _r(v(ks, "beta")),
         }
         # Strip None values to keep JSON clean

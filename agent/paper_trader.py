@@ -233,9 +233,10 @@ def _check_exits(book: dict, stock_data: Dict, session: str, patterns_db: Dict):
             icon = "✅" if won else "❌"
             print(f"[paper] CLOSE {icon} {ticker} | {exit_reason} | PnL ₹{pnl:+.0f} ({pnl_pct:+.1f}%)")
 
-            # Teach the brain
+            # Teach the brain — pass exit_reason for ATR multiplier auto-tuning
             patterns_db = learn_from_trade(
-                ticker, pos.get("patterns", []), won, pos.get("style", "swing"), patterns_db
+                ticker, pos.get("patterns", []), won, pos.get("style", "swing"),
+                patterns_db, exit_reason=exit_reason
             )
         else:
             pos["current_price"] = round(current, 2)
@@ -292,15 +293,32 @@ def _snapshot(book: dict) -> dict:
     total_unrealized = sum(p.get("unrealized_pnl", 0) for p in book["open_positions"])
     total_invested   = sum(p.get("invested", 0) for p in book["open_positions"])
     portfolio_value  = round(book["capital"] + total_invested + total_unrealized, 2)
-    book["daily_snapshots"].append({
+    snap = {
         "date":            today,
         "portfolio_value": portfolio_value,
         "capital":         round(book["capital"], 2),
         "open_positions":  len(book["open_positions"]),
         "daily_pnl":       round(book.get("daily_pnl_today", 0), 2),
-    })
+    }
+    book["daily_snapshots"].append(snap)
     book["daily_snapshots"] = book["daily_snapshots"][-90:]
     book["last_snapshot_date"] = today
+
+    # ── Drawdown tracking ─────────────────────────────────────────────────────
+    values = [s["portfolio_value"] for s in book["daily_snapshots"]]
+    if values:
+        peak = max(values)
+        current = values[-1]
+        dd_pct = round((peak - current) / peak * 100, 2) if peak > 0 else 0.0
+        # Running max drawdown
+        max_dd = book.get("max_drawdown_pct", 0.0)
+        book["max_drawdown_pct"]     = max(max_dd, dd_pct)
+        book["current_drawdown_pct"] = dd_pct
+        book["portfolio_peak"]       = round(peak, 2)
+        # Recovery: sessions since last peak
+        peak_idx = values.index(peak)
+        book["sessions_since_peak"]  = len(values) - 1 - peak_idx
+
     return book
 
 

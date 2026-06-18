@@ -39,6 +39,11 @@ from agent.ranking_engine import (
     rank_focus_stocks, evaluate_focus_refresh,
     update_watchlist_signals, load_watchlist_signals, save_watchlist_signals,
 )
+from agent.sector_tracker import (
+    compute_sector_scores, inject_sector_momentum,
+    save_sector_scores, load_sector_scores,
+)
+from agent.rec_changelog import compute_changes, save_changelog, load_changelog
 
 
 def run():
@@ -68,7 +73,12 @@ def run():
     if phase == "exploration":
         tickers = NSE_UNIVERSE
         fresh   = fetch_stock_data(tickers, session=session)
-        save_stock_data(merge_stock_data(load_stock_data(), fresh))
+        merged_expl = merge_stock_data(load_stock_data(), fresh)
+        # Inject sector momentum so scores are sector-aware from day 1
+        sector_scores = compute_sector_scores(merged_expl)
+        save_sector_scores(sector_scores)
+        merged_expl = inject_sector_momentum(merged_expl, sector_scores)
+        save_stock_data(merged_expl)
 
         if session == "preclose":
             news = fetch_news(tickers)
@@ -96,7 +106,14 @@ def run():
     # ── ANALYSIS ───────────────────────────────────────────────────────────────
     elif phase == "analysis":
         fresh = fetch_stock_data(focus, session=session)
-        save_stock_data(merge_stock_data(load_stock_data(), fresh))
+        merged_anal = merge_stock_data(load_stock_data(), fresh)
+        sector_scores = compute_sector_scores(merged_anal)
+        save_sector_scores(sector_scores)
+        merged_anal = inject_sector_momentum(merged_anal, sector_scores)
+        # Inject earnings days_to_earnings from fundamentals into latest dict
+        fund_anal = load_fundamentals()
+        merged_anal = _inject_fund_context(merged_anal, fund_anal)
+        save_stock_data(merged_anal)
 
         if session == "preclose":
             news = fetch_news(focus)
@@ -132,6 +149,11 @@ def run():
         # Fetch data for ALL focus stocks every session for full paper trading
         fresh  = fetch_stock_data(focus, session=session)
         merged = merge_stock_data(load_stock_data(), fresh)
+        sector_scores = compute_sector_scores(merged)
+        save_sector_scores(sector_scores)
+        merged = inject_sector_momentum(merged, sector_scores)
+        fund   = load_fundamentals()
+        merged = _inject_fund_context(merged, fund)
         save_stock_data(merged)
 
         if session == "preclose":
@@ -252,27 +274,54 @@ def _maybe_refresh_focus(state, stock_data, patterns, news_data, fund, book, mar
         save_state(state)
 
 
+def _inject_fund_context(stock_data: dict, fund: dict) -> dict:
+    """Inject days_to_earnings and analyst fields from fundamentals into each stock's latest dict."""
+    for ticker, entry in stock_data.items():
+        f = fund.get(ticker, {})
+        if not f or "latest" not in entry:
+            continue
+        d = entry["latest"]
+        if "days_to_earnings" in f:
+            d["days_to_earnings"] = f["days_to_earnings"]
+        if "week52_high" in f and d.get("week52_high", 0) == 0:
+            d["week52_high"] = f.get("week52_high", 0)
+        if "week52_low" in f and d.get("week52_low", 0) == 0:
+            d["week52_low"] = f.get("week52_low", 0)
+    return stock_data
+
+
 def _refresh_outputs(state: dict, market_health: dict, session: str) -> None:
     try:
-        sd   = load_stock_data()
-        book = load_book()
-        pats = load_patterns()
-        decs = load_decisions()
-        nd   = load_news()
-        fund = load_fundamentals()
+        sd      = load_stock_data()
+        book    = load_book()
+        pats    = load_patterns()
+        decs    = load_decisions()
+        nd      = load_news()
+        fund    = load_fundamentals()
+        sectors = load_sector_scores()
+        clog    = load_changelog()
 
         # Regenerate recommendations every preclose session or on first run
         if session == "preclose" or not os.path.exists("brain/recommendations.json"):
+            prev_recs = load_recommendations()
             recs = generate_recommendations(state, sd, pats, nd, book, market_health, fund)
+            # Compute and persist what changed vs previous recommendations
+            changes = compute_changes(prev_recs, recs)
+            if changes:
+                save_changelog(changes)
+                clog = load_changelog()
+                for c in changes:
+                    print(f"[changelog] {c['type'].upper()} {c['nse_code']}: {c['detail']}")
             generate_report(state, sd, pats, nd, book)
         else:
             recs = load_recommendations()
 
         # Always rebuild ranking (runs fast, no API calls)
-        focus = state.get("focus_stocks", [])
+        focus  = state.get("focus_stocks", [])
         ranked = rank_focus_stocks(focus, sd, pats, nd, fund, book, market_health) if focus else []
 
-        build_dashboard(state, sd, book, pats, decs, nd, market_health, recs, fund, ranked)
+        build_dashboard(state, sd, book, pats, decs, nd, market_health,
+                        recs, fund, ranked, sectors, clog)
 
     except Exception as e:
         import traceback

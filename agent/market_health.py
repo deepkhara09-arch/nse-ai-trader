@@ -113,11 +113,28 @@ def load_market_health() -> dict:
             "nifty": {}, "vix": {}, "sectors": {}, "leading_sectors": []}
 
 
+def _yf_download(symbol: str, **kwargs):
+    for attempt in range(3):
+        try:
+            try:
+                from curl_cffi import requests as creq
+                t = yf.Ticker(symbol, session=creq.Session(impersonate="chrome"))
+                if "period" in kwargs:
+                    return t.history(period=kwargs["period"], auto_adjust=True)
+                return t.history(start=kwargs["start"], end=kwargs.get("end"), auto_adjust=True)
+            except ImportError:
+                return yf.download(symbol, progress=False, **kwargs)
+        except Exception as e:
+            print(f"[market] {symbol} attempt {attempt+1}: {e}")
+            time.sleep(2 + attempt * 2)
+    return pd.DataFrame()
+
+
 def _fetch_index(symbol: str) -> dict:
     try:
         today = date.today()
-        df = yf.download(symbol, start=(today - timedelta(days=20)).isoformat(),
-                         end=today.isoformat(), progress=False, auto_adjust=True)
+        df = _yf_download(symbol, start=(today - timedelta(days=20)).isoformat(),
+                          end=today.isoformat())
         if df.empty or len(df) < 2:
             return {}
         if isinstance(df.columns, pd.MultiIndex):
@@ -151,7 +168,7 @@ def _fetch_index(symbol: str) -> dict:
 
 def _fetch_vix() -> dict:
     try:
-        df = yf.download("^INDIAVIX", period="5d", progress=False, auto_adjust=True)
+        df = _yf_download("^INDIAVIX", period="5d")
         if df.empty:
             return {"value": 15.0, "level": "normal"}
         if isinstance(df.columns, pd.MultiIndex):
@@ -168,11 +185,11 @@ def _sector_strength() -> Dict:
     result = {}
     for name, sym in SECTOR_PROXIES.items():
         if name in ("Nifty50", "BankNifty"):
-            continue   # already fetched separately
+            continue
         d = _fetch_index(sym)
         if d:
             result[name] = d
-        time.sleep(0.3)
+        time.sleep(0.5)
     return result
 
 

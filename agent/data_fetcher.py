@@ -19,6 +19,14 @@ import numpy as np
 import pandas as pd
 import yfinance as yf
 
+# curl_cffi makes yfinance use a real browser TLS fingerprint,
+# bypassing Yahoo's Cloudflare block on GitHub Actions IPs.
+try:
+    from curl_cffi import requests as _curl_requests  # noqa: F401 — imported for side-effect
+    _YF_SESSION = None   # yfinance auto-detects curl_cffi when installed
+except ImportError:
+    _YF_SESSION = None
+
 from agent.config import (
     BRAIN_DIR, STOCK_DATA_FILE,
     EMA_SHORT, EMA_LONG, EMA_TREND,
@@ -77,14 +85,40 @@ def merge_stock_data(existing: Dict, fresh: Dict) -> Dict:
 
 # ── Internal ───────────────────────────────────────────────────────────────────
 
+def _yf_download(ticker: str, **kwargs):
+    """Download with retry + curl_cffi session to bypass Yahoo rate limits."""
+    for attempt in range(3):
+        try:
+            # Pass curl_cffi as the requests session type when available
+            try:
+                from curl_cffi import requests as creq
+                t = yf.Ticker(ticker, session=creq.Session(impersonate="chrome"))
+                if "period" in kwargs:
+                    df = t.history(period=kwargs["period"], interval=kwargs.get("interval","1d"),
+                                   auto_adjust=kwargs.get("auto_adjust", True))
+                else:
+                    df = t.history(start=kwargs["start"], end=kwargs.get("end"),
+                                   interval=kwargs.get("interval","1d"),
+                                   auto_adjust=kwargs.get("auto_adjust", True))
+            except ImportError:
+                df = yf.download(ticker, progress=False, **kwargs)
+
+            if df is not None and not df.empty:
+                return df
+        except Exception as e:
+            print(f"[data] {ticker} attempt {attempt+1}: {e}")
+            time.sleep(2 + attempt * 3)
+    return pd.DataFrame()
+
+
 def _fetch_one(ticker: str, session: str) -> dict:
     today = date.today()
     start_daily = today - timedelta(days=120)
 
     # ── Daily bars ────────────────────────────────────────────────────────────
-    df_daily = yf.download(
+    df_daily = _yf_download(
         ticker, start=start_daily.isoformat(), end=today.isoformat(),
-        interval="1d", progress=False, auto_adjust=True,
+        interval="1d", auto_adjust=True,
     )
     if df_daily.empty or len(df_daily) < 20:
         return {}
@@ -95,10 +129,7 @@ def _fetch_one(ticker: str, session: str) -> dict:
     # ── Intraday bars (5-min) ──────────────────────────────────────────────
     intraday_summary = {}
     try:
-        df_intra = yf.download(
-            ticker, period="1d", interval="5m",
-            progress=False, auto_adjust=True,
-        )
+        df_intra = _yf_download(ticker, period="1d", interval="5m", auto_adjust=True)
         if not df_intra.empty and len(df_intra) > 5:
             intraday_summary = _summarize_intraday(df_intra, session)
     except Exception as e:

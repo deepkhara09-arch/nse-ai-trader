@@ -1488,6 +1488,7 @@ def _section_brain(focus, patterns) -> str:
                 f'</div></div>'
             )
 
+        _no_pat_msg = '<div class="muted" style="font-size:.74rem">No resolved patterns yet.</div>'
         cards += (
             f'<div class="card">'
             f'<div style="display:flex;justify-content:space-between;margin-bottom:9px">'
@@ -1498,7 +1499,7 @@ def _section_brain(focus, patterns) -> str:
             f'<span>Swing: {sw}W/{sl_}L</span>'
             f'<span>Intraday: {iw}W/{il}L</span>'
             f'</div>'
-            f'{pat_rows or "<div class=\"muted\" style=\"font-size:.74rem\">No resolved patterns yet.</div>"}'
+            f'{pat_rows or _no_pat_msg}'
             f'</div>'
         )
 

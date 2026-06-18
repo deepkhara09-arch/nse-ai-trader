@@ -7,6 +7,7 @@ import json
 import os
 from datetime import date
 
+from agent.migrations import run_migrations, check_schema_health
 from agent.config import (
     NSE_UNIVERSE, FOCUS_STOCK_COUNT,
     EXPLORATION_DAYS, ANALYSIS_DAYS,
@@ -45,6 +46,14 @@ def run():
     print(f"\n{'='*60}")
     print(f"NSE AI Trader  {date.today()}  session={session}")
     print(f"{'='*60}\n")
+
+    # ── Auto-migrate brain data before anything else ───────────────────────────
+    # Reads GitHub-committed brain files, upgrades structure if needed, writes back.
+    # Zero data loss on structural code changes.
+    run_migrations()
+    health = check_schema_health()
+    print(f"[schema] v{health['schema_version']} | phase={health['phase']} day={health['day']} "
+          f"stocks={health['stocks_tracked']} trades={health['closed_trades']}\n")
 
     state = load_state()
     phase = state["phase"]

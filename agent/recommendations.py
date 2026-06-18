@@ -211,21 +211,39 @@ def generate_recommendations(
 
         # Fundamental insights
         if fund:
-            pe = fund.get("pe_ratio")
-            roe = fund.get("roe")
-            rev_g = fund.get("revenue_growth_pct")
+            pe         = fund.get("pe_ratio")
+            roe        = fund.get("roe")
+            roce       = fund.get("roce")
+            rev_g      = fund.get("revenue_growth_pct")
+            np_var     = fund.get("np_qtr_var_pct")
+            sales_var  = fund.get("sales_qtr_var_pct")
+            np_qtr     = fund.get("np_qtr_cr")
+            sales_qtr  = fund.get("sales_qtr_cr")
+            mktcap     = fund.get("market_cap_cr")
             analyst_up = fund.get("analyst_upside_pct")
-            promo = fund.get("promoter_holding_pct")
-            if pe:    reasons.append(f"Valuation: P/E {pe:.1f}x")
-            if roe:   reasons.append(f"Strong ROE: {roe:.1f}%")
-            if rev_g and rev_g > 0: reasons.append(f"Revenue growing {rev_g:.1f}% YoY")
+            promo      = fund.get("promoter_holding_pct")
+            div_yield  = fund.get("dividend_yield_pct")
+            de         = fund.get("debt_equity")
+            if pe:         reasons.append(f"Valuation: P/E {pe:.1f}x")
+            if roe:        reasons.append(f"ROE: {roe:.1f}%")
+            if roce:       reasons.append(f"ROCE: {roce:.1f}%")
+            if rev_g and rev_g > 0:   reasons.append(f"Revenue growing {rev_g:.1f}% YoY")
+            if np_var and np_var > 0: reasons.append(f"Net profit up {np_var:.1f}% QoQ")
+            if sales_var and sales_var > 0: reasons.append(f"Sales up {sales_var:.1f}% QoQ")
+            if np_qtr:    reasons.append(f"Latest quarter NP: ₹{np_qtr:,.0f} Cr")
+            if sales_qtr: reasons.append(f"Latest quarter Sales: ₹{sales_qtr:,.0f} Cr")
+            if mktcap:    reasons.append(f"Market Cap: ₹{mktcap:,.0f} Cr")
             if analyst_up and analyst_up > 5:
-                reasons.append(f"Analyst consensus target: +{analyst_up:.1f}% upside")
-            if promo and promo > 55:
-                reasons.append(f"High promoter holding: {promo:.1f}%")
+                reasons.append(f"Analyst target: +{analyst_up:.1f}% upside")
+            if promo and promo > 50:
+                reasons.append(f"Promoter holding: {promo:.1f}%")
+            if div_yield and div_yield > 1:
+                reasons.append(f"Dividend yield: {div_yield:.1f}%")
+            if de is not None and de < 0.5:
+                reasons.append(f"Low debt: D/E {de:.2f}")
             et = fund.get("earnings_trend", "")
-            if et in ("beat", "improving"):
-                reasons.append(f"Earnings trend: {et}")
+            if et in ("beat", "consistent_beat", "improving"):
+                reasons.append(f"Earnings trend: {et.replace('_', ' ')}")
 
         if reliable_pats:
             reasons.append(f"Reliable patterns on this stock: {', '.join(reliable_pats[:4])}")
@@ -285,11 +303,22 @@ def generate_recommendations(
             "nearest_support":    n_sup,
             "nearest_resistance": n_res,
 
-            # Fundamentals snapshot
+            # Fundamentals snapshot (all metrics for dashboard display)
             "pe_ratio":          fund.get("pe_ratio"),
+            "pb_ratio":          fund.get("pb_ratio"),
+            "market_cap_cr":     fund.get("market_cap_cr"),
             "roe":               fund.get("roe"),
+            "roce":              fund.get("roce"),
+            "debt_equity":       fund.get("debt_equity"),
             "revenue_growth":    fund.get("revenue_growth_pct"),
+            "np_qtr_cr":         fund.get("np_qtr_cr"),
+            "np_qtr_var_pct":    fund.get("np_qtr_var_pct"),
+            "sales_qtr_cr":      fund.get("sales_qtr_cr"),
+            "sales_qtr_var_pct": fund.get("sales_qtr_var_pct"),
+            "dividend_yield":    fund.get("dividend_yield_pct"),
+            "promoter_holding":  fund.get("promoter_holding_pct"),
             "analyst_upside":    fund.get("analyst_upside_pct"),
+            "analyst_target":    fund.get("analyst_target"),
             "earnings_trend":    fund.get("earnings_trend"),
 
             "paper_trades_count": len(stock_trades),

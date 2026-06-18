@@ -22,12 +22,15 @@ def build_dashboard(
     news_data: Dict,
     market_health: dict = None,
     recommendations: List = None,
+    fundamentals: Dict = None,
 ) -> None:
     os.makedirs("docs", exist_ok=True)
     if market_health is None:
         market_health = {}
     if recommendations is None:
         recommendations = []
+    if fundamentals is None:
+        fundamentals = {}
 
     stats   = compute_stats(book)
     now_utc = datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC")
@@ -55,7 +58,7 @@ def build_dashboard(
         state, stats, book, patterns, decisions, news_data,
         stock_data, focus, phase, day, alert, now_utc,
         portfolio, pnl_total, pnl_pct, nifty, vix, mood,
-        trade_ok, mkt_warn, recommendations, market_health,
+        trade_ok, mkt_warn, recommendations, market_health, fundamentals,
     )
 
     with open(DASHBOARD_FILE, "w", encoding="utf-8") as f:
@@ -71,7 +74,9 @@ def _build_html(
     state, stats, book, patterns, decisions, news_data, stock_data,
     focus, phase, day, alert, now_utc, portfolio, pnl_total, pnl_pct,
     nifty, vix, mood, trade_ok, mkt_warn, recommendations, market_health,
+    fundamentals=None,
 ):
+    fundamentals = fundamentals or {}
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -91,7 +96,7 @@ def _build_html(
   {_section_status(state, phase, day, focus, stock_data)}
   {_section_portfolio(stats, portfolio, pnl_total, pnl_pct, book)}
   {_section_recommendations(recommendations)}
-  {_section_watchlist(focus, stock_data, news_data, patterns)}
+  {_section_watchlist(focus, stock_data, news_data, patterns, fundamentals)}
   {_section_trades(book)}
   {_section_research(state, decisions)}
   {_section_brain(focus, patterns)}
@@ -165,6 +170,9 @@ tr:hover td{background:#0f1628}
 .irow{display:flex;justify-content:space-between;align-items:center;
   padding:5px 0;border-bottom:1px solid #0f172a;font-size:.82rem}
 .irow:last-child{border:none}
+.fund-row{display:flex;justify-content:space-between;padding:3px 0;
+  border-bottom:1px solid #0f172a22;font-size:.78rem}
+.fund-row:last-child{border:none}
 .nav{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:22px;padding:10px 0;
   border-bottom:1px solid var(--border)}
 .nav a{color:var(--muted);padding:4px 12px;border-radius:6px;font-size:.78rem;
@@ -784,7 +792,71 @@ def _section_recommendations(recs) -> str:
 </div>"""
 
 
-def _section_watchlist(focus, stock_data, news_data, patterns) -> str:
+def _fund_table(fund: dict) -> str:
+    """Render a compact fundamentals grid for a stock card."""
+    if not fund:
+        return ""
+    rows = []
+    def row(label, val, fmt="{}", color=None, suffix=""):
+        if val is None:
+            return
+        try:
+            display = fmt.format(val) + suffix
+        except Exception:
+            display = str(val)
+        col = f' style="color:{color}"' if color else ""
+        rows.append(f'<div class="fund-row"><span class="muted">{label}</span>'
+                    f'<span{col}>{display}</span></div>')
+
+    pe   = fund.get("pe_ratio")
+    mktcap = fund.get("market_cap_cr")
+    div  = fund.get("dividend_yield_pct")
+    np_q = fund.get("np_qtr_cr")
+    np_v = fund.get("np_qtr_var_pct")
+    sal_q = fund.get("sales_qtr_cr")
+    sal_v = fund.get("sales_qtr_var_pct")
+    roce = fund.get("roce")
+    roe  = fund.get("roe")
+    de   = fund.get("debt_equity")
+    promo = fund.get("promoter_holding_pct")
+    analyst_up = fund.get("analyst_upside_pct")
+    et   = fund.get("earnings_trend", "")
+
+    row("P/E",          pe,     "{:.1f}x")
+    row("Mkt Cap",      mktcap, "₹{:,.0f} Cr") if mktcap else None
+    row("Div Yield",    div,    "{:.2f}%")
+    row("NP Qtr",       np_q,   "₹{:,.0f} Cr")
+    row("NP Qtr Var",   np_v,   "{:+.1f}%",
+        color=("#10b981" if np_v and np_v > 0 else "#ef4444"))
+    row("Sales Qtr",    sal_q,  "₹{:,.0f} Cr")
+    row("Sales Var",    sal_v,  "{:+.1f}%",
+        color=("#10b981" if sal_v and sal_v > 0 else "#ef4444"))
+    row("ROCE",         roce,   "{:.1f}%",
+        color=("#10b981" if roce and roce > 15 else None))
+    row("ROE",          roe,    "{:.1f}%",
+        color=("#10b981" if roe and roe > 15 else None))
+    row("D/E",          de,     "{:.2f}",
+        color=("#10b981" if de is not None and de < 0.5 else
+               "#ef4444" if de is not None and de > 1.5 else None))
+    row("Promoter",     promo,  "{:.1f}%",
+        color=("#10b981" if promo and promo > 55 else None))
+    row("Analyst Up",   analyst_up, "{:+.1f}%",
+        color=("#10b981" if analyst_up and analyst_up > 10 else None))
+    if et and et not in ("unknown", "neutral"):
+        et_color = "#10b981" if "beat" in et or et == "improving" else "#ef4444"
+        rows.append(f'<div class="fund-row"><span class="muted">Earnings</span>'
+                    f'<span style="color:{et_color}">{et.replace("_"," ")}</span></div>')
+
+    if not rows:
+        return ""
+    return ('<div style="margin-top:10px;background:var(--card3);border-radius:8px;padding:10px 12px">'
+            '<div style="font-size:.65rem;color:var(--muted);text-transform:uppercase;'
+            'letter-spacing:.05em;margin-bottom:6px">Fundamentals</div>'
+            f'{"".join(rows)}</div>')
+
+
+def _section_watchlist(focus, stock_data, news_data, patterns, fundamentals=None) -> str:
+    fundamentals = fundamentals or {}
     # During exploration (no focus stocks yet), show ALL fetched stocks
     display_tickers = focus if focus else sorted(stock_data.keys())
     phase_label = "deep monitoring" if focus else "exploration — all 50 stocks being scored"
@@ -870,6 +942,7 @@ def _section_watchlist(focus, stock_data, news_data, patterns) -> str:
   <div class="irow"><span class="muted">Rel Volume</span>
     <span class="{'green' if vol_r>=1.3 else 'muted'}">{vol_r:.2f}x</span></div>
   {news_html}
+  {_fund_table(fundamentals.get(ticker, {})) if is_focus else ""}
 </div>"""
 
     return f"""<div class="section" id="watchlist">

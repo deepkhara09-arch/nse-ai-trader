@@ -4,7 +4,7 @@ Scores each stock 0–100 using purely its computed data (no hardcoded favourite
 """
 
 from typing import Dict, List, Tuple
-from agent.config import FOCUS_STOCK_COUNT
+from agent.config import FOCUS_STOCK_COUNT, MAX_STOCK_PRICE
 
 
 def score_stock(ticker: str, entry: dict, sentiment: dict) -> float:
@@ -57,14 +57,26 @@ def select_focus_stocks(
     n: int = FOCUS_STOCK_COUNT,
 ) -> List[Tuple[str, float]]:
     scored = []
+    filtered_out = []
     for ticker, entry in stock_data.items():
+        # Hard filter: skip stocks above ₹5000 CMP — poor position sizing
+        cmp = entry.get("latest", {}).get("close", 0)
+        if cmp > MAX_STOCK_PRICE:
+            filtered_out.append((ticker, cmp))
+            continue
         sent = sentiment.get(ticker, {}).get("latest", {})
         s = score_stock(ticker, entry, sent)
         scored.append((ticker, s))
 
+    if filtered_out:
+        print(f"[scorer] Filtered out {len(filtered_out)} stocks above ₹{MAX_STOCK_PRICE:,}:")
+        for t, p in filtered_out:
+            print(f"  {t:22s} CMP=₹{p:,.0f}")
+
     scored.sort(key=lambda x: x[1], reverse=True)
     top = scored[:n]
-    print(f"\n[scorer] Top {n} stocks selected:")
+    print(f"\n[scorer] Top {n} stocks selected from {len(scored)} eligible:")
     for t, s in top:
-        print(f"  {t:22s} score={s:.1f}")
+        cmp = stock_data.get(t, {}).get("latest", {}).get("close", 0)
+        print(f"  {t:22s} score={s:.1f}  CMP=₹{cmp:,.0f}")
     return top

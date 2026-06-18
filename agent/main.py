@@ -199,7 +199,7 @@ def _refresh_outputs(state: dict, market_health: dict, session: str) -> None:
         else:
             recs = load_recommendations()
 
-        build_dashboard(state, sd, book, pats, decs, nd, market_health, recs)
+        build_dashboard(state, sd, book, pats, decs, nd, market_health, recs, fund)
 
     except Exception as e:
         import traceback

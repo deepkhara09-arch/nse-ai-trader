@@ -16,21 +16,40 @@ ANALYSIS_DAYS      = 10   # deep watch selected stocks
 PAPER_TRADING_DAYS = 20   # paper trade & learn
 # After paper trading, agent cycles back to keep signals fresh
 
-# ── Universe — top 50 NSE stocks via yfinance ─────────────────────────────────
-NSE_UNIVERSE = [
-    "RELIANCE.NS", "TCS.NS", "INFY.NS", "HDFCBANK.NS", "ICICIBANK.NS",
-    "HINDUNILVR.NS", "ITC.NS", "SBIN.NS", "BHARTIARTL.NS", "KOTAKBANK.NS",
-    "LT.NS", "AXISBANK.NS", "ASIANPAINT.NS", "MARUTI.NS", "BAJFINANCE.NS",
-    "HCLTECH.NS", "WIPRO.NS", "ULTRACEMCO.NS", "TITAN.NS", "SUNPHARMA.NS",
-    "NESTLEIND.NS", "POWERGRID.NS", "NTPC.NS", "ONGC.NS", "COALINDIA.NS",
-    "TATAMOTORS.NS", "TATASTEEL.NS", "JSWSTEEL.NS", "ADANIENT.NS", "ADANIPORTS.NS",
-    "TECHM.NS", "DRREDDY.NS", "DIVISLAB.NS", "CIPLA.NS", "BAJAJFINSV.NS",
-    "EICHERMOT.NS", "HEROMOTOCO.NS", "APOLLOHOSP.NS", "TATACONSUM.NS", "BRITANNIA.NS",
-    "PIDILITIND.NS", "DABUR.NS", "MARICO.NS", "GODREJCP.NS", "MUTHOOTFIN.NS",
-    "INDUSINDBK.NS", "BANDHANBNK.NS", "IDFCFIRSTB.NS", "GRASIM.NS", "SHREECEM.NS",
-]
+# ── Universe — Nifty 100 stocks (CMP filter ≤ ₹5000 applied at runtime) ───────
+# Stocks above ₹5000/share are excluded automatically during exploration scoring
+# so you never get stuck in a high-priced name with poor position sizing.
+MAX_STOCK_PRICE = 5000   # filter applied after first data fetch
 
-FOCUS_STOCK_COUNT = 12   # stocks to deeply monitor after exploration
+NSE_UNIVERSE = [
+    # ── Nifty 50 ──────────────────────────────────────────────────────────────
+    "RELIANCE.NS", "TCS.NS", "HDFCBANK.NS", "BHARTIARTL.NS", "ICICIBANK.NS",
+    "INFY.NS", "SBIN.NS", "HINDUNILVR.NS", "ITC.NS", "LT.NS",
+    "BAJFINANCE.NS", "HCLTECH.NS", "KOTAKBANK.NS", "AXISBANK.NS", "WIPRO.NS",
+    "ASIANPAINT.NS", "MARUTI.NS", "NTPC.NS", "ONGC.NS", "TITAN.NS",
+    "ULTRACEMCO.NS", "SUNPHARMA.NS", "POWERGRID.NS", "TATAMOTORS.NS", "TATASTEEL.NS",
+    "ADANIENT.NS", "ADANIPORTS.NS", "JSWSTEEL.NS", "COALINDIA.NS", "NESTLEIND.NS",
+    "TECHM.NS", "GRASIM.NS", "TATACONSUM.NS", "BAJAJFINSV.NS", "CIPLA.NS",
+    "DRREDDY.NS", "DIVISLAB.NS", "EICHERMOT.NS", "HEROMOTOCO.NS", "APOLLOHOSP.NS",
+    "INDUSINDBK.NS", "BRITANNIA.NS", "BPCL.NS", "TRENT.NS", "BEL.NS",
+    "SHRIRAMFIN.NS", "HINDALCO.NS", "SBILIFE.NS", "HDFCLIFE.NS", "PIDILITIND.NS",
+
+    # ── Nifty Next 50 (51–100) ────────────────────────────────────────────────
+    "SIEMENS.NS", "HAVELLS.NS", "DABUR.NS", "MARICO.NS", "GODREJCP.NS",
+    "MUTHOOTFIN.NS", "IDFCFIRSTB.NS", "BANDHANBNK.NS", "PNB.NS", "CANBK.NS",
+    "BANKBARODA.NS", "UNIONBANK.NS", "IRCTC.NS", "IRFC.NS", "HAL.NS",
+    "ZOMATO.NS", "NYKAA.NS", "PAYTM.NS", "POLICYBZR.NS", "DMART.NS",
+    "ABCAPITAL.NS", "MFSL.NS", "LICI.NS", "GICRE.NS", "NIACL.NS",
+    "ICICIGI.NS", "HDFCAMC.NS", "NIPPONLIFE.NS", "AAVAS.NS", "HOMEFIRST.NS",
+    "CHOLAFIN.NS", "M&MFIN.NS", "BAJAJHLDNG.NS", "PGHH.NS", "COLPAL.NS",
+    "EMAMILTD.NS", "VBL.NS", "TATAPOWER.NS", "ADANIGREEN.NS", "ADANIPORTS.NS",
+    "NHPC.NS", "SJVN.NS", "RECLTD.NS", "PFC.NS", "GAIL.NS",
+    "IOC.NS", "HINDPETRO.NS", "APLAPOLLO.NS", "POLYCAB.NS", "CUMMINSIND.NS",
+]
+# Deduplicate (ADANIPORTS appears in both halves)
+NSE_UNIVERSE = list(dict.fromkeys(NSE_UNIVERSE))
+
+FOCUS_STOCK_COUNT = 15   # increased from 12 → wider coverage across sectors
 
 # ── Capital & risk ────────────────────────────────────────────────────────────
 INITIAL_CAPITAL        = 100_000   # virtual INR

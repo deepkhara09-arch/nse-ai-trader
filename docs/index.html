@@ -107,6 +107,22 @@ tr:hover td{background:#0f1628}
 .note-line{padding:6px 0;border-bottom:1px solid #0f172a;font-size:.78rem;color:var(--muted)}
 .note-line:last-child{border:none}
 .note-line strong{color:var(--text)}
+.heatmap-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(90px,1fr));gap:6px;margin-bottom:8px}
+.hmap-cell{border:1px solid;border-radius:8px;padding:8px 6px;text-align:center;cursor:default;transition:transform .15s}
+.hmap-cell:hover{transform:scale(1.05);z-index:10;position:relative}
+.hmap-name{font-size:.72rem;font-weight:700;color:var(--text);margin-bottom:2px}
+.hmap-chg{font-size:.85rem;font-weight:700}
+.hmap-rsi{font-size:.65rem;color:var(--muted);margin-top:2px}
+.phase-progress{display:flex;align-items:flex-start;gap:0;margin:16px 0;overflow-x:auto;padding:8px 0}
+.phase-step{display:flex;flex-direction:column;align-items:center;gap:4px;min-width:100px;position:relative}
+.phase-step span{font-size:.75rem;font-weight:600;color:var(--muted);text-align:center}
+.phase-step small{font-size:.65rem;color:var(--muted)}
+.phase-step.active span{color:var(--cyan)}
+.phase-step.done span{color:var(--green)}
+.phase-dot{width:12px;height:12px;border-radius:50%;background:var(--border);border:2px solid var(--muted)}
+.phase-step.active .phase-dot{background:var(--cyan);border-color:var(--cyan);box-shadow:0 0 8px var(--cyan)}
+.phase-step.done .phase-dot{background:var(--green);border-color:var(--green)}
+.phase-line{flex:1;height:2px;background:var(--border);margin-top:5px;min-width:30px}
 @media(max-width:640px){
   .stat-val{font-size:1.2rem}
   .header h1{font-size:1rem}
@@ -120,16 +136,17 @@ tr:hover td{background:#0f1628}
     <h1>📊 NSE AI Trader</h1>
     <span class="badge badge-blue">Exploration</span>
     <span class="badge badge-cyan">Day 1</span>
-    <span class="badge badge-yellow">↔ Market Neutral</span>
+    <span class="badge badge-green">📈 Market Bullish</span>
   </div>
   <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
     <span class="badge badge-green">✓ Trading Allowed</span>
-    <span class="muted" style="font-size:.72rem">2026-06-18 08:53 UTC · auto-refresh 5min</span>
+    <span class="muted" style="font-size:.72rem">2026-06-18 09:25 UTC · auto-refresh 5min</span>
   </div>
 </div>
 <div class="container">
   <div class="nav">
   <a href="#status">📌 Status</a>
+  <a href="#heatmap">🌡 Heatmap</a>
   <a href="#portfolio">💰 Portfolio</a>
   <a href="#recommendations">🎯 Recommendations</a>
   <a href="#watchlist">🔭 Watchlist</a>
@@ -142,30 +159,296 @@ tr:hover td{background:#0f1628}
 <div class="market-bar">
   <div class="mkt-item">
     <div class="mkt-val green">
-      —
-      <span style="font-size:.78rem">(+0.00%)</span>
+      24,086
+      <span style="font-size:.78rem">(+0.40%)</span>
     </div>
     <div class="mkt-lbl">Nifty 50</div>
   </div>
   <div class="mkt-item">
-    <div class="mkt-val green">15.0 <span style="font-size:.72rem">[normal]</span></div>
+    <div class="mkt-val green">13.19 <span style="font-size:.72rem">[normal]</span></div>
     <div class="mkt-lbl">India VIX</div>
   </div>
   <div class="mkt-item">
-    <div class="mkt-val" style="color:var(--yellow)">
-      Neutral
+    <div class="mkt-val" style="color:var(--green)">
+      Bullish
     </div>
     <div class="mkt-lbl">Market Mood</div>
   </div>
   <div class="mkt-item" style="flex:1">
-    <div class="mkt-val" style="font-size:.88rem;color:var(--cyan)">—</div>
+    <div class="mkt-val" style="font-size:.88rem;color:var(--cyan)">IT</div>
     <div class="mkt-lbl">Leading Sectors</div>
   </div>
+</div>
+  <div class="section" id="heatmap">
+  <h2>🌡 Market Snapshot <span>all monitored stocks</span></h2>
+  <div class="heatmap-grid"><div class="hmap-cell" style="background:#46707722;border-color:#46707755"
+          title="ADANIENT: Rs.2951.90 | RSI 48">
+          <div class="hmap-name">ADANIENT</div>
+          <div class="hmap-chg" style="color:var(--green)">+0.3%</div>
+          <div class="hmap-rsi" style="color:var(--yellow)">RSI 48</div>
+        </div><div class="hmap-cell" style="background:#44727422;border-color:#44727455"
+          title="ADANIPORTS: Rs.1828.60 | RSI 52">
+          <div class="hmap-name">ADANIPORTS</div>
+          <div class="hmap-chg" style="color:var(--green)">+0.4%</div>
+          <div class="hmap-rsi" style="color:var(--yellow)">RSI 52</div>
+        </div><div class="hmap-cell" style="background:#43747222;border-color:#43747255"
+          title="APOLLOHOSP: Rs.8427.50 | RSI 59">
+          <div class="hmap-name">APOLLOHOSP</div>
+          <div class="hmap-chg" style="color:var(--green)">+0.4%</div>
+          <div class="hmap-rsi" style="color:var(--yellow)">RSI 59</div>
+        </div><div class="hmap-cell" style="background:#97785e22;border-color:#97785e55"
+          title="ASIANPAINT: Rs.2738.00 | RSI 62">
+          <div class="hmap-name">ASIANPAINT</div>
+          <div class="hmap-chg" style="color:var(--red)">-0.4%</div>
+          <div class="hmap-rsi" style="color:var(--yellow)">RSI 62</div>
+        </div><div class="hmap-cell" style="background:#af6a5722;border-color:#af6a5755"
+          title="AXISBANK: Rs.1350.90 | RSI 62">
+          <div class="hmap-name">AXISBANK</div>
+          <div class="hmap-chg" style="color:var(--red)">-1.1%</div>
+          <div class="hmap-rsi" style="color:var(--yellow)">RSI 62</div>
+        </div><div class="hmap-cell" style="background:#b5665522;border-color:#b5665555"
+          title="BAJAJFINSV: Rs.1764.60 | RSI 44">
+          <div class="hmap-name">BAJAJFINSV</div>
+          <div class="hmap-chg" style="color:var(--red)">-1.3%</div>
+          <div class="hmap-rsi" style="color:var(--yellow)">RSI 44</div>
+        </div><div class="hmap-cell" style="background:#8f7d6022;border-color:#8f7d6055"
+          title="BAJFINANCE: Rs.958.40 | RSI 56">
+          <div class="hmap-name">BAJFINANCE</div>
+          <div class="hmap-chg" style="color:var(--red)">-0.1%</div>
+          <div class="hmap-rsi" style="color:var(--yellow)">RSI 56</div>
+        </div><div class="hmap-cell" style="background:#b8645422;border-color:#b8645455"
+          title="BANDHANBNK: Rs.213.76 | RSI 57">
+          <div class="hmap-name">BANDHANBNK</div>
+          <div class="hmap-chg" style="color:var(--red)">-1.4%</div>
+          <div class="hmap-rsi" style="color:var(--yellow)">RSI 57</div>
+        </div><div class="hmap-cell" style="background:#33895822;border-color:#33895855"
+          title="BHARTIARTL: Rs.1875.70 | RSI 55">
+          <div class="hmap-name">BHARTIARTL</div>
+          <div class="hmap-chg" style="color:var(--green)">+1.2%</div>
+          <div class="hmap-rsi" style="color:var(--yellow)">RSI 55</div>
+        </div><div class="hmap-cell" style="background:#46707722;border-color:#46707755"
+          title="BRITANNIA: Rs.5232.00 | RSI 42">
+          <div class="hmap-name">BRITANNIA</div>
+          <div class="hmap-chg" style="color:var(--green)">+0.3%</div>
+          <div class="hmap-rsi" style="color:var(--yellow)">RSI 42</div>
+        </div><div class="hmap-cell" style="background:#c15f5122;border-color:#c15f5155"
+          title="CIPLA: Rs.1350.80 | RSI 33">
+          <div class="hmap-name">CIPLA</div>
+          <div class="hmap-chg" style="color:var(--red)">-1.6%</div>
+          <div class="hmap-rsi" style="color:var(--green)">RSI 33</div>
+        </div><div class="hmap-cell" style="background:#36855d22;border-color:#36855d55"
+          title="COALINDIA: Rs.455.75 | RSI 46">
+          <div class="hmap-name">COALINDIA</div>
+          <div class="hmap-chg" style="color:var(--green)">+1.1%</div>
+          <div class="hmap-rsi" style="color:var(--yellow)">RSI 46</div>
+        </div><div class="hmap-cell" style="background:#bc625322;border-color:#bc625355"
+          title="DABUR: Rs.429.00 | RSI 39">
+          <div class="hmap-name">DABUR</div>
+          <div class="hmap-chg" style="color:var(--red)">-1.5%</div>
+          <div class="hmap-rsi" style="color:var(--green)">RSI 39</div>
+        </div><div class="hmap-cell" style="background:#a3715a22;border-color:#a3715a55"
+          title="DIVISLAB: Rs.6663.50 | RSI 43">
+          <div class="hmap-name">DIVISLAB</div>
+          <div class="hmap-chg" style="color:var(--red)">-0.7%</div>
+          <div class="hmap-rsi" style="color:var(--yellow)">RSI 43</div>
+        </div><div class="hmap-cell" style="background:#9f735b22;border-color:#9f735b55"
+          title="DRREDDY: Rs.1269.00 | RSI 26">
+          <div class="hmap-name">DRREDDY</div>
+          <div class="hmap-chg" style="color:var(--red)">-0.6%</div>
+          <div class="hmap-rsi" style="color:var(--green)">RSI 26</div>
+        </div><div class="hmap-cell" style="background:#a1725b22;border-color:#a1725b55"
+          title="EICHERMOT: Rs.7509.00 | RSI 54">
+          <div class="hmap-name">EICHERMOT</div>
+          <div class="hmap-chg" style="color:var(--red)">-0.7%</div>
+          <div class="hmap-rsi" style="color:var(--yellow)">RSI 54</div>
+        </div><div class="hmap-cell" style="background:#b9635322;border-color:#b9635355"
+          title="GODREJCP: Rs.1020.00 | RSI 43">
+          <div class="hmap-name">GODREJCP</div>
+          <div class="hmap-chg" style="color:var(--red)">-1.4%</div>
+          <div class="hmap-rsi" style="color:var(--yellow)">RSI 43</div>
+        </div><div class="hmap-cell" style="background:#45717622;border-color:#45717655"
+          title="GRASIM: Rs.3150.40 | RSI 47">
+          <div class="hmap-name">GRASIM</div>
+          <div class="hmap-chg" style="color:var(--green)">+0.3%</div>
+          <div class="hmap-rsi" style="color:var(--yellow)">RSI 47</div>
+        </div><div class="hmap-cell" style="background:#3e7a6a22;border-color:#3e7a6a55"
+          title="HCLTECH: Rs.1166.80 | RSI 50">
+          <div class="hmap-name">HCLTECH</div>
+          <div class="hmap-chg" style="color:var(--green)">+0.7%</div>
+          <div class="hmap-rsi" style="color:var(--yellow)">RSI 50</div>
+        </div><div class="hmap-cell" style="background:#46707722;border-color:#46707755"
+          title="HDFCBANK: Rs.787.10 | RSI 65">
+          <div class="hmap-name">HDFCBANK</div>
+          <div class="hmap-chg" style="color:var(--green)">+0.3%</div>
+          <div class="hmap-rsi" style="color:var(--yellow)">RSI 65</div>
+        </div><div class="hmap-cell" style="background:#947a5f22;border-color:#947a5f55"
+          title="HEROMOTOCO: Rs.5016.40 | RSI 46">
+          <div class="hmap-name">HEROMOTOCO</div>
+          <div class="hmap-chg" style="color:var(--red)">-0.3%</div>
+          <div class="hmap-rsi" style="color:var(--yellow)">RSI 46</div>
+        </div><div class="hmap-cell" style="background:#8e7d6022;border-color:#8e7d6055"
+          title="HINDUNILVR: Rs.2197.60 | RSI 50">
+          <div class="hmap-name">HINDUNILVR</div>
+          <div class="hmap-chg" style="color:var(--red)">-0.1%</div>
+          <div class="hmap-rsi" style="color:var(--yellow)">RSI 50</div>
+        </div><div class="hmap-cell" style="background:#486d7a22;border-color:#486d7a55"
+          title="ICICIBANK: Rs.1336.80 | RSI 66">
+          <div class="hmap-name">ICICIBANK</div>
+          <div class="hmap-chg" style="color:var(--green)">+0.2%</div>
+          <div class="hmap-rsi" style="color:var(--red)">RSI 66</div>
+        </div><div class="hmap-cell" style="background:#907c6022;border-color:#907c6055"
+          title="IDFCFIRSTB: Rs.77.38 | RSI 75">
+          <div class="hmap-name">IDFCFIRSTB</div>
+          <div class="hmap-chg" style="color:var(--red)">-0.2%</div>
+          <div class="hmap-rsi" style="color:var(--red)">RSI 75</div>
+        </div><div class="hmap-cell" style="background:#35865c22;border-color:#35865c55"
+          title="INDUSINDBK: Rs.936.20 | RSI 51">
+          <div class="hmap-name">INDUSINDBK</div>
+          <div class="hmap-chg" style="color:var(--green)">+1.1%</div>
+          <div class="hmap-rsi" style="color:var(--yellow)">RSI 51</div>
+        </div><div class="hmap-cell" style="background:#33895722;border-color:#33895755"
+          title="INFY: Rs.1157.70 | RSI 54">
+          <div class="hmap-name">INFY</div>
+          <div class="hmap-chg" style="color:var(--green)">+1.2%</div>
+          <div class="hmap-rsi" style="color:var(--yellow)">RSI 54</div>
+        </div><div class="hmap-cell" style="background:#95795e22;border-color:#95795e55"
+          title="ITC: Rs.290.75 | RSI 49">
+          <div class="hmap-name">ITC</div>
+          <div class="hmap-chg" style="color:var(--red)">-0.3%</div>
+          <div class="hmap-rsi" style="color:var(--yellow)">RSI 49</div>
+        </div><div class="hmap-cell" style="background:#37835f22;border-color:#37835f55"
+          title="JSWSTEEL: Rs.1287.20 | RSI 44">
+          <div class="hmap-name">JSWSTEEL</div>
+          <div class="hmap-chg" style="color:var(--green)">+1.0%</div>
+          <div class="hmap-rsi" style="color:var(--yellow)">RSI 44</div>
+        </div><div class="hmap-cell" style="background:#a66f5922;border-color:#a66f5955"
+          title="KOTAKBANK: Rs.404.50 | RSI 65">
+          <div class="hmap-name">KOTAKBANK</div>
+          <div class="hmap-chg" style="color:var(--red)">-0.8%</div>
+          <div class="hmap-rsi" style="color:var(--yellow)">RSI 65</div>
+        </div><div class="hmap-cell" style="background:#41767022;border-color:#41767055"
+          title="LT: Rs.4207.70 | RSI 62">
+          <div class="hmap-name">LT</div>
+          <div class="hmap-chg" style="color:var(--green)">+0.5%</div>
+          <div class="hmap-rsi" style="color:var(--yellow)">RSI 62</div>
+        </div><div class="hmap-cell" style="background:#99775d22;border-color:#99775d55"
+          title="MARICO: Rs.805.00 | RSI 34">
+          <div class="hmap-name">MARICO</div>
+          <div class="hmap-chg" style="color:var(--red)">-0.4%</div>
+          <div class="hmap-rsi" style="color:var(--green)">RSI 34</div>
+        </div><div class="hmap-cell" style="background:#99775d22;border-color:#99775d55"
+          title="MARUTI: Rs.13630.00 | RSI 57">
+          <div class="hmap-name">MARUTI</div>
+          <div class="hmap-chg" style="color:var(--red)">-0.4%</div>
+          <div class="hmap-rsi" style="color:var(--yellow)">RSI 57</div>
+        </div><div class="hmap-cell" style="background:#3d7c6822;border-color:#3d7c6855"
+          title="MUTHOOTFIN: Rs.3190.60 | RSI 43">
+          <div class="hmap-name">MUTHOOTFIN</div>
+          <div class="hmap-chg" style="color:var(--green)">+0.7%</div>
+          <div class="hmap-rsi" style="color:var(--yellow)">RSI 43</div>
+        </div><div class="hmap-cell" style="background:#35865b22;border-color:#35865b55"
+          title="NESTLEIND: Rs.1407.30 | RSI 45">
+          <div class="hmap-name">NESTLEIND</div>
+          <div class="hmap-chg" style="color:var(--green)">+1.1%</div>
+          <div class="hmap-rsi" style="color:var(--yellow)">RSI 45</div>
+        </div><div class="hmap-cell" style="background:#4c698122;border-color:#4c698155"
+          title="NTPC: Rs.355.55 | RSI 16">
+          <div class="hmap-name">NTPC</div>
+          <div class="hmap-chg" style="color:var(--green)">+0.0%</div>
+          <div class="hmap-rsi" style="color:var(--green)">RSI 16</div>
+        </div><div class="hmap-cell" style="background:#b5665522;border-color:#b5665555"
+          title="ONGC: Rs.245.00 | RSI 19">
+          <div class="hmap-name">ONGC</div>
+          <div class="hmap-chg" style="color:var(--red)">-1.3%</div>
+          <div class="hmap-rsi" style="color:var(--green)">RSI 19</div>
+        </div><div class="hmap-cell" style="background:#43747222;border-color:#43747255"
+          title="PIDILITIND: Rs.1578.20 | RSI 74">
+          <div class="hmap-name">PIDILITIND</div>
+          <div class="hmap-chg" style="color:var(--green)">+0.4%</div>
+          <div class="hmap-rsi" style="color:var(--red)">RSI 74</div>
+        </div><div class="hmap-cell" style="background:#43747222;border-color:#43747255"
+          title="POWERGRID: Rs.286.35 | RSI 32">
+          <div class="hmap-name">POWERGRID</div>
+          <div class="hmap-chg" style="color:var(--green)">+0.4%</div>
+          <div class="hmap-rsi" style="color:var(--green)">RSI 32</div>
+        </div><div class="hmap-cell" style="background:#46707722;border-color:#46707755"
+          title="RELIANCE: Rs.1332.70 | RSI 47">
+          <div class="hmap-name">RELIANCE</div>
+          <div class="hmap-chg" style="color:var(--green)">+0.3%</div>
+          <div class="hmap-rsi" style="color:var(--yellow)">RSI 47</div>
+        </div><div class="hmap-cell" style="background:#35865c22;border-color:#35865c55"
+          title="SBIN: Rs.1026.50 | RSI 78">
+          <div class="hmap-name">SBIN</div>
+          <div class="hmap-chg" style="color:var(--green)">+1.1%</div>
+          <div class="hmap-rsi" style="color:var(--red)">RSI 78</div>
+        </div><div class="hmap-cell" style="background:#43737322;border-color:#43737355"
+          title="SHREECEM: Rs.24970.00 | RSI 44">
+          <div class="hmap-name">SHREECEM</div>
+          <div class="hmap-chg" style="color:var(--green)">+0.4%</div>
+          <div class="hmap-rsi" style="color:var(--yellow)">RSI 44</div>
+        </div><div class="hmap-cell" style="background:#36865c22;border-color:#36865c55"
+          title="SUNPHARMA: Rs.1820.40 | RSI 41">
+          <div class="hmap-name">SUNPHARMA</div>
+          <div class="hmap-chg" style="color:var(--green)">+1.1%</div>
+          <div class="hmap-rsi" style="color:var(--yellow)">RSI 41</div>
+        </div><div class="hmap-cell" style="background:#9d745c22;border-color:#9d745c55"
+          title="TATACONSUM: Rs.1124.50 | RSI 28">
+          <div class="hmap-name">TATACONSUM</div>
+          <div class="hmap-chg" style="color:var(--red)">-0.6%</div>
+          <div class="hmap-rsi" style="color:var(--green)">RSI 28</div>
+        </div><div class="hmap-cell" style="background:#2d914d22;border-color:#2d914d55"
+          title="TATASTEEL: Rs.199.01 | RSI 33">
+          <div class="hmap-name">TATASTEEL</div>
+          <div class="hmap-chg" style="color:var(--green)">+1.5%</div>
+          <div class="hmap-rsi" style="color:var(--green)">RSI 33</div>
+        </div><div class="hmap-cell" style="background:#36865c22;border-color:#36865c55"
+          title="TCS: Rs.2223.00 | RSI 45">
+          <div class="hmap-name">TCS</div>
+          <div class="hmap-chg" style="color:var(--green)">+1.1%</div>
+          <div class="hmap-rsi" style="color:var(--yellow)">RSI 45</div>
+        </div><div class="hmap-cell" style="background:#36855d22;border-color:#36855d55"
+          title="TECHM: Rs.1462.40 | RSI 51">
+          <div class="hmap-name">TECHM</div>
+          <div class="hmap-chg" style="color:var(--green)">+1.1%</div>
+          <div class="hmap-rsi" style="color:var(--yellow)">RSI 51</div>
+        </div><div class="hmap-cell" style="background:#38836022;border-color:#38836055"
+          title="TITAN: Rs.4380.50 | RSI 63">
+          <div class="hmap-name">TITAN</div>
+          <div class="hmap-chg" style="color:var(--green)">+1.0%</div>
+          <div class="hmap-rsi" style="color:var(--yellow)">RSI 63</div>
+        </div><div class="hmap-cell" style="background:#907c6022;border-color:#907c6055"
+          title="ULTRACEMCO: Rs.11373.00 | RSI 41">
+          <div class="hmap-name">ULTRACEMCO</div>
+          <div class="hmap-chg" style="color:var(--red)">-0.2%</div>
+          <div class="hmap-rsi" style="color:var(--yellow)">RSI 41</div>
+        </div><div class="hmap-cell" style="background:#38836022;border-color:#38836055"
+          title="WIPRO: Rs.184.47 | RSI 32">
+          <div class="hmap-name">WIPRO</div>
+          <div class="hmap-chg" style="color:var(--green)">+1.0%</div>
+          <div class="hmap-rsi" style="color:var(--green)">RSI 32</div>
+        </div></div>
 </div>
   <div class="section" id="status">
   <h2>📌 Agent Status <span>What the agent is doing right now</span></h2>
   <div class="card">
     <div class="timeline"><div class="tphase tphase-active">▶ 1. Explore Universe</div><span class="tarrow">→</span><div class="tphase tphase-future">2. Deep Analysis</div><span class="tarrow">→</span><div class="tphase tphase-future">3. Paper Trade</div><span class="tarrow">→</span><div class="tphase tphase-future">4. Signal Ready</div></div>
+    <div class="phase-progress"><div class="phase-step active">
+          <div class="phase-dot"></div>
+          <span>Exploration</span>
+          <small>Days 1-5</small>
+        </div><div class="phase-line"></div><div class="phase-step ">
+          <div class="phase-dot"></div>
+          <span>Analysis</span>
+          <small>Days 6-15</small>
+        </div><div class="phase-line"></div><div class="phase-step ">
+          <div class="phase-dot"></div>
+          <span>Paper Trading</span>
+          <small>Days 16+</small>
+        </div><div class="phase-line"></div><div class="phase-step ">
+          <div class="phase-dot"></div>
+          <span>Recommendations</span>
+          <small>Live</small>
+        </div></div>
     <div style="margin-top:14px;display:flex;flex-wrap:wrap;gap:24px">
       <div><div class="stat-label">Started</div><div style="font-weight:600">2026-06-18</div></div>
       <div><div class="stat-label">Phase since</div><div style="font-weight:600">2026-06-18</div></div>

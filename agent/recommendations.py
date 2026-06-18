@@ -135,8 +135,11 @@ def generate_recommendations(
             continue
 
         # ── Layer 1: Technical score (0–40) ──────────────────────────────────
-        tech_score = min(40, opinion["buy_score"] * 4 if opinion["signal"] == "BUY"
-                         else opinion["sell_score"] * 4)
+        # buy_score/sell_score have no fixed ceiling — they accumulate per pattern fired.
+        # A "very strong" signal is ~10+; we treat 15 as the practical maximum for scaling.
+        # clamp at 15 then scale to 40, so a perfect signal gets full 40 pts.
+        raw_score  = opinion["buy_score"] if opinion["signal"] == "BUY" else opinion["sell_score"]
+        tech_score = round(min(40, raw_score / 15.0 * 40), 1)
 
         # ── Layer 2: Fundamental score (0–30) ─────────────────────────────────
         from agent.fundamentals_fetcher import score_fundamentals
@@ -210,10 +213,24 @@ def generate_recommendations(
         recommended_qty = min(qty_by_risk, qty_by_cap)
         invested        = round(close * recommended_qty, 2)
 
-        # ── Hold period ───────────────────────────────────────────────────────
+        # ── Trade type, hold period, timing guidance ──────────────────────────
         style = patterns.get(ticker, {}).get("preferred_style", "swing")
-        hold  = {"swing": "5–10 trading days",
-                 "intraday": "Same day (exit before 3:15 PM IST)"}.get(style, "3–7 trading days")
+        rec_valid_until = REC_SESSION_VALID_UNTIL.get(session, "next session")
+
+        if style == "intraday":
+            trade_type       = "Intraday"
+            hold             = "Same day — exit before 3:15 PM IST"
+            entry_window     = "9:30 AM – 10:30 AM IST (first hour momentum)"
+            exit_window      = "Exit by 3:00 PM IST latest — do not carry overnight"
+            target_timeframe = "2–5 hours after entry"
+            action_urgency   = "ACT WITHIN THIS SESSION — intraday setups expire at market close"
+        else:
+            trade_type       = "Delivery / Positional"
+            hold             = "5–10 trading days (swing)"
+            entry_window     = "Buy in 2–3 tranches across 9:30–11:30 AM IST; avoid last 30 mins"
+            exit_window      = f"Monitor at each daily open; valid until {rec_valid_until}"
+            target_timeframe = "5–10 trading sessions (1–2 calendar weeks)"
+            action_urgency   = "No rush — swing setups allow flexible entry within the entry zone"
 
         # ── Build full reasoning ──────────────────────────────────────────────
         reasons = list(opinion.get("buy_reasons" if opinion["signal"] == "BUY"
@@ -296,9 +313,14 @@ def generate_recommendations(
             "session":      session,
             "is_stale":     is_stale,
             "stale_reason": stale_reason,
-            "signal":       opinion["signal"],
-            "style":        style,
-            "hold_period":  hold,
+            "signal":           opinion["signal"],
+            "trade_type":       trade_type,
+            "style":            style,
+            "hold_period":      hold,
+            "entry_window":     entry_window,
+            "exit_window":      exit_window,
+            "target_timeframe": target_timeframe,
+            "action_urgency":   action_urgency,
 
             "cmp":          round(close, 2),
             "entry_low":    entry_low,

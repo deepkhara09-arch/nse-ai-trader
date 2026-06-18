@@ -59,8 +59,14 @@ def rank_focus_stocks(
         if n_trades > 0:
             wins     = [t for t in closed if t.get("won")]
             paper_wr = len(wins) / n_trades
-            avg_rr   = sum(abs(t.get("pnl", 0)) / max(abs(t["entry"] - t.get("exit_price", t["entry"])), 0.01)
-                           for t in wins) / max(len(wins), 1)
+            # Compute avg R:R only from trades with a meaningful price move
+            valid_rrs = []
+            for t in wins:
+                price_delta = abs(t.get("entry", 0) - t.get("exit_price", t.get("entry", 0)))
+                if price_delta > 0.5:   # at least 50 paise movement to count
+                    rr = abs(t.get("pnl", 0)) / (price_delta * t.get("qty", 1))
+                    valid_rrs.append(min(rr, 10.0))   # cap individual R:R at 10x to prevent outlier inflation
+            avg_rr = sum(valid_rrs) / len(valid_rrs) if valid_rrs else 1.5
         else:
             paper_wr = 0.5   # prior (no data yet)
             avg_rr   = 2.0

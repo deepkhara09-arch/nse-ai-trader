@@ -109,6 +109,9 @@ def _try_open_positions(book: dict, opinions: List[dict], patterns_db: Dict, ses
         if entry <= 0:
             continue
 
+        if book["capital"] < entry:
+            print(f"[paper] Skipping {ticker} — capital ₹{book['capital']:.0f} < entry ₹{entry:.0f}")
+            continue
         max_invest = book["capital"] * MAX_POSITION_SIZE_PCT
         qty = int(max_invest // entry)
         if qty < 1:

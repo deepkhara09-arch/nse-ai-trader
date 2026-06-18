@@ -15,6 +15,7 @@ from agent.config import (
     BRAIN_DIR, PAPER_TRADES_FILE,
     INITIAL_CAPITAL, MAX_POSITION_SIZE_PCT, MAX_OPEN_POSITIONS,
     MAX_DAILY_LOSS_PCT, WIN_RATE_THRESHOLD, MIN_TRADES_FOR_SIGNAL,
+    PAPER_TRADING_DAYS,
 )
 from agent.brain import learn_from_trade
 
@@ -361,10 +362,28 @@ def compute_stats(book: dict) -> dict:
     }
 
 
-def is_ready_to_alert(stats: dict) -> bool:
-    return (stats["total"] >= MIN_TRADES_FOR_SIGNAL and
-            stats["win_rate"] >= WIN_RATE_THRESHOLD and
-            stats["expectancy"] > 0)
+def is_ready_to_alert(stats: dict, book: dict = None) -> bool:
+    """
+    All three conditions must be true before we surface recommendations:
+      1. Minimum number of closed paper trades (statistical sample size)
+      2. Win rate at or above threshold (signal quality)
+      3. Positive expectancy (edge exists)
+      4. Minimum number of distinct trading DAYS observed (time-based gate)
+         — prevents alerting after just a few lucky days on a hot market
+    """
+    if stats["total"] < MIN_TRADES_FOR_SIGNAL:
+        return False
+    if stats["win_rate"] < WIN_RATE_THRESHOLD:
+        return False
+    if stats["expectancy"] <= 0:
+        return False
+    # Time gate: require at least PAPER_TRADING_DAYS distinct snapshot dates
+    if book is not None:
+        distinct_days = len(book.get("daily_snapshots", []))
+        if distinct_days < PAPER_TRADING_DAYS:
+            print(f"[alert] Not ready: only {distinct_days}/{PAPER_TRADING_DAYS} paper trading days elapsed")
+            return False
+    return True
 
 
 # type alias for readability

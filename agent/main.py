@@ -215,7 +215,7 @@ def run():
                 save_fundamentals(fund_data)
 
             # ── Alert when paper trading is validated ─────────────────────────
-            if is_ready_to_alert(stats) and not state.get("alert_sent"):
+            if is_ready_to_alert(stats, book) and not state.get("alert_sent"):
                 state["alert_sent"] = True
                 state = add_brain_note(
                     state,

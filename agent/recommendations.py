@@ -29,6 +29,7 @@ from agent.config import (
 from agent.support_resistance import compute_levels, nearest_strong_support, nearest_strong_resistance
 from agent.brain import analyse_stock, get_reliable_patterns_list
 from agent.paper_trader import compute_stats
+from agent.ranking_engine import rank_focus_stocks
 
 RECOMMENDATIONS_FILE = "brain/recommendations.json"
 
@@ -106,6 +107,13 @@ def generate_recommendations(
         print("[recs] Market in danger mode — skipping recommendations")
         _save([])
         return []
+
+    # Build rank table for all focus stocks (used for rank/probability fields below)
+    rank_table = {
+        r["ticker"]: r
+        for r in rank_focus_stocks(focus, stock_data, patterns, news_data,
+                                   fundamentals, book, market_health)
+    }
 
     for ticker in focus:
         entry_data = stock_data.get(ticker)
@@ -263,6 +271,8 @@ def generate_recommendations(
                 f"₹{stock_stats['expectancy']:+.0f}/trade expectancy"
             )
 
+        rank_info = rank_table.get(ticker, {})
+
         rec = {
             "ticker":       ticker,
             "nse_code":     ticker.replace(".NS", ""),
@@ -293,6 +303,13 @@ def generate_recommendations(
             "news_score":        news_score,
             "pattern_score":     pat_score,
             "paper_bonus":       paper_bonus,
+
+            # Probability scores from ranking engine
+            "success_probability": rank_info.get("success_probability", 0.5),
+            "profit_probability":  rank_info.get("profit_probability", 0.0),
+            "composite_score":     rank_info.get("composite_score", 0.0),
+            "focus_rank":          rank_info.get("rank", 99),
+            "rank_delta":          rank_info.get("rank_delta", 0),
 
             "buy_score":         opinion["buy_score"],
             "sell_score":        opinion["sell_score"],

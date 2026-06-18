@@ -25,6 +25,7 @@ def build_dashboard(
     market_health: dict = None,
     recommendations: List = None,
     fundamentals: Dict = None,
+    ranked_stocks: List = None,
 ) -> None:
     os.makedirs("docs", exist_ok=True)
     if market_health is None:
@@ -33,6 +34,8 @@ def build_dashboard(
         recommendations = []
     if fundamentals is None:
         fundamentals = {}
+    if ranked_stocks is None:
+        ranked_stocks = []
 
     stats   = compute_stats(book)
     now_utc = datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC")
@@ -101,6 +104,7 @@ def _build_html(
   {_section_status(state, phase, day, focus, stock_data)}
   {_section_heatmap(stock_data)}
   {_section_portfolio(stats, portfolio, pnl_total, pnl_pct, book)}
+  {_section_rankings(ranked_stocks)}
   {_section_recommendations(recommendations)}
   {_section_watchlist(focus, stock_data, news_data, patterns, fundamentals)}
   {_section_trades(book)}
@@ -648,6 +652,7 @@ def _nav() -> str:
   <a href="#status">Status</a>
   <a href="#heatmap">Heatmap</a>
   <a href="#portfolio">Portfolio</a>
+  <a href="#rankings">Rankings</a>
   <a href="#recommendations">Recommendations</a>
   <a href="#watchlist">Watchlist</a>
   <a href="#trades">Paper Trades</a>
@@ -1123,6 +1128,87 @@ def _fund_table(fund: dict) -> str:
     )
 
 
+def _section_rankings(ranked: list) -> str:
+    if not ranked:
+        return ""
+
+    def delta_html(d):
+        if d > 0:
+            return f'<span style="color:var(--bull);font-size:.7rem">▲{d}</span>'
+        if d < 0:
+            return f'<span style="color:var(--bear);font-size:.7rem">▼{abs(d)}</span>'
+        return '<span style="color:var(--muted);font-size:.7rem">—</span>'
+
+    def prob_bar(val, color):
+        pct = round(min(100, max(0, val * 100)))
+        return (
+            f'<div style="display:flex;align-items:center;gap:6px">'
+            f'<div style="flex:1;height:5px;background:#23232e;border-radius:3px">'
+            f'<div style="width:{pct}%;height:5px;background:{color};border-radius:3px"></div>'
+            f'</div>'
+            f'<span style="font-size:.7rem;color:var(--muted);min-width:32px">{pct}%</span>'
+            f'</div>'
+        )
+
+    rows = []
+    for r in ranked:
+        ticker   = r["ticker"]
+        code     = r["nse_code"]
+        rank     = r["rank"]
+        delta    = r.get("rank_delta", 0)
+        sp       = r.get("success_probability", 0.5)
+        pp       = r.get("profit_probability", 0.0)
+        cs       = r.get("composite_score", 0.0)
+        trend    = r.get("trend", "sideways")
+        n_trades = r.get("paper_trades", 0)
+        wr       = r.get("paper_win_rate", 0.0)
+        close    = r.get("close", 0)
+
+        trend_color = {"strong_up": "var(--bull)", "up": "var(--bull)",
+                       "sideways": "var(--muted)", "down": "var(--bear)",
+                       "strong_down": "var(--bear)"}.get(trend, "var(--muted)")
+        trend_label = trend.replace("_", " ").title()
+
+        profit_color = "var(--bull)" if pp > 0 else "var(--bear)"
+
+        rows.append(
+            f'<tr>'
+            f'<td style="color:var(--muted);font-size:.75rem">#{rank} {delta_html(delta)}</td>'
+            f'<td><strong style="font-size:.82rem">{code}</strong></td>'
+            f'<td style="font-size:.75rem;color:{trend_color}">{trend_label}</td>'
+            f'<td style="font-size:.75rem">₹{close:,.0f}</td>'
+            f'<td style="min-width:90px">{prob_bar(sp, "var(--bull)")}</td>'
+            f'<td style="min-width:90px">{prob_bar(max(0, pp), profit_color)}</td>'
+            f'<td style="font-size:.73rem;color:var(--muted)">'
+            f'{n_trades}T / {wr:.0f}%WR</td>'
+            f'<td><span class="pill" style="background:#1a2233;color:#7eb3ff;font-size:.68rem">'
+            f'{cs:.0f}</span></td>'
+            f'</tr>'
+        )
+
+    rows_html = "".join(rows)
+    return f"""<div class="section" id="rankings">
+  <h2>Focus Stock Rankings <span>Live rank · updated every session · promotes/demotes automatically</span></h2>
+  <div style="overflow-x:auto">
+  <table style="width:100%;border-collapse:collapse;font-size:.8rem">
+    <thead>
+      <tr style="color:var(--muted);font-size:.72rem;border-bottom:1px solid #23232e">
+        <th style="padding:6px 8px;text-align:left">Rank</th>
+        <th style="padding:6px 8px;text-align:left">Stock</th>
+        <th style="padding:6px 8px;text-align:left">Trend</th>
+        <th style="padding:6px 8px;text-align:left">CMP</th>
+        <th style="padding:6px 8px;text-align:left">Success Prob</th>
+        <th style="padding:6px 8px;text-align:left">Profit Prob</th>
+        <th style="padding:6px 8px;text-align:left">Paper Stats</th>
+        <th style="padding:6px 8px;text-align:left">Score</th>
+      </tr>
+    </thead>
+    <tbody>{rows_html}</tbody>
+  </table>
+  </div>
+</div>"""
+
+
 def _section_watchlist(focus, stock_data, news_data, patterns, fundamentals=None) -> str:
     fundamentals   = fundamentals or {}
     display_tickers = focus if focus else sorted(stock_data.keys())
@@ -1257,9 +1343,9 @@ def _section_recommendations(recs) -> str:
             for w in rec.get("market_warning", [])
         )
 
-        tech_score  = rec.get("buy_score", rec.get("sell_score", 0))
-        fund_score  = rec.get("fundamental_score", 0)
-        news_score_val = rec.get("news_score_display", 0)
+        tech_score  = rec.get("tech_score", rec.get("buy_score", rec.get("sell_score", 0)))
+        fund_score  = rec.get("fund_score", rec.get("fundamental_score", 0))
+        news_score_val = rec.get("news_score", rec.get("news_score_display", 0))
         pat_score   = rec.get("pattern_score", 0)
         score_breakdown = (
             _score_bar("Technical",   min(tech_score,  40), 40, "#6366f1") +
@@ -1267,6 +1353,22 @@ def _section_recommendations(recs) -> str:
             _score_bar("News",        min(news_score_val, 20), 20, "#eab308") +
             _score_bar("Pattern",     min(pat_score,   10), 10, "#06b6d4")
         )
+
+        focus_rank   = rec.get("focus_rank", 0)
+        rank_delta   = rec.get("rank_delta", 0)
+        success_prob = rec.get("success_probability", 0)
+        profit_prob  = rec.get("profit_probability", 0)
+        composite_sc = rec.get("composite_score", 0)
+
+        if rank_delta > 0:
+            delta_html = f'<span style="color:var(--bull);font-size:.75rem">▲{rank_delta}</span>'
+        elif rank_delta < 0:
+            delta_html = f'<span style="color:var(--bear);font-size:.75rem">▼{abs(rank_delta)}</span>'
+        else:
+            delta_html = '<span style="color:var(--muted);font-size:.75rem">—</span>'
+
+        sp_pct = round(success_prob * 100)
+        pp_pct = round(max(0, profit_prob) * 100)
 
         sig_badge_cls = "badge-green" if signal == "BUY" else "badge-red"
         entry_low  = rec.get("entry_low",  0)
@@ -1292,6 +1394,25 @@ def _section_recommendations(recs) -> str:
       <span class="badge {sig_badge_cls}">{signal}</span>
       <span class="badge badge-blue">{rec.get('style','').capitalize()}</span>
       <span class="badge badge-cyan">{rec.get('hold_period','')}</span>
+      {f'<span class="badge" style="background:#1a2233;color:#7eb3ff">#{focus_rank} {delta_html}</span>' if focus_rank else ""}
+    </div>
+  </div>
+
+  <div style="display:flex;gap:10px;margin-bottom:10px;flex-wrap:wrap">
+    <div style="flex:1;min-width:120px;background:var(--card2);border-radius:8px;padding:8px 10px">
+      <div style="font-size:.62rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px">Success Probability</div>
+      <div style="font-size:1.1rem;font-weight:700;color:{'var(--bull)' if sp_pct>=55 else 'var(--yellow)'}">{sp_pct}%</div>
+      <div style="height:4px;background:#23232e;border-radius:2px;margin-top:5px"><div style="width:{sp_pct}%;height:4px;background:{'var(--bull)' if sp_pct>=55 else 'var(--yellow)'};border-radius:2px"></div></div>
+    </div>
+    <div style="flex:1;min-width:120px;background:var(--card2);border-radius:8px;padding:8px 10px">
+      <div style="font-size:.62rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px">Profit Probability</div>
+      <div style="font-size:1.1rem;font-weight:700;color:{'var(--bull)' if profit_prob>0 else 'var(--bear)'}">{pp_pct}%</div>
+      <div style="height:4px;background:#23232e;border-radius:2px;margin-top:5px"><div style="width:{pp_pct}%;height:4px;background:{'var(--bull)' if profit_prob>0 else 'var(--bear)'};border-radius:2px"></div></div>
+    </div>
+    <div style="flex:1;min-width:120px;background:var(--card2);border-radius:8px;padding:8px 10px">
+      <div style="font-size:.62rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px">Composite Score</div>
+      <div style="font-size:1.1rem;font-weight:700;color:var(--cyan)">{composite_sc:.0f}/100</div>
+      <div style="height:4px;background:#23232e;border-radius:2px;margin-top:5px"><div style="width:{min(100,composite_sc):.0f}%;height:4px;background:var(--cyan);border-radius:2px"></div></div>
     </div>
   </div>
 

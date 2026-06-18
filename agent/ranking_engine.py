@@ -1,0 +1,334 @@
+"""
+Ranking Engine — scores and ranks all focus stocks every session.
+
+Computes per-stock:
+  • success_probability  — Bayesian blend of paper win rate + pattern reliability
+  • profit_probability   — expected edge = success_prob × avg_R:R
+  • composite_rank_score — weighted blend of all signals (used for ordering)
+  • rank_delta           — how many positions changed since last session
+
+Also handles:
+  • Promotion  — strong stocks from watchlist promoted into focus
+  • Demotion   — persistent underperformers swapped out
+  • Rank history — stored in brain/rank_history.json for dashboard trend display
+"""
+
+import json
+import os
+from datetime import date
+from typing import Dict, List, Tuple
+
+from agent.config import BRAIN_DIR, FOCUS_STOCK_COUNT, MAX_STOCK_PRICE
+
+RANK_HISTORY_FILE  = "brain/rank_history.json"
+WATCHLIST_FILE     = "brain/watchlist_signals.json"   # tracks near-miss strong signals
+
+
+# ── Public API ─────────────────────────────────────────────────────────────────
+
+def rank_focus_stocks(
+    focus: List[str],
+    stock_data: Dict,
+    patterns: Dict,
+    news_data: Dict,
+    fundamentals: Dict,
+    book: dict,
+    market_health: dict,
+) -> List[dict]:
+    """
+    Returns focus stocks sorted best→worst with probability scores.
+    Saves rank history for trend display.
+    """
+    from agent.fundamentals_fetcher import score_fundamentals
+    from agent.brain import get_reliable_patterns_list
+
+    ranked = []
+    for ticker in focus:
+        entry = stock_data.get(ticker, {})
+        if not entry or "latest" not in entry:
+            continue
+        d       = entry["latest"]
+        close   = d.get("close", 0)
+        fund    = fundamentals.get(ticker, {})
+        news    = news_data.get(ticker, {}).get("latest", {})
+        pat_db  = patterns.get(ticker, {})
+
+        # ── Paper trade stats for this ticker ────────────────────────────────
+        closed  = [t for t in book.get("closed_trades", []) if t["ticker"] == ticker]
+        n_trades = len(closed)
+        if n_trades > 0:
+            wins     = [t for t in closed if t.get("won")]
+            paper_wr = len(wins) / n_trades
+            avg_rr   = sum(abs(t.get("pnl", 0)) / max(abs(t["entry"] - t.get("exit_price", t["entry"])), 0.01)
+                           for t in wins) / max(len(wins), 1)
+        else:
+            paper_wr = 0.5   # prior (no data yet)
+            avg_rr   = 2.0
+
+        # ── Pattern reliability ───────────────────────────────────────────────
+        reliable = get_reliable_patterns_list(ticker, patterns, min_rel=0.55)
+        pat_score_raw = min(1.0, len(reliable) / 4)
+
+        # ── Fundamental score (0–1) ───────────────────────────────────────────
+        fund_score_raw = score_fundamentals(fund) / 100.0
+
+        # ── Momentum score (0–1) ──────────────────────────────────────────────
+        trend_map = {"strong_up": 1.0, "up": 0.75, "sideways": 0.4,
+                     "down": 0.2, "strong_down": 0.0}
+        momentum = trend_map.get(entry.get("trend_10d", "sideways"), 0.4)
+        rsi      = d.get("rsi", 50)
+        macd_h   = d.get("macd_hist", 0)
+        tech_raw = (
+            momentum * 0.4
+            + (1.0 if 38 <= rsi <= 62 else 0.4 if 25 <= rsi <= 75 else 0.1) * 0.3
+            + (1.0 if macd_h > 0 else 0.3) * 0.3
+        )
+
+        # ── News sentiment (0–1) ──────────────────────────────────────────────
+        news_raw = min(1.0, max(0.0, (news.get("score", 0) + 1) / 2))
+
+        # ── Bayesian success probability ──────────────────────────────────────
+        # Prior: 0.50. Weight paper data more the more trades we have.
+        paper_weight = min(0.7, n_trades / 20)   # ramps to 0.7 after 20 trades
+        prior_weight = 1.0 - paper_weight
+        success_prob = round(
+            paper_weight * paper_wr
+            + prior_weight * (0.35 * tech_raw + 0.30 * fund_score_raw
+                              + 0.20 * pat_score_raw + 0.15 * news_raw),
+            3
+        )
+
+        # ── Profit probability = expected edge ────────────────────────────────
+        # How much R we expect per trade if we take this setup
+        profit_prob = round(success_prob * avg_rr - (1 - success_prob) * 1.0, 3)
+
+        # ── Composite rank score (0–100) ──────────────────────────────────────
+        composite = round(
+            success_prob * 40
+            + profit_prob * 20
+            + fund_score_raw * 20
+            + tech_raw * 15
+            + news_raw * 5,
+            2
+        ) * 100 / 100   # already in 0-100 range conceptually; cap at 100
+
+        ranked.append({
+            "ticker":            ticker,
+            "nse_code":          ticker.replace(".NS", ""),
+            "close":             round(close, 2),
+            "trend":             entry.get("trend_10d", "sideways"),
+            "rsi":               round(rsi, 1),
+            "success_probability":  success_prob,
+            "profit_probability":   profit_prob,
+            "composite_score":      round(composite, 2),
+            "fund_score_pct":       round(fund_score_raw * 100, 1),
+            "tech_score_pct":       round(tech_raw * 100, 1),
+            "paper_win_rate":       round(paper_wr * 100, 1),
+            "paper_trades":         n_trades,
+            "reliable_patterns":    reliable,
+            "news_score_pct":       round(news_raw * 100, 1),
+        })
+
+    ranked.sort(key=lambda x: x["composite_score"], reverse=True)
+
+    # Add rank numbers + deltas
+    prev_ranks = _load_prev_ranks()
+    for i, r in enumerate(ranked):
+        r["rank"] = i + 1
+        prev = prev_ranks.get(r["ticker"])
+        r["rank_delta"] = (prev - r["rank"]) if prev else 0   # positive = moved up
+
+    _save_rank_history(ranked)
+    return ranked
+
+
+def evaluate_focus_refresh(
+    focus: List[str],
+    ranked: List[dict],
+    stock_data: Dict,
+    patterns: Dict,
+    news_data: Dict,
+    fundamentals: Dict,
+    watchlist_signals: Dict,
+    n: int = FOCUS_STOCK_COUNT,
+) -> Tuple[List[str], List[str], List[str]]:
+    """
+    Decide whether to promote/demote any stocks.
+
+    Returns (new_focus, promoted, demoted).
+
+    Rules:
+      - A focus stock is demoted if it has been ranked bottom-3 for 3+ consecutive
+        sessions AND has composite_score < 30.
+      - A watchlist stock is promoted if it has received a strong signal (score > 70)
+        in 3 of the last 5 sessions.
+    """
+    demote_candidates = _get_demotion_candidates(ranked)
+    promote_candidates = _get_promotion_candidates(watchlist_signals, stock_data,
+                                                   fundamentals, n_slots=len(demote_candidates))
+
+    if not demote_candidates and not promote_candidates:
+        return focus, [], []
+
+    # Only do a swap if we have both a demote and a promote candidate
+    n_swaps = min(len(demote_candidates), len(promote_candidates))
+    demoted  = demote_candidates[:n_swaps]
+    promoted = promote_candidates[:n_swaps]
+
+    new_focus = [t for t in focus if t not in demoted] + promoted
+    new_focus = list(dict.fromkeys(new_focus))[:n]   # dedup, cap at n
+
+    if demoted or promoted:
+        print(f"[ranking] Focus refresh: demoted={demoted}  promoted={promoted}")
+
+    return new_focus, promoted, demoted
+
+
+def update_watchlist_signals(
+    watchlist_signals: Dict,
+    stock_data: Dict,
+    patterns: Dict,
+    news_data: Dict,
+    fundamentals: Dict,
+    focus: List[str],
+) -> Dict:
+    """
+    Score every non-focus Nifty-100 stock and track how many sessions it has
+    shown a strong signal. Used by evaluate_focus_refresh().
+    """
+    from agent.config import NSE_UNIVERSE
+    from agent.fundamentals_fetcher import score_fundamentals
+    from agent.brain import get_reliable_patterns_list
+
+    today = date.today().isoformat()
+    non_focus = [t for t in NSE_UNIVERSE if t not in focus]
+
+    for ticker in non_focus:
+        entry = stock_data.get(ticker, {})
+        if not entry or "latest" not in entry:
+            continue
+        d     = entry["latest"]
+        close = d.get("close", 0)
+        if close <= 0 or close > MAX_STOCK_PRICE:
+            continue
+
+        fund     = fundamentals.get(ticker, {})
+        fund_s   = score_fundamentals(fund)
+        reliable = get_reliable_patterns_list(ticker, patterns, min_rel=0.55)
+        rsi      = d.get("rsi", 50)
+        macd_h   = d.get("macd_hist", 0)
+        trend    = entry.get("trend_10d", "sideways")
+
+        score = (
+            (1.0 if trend in ("strong_up", "up") else 0.0) * 25
+            + (1.0 if 38 <= rsi <= 62 else 0.3) * 20
+            + (1.0 if macd_h > 0 else 0.0) * 15
+            + fund_s * 0.30
+            + min(10, len(reliable) * 2.5)
+        )
+
+        rec = watchlist_signals.setdefault(ticker, {"sessions": [], "score_history": []})
+        rec["sessions"].append(today)
+        rec["score_history"].append(round(score, 1))
+        # Keep last 10 sessions
+        rec["sessions"]      = rec["sessions"][-10:]
+        rec["score_history"] = rec["score_history"][-10:]
+        rec["last_score"]    = round(score, 1)
+
+    return watchlist_signals
+
+
+def load_watchlist_signals() -> Dict:
+    if os.path.exists(WATCHLIST_FILE):
+        with open(WATCHLIST_FILE) as f:
+            return json.load(f)
+    return {}
+
+
+def save_watchlist_signals(data: Dict) -> None:
+    os.makedirs(BRAIN_DIR, exist_ok=True)
+    with open(WATCHLIST_FILE, "w") as f:
+        json.dump(data, f, indent=2)
+
+
+def load_rank_history() -> List[dict]:
+    if os.path.exists(RANK_HISTORY_FILE):
+        with open(RANK_HISTORY_FILE) as f:
+            return json.load(f)
+    return []
+
+
+# ── Internal helpers ───────────────────────────────────────────────────────────
+
+def _load_prev_ranks() -> Dict[str, int]:
+    history = load_rank_history()
+    if not history:
+        return {}
+    last = history[-1].get("ranked", [])
+    return {r["ticker"]: r["rank"] for r in last}
+
+
+def _save_rank_history(ranked: List[dict]) -> None:
+    history = load_rank_history()
+    history.append({
+        "date":   date.today().isoformat(),
+        "ranked": [{"ticker": r["ticker"], "rank": r["rank"],
+                    "composite_score": r["composite_score"],
+                    "success_probability": r["success_probability"]}
+                   for r in ranked],
+    })
+    history = history[-180:]   # ~6 months of daily snapshots
+    os.makedirs(BRAIN_DIR, exist_ok=True)
+    with open(RANK_HISTORY_FILE, "w") as f:
+        json.dump(history, f, indent=2)
+
+
+def _get_demotion_candidates(ranked: List[dict]) -> List[str]:
+    """Stocks in the bottom 3 with low composite scores."""
+    if len(ranked) <= 5:
+        return []
+    bottom = ranked[-3:]
+    history = load_rank_history()
+    demote = []
+    for r in bottom:
+        if r["composite_score"] >= 30:
+            continue
+        # Check how many of the last 3 sessions this stock was in bottom 3
+        ticker = r["ticker"]
+        bottom_count = 0
+        for snap in history[-3:]:
+            snap_ranked = snap.get("ranked", [])
+            n = len(snap_ranked)
+            for s in snap_ranked[max(0, n-3):]:
+                if s["ticker"] == ticker:
+                    bottom_count += 1
+        if bottom_count >= 3:
+            demote.append(ticker)
+    return demote
+
+
+def _get_promotion_candidates(
+    watchlist_signals: Dict,
+    stock_data: Dict,
+    fundamentals: Dict,
+    n_slots: int,
+) -> List[str]:
+    """Stocks with 3+ strong signals in last 5 sessions, not already in focus."""
+    from agent.fundamentals_fetcher import score_fundamentals
+    candidates = []
+    for ticker, rec in watchlist_signals.items():
+        scores = rec.get("score_history", [])
+        if len(scores) < 3:
+            continue
+        strong = sum(1 for s in scores[-5:] if s >= 65)
+        if strong < 3:
+            continue
+        entry = stock_data.get(ticker, {})
+        close = entry.get("latest", {}).get("close", 0)
+        if close <= 0 or close > MAX_STOCK_PRICE:
+            continue
+        avg_score = sum(scores[-5:]) / min(len(scores), 5)
+        candidates.append((ticker, avg_score))
+
+    candidates.sort(key=lambda x: x[1], reverse=True)
+    return [t for t, _ in candidates[:n_slots]]

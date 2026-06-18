@@ -34,6 +34,10 @@ from agent.recommendations import generate_recommendations, load_recommendations
 from agent.fundamentals_fetcher import fetch_fundamentals, load_fundamentals, save_fundamentals
 from agent.dashboard       import build_dashboard
 from agent.report_generator import generate_report
+from agent.ranking_engine import (
+    rank_focus_stocks, evaluate_focus_refresh,
+    update_watchlist_signals, load_watchlist_signals, save_watchlist_signals,
+)
 
 
 def run():
@@ -116,6 +120,7 @@ def run():
 
     # ── PAPER TRADING ──────────────────────────────────────────────────────────
     elif phase in ("paper_trading", "alerting"):
+        # Fetch data for ALL focus stocks every session for full paper trading
         fresh  = fetch_stock_data(focus, session=session)
         merged = merge_stock_data(load_stock_data(), fresh)
         save_stock_data(merged)
@@ -128,8 +133,9 @@ def run():
         decisions = load_decisions()
         nd        = load_news()
         book      = load_book()
+        fund      = load_fundamentals()
 
-        # Build analyst opinions
+        # Build analyst opinions for ALL 15 focus stocks (paper trade all of them)
         opinions = []
         for ticker in focus:
             sent = nd.get(ticker, {}).get("latest", {})
@@ -137,6 +143,7 @@ def run():
             opinions.append(op)
             if op["signal"] != "WATCH":
                 decisions = record_decision(decisions, op, op["signal"], f"paper {session}")
+        print(f"[paper] Analysed {len(opinions)} focus stocks this {session} session")
 
         # Gate trading on market health
         if not market_health.get("trade_allowed", True):
@@ -164,6 +171,19 @@ def run():
 
         if session == "preclose":
             state = advance_session(state, session)
+
+            # ── Dynamic focus refresh: promote/demote stocks ──────────────────
+            _maybe_refresh_focus(state, merged, patterns, nd, fund, book, market_health)
+            # Reload state after potential focus update
+            state = load_state()
+            focus = state.get("focus_stocks", focus)
+
+            # ── Refresh fundamentals weekly ───────────────────────────────────
+            if state.get("day", 1) % 5 == 0:
+                fund_data = fetch_fundamentals(focus)
+                save_fundamentals(fund_data)
+
+            # ── Alert when paper trading is validated ─────────────────────────
             if is_ready_to_alert(stats) and not state.get("alert_sent"):
                 state["alert_sent"] = True
                 state = add_brain_note(
@@ -172,8 +192,10 @@ def run():
                     f"over {stats['total']} trades — user recommendations ready"
                 )
                 state = set_phase(state, "alerting")
+
             if phase == "alerting":
-                state = set_phase(state, "paper_trading", "Continuing post-alert")
+                # Keep running indefinitely — never stop after alerting
+                state = add_brain_note(state, "Continuing live paper trading post-alert (perpetual mode)")
 
         save_state(state)
 
@@ -183,6 +205,44 @@ def run():
     print(f"\n[done] {session} complete. Phase={state['phase']} Day={state['day']}\n")
 
 
+def _maybe_refresh_focus(state, stock_data, patterns, news_data, fund, book, market_health):
+    """Evaluate whether any focus stocks should be promoted/demoted. Runs every preclose."""
+    focus = state.get("focus_stocks", [])
+    if not focus:
+        return
+
+    # Only refresh after first 3 paper trading days to have enough data
+    paper_days = state.get("day", 1) - (
+        state.get("exploration_days_used", 5) + state.get("analysis_days_used", 10)
+    )
+    if paper_days < 3:
+        return
+
+    ranked = rank_focus_stocks(focus, stock_data, patterns, news_data, fund, book, market_health)
+
+    # Update watchlist scores for non-focus stocks
+    wl = load_watchlist_signals()
+    wl = update_watchlist_signals(wl, stock_data, patterns, news_data, fund, focus)
+    save_watchlist_signals(wl)
+
+    new_focus, promoted, demoted = evaluate_focus_refresh(
+        focus, ranked, stock_data, patterns, news_data, fund, wl
+    )
+
+    if promoted or demoted:
+        state["focus_stocks"] = new_focus
+        prev = state.get("dropped_stocks", [])
+        state["dropped_stocks"] = list(set(prev + demoted))[-30:]
+        note = f"Focus refresh — promoted: {[t.replace('.NS','') for t in promoted]} | " \
+               f"demoted: {[t.replace('.NS','') for t in demoted]}"
+        state = add_brain_note(state, note)
+        # Fetch fundamentals for any newly promoted stocks
+        if promoted:
+            new_fund = fetch_fundamentals(promoted)
+            save_fundamentals(new_fund)
+        save_state(state)
+
+
 def _refresh_outputs(state: dict, market_health: dict, session: str) -> None:
     try:
         sd   = load_stock_data()
@@ -190,16 +250,20 @@ def _refresh_outputs(state: dict, market_health: dict, session: str) -> None:
         pats = load_patterns()
         decs = load_decisions()
         nd   = load_news()
+        fund = load_fundamentals()
 
-        # Regenerate recommendations every preclose session
+        # Regenerate recommendations every preclose session or on first run
         if session == "preclose" or not os.path.exists("brain/recommendations.json"):
-            fund = load_fundamentals()
             recs = generate_recommendations(state, sd, pats, nd, book, market_health, fund)
             generate_report(state, sd, pats, nd, book)
         else:
             recs = load_recommendations()
 
-        build_dashboard(state, sd, book, pats, decs, nd, market_health, recs, fund)
+        # Always rebuild ranking (runs fast, no API calls)
+        focus = state.get("focus_stocks", [])
+        ranked = rank_focus_stocks(focus, sd, pats, nd, fund, book, market_health) if focus else []
+
+        build_dashboard(state, sd, book, pats, decs, nd, market_health, recs, fund, ranked)
 
     except Exception as e:
         import traceback

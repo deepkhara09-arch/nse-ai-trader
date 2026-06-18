@@ -1,37 +1,38 @@
 """
 Market Health Monitor — checks Nifty, VIX, and sector strength each session.
+Uses Stooq for indices (no IP blocking). VIX falls back to a fixed default
+since Stooq doesn't carry India VIX.
 """
 
 import json
 import os
 import time
 from datetime import date, timedelta
+from io import StringIO
 from typing import Dict
 
 import pandas as pd
 import requests
-import yfinance as yf
 
 from agent.config import BRAIN_DIR
 
-# Browser-spoofed session — same approach as data_fetcher
-_SESSION = requests.Session()
-_SESSION.headers.update({
-    "User-Agent": (
-        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-        "AppleWebKit/537.36 (KHTML, like Gecko) "
-        "Chrome/124.0.0.0 Safari/537.36"
-    ),
-    "Accept":          "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-    "Accept-Language": "en-US,en;q=0.9",
-    "Accept-Encoding": "gzip, deflate, br",
-    "Connection":      "keep-alive",
+_STOOQ = requests.Session()
+_STOOQ.headers.update({
+    "User-Agent": "Mozilla/5.0 (compatible; NSEBot/1.0)",
+    "Accept":     "text/html,application/xhtml+xml,*/*",
 })
 
+# Stooq tickers for NSE indices and sector ETFs
+# Stooq carries Nifty 50 as ^NF and BankNifty as ^BNF
+# Sector ETFs: use their .IN stooq format
+INDICES = {
+    "nifty":      "^NF",
+    "bank_nifty": "^BNF",
+}
 SECTOR_PROXIES = {
-    "IT":     "ITBEES.NS",
-    "Pharma": "PHARMABEES.NS",
-    "Metal":  "METALBEEES.NS",
+    "IT":     "ITBEES.IN",
+    "Pharma": "PHARMABEES.IN",
+    "Metal":  "METALBEEES.IN",
 }
 
 VIX_NORMAL  = 15.0
@@ -45,9 +46,9 @@ def assess_market(session: str = "morning") -> dict:
     health = {
         "date":          date.today().isoformat(),
         "session":       session,
-        "nifty":         _fetch_index("^NSEI"),
-        "vix":           _fetch_vix(),
-        "bank_nifty":    _fetch_index("^NSEBANK"),
+        "nifty":         _fetch_index("^NF", "^NSEI"),
+        "vix":           {"value": 15.0, "level": "normal"},   # Stooq has no India VIX
+        "bank_nifty":    _fetch_index("^BNF", "^NSEBANK"),
         "sectors":       _sector_strength(),
         "market_mood":   "neutral",
         "trade_allowed": True,
@@ -95,27 +96,37 @@ def load_market_health() -> dict:
         with open(MARKET_STATE_FILE) as f:
             return json.load(f)
     return {"trade_allowed": True, "market_mood": "neutral", "warnings": [],
-            "nifty": {}, "vix": {}, "sectors": {}, "leading_sectors": []}
+            "nifty": {}, "vix": {"value": 15.0, "level": "normal"},
+            "sectors": {}, "leading_sectors": []}
 
 
-def _ticker(symbol: str) -> yf.Ticker:
-    return yf.Ticker(symbol, session=_SESSION)
-
-
-def _fetch_index(symbol: str) -> dict:
+def _stooq_fetch(stooq_sym: str, days: int = 25) -> pd.DataFrame:
+    today = date.today()
+    start = (today - timedelta(days=days)).strftime("%Y%m%d")
+    end   = today.strftime("%Y%m%d")
+    url   = (
+        f"https://stooq.com/q/d/l/"
+        f"?s={stooq_sym.lower()}"
+        f"&d1={start}&d2={end}&i=d"
+    )
     try:
-        today = date.today()
-        t = _ticker(symbol)
-        df = t.history(
-            start=(today - timedelta(days=20)).isoformat(),
-            end=today.isoformat(),
-            interval="1d",
-            auto_adjust=True,
-        )
+        r = _STOOQ.get(url, timeout=15)
+        if r.status_code != 200 or len(r.text) < 50:
+            return pd.DataFrame()
+        df = pd.read_csv(StringIO(r.text), parse_dates=["Date"], index_col="Date")
+        df = df.sort_index()
+        df.columns = [c.strip().title() for c in df.columns]
+        return df
+    except Exception as e:
+        print(f"[market/stooq] {stooq_sym}: {e}")
+        return pd.DataFrame()
+
+
+def _fetch_index(stooq_sym: str, label: str = "") -> dict:
+    try:
+        df = _stooq_fetch(stooq_sym)
         if df is None or df.empty or len(df) < 2:
             return {}
-        if isinstance(df.columns, pd.MultiIndex):
-            df.columns = df.columns.get_level_values(0)
         close   = df["Close"].squeeze()
         today_c = float(close.iloc[-1])
         prev_c  = float(close.iloc[-2])
@@ -131,40 +142,24 @@ def _fetch_index(symbol: str) -> dict:
             return "sideways"
 
         return {
-            "symbol":         symbol,
+            "symbol":         label or stooq_sym,
             "value":          round(today_c, 2),
             "day_change_pct": round(day_chg, 2),
             "trend_5d":       trend(5),
             "trend_20d":      trend(20),
         }
     except Exception as e:
-        print(f"[market] {symbol}: {e}")
+        print(f"[market] {stooq_sym}: {e}")
         return {}
-
-
-def _fetch_vix() -> dict:
-    try:
-        t  = _ticker("^INDIAVIX")
-        df = t.history(period="5d", interval="1d", auto_adjust=True)
-        if df is None or df.empty:
-            return {"value": 15.0, "level": "normal"}
-        if isinstance(df.columns, pd.MultiIndex):
-            df.columns = df.columns.get_level_values(0)
-        val   = float(df["Close"].squeeze().iloc[-1])
-        level = "danger" if val >= VIX_DANGER else ("caution" if val >= VIX_CAUTION else "normal")
-        return {"value": round(val, 2), "level": level}
-    except Exception as e:
-        print(f"[market] VIX: {e}")
-        return {"value": 15.0, "level": "normal"}
 
 
 def _sector_strength() -> Dict:
     result = {}
     for name, sym in SECTOR_PROXIES.items():
-        d = _fetch_index(sym)
+        d = _fetch_index(sym, name)
         if d:
             result[name] = d
-        time.sleep(0.5)
+        time.sleep(0.3)
     return result
 
 

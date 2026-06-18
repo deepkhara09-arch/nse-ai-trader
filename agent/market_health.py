@@ -1,39 +1,18 @@
 """
 Market Health Monitor — checks Nifty, VIX, and sector strength each session.
-Uses Stooq for indices (no IP blocking). VIX falls back to a fixed default
-since Stooq doesn't carry India VIX.
+Uses the same Yahoo Finance v8 API (with crumb) that data_fetcher uses.
+Imported from data_fetcher to share the crumb/session state.
 """
 
 import json
 import os
 import time
 from datetime import date, timedelta
-from io import StringIO
 from typing import Dict
 
 import pandas as pd
-import requests
 
 from agent.config import BRAIN_DIR
-
-_STOOQ = requests.Session()
-_STOOQ.headers.update({
-    "User-Agent": "Mozilla/5.0 (compatible; NSEBot/1.0)",
-    "Accept":     "text/html,application/xhtml+xml,*/*",
-})
-
-# Stooq tickers for NSE indices and sector ETFs
-# Stooq carries Nifty 50 as ^NF and BankNifty as ^BNF
-# Sector ETFs: use their .IN stooq format
-INDICES = {
-    "nifty":      "^NF",
-    "bank_nifty": "^BNF",
-}
-SECTOR_PROXIES = {
-    "IT":     "ITBEES.IN",
-    "Pharma": "PHARMABEES.IN",
-    "Metal":  "METALBEEES.IN",
-}
 
 VIX_NORMAL  = 15.0
 VIX_CAUTION = 20.0
@@ -41,15 +20,28 @@ VIX_DANGER  = 25.0
 
 MARKET_STATE_FILE = "brain/market_health.json"
 
+SECTOR_PROXIES = {
+    "IT":     "ITBEES.NS",
+    "Pharma": "PHARMABEES.NS",
+    "Metal":  "METALBEEES.NS",
+}
+
 
 def assess_market(session: str = "morning") -> dict:
+    # Import here to share the crumb/session already warmed up by data_fetcher
+    from agent.data_fetcher import _download_daily
+
+    today = date.today()
+    start = (today - timedelta(days=25)).isoformat()
+    end   = today.isoformat()
+
     health = {
-        "date":          date.today().isoformat(),
+        "date":          today.isoformat(),
         "session":       session,
-        "nifty":         _fetch_index("^NF", "^NSEI"),
-        "vix":           {"value": 15.0, "level": "normal"},   # Stooq has no India VIX
-        "bank_nifty":    _fetch_index("^BNF", "^NSEBANK"),
-        "sectors":       _sector_strength(),
+        "nifty":         _fetch_index("^NSEI",     start, end, _download_daily),
+        "vix":           _fetch_vix(_download_daily),
+        "bank_nifty":    _fetch_index("^NSEBANK",  start, end, _download_daily),
+        "sectors":       _sector_strength(start, end, _download_daily),
         "market_mood":   "neutral",
         "trade_allowed": True,
         "warnings":      [],
@@ -100,37 +92,13 @@ def load_market_health() -> dict:
             "sectors": {}, "leading_sectors": []}
 
 
-def _stooq_fetch(stooq_sym: str, days: int = 25) -> pd.DataFrame:
-    today = date.today()
-    start = (today - timedelta(days=days)).strftime("%Y%m%d")
-    end   = today.strftime("%Y%m%d")
-    url   = (
-        f"https://stooq.com/q/d/l/"
-        f"?s={stooq_sym.lower()}"
-        f"&d1={start}&d2={end}&i=d"
-    )
+def _fetch_index(symbol: str, start: str, end: str, downloader) -> dict:
     try:
-        r = _STOOQ.get(url, timeout=15)
-        if r.status_code != 200 or len(r.text) < 50:
-            return pd.DataFrame()
-        df = pd.read_csv(StringIO(r.text))
-        df.columns = [c.strip() for c in df.columns]
-        date_col = next((c for c in df.columns if c.lower() == "date"), None)
-        if date_col is None:
-            return pd.DataFrame()
-        df[date_col] = pd.to_datetime(df[date_col])
-        df = df.set_index(date_col).sort_index()
-        df.columns = [c.strip().title() for c in df.columns]
-        return df
-    except Exception:
-        return pd.DataFrame()
-
-
-def _fetch_index(stooq_sym: str, label: str = "") -> dict:
-    try:
-        df = _stooq_fetch(stooq_sym)
+        df = downloader(symbol, start=start, end=end)
         if df is None or df.empty or len(df) < 2:
             return {}
+        if isinstance(df.columns, pd.MultiIndex):
+            df.columns = df.columns.get_level_values(0)
         close   = df["Close"].squeeze()
         today_c = float(close.iloc[-1])
         prev_c  = float(close.iloc[-2])
@@ -146,21 +114,36 @@ def _fetch_index(stooq_sym: str, label: str = "") -> dict:
             return "sideways"
 
         return {
-            "symbol":         label or stooq_sym,
+            "symbol":         symbol,
             "value":          round(today_c, 2),
             "day_change_pct": round(day_chg, 2),
             "trend_5d":       trend(5),
             "trend_20d":      trend(20),
         }
     except Exception as e:
-        print(f"[market] {stooq_sym}: {e}")
+        print(f"[market] {symbol}: {e}")
         return {}
 
 
-def _sector_strength() -> Dict:
+def _fetch_vix(downloader) -> dict:
+    try:
+        today = date.today()
+        df = downloader("^INDIAVIX", start=(today - timedelta(days=7)).isoformat(), end=today.isoformat())
+        if df is None or df.empty:
+            return {"value": 15.0, "level": "normal"}
+        if isinstance(df.columns, pd.MultiIndex):
+            df.columns = df.columns.get_level_values(0)
+        val   = float(df["Close"].squeeze().iloc[-1])
+        level = "danger" if val >= VIX_DANGER else ("caution" if val >= VIX_CAUTION else "normal")
+        return {"value": round(val, 2), "level": level}
+    except Exception:
+        return {"value": 15.0, "level": "normal"}
+
+
+def _sector_strength(start: str, end: str, downloader) -> Dict:
     result = {}
     for name, sym in SECTOR_PROXIES.items():
-        d = _fetch_index(sym, name)
+        d = _fetch_index(sym, start, end, downloader)
         if d:
             result[name] = d
         time.sleep(0.3)

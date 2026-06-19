@@ -64,6 +64,10 @@ def run():
           f"stocks={health['stocks_tracked']} trades={health['closed_trades']}\n")
 
     state = load_state()
+    # The cron-provided SESSION env var is the source of truth for which session
+    # is running. Record it so the dashboard always shows the actual current session
+    # (the day counter is still only incremented at preclose via advance_session).
+    state["session"] = session
     phase = state["phase"]
     day   = state["day"]
     focus = state.get("focus_stocks", [])
@@ -101,15 +105,13 @@ def run():
                 fund_data = fetch_fundamentals([t for t, _ in top])
                 save_fundamentals(fund_data)
                 state = set_phase(state, "analysis", note)
-                # Kick off background cohort exploration immediately
-                state["background_cohort"] = {
-                    "day":        1,
-                    "start_date": date.today().isoformat(),
-                    "ready":      False,
-                    "candidates": [],
-                }
-        else:
-            state = advance_session(state, session) if session == "midday" else state
+                # Background batch pipeline is auto-seeded by _tick_background_cohorts()
+                # on the first analysis preclose (it creates batch #1 when the list is
+                # empty), so no manual init is needed here.
+                state.setdefault("background_batches", [])
+        # Non-preclose sessions: nothing to advance — the day counter only bumps at
+        # preclose, and the session pointer is already set from the SESSION env var
+        # at the top of run().
 
         save_state(state)
 
@@ -326,27 +328,37 @@ def _tick_background_cohorts(state: dict, session: str) -> None:
         })
         print(f"[cohort] Started background batch #{new_id}")
 
-    # ── Tick every non-ready batch ────────────────────────────────────────────
-    for batch in batches:
-        if batch.get("ready"):
-            continue
+    active_batches = [b for b in batches if not b.get("ready")]
+    if not active_batches:
+        # Nothing to tick — still refresh the legacy pointer below
+        state["background_batches"] = batches[-5:]
+        ready = [b for b in batches if b.get("ready")]
+        state["background_cohort"] = ready[-1] if ready else None
+        return
 
+    # ── Fetch the full universe ONCE and share it across all active batches ────
+    # All batches explore the same data; they differ only by their own day counter
+    # and scoring window. Fetching per-batch would mean 99 stocks × N batches of
+    # HTTP + intraday calls every preclose — enough to blow the Actions timeout.
+    fetch_ok = True
+    try:
+        fresh_bg  = fetch_stock_data(NSE_UNIVERSE, session="preclose")
+        existing  = load_stock_data()
+        merged_bg = merge_stock_data(existing, fresh_bg)
+        for ticker in NSE_UNIVERSE:
+            if ticker not in focus and ticker in fresh_bg:
+                existing[ticker] = merged_bg[ticker]
+        save_stock_data(existing)
+    except Exception as e:
+        print(f"[cohort] Shared universe fetch error (non-fatal): {e}")
+        fetch_ok = False
+
+    # ── Advance every non-ready batch's day counter ───────────────────────────
+    for batch in active_batches:
         batch_day = batch.get("day", 0)
         batch_id  = batch.get("id", "?")
-        print(f"[cohort] Batch #{batch_id} exploration day {batch_day}/{EXPLORATION_DAYS}")
-
-        try:
-            fresh_bg  = fetch_stock_data(NSE_UNIVERSE, session="preclose")
-            existing  = load_stock_data()
-            merged_bg = merge_stock_data(existing, fresh_bg)
-            for ticker in NSE_UNIVERSE:
-                if ticker not in focus and ticker in fresh_bg:
-                    existing[ticker] = merged_bg[ticker]
-            save_stock_data(existing)
-        except Exception as e:
-            print(f"[cohort] Batch #{batch_id} fetch error (non-fatal): {e}")
-            batch["day"] = batch_day + 1
-            continue
+        print(f"[cohort] Batch #{batch_id} exploration day {batch_day}/{EXPLORATION_DAYS}"
+              f"{' (fetch failed)' if not fetch_ok else ''}")
 
         batch_day += 1
         batch["day"] = batch_day
@@ -378,10 +390,10 @@ def _maybe_refresh_focus(state, stock_data, patterns, news_data, fund, book, mar
     if not focus:
         return
 
-    # Only refresh after first 3 paper trading days to have enough data
-    paper_days = state.get("day", 1) - (
-        state.get("exploration_days_used", 5) + state.get("analysis_days_used", 10)
-    )
+    # Only refresh after first 3 paper trading days to have enough data.
+    # Phase boundaries come from config (EXPLORATION_DAYS + ANALYSIS_DAYS), not
+    # hardcoded values, so this stays correct when those are tuned.
+    paper_days = state.get("day", 1) - (EXPLORATION_DAYS + ANALYSIS_DAYS)
     if paper_days < 3:
         return
 

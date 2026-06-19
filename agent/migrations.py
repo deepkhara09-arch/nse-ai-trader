@@ -33,7 +33,7 @@ RANK_HISTORY_FILE    = "brain/rank_history.json"
 WATCHLIST_FILE       = "brain/watchlist_signals.json"
 DECISIONS_FILE       = "brain/decisions.json"
 
-CURRENT_SCHEMA_VERSION = 4   # bump this when you add a new migration
+CURRENT_SCHEMA_VERSION = 5   # bump this when you add a new migration
 
 
 # ── Migration functions ────────────────────────────────────────────────────────
@@ -178,12 +178,42 @@ def _migrate_v4(state, stock_data, patterns, book, fundamentals, decisions):
     return state, stock_data, patterns, book, fundamentals, decisions
 
 
+def _migrate_v5(state, stock_data, patterns, book, fundamentals, decisions):
+    """
+    v5: LLM coach + entry-time market context.
+
+    - Backfills entry_market stub on every open position so the coach can later
+      reason about the conditions a trade was opened in. Closed trades from before
+      this version simply won't have it — the coach handles its absence gracefully.
+    - Ensures background_batches list exists on state (replaces legacy
+      background_cohort single-dict pipeline).
+    - Adds candle_sequence stub to stock latest dicts (populated by data_fetcher).
+
+    Coach memory (brain/coach_memory.json) is a standalone file with its own
+    loader defaults, so it needs no migration here.
+    """
+    for pos in book.get("open_positions", []):
+        pos.setdefault("entry_market", {
+            "nifty_trend": "?", "vix": 15.0, "mood": "neutral", "regime": "?",
+        })
+
+    state.setdefault("background_batches", [])
+
+    for ticker, entry in stock_data.items():
+        if "latest" not in entry:
+            continue
+        entry["latest"].setdefault("candle_sequence", [])
+
+    return state, stock_data, patterns, book, fundamentals, decisions
+
+
 # ── Registry: maps schema version → migration that brings data UP to that version
 MIGRATIONS = {
     1: _migrate_v1,
     2: _migrate_v2,
     3: _migrate_v3,
     4: _migrate_v4,
+    5: _migrate_v5,
 }
 
 

@@ -1670,13 +1670,14 @@ def _section_trades(book) -> str:
 </div>"""
     rows = ""
     for t in trades[:60]:
-        pnl = t.get("pnl", 0)
+        pnl    = t.get("pnl", 0)
+        action = t.get("action", "?")
         rows += (
             f'<tr>'
             f'<td class="muted">{t.get("close_date","?")}</td>'
-            f'<td><strong>{t["ticker"].replace(".NS","")}</strong></td>'
-            f'<td><span class="pill {"pill-green" if t["action"]=="BUY" else "pill-red"}">{t["action"]}</span></td>'
-            f'<td>&#8377;{t["entry"]:.2f}</td>'
+            f'<td><strong>{t.get("ticker","?").replace(".NS","")}</strong></td>'
+            f'<td><span class="pill {"pill-green" if action=="BUY" else "pill-red"}">{action}</span></td>'
+            f'<td>&#8377;{t.get("entry",0):.2f}</td>'
             f'<td>&#8377;{t.get("exit_price",0):.2f}</td>'
             f'<td class="{"green" if pnl>=0 else "red"}">&#8377;{pnl:+.0f}</td>'
             f'<td class="{"green" if pnl>=0 else "red"}">{t.get("pnl_pct",0):+.1f}%</td>'

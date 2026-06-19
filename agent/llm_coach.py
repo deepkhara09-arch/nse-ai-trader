@@ -54,7 +54,8 @@ def run_coach(closed_trades: List[dict], patterns: dict, market_health: dict) ->
     lessons  = []
 
     # ── 1. Review today's closed trades ──────────────────────────────────────
-    today_trades = [t for t in closed_trades if t.get("exit_date") == today]
+    # Trade records use "close_date" (set in paper_trader._check_exits).
+    today_trades = [t for t in closed_trades if t.get("close_date") == today]
     if today_trades:
         print(f"[coach] Reviewing {len(today_trades)} trade(s) closed today")
         for batch in _batch(today_trades, MAX_TRADES_PER_CALL):
@@ -170,17 +171,27 @@ def _review_trades(trades: List[dict], market_health: dict, api_key: str) -> Lis
         ticker   = t.get("ticker", "?").replace(".NS", "")
         outcome  = "WIN" if t.get("pnl", 0) > 0 else "LOSS"
         pnl_pct  = t.get("pnl_pct", 0)
-        entry    = t.get("entry_price", 0)
+        entry    = t.get("entry", 0)
         exit_p   = t.get("exit_price", 0)
         reason   = t.get("exit_reason", "unknown")
-        patterns = t.get("patterns_at_entry", [])
+        patterns = t.get("patterns", [])
         style    = t.get("style", "intraday")
-        session  = t.get("session", "morning")
+        session  = t.get("open_session", t.get("close_session", "morning"))
 
+        em       = t.get("entry_market", {})
+        entry_ctx = ""
+        if em:
+            entry_ctx = (
+                f"  Market when opened: Nifty {em.get('nifty_trend','?')}, "
+                f"VIX {em.get('vix','?')}, mood {em.get('mood','?')}, "
+                f"regime {em.get('regime','?')}\n"
+            )
+        open_days = t.get("open_days", "?")
         trade_text += (
             f"\nTrade {i}: {ticker} | {outcome} {pnl_pct:+.2f}%\n"
-            f"  Style: {style} | Session: {session}\n"
+            f"  Style: {style} | Session: {session} | Held: {open_days} day(s)\n"
             f"  Entry: ₹{entry:.2f} → Exit: ₹{exit_p:.2f} | Reason: {reason}\n"
+            f"{entry_ctx}"
             f"  Signals at entry: {', '.join(patterns[:6]) if patterns else 'none recorded'}\n"
         )
 
@@ -315,7 +326,7 @@ def _structural_suggestions(closed_trades: List[dict], patterns: dict, market_he
     # Summarise pattern performance
     pat_summary = {}
     for t in closed_trades:
-        for p in t.get("patterns_at_entry", []):
+        for p in t.get("patterns", []):
             if p not in pat_summary:
                 pat_summary[p] = {"wins": 0, "total": 0}
             pat_summary[p]["total"] += 1

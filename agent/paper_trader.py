@@ -162,6 +162,14 @@ def _try_open_positions(book: dict, opinions: List[dict], patterns_db: Dict, ses
             "unrealized_pnl":0.0,
             "max_held_days": 10 if op.get("style") == "swing" else 1,
             "vol_regime_pct":vol_max_pct,
+            # Capture market context AT ENTRY so the coach can later explain whether
+            # the outcome was driven by the setup or by the conditions at open time.
+            "entry_market": {
+                "nifty_trend": (market_health or {}).get("nifty", {}).get("trend_5d", "?"),
+                "vix":         vix_val,
+                "mood":        (market_health or {}).get("market_mood", "neutral"),
+                "regime":      (market_health or {}).get("intraday_regime", "?"),
+            },
         }
         book["open_positions"].append(pos)
         book["capital"] -= pos["invested"]
@@ -439,8 +447,10 @@ def compute_stats(book: dict) -> dict:
     if not trades:
         return {"total": 0, "wins": 0, "losses": 0, "win_rate": 0.0,
                 "total_pnl": 0.0, "avg_win": 0.0, "avg_loss": 0.0, "expectancy": 0.0}
-    wins   = [t for t in trades if t["won"]]
-    losses = [t for t in trades if not t["won"]]
+    # Use .get with a pnl fallback so a legacy/partial record without "won"
+    # never raises — defensiveness for older brain data.
+    wins   = [t for t in trades if t.get("won", t.get("pnl", 0) > 0)]
+    losses = [t for t in trades if not t.get("won", t.get("pnl", 0) > 0)]
     wr     = len(wins) / len(trades)
     avg_w  = sum(t["pnl"] for t in wins)   / max(len(wins),   1)
     avg_l  = sum(t["pnl"] for t in losses) / max(len(losses), 1)

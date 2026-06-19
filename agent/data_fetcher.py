@@ -376,9 +376,19 @@ def _fetch_one(ticker: str, session: str) -> dict:
         # touched first when both are breached in the same session.
         latest["candle_sequence"]  = intraday["candle_sequence"]
         latest["intraday_fetched"] = True
+        # ── Keep "close" current ─────────────────────────────────────────────
+        # Free daily feeds (Stooq/Yahoo) post the final daily bar with a lag, so
+        # right after a session their last bar is YESTERDAY's close. The live
+        # 5-min candle capture already has today's real price (and after close,
+        # its last bar IS today's closing price). Preserve the true daily-bar
+        # close separately, then make "close" reflect the freshest price so the
+        # whole system (scoring, recs, dashboard) is in sync with reality.
+        latest["daily_bar_close"]  = latest.get("close", 0)
+        latest["close"]            = intraday["current_price"]
+        latest["price_is_live"]    = True
         print(f"[intraday] {ticker}: {intraday['candle_count']} candles "
               f"| H={intraday['day_high']} L={intraday['day_low']} "
-              f"last={intraday['current_price']}")
+              f"last={intraday['current_price']} (daily_bar={latest['daily_bar_close']})")
     else:
         # Market closed or candles unavailable — fall back to NSE quote for
         # at least current price + day H/L, with no sequence info
@@ -394,8 +404,13 @@ def _fetch_one(ticker: str, session: str) -> dict:
                 latest["day_low"]     = quote["day_low"]
             if quote.get("day_open", 0) > 0:
                 latest["day_open"]   = quote["day_open"]
+            # NSE quote is fresher than a lagging daily bar — sync "close" to it
+            latest["daily_bar_close"] = latest.get("close", 0)
+            latest["close"]           = quote["current_price"]
+            latest["price_is_live"]   = True
         else:
             latest["current_price"] = latest.get("close", 0)
+            latest["price_is_live"] = False
         latest["candle_sequence"]  = []
         latest["intraday_fetched"] = False
 

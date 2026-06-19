@@ -207,6 +207,87 @@ def merge_stock_data(existing: Dict, fresh: Dict) -> Dict:
 
 # ── Internal ──────────────────────────────────────────────────────────────────
 
+def _fetch_intraday_candles(ticker: str) -> list:
+    """
+    Fetch today's 5-minute OHLCV candles from Yahoo Finance v8 API.
+    Returns a list of dicts [{time, open, high, low, close, volume}, ...]
+    ordered oldest → newest, covering today's session so far.
+    Free, no extra auth beyond the crumb already used for daily data.
+    """
+    crumb = _yf_crumb()
+    if not crumb:
+        return []
+    try:
+        import time as _time
+        # Fetch last 1 day at 5-minute resolution — gives today's candles
+        now_ts  = int(_time.time())
+        ago_ts  = now_ts - 86400   # 24h back is enough to cover today's session
+        url = (
+            f"https://query1.finance.yahoo.com/v8/finance/chart/{ticker}"
+            f"?period1={ago_ts}&period2={now_ts}&interval=5m"
+            f"&crumb={crumb}"
+        )
+        r = _YF.get(url, timeout=15)
+        if r.status_code != 200:
+            return []
+        data   = r.json()
+        result = data.get("chart", {}).get("result", [])
+        if not result:
+            return []
+        res        = result[0]
+        timestamps = res.get("timestamp", [])
+        q          = res.get("indicators", {}).get("quote", [{}])[0]
+        opens   = q.get("open",   [])
+        highs   = q.get("high",   [])
+        lows    = q.get("low",    [])
+        closes  = q.get("close",  [])
+        volumes = q.get("volume", [])
+
+        candles = []
+        for i, ts in enumerate(timestamps):
+            o = opens[i]  if i < len(opens)   else None
+            h = highs[i]  if i < len(highs)   else None
+            l = lows[i]   if i < len(lows)    else None
+            c = closes[i] if i < len(closes)  else None
+            v = volumes[i]if i < len(volumes) else 0
+            if None in (o, h, l, c):
+                continue
+            candles.append({
+                "time":   ts,           # unix timestamp
+                "open":   round(float(o), 2),
+                "high":   round(float(h), 2),
+                "low":    round(float(l), 2),
+                "close":  round(float(c), 2),
+                "volume": int(v or 0),
+            })
+        return candles
+    except Exception as e:
+        print(f"[intraday] {ticker} candles failed: {e}")
+        return []
+
+
+def _summarise_intraday_candles(candles: list) -> dict:
+    """
+    From a list of 5-min candles, derive:
+    - current_price  : last candle's close
+    - day_open       : first candle's open
+    - day_high       : max of all highs
+    - day_low        : min of all lows
+    - candle_sequence: list of (high, low) in order — used to determine
+                       which level (target or stop) was touched first
+    """
+    if not candles:
+        return {}
+    return {
+        "current_price":   candles[-1]["close"],
+        "day_open":        candles[0]["open"],
+        "day_high":        max(c["high"] for c in candles),
+        "day_low":         min(c["low"]  for c in candles),
+        "candle_sequence": [(c["high"], c["low"]) for c in candles],
+        "candle_count":    len(candles),
+    }
+
+
 def _fetch_intraday_quote(symbol: str) -> dict:
     """
     Fetch live intraday quote from NSE's free quote API.
@@ -276,30 +357,46 @@ def _fetch_one(ticker: str, session: str) -> dict:
     prev_bar  = _bar_dict(df_daily, -2)
     prev2_bar = _bar_dict(df_daily, -3)
 
-    # ── Live intraday quote: overwrite high/low/close with today's real values ──
-    # Stooq/YF daily bars only include completed days, so during market hours
-    # `latest.high` and `latest.low` are yesterday's values — useless for
-    # detecting if today's price has hit a target or stop loss.
-    # NSE's free quote API gives us today's running high/low/last price.
-    symbol = ticker.replace(".NS", "")
-    intraday = _fetch_intraday_quote(symbol)
+    # ── Live intraday candles: today's 5-min bars from Yahoo Finance ─────────────
+    # Stooq/YF daily bars only include completed days. During market hours,
+    # latest.high/low = yesterday's values. We need today's actual candle data
+    # to know if target or stop was touched, and in what order.
+    candles  = _fetch_intraday_candles(ticker)
+    intraday = _summarise_intraday_candles(candles)
+
     if intraday and intraday.get("current_price", 0) > 0:
-        # Only inject if market is open (current_price differs from prev_close)
-        cp = intraday["current_price"]
-        latest["current_price"] = cp
-        # day_high/day_low are today's running extremes — what we need for exit detection
-        if intraday.get("day_high", 0) > 0:
-            latest["session_high"] = intraday["day_high"]
-            latest["day_high"]     = intraday["day_high"]
-        if intraday.get("day_low", 0) > 0:
-            latest["session_low"] = intraday["day_low"]
-            latest["day_low"]     = intraday["day_low"]
-        if intraday.get("day_open", 0) > 0:
-            latest["day_open"] = intraday["day_open"]
+        latest["current_price"]    = intraday["current_price"]
+        latest["session_high"]     = intraday["day_high"]
+        latest["day_high"]         = intraday["day_high"]
+        latest["session_low"]      = intraday["day_low"]
+        latest["day_low"]          = intraday["day_low"]
+        latest["day_open"]         = intraday["day_open"]
+        # candle_sequence: list of (high, low) per 5-min bar in chronological order.
+        # _check_exits uses this to determine which level — target or stop — was
+        # touched first when both are breached in the same session.
+        latest["candle_sequence"]  = intraday["candle_sequence"]
         latest["intraday_fetched"] = True
+        print(f"[intraday] {ticker}: {intraday['candle_count']} candles "
+              f"| H={intraday['day_high']} L={intraday['day_low']} "
+              f"last={intraday['current_price']}")
     else:
-        # Market closed or API unavailable — use daily close as best proxy
-        latest["current_price"]    = latest.get("close", 0)
+        # Market closed or candles unavailable — fall back to NSE quote for
+        # at least current price + day H/L, with no sequence info
+        symbol   = ticker.replace(".NS", "")
+        quote    = _fetch_intraday_quote(symbol)
+        if quote and quote.get("current_price", 0) > 0:
+            latest["current_price"] = quote["current_price"]
+            if quote.get("day_high", 0) > 0:
+                latest["session_high"] = quote["day_high"]
+                latest["day_high"]     = quote["day_high"]
+            if quote.get("day_low", 0) > 0:
+                latest["session_low"] = quote["day_low"]
+                latest["day_low"]     = quote["day_low"]
+            if quote.get("day_open", 0) > 0:
+                latest["day_open"]   = quote["day_open"]
+        else:
+            latest["current_price"] = latest.get("close", 0)
+        latest["candle_sequence"]  = []
         latest["intraday_fetched"] = False
 
     return {
@@ -309,6 +406,7 @@ def _fetch_one(ticker: str, session: str) -> dict:
         "latest":             latest,
         "daily":              daily_summary,
         "intraday":           intraday,
+        "intraday_candles":   candles[-20:],   # keep last 20 bars for dashboard sparkline
         "price_history_60d":  daily_summary.get("price_history_60d", []),
         "volume_history_20d": daily_summary.get("volume_history_20d", []),
         "prev_bar":           prev_bar,

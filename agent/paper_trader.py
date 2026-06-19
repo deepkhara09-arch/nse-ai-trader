@@ -214,6 +214,56 @@ def _update_trailing_stops(book: dict, stock_data: Dict) -> dict:
     return book
 
 
+def _resolve_hit_order(pos: dict, target: float, stop_loss: float, data: dict):
+    """
+    When both target and stop loss are touched in the same session, determine
+    which was hit first by walking through the 5-minute candle sequence.
+
+    Each candle in candle_sequence is (high, low) in chronological order.
+    For a BUY: target is hit when high >= target, stop when low <= stop_loss.
+    For a SELL: target is hit when low <= target, stop when high >= stop_loss.
+
+    Returns (exit_price, exit_reason).
+    Falls back to open-price proximity heuristic if candle data unavailable.
+    """
+    action   = pos["action"]
+    sequence = data.get("candle_sequence", [])   # list of (high, low) per 5-min bar
+
+    if sequence:
+        for (bar_high, bar_low) in sequence:
+            if action == "BUY":
+                # Check stop first within same bar — if low <= stop, stop came first
+                # unless the open of this bar is already above target
+                stop_hit   = bar_low  <= stop_loss
+                target_hit = bar_high >= target
+                if stop_hit and target_hit:
+                    # Both in same 5-min bar — use open-price proximity for this bar
+                    # (we don't have sub-bar tick data, this is the finest we can go)
+                    pass   # fall through to proximity check below
+                elif stop_hit:
+                    return stop_loss, "stop_hit"
+                elif target_hit:
+                    return target, "target_hit"
+            else:  # SELL
+                stop_hit   = bar_high >= stop_loss
+                target_hit = bar_low  <= target
+                if stop_hit and target_hit:
+                    pass
+                elif stop_hit:
+                    return stop_loss, "stop_hit"
+                elif target_hit:
+                    return target, "target_hit"
+
+    # Fallback: both hit in same 5-min bar or no candle data —
+    # use day open proximity as best remaining heuristic
+    day_open       = data.get("day_open") or data.get("open") or pos["entry"]
+    dist_to_target = abs(day_open - target)
+    dist_to_stop   = abs(day_open - stop_loss)
+    if dist_to_stop <= dist_to_target:
+        return stop_loss, "stop_hit"
+    return target, "target_hit"
+
+
 def _check_exits(book: dict, stock_data: Dict, session: str, patterns_db: Dict):
     still_open = []
     today = date.today().isoformat()
@@ -243,19 +293,11 @@ def _check_exits(book: dict, stock_data: Dict, session: str, patterns_db: Dict):
 
         if hit_target or hit_stop or expired:
             if hit_target and hit_stop:
-                # Both levels touched in the same session — infer which came first.
-                # Use today's open as the starting point: whichever level is closer
-                # to the open was almost certainly reached first.
-                day_open = data.get("day_open") or data.get("open") or pos["entry"]
-                dist_to_target = abs(day_open - target_)
-                dist_to_stop   = abs(day_open - stop_loss_)
-                if dist_to_stop <= dist_to_target:
-                    # Stop was closer to open → stop hit first
-                    exit_price  = stop_loss_
-                    exit_reason = "stop_hit"
-                else:
-                    exit_price  = target_
-                    exit_reason = "target_hit"
+                # Both levels touched in the same session.
+                # Use the 5-min candle sequence to find which bar first breached each level.
+                exit_price, exit_reason = _resolve_hit_order(
+                    pos, target_, stop_loss_, data
+                )
             elif hit_target:
                 exit_price = target_
                 exit_reason = "target_hit"

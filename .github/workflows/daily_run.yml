@@ -2,10 +2,12 @@ name: NSE AI Trader
 
 on:
   # ── 3 sessions per weekday (IST = UTC+5:30) ──────────────────────────────
+  # Times shifted off round hours to avoid GitHub runner queue congestion.
+  # GitHub cron is best-effort — can delay 15-60min. Off-peak minutes help.
   schedule:
-    - cron: "0 4 * * 1-5"    # 09:30 IST — market open
-    - cron: "30 6 * * 1-5"   # 12:00 IST — midday review
-    - cron: "30 9 * * 1-5"   # 15:00 IST — pre-close decisions
+    - cron: "7 4 * * 1-5"    # ~09:37 IST — market open
+    - cron: "17 6 * * 1-5"   # ~11:47 IST — midday review
+    - cron: "47 9 * * 1-5"   # ~15:17 IST — pre-close decisions
 
   # Manual trigger (you can also pick a session from the UI)
   workflow_dispatch:

@@ -157,7 +157,7 @@ def run():
             state = advance_session(state, session)
 
             # Tick background cohort during analysis too
-            _tick_background_cohort(state, session)
+            _tick_background_cohorts(state, session)
 
             if state["day"] > EXPLORATION_DAYS + ANALYSIS_DAYS:
                 state = set_phase(state, "paper_trading", "Analysis done — starting paper trades")
@@ -214,7 +214,7 @@ def run():
         # Session trading
         if session == "morning":
             book, patterns = morning_session(book, tradeable_opinions, patterns, market_health=market_health)
-        elif session == "midday":
+        elif session in ("midday", "afternoon"):
             book, patterns = midday_session(book, tradeable_opinions, merged, patterns, market_health=market_health)
         elif session == "preclose":
             book, patterns = preclose_session(book, tradeable_opinions, merged, patterns, market_health=market_health)
@@ -247,7 +247,7 @@ def run():
                 save_fundamentals(fund_data)
 
             # ── Parallel background cohort exploration ────────────────────────
-            _tick_background_cohort(state, session)
+            _tick_background_cohorts(state, session)
 
             # ── Alert when paper trading is validated ─────────────────────────
             if is_ready_to_alert(stats, book) and not state.get("alert_sent"):
@@ -271,59 +271,95 @@ def run():
     print(f"\n[done] {session} complete. Phase={state['phase']} Day={state['day']}\n")
 
 
-def _tick_background_cohort(state: dict, session: str) -> None:
+def _tick_background_cohorts(state: dict, session: str) -> None:
     """
-    Parallel exploration pipeline: while focus stocks are in analysis/paper_trading,
-    fetch data for ALL 99 universe stocks in the background each preclose.
-    After EXPLORATION_DAYS ticks, score them and store candidates so the next
-    focus refresh can pull from a freshly ranked cohort rather than stale data.
+    Perpetual parallel exploration pipeline.
+
+    Design: the moment batch N completes its first day of exploration, batch N+1
+    starts immediately. Multiple batches can be in-flight simultaneously.
+    Each batch independently explores the full NSE universe for EXPLORATION_DAYS,
+    then scores and marks itself ready.  When a focus refresh happens, the most
+    recently completed batch's candidates feed the promotion pool.
+
+    State stores batches as a list:  state["background_batches"] = [
+        {"id": 1, "day": 5, "start_date": "...", "ready": True,  "candidates": [...]},
+        {"id": 2, "day": 2, "start_date": "...", "ready": False, "candidates": []},
+    ]
     """
     if session != "preclose":
         return
 
-    cohort = state.get("background_cohort")
-    if cohort is None or cohort.get("ready"):
-        return
+    focus     = state.get("focus_stocks", [])
+    batches   = state.setdefault("background_batches", [])
 
-    cohort_day = cohort.get("day", 1)
-    print(f"[cohort] Background exploration day {cohort_day}/{EXPLORATION_DAYS}")
+    # ── Start a new batch if: no batches exist, OR the newest batch finished day 1
+    should_start_new = (
+        not batches or
+        batches[-1].get("day", 0) >= 1   # newest batch has passed day 1 → spawn next
+    )
+    # But don't spawn another if newest is still on day 0 (just created)
+    if batches and batches[-1].get("day", 0) == 0:
+        should_start_new = False
+    # Cap at 3 concurrent in-flight batches to avoid overloading the runner
+    active_count = sum(1 for b in batches if not b.get("ready"))
+    if active_count >= 3:
+        should_start_new = False
 
-    try:
-        # Fetch a lightweight snapshot for all universe stocks
-        fresh_bg = fetch_stock_data(NSE_UNIVERSE, session="preclose")
-        existing = load_stock_data()
-        merged_bg = merge_stock_data(existing, fresh_bg)
-        # Don't overwrite full stock_data — only update fields not in focus
-        focus = state.get("focus_stocks", [])
-        for ticker in NSE_UNIVERSE:
-            if ticker not in focus and ticker in fresh_bg:
-                existing[ticker] = merged_bg[ticker]
-        save_stock_data(existing)
-    except Exception as e:
-        print(f"[cohort] Data fetch error (non-fatal): {e}")
-        cohort["day"] = cohort_day + 1
-        state["background_cohort"] = cohort
-        return
+    if should_start_new:
+        new_id = (batches[-1]["id"] + 1) if batches else 1
+        batches.append({
+            "id":         new_id,
+            "day":        0,
+            "start_date": date.today().isoformat(),
+            "ready":      False,
+            "candidates": [],
+        })
+        print(f"[cohort] Started background batch #{new_id}")
 
-    cohort_day += 1
-    if cohort_day > EXPLORATION_DAYS:
-        # Score all universe stocks and pick top FOCUS_STOCK_COUNT candidates
+    # ── Tick every non-ready batch ────────────────────────────────────────────
+    for batch in batches:
+        if batch.get("ready"):
+            continue
+
+        batch_day = batch.get("day", 0)
+        batch_id  = batch.get("id", "?")
+        print(f"[cohort] Batch #{batch_id} exploration day {batch_day}/{EXPLORATION_DAYS}")
+
         try:
-            sd   = load_stock_data()
-            nd   = load_news()
-            sent = {t: v.get("latest", {}) for t, v in nd.items()}
-            top  = select_focus_stocks(sd, sent, FOCUS_STOCK_COUNT * 2)  # keep 2x as reserve
-            cohort["candidates"]  = [t for t, _ in top]
-            cohort["scored_date"] = date.today().isoformat()
-            cohort["ready"]       = True
-            scores_str = " | ".join(f"{t.replace('.NS','')}" for t, _ in top[:10])
-            print(f"[cohort] Background cohort ready: {scores_str} ...")
-            state = add_brain_note(state, f"Background cohort scored — {len(top)} candidates ready for next focus refresh")
+            fresh_bg  = fetch_stock_data(NSE_UNIVERSE, session="preclose")
+            existing  = load_stock_data()
+            merged_bg = merge_stock_data(existing, fresh_bg)
+            for ticker in NSE_UNIVERSE:
+                if ticker not in focus and ticker in fresh_bg:
+                    existing[ticker] = merged_bg[ticker]
+            save_stock_data(existing)
         except Exception as e:
-            print(f"[cohort] Scoring error (non-fatal): {e}")
+            print(f"[cohort] Batch #{batch_id} fetch error (non-fatal): {e}")
+            batch["day"] = batch_day + 1
+            continue
 
-    cohort["day"] = cohort_day
-    state["background_cohort"] = cohort
+        batch_day += 1
+        batch["day"] = batch_day
+
+        if batch_day >= EXPLORATION_DAYS:
+            try:
+                sd   = load_stock_data()
+                nd   = load_news()
+                sent = {t: v.get("latest", {}) for t, v in nd.items()}
+                top  = select_focus_stocks(sd, sent, FOCUS_STOCK_COUNT * 2)
+                batch["candidates"]  = [t for t, _ in top]
+                batch["scored_date"] = date.today().isoformat()
+                batch["ready"]       = True
+                print(f"[cohort] Batch #{batch_id} ready — {len(top)} candidates scored")
+                state = add_brain_note(state, f"Cohort batch #{batch_id} complete — {len(top)} candidates ready")
+            except Exception as e:
+                print(f"[cohort] Batch #{batch_id} scoring error: {e}")
+
+    # Keep only last 5 batches (older ones are stale)
+    state["background_batches"] = batches[-5:]
+    # Legacy compat: expose most-recent ready batch as background_cohort
+    ready = [b for b in batches if b.get("ready")]
+    state["background_cohort"] = ready[-1] if ready else None
 
 
 def _maybe_refresh_focus(state, stock_data, patterns, news_data, fund, book, market_health):

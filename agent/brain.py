@@ -192,6 +192,154 @@ def detect_all_patterns(d: dict, prev: dict = None, prev2: dict = None) -> List[
         if close > wk52_high * 1.001 and vol_rel > 1.5:
             patterns.append("52w_breakout")         # strong breakout above annual high
 
+    # ── Supertrend (ATR-based trend filter — most used in Indian retail trading) ─
+    # Supertrend = close ± (multiplier × ATR). Bull when close > upper band.
+    atr_val    = d.get("atr", close * 0.02)
+    st_mult    = 3.0
+    st_upper   = d.get("supertrend_upper", close + st_mult * atr_val)
+    st_lower   = d.get("supertrend_lower", close - st_mult * atr_val)
+    st_bull    = d.get("supertrend_bull")   # pre-computed if available
+    if st_bull is None:
+        st_bull = close > (close - st_mult * atr_val)   # approximate
+    if st_bull and bullish_candle:
+        patterns.append("supertrend_bullish")
+    elif not st_bull and bearish_candle:
+        patterns.append("supertrend_bearish")
+
+    # ── Pivot Points (daily — standard S1/S2/R1/R2 that every Indian trader uses) ─
+    # Classic pivot: P = (H+L+C)/3, R1 = 2P-L, S1 = 2P-L (prev day bar)
+    if prev:
+        p_h = prev.get("high",  close)
+        p_l = prev.get("low",   close)
+        p_c = prev.get("close", close)
+        pivot  = (p_h + p_l + p_c) / 3
+        r1 = 2 * pivot - p_l
+        r2 = pivot + (p_h - p_l)
+        s1 = 2 * pivot - p_h
+        s2 = pivot - (p_h - p_l)
+        tol = atr_val * 0.3   # within 30% ATR = "near" the level
+
+        if close > r1 - tol and vol_rel > 1.2:
+            patterns.append("pivot_r1_breakout")
+        if close > r2 - tol and vol_rel > 1.5:
+            patterns.append("pivot_r2_breakout")
+        if abs(close - s1) < tol and bullish_candle:
+            patterns.append("pivot_s1_bounce")
+        if abs(close - s2) < tol and bullish_candle:
+            patterns.append("pivot_s2_bounce")
+        if abs(close - pivot) < tol:
+            patterns.append("pivot_point_test")
+        if close < s1 + tol and bearish_candle:
+            patterns.append("pivot_s1_breakdown")
+
+    # ── ADX — trend strength (avoids false signals in sideways markets) ──────────
+    # ADX > 25 = trending, < 20 = ranging. We proxy from price volatility.
+    adx_proxy = d.get("adx", None)
+    if adx_proxy is None:
+        # Use 10-day volatility as proxy: high vol + directional = trending
+        vol_10d = d.get("volatility_10d", 1.5)
+        adx_proxy = min(50, vol_10d * 15)   # rough proxy
+    if adx_proxy > 25 and bullish_candle:
+        patterns.append("adx_strong_trend_up")
+    elif adx_proxy > 25 and bearish_candle:
+        patterns.append("adx_strong_trend_down")
+    elif adx_proxy < 18:
+        patterns.append("adx_ranging_market")   # reduce conviction in all signals
+
+    # ── Stochastic RSI (faster RSI-of-RSI — catches turns earlier) ───────────────
+    stoch_rsi = d.get("stoch_rsi", None)
+    if stoch_rsi is None and len(rh := d.get("rsi_history", [])) >= 5:
+        # Compute %K from RSI history: (current - min) / (max - min)
+        rsi_min = min(rh[-5:])
+        rsi_max = max(rh[-5:])
+        stoch_rsi = (rsi - rsi_min) / (rsi_max - rsi_min + 1e-9) * 100
+    if stoch_rsi is not None:
+        if stoch_rsi < 20 and bullish_candle:
+            patterns.append("stoch_rsi_oversold_reversal")
+        elif stoch_rsi > 80 and bearish_candle:
+            patterns.append("stoch_rsi_overbought_reversal")
+        if prev:
+            prev_rh = prev.get("rsi_history", [])
+            if prev_rh and len(prev_rh) >= 5:
+                prev_srsi = (prev.get("rsi", 50) - min(prev_rh[-5:])) / (max(prev_rh[-5:]) - min(prev_rh[-5:]) + 1e-9) * 100
+                if prev_srsi < 20 and stoch_rsi >= 20:
+                    patterns.append("stoch_rsi_bullish_cross")
+                elif prev_srsi > 80 and stoch_rsi <= 80:
+                    patterns.append("stoch_rsi_bearish_cross")
+
+    # ── MACD divergence (separate from crossover — reversal signal) ───────────────
+    macd_h    = d.get("macd_hist", 0)
+    ph_list   = d.get("price_history", [])
+    macd_hist_h = d.get("macd_hist_history", [])
+    if len(ph_list) >= 5 and len(macd_hist_h) >= 5:
+        price_falling = ph_list[-1] < ph_list[-3]
+        macd_rising   = macd_hist_h[-1] > macd_hist_h[-3]
+        price_rising  = ph_list[-1] > ph_list[-3]
+        macd_falling  = macd_hist_h[-1] < macd_hist_h[-3]
+        if price_falling and macd_rising and macd_h < 0:
+            patterns.append("macd_bullish_divergence")   # strong buy
+        if price_rising and macd_falling and macd_h > 0:
+            patterns.append("macd_bearish_divergence")   # strong sell
+
+    # ── Ichimoku Cloud signals (Kumo) ─────────────────────────────────────────────
+    # We proxy with a simple tenkan/kijun from price history if full Ichimoku not computed
+    if len(ph_list) >= 26:
+        tenkan  = (max(ph_list[-9:])  + min(ph_list[-9:]))  / 2   # 9-period midpoint
+        kijun   = (max(ph_list[-26:]) + min(ph_list[-26:])) / 2   # 26-period midpoint
+        senkou_a = (tenkan + kijun) / 2                             # cloud top/bottom
+        senkou_b = (max(ph_list[-52:]) + min(ph_list[-52:])) / 2 if len(ph_list) >= 52 else kijun
+        cloud_top    = max(senkou_a, senkou_b)
+        cloud_bottom = min(senkou_a, senkou_b)
+        if close > cloud_top and tenkan > kijun:
+            patterns.append("ichimoku_bullish_kumo")   # price above cloud, TK bullish
+        elif close < cloud_bottom and tenkan < kijun:
+            patterns.append("ichimoku_bearish_kumo")   # price below cloud, TK bearish
+        elif cloud_bottom <= close <= cloud_top:
+            patterns.append("ichimoku_inside_kumo")    # inside cloud = uncertainty
+        if prev and close > tenkan and prev.get("close", close) <= tenkan:
+            patterns.append("ichimoku_tk_cross_bullish")
+        if prev and close < tenkan and prev.get("close", close) >= tenkan:
+            patterns.append("ichimoku_tk_cross_bearish")
+
+    # ── Price-Volume Trend (PVT) proxy ────────────────────────────────────────────
+    # PVT = cumulative (close_change_pct × volume). Rising PVT with price = confirmed.
+    vol_hist = d.get("volume_history_20d", [])
+    if len(ph_list) >= 5 and len(vol_hist) >= 5:
+        pvt_changes = []
+        for i in range(1, min(5, len(ph_list), len(vol_hist))):
+            pct = (ph_list[-i] - ph_list[-i-1]) / (ph_list[-i-1] + 1e-9)
+            pvt_changes.append(pct * vol_hist[-i])
+        pvt_trend = sum(pvt_changes)
+        if pvt_trend > 0 and bullish_candle:
+            patterns.append("pvt_accumulation")
+        elif pvt_trend < 0 and bearish_candle:
+            patterns.append("pvt_distribution")
+
+    # ── VWAP deviation (institutional reference — critical for Indian markets) ────
+    vwap      = d.get("vwap", None)
+    if vwap and vwap > 0 and close > 0:
+        vwap_dev_pct = (close - vwap) / vwap * 100
+        if vwap_dev_pct > 0.5 and bullish_candle:
+            patterns.append("above_vwap_strong")
+        elif vwap_dev_pct < -0.5 and bearish_candle:
+            patterns.append("below_vwap_strong")
+        elif abs(vwap_dev_pct) < 0.15:
+            patterns.append("vwap_magnet")   # price hugging VWAP = indecision
+
+    # ── Gap analysis (overnight gaps are critical in Indian markets) ───────────────
+    if prev:
+        prev_close = prev.get("close", close)
+        if prev_close > 0:
+            gap_pct = (open_ - prev_close) / prev_close * 100
+            if gap_pct > 1.5 and bullish_candle:
+                patterns.append("gap_up_continuation")
+            elif gap_pct < -1.5 and bearish_candle:
+                patterns.append("gap_down_continuation")
+            elif gap_pct > 1.0 and bearish_candle:
+                patterns.append("gap_up_reversal")   # fade the gap
+            elif gap_pct < -1.0 and bullish_candle:
+                patterns.append("gap_down_reversal")  # buy the gap-down
+
     # ── Intraday alignment (from 5-min data) ─────────────────────────────────
     if intra_trend == "bullish" and above_vwap is True:
         patterns.append("intraday_bullish_vwap")
@@ -452,6 +600,86 @@ def analyse_stock(
         buy_score += 0.5; buy_reasons.append(f"Sector tailwind (momentum={sector_momentum:.2f})")
     elif sector_momentum < -0.3 and buy_score > sell_score:
         buy_score -= 0.5; buy_reasons.append(f"Sector headwind (momentum={sector_momentum:.2f})")
+
+    # ── Supertrend ────────────────────────────────────────────────────────────────
+    if "supertrend_bullish" in patterns:
+        buy_score += 1.5; buy_reasons.append("Supertrend bullish — price above trend band")
+    if "supertrend_bearish" in patterns:
+        sell_score += 1.5; sell_reasons.append("Supertrend bearish — price below trend band")
+
+    # ── ADX trend strength filter ─────────────────────────────────────────────────
+    if "adx_ranging_market" in patterns:
+        # Reduce conviction when market is sideways — all signals less reliable
+        buy_score  *= 0.75; sell_score *= 0.75
+        buy_reasons.append("ADX low — market ranging, signals less reliable")
+    if "adx_strong_trend_up" in patterns:
+        buy_score += 1.0; buy_reasons.append("ADX strong trend — directional move confirmed")
+    if "adx_strong_trend_down" in patterns:
+        sell_score += 1.0; sell_reasons.append("ADX strong trend — downside momentum confirmed")
+
+    # ── Pivot Points ──────────────────────────────────────────────────────────────
+    if "pivot_r1_breakout" in patterns:
+        buy_score += 1.5; buy_reasons.append("Broke above Pivot R1 with volume — bullish")
+    if "pivot_r2_breakout" in patterns:
+        buy_score += 2.0; buy_reasons.append("Broke above Pivot R2 — strong momentum")
+    if "pivot_s1_bounce" in patterns:
+        buy_score += 1.5; buy_reasons.append("Bounced off Pivot S1 support")
+    if "pivot_s2_bounce" in patterns:
+        buy_score += 2.0; buy_reasons.append("Bounced off Pivot S2 — strong support held")
+    if "pivot_s1_breakdown" in patterns:
+        sell_score += 1.5; sell_reasons.append("Broke below Pivot S1 support — bearish")
+    if "pivot_point_test" in patterns and buy_score > sell_score:
+        buy_score += 0.5; buy_reasons.append("Testing pivot point — decision zone")
+
+    # ── Stochastic RSI ────────────────────────────────────────────────────────────
+    if "stoch_rsi_bullish_cross" in patterns:
+        buy_score += 1.5; buy_reasons.append("StochRSI crossed above oversold — early buy signal")
+    if "stoch_rsi_bearish_cross" in patterns:
+        sell_score += 1.5; sell_reasons.append("StochRSI crossed below overbought — early sell signal")
+    if "stoch_rsi_oversold_reversal" in patterns:
+        buy_score += 1.0; buy_reasons.append("StochRSI oversold with bullish candle — reversal")
+    if "stoch_rsi_overbought_reversal" in patterns:
+        sell_score += 1.0; sell_reasons.append("StochRSI overbought with bearish candle — reversal")
+
+    # ── MACD divergence ───────────────────────────────────────────────────────────
+    if "macd_bullish_divergence" in patterns:
+        buy_score += 2.0; buy_reasons.append("MACD bullish divergence — momentum reversing despite lower price")
+    if "macd_bearish_divergence" in patterns:
+        sell_score += 2.0; sell_reasons.append("MACD bearish divergence — momentum fading despite higher price")
+
+    # ── Ichimoku Cloud ────────────────────────────────────────────────────────────
+    if "ichimoku_bullish_kumo" in patterns:
+        buy_score += 2.0; buy_reasons.append("Above Ichimoku cloud with bullish TK cross — strong uptrend")
+    if "ichimoku_bearish_kumo" in patterns:
+        sell_score += 2.0; sell_reasons.append("Below Ichimoku cloud — strong downtrend confirmed")
+    if "ichimoku_tk_cross_bullish" in patterns:
+        buy_score += 1.5; buy_reasons.append("Ichimoku TK bullish cross — momentum turning up")
+    if "ichimoku_tk_cross_bearish" in patterns:
+        sell_score += 1.5; sell_reasons.append("Ichimoku TK bearish cross — momentum turning down")
+    if "ichimoku_inside_kumo" in patterns:
+        buy_score  *= 0.85; sell_score *= 0.85   # inside cloud = uncertainty, reduce all conviction
+
+    # ── Price-Volume Trend ────────────────────────────────────────────────────────
+    if "pvt_accumulation" in patterns:
+        buy_score += 1.0; buy_reasons.append("PVT accumulation — volume-weighted buying pressure building")
+    if "pvt_distribution" in patterns:
+        sell_score += 1.0; sell_reasons.append("PVT distribution — volume-weighted selling pressure")
+
+    # ── VWAP deviation ────────────────────────────────────────────────────────────
+    if "above_vwap_strong" in patterns:
+        buy_score += 1.0; buy_reasons.append("Holding above VWAP — institutional support")
+    if "below_vwap_strong" in patterns:
+        sell_score += 1.0; sell_reasons.append("Below VWAP — institutional selling pressure")
+
+    # ── Gap analysis (Indian market specific — gaps set intraday sentiment) ────────
+    if "gap_up_continuation" in patterns:
+        buy_score += 1.5; buy_reasons.append("Gap up with bullish follow-through — momentum")
+    if "gap_down_reversal" in patterns:
+        buy_score += 1.0; buy_reasons.append("Gap down reversal — buyers stepping in at lower open")
+    if "gap_down_continuation" in patterns:
+        sell_score += 1.5; sell_reasons.append("Gap down continuation — selling pressure from open")
+    if "gap_up_reversal" in patterns:
+        sell_score += 1.0; sell_reasons.append("Gap up fade — selling into strength")
 
     # ── Delivery % bonus/penalty (institutional conviction signal) ─────────────
     delivery_signal = d.get("delivery_signal", "neutral")

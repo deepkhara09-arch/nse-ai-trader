@@ -1,7 +1,6 @@
 """
-Market Health Monitor — checks Nifty, VIX, and sector strength each session.
-Uses the same Yahoo Finance v8 API (with crumb) that data_fetcher uses.
-Imported from data_fetcher to share the crumb/session state.
+Market Health Monitor — checks Nifty, VIX, Bank Nifty, sector strength,
+advance-decline ratio, and intraday regime each session.
 """
 
 import json
@@ -21,75 +20,165 @@ VIX_DANGER  = 25.0
 MARKET_STATE_FILE = "brain/market_health.json"
 
 SECTOR_PROXIES = {
-    "IT":     "ITBEES.NS",
-    "Pharma": "PHARMABEES.NS",
-    "Metal":  "METALBEEES.NS",
+    "IT":      "ITBEES.NS",
+    "Pharma":  "PHARMABEES.NS",
+    "Metal":   "METALBEEES.NS",
+    "Bank":    "BANKBEES.NS",
+    "Energy":  "ENERGYBEES.NS",
+    "Infra":   "INFRABEES.NS",
 }
 
 
 def assess_market(session: str = "morning") -> dict:
-    # Import here to share the crumb/session already warmed up by data_fetcher
-    from agent.data_fetcher import _download_daily
+    from agent.data_fetcher import _download_daily, _fetch_intraday_candles
 
     today = date.today()
-    start = (today - timedelta(days=25)).isoformat()
+    start = (today - timedelta(days=60)).isoformat()   # extended to 60d for VIX percentile
     end   = today.isoformat()
+
+    nifty      = _fetch_index("^NSEI",    start, end, _download_daily)
+    bank_nifty = _fetch_index("^NSEBANK", start, end, _download_daily)
+    vix_data   = _fetch_vix_with_percentile(_download_daily)
+    sectors    = _sector_strength(start, end, _download_daily)
 
     health = {
         "date":          today.isoformat(),
         "session":       session,
-        "nifty":         _fetch_index("^NSEI",     start, end, _download_daily),
-        "vix":           _fetch_vix(_download_daily),
-        "bank_nifty":    _fetch_index("^NSEBANK",  start, end, _download_daily),
-        "sectors":       _sector_strength(start, end, _download_daily),
+        "nifty":         nifty,
+        "vix":           vix_data,
+        "bank_nifty":    bank_nifty,
+        "sectors":       sectors,
         "market_mood":   "neutral",
         "trade_allowed": True,
         "warnings":      [],
         "leading_sectors": [],
+        "market_regime": "normal",   # normal / caution / danger / sideways
     }
 
-    vix_val = health["vix"].get("value", 15)
-    nifty   = health["nifty"]
-    n_trend = nifty.get("trend_5d", "sideways")
-    n_chg   = nifty.get("day_change_pct", 0)
-    warnings = []
-    trade_ok = True
+    vix_val    = vix_data.get("value", 15)
+    vix_pct    = vix_data.get("percentile_30d", 50)   # how extreme is today's VIX?
+    n_trend    = nifty.get("trend_5d", "sideways")
+    n_chg      = nifty.get("day_change_pct", 0)
+    bn_trend   = bank_nifty.get("trend_5d", "sideways")
+    bn_chg     = bank_nifty.get("day_change_pct", 0)
+    warnings   = []
+    trade_ok   = True
 
+    # ── VIX regime ────────────────────────────────────────────────────────────
     if vix_val >= VIX_DANGER:
-        warnings.append(f"India VIX={vix_val:.1f} DANGER — no new trades today")
+        warnings.append(f"India VIX={vix_val:.1f} DANGER (top {100-vix_pct:.0f}% of last 30d) — no new trades")
         trade_ok = False
+        health["market_regime"] = "danger"
     elif vix_val >= VIX_CAUTION:
-        warnings.append(f"India VIX={vix_val:.1f} elevated — reduce position size")
+        warnings.append(f"India VIX={vix_val:.1f} elevated — reduce position size by 25%")
+        health["market_regime"] = "caution"
+    elif vix_pct >= 80:
+        warnings.append(f"VIX={vix_val:.1f} at {vix_pct:.0f}th percentile vs last 30d — unusually high stress")
 
+    # ── Nifty trend ───────────────────────────────────────────────────────────
     if n_trend in ("strong_down", "down"):
         warnings.append(f"Nifty in downtrend ({n_trend}) — only high-confidence BUY signals")
     if n_chg < -1.5:
         warnings.append(f"Nifty down {n_chg:.1f}% today — likely institutional selling")
+    if n_chg > 1.5:
+        health["nifty"]["intraday_surge"] = True   # flag strong up day
 
-    leading = [s for s, d in health["sectors"].items()
-               if d.get("trend_5d") in ("up", "strong_up")]
-    health["leading_sectors"] = leading
+    # ── Bank Nifty divergence (Indian market barometer) ───────────────────────
+    # Bank Nifty diverging from Nifty = unreliable broad market signal
+    bn_diverging = False
+    if n_trend in ("up", "strong_up") and bn_trend in ("down", "strong_down"):
+        warnings.append("Bank Nifty diverging DOWN while Nifty up — rally may be narrow/unreliable")
+        bn_diverging = True
+    elif n_trend in ("down", "strong_down") and bn_trend in ("up", "strong_up"):
+        warnings.append("Bank Nifty outperforming while Nifty down — banking sector resilient")
+        bn_diverging = True
+    # Large Bank Nifty move amplifies overall market stress
+    if abs(bn_chg) > abs(n_chg) * 1.5 and abs(bn_chg) > 1.5:
+        warnings.append(f"Bank Nifty move ({bn_chg:+.1f}%) outpacing Nifty — high banking sector volatility")
+    health["bank_nifty"]["diverging"] = bn_diverging
 
-    if not warnings and n_trend in ("up", "strong_up") and vix_val < VIX_CAUTION:
+    # ── Sector breadth (how many sectors are participating) ───────────────────
+    up_sectors   = [s for s, d in sectors.items() if d.get("trend_5d") in ("up",   "strong_up")]
+    down_sectors = [s for s, d in sectors.items() if d.get("trend_5d") in ("down", "strong_down")]
+    breadth = len(up_sectors) / max(len(sectors), 1)
+    health["sector_breadth"]   = round(breadth, 2)
+    health["leading_sectors"]  = up_sectors
+    health["lagging_sectors"]  = down_sectors
+
+    if n_trend in ("up", "strong_up") and breadth < 0.4:
+        warnings.append(f"Narrow rally — only {len(up_sectors)}/{len(sectors)} sectors up. Fragile move.")
+    if breadth >= 0.75:
+        health["broad_market_strength"] = True   # wide participation = strong
+
+    # ── Intraday regime from live Nifty candles ────────────────────────────────
+    try:
+        nifty_candles = _fetch_intraday_candles("^NSEI")
+        if nifty_candles and len(nifty_candles) >= 3:
+            regime = _intraday_regime(nifty_candles)
+            health["intraday_regime"] = regime
+            if regime == "trending_up":
+                health["market_mood"] = "bullish"
+            elif regime == "trending_down":
+                warnings.append("Nifty in intraday downtrend — avoid new longs this session")
+            elif regime == "choppy":
+                warnings.append("Nifty choppy intraday — wait for cleaner setups")
+    except Exception:
+        health["intraday_regime"] = "unknown"
+
+    # ── Overall mood ──────────────────────────────────────────────────────────
+    if not warnings and n_trend in ("up", "strong_up") and vix_val < VIX_CAUTION and breadth >= 0.5:
         health["market_mood"] = "bullish"
     elif len(warnings) >= 2 or not trade_ok:
         health["market_mood"] = "bearish"
+    elif health["market_regime"] == "sideways" or "choppy" in health.get("intraday_regime", ""):
+        health["market_mood"] = "neutral"
 
     health["trade_allowed"] = trade_ok
-    health["warnings"] = warnings
+    health["warnings"]      = warnings
 
     _save(health)
     _print_health(health)
     return health
 
 
+def _intraday_regime(candles: list) -> str:
+    """Classify today's Nifty intraday price action from 5-min candles."""
+    if len(candles) < 4:
+        return "unknown"
+    closes    = [c["close"] for c in candles]
+    highs     = [c["high"]  for c in candles]
+    lows      = [c["low"]   for c in candles]
+    first_c   = closes[0]
+    last_c    = closes[-1]
+    total_rng = max(highs) - min(lows)
+    net_move  = abs(last_c - first_c)
+    # Direction ratio: how much of the range is net move?
+    directional = net_move / (total_rng + 1e-9)
+
+    # Count up vs down candles in last 6 bars
+    recent = candles[-6:]
+    up_bars   = sum(1 for c in recent if c["close"] > c["open"])
+    down_bars = sum(1 for c in recent if c["close"] < c["open"])
+
+    if directional > 0.55 and up_bars >= 4 and last_c > first_c:
+        return "trending_up"
+    if directional > 0.55 and down_bars >= 4 and last_c < first_c:
+        return "trending_down"
+    if directional < 0.3:
+        return "choppy"
+    return "mixed"
+
+
 def load_market_health() -> dict:
     if os.path.exists(MARKET_STATE_FILE):
         with open(MARKET_STATE_FILE) as f:
             return json.load(f)
-    return {"trade_allowed": True, "market_mood": "neutral", "warnings": [],
-            "nifty": {}, "vix": {"value": 15.0, "level": "normal"},
-            "sectors": {}, "leading_sectors": []}
+    return {
+        "trade_allowed": True, "market_mood": "neutral", "warnings": [],
+        "nifty": {}, "vix": {"value": 15.0, "level": "normal"},
+        "bank_nifty": {}, "sectors": {}, "leading_sectors": [],
+        "market_regime": "normal", "intraday_regime": "unknown",
+    }
 
 
 def _fetch_index(symbol: str, start: str, end: str, downloader) -> dict:
@@ -113,31 +202,48 @@ def _fetch_index(symbol: str, start: str, end: str, downloader) -> dict:
             if p < -0.8: return "down"
             return "sideways"
 
+        # ATH proximity
+        high_60d = float(df["High"].tail(60).max()) if "High" in df.columns else today_c
+        ath_pct  = round((today_c - high_60d) / high_60d * 100, 2)
+
         return {
             "symbol":         symbol,
             "value":          round(today_c, 2),
             "day_change_pct": round(day_chg, 2),
             "trend_5d":       trend(5),
             "trend_20d":      trend(20),
+            "ath_pct_60d":    ath_pct,   # how far from 60d high
         }
     except Exception as e:
         print(f"[market] {symbol}: {e}")
         return {}
 
 
-def _fetch_vix(downloader) -> dict:
+def _fetch_vix_with_percentile(downloader) -> dict:
+    """Fetch VIX with 30-day percentile context to judge if current level is extreme."""
     try:
         today = date.today()
-        df = downloader("^INDIAVIX", start=(today - timedelta(days=7)).isoformat(), end=today.isoformat())
+        df = downloader("^INDIAVIX", start=(today - timedelta(days=45)).isoformat(), end=today.isoformat())
         if df is None or df.empty:
-            return {"value": 15.0, "level": "normal"}
+            return {"value": 15.0, "level": "normal", "percentile_30d": 50}
         if isinstance(df.columns, pd.MultiIndex):
             df.columns = df.columns.get_level_values(0)
-        val   = float(df["Close"].squeeze().iloc[-1])
-        level = "danger" if val >= VIX_DANGER else ("caution" if val >= VIX_CAUTION else "normal")
-        return {"value": round(val, 2), "level": level}
+        closes = df["Close"].squeeze()
+        val    = float(closes.iloc[-1])
+        level  = "danger" if val >= VIX_DANGER else ("caution" if val >= VIX_CAUTION else "normal")
+
+        # 30-day percentile: what % of last 30 days had VIX below today's?
+        last30 = closes.tail(30).tolist()
+        pct    = round(sum(1 for v in last30 if v < val) / max(len(last30), 1) * 100, 0)
+
+        return {
+            "value":         round(val, 2),
+            "level":         level,
+            "percentile_30d": pct,
+            "avg_30d":       round(sum(last30) / len(last30), 2) if last30 else val,
+        }
     except Exception:
-        return {"value": 15.0, "level": "normal"}
+        return {"value": 15.0, "level": "normal", "percentile_30d": 50}
 
 
 def _sector_strength(start: str, end: str, downloader) -> Dict:
@@ -146,7 +252,7 @@ def _sector_strength(start: str, end: str, downloader) -> Dict:
         d = _fetch_index(sym, start, end, downloader)
         if d:
             result[name] = d
-        time.sleep(0.3)
+        time.sleep(0.2)
     return result
 
 
@@ -158,9 +264,12 @@ def _save(health: dict) -> None:
 
 def _print_health(h: dict) -> None:
     nifty = h.get("nifty", {})
+    bn    = h.get("bank_nifty", {})
     vix   = h.get("vix", {})
     print(f"[market] Nifty={nifty.get('value','?')} ({nifty.get('day_change_pct',0):+.2f}%) "
-          f"| VIX={vix.get('value','?')} [{vix.get('level','?')}] "
-          f"| Mood={h.get('market_mood')} | Trade={'YES' if h.get('trade_allowed') else 'NO'}")
+          f"| BankNifty={bn.get('value','?')} ({bn.get('day_change_pct',0):+.2f}%) "
+          f"| VIX={vix.get('value','?')} [{vix.get('level','?')} {vix.get('percentile_30d',50):.0f}th pct] "
+          f"| Mood={h.get('market_mood')} | Regime={h.get('intraday_regime','?')} "
+          f"| Trade={'YES' if h.get('trade_allowed') else 'NO'}")
     for w in h.get("warnings", []):
         print(f"  [!] {w}")

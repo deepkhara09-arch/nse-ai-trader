@@ -482,23 +482,73 @@ tr:hover td { background: #0f0f16 }
 ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px }
 ::-webkit-scrollbar-thumb:hover { background: var(--border2) }
 
-/* ── Responsive ── */
-@media (max-width: 767px) {
-  .stat-val { font-size: 1.1rem }
-  .logo-sub { display: none }
-  .header-right .hdr-stat:not(:last-child) { display: none }
-  .heatmap-grid { grid-template-columns: repeat(auto-fill, minmax(66px, 1fr)) }
-  .rec-card { padding: 12px }
-  .rec-grid { grid-template-columns: 1fr 1fr }
-  td, th { padding: 5px 7px }
-  .container { padding: 10px 12px }
+/* ── Intraday chart canvas ── */
+.intraday-chart-wrap {
+  position: relative; width: 100%; border-radius: 6px; overflow: hidden;
+  background: var(--card2); border: 1px solid var(--border);
 }
-@media (min-width: 768px) {
-  .grid3 { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) }
+.intraday-chart-wrap canvas { display: block; width: 100% !important }
+.chart-label {
+  position: absolute; top: 6px; left: 8px;
+  font-size: .6rem; color: var(--muted); font-family: var(--mono);
+  pointer-events: none;
+}
+.chart-price {
+  position: absolute; top: 6px; right: 8px;
+  font-size: .68rem; font-weight: 700; font-family: var(--mono);
+  pointer-events: none;
+}
+
+/* ── Responsive — iPhone first ── */
+@media (max-width: 480px) {
+  body { font-size: 13px }
+  .header { height: 48px; padding: 0 12px }
+  .logo-icon { width: 24px; height: 24px; font-size: .68rem }
+  .logo-text { font-size: .85rem }
+  .logo-sub { display: none }
+  .header-right .hdr-stat { display: none }
+  .phase-strip { height: 26px; padding: 0 12px }
+  .container { padding: 8px 10px }
+  .section { margin-bottom: 16px; scroll-margin-top: 80px }
+  .card { padding: 10px }
+  .stat-val { font-size: 1.05rem }
+  .stat-label { font-size: .58rem }
+  .heatmap-grid { grid-template-columns: repeat(auto-fill, minmax(62px, 1fr)); gap: 3px }
+  .hmap-cell { padding: 5px 3px }
+  .rec-card { padding: 11px }
+  .rec-grid { grid-template-columns: 1fr 1fr }
+  .rec-name { font-size: .85rem }
+  td, th { padding: 5px 6px; font-size: .72rem }
+  .nav a { padding: 3px 8px; font-size: .65rem }
+  .grid2, .grid3, .grid4 { grid-template-columns: 1fr }
+  h2 { font-size: .82rem }
+  .market-bar { gap: 10px; padding: 7px 10px }
+  .mkt-val { font-size: .82rem }
+  .price-ladder { gap: 2px }
+  .pl-row { padding: 4px 8px }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  .header-right .hdr-stat:not(:last-child) { display: none }
+  .logo-sub { display: none }
+  .container { padding: 10px 12px }
+  .grid2 { grid-template-columns: 1fr }
+  .grid3, .grid4 { grid-template-columns: 1fr 1fr }
+  .heatmap-grid { grid-template-columns: repeat(auto-fill, minmax(66px, 1fr)) }
+  td, th { padding: 5px 7px }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .grid3 { grid-template-columns: repeat(2, 1fr) }
+  .grid4 { grid-template-columns: repeat(2, 1fr) }
 }
 @media (min-width: 1024px) {
   .grid3 { grid-template-columns: repeat(3, 1fr) }
   .grid4 { grid-template-columns: repeat(4, 1fr) }
+}
+/* Safe area insets for iPhone notch/home bar */
+@supports (padding: max(0px)) {
+  .header { padding-left: max(20px, env(safe-area-inset-left)); padding-right: max(20px, env(safe-area-inset-right)) }
+  .container { padding-left: max(14px, env(safe-area-inset-left)); padding-right: max(14px, env(safe-area-inset-right)) }
+  body { padding-bottom: env(safe-area-inset-bottom) }
 }
 """
 
@@ -971,6 +1021,51 @@ def _sparkline(prices: list, width=180, height=40) -> str:
     )
 
 
+def _intraday_chart_svg(candles: list, width=280, height=52) -> str:
+    """Render a compact SVG candlestick chart from 5-min intraday candles."""
+    if not candles or len(candles) < 3:
+        return ""
+    candles = candles[-60:]  # last 60 bars (~5 hours)
+    opens  = [c.get("open",  c.get("close", 0)) for c in candles]
+    highs  = [c.get("high",  c.get("close", 0)) for c in candles]
+    lows   = [c.get("low",   c.get("close", 0)) for c in candles]
+    closes = [c.get("close", 0)                 for c in candles]
+    mn = min(lows);  mx = max(highs)
+    rng = mx - mn or 1
+    n   = len(candles)
+    cw  = max(2, (width - 4) / n - 1)  # candle width
+    pad = 2
+
+    def y(v):
+        return height - pad - (v - mn) / rng * (height - 2 * pad)
+
+    bodies = ""
+    wicks  = ""
+    for i, (o, h, l, c) in enumerate(zip(opens, highs, lows, closes)):
+        cx  = pad + i * (width - 2 * pad) / n
+        col = "#22c55e" if c >= o else "#ef4444"
+        # wick
+        wicks += f'<line x1="{cx+cw/2:.1f}" y1="{y(h):.1f}" x2="{cx+cw/2:.1f}" y2="{y(l):.1f}" stroke="{col}" stroke-width="0.8" opacity="0.7"/>'
+        # body
+        by = min(y(o), y(c));  bh = max(abs(y(c) - y(o)), 1)
+        bodies += f'<rect x="{cx:.1f}" y="{by:.1f}" width="{cw:.1f}" height="{bh:.1f}" fill="{col}" opacity="0.9"/>'
+
+    last_close  = closes[-1]
+    first_close = closes[0]
+    trend_col   = "#22c55e" if last_close >= first_close else "#ef4444"
+    chg_pct     = (last_close - first_close) / (first_close or 1) * 100
+
+    return (
+        f'<div class="intraday-chart-wrap" style="height:{height+4}px">'
+        f'<span class="chart-label">5m candles · {n} bars</span>'
+        f'<span class="chart-price" style="color:{trend_col}">{chg_pct:+.2f}%</span>'
+        f'<svg width="{width}" height="{height}" viewBox="0 0 {width} {height}" '
+        f'style="display:block;width:100%;height:{height}px">'
+        f'{wicks}{bodies}'
+        f'</svg></div>'
+    )
+
+
 def _rsi_bar(rsi: float) -> str:
     pct   = max(0, min(100, rsi))
     color = "#22c55e" if rsi < 40 else ("#ef4444" if rsi > 65 else "#eab308")
@@ -1277,9 +1372,10 @@ def _section_watchlist(focus, stock_data, news_data, patterns, fundamentals=None
             if hl else ""
         )
 
-        spark_svg    = _sparkline(ph) if ph else ""
-        rsi_bar_html = _rsi_bar(rsi)
-        is_focus     = ticker in focus
+        spark_svg     = _sparkline(ph) if ph else ""
+        rsi_bar_html  = _rsi_bar(rsi)
+        is_focus      = ticker in focus
+        intraday_svg  = _intraday_chart_svg(entry.get("intraday_candles", []))
 
         expl_score = 0
         if trend == "strong_up":   expl_score += 3
@@ -1307,7 +1403,7 @@ def _section_watchlist(focus, stock_data, news_data, patterns, fundamentals=None
             f'&#8377;{close:,.2f}'
             f'<span class="{t_cls}" style="font-size:.72rem;font-weight:400"> {trend.replace("_"," ")}</span>'
             f'</div>'
-            f'<div style="margin:5px 0;overflow:hidden">{spark_svg}</div>'
+            f'<div style="margin:5px 0;overflow:hidden">{intraday_svg if intraday_svg else spark_svg}</div>'
             f'{rsi_bar_html}'
             f'<div style="margin-top:5px">'
             f'<div style="display:flex;justify-content:space-between;font-size:.62rem;color:var(--muted);margin-bottom:2px">'

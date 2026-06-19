@@ -1,12 +1,13 @@
 name: NSE AI Trader
 
 on:
-  # ── 3 sessions per weekday (IST = UTC+5:30) ──────────────────────────────
+  # ── 4 sessions per weekday (IST = UTC+5:30) ──────────────────────────────
   # Times shifted off round hours to avoid GitHub runner queue congestion.
   # GitHub cron is best-effort — can delay 15-60min. Off-peak minutes help.
   schedule:
-    - cron: "7 4 * * 1-5"    # ~09:37 IST — market open
+    - cron: "7 4 * * 1-5"    # ~09:37 IST — market open (morning)
     - cron: "17 6 * * 1-5"   # ~11:47 IST — midday review
+    - cron: "47 7 * * 1-5"   # ~13:17 IST — early afternoon (post-lunch)
     - cron: "47 9 * * 1-5"   # ~15:17 IST — pre-close decisions
 
   # Manual trigger (you can also pick a session from the UI)
@@ -17,7 +18,7 @@ on:
         required: false
         default: "morning"
         type: choice
-        options: [morning, midday, preclose]
+        options: [morning, midday, afternoon, preclose]
 
 permissions:
   contents: write   # needed to commit brain + dashboard back to repo
@@ -25,7 +26,7 @@ permissions:
 jobs:
   trade:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 30
 
     steps:
       - name: Checkout
@@ -55,6 +56,8 @@ jobs:
               echo "name=morning" >> $GITHUB_OUTPUT
             elif [ "$HOUR" = "06" ]; then
               echo "name=midday" >> $GITHUB_OUTPUT
+            elif [ "$HOUR" = "07" ]; then
+              echo "name=afternoon" >> $GITHUB_OUTPUT
             else
               echo "name=preclose" >> $GITHUB_OUTPUT
             fi

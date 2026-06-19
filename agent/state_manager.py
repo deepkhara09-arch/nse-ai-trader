@@ -51,8 +51,11 @@ def advance_session(state: dict, current_session: str) -> dict:
     Advance the session pointer and increment day when we've done preclose.
     Returns updated state.
     """
-    order = ["morning", "midday", "preclose"]
-    idx = order.index(current_session)
+    order = ["morning", "midday", "afternoon", "preclose"]
+    try:
+        idx = order.index(current_session)
+    except ValueError:
+        idx = 0
     if idx == len(order) - 1:
         # preclose done → end of trading day
         state["day"] += 1

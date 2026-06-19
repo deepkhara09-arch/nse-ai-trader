@@ -242,7 +242,21 @@ def _check_exits(book: dict, stock_data: Dict, session: str, patterns_db: Dict):
         expired   = open_days >= pos.get("max_held_days", 10)
 
         if hit_target or hit_stop or expired:
-            if hit_target:
+            if hit_target and hit_stop:
+                # Both levels touched in the same session — infer which came first.
+                # Use today's open as the starting point: whichever level is closer
+                # to the open was almost certainly reached first.
+                day_open = data.get("day_open") or data.get("open") or pos["entry"]
+                dist_to_target = abs(day_open - target_)
+                dist_to_stop   = abs(day_open - stop_loss_)
+                if dist_to_stop <= dist_to_target:
+                    # Stop was closer to open → stop hit first
+                    exit_price  = stop_loss_
+                    exit_reason = "stop_hit"
+                else:
+                    exit_price  = target_
+                    exit_reason = "target_hit"
+            elif hit_target:
                 exit_price = target_
                 exit_reason = "target_hit"
             elif hit_stop:

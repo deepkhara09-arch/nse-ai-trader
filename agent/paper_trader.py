@@ -15,7 +15,9 @@ from agent.config import (
     BRAIN_DIR, PAPER_TRADES_FILE,
     INITIAL_CAPITAL, MAX_POSITION_SIZE_PCT, MAX_OPEN_POSITIONS,
     MAX_DAILY_LOSS_PCT, WIN_RATE_THRESHOLD, MIN_TRADES_FOR_SIGNAL,
-    PAPER_TRADING_DAYS,
+    PAPER_TRADING_DAYS, MAX_SECTOR_POSITIONS,
+    VOL_REGIME_NORMAL_MAX_PCT, VOL_REGIME_CAUTION_MAX_PCT, VOL_REGIME_DANGER_MAX_PCT,
+    VOL_REGIME_CAUTION_ATR_MULT, VOL_REGIME_DANGER_ATR_MULT,
 )
 from agent.brain import learn_from_trade
 
@@ -48,49 +50,64 @@ def _fresh_book() -> dict:
 
 # ── Session actions ────────────────────────────────────────────────────────────
 
-def morning_session(book: dict, opinions: List[dict], patterns_db: Dict) -> Tuple2:
+def morning_session(book: dict, opinions: List[dict], patterns_db: Dict, market_health: dict = None) -> Tuple2:
     """Open new positions from morning signals. No intraday exits yet."""
     book = _reset_daily_pnl_if_new_day(book)
-    book, patterns_db = _try_open_positions(book, opinions, patterns_db, session="morning")
+    book, patterns_db = _try_open_positions(book, opinions, patterns_db, session="morning", market_health=market_health)
     return book, patterns_db
 
 
-def midday_session(book: dict, opinions: List[dict], stock_data: Dict, patterns_db: Dict) -> Tuple2:
+def midday_session(book: dict, opinions: List[dict], stock_data: Dict, patterns_db: Dict, market_health: dict = None) -> Tuple2:
     """Update mark-to-market, close intraday positions gone wrong, add swing signals."""
     book = _mark_to_market(book, stock_data)
     book = _update_trailing_stops(book, stock_data)
     book, patterns_db = _check_exits(book, stock_data, session="midday", patterns_db=patterns_db)
-    # Add new swing signals identified midday
     swing_opinions = [o for o in opinions if o.get("style") == "swing"]
-    book, patterns_db = _try_open_positions(book, swing_opinions, patterns_db, session="midday")
+    book, patterns_db = _try_open_positions(book, swing_opinions, patterns_db, session="midday", market_health=market_health)
     return book, patterns_db
 
 
-def preclose_session(book: dict, opinions: List[dict], stock_data: Dict, patterns_db: Dict) -> Tuple2:
+def preclose_session(book: dict, opinions: List[dict], stock_data: Dict, patterns_db: Dict, market_health: dict = None) -> Tuple2:
     """Force-close all intraday positions before market close. Check swing exits."""
     book = _mark_to_market(book, stock_data)
     book = _update_trailing_stops(book, stock_data)
-    # Force-close intraday positions
     book = _close_intraday_positions(book, stock_data)
-    # Check swing positions for stop/target hit
     book, patterns_db = _check_exits(book, stock_data, session="preclose", patterns_db=patterns_db)
-    # Record daily snapshot
     book = _snapshot(book)
     return book, patterns_db
 
 
 # ── Position management ────────────────────────────────────────────────────────
 
-def _try_open_positions(book: dict, opinions: List[dict], patterns_db: Dict, session: str):
+def _try_open_positions(book: dict, opinions: List[dict], patterns_db: Dict, session: str, market_health: dict = None):
     open_tickers = {p["ticker"] for p in book["open_positions"]}
-    daily_loss = book.get("daily_pnl_today", 0)
+    daily_loss   = book.get("daily_pnl_today", 0)
 
-    # Stop all new trades if daily loss limit hit
     if daily_loss < -INITIAL_CAPITAL * MAX_DAILY_LOSS_PCT:
         print(f"[paper] Daily loss limit hit (₹{daily_loss:.0f}). No new trades today.")
         return book, patterns_db
 
-    # Sort by confidence desc
+    # ── Volatility regime: scale position size and ATR multiplier with VIX ────
+    vix_val = (market_health or {}).get("vix", {}).get("value", 15.0)
+    if vix_val >= 20.0:
+        vol_max_pct = VOL_REGIME_DANGER_MAX_PCT
+        vol_label   = f"VIX={vix_val:.1f} DANGER→size capped at {vol_max_pct*100:.0f}%"
+    elif vix_val >= 15.0:
+        vol_max_pct = VOL_REGIME_CAUTION_MAX_PCT
+        vol_label   = f"VIX={vix_val:.1f} CAUTION→size capped at {vol_max_pct*100:.0f}%"
+    else:
+        vol_max_pct = VOL_REGIME_NORMAL_MAX_PCT
+        vol_label   = None
+    if vol_label:
+        print(f"[paper] Vol regime: {vol_label}")
+
+    # ── Sector concentration: count currently open positions per sector ────────
+    from agent.sector_tracker import SECTOR_MAP
+    sector_counts: Dict[str, int] = {}
+    for pos in book["open_positions"]:
+        sec = SECTOR_MAP.get(pos["ticker"], "Other")
+        sector_counts[sec] = sector_counts.get(sec, 0) + 1
+
     sorted_ops = sorted(opinions, key=lambda x: x.get("confidence", 0), reverse=True)
 
     for op in sorted_ops:
@@ -105,40 +122,49 @@ def _try_open_positions(book: dict, opinions: List[dict], patterns_db: Dict, ses
             print(f"[paper] Max open positions ({MAX_OPEN_POSITIONS}) reached.")
             break
 
+        # ── Sector concentration block ─────────────────────────────────────────
+        sector = SECTOR_MAP.get(ticker, "Other")
+        if sector_counts.get(sector, 0) >= MAX_SECTOR_POSITIONS:
+            print(f"[paper] Skipping {ticker} — already {MAX_SECTOR_POSITIONS} open in {sector} sector")
+            continue
+
         entry = op.get("entry", 0)
         if entry <= 0:
             continue
-
         if book["capital"] < entry:
             print(f"[paper] Skipping {ticker} — capital ₹{book['capital']:.0f} < entry ₹{entry:.0f}")
             continue
-        max_invest = book["capital"] * MAX_POSITION_SIZE_PCT
+
+        max_invest = book["capital"] * vol_max_pct
         qty = int(max_invest // entry)
         if qty < 1:
             continue
 
         pos = {
-            "ticker":      ticker,
-            "open_date":   date.today().isoformat(),
-            "open_session":session,
-            "action":      signal,
-            "entry":       entry,
-            "qty":         qty,
-            "invested":    round(entry * qty, 2),
-            "stop_loss":   op.get("stop_loss"),
-            "target":      op.get("target"),
-            "style":       op.get("style", "swing"),
-            "confidence":  op.get("confidence"),
-            "patterns":    op.get("patterns", []),
-            "buy_reasons": op.get("buy_reasons", []) + op.get("sell_reasons", []),
+            "ticker":        ticker,
+            "sector":        sector,
+            "open_date":     date.today().isoformat(),
+            "open_session":  session,
+            "action":        signal,
+            "entry":         entry,
+            "qty":           qty,
+            "invested":      round(entry * qty, 2),
+            "stop_loss":     op.get("stop_loss"),
+            "target":        op.get("target"),
+            "style":         op.get("style", "swing"),
+            "confidence":    op.get("confidence"),
+            "patterns":      op.get("patterns", []),
+            "buy_reasons":   op.get("buy_reasons", []) + op.get("sell_reasons", []),
             "current_price": entry,
-            "unrealized_pnl": 0.0,
+            "unrealized_pnl":0.0,
             "max_held_days": 10 if op.get("style") == "swing" else 1,
+            "vol_regime_pct":vol_max_pct,
         }
         book["open_positions"].append(pos)
         book["capital"] -= pos["invested"]
         open_tickers.add(ticker)
-        print(f"[paper] OPEN {signal} {qty}x {ticker} @ ₹{entry} | SL=₹{op.get('stop_loss')} T=₹{op.get('target')} | {session}")
+        sector_counts[sector] = sector_counts.get(sector, 0) + 1
+        print(f"[paper] OPEN {signal} {qty}x {ticker} ({sector}) @ ₹{entry} | SL=₹{op.get('stop_loss')} T=₹{op.get('target')} | {session}")
 
     return book, patterns_db
 

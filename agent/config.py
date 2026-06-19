@@ -54,15 +54,26 @@ FOCUS_STOCK_COUNT = 15   # increased from 12 → wider coverage across sectors
 
 # ── Capital & risk ────────────────────────────────────────────────────────────
 INITIAL_CAPITAL        = 100_000   # virtual INR
-MAX_POSITION_SIZE_PCT  = 0.12      # max 12% per trade
+MAX_POSITION_SIZE_PCT  = 0.12      # max 12% per trade (normal market)
 MAX_OPEN_POSITIONS     = 5         # never hold more than 5 at once
 MAX_DAILY_LOSS_PCT     = 0.03      # stop all trading if day loss > 3%
+MAX_SECTOR_POSITIONS   = 2         # max open positions from the same sector simultaneously
 
 # ATR-based stop/target (overrides flat % when ATR is available)
 ATR_STOP_MULTIPLIER    = 1.5       # stop = entry ± 1.5x ATR
 ATR_TARGET_MULTIPLIER  = 3.0       # target = entry ± 3.0x ATR (2:1 R:R minimum)
 FLAT_STOP_PCT          = 0.035     # fallback if ATR unavailable
 FLAT_TARGET_PCT        = 0.07
+
+# ── Volatility regime scaling ─────────────────────────────────────────────────
+# Position size and stop width scale with VIX so dollar risk stays constant.
+# Normal (VIX < 15): full size. Caution (VIX 15-20): 75%. Danger (VIX >= 20): 50%.
+VOL_REGIME_NORMAL_MAX_PCT   = 0.12   # 12% position at normal VIX
+VOL_REGIME_CAUTION_MAX_PCT  = 0.09   # 9%  position when VIX 15-20
+VOL_REGIME_DANGER_MAX_PCT   = 0.06   # 6%  position when VIX >= 20 (but trade_allowed)
+# ATR stop multiplier also widens in high vol (give trades more room to breathe)
+VOL_REGIME_CAUTION_ATR_MULT = 1.75   # wider stop when VIX 15-20
+VOL_REGIME_DANGER_ATR_MULT  = 2.25   # even wider when VIX 20-25
 
 # Win rate needed before alerting you
 # Conservative thresholds — we'd rather wait longer and be right than rush

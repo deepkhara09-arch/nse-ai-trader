@@ -157,6 +157,7 @@ def evaluate_focus_refresh(
     fundamentals: Dict,
     watchlist_signals: Dict,
     n: int = FOCUS_STOCK_COUNT,
+    promotion_pool: List[str] = None,
 ) -> Tuple[List[str], List[str], List[str]]:
     """
     Decide whether to promote/demote any stocks.
@@ -172,6 +173,10 @@ def evaluate_focus_refresh(
     demote_candidates = _get_demotion_candidates(ranked)
     promote_candidates = _get_promotion_candidates(watchlist_signals, stock_data,
                                                    fundamentals, n_slots=len(demote_candidates))
+    # Merge background cohort candidates into promotion pool (prioritise them)
+    if promotion_pool:
+        not_in_focus = [t for t in promotion_pool if t not in focus]
+        promote_candidates = list(dict.fromkeys(not_in_focus + promote_candidates))
 
     if not demote_candidates and not promote_candidates:
         return focus, [], []

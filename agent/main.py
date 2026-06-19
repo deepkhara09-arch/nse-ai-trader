@@ -44,6 +44,8 @@ from agent.sector_tracker import (
     save_sector_scores, load_sector_scores,
 )
 from agent.rec_changelog import compute_changes, save_changelog, load_changelog
+from agent.delivery_fetcher import fetch_delivery, save_delivery, inject_delivery
+from agent.attribution import update_attribution, aggregate_attribution
 
 
 def run():
@@ -98,6 +100,13 @@ def run():
                 fund_data = fetch_fundamentals([t for t, _ in top])
                 save_fundamentals(fund_data)
                 state = set_phase(state, "analysis", note)
+                # Kick off background cohort exploration immediately
+                state["background_cohort"] = {
+                    "day":        1,
+                    "start_date": date.today().isoformat(),
+                    "ready":      False,
+                    "candidates": [],
+                }
         else:
             state = advance_session(state, session) if session == "midday" else state
 
@@ -122,6 +131,14 @@ def run():
             if state.get("day", 1) % 5 == 0:
                 fund_data = fetch_fundamentals(focus)
                 save_fundamentals(fund_data)
+            # Fetch and inject delivery % data into stock latest dicts
+            try:
+                delivery_data = fetch_delivery(focus)
+                save_delivery(delivery_data)
+                merged_anal = inject_delivery(merged_anal, delivery_data)
+                save_stock_data(merged_anal)
+            except Exception as e:
+                print(f"[delivery] fetch failed (non-fatal): {e}")
 
             patterns  = load_patterns()
             decisions = load_decisions()
@@ -138,6 +155,9 @@ def run():
             save_patterns(patterns)
             save_decisions(decisions)
             state = advance_session(state, session)
+
+            # Tick background cohort during analysis too
+            _tick_background_cohort(state, session)
 
             if state["day"] > EXPLORATION_DAYS + ANALYSIS_DAYS:
                 state = set_phase(state, "paper_trading", "Analysis done — starting paper trades")
@@ -159,6 +179,14 @@ def run():
         if session == "preclose":
             news = fetch_news(focus)
             save_news(news)
+            # Fetch and inject delivery % data
+            try:
+                delivery_data = fetch_delivery(focus)
+                save_delivery(delivery_data)
+                merged = inject_delivery(merged, delivery_data)
+                save_stock_data(merged)
+            except Exception as e:
+                print(f"[delivery] fetch failed (non-fatal): {e}")
 
         patterns  = load_patterns()
         decisions = load_decisions()
@@ -185,11 +213,15 @@ def run():
 
         # Session trading
         if session == "morning":
-            book, patterns = morning_session(book, tradeable_opinions, patterns)
+            book, patterns = morning_session(book, tradeable_opinions, patterns, market_health=market_health)
         elif session == "midday":
-            book, patterns = midday_session(book, tradeable_opinions, merged, patterns)
+            book, patterns = midday_session(book, tradeable_opinions, merged, patterns, market_health=market_health)
         elif session == "preclose":
-            book, patterns = preclose_session(book, tradeable_opinions, merged, patterns)
+            book, patterns = preclose_session(book, tradeable_opinions, merged, patterns, market_health=market_health)
+
+        # Update win rate attribution after each session's trade activity
+        if session == "preclose":
+            patterns = update_attribution(patterns, book.get("closed_trades", []))
 
         save_patterns(patterns)
         save_decisions(decisions)
@@ -214,6 +246,9 @@ def run():
                 fund_data = fetch_fundamentals(focus)
                 save_fundamentals(fund_data)
 
+            # ── Parallel background cohort exploration ────────────────────────
+            _tick_background_cohort(state, session)
+
             # ── Alert when paper trading is validated ─────────────────────────
             if is_ready_to_alert(stats, book) and not state.get("alert_sent"):
                 state["alert_sent"] = True
@@ -236,6 +271,61 @@ def run():
     print(f"\n[done] {session} complete. Phase={state['phase']} Day={state['day']}\n")
 
 
+def _tick_background_cohort(state: dict, session: str) -> None:
+    """
+    Parallel exploration pipeline: while focus stocks are in analysis/paper_trading,
+    fetch data for ALL 99 universe stocks in the background each preclose.
+    After EXPLORATION_DAYS ticks, score them and store candidates so the next
+    focus refresh can pull from a freshly ranked cohort rather than stale data.
+    """
+    if session != "preclose":
+        return
+
+    cohort = state.get("background_cohort")
+    if cohort is None or cohort.get("ready"):
+        return
+
+    cohort_day = cohort.get("day", 1)
+    print(f"[cohort] Background exploration day {cohort_day}/{EXPLORATION_DAYS}")
+
+    try:
+        # Fetch a lightweight snapshot for all universe stocks
+        fresh_bg = fetch_stock_data(NSE_UNIVERSE, session="preclose")
+        existing = load_stock_data()
+        merged_bg = merge_stock_data(existing, fresh_bg)
+        # Don't overwrite full stock_data — only update fields not in focus
+        focus = state.get("focus_stocks", [])
+        for ticker in NSE_UNIVERSE:
+            if ticker not in focus and ticker in fresh_bg:
+                existing[ticker] = merged_bg[ticker]
+        save_stock_data(existing)
+    except Exception as e:
+        print(f"[cohort] Data fetch error (non-fatal): {e}")
+        cohort["day"] = cohort_day + 1
+        state["background_cohort"] = cohort
+        return
+
+    cohort_day += 1
+    if cohort_day > EXPLORATION_DAYS:
+        # Score all universe stocks and pick top FOCUS_STOCK_COUNT candidates
+        try:
+            sd   = load_stock_data()
+            nd   = load_news()
+            sent = {t: v.get("latest", {}) for t, v in nd.items()}
+            top  = select_focus_stocks(sd, sent, FOCUS_STOCK_COUNT * 2)  # keep 2x as reserve
+            cohort["candidates"]  = [t for t, _ in top]
+            cohort["scored_date"] = date.today().isoformat()
+            cohort["ready"]       = True
+            scores_str = " | ".join(f"{t.replace('.NS','')}" for t, _ in top[:10])
+            print(f"[cohort] Background cohort ready: {scores_str} ...")
+            state = add_brain_note(state, f"Background cohort scored — {len(top)} candidates ready for next focus refresh")
+        except Exception as e:
+            print(f"[cohort] Scoring error (non-fatal): {e}")
+
+    cohort["day"] = cohort_day
+    state["background_cohort"] = cohort
+
+
 def _maybe_refresh_focus(state, stock_data, patterns, news_data, fund, book, market_health):
     """Evaluate whether any focus stocks should be promoted/demoted. Runs every preclose."""
     focus = state.get("focus_stocks", [])
@@ -256,8 +346,15 @@ def _maybe_refresh_focus(state, stock_data, patterns, news_data, fund, book, mar
     wl = update_watchlist_signals(wl, stock_data, patterns, news_data, fund, focus)
     save_watchlist_signals(wl)
 
+    # Use background cohort candidates as the promotion candidate pool if ready
+    cohort = state.get("background_cohort", {})
+    cohort_candidates = cohort.get("candidates", []) if cohort.get("ready") else []
+    if cohort_candidates:
+        print(f"[cohort] Using {len(cohort_candidates)} background candidates for focus refresh")
+
     new_focus, promoted, demoted = evaluate_focus_refresh(
-        focus, ranked, stock_data, patterns, news_data, fund, wl
+        focus, ranked, stock_data, patterns, news_data, fund, wl,
+        promotion_pool=cohort_candidates or None,
     )
 
     if promoted or demoted:
@@ -320,8 +417,9 @@ def _refresh_outputs(state: dict, market_health: dict, session: str) -> None:
         focus  = state.get("focus_stocks", [])
         ranked = rank_focus_stocks(focus, sd, pats, nd, fund, book, market_health) if focus else []
 
+        attr_summary = aggregate_attribution(pats)
         build_dashboard(state, sd, book, pats, decs, nd, market_health,
-                        recs, fund, ranked, sectors, clog)
+                        recs, fund, ranked, sectors, clog, attr_summary)
 
     except Exception as e:
         import traceback

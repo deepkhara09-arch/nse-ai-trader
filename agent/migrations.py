@@ -33,7 +33,7 @@ RANK_HISTORY_FILE    = "brain/rank_history.json"
 WATCHLIST_FILE       = "brain/watchlist_signals.json"
 DECISIONS_FILE       = "brain/decisions.json"
 
-CURRENT_SCHEMA_VERSION = 3   # bump this when you add a new migration
+CURRENT_SCHEMA_VERSION = 4   # bump this when you add a new migration
 
 
 # ── Migration functions ────────────────────────────────────────────────────────
@@ -135,11 +135,55 @@ def _migrate_v3(state, stock_data, patterns, book, fundamentals, decisions):
     return state, stock_data, patterns, book, fundamentals, decisions
 
 
+def _migrate_v4(state, stock_data, patterns, book, fundamentals, decisions):
+    """
+    v4: delivery % data, volatility regime, sector blocking, win rate attribution.
+
+    - Adds delivery_pct / delivery_signal / delivery_trend / avg_delivery_5d stubs
+      to every stock's latest dict (real values injected at preclose by delivery_fetcher)
+    - Adds sector field to every open/closed position in paper book
+    - Adds vol_regime_pct to every open position
+    - Adds attribution_stats stub to patterns dict per ticker
+    """
+    from agent.sector_tracker import SECTOR_MAP
+
+    # Stock data: add delivery % stubs
+    for ticker, entry in stock_data.items():
+        if "latest" not in entry:
+            continue
+        d = entry["latest"]
+        d.setdefault("delivery_pct",    0.0)
+        d.setdefault("delivery_trend",  "stable")
+        d.setdefault("delivery_signal", "neutral")
+        d.setdefault("avg_delivery_5d", 0.0)
+
+    # Paper book: backfill sector + vol_regime_pct on historical positions
+    for pos in book.get("open_positions", []):
+        pos.setdefault("sector",        SECTOR_MAP.get(pos.get("ticker", ""), "Other"))
+        pos.setdefault("vol_regime_pct", 0.12)
+
+    for trade in book.get("closed_trades", []):
+        trade.setdefault("sector",        SECTOR_MAP.get(trade.get("ticker", ""), "Other"))
+        trade.setdefault("vol_regime_pct", 0.12)
+
+    # Patterns: add attribution stats stub per ticker
+    for ticker, tk in patterns.items():
+        tk.setdefault("attribution", {
+            "by_pattern":  {},   # pattern_name → {wins, losses, total}
+            "by_session":  {},   # morning/midday/preclose → {wins, losses}
+            "by_mood":     {},   # bullish/neutral/bearish → {wins, losses}
+            "by_style":    {},   # intraday/swing → {wins, losses}
+        })
+
+    return state, stock_data, patterns, book, fundamentals, decisions
+
+
 # ── Registry: maps schema version → migration that brings data UP to that version
 MIGRATIONS = {
     1: _migrate_v1,
     2: _migrate_v2,
     3: _migrate_v3,
+    4: _migrate_v4,
 }
 
 

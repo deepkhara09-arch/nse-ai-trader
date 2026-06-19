@@ -28,6 +28,7 @@ def build_dashboard(
     ranked_stocks: List = None,
     sector_scores: Dict = None,
     changelog: List = None,
+    attribution: Dict = None,
 ) -> None:
     os.makedirs("docs", exist_ok=True)
     if market_health is None:
@@ -68,7 +69,7 @@ def build_dashboard(
         stock_data, focus, phase, day, alert, now_utc,
         portfolio, pnl_total, pnl_pct, nifty, vix, mood,
         trade_ok, mkt_warn, recommendations, market_health, fundamentals,
-        ranked_stocks, sector_scores, changelog,
+        ranked_stocks, sector_scores, changelog, attribution or {},
     )
 
     with open(DASHBOARD_FILE, "w", encoding="utf-8") as f:
@@ -85,11 +86,13 @@ def _build_html(
     focus, phase, day, alert, now_utc, portfolio, pnl_total, pnl_pct,
     nifty, vix, mood, trade_ok, mkt_warn, recommendations, market_health,
     fundamentals=None, ranked_stocks=None, sector_scores=None, changelog=None,
+    attribution=None,
 ):
     fundamentals  = fundamentals  or {}
     ranked_stocks = ranked_stocks or []
     sector_scores = sector_scores or {}
     changelog     = changelog     or []
+    attribution   = attribution   or {}
     nifty_val = nifty.get("value", "")
     vix_val   = vix.get("value", "")
     nifty_str = f"{nifty_val:,.0f}" if isinstance(nifty_val, (int, float)) else "—"
@@ -134,6 +137,8 @@ def _build_html(
   {_section_watchlist(focus, stock_data, news_data, patterns, fundamentals)}
   {_section_trades(book)}
   {_section_research(state, decisions)}
+  {_section_attribution(attribution)}
+  {_section_runlog(state)}
   {_section_brain(focus, patterns)}
 </div>
 {_scripts()}
@@ -575,6 +580,8 @@ def _nav() -> str:
   <a href="#watchlist">Watchlist</a>
   <a href="#trades">Paper Trades</a>
   <a href="#research">Research Log</a>
+  <a href="#attribution">Attribution</a>
+  <a href="#runlog">Run Log</a>
   <a href="#brain">Brain Insights</a>
 </nav>"""
 
@@ -1690,6 +1697,127 @@ def _section_brain(focus, patterns) -> str:
     return f"""<div class="section" id="brain">
   <h2>Brain Insights <span>Learned pattern reliability per focus stock</span></h2>
   <div class="grid2">{cards}</div>
+</div>"""
+
+
+def _section_attribution(attribution: dict) -> str:
+    if not attribution:
+        return ""
+
+    def _table(data: dict, label_col: str) -> str:
+        if not data:
+            return '<p style="color:var(--muted);font-size:.8rem">No data yet — needs more closed trades.</p>'
+        rows = ""
+        for key, v in data.items():
+            wr   = v.get("win_rate", 0)
+            tot  = v.get("total", 0)
+            bar  = int(wr * 60)
+            color = "#22c55e" if wr >= 0.60 else "#f59e0b" if wr >= 0.45 else "#ef4444"
+            rows += (
+                f'<tr>'
+                f'<td style="color:var(--fg)">{key}</td>'
+                f'<td style="text-align:center">{tot}</td>'
+                f'<td style="text-align:center">{v.get("wins",0)}W / {v.get("losses",0)}L</td>'
+                f'<td><div style="display:flex;align-items:center;gap:6px">'
+                f'<div style="width:{bar}px;height:6px;border-radius:3px;background:{color}"></div>'
+                f'<span style="color:{color};font-size:.75rem">{wr*100:.0f}%</span>'
+                f'</div></td>'
+                f'</tr>'
+            )
+        return (
+            f'<table style="width:100%;border-collapse:collapse;font-size:.8rem">'
+            f'<thead><tr style="color:var(--muted);font-size:.72rem">'
+            f'<th style="text-align:left;padding:4px 0">{label_col}</th>'
+            f'<th>Trades</th><th>W/L</th><th>Win Rate</th>'
+            f'</tr></thead><tbody>{rows}</tbody></table>'
+        )
+
+    by_pattern = attribution.get("by_pattern", {})
+    by_session = attribution.get("by_session", {})
+    by_mood    = attribution.get("by_mood",    {})
+    by_style   = attribution.get("by_style",   {})
+
+    return f"""<div class="section" id="attribution">
+  <h2>Win Rate Attribution <span>Which setups, sessions &amp; conditions actually work</span></h2>
+  <div class="grid2">
+    <div class="card">
+      <div class="card-title">By Pattern</div>
+      {_table(by_pattern, "Pattern")}
+    </div>
+    <div class="card">
+      <div class="card-title">By Session</div>
+      {_table(by_session, "Session")}
+      <div class="card-title" style="margin-top:14px">By Market Mood</div>
+      {_table(by_mood, "Mood")}
+    </div>
+    <div class="card">
+      <div class="card-title">By Style</div>
+      {_table(by_style, "Style")}
+    </div>
+  </div>
+</div>"""
+
+
+def _section_runlog(state: dict) -> str:
+    import json as _json
+    import os as _os
+    from agent.config import DAILY_LOG_FILE
+
+    if not _os.path.exists(DAILY_LOG_FILE):
+        return ""
+
+    try:
+        with open(DAILY_LOG_FILE) as f:
+            log = _json.load(f)
+    except Exception:
+        return ""
+
+    if not log:
+        return ""
+
+    rows = ""
+    for entry in reversed(log[-30:]):
+        date_    = entry.get("date", "")
+        sess_    = entry.get("session", "")
+        phase_   = entry.get("phase", "")
+        day_     = entry.get("day", "")
+        stats_   = entry.get("stats", {})
+        open_    = entry.get("open", 0)
+        wr_      = stats_.get("win_rate", 0)
+        total_   = stats_.get("total", 0)
+        pnl_     = stats_.get("total_pnl", 0)
+        sess_badge = {
+            "morning":  '<span class="pill pill-green">Morning</span>',
+            "midday":   '<span class="pill pill-blue">Midday</span>',
+            "preclose": '<span class="pill pill-yellow">Preclose</span>',
+        }.get(sess_, f'<span class="pill">{sess_}</span>')
+        rows += (
+            f'<tr style="border-bottom:1px solid var(--border)">'
+            f'<td style="padding:7px 4px;color:var(--muted);font-size:.75rem">{date_}</td>'
+            f'<td style="padding:7px 4px">{sess_badge}</td>'
+            f'<td style="padding:7px 4px;font-size:.78rem;color:var(--fg)">{phase_} d{day_}</td>'
+            f'<td style="padding:7px 4px;text-align:center;font-size:.78rem">{open_} open</td>'
+            f'<td style="padding:7px 4px;text-align:center;font-size:.78rem">{total_} trades · {wr_*100:.0f}% WR</td>'
+            f'<td style="padding:7px 4px;text-align:right;font-size:.78rem;color:{"#22c55e" if pnl_>=0 else "#ef4444"}">'
+            f'₹{pnl_:+,.0f}</td>'
+            f'</tr>'
+        )
+
+    return f"""<div class="section" id="runlog">
+  <h2>Run Log <span>Each trigger — what time, what session, what happened</span></h2>
+  <div class="card" style="overflow-x:auto">
+    <table style="width:100%;border-collapse:collapse;font-size:.8rem;min-width:480px">
+      <thead><tr style="color:var(--muted);font-size:.72rem">
+        <th style="text-align:left;padding:6px 4px">Date</th>
+        <th style="text-align:left">Session</th>
+        <th style="text-align:left">Phase</th>
+        <th style="text-align:center">Positions</th>
+        <th style="text-align:center">Trades</th>
+        <th style="text-align:right">P&amp;L</th>
+      </tr></thead>
+      <tbody>{rows}</tbody>
+    </table>
+  </div>
 </div>"""
 
 

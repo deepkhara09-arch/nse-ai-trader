@@ -453,6 +453,19 @@ def analyse_stock(
     elif sector_momentum < -0.3 and buy_score > sell_score:
         buy_score -= 0.5; buy_reasons.append(f"Sector headwind (momentum={sector_momentum:.2f})")
 
+    # ── Delivery % bonus/penalty (institutional conviction signal) ─────────────
+    delivery_signal = d.get("delivery_signal", "neutral")
+    delivery_pct    = d.get("delivery_pct", 0.0)
+    if delivery_signal == "strong_accumulation":
+        buy_score  += 3.0; buy_reasons.append(f"High delivery {delivery_pct:.0f}% — strong institutional accumulation")
+    elif delivery_signal == "accumulation":
+        buy_score  += 1.5; buy_reasons.append(f"Delivery {delivery_pct:.0f}% above avg — institutional buying")
+    elif delivery_signal == "distribution":
+        sell_score += 2.0; sell_reasons.append(f"Low delivery {delivery_pct:.0f}% — institutional distribution / intraday churn")
+    elif delivery_signal == "weak":
+        if buy_score > sell_score:
+            buy_score -= 1.0; buy_reasons.append(f"Delivery {delivery_pct:.0f}% weak — move may be intraday driven")
+
     buy_score  = round(buy_score,  2)
     sell_score = round(sell_score, 2)
     gap = abs(buy_score - sell_score)

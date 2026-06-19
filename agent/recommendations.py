@@ -10,8 +10,21 @@ Recommendations Engine — the agent's final output to the user.
 Recommendation fires when:
   • Total confidence >= 65 points
   • R:R >= 2.0 on Target 1
-  • Market mood is NOT bearish (VIX < 25)
+  • Market is not in DANGER mode (VIX < 25 / trade_allowed)
   • Signal is BUY or SELL (not WATCH)
+
+Both directions are supported: BUY recs are long setups, SELL recs are short
+setups (targets/stops flip accordingly). SELL recs fire in down markets too —
+a bearish mood does NOT block them.
+
+Each rec is auto-classified into one of three explicit horizons:
+  • Intraday    — same-day momentum/gap/VWAP setups
+  • Short-term  — 5–15 day swing setups
+  • Long-term   — fundamentally strong names in an uptrend, weeks to months
+
+Probabilities carry a data-confidence tag (Estimated / Forming / Validated)
+reflecting how many real paper trades back the number — early probabilities are
+indicator estimates, not proven odds, until the stock has been traded enough.
 
 Paper trading is a BONUS signal — if we have trades on this stock with
 positive expectancy, confidence gets a small boost. It is NOT a gate.
@@ -86,6 +99,111 @@ STOCK_NAMES = {
     "GRASIM.NS":     "Grasim Industries Ltd",
     "SHREECEM.NS":   "Shree Cement Ltd",
 }
+
+
+def _classify_trade_type(opinion: dict, d: dict, fund: dict, learned_style: str) -> dict:
+    """
+    Classify a setup into one of three explicit horizons:
+      • intraday    — fast momentum signals meant to be closed the same day
+      • short_term  — swing setups, typically 5–15 trading days
+      • long_term   — fundamentally strong names in an uptrend, weeks to months
+
+    The decision blends the SIGNAL CHARACTER (which patterns fired) with the
+    FUNDAMENTAL strength. Returns a dict with the type and all timing guidance.
+    """
+    patterns = set(opinion.get("patterns", []))
+
+    # Signals that are inherently same-day in character
+    intraday_signals = {
+        "gap_up_continuation", "gap_down_continuation", "gap_up_reversal",
+        "gap_down_reversal", "above_vwap_strong", "below_vwap_strong",
+        "vwap_magnet", "volume_climax_top", "volume_climax_bottom",
+        "pivot_r1_breakout", "pivot_s1_bounce", "pivot_point_test",
+        "stoch_rsi_bullish_cross", "stoch_rsi_bearish_cross",
+    }
+    # Signals that imply a multi-day swing
+    swing_signals = {
+        "supertrend_bullish", "supertrend_bearish", "ichimoku_bullish_kumo",
+        "ichimoku_bearish_kumo", "ichimoku_tk_cross_bullish", "macd_bullish_divergence",
+        "macd_bearish_divergence", "52w_breakout", "pivot_r2_breakout",
+        "adx_strong_trend_up", "adx_strong_trend_down", "engulfing_bullish",
+        "morning_star", "three_white_soldiers",
+    }
+
+    intraday_hits = len(patterns & intraday_signals)
+    swing_hits    = len(patterns & swing_signals)
+
+    # Fundamental strength gate for long-term: needs genuinely good numbers
+    from agent.fundamentals_fetcher import score_fundamentals
+    fund_strength = score_fundamentals(fund) if fund else 0   # 0–100
+    roe           = fund.get("roe") or 0
+    roce          = fund.get("roce") or 0
+    de            = fund.get("debt_equity")
+    rev_g         = fund.get("revenue_growth_pct") or 0
+    trend         = d.get("trend_10d") or ""
+    delivery_sig  = d.get("delivery_signal", "neutral")
+
+    strong_fundamentals = (
+        fund_strength >= 65 and roe >= 12 and roce >= 12
+        and (de is None or de < 1.0) and rev_g >= 0
+    )
+    # Delivery-based accumulation supports a longer hold (institutions buying to hold)
+    accumulating = delivery_sig in ("accumulation", "strong_accumulation")
+
+    # ── Decide horizon ────────────────────────────────────────────────────────
+    if intraday_hits > swing_hits and learned_style != "swing":
+        ttype = "intraday"
+    elif strong_fundamentals and trend in ("up", "strong_up") and (swing_hits or accumulating):
+        ttype = "long_term"
+    else:
+        ttype = "short_term"
+
+    # ── Timing/guidance per horizon ───────────────────────────────────────────
+    if ttype == "intraday":
+        return {
+            "trade_type":       "Intraday",
+            "trade_type_key":   "intraday",
+            "hold_period":      "Same day — square off before 3:15 PM IST",
+            "entry_window":     "9:30 AM – 10:30 AM IST (first-hour momentum)",
+            "exit_window":      "Exit by 3:00 PM IST latest — never carry overnight",
+            "target_timeframe": "2–5 hours after entry",
+            "action_urgency":   "ACT THIS SESSION — intraday setups expire at market close",
+        }
+    if ttype == "long_term":
+        return {
+            "trade_type":       "Long-term / Investment",
+            "trade_type_key":   "long_term",
+            "hold_period":      "Several weeks to months (fundamentally backed)",
+            "entry_window":     "Accumulate in 3–4 tranches over several sessions; no rush",
+            "exit_window":      "Review on quarterly results / thesis change, not daily noise",
+            "target_timeframe": "1–6 months — let the compounding play out",
+            "action_urgency":   "Patient build — averaging on dips is fine for this horizon",
+        }
+    return {
+        "trade_type":       "Short-term / Swing",
+        "trade_type_key":   "short_term",
+        "hold_period":      "5–15 trading days (swing)",
+        "entry_window":     "Buy in 2–3 tranches across 9:30–11:30 AM IST; avoid last 30 mins",
+        "exit_window":      "Monitor at each daily open; trail stop as it moves in favour",
+        "target_timeframe": "1–3 trading weeks",
+        "action_urgency":   "No rush — swing setups allow flexible entry within the zone",
+    }
+
+
+def _data_confidence(paper_trades: int) -> dict:
+    """
+    Tag how trustworthy the probability is, based on how many real paper trades
+    back it. Early probabilities are estimates from indicators; they only become
+    grounded once the tool has actually traded the stock enough times.
+    """
+    if paper_trades >= 15:
+        return {"tag": "Validated", "key": "validated",
+                "note": f"Backed by {paper_trades} real paper trades — probability is grounded in outcomes"}
+    if paper_trades >= 5:
+        return {"tag": "Forming", "key": "forming",
+                "note": f"{paper_trades} paper trades so far — probability firming up but still partly estimated"}
+    return {"tag": "Estimated", "key": "estimated",
+            "note": f"Only {paper_trades} paper trade(s) — probability is an indicator-based estimate, not yet proven"}
 
 
 def generate_recommendations(
@@ -214,23 +332,27 @@ def generate_recommendations(
         invested        = round(close * recommended_qty, 2)
 
         # ── Trade type, hold period, timing guidance ──────────────────────────
-        style = patterns.get(ticker, {}).get("preferred_style", "swing")
-        rec_valid_until = REC_SESSION_VALID_UNTIL.get(session, "next session")
+        # Auto-classify into intraday / short-term / long-term from the signal
+        # character + fundamental strength (not just a single learned preference).
+        learned_style   = patterns.get(ticker, {}).get("preferred_style", "swing")
+        tt              = _classify_trade_type(opinion, d, fund, learned_style)
+        trade_type       = tt["trade_type"]
+        trade_type_key   = tt["trade_type_key"]
+        style            = trade_type_key   # keep legacy field meaningful
+        hold             = tt["hold_period"]
+        entry_window     = tt["entry_window"]
+        exit_window      = tt["exit_window"]
+        target_timeframe = tt["target_timeframe"]
+        action_urgency   = tt["action_urgency"]
 
-        if style == "intraday":
-            trade_type       = "Intraday"
-            hold             = "Same day — exit before 3:15 PM IST"
-            entry_window     = "9:30 AM – 10:30 AM IST (first hour momentum)"
-            exit_window      = "Exit by 3:00 PM IST latest — do not carry overnight"
-            target_timeframe = "2–5 hours after entry"
-            action_urgency   = "ACT WITHIN THIS SESSION — intraday setups expire at market close"
-        else:
-            trade_type       = "Delivery / Positional"
-            hold             = "5–10 trading days (swing)"
-            entry_window     = "Buy in 2–3 tranches across 9:30–11:30 AM IST; avoid last 30 mins"
-            exit_window      = f"Monitor at each daily open; valid until {rec_valid_until}"
-            target_timeframe = "5–10 trading sessions (1–2 calendar weeks)"
-            action_urgency   = "No rush — swing setups allow flexible entry within the entry zone"
+        # ── Explicit direction wording ────────────────────────────────────────
+        direction       = "BUY (go long)" if opinion["signal"] == "BUY" else "SELL / SHORT (go short)"
+        direction_short = "BUY" if opinion["signal"] == "BUY" else "SELL"
+        # One-line plain-English headline the user can act on directly
+        headline = (
+            f"{direction_short} {ticker.replace('.NS','')} — {trade_type} "
+            f"({'long' if opinion['signal']=='BUY' else 'short'} setup)"
+        )
 
         # ── Build full reasoning ──────────────────────────────────────────────
         reasons = list(opinion.get("buy_reasons" if opinion["signal"] == "BUY"
@@ -314,7 +436,11 @@ def generate_recommendations(
             "is_stale":     is_stale,
             "stale_reason": stale_reason,
             "signal":           opinion["signal"],
-            "trade_type":       trade_type,
+            "direction":        direction,          # "BUY (go long)" / "SELL / SHORT (go short)"
+            "direction_short":  direction_short,    # "BUY" / "SELL"
+            "headline":         headline,           # plain-English one-liner
+            "trade_type":       trade_type,         # "Intraday" / "Short-term / Swing" / "Long-term / Investment"
+            "trade_type_key":   trade_type_key,     # intraday / short_term / long_term
             "style":            style,
             "hold_period":      hold,
             "entry_window":     entry_window,
@@ -350,6 +476,13 @@ def generate_recommendations(
             "composite_score":     rank_info.get("composite_score", 0.0),
             "focus_rank":          rank_info.get("rank", 99),
             "rank_delta":          rank_info.get("rank_delta", 0),
+
+            # Data-confidence: how trustworthy the probability is (based on real trades)
+            "data_confidence":      _data_confidence(len(stock_trades))["tag"],
+            "data_confidence_key":  _data_confidence(len(stock_trades))["key"],
+            "data_confidence_note": _data_confidence(len(stock_trades))["note"],
+            # Expected edge in R-multiples per trade, plain wording
+            "expected_edge_r":      rank_info.get("profit_probability", 0.0),
 
             "buy_score":         opinion["buy_score"],
             "sell_score":        opinion["sell_score"],

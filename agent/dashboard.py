@@ -295,6 +295,7 @@ h3 { font-size: .82rem; font-weight: 600 }
 .badge-blue   { background: #4f46e514; color: #818cf8; border: 1px solid #4f46e530 }
 .badge-cyan   { background: #0891b214; color: #22d3ee; border: 1px solid #0891b230 }
 .badge-orange { background: #ea580c14; color: #fb923c; border: 1px solid #ea580c30 }
+.badge-gray   { background: #4a4a6214; color: #9ca3af; border: 1px solid #4a4a6240 }
 .pill {
   display: inline-flex; align-items: center; padding: 1px 6px; border-radius: 3px;
   font-size: .63rem; font-weight: 600; white-space: nowrap;
@@ -1518,14 +1519,31 @@ def _section_recommendations(recs) -> str:
         generated_at  = rec.get("generated_at", "")
         valid_until   = rec.get("valid_until", "")
 
-        trade_type     = rec.get("trade_type", "Delivery / Positional")
+        trade_type     = rec.get("trade_type", "Short-term / Swing")
+        trade_type_key = rec.get("trade_type_key", "short_term")
         entry_window   = rec.get("entry_window", "")
         exit_window    = rec.get("exit_window", "")
         tgt_timeframe  = rec.get("target_timeframe", "")
         action_urgency = rec.get("action_urgency", "")
-        is_intraday    = trade_type == "Intraday"
+        is_intraday    = trade_type_key == "intraday"
         timing_cls     = "urgency-intraday" if is_intraday else "urgency-delivery"
-        trade_type_badge_cls = "badge-orange" if is_intraday else "badge-cyan"
+        # Distinct colour per horizon: intraday=orange, short=cyan, long=purple/green
+        trade_type_badge_cls = {
+            "intraday":   "badge-orange",
+            "short_term": "badge-cyan",
+            "long_term":  "badge-green",
+        }.get(trade_type_key, "badge-cyan")
+
+        # Explicit direction + plain-English headline
+        direction      = rec.get("direction", "BUY (go long)" if signal == "BUY" else "SELL / SHORT (go short)")
+        headline       = rec.get("headline", f"{signal} {rec.get('nse_code','')}")
+        # Data confidence on the probability
+        data_conf      = rec.get("data_confidence", "Estimated")
+        data_conf_key  = rec.get("data_confidence_key", "estimated")
+        data_conf_note = rec.get("data_confidence_note", "")
+        conf_badge_cls = {
+            "validated": "badge-green", "forming": "badge-orange", "estimated": "badge-gray",
+        }.get(data_conf_key, "badge-gray")
 
         stale_banner = ""
         if is_stale:
@@ -1548,7 +1566,7 @@ def _section_recommendations(recs) -> str:
   {'<div class="timing-row"><span class="timing-icon">🕐</span><div><div class="timing-label">When to Enter</div><div class="timing-val">' + entry_window + '</div></div></div>' if entry_window else ""}
   {'<div class="timing-row"><span class="timing-icon">🎯</span><div><div class="timing-label">Target Timeframe</div><div class="timing-val">' + tgt_timeframe + '</div></div></div>' if tgt_timeframe else ""}
   {'<div class="timing-row"><span class="timing-icon">🚪</span><div><div class="timing-label">Exit / Monitoring</div><div class="timing-val">' + exit_window + '</div></div></div>' if exit_window else ""}
-  {'<div style="margin-top:6px;padding:5px 8px;border-radius:4px;background:#0f0f16;font-size:.67rem;font-weight:600;color:#fb923c">' + action_urgency + '</div>' if is_intraday and action_urgency else ""}
+  {'<div style="margin-top:6px;padding:5px 8px;border-radius:4px;background:#0f0f16;font-size:.67rem;font-weight:600;color:' + ('#fb923c' if is_intraday else '#9ca3af') + '">' + action_urgency + '</div>' if action_urgency else ""}
 </div>"""
 
         cards += f"""<div class="rec-card {cls}">
@@ -1566,12 +1584,23 @@ def _section_recommendations(recs) -> str:
     </div>
   </div>
 
+  <div style="margin:6px 0 9px;padding:7px 11px;border-radius:6px;background:var(--card2);border:1px solid var(--border);font-size:.78rem;font-weight:700;color:var(--text)">
+    {headline}
+    <div style="font-size:.62rem;font-weight:400;color:var(--muted);margin-top:2px">
+      Direction: <strong style="color:{'#4ade80' if signal=='BUY' else '#f87171'}">{direction}</strong>
+      &nbsp;·&nbsp; Horizon: <strong style="color:var(--text)">{trade_type}</strong>
+    </div>
+  </div>
+
   {stale_banner}
   {timing_box}
 
   <div style="display:flex;gap:8px;margin-bottom:8px;flex-wrap:wrap">
     <div style="flex:1;min-width:110px;background:var(--card2);border-radius:6px;padding:7px 9px;border:1px solid var(--border)">
-      <div style="font-size:.58rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:3px">Success %</div>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:3px">
+        <span style="font-size:.58rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em">Success %</span>
+        <span class="badge {conf_badge_cls}" style="font-size:.5rem;padding:1px 4px" title="{data_conf_note}">{data_conf}</span>
+      </div>
       <div style="font-size:1rem;font-weight:700;color:{'#4ade80' if sp_pct>=55 else '#fbbf24'}">{sp_pct}%</div>
       <div style="height:3px;background:#1a1a24;border-radius:2px;margin-top:4px"><div style="width:{sp_pct}%;height:3px;background:{'#4ade80' if sp_pct>=55 else '#fbbf24'};border-radius:2px"></div></div>
     </div>

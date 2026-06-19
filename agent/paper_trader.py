@@ -71,8 +71,11 @@ def preclose_session(book: dict, opinions: List[dict], stock_data: Dict, pattern
     """Force-close all intraday positions before market close. Check swing exits."""
     book = _mark_to_market(book, stock_data)
     book = _update_trailing_stops(book, stock_data)
-    book = _close_intraday_positions(book, stock_data)
+    # _check_exits runs FIRST so intraday positions that hit target/stop during the day
+    # are exited at the correct level (target or stop price), not the end-of-day price.
+    # _close_intraday_positions then mops up any remaining intraday positions at close price.
     book, patterns_db = _check_exits(book, stock_data, session="preclose", patterns_db=patterns_db)
+    book = _close_intraday_positions(book, stock_data)
     book = _snapshot(book)
     return book, patterns_db
 
@@ -222,20 +225,26 @@ def _check_exits(book: dict, stock_data: Dict, session: str, patterns_db: Dict):
         high_   = data.get("session_high") or data.get("high", current)
         low_    = data.get("session_low")  or data.get("low",  current)
 
-        hit_target = (pos["action"] == "BUY"  and high_ >= pos["target"]) or \
-                     (pos["action"] == "SELL" and low_  <= pos["target"])
-        hit_stop   = (pos["action"] == "BUY"  and low_  <= pos["stop_loss"]) or \
-                     (pos["action"] == "SELL" and high_ >= pos["stop_loss"])
+        target_   = pos.get("target")
+        stop_loss_ = pos.get("stop_loss")
+        hit_target = bool(target_ and (
+            (pos["action"] == "BUY"  and high_ >= target_) or
+            (pos["action"] == "SELL" and low_  <= target_)
+        ))
+        hit_stop = bool(stop_loss_ and (
+            (pos["action"] == "BUY"  and low_  <= stop_loss_) or
+            (pos["action"] == "SELL" and high_ >= stop_loss_)
+        ))
 
         open_days = _days_between(pos["open_date"], today)
         expired   = open_days >= pos.get("max_held_days", 10)
 
         if hit_target or hit_stop or expired:
             if hit_target:
-                exit_price = pos["target"]
+                exit_price = target_
                 exit_reason = "target_hit"
             elif hit_stop:
-                exit_price = pos["stop_loss"]
+                exit_price = stop_loss_
                 exit_reason = "stop_hit"
             else:
                 exit_price = current

@@ -93,14 +93,42 @@ def rank_focus_stocks(
         # ── News sentiment (0–1) ──────────────────────────────────────────────
         news_raw = min(1.0, max(0.0, (news.get("score", 0) + 1) / 2))
 
+        # ── Regime / quality score (0–1) — uses the deep 2yr history + delivery ─
+        # Setups that align with the stock's long-term trend, sit at a constructive
+        # 52w position, and show institutional accumulation are statistically more
+        # likely to follow through. This is independent of the short-term technical.
+        regime_raw   = 0.5   # neutral default when history not yet available
+        long_trend   = d.get("hist_long_trend")
+        pos52        = d.get("hist_pct_of_52w_range")
+        vol_state    = d.get("hist_vol_state")
+        delivery_sig = d.get("delivery_signal", "neutral")
+        if long_trend in ("strong_uptrend", "uptrend"):
+            regime_raw += 0.20
+        elif long_trend in ("strong_downtrend", "downtrend"):
+            regime_raw -= 0.20
+        if pos52 is not None:
+            if 35 <= pos52 <= 80:      regime_raw += 0.10   # healthy mid-range room to run
+            elif pos52 > 92:           regime_raw += 0.05   # breakout zone (some risk)
+            elif pos52 < 10:           regime_raw -= 0.05   # falling-knife risk
+        if delivery_sig in ("accumulation", "strong_accumulation"):
+            regime_raw += 0.15
+        elif delivery_sig == "distribution":
+            regime_raw -= 0.15
+        if vol_state == "compressed":
+            regime_raw += 0.05   # primed for expansion
+        regime_raw = max(0.0, min(1.0, regime_raw))
+
         # ── Bayesian success probability ──────────────────────────────────────
-        # Prior: 0.50. Weight paper data more the more trades we have.
+        # Prior: 0.50. Weight paper data more the more trades we have. The prior
+        # blends technical, fundamental, pattern, news AND regime/quality so that
+        # genuinely high-quality setups earn a higher base probability.
         paper_weight = min(0.7, n_trades / 20)   # ramps to 0.7 after 20 trades
         prior_weight = 1.0 - paper_weight
         success_prob = round(
             paper_weight * paper_wr
-            + prior_weight * (0.35 * tech_raw + 0.30 * fund_score_raw
-                              + 0.20 * pat_score_raw + 0.15 * news_raw),
+            + prior_weight * (0.28 * tech_raw + 0.25 * fund_score_raw
+                              + 0.17 * pat_score_raw + 0.12 * news_raw
+                              + 0.18 * regime_raw),
             3
         )
 
@@ -110,11 +138,12 @@ def rank_focus_stocks(
 
         # ── Composite rank score (0–100) ──────────────────────────────────────
         composite = round(
-            success_prob * 40
-            + profit_prob * 20
-            + fund_score_raw * 20
-            + tech_raw * 15
-            + news_raw * 5,
+            success_prob * 38
+            + profit_prob * 18
+            + fund_score_raw * 18
+            + tech_raw * 14
+            + regime_raw * 8
+            + news_raw * 4,
             2
         ) * 100 / 100   # already in 0-100 range conceptually; cap at 100
 
@@ -129,6 +158,7 @@ def rank_focus_stocks(
             "composite_score":      round(composite, 2),
             "fund_score_pct":       round(fund_score_raw * 100, 1),
             "tech_score_pct":       round(tech_raw * 100, 1),
+            "regime_score_pct":     round(regime_raw * 100, 1),
             "paper_win_rate":       round(paper_wr * 100, 1),
             "paper_trades":         n_trades,
             "reliable_patterns":    reliable,

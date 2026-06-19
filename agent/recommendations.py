@@ -1,11 +1,13 @@
 """
 Recommendations Engine — the agent's final output to the user.
 
-4-layer scoring (totals 100 points):
-  Technical   40 pts — EMA alignment, RSI zone, MACD cross, BB, volume, S/R
-  Fundamental 30 pts — P/E, ROE, debt, revenue growth, promoter holding
-  News/Sent   20 pts — recent headline sentiment + corporate actions
-  Patterns    10 pts — historical reliability of patterns seen today
+Multi-layer scoring (capped at 100 points):
+  Technical    40 pts — EMA alignment, RSI zone, MACD cross, BB, volume, S/R
+  Fundamental  30 pts — P/E, ROE, debt, revenue growth, promoter holding
+  News/Sent    20 pts — recent headline sentiment + corporate actions
+  Patterns     10 pts — proven patterns + strong patterns firing today
+  Confluence   10 pts — bonus for N independent signal families agreeing
+  Paper bonus   5 pts — validated paper-trade performance on the stock
 
 Recommendation fires when:
   • Total confidence >= 65 points
@@ -341,8 +343,31 @@ def generate_recommendations(
         news_score = round(min(20, news_points + 10), 1)  # baseline 10 (neutral)
 
         # ── Layer 4: Pattern reliability score (0–10) ─────────────────────────
+        # Proven patterns (validated through closed trades) are worth the most, but
+        # a stock with no trade history yet would otherwise score 0 here forever
+        # (chicken-and-egg). So we also credit strong patterns firing TODAY at a
+        # lower weight until they earn a track record.
         reliable_pats = get_reliable_patterns_list(ticker, patterns, min_rel=0.55)
-        pat_score     = min(10, len(reliable_pats) * 2.5)
+        todays_pats   = opinion.get("patterns", [])
+        HIGH_VALUE_PATS = {
+            "supertrend_bullish", "supertrend_bearish", "ichimoku_bullish_kumo",
+            "ichimoku_bearish_kumo", "macd_bullish_divergence", "macd_bearish_divergence",
+            "52w_breakout", "engulfing_bullish", "engulfing_bearish", "morning_star",
+            "evening_star", "rsi_bullish_divergence", "rsi_bearish_divergence",
+            "pivot_r2_breakout", "volume_climax_bottom", "volume_climax_top",
+        }
+        unproven_strong = [p for p in todays_pats if p in HIGH_VALUE_PATS and p not in reliable_pats]
+        pat_score = min(10, len(reliable_pats) * 2.5 + len(unproven_strong) * 1.0)
+
+        # ── Multi-signal confluence ───────────────────────────────────────────
+        # The single biggest accuracy lever: several INDEPENDENT signal families
+        # agreeing. Used BOTH as a gate (>=3) AND as a scored bonus (0–10), since
+        # broad agreement is the strongest evidence a setup is real.
+        confluence = _confluence_score(opinion, d, news, fund)
+        if confluence["count"] < 3:
+            # Fewer than 3 independent confirmations — skip; quality over quantity
+            continue
+        confluence_bonus = min(10, max(0, confluence["count"] - 2) * 2.5)  # 3→2.5 ... 6+→10
 
         # ── Paper trade bonus (+0 to +5, not a gate) ──────────────────────────
         stock_trades = [t for t in book.get("closed_trades", []) if t["ticker"] == ticker]
@@ -351,17 +376,11 @@ def generate_recommendations(
         if stock_stats["total"] >= 3 and stock_stats["win_rate"] > 0.55:
             paper_bonus = 5.0  # small bonus for validated paper performance
 
-        total_confidence = round(tech_score + fund_score + news_score + pat_score + paper_bonus, 1)
+        # Total now includes confluence — capped at 100
+        total_confidence = round(min(100,
+            tech_score + fund_score + news_score + pat_score + confluence_bonus + paper_bonus), 1)
 
         if total_confidence < 65:
-            continue
-
-        # ── Multi-signal confluence gate ──────────────────────────────────────
-        # The single biggest accuracy lever: require several INDEPENDENT signal
-        # families to agree, not just a high score from one loud family.
-        confluence = _confluence_score(opinion, d, news, fund)
-        if confluence["count"] < 3:
-            # Fewer than 3 independent confirmations — skip; quality over quantity
             continue
 
         # ── Backtest this setup on the stock's own 2-year history ──────────────
@@ -377,30 +396,46 @@ def generate_recommendations(
         n_res  = nearest_strong_resistance(levels)
 
         # ── Stop loss and targets ─────────────────────────────────────────────
+        # Target 1 is the primary profit goal and must satisfy R:R >= 2.0. A nearby
+        # support/resistance is shown as an INTERIM level but never caps Target 1
+        # below the 2:1 floor — otherwise good setups get discarded just because a
+        # minor level sits close to price. We therefore size Target 1 from ATR to
+        # guarantee the R:R, and expose the S/R level separately as "interim".
         if opinion["signal"] == "BUY":
             atr_stop   = close - atr * ATR_STOP_MULTIPLIER
             sr_stop    = n_sup * 0.992 if n_sup > 0 else atr_stop
             stop_loss  = round(max(atr_stop, sr_stop), 2)
-            target1    = round(n_res if n_res > close else close + atr * 2.5, 2)
+            risk_amt   = max(close - stop_loss, 1e-6)
+            # Target 1 = max(2:1 R:R floor, ATR-based) so it always clears the gate
+            target1    = round(max(close + risk_amt * 2.0, close + atr * 2.5), 2)
             target2    = round(close + atr * ATR_TARGET_MULTIPLIER, 2)
+            interim_lvl = round(n_res, 2) if (n_res > close) else 0
             entry_low  = round(close * 0.998, 2)
             entry_high = round(close * 1.005, 2)
         else:
             atr_stop   = close + atr * ATR_STOP_MULTIPLIER
             sr_stop    = n_res * 1.008 if n_res > 0 else atr_stop
             stop_loss  = round(min(atr_stop, sr_stop), 2)
-            target1    = round(n_sup if n_sup < close else close - atr * 2.5, 2)
+            risk_amt   = max(stop_loss - close, 1e-6)
+            target1    = round(min(close - risk_amt * 2.0, close - atr * 2.5), 2)
             target2    = round(close - atr * ATR_TARGET_MULTIPLIER, 2)
+            interim_lvl = round(n_sup, 2) if (0 < n_sup < close) else 0
             entry_low  = round(close * 0.995, 2)
             entry_high = round(close * 1.002, 2)
 
-        risk_amt = abs(close - stop_loss)
+        # Target 2 should always be beyond Target 1 ( atr mult can be < the 2:1 floor)
+        if opinion["signal"] == "BUY":
+            target2 = round(max(target2, target1 + atr), 2)
+        else:
+            target2 = round(min(target2, target1 - atr), 2)
+
         rew1_amt = abs(target1 - close)
         rew2_amt = abs(target2 - close)
         risk_pct = round(risk_amt / close * 100, 2)
         rr1      = round(rew1_amt / risk_amt, 2) if risk_amt > 0 else 0
         rr2      = round(rew2_amt / risk_amt, 2) if risk_amt > 0 else 0
 
+        # Guarantee the floor (should always pass now, but keep as a guard)
         if rr1 < 2.0:
             continue
 
@@ -587,6 +622,7 @@ def generate_recommendations(
             "fund_score":        fund_score,
             "news_score":        news_score,
             "pattern_score":     pat_score,
+            "confluence_bonus":  confluence_bonus,
             "paper_bonus":       paper_bonus,
 
             # Probability scores — blended (ranking engine + own-history backtest)
@@ -631,6 +667,7 @@ def generate_recommendations(
 
             "nearest_support":    n_sup,
             "nearest_resistance": n_res,
+            "interim_level":      interim_lvl,   # nearby S/R to watch en route to T1
 
             # Fundamentals snapshot (all metrics for dashboard display)
             "pe_ratio":          fund.get("pe_ratio"),

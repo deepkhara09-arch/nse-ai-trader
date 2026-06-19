@@ -735,6 +735,55 @@ def analyse_stock(
     max_score = max(buy_score, sell_score)
     confidence = min(round((max_score / 10) * 100, 1), 95)
 
+    # ── Coach memory — read lessons this tool has already learned ─────────────
+    # If the coach flagged caution on this ticker+setup, reduce confidence slightly.
+    # If coach flagged it as reliable, add a small boost.
+    # This is how the tool accumulates institutional memory across sessions.
+    coach_notes  = []
+    coach_caution = False
+    try:
+        from agent.llm_coach import get_lessons_for, load_coach_memory
+        _coach_mem = load_coach_memory()
+        # Pick top pattern as setup key (most important signal that fired)
+        top_pattern = patterns[0] if patterns else "general"
+        lessons = get_lessons_for(ticker, top_pattern, _coach_mem)
+        for lesson in lessons:
+            watch = lesson.get("what_to_watch", "")
+            happened = lesson.get("what_happened", "")
+            if watch:
+                coach_notes.append(f"Coach: {watch}")
+            # If coach lesson is about a loss on this setup, add slight caution
+            if "fail" in happened.lower() or "stop" in happened.lower() or "loss" in happened.lower():
+                coach_caution = True
+        if coach_caution and signal != "WATCH":
+            confidence = max(confidence - 5, 30)   # slight reduction — not a veto
+            if coach_notes:
+                buy_reasons.append(f"⚠ {coach_notes[0]}")
+    except Exception:
+        pass   # coach is always optional — never block trading logic
+
+    # ── Queue a question if a rare signal combination appeared ────────────────
+    # The tool asks the coach about setups it hasn't seen much of yet.
+    try:
+        _rare_patterns = [p for p in patterns if p not in (tk_known.get("reliable_patterns") or {})]
+        if len(_rare_patterns) >= 2 and signal != "WATCH":
+            from agent.llm_coach import queue_question
+            q = (
+                f"In Indian NSE markets, what does the combination of "
+                f"{', '.join(_rare_patterns[:3])} mean for a {style} trade on "
+                f"{ticker.replace('.NS','')}? "
+                f"Current RSI={rsi:.0f}, MACD hist={macd_hist:+.4f}, "
+                f"Vol={vol_rel:.1f}x average. Signal is {signal}."
+            )
+            queue_question(q, {
+                "ticker":   ticker,
+                "signal":   signal,
+                "patterns": ", ".join(_rare_patterns[:3]),
+                "rsi":      round(rsi, 1),
+            })
+    except Exception:
+        pass
+
     return {
         "ticker":       ticker,
         "date":         date.today().isoformat(),
@@ -755,6 +804,7 @@ def analyse_stock(
         "sell_reasons": sell_reasons,
         "hold_days":    "5–10 days" if style == "swing" else "same day",
         "news_score":   round(news_score, 3),
+        "coach_notes":  coach_notes,
     }
 
 

@@ -46,6 +46,7 @@ from agent.sector_tracker import (
 from agent.rec_changelog import compute_changes, save_changelog, load_changelog
 from agent.delivery_fetcher import fetch_delivery, save_delivery, inject_delivery
 from agent.attribution import update_attribution, aggregate_attribution
+from agent.llm_coach import run_coach, load_coach_memory
 
 
 def run():
@@ -234,6 +235,15 @@ def run():
 
         if session == "preclose":
             state = advance_session(state, session)
+
+            # ── LLM Coach — end-of-day learning session ───────────────────────
+            # Runs after all trades are settled. Reviews outcomes, answers queued
+            # questions, and generates structural suggestions. Non-blocking.
+            try:
+                run_coach(book.get("closed_trades", []), patterns, market_health)
+                print("[coach] Coach session complete")
+            except Exception as e:
+                print(f"[coach] Session failed (non-fatal): {e}")
 
             # ── Dynamic focus refresh: promote/demote stocks ──────────────────
             _maybe_refresh_focus(state, merged, patterns, nd, fund, book, market_health)
@@ -454,8 +464,10 @@ def _refresh_outputs(state: dict, market_health: dict, session: str) -> None:
         ranked = rank_focus_stocks(focus, sd, pats, nd, fund, book, market_health) if focus else []
 
         attr_summary = aggregate_attribution(pats)
+        coach_mem    = load_coach_memory()
         build_dashboard(state, sd, book, pats, decs, nd, market_health,
-                        recs, fund, ranked, sectors, clog, attr_summary)
+                        recs, fund, ranked, sectors, clog, attr_summary,
+                        coach_memory=coach_mem)
 
     except Exception as e:
         import traceback

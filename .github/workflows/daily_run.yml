@@ -66,6 +66,7 @@ jobs:
       - name: Run agent
         env:
           SESSION: ${{ steps.session.outputs.name }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python -m agent.main
 
       - name: Commit brain files and dashboard

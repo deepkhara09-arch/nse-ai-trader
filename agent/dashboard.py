@@ -29,6 +29,7 @@ def build_dashboard(
     sector_scores: Dict = None,
     changelog: List = None,
     attribution: Dict = None,
+    coach_memory: Dict = None,
 ) -> None:
     os.makedirs("docs", exist_ok=True)
     if market_health is None:
@@ -70,6 +71,7 @@ def build_dashboard(
         portfolio, pnl_total, pnl_pct, nifty, vix, mood,
         trade_ok, mkt_warn, recommendations, market_health, fundamentals,
         ranked_stocks, sector_scores, changelog, attribution or {},
+        coach_memory=coach_memory or {},
     )
 
     with open(DASHBOARD_FILE, "w", encoding="utf-8") as f:
@@ -86,13 +88,14 @@ def _build_html(
     focus, phase, day, alert, now_utc, portfolio, pnl_total, pnl_pct,
     nifty, vix, mood, trade_ok, mkt_warn, recommendations, market_health,
     fundamentals=None, ranked_stocks=None, sector_scores=None, changelog=None,
-    attribution=None,
+    attribution=None, coach_memory=None,
 ):
     fundamentals  = fundamentals  or {}
     ranked_stocks = ranked_stocks or []
     sector_scores = sector_scores or {}
     changelog     = changelog     or []
     attribution   = attribution   or {}
+    coach_memory  = coach_memory  or {}
     nifty_val = nifty.get("value", "")
     vix_val   = vix.get("value", "")
     nifty_str = f"{nifty_val:,.0f}" if isinstance(nifty_val, (int, float)) else "—"
@@ -138,6 +141,7 @@ def _build_html(
   {_section_trades(book)}
   {_section_research(state, decisions)}
   {_section_attribution(attribution)}
+  {_section_coach(coach_memory)}
   {_section_runlog(state)}
   {_section_brain(focus, patterns)}
 </div>
@@ -631,6 +635,7 @@ def _nav() -> str:
   <a href="#trades">Paper Trades</a>
   <a href="#research">Research Log</a>
   <a href="#attribution">Attribution</a>
+  <a href="#coach">Coach</a>
   <a href="#runlog">Run Log</a>
   <a href="#brain">Brain Insights</a>
 </nav>"""
@@ -1851,6 +1856,89 @@ def _section_attribution(attribution: dict) -> str:
       {_table(by_style, "Style")}
     </div>
   </div>
+</div>"""
+
+
+def _section_coach(coach_memory: dict) -> str:
+    if not coach_memory or (
+        not coach_memory.get("recent_lessons") and
+        not coach_memory.get("structural_suggestions")
+    ):
+        return f"""<div class="section" id="coach">
+  <h2>Coach Insights <span>AI learning journal &mdash; powered by Gemini</span></h2>
+  <div class="card" style="padding:20px;text-align:center;color:var(--muted);font-size:.8rem">
+    <div style="font-size:1.4rem;margin-bottom:8px">&#129504;</div>
+    <div style="font-weight:700;color:var(--text);margin-bottom:4px">Coach hasn't run yet</div>
+    The coach reviews trades and learns at preclose each day.<br>
+    Lessons will appear here after the first paper trades are closed.
+  </div>
+</div>"""
+
+    last_run   = coach_memory.get("last_run", "")
+    sug_date   = coach_memory.get("suggestions_date", "")
+    lessons    = coach_memory.get("recent_lessons", [])
+    suggests   = coach_memory.get("structural_suggestions", [])
+    total_keys = len(coach_memory.get("lessons", {}))
+
+    # ── Structural suggestions ────────────────────────────────────────────────
+    sug_html = ""
+    if suggests:
+        items = "".join(
+            f'<li style="margin-bottom:8px;line-height:1.5">'
+            f'<span style="color:var(--cyan);margin-right:6px">&#10148;</span>{s}</li>'
+            for s in suggests
+        )
+        sug_html = f"""<div class="card" style="margin-bottom:14px">
+  <div style="font-size:.68rem;color:var(--muted);margin-bottom:8px;text-transform:uppercase;letter-spacing:.05em">
+    Structural suggestions &mdash; {sug_date or "recent"}
+  </div>
+  <ul style="margin:0;padding-left:4px;list-style:none;font-size:.78rem">{items}</ul>
+</div>"""
+
+    # ── Recent lessons ────────────────────────────────────────────────────────
+    lessons_html = ""
+    if lessons:
+        rows = ""
+        for l in lessons[:15]:
+            ticker   = l.get("ticker", "").replace(".NS", "") or "General"
+            setup    = l.get("setup_key", "").replace("_", " ")
+            happened = l.get("what_happened", "")
+            watch    = l.get("what_to_watch", "")
+            conf     = l.get("confidence", "medium")
+            source   = l.get("source", "")
+            ldate    = l.get("date", "")
+            conf_col = {"high": "var(--green)", "medium": "var(--yellow)", "low": "var(--muted)"}.get(conf, "var(--muted)")
+            src_icon = "&#128196;" if source == "trade_review" else "&#10067;"   # doc or question mark
+
+            rows += f"""<div class="card" style="margin-bottom:10px;padding:12px 14px">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;flex-wrap:wrap;gap:4px">
+    <div style="display:flex;align-items:center;gap:6px">
+      <span style="font-size:.8rem">{src_icon}</span>
+      <strong style="font-size:.82rem">{ticker}</strong>
+      <span class="pill pill-blue" style="font-size:.58rem">{setup[:30]}</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:6px">
+      <span style="font-size:.62rem;color:{conf_col}">{conf} confidence</span>
+      <span style="font-size:.6rem;color:var(--muted)">{ldate}</span>
+    </div>
+  </div>
+  {f'<div style="font-size:.75rem;color:var(--text);margin-bottom:4px;line-height:1.4">{happened[:200]}</div>' if happened else ""}
+  {f'<div style="font-size:.72rem;color:var(--cyan);line-height:1.4">&#9654; {watch[:150]}</div>' if watch else ""}
+</div>"""
+
+        lessons_html = f"""<div style="margin-bottom:8px">
+  <div style="font-size:.68rem;color:var(--muted);margin-bottom:8px;text-transform:uppercase;letter-spacing:.05em">
+    Lessons learned &mdash; {len(lessons)} recent &mdash; {total_keys} patterns in memory
+  </div>
+  {rows}
+</div>"""
+
+    return f"""<div class="section" id="coach">
+  <h2>Coach Insights
+    <span>Gemini teaches the tool &mdash; last session {last_run or "never"}</span>
+  </h2>
+  {sug_html}
+  {lessons_html}
 </div>"""
 
 

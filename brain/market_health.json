@@ -1,37 +1,37 @@
 {
-  "date": "2026-06-18",
-  "session": "morning",
+  "date": "2026-06-19",
+  "session": "midday",
   "nifty": {
     "symbol": "^NSEI",
-    "value": 24085.7,
-    "day_change_pct": 0.4,
-    "trend_5d": "strong_up",
+    "value": 24168.0,
+    "day_change_pct": 0.34,
+    "trend_5d": "up",
     "trend_20d": "unknown"
   },
   "vix": {
-    "value": 13.19,
+    "value": 12.67,
     "level": "normal"
   },
   "bank_nifty": {
     "symbol": "^NSEBANK",
-    "value": 57585.05,
-    "day_change_pct": 0.5,
-    "trend_5d": "strong_up",
+    "value": 57963.8,
+    "day_change_pct": 0.66,
+    "trend_5d": "up",
     "trend_20d": "unknown"
   },
   "sectors": {
     "IT": {
       "symbol": "ITBEES.NS",
-      "value": 31.9,
-      "day_change_pct": 0.57,
-      "trend_5d": "strong_up",
+      "value": 31.62,
+      "day_change_pct": -0.88,
+      "trend_5d": "up",
       "trend_20d": "unknown"
     },
     "Pharma": {
       "symbol": "PHARMABEES.NS",
-      "value": 24.75,
-      "day_change_pct": -0.2,
-      "trend_5d": "down",
+      "value": 24.9,
+      "day_change_pct": 0.61,
+      "trend_5d": "sideways",
       "trend_20d": "unknown"
     }
   },

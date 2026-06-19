@@ -222,8 +222,10 @@ def _check_exits(book: dict, stock_data: Dict, session: str, patterns_db: Dict):
         ticker  = pos["ticker"]
         data    = stock_data.get(ticker, {}).get("latest", {})
         current = data.get("current_price") or data.get("close", pos["entry"])
-        high_   = data.get("session_high") or data.get("high", current)
-        low_    = data.get("session_low")  or data.get("low",  current)
+        # Prefer live intraday day_high/day_low (populated by NSE quote API).
+        # Fall back to daily bar high/low (yesterday's completed bar) if market closed.
+        high_   = data.get("session_high") or data.get("day_high") or data.get("high", current)
+        low_    = data.get("session_low")  or data.get("day_low")  or data.get("low",  current)
 
         target_   = pos.get("target")
         stop_loss_ = pos.get("stop_loss")

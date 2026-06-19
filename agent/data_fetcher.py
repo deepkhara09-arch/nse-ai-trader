@@ -163,6 +163,9 @@ def _download_daily(ticker: str, start: str, end: str) -> pd.DataFrame:
 # ── Public API ────────────────────────────────────────────────────────────────
 
 def fetch_stock_data(tickers: List[str], session: str = "morning") -> Dict:
+    # Warm NSE session once so live quote API calls have valid cookies
+    _warm_nse_session()
+
     result = {}
     for ticker in tickers:
         try:
@@ -204,6 +207,54 @@ def merge_stock_data(existing: Dict, fresh: Dict) -> Dict:
 
 # ── Internal ──────────────────────────────────────────────────────────────────
 
+def _fetch_intraday_quote(symbol: str) -> dict:
+    """
+    Fetch live intraday quote from NSE's free quote API.
+    Returns {current_price, day_high, day_low, day_open, prev_close, volume}
+    or empty dict on failure.
+
+    NSE quote API is free, no auth, but requires the Referer header.
+    Symbol format: RELIANCE (no .NS suffix).
+    """
+    url = f"https://www.nseindia.com/api/quote-equity?symbol={symbol}"
+    try:
+        r = _NSE_SESSION.get(url, timeout=10)
+        if r.status_code != 200:
+            return {}
+        data = r.json()
+        pd_  = data.get("priceInfo", {})
+        if not pd_:
+            return {}
+        return {
+            "current_price": float(pd_.get("lastPrice",   0) or 0),
+            "day_high":      float(pd_.get("intraDayHighLow", {}).get("max", 0) or pd_.get("high", 0) or 0),
+            "day_low":       float(pd_.get("intraDayHighLow", {}).get("min", 0) or pd_.get("low",  0) or 0),
+            "day_open":      float(pd_.get("open",  0) or 0),
+            "prev_close":    float(pd_.get("previousClose", 0) or 0),
+            "volume":        int(data.get("marketDeptOrderBook", {}).get("tradeInfo", {}).get("totalTradedVolume", 0) or 0),
+        }
+    except Exception:
+        return {}
+
+
+# Shared NSE session with required headers for live API
+_NSE_SESSION = requests.Session()
+_NSE_SESSION.headers.update({
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+    "Referer":    "https://www.nseindia.com/",
+    "Accept":     "application/json, text/plain, */*",
+    "Accept-Language": "en-US,en;q=0.9",
+})
+
+def _warm_nse_session() -> bool:
+    """Visit NSE homepage to get session cookies before hitting the API."""
+    try:
+        _NSE_SESSION.get("https://www.nseindia.com", timeout=10)
+        return True
+    except Exception:
+        return False
+
+
 def _fetch_one(ticker: str, session: str) -> dict:
     today       = date.today()
     start_daily = today - timedelta(days=120)
@@ -225,13 +276,39 @@ def _fetch_one(ticker: str, session: str) -> dict:
     prev_bar  = _bar_dict(df_daily, -2)
     prev2_bar = _bar_dict(df_daily, -3)
 
+    # ── Live intraday quote: overwrite high/low/close with today's real values ──
+    # Stooq/YF daily bars only include completed days, so during market hours
+    # `latest.high` and `latest.low` are yesterday's values — useless for
+    # detecting if today's price has hit a target or stop loss.
+    # NSE's free quote API gives us today's running high/low/last price.
+    symbol = ticker.replace(".NS", "")
+    intraday = _fetch_intraday_quote(symbol)
+    if intraday and intraday.get("current_price", 0) > 0:
+        # Only inject if market is open (current_price differs from prev_close)
+        cp = intraday["current_price"]
+        latest["current_price"] = cp
+        # day_high/day_low are today's running extremes — what we need for exit detection
+        if intraday.get("day_high", 0) > 0:
+            latest["session_high"] = intraday["day_high"]
+            latest["day_high"]     = intraday["day_high"]
+        if intraday.get("day_low", 0) > 0:
+            latest["session_low"] = intraday["day_low"]
+            latest["day_low"]     = intraday["day_low"]
+        if intraday.get("day_open", 0) > 0:
+            latest["day_open"] = intraday["day_open"]
+        latest["intraday_fetched"] = True
+    else:
+        # Market closed or API unavailable — use daily close as best proxy
+        latest["current_price"]    = latest.get("close", 0)
+        latest["intraday_fetched"] = False
+
     return {
         "ticker":             ticker,
         "fetched_at":         datetime.utcnow().isoformat(),
         "session":            session,
         "latest":             latest,
         "daily":              daily_summary,
-        "intraday":           {},
+        "intraday":           intraday,
         "price_history_60d":  daily_summary.get("price_history_60d", []),
         "volume_history_20d": daily_summary.get("volume_history_20d", []),
         "prev_bar":           prev_bar,

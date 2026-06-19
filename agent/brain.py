@@ -694,6 +694,50 @@ def analyse_stock(
         if buy_score > sell_score:
             buy_score -= 1.0; buy_reasons.append(f"Delivery {delivery_pct:.0f}% weak — move may be intraday driven")
 
+    # ── Historical regime context (from 2-year history engine) ─────────────────
+    # These fields are injected into latest{} by main.py from history_context.json.
+    # They let the brain reason about WHERE in its long-term life a stock is, and
+    # adapt to the stock's own personality.
+    hist_long_trend = d.get("hist_long_trend")        # strong_uptrend / uptrend / ...
+    hist_52w_pos    = d.get("hist_pct_of_52w_range")  # 0=at 52w low, 100=at 52w high
+    hist_vol_state  = d.get("hist_vol_state")         # elevated / normal / compressed
+    hist_drawdown   = d.get("hist_drawdown_from_high")
+    personality     = d.get("hist_personality")       # trender / mean_reverter / choppy
+
+    if hist_long_trend in ("strong_uptrend", "uptrend"):
+        if buy_score > sell_score:
+            buy_score += 1.0; buy_reasons.append(f"In a long-term {hist_long_trend.replace('_',' ')} (2yr) — trend on our side")
+    elif hist_long_trend in ("strong_downtrend", "downtrend"):
+        if sell_score > buy_score:
+            sell_score += 1.0; sell_reasons.append(f"In a long-term {hist_long_trend.replace('_',' ')} (2yr)")
+        elif buy_score > sell_score:
+            buy_score -= 0.8; buy_reasons.append("⚠ Buying against a long-term downtrend — lower conviction")
+
+    if hist_52w_pos is not None:
+        if hist_52w_pos >= 92 and buy_score > sell_score:
+            buy_score += 0.8; buy_reasons.append(f"Near 52-week high ({hist_52w_pos:.0f}% of range) — breakout zone")
+        elif hist_52w_pos <= 12 and rsi < 40:
+            buy_score += 1.0; buy_reasons.append(f"Near 52-week low ({hist_52w_pos:.0f}% of range) + oversold — value reversal setup")
+
+    # Compressed volatility historically precedes expansion — favour breakouts
+    if hist_vol_state == "compressed" and buy_score > sell_score and macd_hist > 0:
+        buy_score += 0.5; buy_reasons.append("Volatility compressed vs its norm — primed for an expansion move")
+    if hist_vol_state == "elevated":
+        # In abnormally high vol, demand more — fade conviction slightly both ways
+        buy_score *= 0.92; sell_score *= 0.92
+
+    # Adapt to the stock's personality
+    if personality == "mean_reverter":
+        # extremes snap back — boost reversal logic, trim trend-chasing
+        if rsi < 35 and buy_score > sell_score:
+            buy_score += 0.6; buy_reasons.append("Mean-reverting stock at oversold extreme — fade the dip")
+        if hist_52w_pos is not None and hist_52w_pos >= 90 and buy_score > sell_score:
+            buy_score -= 0.5   # chasing a mean-reverter at highs is risky
+    elif personality == "trender":
+        # trends persist — reward momentum alignment
+        if hist_long_trend in ("uptrend", "strong_uptrend") and buy_score > sell_score:
+            buy_score += 0.5; buy_reasons.append("Clean trender aligned with its long-term uptrend")
+
     buy_score  = round(buy_score,  2)
     sell_score = round(sell_score, 2)
     gap = abs(buy_score - sell_score)

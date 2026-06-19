@@ -206,6 +206,70 @@ def _data_confidence(paper_trades: int) -> dict:
             "note": f"Only {paper_trades} paper trade(s) — probability is an indicator-based estimate, not yet proven"}
 
 
+def _confluence_score(opinion: dict, d: dict, news: dict, fund: dict) -> dict:
+    """
+    Count how many INDEPENDENT signal families confirm the trade direction.
+    Independent families (not overlapping math) give a true confluence read:
+      1. Trend structure (EMA stack / long-term trend)
+      2. Momentum (RSI + MACD)
+      3. Volume / delivery (real participation)
+      4. Pattern (candlestick / chart pattern fired)
+      5. News sentiment
+      6. Fundamentals (only counts for longer holds)
+      7. Historical regime (52w position / long trend agree)
+    Returns {count, families} — count is how many agree with the signal.
+    """
+    sig      = opinion["signal"]
+    families = []
+
+    # 1. Trend structure
+    ema_s = d.get("ema_short", 0); ema_l = d.get("ema_long", 0); ema_t = d.get("ema_trend", 0)
+    if sig == "BUY" and ema_s > ema_l > ema_t:
+        families.append("trend")
+    elif sig == "SELL" and ema_s < ema_l < ema_t:
+        families.append("trend")
+    elif d.get("hist_long_trend") in (("uptrend", "strong_uptrend") if sig == "BUY"
+                                      else ("downtrend", "strong_downtrend")):
+        families.append("trend")
+
+    # 2. Momentum
+    rsi = d.get("rsi", 50); macd_h = d.get("macd_hist", 0)
+    if sig == "BUY" and macd_h > 0 and rsi > 45:
+        families.append("momentum")
+    elif sig == "SELL" and macd_h < 0 and rsi < 55:
+        families.append("momentum")
+
+    # 3. Volume / delivery
+    vol_rel = d.get("vol_rel", 1); dsig = d.get("delivery_signal", "neutral")
+    if vol_rel >= 1.3 or dsig in ("accumulation", "strong_accumulation",
+                                  "distribution"):
+        families.append("volume")
+
+    # 4. Pattern
+    pats = set(opinion.get("patterns", []))
+    strong_pats = pats - {"vwap_magnet", "adx_ranging_market", "pivot_point_test"}
+    if strong_pats:
+        families.append("pattern")
+
+    # 5. News
+    ns = news.get("score", 0)
+    if (sig == "BUY" and ns > 0.1) or (sig == "SELL" and ns < -0.1):
+        families.append("news")
+
+    # 6. Fundamentals
+    from agent.fundamentals_fetcher import score_fundamentals
+    if fund and score_fundamentals(fund) >= 60 and sig == "BUY":
+        families.append("fundamentals")
+
+    # 7. Historical regime
+    pos = d.get("hist_pct_of_52w_range")
+    if pos is not None:
+        if (sig == "BUY" and (pos >= 85 or pos <= 15)) or (sig == "SELL" and pos >= 80):
+            families.append("regime")
+
+    return {"count": len(families), "families": families}
+
+
 def generate_recommendations(
     state: dict,
     stock_data: Dict,
@@ -221,6 +285,10 @@ def generate_recommendations(
     market_mood = market_health.get("market_mood", "neutral")
     fundamentals = fundamentals or {}
     recs = []
+
+    # Load deep 2-year history context once (for backtest + regime in confluence)
+    from agent.history_engine import load_history_context
+    history_ctx = load_history_context()
 
     # Don't generate recommendations when market is in danger mode
     if not trade_ok:
@@ -288,6 +356,18 @@ def generate_recommendations(
         if total_confidence < 65:
             continue
 
+        # ── Multi-signal confluence gate ──────────────────────────────────────
+        # The single biggest accuracy lever: require several INDEPENDENT signal
+        # families to agree, not just a high score from one loud family.
+        confluence = _confluence_score(opinion, d, news, fund)
+        if confluence["count"] < 3:
+            # Fewer than 3 independent confirmations — skip; quality over quantity
+            continue
+
+        # ── Backtest this setup on the stock's own 2-year history ──────────────
+        from agent.history_engine import backtest_setup
+        bt = backtest_setup(ticker, opinion["signal"], d, history_ctx)
+
         # ── Support/Resistance ────────────────────────────────────────────────
         ph     = entry_data.get("price_history_60d", [])
         vh     = entry_data.get("volume_history_20d", [])
@@ -348,11 +428,28 @@ def generate_recommendations(
         # ── Explicit direction wording ────────────────────────────────────────
         direction       = "BUY (go long)" if opinion["signal"] == "BUY" else "SELL / SHORT (go short)"
         direction_short = "BUY" if opinion["signal"] == "BUY" else "SELL"
-        # One-line plain-English headline the user can act on directly
-        headline = (
-            f"{direction_short} {ticker.replace('.NS','')} — {trade_type} "
-            f"({'long' if opinion['signal']=='BUY' else 'short'} setup)"
-        )
+        nse             = ticker.replace(".NS", "")
+
+        # ── Plain-English INTENTION the user can act on directly ───────────────
+        # One clear verdict per stock — what the tool wants to do and why.
+        if trade_type_key == "intraday":
+            intention = (
+                f"{direction_short} {nse} for an INTRADAY trade today — "
+                f"enter in the first hour and square off before close. Same-day move only."
+            )
+        elif trade_type_key == "long_term":
+            intention = (
+                f"{direction_short} {nse} as a LONG-TERM hold — "
+                f"accumulate and hold for weeks to months; backed by strong fundamentals "
+                f"and a long-term uptrend."
+            )
+        else:
+            intention = (
+                f"{direction_short} {nse} for a SHORT-TERM swing — "
+                f"buy and hold {('5–15 days' if opinion['signal']=='BUY' else 'for a few days')} "
+                f"to ride the move, then exit at target or trail the stop."
+            )
+        headline = f"{direction_short} {nse} — {trade_type} ({'long' if opinion['signal']=='BUY' else 'short'} setup)"
 
         # ── Build full reasoning ──────────────────────────────────────────────
         reasons = list(opinion.get("buy_reasons" if opinion["signal"] == "BUY"
@@ -412,7 +509,29 @@ def generate_recommendations(
                 f"₹{stock_stats['expectancy']:+.0f}/trade expectancy"
             )
 
+        # ── Confluence + backtest reasoning ───────────────────────────────────
+        reasons.append(
+            f"Confluence: {confluence['count']} independent signal families agree "
+            f"({', '.join(confluence['families'])})"
+        )
+        if bt.get("tested"):
+            reasons.append(
+                f"History backtest: this kind of {direction_short} setup worked "
+                f"{bt['hit_rate_5d']*100:.0f}% of the time over ~1 week on this stock "
+                f"(sample: {bt['sample']})"
+            )
+
         rank_info = rank_table.get(ticker, {})
+
+        # ── Blended success probability ───────────────────────────────────────
+        # Combine the ranking-engine probability with the stock's own historical
+        # backtest hit-rate. Backtest only nudges it (weight 0.3) so one is a
+        # sanity check on the other, not a blind override.
+        base_success = rank_info.get("success_probability", 0.5)
+        if bt.get("tested") and bt.get("hit_rate_5d") is not None:
+            blended_success = round(0.7 * base_success + 0.3 * bt["hit_rate_5d"], 3)
+        else:
+            blended_success = base_success
 
         # Validity metadata — tells the user when this rec expires and if it's stale
         generated_at    = datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC")
@@ -470,12 +589,32 @@ def generate_recommendations(
             "pattern_score":     pat_score,
             "paper_bonus":       paper_bonus,
 
-            # Probability scores from ranking engine
-            "success_probability": rank_info.get("success_probability", 0.5),
+            # Probability scores — blended (ranking engine + own-history backtest)
+            "success_probability": blended_success,
+            "base_success_prob":   base_success,
             "profit_probability":  rank_info.get("profit_probability", 0.0),
             "composite_score":     rank_info.get("composite_score", 0.0),
             "focus_rank":          rank_info.get("rank", 99),
             "rank_delta":          rank_info.get("rank_delta", 0),
+
+            # Intention — one clear plain-English verdict for this stock
+            "intention":           intention,
+
+            # Confluence — how many independent families agree
+            "confluence_count":    confluence["count"],
+            "confluence_families": confluence["families"],
+
+            # Backtest on the stock's own 2-year history
+            "backtest_tested":     bt.get("tested", False),
+            "backtest_hit_5d":     bt.get("hit_rate_5d"),
+            "backtest_hit_10d":    bt.get("hit_rate_10d"),
+            "backtest_sample":     bt.get("sample", 0),
+
+            # Historical regime snapshot (for display + transparency)
+            "hist_long_trend":     d.get("hist_long_trend"),
+            "hist_52w_position":   d.get("hist_pct_of_52w_range"),
+            "hist_personality":    d.get("hist_personality"),
+            "hist_vol_state":      d.get("hist_vol_state"),
 
             # Data-confidence: how trustworthy the probability is (based on real trades)
             "data_confidence":      _data_confidence(len(stock_trades))["tag"],

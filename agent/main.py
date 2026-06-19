@@ -47,6 +47,7 @@ from agent.rec_changelog import compute_changes, save_changelog, load_changelog
 from agent.delivery_fetcher import fetch_delivery, save_delivery, inject_delivery
 from agent.attribution import update_attribution, aggregate_attribution
 from agent.llm_coach import run_coach, load_coach_memory
+from agent.history_engine import fetch_history_context, save_history_context, load_history_context
 
 
 def run():
@@ -104,6 +105,10 @@ def run():
                 print("[main] Fetching fundamentals for focus stocks...")
                 fund_data = fetch_fundamentals([t for t, _ in top])
                 save_fundamentals(fund_data)
+                # Deep 2-year history context for the new focus stocks
+                print("[main] Building 2-year history context for focus stocks...")
+                hist_ctx = fetch_history_context([t for t, _ in top])
+                save_history_context(hist_ctx)
                 state = set_phase(state, "analysis", note)
                 # Background batch pipeline is auto-seeded by _tick_background_cohorts()
                 # on the first analysis preclose (it creates batch #1 when the list is
@@ -125,6 +130,7 @@ def run():
         # Inject earnings days_to_earnings from fundamentals into latest dict
         fund_anal = load_fundamentals()
         merged_anal = _inject_fund_context(merged_anal, fund_anal)
+        merged_anal = _inject_history_context(merged_anal, load_history_context())
         save_stock_data(merged_anal)
 
         if session == "preclose":
@@ -134,6 +140,7 @@ def run():
             if state.get("day", 1) % 5 == 0:
                 fund_data = fetch_fundamentals(focus)
                 save_fundamentals(fund_data)
+                save_history_context(fetch_history_context(focus))   # refresh 2yr context weekly
             # Fetch and inject delivery % data into stock latest dicts
             try:
                 delivery_data = fetch_delivery(focus)
@@ -177,6 +184,7 @@ def run():
         merged = inject_sector_momentum(merged, sector_scores)
         fund   = load_fundamentals()
         merged = _inject_fund_context(merged, fund)
+        merged = _inject_history_context(merged, load_history_context())
         save_stock_data(merged)
 
         if session == "preclose":
@@ -253,10 +261,11 @@ def run():
             state = load_state()
             focus = state.get("focus_stocks", focus)
 
-            # ── Refresh fundamentals weekly ───────────────────────────────────
+            # ── Refresh fundamentals + 2yr history weekly ─────────────────────
             if state.get("day", 1) % 5 == 0:
                 fund_data = fetch_fundamentals(focus)
                 save_fundamentals(fund_data)
+                save_history_context(fetch_history_context(focus))
 
             # ── Parallel background cohort exploration ────────────────────────
             _tick_background_cohorts(state, session)
@@ -422,10 +431,11 @@ def _maybe_refresh_focus(state, stock_data, patterns, news_data, fund, book, mar
         note = f"Focus refresh — promoted: {[t.replace('.NS','') for t in promoted]} | " \
                f"demoted: {[t.replace('.NS','') for t in demoted]}"
         state = add_brain_note(state, note)
-        # Fetch fundamentals for any newly promoted stocks
+        # Fetch fundamentals + 2yr history for any newly promoted stocks
         if promoted:
             new_fund = fetch_fundamentals(promoted)
             save_fundamentals(new_fund)
+            save_history_context(fetch_history_context(promoted))
         save_state(state)
 
 
@@ -442,6 +452,31 @@ def _inject_fund_context(stock_data: dict, fund: dict) -> dict:
             d["week52_high"] = f.get("week52_high", 0)
         if "week52_low" in f and d.get("week52_low", 0) == 0:
             d["week52_low"] = f.get("week52_low", 0)
+    return stock_data
+
+
+def _inject_history_context(stock_data: dict, history_ctx: dict) -> dict:
+    """
+    Flatten the 2-year history regime/personality fields into each stock's
+    latest{} so the brain can read them via d.get(...) without a signature change.
+    """
+    for ticker, entry in stock_data.items():
+        ctx = history_ctx.get(ticker)
+        if not ctx or "latest" not in entry:
+            continue
+        d  = entry["latest"]
+        rg = ctx.get("regime", {})
+        pr = ctx.get("personality", {})
+        d["hist_long_trend"]          = rg.get("long_trend")
+        d["hist_pct_of_52w_range"]    = rg.get("pct_of_52w_range")
+        d["hist_vol_state"]           = rg.get("vol_state")
+        d["hist_drawdown_from_high"]  = rg.get("drawdown_from_high")
+        d["hist_personality"]         = pr.get("type")
+        # Promote real 52w levels from deep history (more accurate than 120d)
+        if rg.get("week52_high"):
+            d["week52_high"] = rg["week52_high"]
+        if rg.get("week52_low"):
+            d["week52_low"] = rg["week52_low"]
     return stock_data
 
 

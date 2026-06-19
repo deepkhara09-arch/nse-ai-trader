@@ -33,7 +33,7 @@ RANK_HISTORY_FILE    = "brain/rank_history.json"
 WATCHLIST_FILE       = "brain/watchlist_signals.json"
 DECISIONS_FILE       = "brain/decisions.json"
 
-CURRENT_SCHEMA_VERSION = 5   # bump this when you add a new migration
+CURRENT_SCHEMA_VERSION = 6   # bump this when you add a new migration
 
 
 # ── Migration functions ────────────────────────────────────────────────────────
@@ -207,6 +207,28 @@ def _migrate_v5(state, stock_data, patterns, book, fundamentals, decisions):
     return state, stock_data, patterns, book, fundamentals, decisions
 
 
+def _migrate_v6(state, stock_data, patterns, book, fundamentals, decisions):
+    """
+    v6: deep 2-year history engine (regime context, personality, backtest).
+
+    Adds history-context stub fields to every stock's latest dict so the brain
+    never KeyErrors before the first history fetch populates them. Real values
+    come from brain/history_context.json (a standalone file, no migration needed)
+    and are injected into latest{} at runtime by main._inject_history_context.
+    """
+    for ticker, entry in stock_data.items():
+        if "latest" not in entry:
+            continue
+        d = entry["latest"]
+        d.setdefault("hist_long_trend",         None)
+        d.setdefault("hist_pct_of_52w_range",   None)
+        d.setdefault("hist_vol_state",          None)
+        d.setdefault("hist_drawdown_from_high", None)
+        d.setdefault("hist_personality",        None)
+
+    return state, stock_data, patterns, book, fundamentals, decisions
+
+
 # ── Registry: maps schema version → migration that brings data UP to that version
 MIGRATIONS = {
     1: _migrate_v1,
@@ -214,6 +236,7 @@ MIGRATIONS = {
     3: _migrate_v3,
     4: _migrate_v4,
     5: _migrate_v5,
+    6: _migrate_v6,
 }
 
 

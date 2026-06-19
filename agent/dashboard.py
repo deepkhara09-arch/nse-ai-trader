@@ -1534,9 +1534,10 @@ def _section_recommendations(recs) -> str:
             "long_term":  "badge-green",
         }.get(trade_type_key, "badge-cyan")
 
-        # Explicit direction + plain-English headline
+        # Explicit direction + plain-English headline + intention
         direction      = rec.get("direction", "BUY (go long)" if signal == "BUY" else "SELL / SHORT (go short)")
         headline       = rec.get("headline", f"{signal} {rec.get('nse_code','')}")
+        intention      = rec.get("intention", "")
         # Data confidence on the probability
         data_conf      = rec.get("data_confidence", "Estimated")
         data_conf_key  = rec.get("data_confidence_key", "estimated")
@@ -1544,6 +1545,14 @@ def _section_recommendations(recs) -> str:
         conf_badge_cls = {
             "validated": "badge-green", "forming": "badge-orange", "estimated": "badge-gray",
         }.get(data_conf_key, "badge-gray")
+        # Confluence + backtest + regime context
+        confluence_n   = rec.get("confluence_count", 0)
+        bt_tested      = rec.get("backtest_tested", False)
+        bt_hit_5d      = rec.get("backtest_hit_5d")
+        bt_sample      = rec.get("backtest_sample", 0)
+        hist_trend     = rec.get("hist_long_trend") or ""
+        hist_52w       = rec.get("hist_52w_position")
+        hist_pers      = rec.get("hist_personality") or ""
 
         stale_banner = ""
         if is_stale:
@@ -1584,12 +1593,17 @@ def _section_recommendations(recs) -> str:
     </div>
   </div>
 
-  <div style="margin:6px 0 9px;padding:7px 11px;border-radius:6px;background:var(--card2);border:1px solid var(--border);font-size:.78rem;font-weight:700;color:var(--text)">
-    {headline}
-    <div style="font-size:.62rem;font-weight:400;color:var(--muted);margin-top:2px">
+  <div style="margin:6px 0 9px;padding:9px 11px;border-radius:6px;background:var(--card2);border:1px solid var(--border)">
+    <div style="font-size:.8rem;font-weight:700;color:{'#4ade80' if signal=='BUY' else '#f87171'};line-height:1.4">
+      {intention or headline}
+    </div>
+    <div style="font-size:.62rem;font-weight:400;color:var(--muted);margin-top:4px">
       Direction: <strong style="color:{'#4ade80' if signal=='BUY' else '#f87171'}">{direction}</strong>
       &nbsp;·&nbsp; Horizon: <strong style="color:var(--text)">{trade_type}</strong>
+      {f'&nbsp;·&nbsp; Confluence: <strong style="color:#22d3ee">{confluence_n}/7 agree</strong>' if confluence_n else ''}
     </div>
+    {f'<div style="font-size:.6rem;color:var(--muted);margin-top:3px">2yr context: <strong style="color:var(--text)">{hist_trend.replace("_"," ")}</strong>' + (f" · {hist_52w:.0f}% of 52w range" if hist_52w is not None else "") + (f" · {hist_pers}" if hist_pers else "") + '</div>' if hist_trend else ''}
+    {f'<div style="font-size:.6rem;color:#4ade80;margin-top:3px">✓ Historical backtest: this setup worked {bt_hit_5d*100:.0f}% of the time (~1wk, {bt_sample} samples on this stock)</div>' if bt_tested and bt_hit_5d is not None else ''}
   </div>
 
   {stale_banner}

@@ -294,8 +294,14 @@ def save_watchlist_signals(data: Dict) -> None:
 
 def load_rank_history() -> List[dict]:
     if os.path.exists(RANK_HISTORY_FILE):
-        with open(RANK_HISTORY_FILE) as f:
-            return json.load(f)
+        try:
+            with open(RANK_HISTORY_FILE) as f:
+                data = json.load(f)
+            # Must be a list of snapshots; coerce anything else (e.g. an empty {}
+            # written by a reset) back to a list so .append() never crashes.
+            return data if isinstance(data, list) else []
+        except Exception:
+            return []
     return []
 
 

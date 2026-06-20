@@ -243,6 +243,15 @@ def _fetch_intraday_candles(ticker: str) -> list:
         closes  = q.get("close",  [])
         volumes = q.get("volume", [])
 
+        # The 24h window can reach into the PREVIOUS trading day's session. We only
+        # want "today's session so far", so keep candles whose IST date matches the
+        # most recent candle's IST date (= the current/just-closed session).
+        from datetime import datetime as _dt, timezone as _tz, timedelta as _td
+        _IST = _tz(_td(hours=5, minutes=30))
+        if not timestamps:
+            return []
+        session_date = _dt.fromtimestamp(timestamps[-1], _IST).date()
+
         candles = []
         for i, ts in enumerate(timestamps):
             o = opens[i]  if i < len(opens)   else None
@@ -251,6 +260,9 @@ def _fetch_intraday_candles(ticker: str) -> list:
             c = closes[i] if i < len(closes)  else None
             v = volumes[i]if i < len(volumes) else 0
             if None in (o, h, l, c):
+                continue
+            # Skip bars from an earlier session that leaked into the 24h window
+            if _dt.fromtimestamp(ts, _IST).date() != session_date:
                 continue
             candles.append({
                 "time":   ts,           # unix timestamp

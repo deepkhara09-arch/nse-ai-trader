@@ -49,7 +49,7 @@ from agent.attribution import update_attribution, aggregate_attribution
 from agent.llm_coach import run_coach, load_coach_memory
 from agent.history_engine import (
     fetch_history_context, save_history_context, load_history_context,
-    refresh_universe_history,
+    refresh_universe_history, extend_foundation,
 )
 
 
@@ -105,6 +105,13 @@ def run():
             uni_hist    = refresh_universe_history(NSE_UNIVERSE)
             merged_expl = _inject_history_context(load_stock_data(), uni_hist)
             save_stock_data(merged_expl)
+
+            # ── Perpetual batches from exploration day 2 ──────────────────────
+            # Spin up overlapping background batches early, as you asked. They
+            # reuse the universe data the primary run just saved (skip_fetch) so
+            # there's no duplicate fetching — each batch is an independent scoring
+            # pass that seeds an early candidate pool for later focus promotion.
+            _tick_background_cohorts(state, session, skip_fetch=True)
 
             state = advance_session(state, session)
 
@@ -305,7 +312,7 @@ def run():
     print(f"\n[done] {session} complete. Phase={state['phase']} Day={state['day']}\n")
 
 
-def _tick_background_cohorts(state: dict, session: str) -> None:
+def _tick_background_cohorts(state: dict, session: str, skip_fetch: bool = False) -> None:
     """
     Perpetual parallel exploration pipeline.
 
@@ -314,6 +321,11 @@ def _tick_background_cohorts(state: dict, session: str) -> None:
     Each batch independently explores the full NSE universe for EXPLORATION_DAYS,
     then scores and marks itself ready.  When a focus refresh happens, the most
     recently completed batch's candidates feed the promotion pool.
+
+    skip_fetch=True is used during exploration, where the primary run has ALREADY
+    fetched & saved the full universe this session — so batches reuse that data
+    with zero extra network cost (this is what lets batches run from day 2 of
+    exploration without duplicating fetches).
 
     State stores batches as a list:  state["background_batches"] = [
         {"id": 1, "day": 5, "start_date": "...", "ready": True,  "candidates": [...]},
@@ -362,18 +374,23 @@ def _tick_background_cohorts(state: dict, session: str) -> None:
     # All batches explore the same data; they differ only by their own day counter
     # and scoring window. Fetching per-batch would mean 99 stocks × N batches of
     # HTTP + intraday calls every preclose — enough to blow the Actions timeout.
+    # During exploration (skip_fetch) the primary run already saved fresh universe
+    # data this session, so we reuse it with zero extra network cost.
     fetch_ok = True
-    try:
-        fresh_bg  = fetch_stock_data(NSE_UNIVERSE, session="preclose")
-        existing  = load_stock_data()
-        merged_bg = merge_stock_data(existing, fresh_bg)
-        for ticker in NSE_UNIVERSE:
-            if ticker not in focus and ticker in fresh_bg:
-                existing[ticker] = merged_bg[ticker]
-        save_stock_data(existing)
-    except Exception as e:
-        print(f"[cohort] Shared universe fetch error (non-fatal): {e}")
-        fetch_ok = False
+    if skip_fetch:
+        print("[cohort] Reusing this session's universe data (exploration) — no extra fetch")
+    else:
+        try:
+            fresh_bg  = fetch_stock_data(NSE_UNIVERSE, session="preclose")
+            existing  = load_stock_data()
+            merged_bg = merge_stock_data(existing, fresh_bg)
+            for ticker in NSE_UNIVERSE:
+                if ticker not in focus and ticker in fresh_bg:
+                    existing[ticker] = merged_bg[ticker]
+            save_stock_data(existing)
+        except Exception as e:
+            print(f"[cohort] Shared universe fetch error (non-fatal): {e}")
+            fetch_ok = False
 
     # ── Advance every non-ready batch's day counter ───────────────────────────
     for batch in active_batches:
@@ -496,6 +513,12 @@ def _inject_history_context(stock_data: dict, history_ctx: dict) -> dict:
 def _refresh_outputs(state: dict, market_health: dict, session: str) -> None:
     try:
         sd      = load_stock_data()
+        # Layer today's fresh price onto the permanent 2yr history foundation
+        # (extend-only — no re-fetch). Keeps long-term context current cheaply.
+        try:
+            extend_foundation(sd)
+        except Exception as e:
+            print(f"[history] foundation extend failed (non-fatal): {e}")
         book    = load_book()
         pats    = load_patterns()
         decs    = load_decisions()

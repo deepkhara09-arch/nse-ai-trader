@@ -116,6 +116,52 @@ def refresh_universe_history(tickers: List[str], max_age_days: int = 7,
     return load_history_context()
 
 
+def extend_foundation(stock_data: Dict) -> Dict:
+    """
+    Extend-only update of the permanent history foundation.
+
+    The deep 2-year baseline (regime, personality, shock behaviour) is built once
+    by refresh_universe_history and treated as a stored FOUNDATION. Rather than
+    re-pulling 2 years repeatedly, this layers the tool's freshest daily close
+    (already fetched each session for indicators) on top of the stored weekly
+    price series and recomputes the cheap regime fields — no extra network calls.
+
+    This is the "build new data on top of the fixed foundation" idea: the static
+    past stays put, today's observation is appended, understanding updates.
+    """
+    ctx_all = load_history_context()
+    if not ctx_all:
+        return ctx_all
+
+    today = date.today().isoformat()
+    changed = 0
+    for ticker, ctx in ctx_all.items():
+        entry = stock_data.get(ticker)
+        if not entry or "latest" not in entry:
+            continue
+        close_today = entry["latest"].get("close", 0)
+        if close_today <= 0:
+            continue
+        series = ctx.get("price_2y_weekly", [])
+        if not series:
+            continue
+        # Append today's price as the newest point only once per day
+        if ctx.get("last_extended") != today:
+            series = (series + [round(float(close_today), 2)])[-160:]
+            ctx["price_2y_weekly"] = series
+            ctx["last_extended"]   = today
+            # Recompute the cheap 52w-position field from the extended series
+            hi = max(series); lo = min(series); rng = (hi - lo) or 1
+            ctx.setdefault("regime", {})["pct_of_52w_range"] = round((close_today - lo) / rng * 100, 1)
+            changed += 1
+
+    if changed:
+        with open(HISTORY_FILE, "w") as f:
+            json.dump(ctx_all, f, indent=2)
+        print(f"[history] extended foundation with today's price for {changed} stocks")
+    return ctx_all
+
+
 def load_history_context() -> Dict:
     if os.path.exists(HISTORY_FILE):
         with open(HISTORY_FILE) as f:
@@ -150,6 +196,7 @@ def _build_context(df: pd.DataFrame, ticker: str) -> Optional[dict]:
     regime      = _regime_context(close, high, low, today_c)
     personality = _personality(close, high, low)
     seasonality = _recent_behaviour(close)
+    shock       = _shock_behaviour(close, vol)
 
     return {
         "ticker":      ticker,
@@ -158,9 +205,61 @@ def _build_context(df: pd.DataFrame, ticker: str) -> Optional[dict]:
         "regime":      regime,
         "personality": personality,
         "behaviour":   seasonality,
+        # How the stock behaves around big shock days (proxy for news/event reaction)
+        "shock":       shock,
         # store a compressed long-history price series (weekly samples) so the
         # dashboard can draw a real 2yr chart without bloating the file
         "price_2y_weekly": [round(float(x), 2) for x in close.iloc[::5].tolist()][-110:],
+    }
+
+
+def _shock_behaviour(close, vol) -> dict:
+    """
+    Learn from REAL history how this stock behaves around big shock days — the
+    closest free proxy for 'how did it react to good/bad news'. We find the days
+    with the largest single-day moves (where news/events typically hit) and
+    measure what happened over the next 5 trading days. This is derived purely
+    from the stock's own price action — no fabricated event database.
+
+    Returns:
+      up_shock_followthrough_pct  : avg 5d return after a big UP day (does good
+                                    news momentum continue, or fade?)
+      down_shock_recovery_pct     : avg 5d return after a big DOWN day (does it
+                                    bounce back from bad news, or keep falling?)
+      typical_shock_move_pct      : the size that counts as a 'shock' for this name
+    """
+    rets = close.pct_change().dropna()
+    if len(rets) < 60:
+        return {"tested": False}
+
+    # A 'shock' = a day in the top ~5% of absolute daily moves for this stock
+    threshold = float(rets.abs().quantile(0.95))
+    if threshold <= 0:
+        return {"tested": False}
+
+    up_fwds, down_fwds = [], []
+    vals = close.reset_index(drop=True)
+    r    = rets.reset_index(drop=True)
+    for i in range(len(r) - 5):
+        move = r.iloc[i]
+        if abs(move) < threshold:
+            continue
+        fwd = (vals.iloc[i + 5] - vals.iloc[i]) / vals.iloc[i] * 100
+        if move > 0:
+            up_fwds.append(float(fwd))
+        else:
+            down_fwds.append(float(fwd))
+
+    def _avg(x):
+        return round(sum(x) / len(x), 2) if x else None
+
+    return {
+        "tested":                     True,
+        "typical_shock_move_pct":     round(threshold * 100, 2),
+        "up_shock_followthrough_pct": _avg(up_fwds),
+        "down_shock_recovery_pct":    _avg(down_fwds),
+        "up_shock_samples":           len(up_fwds),
+        "down_shock_samples":         len(down_fwds),
     }
 
 

@@ -1,1 +1,76 @@
-{}
+{
+  "date": "2026-06-20",
+  "session": "morning",
+  "nifty": {
+    "symbol": "^NSEI",
+    "value": 24013.1,
+    "day_change_pct": -0.64,
+    "trend_5d": "sideways",
+    "trend_20d": "up",
+    "ath_pct_60d": -2.39
+  },
+  "vix": {
+    "value": 12.97,
+    "level": "normal",
+    "percentile_30d": 3.0,
+    "avg_30d": 16.43
+  },
+  "bank_nifty": {
+    "symbol": "^NSEBANK",
+    "value": 57685.75,
+    "day_change_pct": -0.48,
+    "trend_5d": "up",
+    "trend_20d": "strong_up",
+    "ath_pct_60d": -0.58,
+    "diverging": false
+  },
+  "sectors": {
+    "IT": {
+      "symbol": "ITBEES.NS",
+      "value": 30.41,
+      "day_change_pct": -3.83,
+      "trend_5d": "down",
+      "trend_20d": "strong_down",
+      "ath_pct_60d": -14.34
+    },
+    "Pharma": {
+      "symbol": "PHARMABEES.NS",
+      "value": 25.09,
+      "day_change_pct": 0.76,
+      "trend_5d": "up",
+      "trend_20d": "sideways",
+      "ath_pct_60d": -2.98
+    },
+    "Bank": {
+      "symbol": "BANKBEES.NS",
+      "value": 597.32,
+      "day_change_pct": -0.08,
+      "trend_5d": "up",
+      "trend_20d": "strong_up",
+      "ath_pct_60d": -0.12
+    },
+    "Infra": {
+      "symbol": "INFRABEES.NS",
+      "value": 981.32,
+      "day_change_pct": 0.18,
+      "trend_5d": "up",
+      "trend_20d": "sideways",
+      "ath_pct_60d": -1.97
+    }
+  },
+  "market_mood": "neutral",
+  "trade_allowed": true,
+  "warnings": [],
+  "leading_sectors": [
+    "Pharma",
+    "Bank",
+    "Infra"
+  ],
+  "market_regime": "normal",
+  "sector_breadth": 0.75,
+  "lagging_sectors": [
+    "IT"
+  ],
+  "broad_market_strength": true,
+  "intraday_regime": "mixed"
+}

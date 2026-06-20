@@ -75,7 +75,7 @@ def preclose_session(book: dict, opinions: List[dict], stock_data: Dict, pattern
     # are exited at the correct level (target or stop price), not the end-of-day price.
     # _close_intraday_positions then mops up any remaining intraday positions at close price.
     book, patterns_db = _check_exits(book, stock_data, session="preclose", patterns_db=patterns_db)
-    book = _close_intraday_positions(book, stock_data)
+    book, patterns_db = _close_intraday_positions(book, stock_data, patterns_db)
     book = _snapshot(book)
     return book, patterns_db
 
@@ -354,8 +354,9 @@ def _check_exits(book: dict, stock_data: Dict, session: str, patterns_db: Dict):
     return book, patterns_db
 
 
-def _close_intraday_positions(book: dict, stock_data: Dict) -> dict:
-    """Force-close any intraday positions at preclose."""
+def _close_intraday_positions(book: dict, stock_data: Dict, patterns_db: Dict = None) -> Tuple2:
+    """Force-close any intraday positions at preclose. Also teaches the brain
+    from each outcome so intraday trades update pattern reliability too."""
     today = date.today().isoformat()
     still_open = []
     for pos in book["open_positions"]:
@@ -364,20 +365,28 @@ def _close_intraday_positions(book: dict, stock_data: Dict) -> dict:
             data    = stock_data.get(ticker, {}).get("latest", {})
             current = data.get("current_price") or data.get("close", pos["entry"])
             pnl     = (current - pos["entry"]) * pos["qty"] * (1 if pos["action"] == "BUY" else -1)
+            won     = pnl > 0
             trade   = {**pos,
                 "close_date": today, "close_session": "preclose",
                 "exit_price": round(current, 2), "exit_reason": "intraday_forced_close",
                 "pnl": round(pnl, 2), "pnl_pct": round(pnl / pos["invested"] * 100, 2),
-                "won": pnl > 0,
+                "won": won,
+                "open_days": _days_between(pos["open_date"], today),
             }
             book["closed_trades"].append(trade)
             book["capital"] += pos["invested"] + pnl
             book["daily_pnl_today"] = book.get("daily_pnl_today", 0) + pnl
+            # Teach the brain from intraday outcomes too (was previously skipped)
+            if patterns_db is not None:
+                patterns_db = learn_from_trade(
+                    ticker, pos.get("patterns", []), won, pos.get("style", "intraday"),
+                    patterns_db, exit_reason="intraday_forced_close"
+                )
             print(f"[paper] INTRADAY CLOSE {ticker} @ ₹{current:.2f} | PnL ₹{pnl:+.0f}")
         else:
             still_open.append(pos)
     book["open_positions"] = still_open
-    return book
+    return book, patterns_db
 
 
 def _mark_to_market(book: dict, stock_data: Dict) -> dict:

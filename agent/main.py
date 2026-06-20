@@ -377,7 +377,7 @@ def _tick_background_cohorts(state: dict, session: str) -> None:
                 sd   = load_stock_data()
                 nd   = load_news()
                 sent = {t: v.get("latest", {}) for t, v in nd.items()}
-                top  = select_focus_stocks(sd, sent, FOCUS_STOCK_COUNT * 2)
+                top  = select_focus_stocks(sd, sent, FOCUS_STOCK_COUNT * 2, load_fundamentals())
                 batch["candidates"]  = [t for t, _ in top]
                 batch["scored_date"] = date.today().isoformat()
                 batch["ready"]       = True
@@ -491,8 +491,13 @@ def _refresh_outputs(state: dict, market_health: dict, session: str) -> None:
         sectors = load_sector_scores()
         clog    = load_changelog()
 
-        # Regenerate recommendations every preclose session or on first run
-        if session == "preclose" or not os.path.exists("brain/recommendations.json"):
+        # Regenerate recommendations EVERY session once we have focus stocks.
+        # Recs use live prices, so a morning run must produce fresh morning recs —
+        # otherwise the dashboard would show yesterday's preclose recs (stale, and
+        # useless for intraday calls which expire the same day). During exploration
+        # there are no focus stocks yet, so nothing is generated.
+        focus = state.get("focus_stocks", [])
+        if focus or not os.path.exists("brain/recommendations.json"):
             prev_recs = load_recommendations()
             recs = generate_recommendations(state, sd, pats, nd, book, market_health, fund, session=session)
             # Compute and persist what changed vs previous recommendations
@@ -502,12 +507,13 @@ def _refresh_outputs(state: dict, market_health: dict, session: str) -> None:
                 clog = load_changelog()
                 for c in changes:
                     print(f"[changelog] {c['type'].upper()} {c['nse_code']}: {c['detail']}")
-            generate_report(state, sd, pats, nd, book)
+            # Full strategy report only needs refreshing at preclose (heavier write)
+            if session == "preclose":
+                generate_report(state, sd, pats, nd, book)
         else:
             recs = load_recommendations()
 
         # Always rebuild ranking (runs fast, no API calls)
-        focus  = state.get("focus_stocks", [])
         ranked = rank_focus_stocks(focus, sd, pats, nd, fund, book, market_health) if focus else []
 
         attr_summary = aggregate_attribution(pats)

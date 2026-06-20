@@ -47,7 +47,10 @@ from agent.rec_changelog import compute_changes, save_changelog, load_changelog
 from agent.delivery_fetcher import fetch_delivery, save_delivery, inject_delivery
 from agent.attribution import update_attribution, aggregate_attribution
 from agent.llm_coach import run_coach, load_coach_memory
-from agent.history_engine import fetch_history_context, save_history_context, load_history_context
+from agent.history_engine import (
+    fetch_history_context, save_history_context, load_history_context,
+    refresh_universe_history,
+)
 
 
 def run():
@@ -91,11 +94,24 @@ def run():
         if session == "preclose":
             news = fetch_news(tickers)
             save_news(news)
+
+            # ── Deep 2-year history for the WHOLE universe (weekly refresh) ────
+            # Built during exploration so the very first focus selection benefits
+            # from long-term trend / 52w position / personality — not just 120d
+            # technicals. refresh_universe_history skips stocks already fresh
+            # (<7 days old), so the heavy fetch runs ~once a week; other days it's
+            # a near-instant no-op. Inject into stock data so the scorer sees it.
+            print("[main] Refreshing 2-year history for full universe...")
+            uni_hist    = refresh_universe_history(NSE_UNIVERSE)
+            merged_expl = _inject_history_context(load_stock_data(), uni_hist)
+            save_stock_data(merged_expl)
+
             state = advance_session(state, session)
 
             if state["day"] > EXPLORATION_DAYS:
                 sd   = load_stock_data()
                 sent = {t: v.get("latest", {}) for t, v in load_news().items()}
+                # Focus selection now uses full-universe 2yr regime context too
                 top  = select_focus_stocks(sd, sent, FOCUS_STOCK_COUNT)
                 state["focus_stocks"] = [t for t, _ in top]
                 scores_str = " | ".join(f"{t.replace('.NS','')}={s:.0f}" for t, s in top)
@@ -105,10 +121,7 @@ def run():
                 print("[main] Fetching fundamentals for focus stocks...")
                 fund_data = fetch_fundamentals([t for t, _ in top])
                 save_fundamentals(fund_data)
-                # Deep 2-year history context for the new focus stocks
-                print("[main] Building 2-year history context for focus stocks...")
-                hist_ctx = fetch_history_context([t for t, _ in top])
-                save_history_context(hist_ctx)
+                # History for focus stocks is already in uni_hist (fetched above)
                 state = set_phase(state, "analysis", note)
                 # Background batch pipeline is auto-seeded by _tick_background_cohorts()
                 # on the first analysis preclose (it creates batch #1 when the list is

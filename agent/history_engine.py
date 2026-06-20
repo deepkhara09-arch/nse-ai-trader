@@ -35,10 +35,10 @@ HISTORY_DAYS = 730   # ~2 years
 
 # ── Public API ─────────────────────────────────────────────────────────────────
 
-def fetch_history_context(tickers: List[str]) -> Dict:
+def fetch_history_context(tickers: List[str], sleep_s: float = 0.4) -> Dict:
     """
-    Build deep history context for each focus ticker. Returns a dict keyed by
-    ticker. Safe to call weekly. Falls back gracefully per-ticker on error.
+    Build deep history context for each ticker. Returns a dict keyed by ticker.
+    Safe to call weekly. Falls back gracefully per-ticker on error.
     """
     from agent.data_fetcher import _download_daily
 
@@ -60,10 +60,60 @@ def fetch_history_context(tickers: List[str]) -> Dict:
                 out[ticker] = ctx
                 print(f"[history] {ticker}: {ctx['days']}d | 52w pos={ctx['regime']['pct_of_52w_range']:.0f}% "
                       f"| personality={ctx['personality']['type']}")
-            time.sleep(0.4)
+            time.sleep(sleep_s)
         except Exception as e:
             print(f"[history] {ticker} failed (non-fatal): {e}")
     return out
+
+
+# Max stocks to (re)fetch deep history for in a single run. Caps run time so the
+# initial full-universe build spreads over a few days instead of one long run that
+# could approach the Actions timeout. ~40 × 4.4s ≈ 3 min — comfortable headroom.
+MAX_HISTORY_FETCH_PER_RUN = 40
+
+
+def refresh_universe_history(tickers: List[str], max_age_days: int = 7,
+                             sleep_s: float = 0.25,
+                             max_per_run: int = MAX_HISTORY_FETCH_PER_RUN) -> Dict:
+    """
+    Build/refresh 2-year history context for a LARGE list (the full universe),
+    skipping any ticker whose stored context is still fresh (< max_age_days old).
+
+    This makes deep history available during EXPLORATION too — so the very first
+    focus selection benefits from long-term trend / 52w position / personality,
+    not just 120-day technicals. Because it skips fresh entries, the heavy fetch
+    only happens once a week per stock; other days it's a near-instant no-op.
+
+    To protect the Actions time budget, at most `max_per_run` stale stocks are
+    fetched per call — the initial build of all 99 spreads over ~3 daily runs,
+    then settles into weekly top-ups. Returns the full merged context.
+    """
+    existing = load_history_context()
+    today    = date.today()
+
+    stale = []
+    for t in tickers:
+        ctx = existing.get(t)
+        if not ctx:
+            stale.append(t); continue
+        try:
+            age = (today - date.fromisoformat(ctx.get("updated", "2000-01-01"))).days
+        except Exception:
+            age = 9999
+        if age >= max_age_days:
+            stale.append(t)
+
+    if not stale:
+        print(f"[history] universe context fresh for all {len(tickers)} stocks — skip")
+        return existing
+
+    batch = stale[:max_per_run]
+    print(f"[history] refreshing 2yr context for {len(batch)} stocks "
+          f"({len(stale)} stale, capped at {max_per_run}/run)...")
+    fresh = fetch_history_context(batch, sleep_s=sleep_s)
+    if fresh:
+        save_history_context(fresh)
+    return load_history_context()
 
 
 def load_history_context() -> Dict:

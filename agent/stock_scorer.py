@@ -76,6 +76,24 @@ def score_stock(ticker: str, entry: dict, sentiment: dict, fundamentals: dict = 
         elif roce >= 10: score += 1.5
         if de is not None and de < 0.5: score += 2
 
+    # ── Long-term regime context (8 pts) — from 2yr history if available ───────
+    # Now available DURING exploration (full-universe history). Prefers stocks in
+    # a constructive long-term trend at a healthy 52w position with a tradeable
+    # personality. Absent during the first few exploration days → contributes 0.
+    long_trend = d.get("hist_long_trend")
+    pos52      = d.get("hist_pct_of_52w_range")
+    personality = d.get("hist_personality")
+    if long_trend in ("strong_uptrend", "uptrend"):
+        score += 4
+    elif long_trend in ("strong_downtrend", "downtrend"):
+        score -= 3
+    if pos52 is not None:
+        if 35 <= pos52 <= 85:   score += 2   # healthy room to run
+        elif pos52 > 92:        score += 1   # breakout zone
+        elif pos52 < 8:         score -= 2   # falling-knife risk
+    if personality == "trender":            score += 2   # cleaner to trade
+    elif personality == "mean_reverter":    score += 1
+
     return round(min(score, 100), 2)
 
 

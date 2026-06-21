@@ -78,7 +78,25 @@ def run():
     print(f"Phase={phase}  Day={day}  FocusStocks={focus}\n")
 
     # ── Market health check (every session) ────────────────────────────────────
+    # For the pre-open sweep this also runs the global+India macro sentiment pass.
     market_health = assess_market(session)
+
+    # ── PRE-OPEN sweep ──────────────────────────────────────────────────────────
+    # Runs ~08:35 IST before the market opens. Its job is purely to refresh the
+    # global/India macro sentiment (done inside assess_market) and rebuild the
+    # dashboard so you see the day's backdrop BEFORE the open. No data fetch, no
+    # trading — the market isn't open yet. The session pointer is NOT advanced and
+    # the day counter is untouched (preclose still owns the day rollover).
+    if session == "preopen":
+        macro = market_health.get("macro", {})
+        note  = (f"Pre-open macro: {macro.get('mood','neutral')} "
+                 f"({macro.get('overall_score',0):+.2f})")
+        state = add_brain_note(state, note)
+        save_state(state)
+        _refresh_outputs(state, market_health, session)
+        _append_log(state, session)
+        print(f"\n[done] pre-open sweep complete. {note}\n")
+        return
 
     # ── EXPLORATION ────────────────────────────────────────────────────────────
     if phase == "exploration":

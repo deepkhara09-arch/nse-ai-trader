@@ -104,6 +104,14 @@ def _try_open_positions(book: dict, opinions: List[dict], patterns_db: Dict, ses
     if vol_label:
         print(f"[paper] Vol regime: {vol_label}")
 
+    # ── Macro risk scaling: shrink size on global risk-off days ────────────────
+    # market_health.macro_risk_factor is 1.0 normally, 0.7 on global risk-off.
+    macro_factor = (market_health or {}).get("macro_risk_factor", 1.0)
+    if macro_factor < 1.0:
+        vol_max_pct *= macro_factor
+        print(f"[paper] Macro risk-off → position size scaled to {macro_factor:.0%} "
+              f"(cap now {vol_max_pct*100:.1f}%)")
+
     # ── Sector concentration: count currently open positions per sector ────────
     from agent.sector_tracker import SECTOR_MAP
     sector_counts: Dict[str, int] = {}

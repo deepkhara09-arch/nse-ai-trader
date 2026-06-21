@@ -125,10 +125,44 @@ def assess_market(session: str = "morning") -> dict:
     except Exception:
         health["intraday_regime"] = "unknown"
 
+    # ── Global + India macro sentiment ─────────────────────────────────────────
+    # Refresh the macro snapshot at the pre-open / midday sweeps (heavier: feeds +
+    # one LLM call). Other sessions reuse the most recent snapshot so the mood is
+    # always present without re-fetching every run.
+    try:
+        from agent.macro_sentiment import assess_macro_sentiment, load_macro_sentiment
+        if session in ("preopen", "midday"):
+            macro = assess_macro_sentiment(session=session, use_llm=True)
+        else:
+            macro = load_macro_sentiment() or assess_macro_sentiment(session=session, use_llm=False)
+    except Exception as e:
+        print(f"[market] macro sentiment failed (non-fatal): {e}")
+        macro = {}
+
+    macro_mood  = macro.get("mood", "neutral")
+    macro_score = macro.get("overall_score", 0.0)
+    health["macro"] = macro   # full snapshot for dashboard + scoring
+
+    # Macro influences risk: strongly negative global mood tightens conditions.
+    macro_risk_factor = 1.0
+    if macro_mood == "risk_off":
+        warnings.append(
+            f"Global macro risk-off ({macro_score:+.2f}) — "
+            f"{macro.get('summary','')[:120]}"
+        )
+        macro_risk_factor = 0.7   # consumed by paper_trader sizing
+        # Only an EXTREME macro reading blocks new trades outright (rare).
+        if macro_score <= -0.55:
+            warnings.append("Severe global risk-off — blocking new trades this session")
+            trade_ok = False
+    elif macro_mood == "risk_on" and macro_score >= 0.25:
+        health["macro_tailwind"] = True
+    health["macro_risk_factor"] = macro_risk_factor
+
     # ── Overall mood ──────────────────────────────────────────────────────────
-    if not warnings and n_trend in ("up", "strong_up") and vix_val < VIX_CAUTION and breadth >= 0.5:
+    if not warnings and n_trend in ("up", "strong_up") and vix_val < VIX_CAUTION and breadth >= 0.5 and macro_mood != "risk_off":
         health["market_mood"] = "bullish"
-    elif len(warnings) >= 2 or not trade_ok:
+    elif len(warnings) >= 2 or not trade_ok or macro_mood == "risk_off":
         health["market_mood"] = "bearish"
     elif health["market_regime"] == "sideways" or "choppy" in health.get("intraday_regime", ""):
         health["market_mood"] = "neutral"

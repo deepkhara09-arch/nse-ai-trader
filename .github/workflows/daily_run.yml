@@ -1,14 +1,20 @@
 name: NSE AI Trader
 
 on:
-  # ── 4 sessions per weekday (IST = UTC+5:30) ──────────────────────────────
-  # Times shifted off round hours to avoid GitHub runner queue congestion.
-  # GitHub cron is best-effort — can delay 15-60min. Off-peak minutes help.
+  # ── 5 runs per weekday (IST = UTC+5:30) ──────────────────────────────────
+  # IMPORTANT: GitHub-hosted cron is BEST-EFFORT — it commonly fires 5–30 min
+  # late under load (occasionally skips). We cannot force exact-time execution
+  # on free Actions. Two mitigations:
+  #   1) Schedule each run a few minutes EARLY so typical delay lands it near
+  #      the intended IST time.
+  #   2) Session detection below is WINDOW-based (a delayed run still maps to the
+  #      right session instead of falling through to the wrong one).
   schedule:
-    - cron: "7 4 * * 1-5"    # ~09:37 IST — market open (morning)
-    - cron: "17 6 * * 1-5"   # ~11:47 IST — midday review
-    - cron: "47 7 * * 1-5"   # ~13:17 IST — early afternoon (post-lunch)
-    - cron: "47 9 * * 1-5"   # ~15:17 IST — pre-close decisions
+    - cron: "0 3 * * 1-5"    # target ~08:35 IST — PRE-OPEN sentiment sweep (NEW)
+    - cron: "3 4 * * 1-5"    # target ~09:35 IST — market open (morning)
+    - cron: "13 6 * * 1-5"   # target ~11:45 IST — midday review (+ global sentiment)
+    - cron: "43 7 * * 1-5"   # target ~13:15 IST — early afternoon (post-lunch)
+    - cron: "43 9 * * 1-5"   # target ~15:15 IST — pre-close decisions
 
   # Manual trigger (you can also pick a session from the UI)
   workflow_dispatch:
@@ -18,7 +24,7 @@ on:
         required: false
         default: "morning"
         type: choice
-        options: [morning, midday, afternoon, preclose]
+        options: [preopen, morning, midday, afternoon, preclose]
 
 permissions:
   contents: write   # needed to commit brain + dashboard back to repo
@@ -46,20 +52,22 @@ jobs:
       - name: Detect session from schedule
         id: session
         run: |
-          # If manually triggered, use the input; otherwise detect from UTC hour
+          # If manually triggered, use the input; otherwise map the CURRENT UTC
+          # time to a session WINDOW. Window-based mapping means a cron that fires
+          # late still resolves to the correct session instead of the wrong one.
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             echo "name=${{ github.event.inputs.session }}" >> $GITHUB_OUTPUT
           else
-            HOUR=$(date -u +%H)
-            MIN=$(date -u +%M)
-            if [ "$HOUR" = "04" ]; then
-              echo "name=morning" >> $GITHUB_OUTPUT
-            elif [ "$HOUR" = "06" ]; then
-              echo "name=midday" >> $GITHUB_OUTPUT
-            elif [ "$HOUR" = "07" ]; then
-              echo "name=afternoon" >> $GITHUB_OUTPUT
-            else
-              echo "name=preclose" >> $GITHUB_OUTPUT
+            # Minutes since UTC midnight = robust single number to bucket on.
+            MINS=$(( $(date -u +%H) * 60 + $(date -u +%M) ))
+            # Targets (UTC): preopen 03:00(180) morning 04:03(243)
+            #                midday 06:13(373) afternoon 07:43(463) preclose 09:43(583)
+            # Boundaries placed between targets so late fires still land right.
+            if   [ "$MINS" -lt 210 ];  then echo "name=preopen"   >> $GITHUB_OUTPUT   # < 03:30
+            elif [ "$MINS" -lt 330 ];  then echo "name=morning"   >> $GITHUB_OUTPUT   # < 05:30
+            elif [ "$MINS" -lt 420 ];  then echo "name=midday"    >> $GITHUB_OUTPUT   # < 07:00
+            elif [ "$MINS" -lt 520 ];  then echo "name=afternoon" >> $GITHUB_OUTPUT   # < 08:40
+            else                            echo "name=preclose"  >> $GITHUB_OUTPUT
             fi
           fi
 

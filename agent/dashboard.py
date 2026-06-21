@@ -679,7 +679,47 @@ def _market_bar(nifty, vix, mood, warnings, market_health) -> str:
     n_str = f"{n_val:,.0f}" if isinstance(n_val, (int, float)) else str(n_val)
     mood_color = {"bullish": "var(--green)", "bearish": "var(--red)"}.get(mood, "var(--yellow)")
 
+    # ── Macro (global + India) sentiment panel ─────────────────────────────────
+    macro = market_health.get("macro", {})
+    macro_html = ""
+    if macro:
+        mm   = macro.get("mood", "neutral")
+        mscore = macro.get("overall_score", 0)
+        gscore = macro.get("global_score", 0)
+        iscore = macro.get("india_score", 0)
+        mcol = {"risk_on": "var(--green)", "risk_off": "var(--red)"}.get(mm, "var(--yellow)")
+        cues = macro.get("global_cues", {})
+        cue_chips = ""
+        for k in ("dow", "nasdaq", "nikkei", "crude", "usdinr"):
+            if k in cues:
+                cv = cues[k].get("chg_pct", 0)
+                ccol = "var(--green)" if cv >= 0 else "var(--red)"
+                cue_chips += (f'<span style="margin-right:10px">{k.upper()} '
+                              f'<b style="color:{ccol}">{cv:+.1f}%</b></span>')
+        summary = macro.get("summary", "")
+        playbook = macro.get("playbook", [])
+        pb_html = ""
+        if playbook:
+            pb_html = ('<div style="margin-top:6px;font-size:.66rem;color:var(--muted)">'
+                       + "<br>".join(f"&#9656; {p}" for p in playbook[:3]) + "</div>")
+        macro_html = f"""<div class="card" style="margin-bottom:12px;padding:12px 14px">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px">
+    <div style="font-size:.72rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)">
+      Global &amp; India Macro Sentiment
+    </div>
+    <div style="font-size:.85rem;font-weight:700;color:{mcol}">
+      {mm.replace('_','-').title()} ({mscore:+.2f})
+      <span style="font-size:.62rem;color:var(--muted);font-weight:400">
+        &nbsp;global {gscore:+.2f} &middot; india {iscore:+.2f}</span>
+    </div>
+  </div>
+  <div style="margin-top:7px;font-size:.68rem;color:var(--text)">{cue_chips or ''}</div>
+  {f'<div style="margin-top:7px;font-size:.74rem;line-height:1.5;color:var(--text)">{summary}</div>' if summary else ''}
+  {pb_html}
+</div>"""
+
     return f"""{warn_html}
+{macro_html}
 <div class="market-bar">
   <div class="mkt-item">
     <div class="mkt-val {n_cls}">{n_str} <span style="font-size:.72rem">({n_chg:+.2f}%)</span></div>

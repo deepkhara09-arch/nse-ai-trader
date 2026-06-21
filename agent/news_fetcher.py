@@ -10,7 +10,6 @@ import xml.etree.ElementTree as ET
 from datetime import date
 from typing import Dict, List
 from urllib.request import urlopen, Request
-from urllib.error import URLError
 
 from agent.config import BRAIN_DIR, NEWS_FILE, NEWS_FEEDS, POSITIVE_WORDS, NEGATIVE_WORDS
 

@@ -334,9 +334,12 @@ def _run_phase(state, phase, session, market_health, day, focus):
                 record_issue("coach", "Gemini coach", str(e), session)
 
             # ── Dynamic focus refresh: promote/demote stocks ──────────────────
+            # _maybe_refresh_focus mutates `state` in place (and persists if it
+            # changed focus). We must NOT reload from disk here: advance_session()
+            # above bumped the day only in memory, and a disk reload would discard
+            # that increment whenever no focus change occurred. Just re-read focus
+            # from the already-mutated state.
             _maybe_refresh_focus(state, merged, patterns, nd, fund, book, market_health)
-            # Reload state after potential focus update
-            state = load_state()
             focus = state.get("focus_stocks", focus)
 
             # ── Refresh fundamentals + 2yr history weekly ─────────────────────

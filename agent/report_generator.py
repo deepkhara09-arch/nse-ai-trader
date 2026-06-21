@@ -3,7 +3,7 @@ Writes STRATEGY_REPORT.md — clean markdown summary of current recommendations.
 """
 
 from datetime import date
-from agent.config import STRATEGY_REPORT, INITIAL_CAPITAL
+from agent.config import STRATEGY_REPORT
 from agent.paper_trader import compute_stats
 from agent.recommendations import format_recommendation_text, load_recommendations
 

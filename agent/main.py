@@ -51,6 +51,7 @@ from agent.history_engine import (
     fetch_history_context, save_history_context, load_history_context,
     refresh_universe_history, extend_foundation,
 )
+from agent.run_health import record_issue, start_run, finish_run
 
 
 def run():
@@ -58,6 +59,10 @@ def run():
     print(f"\n{'='*60}")
     print(f"NSE AI Trader  {date.today()}  session={session}")
     print(f"{'='*60}\n")
+
+    # Begin run-health tracking so any non-fatal failure this run is visible on
+    # the dashboard's System Health panel.
+    start_run(session)
 
     # ── Auto-migrate brain data before anything else ───────────────────────────
     # Reads GitHub-committed brain files, upgrades structure if needed, writes back.
@@ -95,6 +100,7 @@ def run():
         save_state(state)
         _refresh_outputs(state, market_health, session)
         _append_log(state, session)
+        finish_run(session)
         print(f"\n[done] pre-open sweep complete. {note}\n")
         return
 
@@ -108,12 +114,14 @@ def run():
         import traceback
         print(f"[run] Phase processing error (non-fatal, continuing to outputs): {e}")
         traceback.print_exc()
+        record_issue("phase", f"{phase} phase", str(e), session)
         # Reload the last good state from disk so outputs reflect a consistent view
         state = load_state()
 
     # ── Always: generate recommendations + rebuild dashboard ──────────────────
     _refresh_outputs(state, market_health, session)
     _append_log(state, session)
+    finish_run(session)
     print(f"\n[done] {session} complete. Phase={state['phase']} Day={state['day']}\n")
 
 
@@ -125,6 +133,8 @@ def _run_phase(state, phase, session, market_health, day, focus):
     if phase == "exploration":
         tickers = NSE_UNIVERSE
         fresh   = fetch_stock_data(tickers, session=session)
+        if not fresh:
+            record_issue("data_fetch", "full universe", "all price sources returned no data — using last-known", session)
         merged_expl = merge_stock_data(load_stock_data(), fresh)
         # Inject sector momentum so scores are sector-aware from day 1
         sector_scores = compute_sector_scores(merged_expl)
@@ -184,6 +194,8 @@ def _run_phase(state, phase, session, market_health, day, focus):
     # ── ANALYSIS ───────────────────────────────────────────────────────────────
     elif phase == "analysis":
         fresh = fetch_stock_data(focus, session=session)
+        if not fresh:
+            record_issue("data_fetch", "focus stocks", "all price sources returned no data — using last-known", session)
         merged_anal = merge_stock_data(load_stock_data(), fresh)
         sector_scores = compute_sector_scores(merged_anal)
         save_sector_scores(sector_scores)
@@ -210,6 +222,7 @@ def _run_phase(state, phase, session, market_health, day, focus):
                 save_stock_data(merged_anal)
             except Exception as e:
                 print(f"[delivery] fetch failed (non-fatal): {e}")
+                record_issue("delivery", "NSE bhavcopy", str(e), session)
 
             patterns  = load_patterns()
             decisions = load_decisions()
@@ -239,6 +252,8 @@ def _run_phase(state, phase, session, market_health, day, focus):
     elif phase in ("paper_trading", "alerting"):
         # Fetch data for ALL focus stocks every session for full paper trading
         fresh  = fetch_stock_data(focus, session=session)
+        if not fresh:
+            record_issue("data_fetch", "focus stocks", "all price sources returned no data — using last-known", session)
         merged = merge_stock_data(load_stock_data(), fresh)
         sector_scores = compute_sector_scores(merged)
         save_sector_scores(sector_scores)
@@ -259,6 +274,7 @@ def _run_phase(state, phase, session, market_health, day, focus):
                 save_stock_data(merged)
             except Exception as e:
                 print(f"[delivery] fetch failed (non-fatal): {e}")
+                record_issue("delivery", "NSE bhavcopy", str(e), session)
 
         patterns  = load_patterns()
         decisions = load_decisions()
@@ -315,6 +331,7 @@ def _run_phase(state, phase, session, market_health, day, focus):
                 print("[coach] Coach session complete")
             except Exception as e:
                 print(f"[coach] Session failed (non-fatal): {e}")
+                record_issue("coach", "Gemini coach", str(e), session)
 
             # ── Dynamic focus refresh: promote/demote stocks ──────────────────
             _maybe_refresh_focus(state, merged, patterns, nd, fund, book, market_health)
@@ -592,14 +609,16 @@ def _refresh_outputs(state: dict, market_health: dict, session: str) -> None:
 
         attr_summary = aggregate_attribution(pats)
         coach_mem    = load_coach_memory()
+        from agent.run_health import load_run_health
         build_dashboard(state, sd, book, pats, decs, nd, market_health,
                         recs, fund, ranked, sectors, clog, attr_summary,
-                        coach_memory=coach_mem)
+                        coach_memory=coach_mem, run_health=load_run_health())
 
     except Exception as e:
         import traceback
         print(f"[output] Error: {e}")
         traceback.print_exc()
+        record_issue("dashboard", "refresh outputs", str(e), session)
 
 
 def _append_log(state: dict, session: str) -> None:

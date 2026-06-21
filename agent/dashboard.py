@@ -30,6 +30,7 @@ def build_dashboard(
     changelog: List = None,
     attribution: Dict = None,
     coach_memory: Dict = None,
+    run_health: Dict = None,
 ) -> None:
     os.makedirs("docs", exist_ok=True)
     if market_health is None:
@@ -72,6 +73,7 @@ def build_dashboard(
         trade_ok, mkt_warn, recommendations, market_health, fundamentals,
         ranked_stocks, sector_scores, changelog, attribution or {},
         coach_memory=coach_memory or {},
+        run_health=run_health or {},
     )
 
     with open(DASHBOARD_FILE, "w", encoding="utf-8") as f:
@@ -88,7 +90,7 @@ def _build_html(
     focus, phase, day, alert, now_utc, portfolio, pnl_total, pnl_pct,
     nifty, vix, mood, trade_ok, mkt_warn, recommendations, market_health,
     fundamentals=None, ranked_stocks=None, sector_scores=None, changelog=None,
-    attribution=None, coach_memory=None,
+    attribution=None, coach_memory=None, run_health=None,
 ):
     fundamentals  = fundamentals  or {}
     ranked_stocks = ranked_stocks or []
@@ -96,6 +98,7 @@ def _build_html(
     changelog     = changelog     or []
     attribution   = attribution   or {}
     coach_memory  = coach_memory  or {}
+    run_health    = run_health    or {}
     nifty_val = nifty.get("value", "")
     vix_val   = vix.get("value", "")
     nifty_str = f"{nifty_val:,.0f}" if isinstance(nifty_val, (int, float)) else "—"
@@ -142,6 +145,7 @@ def _build_html(
   {_section_research(state, decisions)}
   {_section_attribution(attribution)}
   {_section_coach(coach_memory)}
+  {_section_health(run_health)}
   {_section_runlog(state)}
   {_section_brain(focus, patterns)}
 </div>
@@ -637,6 +641,7 @@ def _nav() -> str:
   <a href="#research">Research Log</a>
   <a href="#attribution">Attribution</a>
   <a href="#coach">Coach</a>
+  <a href="#health">System Health</a>
   <a href="#runlog">Run Log</a>
   <a href="#brain">Brain Insights</a>
 </nav>"""
@@ -2024,6 +2029,101 @@ def _section_coach(coach_memory: dict) -> str:
   </h2>
   {sug_html}
   {lessons_html}
+</div>"""
+
+
+def _section_health(run_health: dict) -> str:
+    last_run = run_health.get("last_run", {})
+    issues   = run_health.get("issues", [])
+    counts   = run_health.get("counts", {})
+
+    last_ok      = last_run.get("ok", True)
+    last_count   = last_run.get("issue_count", 0)
+    last_session = last_run.get("session", "")
+    last_when    = last_run.get("finished_at") or last_run.get("started_at") or ""
+
+    # Overall status banner
+    if not issues:
+        status_html = """<div class="card" style="padding:16px;text-align:center">
+  <div style="font-size:1.4rem;margin-bottom:6px">&#9989;</div>
+  <div style="font-weight:700;color:#4ade80">All systems healthy</div>
+  <div style="font-size:.72rem;color:var(--muted);margin-top:4px">
+    No failures recorded. Every run completed cleanly.
+  </div>
+</div>"""
+        return f"""<div class="section" id="health">
+  <h2>System Health <span>tool self-diagnostics &mdash; failures are non-fatal</span></h2>
+  {status_html}
+</div>"""
+
+    last_col = "#4ade80" if last_ok else "#fb923c"
+    last_txt = ("Last run clean" if last_ok
+                else f"Last run had {last_count} issue(s)")
+    banner = f"""<div class="card" style="padding:12px 14px;margin-bottom:12px">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px">
+    <div style="font-weight:700;color:{last_col}">
+      {'&#9888;' if not last_ok else '&#9989;'} {last_txt}
+    </div>
+    <div style="font-size:.62rem;color:var(--muted)">{last_session} &middot; {last_when}</div>
+  </div>
+  <div style="font-size:.66rem;color:var(--muted);margin-top:6px">
+    These are non-fatal — the tool kept running on last-known data. Share this
+    list if something looks recurring so it can be fixed.
+  </div>
+</div>"""
+
+    # Per-component summary (helps tell one-off vs recurring)
+    comp_rows = ""
+    for comp, c in sorted(counts.items(), key=lambda x: -x[1].get("total", 0)):
+        total = c.get("total", 0)
+        recur = "recurring" if total >= 3 else ("a few times" if total == 2 else "once")
+        rcol  = "#f87171" if total >= 3 else ("#fbbf24" if total == 2 else "var(--muted)")
+        comp_rows += (
+            f'<tr><td><strong>{comp}</strong></td>'
+            f'<td style="text-align:center">{total}</td>'
+            f'<td style="color:{rcol}">{recur}</td>'
+            f'<td class="muted" style="font-size:.66rem">{c.get("last_seen","")}</td></tr>'
+        )
+    summary_table = f"""<div class="card" style="margin-bottom:12px;padding:0;overflow:hidden">
+  <table style="width:100%;border-collapse:collapse">
+    <thead><tr style="font-size:.62rem;color:var(--muted)">
+      <th style="text-align:left;padding:7px 10px">Component</th>
+      <th style="padding:7px 10px">Total</th>
+      <th style="text-align:left;padding:7px 10px">Frequency</th>
+      <th style="text-align:left;padding:7px 10px">Last seen</th>
+    </tr></thead>
+    <tbody>{comp_rows}</tbody>
+  </table>
+</div>"""
+
+    # Recent issue feed (most recent first)
+    rows = ""
+    for it in reversed(issues[-25:]):
+        rows += (
+            f'<tr>'
+            f'<td class="muted" style="font-size:.64rem;white-space:nowrap">{it.get("ts","")}</td>'
+            f'<td><span class="pill pill-yellow" style="font-size:.58rem">{it.get("component","")}</span></td>'
+            f'<td style="font-size:.68rem">{it.get("detail","")}</td>'
+            f'<td style="font-size:.66rem;color:var(--muted)">{it.get("message","")[:120]}</td>'
+            f'</tr>'
+        )
+    feed = f"""<div class="card table-wrap" style="padding:0;overflow-x:auto">
+  <table style="width:100%;border-collapse:collapse">
+    <thead><tr style="font-size:.62rem;color:var(--muted)">
+      <th style="text-align:left;padding:7px 10px">When</th>
+      <th style="text-align:left;padding:7px 10px">Component</th>
+      <th style="text-align:left;padding:7px 10px">Detail</th>
+      <th style="text-align:left;padding:7px 10px">Message</th>
+    </tr></thead>
+    <tbody>{rows}</tbody>
+  </table>
+</div>"""
+
+    return f"""<div class="section" id="health">
+  <h2>System Health <span>{len(issues)} recorded issue(s) &mdash; all non-fatal</span></h2>
+  {banner}
+  {summary_table}
+  {feed}
 </div>"""
 
 

@@ -137,6 +137,11 @@ def assess_market(session: str = "morning") -> dict:
             macro = load_macro_sentiment() or assess_macro_sentiment(session=session, use_llm=False)
     except Exception as e:
         print(f"[market] macro sentiment failed (non-fatal): {e}")
+        try:
+            from agent.run_health import record_issue
+            record_issue("macro_sentiment", "macro pass", str(e), session)
+        except Exception:
+            pass
         macro = {}
 
     macro_mood  = macro.get("mood", "neutral")

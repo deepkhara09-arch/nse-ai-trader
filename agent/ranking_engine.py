@@ -347,10 +347,12 @@ def _get_demotion_candidates(ranked: List[dict]) -> List[str]:
         ticker = r["ticker"]
         bottom_count = 0
         for snap in history[-3:]:
+            if not isinstance(snap, dict):
+                continue
             snap_ranked = snap.get("ranked", [])
             n = len(snap_ranked)
             for s in snap_ranked[max(0, n-3):]:
-                if s["ticker"] == ticker:
+                if isinstance(s, dict) and s.get("ticker") == ticker:
                     bottom_count += 1
         if bottom_count >= 3:
             demote.append(ticker)

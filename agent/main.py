@@ -361,7 +361,9 @@ def _run_phase(state, phase, session, market_health, day, focus):
                 )
                 state = set_phase(state, "alerting")
 
-            if phase == "alerting":
+            # Check the CURRENT phase (state), not the stale local `phase` captured
+            # at run() start — set_phase above may have just flipped it to alerting.
+            if state.get("phase") == "alerting":
                 # Keep running indefinitely — never stop after alerting
                 state = add_brain_note(state, "Continuing live paper trading post-alert (perpetual mode)")
 

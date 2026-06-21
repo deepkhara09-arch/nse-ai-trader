@@ -172,10 +172,8 @@ def _fetch_bhavcopy(target: date) -> Dict[str, dict]:
 
 
 def load_delivery() -> Dict:
-    if os.path.exists(DELIVERY_FILE):
-        with open(DELIVERY_FILE) as f:
-            return json.load(f)
-    return {}
+    from agent.io_safe import load_json_dict
+    return load_json_dict(DELIVERY_FILE)
 
 
 def save_delivery(data: Dict) -> None:

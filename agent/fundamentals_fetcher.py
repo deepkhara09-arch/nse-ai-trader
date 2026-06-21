@@ -46,10 +46,8 @@ def fetch_fundamentals(tickers: List[str]) -> Dict:
 
 
 def load_fundamentals() -> Dict:
-    if os.path.exists(FUNDAMENTALS_FILE):
-        with open(FUNDAMENTALS_FILE) as f:
-            return json.load(f)
-    return {}
+    from agent.io_safe import load_json_dict
+    return load_json_dict(FUNDAMENTALS_FILE)
 
 
 def save_fundamentals(data: Dict) -> None:

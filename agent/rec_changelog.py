@@ -129,7 +129,5 @@ def save_changelog(changes: List[dict]) -> None:
 
 
 def load_changelog() -> List[dict]:
-    if os.path.exists(CHANGELOG_FILE):
-        with open(CHANGELOG_FILE) as f:
-            return json.load(f)
-    return []
+    from agent.io_safe import load_json_list
+    return load_json_list(CHANGELOG_FILE)

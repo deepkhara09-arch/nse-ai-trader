@@ -245,10 +245,8 @@ def get_stock_sector(ticker: str) -> str:
 
 
 def load_sector_scores() -> Dict:
-    if os.path.exists(SECTOR_FILE):
-        with open(SECTOR_FILE) as f:
-            return json.load(f)
-    return {}
+    from agent.io_safe import load_json_dict
+    return load_json_dict(SECTOR_FILE)
 
 
 def save_sector_scores(data: Dict) -> None:

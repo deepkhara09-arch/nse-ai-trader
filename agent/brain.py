@@ -31,10 +31,8 @@ from agent.config import (
 # ═══════════════════════════════════════════════════════════════════════════════
 
 def load_patterns() -> Dict:
-    if os.path.exists(PATTERN_FILE):
-        with open(PATTERN_FILE) as f:
-            return json.load(f)
-    return {}
+    from agent.io_safe import load_json_dict
+    return load_json_dict(PATTERN_FILE)
 
 
 def save_patterns(data: Dict) -> None:
@@ -44,10 +42,8 @@ def save_patterns(data: Dict) -> None:
 
 
 def load_decisions() -> List:
-    if os.path.exists(BRAIN_DECISIONS_FILE):
-        with open(BRAIN_DECISIONS_FILE) as f:
-            return json.load(f)
-    return []
+    from agent.io_safe import load_json_list
+    return load_json_list(BRAIN_DECISIONS_FILE)
 
 
 def save_decisions(decisions: List) -> None:

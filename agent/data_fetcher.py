@@ -180,10 +180,8 @@ def fetch_stock_data(tickers: List[str], session: str = "morning") -> Dict:
 
 
 def load_stock_data() -> Dict:
-    if os.path.exists(STOCK_DATA_FILE):
-        with open(STOCK_DATA_FILE) as f:
-            return json.load(f)
-    return {}
+    from agent.io_safe import load_json_dict
+    return load_json_dict(STOCK_DATA_FILE)
 
 
 def save_stock_data(data: Dict) -> None:

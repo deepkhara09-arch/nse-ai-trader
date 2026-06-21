@@ -703,10 +703,8 @@ def generate_recommendations(
 
 
 def load_recommendations() -> List[dict]:
-    if os.path.exists(RECOMMENDATIONS_FILE):
-        with open(RECOMMENDATIONS_FILE) as f:
-            return json.load(f)
-    return []
+    from agent.io_safe import load_json_list
+    return load_json_list(RECOMMENDATIONS_FILE)
 
 
 def _save(recs):

@@ -24,10 +24,11 @@ Tuple2 = tuple   # (book, patterns_db)
 
 
 def load_book() -> dict:
-    if os.path.exists(PAPER_TRADES_FILE):
-        with open(PAPER_TRADES_FILE) as f:
-            return json.load(f)
-    return _fresh_book()
+    from agent.io_safe import load_json_dict
+    loaded = load_json_dict(PAPER_TRADES_FILE, default=None)
+    if not loaded:   # missing, corrupt, empty, or not a dict
+        return _fresh_book()
+    return loaded
 
 
 def save_book(book: dict) -> None:

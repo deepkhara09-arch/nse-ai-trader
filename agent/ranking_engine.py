@@ -280,10 +280,8 @@ def update_watchlist_signals(
 
 
 def load_watchlist_signals() -> Dict:
-    if os.path.exists(WATCHLIST_FILE):
-        with open(WATCHLIST_FILE) as f:
-            return json.load(f)
-    return {}
+    from agent.io_safe import load_json_dict
+    return load_json_dict(WATCHLIST_FILE)
 
 
 def save_watchlist_signals(data: Dict) -> None:
@@ -309,10 +307,15 @@ def load_rank_history() -> List[dict]:
 
 def _load_prev_ranks() -> Dict[str, int]:
     history = load_rank_history()
-    if not history:
+    if not history or not isinstance(history[-1], dict):
         return {}
     last = history[-1].get("ranked", [])
-    return {r["ticker"]: r["rank"] for r in last}
+    # Defensive: tolerate any malformed snapshot entry from an older format
+    out = {}
+    for r in last:
+        if isinstance(r, dict) and "ticker" in r and "rank" in r:
+            out[r["ticker"]] = r["rank"]
+    return out
 
 
 def _save_rank_history(ranked: List[dict]) -> None:

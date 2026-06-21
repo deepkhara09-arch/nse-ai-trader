@@ -28,8 +28,10 @@ def compute_levels(
     Returns a dict with support and resistance levels, ranked by strength.
     All levels computed from raw price data — no external inputs.
     """
-    if len(price_history) < 20:
-        return {"supports": [], "resistances": [], "nearest_support": 0, "nearest_resistance": 0}
+    if len(price_history) < 20 or not current_price or current_price <= 0:
+        return {"supports": [], "resistances": [], "nearest_support": 0,
+                "nearest_resistance": 0, "distance_to_support_pct": 0,
+                "distance_to_resistance_pct": 0}
 
     levels = []
 

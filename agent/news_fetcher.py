@@ -200,10 +200,8 @@ def _sentiment(articles: List[dict]) -> float:
 
 
 def load_news() -> Dict:
-    if os.path.exists(NEWS_FILE):
-        with open(NEWS_FILE) as f:
-            return json.load(f)
-    return {}
+    from agent.io_safe import load_json_dict
+    return load_json_dict(NEWS_FILE)
 
 
 def save_news(data: Dict) -> None:

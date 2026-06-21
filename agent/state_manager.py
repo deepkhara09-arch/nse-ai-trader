@@ -10,10 +10,13 @@ from agent.config import STATE_FILE, BRAIN_DIR
 
 
 def load_state() -> dict:
-    if os.path.exists(STATE_FILE):
-        with open(STATE_FILE) as f:
-            return json.load(f)
-    return _fresh_state()
+    # State is the most critical file — a corrupt/empty one must never crash the
+    # run. Fall back to a fresh state if it's missing, corrupt, or not a dict.
+    from agent.io_safe import load_json_dict
+    loaded = load_json_dict(STATE_FILE, default=None)
+    if not loaded:   # missing, corrupt, empty {}, or not a dict
+        return _fresh_state()
+    return loaded
 
 
 def save_state(state: dict) -> None:

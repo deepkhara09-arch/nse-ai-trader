@@ -98,6 +98,29 @@ def run():
         print(f"\n[done] pre-open sweep complete. {note}\n")
         return
 
+    # ── Phase processing (wrapped so one failure never kills the whole run) ─────
+    # If anything in the phase body throws unexpectedly, we log it but STILL fall
+    # through to refresh the dashboard + write the run log from whatever data
+    # exists. A self-running tool must never silently produce a dead run.
+    try:
+        state = _run_phase(state, phase, session, market_health, day, focus)
+    except Exception as e:
+        import traceback
+        print(f"[run] Phase processing error (non-fatal, continuing to outputs): {e}")
+        traceback.print_exc()
+        # Reload the last good state from disk so outputs reflect a consistent view
+        state = load_state()
+
+    # ── Always: generate recommendations + rebuild dashboard ──────────────────
+    _refresh_outputs(state, market_health, session)
+    _append_log(state, session)
+    print(f"\n[done] {session} complete. Phase={state['phase']} Day={state['day']}\n")
+
+
+def _run_phase(state, phase, session, market_health, day, focus):
+    """All phase-specific processing. Extracted so run() can guard it and always
+    still refresh outputs even if a phase step fails unexpectedly.
+    Returns the (possibly updated) state so run() always has the latest view."""
     # ── EXPLORATION ────────────────────────────────────────────────────────────
     if phase == "exploration":
         tickers = NSE_UNIVERSE
@@ -324,10 +347,7 @@ def run():
 
         save_state(state)
 
-    # ── Always: generate recommendations + rebuild dashboard ──────────────────
-    _refresh_outputs(state, market_health, session)
-    _append_log(state, session)
-    print(f"\n[done] {session} complete. Phase={state['phase']} Day={state['day']}\n")
+    return state
 
 
 def _tick_background_cohorts(state: dict, session: str, skip_fetch: bool = False) -> None:

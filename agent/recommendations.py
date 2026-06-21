@@ -44,7 +44,6 @@ from agent.config import (
 )
 from agent.support_resistance import compute_levels, nearest_strong_support, nearest_strong_resistance
 from agent.brain import analyse_stock, get_reliable_patterns_list
-from agent.paper_trader import compute_stats
 from agent.ranking_engine import rank_focus_stocks
 
 RECOMMENDATIONS_FILE = "brain/recommendations.json"

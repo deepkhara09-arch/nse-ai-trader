@@ -20,7 +20,7 @@ from agent.data_fetcher import (
     fetch_stock_data, load_stock_data, save_stock_data, merge_stock_data,
 )
 from agent.news_fetcher   import fetch_news, load_news, save_news
-from agent.market_health  import assess_market, load_market_health
+from agent.market_health  import assess_market
 from agent.stock_scorer   import select_focus_stocks
 from agent.brain          import (
     load_patterns, save_patterns, load_decisions, save_decisions,

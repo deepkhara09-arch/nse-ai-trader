@@ -205,13 +205,22 @@ def _intraday_regime(candles: list) -> str:
 
 def load_market_health() -> dict:
     if os.path.exists(MARKET_STATE_FILE):
-        with open(MARKET_STATE_FILE) as f:
-            return json.load(f)
+        try:
+            with open(MARKET_STATE_FILE) as f:
+                d = json.load(f)
+            if isinstance(d, dict):
+                # Ensure newer keys always exist even on an older saved file
+                d.setdefault("macro", {})
+                d.setdefault("macro_risk_factor", 1.0)
+                return d
+        except Exception:
+            pass
     return {
         "trade_allowed": True, "market_mood": "neutral", "warnings": [],
         "nifty": {}, "vix": {"value": 15.0, "level": "normal"},
         "bank_nifty": {}, "sectors": {}, "leading_sectors": [],
         "market_regime": "normal", "intraday_regime": "unknown",
+        "macro": {}, "macro_risk_factor": 1.0,
     }
 
 

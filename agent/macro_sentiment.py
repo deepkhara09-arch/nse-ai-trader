@@ -282,15 +282,14 @@ def _fetch_global_cues() -> dict:
 def _cue_adjustment(cues: dict) -> float:
     """Translate overnight price cues into a small sentiment nudge (-0.3..+0.3)."""
     adj = 0.0
+    def _chg(name):   # safe accessor — never KeyErrors on a partial cue dict
+        return (cues.get(name) or {}).get("chg_pct", 0.0)
     # US markets are the strongest pre-open cue for Nifty
     for k, w in (("dow", 0.04), ("nasdaq", 0.04), ("sp500", 0.04), ("nikkei", 0.02)):
-        if k in cues:
-            adj += max(-1.5, min(1.5, cues[k]["chg_pct"])) / 1.5 * w
+        adj += max(-1.5, min(1.5, _chg(k))) / 1.5 * w
     # Crude UP is bad for India; USD/INR UP (rupee weak) is bad
-    if "crude" in cues:
-        adj -= max(-2.0, min(2.0, cues["crude"]["chg_pct"])) / 2.0 * 0.05
-    if "usdinr" in cues:
-        adj -= max(-1.0, min(1.0, cues["usdinr"]["chg_pct"])) / 1.0 * 0.05
+    adj -= max(-2.0, min(2.0, _chg("crude")))  / 2.0 * 0.05
+    adj -= max(-1.0, min(1.0, _chg("usdinr"))) / 1.0 * 0.05
     return round(max(-0.30, min(0.30, adj)), 3)
 
 

@@ -668,7 +668,8 @@ def _market_bar(nifty, vix, mood, warnings, market_health) -> str:
     leaders = market_health.get("leading_sectors", [])
     leader_str = " &middot; ".join(leaders[:4]) if leaders else "—"
 
-    bnifty = market_health.get("banknifty", {})
+    # market_health writes this under "bank_nifty" (underscore); accept both for safety
+    bnifty = market_health.get("bank_nifty") or market_health.get("banknifty", {})
     bn_val = bnifty.get("value", "")
     bn_chg = bnifty.get("day_change_pct", 0)
     bn_cls = "green" if bn_chg >= 0 else "red"

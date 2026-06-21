@@ -1,11 +1,11 @@
 {
   "phase": "exploration",
-  "day": 2,
+  "day": 1,
   "session": "morning",
-  "start_date": "2026-06-20",
-  "phase_start_date": "2026-06-20",
-  "last_run_date": "2026-06-21",
-  "last_updated": "2026-06-21T12:53:31.695838",
+  "start_date": "2026-06-21",
+  "phase_start_date": "2026-06-21",
+  "last_run_date": null,
+  "last_updated": null,
   "focus_stocks": [],
   "dropped_stocks": [],
   "paper_trade_stats": {
@@ -21,14 +21,5 @@
   "brain_notes": [],
   "alert_sent": false,
   "schema_version": 6,
-  "background_batches": [
-    {
-      "id": 1,
-      "day": 1,
-      "start_date": "2026-06-21",
-      "ready": false,
-      "candidates": []
-    }
-  ],
-  "background_cohort": null
+  "background_batches": []
 }

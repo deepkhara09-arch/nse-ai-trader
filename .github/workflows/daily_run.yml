@@ -17,18 +17,20 @@ on:
     - cron: "43 9 * * 1-5"   # target ~15:15 IST — pre-close decisions
 
   # Manual trigger (pick a session from the UI dropdown).
-  # Default is "preopen" — the SAFE choice: it refreshes the dashboard/sentiment
-  # but does NOT fetch+trade. So if you forget to change the dropdown, a manual
-  # run won't accidentally inject a fake trading session into the record.
-  # Pick morning/midday/afternoon/preclose explicitly to run a real trading session.
+  # Default is "test" — a fully SAFE dry run: it only rebuilds the dashboard from
+  # existing data. It does NOT advance the trading day, does NOT trade, and does
+  # NOT fetch fresh market data. Use it to verify everything works any time.
+  #   test      -> safe dry run, zero side effects (default)
+  #   preopen   -> refresh dashboard + macro sentiment, no trading
+  #   morning/midday/afternoon/preclose -> real trading sessions (weekdays only)
   workflow_dispatch:
     inputs:
       session:
-        description: "Session to run (preopen = safe/no-trade default)"
+        description: "Session to run (test = safe dry run, no day/trade changes)"
         required: true
-        default: "preopen"
+        default: "test"
         type: choice
-        options: [preopen, morning, midday, afternoon, preclose]
+        options: [test, preopen, morning, midday, afternoon, preclose]
 
 permissions:
   contents: write   # needed to commit brain + dashboard back to repo

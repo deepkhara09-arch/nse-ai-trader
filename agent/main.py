@@ -55,10 +55,35 @@ from agent.run_health import record_issue, start_run, finish_run
 
 
 def run():
+    raw_session = os.environ.get("SESSION", "").strip().lower()
+
+    # ── TEST mode ───────────────────────────────────────────────────────────────
+    # A safe dry-run for checking the pipeline / dashboard without side effects.
+    # It does NOT advance the day, does NOT open/close trades, does NOT fetch fresh
+    # market data — it only re-runs market-health (read-only) and rebuilds the
+    # dashboard from the EXISTING brain data. Use it to confirm everything works
+    # after a code change, any time, any day.
+    if raw_session == "test":
+        print(f"\n{'='*60}\nNSE AI Trader  {date.today()}  session=TEST (dry run, no side effects)\n{'='*60}\n")
+        run_migrations()
+        start_run("test")
+        try:
+            state = load_state()
+            market_health = assess_market("test")
+            _refresh_outputs(state, market_health, state.get("session", "test"))
+            print(f"[test] Dashboard rebuilt from existing data. "
+                  f"phase={state['phase']} day={state['day']} (UNCHANGED). No trades, no day advance.")
+        except Exception as e:
+            import traceback
+            print(f"[test] error: {e}"); traceback.print_exc()
+            record_issue("test_run", str(date.today()), str(e), "test")
+        finish_run("test")
+        print(f"\n[done] TEST run complete — nothing was changed.\n")
+        return
+
     # SESSION must come from the workflow. If it's missing/blank (e.g. a manual
     # trigger where the dropdown didn't register), fail loud rather than silently
     # pretending it's "morning" — a wrong session pollutes the trading record.
-    raw_session = os.environ.get("SESSION", "").strip().lower()
     valid_sessions = {"preopen", "morning", "midday", "afternoon", "preclose"}
     if raw_session not in valid_sessions:
         print(f"[run] SESSION='{raw_session}' invalid/empty — defaulting to 'preopen' "

@@ -55,10 +55,43 @@ from agent.run_health import record_issue, start_run, finish_run
 
 
 def run():
-    session = os.environ.get("SESSION", "morning").lower()
+    # SESSION must come from the workflow. If it's missing/blank (e.g. a manual
+    # trigger where the dropdown didn't register), fail loud rather than silently
+    # pretending it's "morning" — a wrong session pollutes the trading record.
+    raw_session = os.environ.get("SESSION", "").strip().lower()
+    valid_sessions = {"preopen", "morning", "midday", "afternoon", "preclose"}
+    if raw_session not in valid_sessions:
+        print(f"[run] SESSION='{raw_session}' invalid/empty — defaulting to 'preopen' "
+              f"(safe: no trading). Valid: {sorted(valid_sessions)}")
+        session = "preopen"
+    else:
+        session = raw_session
+
     print(f"\n{'='*60}")
     print(f"NSE AI Trader  {date.today()}  session={session}")
     print(f"{'='*60}\n")
+
+    # ── Weekend / non-trading-day guard ─────────────────────────────────────────
+    # NSE trades Mon–Fri. Scheduled crons are already weekday-only, but a MANUAL
+    # run on a weekend would fetch + "trade" on a non-trading day and pollute the
+    # paper-trading record. On weekends we still refresh the dashboard (so you can
+    # view it) but skip all data fetch / trading. Set ALLOW_WEEKEND=1 to override.
+    is_weekend = date.today().weekday() >= 5   # 5=Sat, 6=Sun
+    if is_weekend and os.environ.get("ALLOW_WEEKEND", "") != "1":
+        print(f"[run] {date.today()} is a weekend — NSE is closed. Refreshing dashboard "
+              f"only; skipping data fetch & trading. (Set ALLOW_WEEKEND=1 to force.)")
+        start_run(session)
+        try:
+            state = load_state()
+            state["session"] = session
+            market_health = assess_market(session)
+            _refresh_outputs(state, market_health, session)
+        except Exception as e:
+            print(f"[run] weekend dashboard refresh failed (non-fatal): {e}")
+            record_issue("weekend_refresh", str(date.today()), str(e), session)
+        finish_run(session)
+        print(f"\n[done] weekend no-op complete ({session}).\n")
+        return
 
     # Begin run-health tracking so any non-fatal failure this run is visible on
     # the dashboard's System Health panel.

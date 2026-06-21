@@ -16,13 +16,17 @@ on:
     - cron: "43 7 * * 1-5"   # target ~13:15 IST — early afternoon (post-lunch)
     - cron: "43 9 * * 1-5"   # target ~15:15 IST — pre-close decisions
 
-  # Manual trigger (you can also pick a session from the UI)
+  # Manual trigger (pick a session from the UI dropdown).
+  # Default is "preopen" — the SAFE choice: it refreshes the dashboard/sentiment
+  # but does NOT fetch+trade. So if you forget to change the dropdown, a manual
+  # run won't accidentally inject a fake trading session into the record.
+  # Pick morning/midday/afternoon/preclose explicitly to run a real trading session.
   workflow_dispatch:
     inputs:
       session:
-        description: "Session to run"
-        required: false
-        default: "morning"
+        description: "Session to run (preopen = safe/no-trade default)"
+        required: true
+        default: "preopen"
         type: choice
         options: [preopen, morning, midday, afternoon, preclose]
 

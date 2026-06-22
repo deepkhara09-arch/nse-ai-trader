@@ -70,7 +70,11 @@ def run():
         try:
             state = load_state()
             market_health = assess_market("test")
-            _refresh_outputs(state, market_health, state.get("session", "test"))
+            # read_only=True -> rebuild dashboard from existing data ONLY; no recs
+            # regeneration, no report, no history extend, no file writes beyond the
+            # dashboard + market_health snapshot. True zero-side-effect dry run.
+            _refresh_outputs(state, market_health, "test", read_only=True)
+            _append_log(state, "test")   # so the test run shows in the Run Log
             print(f"[test] Dashboard rebuilt from existing data. "
                   f"phase={state['phase']} day={state['day']} (UNCHANGED). No trades, no day advance.")
         except Exception as e:
@@ -628,15 +632,20 @@ def _inject_history_context(stock_data: dict, history_ctx: dict) -> dict:
     return stock_data
 
 
-def _refresh_outputs(state: dict, market_health: dict, session: str) -> None:
+def _refresh_outputs(state: dict, market_health: dict, session: str, read_only: bool = False) -> None:
+    """Rebuild recommendations + dashboard. When read_only=True (test mode) it
+    does NOT regenerate/persist recommendations, changelog, report, or extend the
+    history foundation — it only rebuilds the dashboard from EXISTING data, so a
+    test run truly has zero side effects."""
     try:
         sd      = load_stock_data()
         # Layer today's fresh price onto the permanent 2yr history foundation
-        # (extend-only — no re-fetch). Keeps long-term context current cheaply.
-        try:
-            extend_foundation(sd)
-        except Exception as e:
-            print(f"[history] foundation extend failed (non-fatal): {e}")
+        # (extend-only — no re-fetch). Skipped in read-only/test mode.
+        if not read_only:
+            try:
+                extend_foundation(sd)
+            except Exception as e:
+                print(f"[history] foundation extend failed (non-fatal): {e}")
         book    = load_book()
         pats    = load_patterns()
         decs    = load_decisions()
@@ -650,8 +659,11 @@ def _refresh_outputs(state: dict, market_health: dict, session: str) -> None:
         # otherwise the dashboard would show yesterday's preclose recs (stale, and
         # useless for intraday calls which expire the same day). During exploration
         # there are no focus stocks yet, so nothing is generated.
+        # In read-only/test mode we skip regeneration entirely and just load existing.
         focus = state.get("focus_stocks", [])
-        if focus or not os.path.exists("brain/recommendations.json"):
+        if read_only:
+            recs = load_recommendations()
+        elif focus or not os.path.exists("brain/recommendations.json"):
             prev_recs = load_recommendations()
             recs = generate_recommendations(state, sd, pats, nd, book, market_health, fund, session=session)
             # Compute and persist what changed vs previous recommendations

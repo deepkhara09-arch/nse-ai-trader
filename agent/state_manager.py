@@ -35,7 +35,8 @@ def _fresh_state() -> dict:
         "start_date":        date.today().isoformat(),
         "phase_start_date":  date.today().isoformat(),
         "last_run_date":     None,
-        "last_counted_date": None,   # last date the day-counter advanced (dedupe)
+        "last_counted_date": None,   # last date the phase day-counter advanced (dedupe)
+        "cohort_last_tick_date": None,  # last date background batches advanced (dedupe)
         "last_updated":      None,
         "focus_stocks":      [],
         "dropped_stocks":    [],   # stocks removed due to poor pattern reliability
@@ -53,18 +54,22 @@ def _fresh_state() -> dict:
 def advance_session(state: dict, current_session: str) -> dict:
     """
     Advance the session pointer, and increment the phase "day" ONLY when a real
-    trading day completes.
+    NSE trading day completes.
 
     A day advances at preclose, but ONLY if BOTH are true:
-      1. Today is a weekday (Mon–Fri) — NSE doesn't trade weekends, so weekend
-         runs never count toward exploration/analysis/paper-trading day counts.
+      1. Today is an actual TRADING day — a weekday that is not an NSE holiday
+         (see trading_calendar). Weekends and holidays never count, so phases take
+         exactly as many calendar days as needed to gather real trading days.
       2. We haven't already counted today — guards against multiple preclose runs
-         on the same calendar date double-counting the day (e.g. duplicate crons).
+         on the same calendar date double-counting (e.g. duplicate/overlapping
+         triggers). Running preclose 3x in one day still advances the day only once.
 
-    This means every phase counts only genuine trading days that the tool observed,
-    exactly as intended. (Holidays where no run happens simply don't advance, which
-    is also correct.)
+    Missed triggers are harmless: the day only ever advances on a preclose that
+    actually runs on an uncounted trading day, so a missed session/day simply means
+    that day isn't counted — never a wrong count.
     """
+    from agent.trading_calendar import is_trading_day, reason_not_trading
+
     order = ["morning", "midday", "afternoon", "preclose"]
     try:
         idx = order.index(current_session)
@@ -75,16 +80,16 @@ def advance_session(state: dict, current_session: str) -> dict:
         # preclose done → candidate for end-of-trading-day rollover
         today = date.today()
         today_str = today.isoformat()
-        is_weekday = today.weekday() < 5          # 0–4 = Mon–Fri
+        trading_day = is_trading_day(today)
         already_counted_today = state.get("last_counted_date") == today_str
 
-        if is_weekday and not already_counted_today:
+        if trading_day and not already_counted_today:
             state["day"] += 1
             state["last_counted_date"] = today_str
             print(f"[state] Trading day complete → day advanced to {state['day']} ({today_str})")
         else:
-            reason = ("weekend — not a trading day" if not is_weekday
-                      else "day already counted today (duplicate preclose)")
+            reason = (reason_not_trading(today) or "not a trading day") if not trading_day \
+                     else "day already counted today (duplicate preclose)"
             print(f"[state] Preclose ran but day NOT advanced ({reason}); staying on day {state['day']}")
 
         state["session"] = "morning"

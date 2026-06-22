@@ -33,7 +33,7 @@ RANK_HISTORY_FILE    = "brain/rank_history.json"
 WATCHLIST_FILE       = "brain/watchlist_signals.json"
 DECISIONS_FILE       = "brain/decisions.json"
 
-CURRENT_SCHEMA_VERSION = 7   # bump this when you add a new migration
+CURRENT_SCHEMA_VERSION = 8   # bump this when you add a new migration
 
 
 # ── Migration functions ────────────────────────────────────────────────────────
@@ -238,6 +238,16 @@ def _migrate_v7(state, stock_data, patterns, book, fundamentals, decisions):
     return state, stock_data, patterns, book, fundamentals, decisions
 
 
+def _migrate_v8(state, stock_data, patterns, book, fundamentals, decisions):
+    """
+    v8: holiday-aware trading calendar + per-day batch dedupe. Adds
+    cohort_last_tick_date so background batches also advance only once per real
+    trading day (same guarantee as the phase day-counter).
+    """
+    state.setdefault("cohort_last_tick_date", None)
+    return state, stock_data, patterns, book, fundamentals, decisions
+
+
 # ── Registry: maps schema version → migration that brings data UP to that version
 MIGRATIONS = {
     1: _migrate_v1,
@@ -247,6 +257,7 @@ MIGRATIONS = {
     5: _migrate_v5,
     6: _migrate_v6,
     7: _migrate_v7,
+    8: _migrate_v8,
 }
 
 

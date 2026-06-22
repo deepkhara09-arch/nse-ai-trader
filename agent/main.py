@@ -100,14 +100,15 @@ def run():
     print(f"NSE AI Trader  {date.today()}  session={session}")
     print(f"{'='*60}\n")
 
-    # ── Weekend / non-trading-day guard ─────────────────────────────────────────
-    # NSE trades Mon–Fri. Scheduled crons are already weekday-only, but a MANUAL
-    # run on a weekend would fetch + "trade" on a non-trading day and pollute the
-    # paper-trading record. On weekends we still refresh the dashboard (so you can
-    # view it) but skip all data fetch / trading. Set ALLOW_WEEKEND=1 to override.
-    is_weekend = date.today().weekday() >= 5   # 5=Sat, 6=Sun
-    if is_weekend and os.environ.get("ALLOW_WEEKEND", "") != "1":
-        print(f"[run] {date.today()} is a weekend — NSE is closed. Refreshing dashboard "
+    # ── Non-trading-day guard (weekend OR NSE holiday) ──────────────────────────
+    # NSE trades Mon–Fri excluding holidays. A run on any closed day would fetch +
+    # "trade" on a non-trading day and pollute the record. On closed days we still
+    # refresh the dashboard (so you can view it) but skip all data fetch / trading.
+    # Set ALLOW_WEEKEND=1 to override (e.g. forced testing).
+    from agent.trading_calendar import is_trading_day, reason_not_trading
+    if not is_trading_day(date.today()) and os.environ.get("ALLOW_WEEKEND", "") != "1":
+        why = reason_not_trading(date.today())
+        print(f"[run] {date.today()} is a {why} — NSE is closed. Refreshing dashboard "
               f"only; skipping data fetch & trading. (Set ALLOW_WEEKEND=1 to force.)")
         start_run(session)
         try:
@@ -456,6 +457,19 @@ def _tick_background_cohorts(state: dict, session: str, skip_fetch: bool = False
     """
     if session != "preclose":
         return
+
+    # Only tick batches on a real trading day, and only ONCE per day — mirrors the
+    # main day-counter so duplicate/overlapping precloses or weekend/holiday runs
+    # don't make batches "age" multiple steps or on non-trading days.
+    from agent.trading_calendar import is_trading_day
+    today_str = date.today().isoformat()
+    if not is_trading_day(date.today()):
+        print("[cohort] Not a trading day — batches not advanced.")
+        return
+    if state.get("cohort_last_tick_date") == today_str:
+        print("[cohort] Batches already advanced today — skipping (duplicate preclose).")
+        return
+    state["cohort_last_tick_date"] = today_str
 
     focus     = state.get("focus_stocks", [])
     batches   = state.setdefault("background_batches", [])

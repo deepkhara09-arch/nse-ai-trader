@@ -65,7 +65,11 @@ jobs:
             echo "name=${{ github.event.inputs.session }}" >> $GITHUB_OUTPUT
           else
             # Minutes since UTC midnight = robust single number to bucket on.
-            MINS=$(( $(date -u +%H) * 60 + $(date -u +%M) ))
+            # Force base-10: date emits zero-padded hours/mins (e.g. "08","09")
+            # which bash would otherwise parse as INVALID octal -> "value too great
+            # for base" error. 10# makes the arithmetic explicitly decimal.
+            H=$(date -u +%H); MM=$(date -u +%M)
+            MINS=$(( 10#$H * 60 + 10#$MM ))
             # Targets (UTC): preopen 03:00(180) morning 04:03(243)
             #                midday 06:13(373) afternoon 07:43(463) preclose 09:43(583)
             # Boundaries placed between targets so late fires still land right.

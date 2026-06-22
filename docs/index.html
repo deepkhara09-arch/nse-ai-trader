@@ -434,11 +434,11 @@ tr:hover td { background: #0f0f16 }
   </div>
   <div class="header-right">
     <div class="hdr-stat">
-      <div class="hdr-val"><span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--green);margin-right:4px;box-shadow:0 0 5px var(--green)"></span>Nifty —</div>
-      <div class="hdr-lbl">VIX — &middot; <span style="color:var(--yellow)">Neutral</span></div>
+      <div class="hdr-val"><span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--green);margin-right:4px;box-shadow:0 0 5px var(--green)"></span>Nifty 24,013</div>
+      <div class="hdr-lbl">VIX 12.97 &middot; <span style="color:var(--red)">Bearish</span></div>
     </div>
     <span class="badge badge-green">Trading Allowed</span>
-    <span class="muted" style="font-size:.57rem">2026-06-22 13:33 UTC</span>
+    <span class="muted" style="font-size:.57rem">2026-06-22 13:38 UTC</span>
   </div>
 </div>
 <div class="phase-strip"><div class="ps-item ps-active"><div class="ps-dot"></div><span>Exploration</span></div><div class="ps-line "></div><div class="ps-item "><div class="ps-dot"></div><span>Analysis</span></div><div class="ps-line "></div><div class="ps-item "><div class="ps-dot"></div><span>Paper Trading</span></div><div class="ps-line "></div><div class="ps-item "><div class="ps-dot"></div><span>Recommendations</span></div></div>
@@ -461,27 +461,41 @@ tr:hover td { background: #0f0f16 }
   <a href="#brain">Brain Insights</a>
 </nav>
   
-  
-
+  <div class="warn-banner">&#9888; Nifty choppy intraday — wait for cleaner setups</div><div class="warn-banner">&#9888; Global macro risk-off (-0.34) — Overall macro mood is risk-off (-0.34). US Dow +0.1% overnight. Crude -0.2%. USD/INR +0.3%. Notable: US Fed rate hike / </div>
+<div class="card" style="margin-bottom:12px;padding:12px 14px">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px">
+    <div style="font-size:.72rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)">
+      Global &amp; India Macro Sentiment
+    </div>
+    <div style="font-size:.85rem;font-weight:700;color:var(--red)">
+      Risk-Off (-0.34)
+      <span style="font-size:.62rem;color:var(--muted);font-weight:400">
+        &nbsp;global +0.20 &middot; india -1.00</span>
+    </div>
+  </div>
+  <div style="margin-top:7px;font-size:.68rem;color:var(--text)"><span style="margin-right:10px">DOW <b style="color:var(--green)">+0.1%</b></span><span style="margin-right:10px">NASDAQ <b style="color:var(--green)">+1.9%</b></span><span style="margin-right:10px">NIKKEI <b style="color:var(--green)">+1.6%</b></span><span style="margin-right:10px">CRUDE <b style="color:var(--red)">-0.2%</b></span><span style="margin-right:10px">USDINR <b style="color:var(--green)">+0.3%</b></span></div>
+  <div style="margin-top:7px;font-size:.74rem;line-height:1.5;color:var(--text)">Overall macro mood is risk-off (-0.34). US Dow +0.1% overnight. Crude -0.2%. USD/INR +0.3%. Notable: US Fed rate hike / hawkish; Geopolitical conflict / war.</div>
+  <div style="margin-top:6px;font-size:.66rem;color:var(--muted)">&#9656; Hawkish Fed pressures Nifty via FII outflows and stronger USD.<br>&#9656; Geopolitical shocks trigger global risk-off; gold up, equities down initially.</div>
+</div>
 <div class="market-bar">
   <div class="mkt-item">
-    <div class="mkt-val green">— <span style="font-size:.72rem">(+0.00%)</span></div>
+    <div class="mkt-val red">24,013 <span style="font-size:.72rem">(-0.64%)</span></div>
     <div class="mkt-lbl">Nifty 50</div>
   </div>
   <div class="mkt-item">
-    <div class="mkt-val green">— <span style="font-size:.72rem">(+0.00%)</span></div>
+    <div class="mkt-val red">57,686 <span style="font-size:.72rem">(-0.48%)</span></div>
     <div class="mkt-lbl">BankNifty</div>
   </div>
   <div class="mkt-item">
-    <div class="mkt-val green">— <span style="font-size:.65rem">[normal]</span></div>
+    <div class="mkt-val green">12.97 <span style="font-size:.65rem">[normal]</span></div>
     <div class="mkt-lbl">India VIX</div>
   </div>
   <div class="mkt-item">
-    <div class="mkt-val" style="color:var(--yellow)">Neutral</div>
+    <div class="mkt-val" style="color:var(--red)">Bearish</div>
     <div class="mkt-lbl">Market Mood</div>
   </div>
   <div class="mkt-item" style="flex:1">
-    <div class="mkt-val" style="font-size:.82rem;color:var(--cyan)">—</div>
+    <div class="mkt-val" style="font-size:.82rem;color:var(--cyan)">Pharma &middot; Bank &middot; Infra</div>
     <div class="mkt-lbl">Leading Sectors</div>
   </div>
 </div>
@@ -578,7 +592,25 @@ tr:hover td { background: #0f0f16 }
   <div class="card"><div class="muted" style="padding:8px;font-size:.8rem">No brain notes yet.</div></div>
   
 </div>
-  
+  <div class="section" id="attribution">
+  <h2>Win Rate Attribution <span>Which setups, sessions &amp; conditions actually work</span></h2>
+  <div class="grid2">
+    <div class="card">
+      <div class="card-title">By Pattern</div>
+      <p style="color:var(--muted);font-size:.8rem">No data yet — needs more closed trades.</p>
+    </div>
+    <div class="card">
+      <div class="card-title">By Session</div>
+      <p style="color:var(--muted);font-size:.8rem">No data yet — needs more closed trades.</p>
+      <div class="card-title" style="margin-top:14px">By Market Mood</div>
+      <p style="color:var(--muted);font-size:.8rem">No data yet — needs more closed trades.</p>
+    </div>
+    <div class="card">
+      <div class="card-title">By Style</div>
+      <p style="color:var(--muted);font-size:.8rem">No data yet — needs more closed trades.</p>
+    </div>
+  </div>
+</div>
   <div class="section" id="coach">
   <h2>Coach Insights <span>AI learning journal &mdash; powered by Gemini</span></h2>
   <div class="card" style="padding:20px;text-align:center;color:var(--muted);font-size:.8rem">

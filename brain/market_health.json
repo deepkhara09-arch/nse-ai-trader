@@ -1,1 +1,136 @@
-{}
+{
+  "date": "2026-06-22",
+  "session": "test",
+  "nifty": {
+    "symbol": "^NSEI",
+    "value": 24013.1,
+    "day_change_pct": -0.64,
+    "trend_5d": "sideways",
+    "trend_20d": "up",
+    "ath_pct_60d": -1.92
+  },
+  "vix": {
+    "value": 12.97,
+    "level": "normal",
+    "percentile_30d": 3.0,
+    "avg_30d": 16.43
+  },
+  "bank_nifty": {
+    "symbol": "^NSEBANK",
+    "value": 57685.75,
+    "day_change_pct": -0.48,
+    "trend_5d": "up",
+    "trend_20d": "strong_up",
+    "ath_pct_60d": -0.58,
+    "diverging": false
+  },
+  "sectors": {
+    "IT": {
+      "symbol": "ITBEES.NS",
+      "value": 30.41,
+      "day_change_pct": -3.83,
+      "trend_5d": "down",
+      "trend_20d": "strong_down",
+      "ath_pct_60d": -12.24
+    },
+    "Pharma": {
+      "symbol": "PHARMABEES.NS",
+      "value": 25.09,
+      "day_change_pct": 0.76,
+      "trend_5d": "up",
+      "trend_20d": "sideways",
+      "ath_pct_60d": -2.98
+    },
+    "Bank": {
+      "symbol": "BANKBEES.NS",
+      "value": 597.32,
+      "day_change_pct": -0.08,
+      "trend_5d": "up",
+      "trend_20d": "strong_up",
+      "ath_pct_60d": -0.12
+    },
+    "Infra": {
+      "symbol": "INFRABEES.NS",
+      "value": 981.32,
+      "day_change_pct": 0.18,
+      "trend_5d": "up",
+      "trend_20d": "sideways",
+      "ath_pct_60d": -1.97
+    }
+  },
+  "market_mood": "bearish",
+  "trade_allowed": true,
+  "warnings": [
+    "Nifty choppy intraday \u2014 wait for cleaner setups",
+    "Global macro risk-off (-0.34) \u2014 Overall macro mood is risk-off (-0.34). US Dow +0.1% overnight. Crude -0.2%. USD/INR +0.3%. Notable: US Fed rate hike / "
+  ],
+  "leading_sectors": [
+    "Pharma",
+    "Bank",
+    "Infra"
+  ],
+  "market_regime": "normal",
+  "sector_breadth": 0.75,
+  "lagging_sectors": [
+    "IT"
+  ],
+  "broad_market_strength": true,
+  "intraday_regime": "choppy",
+  "macro": {
+    "date": "2026-06-22",
+    "session": "test",
+    "generated_at": "2026-06-22T13:38:02.536575",
+    "global_score": 0.203,
+    "india_score": -1.0,
+    "overall_score": -0.338,
+    "mood": "risk_off",
+    "drivers": [
+      "Trump picked Kevin Warsh to cut rates. The new Fed chief just told us he has other plans.",
+      "This bull market isn\u2019t going to end because of Fed rate hikes under Warsh",
+      "\u2018We are habitually frugal\u2019: My wife and I have money. How do we help our children without ruining their independence?",
+      "Former Federal Reserve chairman Alan Greenspan dies at 100",
+      "\u2018Money can make you happy\u2019: My wife and I have no heirs, but we\u2019re making the world a better place by giving it away",
+      "Trump \u2018jawboning\u2019 has masked a global oil-supply disaster, and the reality could mean $135 crude, says industry veteran",
+      "The secret to wellness is simple: Eat this breakfast and work out at the right time",
+      "China\u2019s new economic drivers: a sad toy elf and a robot police force"
+    ],
+    "global_cues": {
+      "dow": {
+        "last": 51564.7,
+        "chg_pct": 0.14
+      },
+      "nasdaq": {
+        "last": 26517.93,
+        "chg_pct": 1.91
+      },
+      "sp500": {
+        "last": 7500.58,
+        "chg_pct": 1.08
+      },
+      "nikkei": {
+        "last": 72353.96,
+        "chg_pct": 1.55
+      },
+      "crude": {
+        "last": 76.6,
+        "chg_pct": -0.25
+      },
+      "usdinr": {
+        "last": 94.67,
+        "chg_pct": 0.35
+      },
+      "gold": {
+        "last": 4224.1,
+        "chg_pct": -3.09
+      }
+    },
+    "summary": "Overall macro mood is risk-off (-0.34). US Dow +0.1% overnight. Crude -0.2%. USD/INR +0.3%. Notable: US Fed rate hike / hawkish; Geopolitical conflict / war.",
+    "playbook": [
+      "Hawkish Fed pressures Nifty via FII outflows and stronger USD.",
+      "Geopolitical shocks trigger global risk-off; gold up, equities down initially."
+    ],
+    "playbook_bias": "risk_off",
+    "article_count": 60
+  },
+  "macro_risk_factor": 0.7
+}

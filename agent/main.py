@@ -20,7 +20,7 @@ from agent.data_fetcher import (
     fetch_stock_data, load_stock_data, save_stock_data, merge_stock_data,
 )
 from agent.news_fetcher   import fetch_news, load_news, save_news
-from agent.market_health  import assess_market
+from agent.market_health  import assess_market, load_market_health
 from agent.stock_scorer   import select_focus_stocks
 from agent.brain          import (
     load_patterns, save_patterns, load_decisions, save_decisions,
@@ -685,15 +685,36 @@ def _refresh_outputs(state: dict, market_health: dict, session: str) -> None:
 
 
 def _append_log(state: dict, session: str) -> None:
-    book  = load_book()
-    stats = compute_stats(book)
+    from datetime import datetime, timezone, timedelta
+    ist = timezone(timedelta(hours=5, minutes=30))
+    now_ist = datetime.now(ist)
+
+    book   = load_book()
+    stats  = compute_stats(book)
+    open_n = len(book.get("open_positions", []))
+
+    # A brief human-readable summary of what this run actually did.
+    recs = load_recommendations()
+    mood = load_market_health().get("market_mood", "?")
+    if session == "preopen":
+        summary = f"Pre-open sweep — macro mood {mood}; dashboard refreshed."
+    elif session == "test":
+        summary = "Test dry-run — dashboard rebuilt, no trading, day unchanged."
+    else:
+        summary = (f"{session.title()} run — {state['phase']} day {state['day']}; "
+                   f"{open_n} open position(s), {stats['total']} closed trades "
+                   f"({stats['win_rate']*100:.0f}% WR); {len(recs)} live recommendation(s).")
+
     entry = {
-        "date":    date.today().isoformat(),
-        "session": session,
-        "phase":   state["phase"],
-        "day":     state["day"],
-        "stats":   stats,
-        "open":    len(book.get("open_positions", [])),
+        "date":         date.today().isoformat(),
+        "triggered_at": now_ist.strftime("%Y-%m-%d %H:%M IST"),  # when the run fired
+        "session":      session,
+        "phase":        state["phase"],
+        "day":          state["day"],
+        "stats":        stats,
+        "open":         open_n,
+        "recs":         len(recs),
+        "summary":      summary,
     }
     os.makedirs(BRAIN_DIR, exist_ok=True)
     log = []

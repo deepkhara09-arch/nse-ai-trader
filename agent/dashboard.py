@@ -309,6 +309,7 @@ h3 { font-size: .82rem; font-weight: 600 }
 .pill-yellow { background: #ca8a0412; color: #fbbf24; border: 1px solid #ca8a0425 }
 .pill-blue   { background: #4f46e512; color: #818cf8; border: 1px solid #4f46e525 }
 .pill-cyan   { background: #0891b212; color: #22d3ee; border: 1px solid #0891b225 }
+.pill-gray   { background: #4a4a6212; color: #9ca3af; border: 1px solid #4a4a6230 }
 
 /* ── Colors ── */
 .green  { color: #4ade80 }
@@ -2132,57 +2133,72 @@ def _section_runlog(state: dict) -> str:
     import os as _os
     from agent.config import DAILY_LOG_FILE
 
-    if not _os.path.exists(DAILY_LOG_FILE):
-        return ""
+    log = []
+    if _os.path.exists(DAILY_LOG_FILE):
+        try:
+            with open(DAILY_LOG_FILE) as f:
+                log = _json.load(f)
+            if not isinstance(log, list):
+                log = []
+        except Exception:
+            log = []
 
-    try:
-        with open(DAILY_LOG_FILE) as f:
-            log = _json.load(f)
-    except Exception:
-        return ""
-
+    # Always render the section (so the nav anchor #runlog always works), even
+    # when there are no runs yet.
     if not log:
-        return ""
+        return """<div class="section" id="runlog">
+  <h2>Run Log <span>Each trigger &mdash; time fired, session, what happened</span></h2>
+  <div class="card" style="padding:18px;text-align:center;color:var(--muted);font-size:.8rem">
+    No runs recorded yet. Each scheduled or manual trigger will appear here with
+    the time it fired and a short summary of what it did.
+  </div>
+</div>"""
+
+    sess_badge_map = {
+        "preopen":   '<span class="pill pill-blue">Pre-open</span>',
+        "morning":   '<span class="pill pill-green">Morning</span>',
+        "midday":    '<span class="pill pill-blue">Midday</span>',
+        "afternoon": '<span class="pill pill-cyan">Afternoon</span>',
+        "preclose":  '<span class="pill pill-yellow">Preclose</span>',
+        "test":      '<span class="pill pill-gray">Test</span>',
+    }
 
     rows = ""
-    for entry in reversed(log[-30:]):
-        date_    = entry.get("date", "")
+    for entry in reversed(log[-40:]):
+        when_    = entry.get("triggered_at") or entry.get("date", "")
         sess_    = entry.get("session", "")
-        phase_   = entry.get("phase", "")
-        day_     = entry.get("day", "")
+        summary_ = entry.get("summary", "")
         stats_   = entry.get("stats", {})
-        open_    = entry.get("open", 0)
-        wr_      = stats_.get("win_rate", 0)
-        total_   = stats_.get("total", 0)
         pnl_     = stats_.get("total_pnl", 0)
-        sess_badge = {
-            "morning":  '<span class="pill pill-green">Morning</span>',
-            "midday":   '<span class="pill pill-blue">Midday</span>',
-            "preclose": '<span class="pill pill-yellow">Preclose</span>',
-        }.get(sess_, f'<span class="pill">{sess_}</span>')
+        badge    = sess_badge_map.get(sess_, f'<span class="pill">{sess_}</span>')
+        if not summary_:   # fallback summary for older log entries without one
+            summary_ = (f"{entry.get('phase','')} day {entry.get('day','')} — "
+                        f"{entry.get('open',0)} open, {stats_.get('total',0)} trades")
         rows += (
             f'<tr style="border-bottom:1px solid var(--border)">'
-            f'<td style="padding:7px 4px;color:var(--muted);font-size:.75rem">{date_}</td>'
-            f'<td style="padding:7px 4px">{sess_badge}</td>'
-            f'<td style="padding:7px 4px;font-size:.78rem;color:var(--fg)">{phase_} d{day_}</td>'
-            f'<td style="padding:7px 4px;text-align:center;font-size:.78rem">{open_} open</td>'
-            f'<td style="padding:7px 4px;text-align:center;font-size:.78rem">{total_} trades · {wr_*100:.0f}% WR</td>'
-            f'<td style="padding:7px 4px;text-align:right;font-size:.78rem;color:{"#22c55e" if pnl_>=0 else "#ef4444"}">'
-            f'₹{pnl_:+,.0f}</td>'
+            f'<td style="padding:8px 6px;color:var(--muted);font-size:.72rem;white-space:nowrap">{when_}</td>'
+            f'<td style="padding:8px 6px">{badge}</td>'
+            f'<td style="padding:8px 6px;font-size:.76rem;color:var(--text);line-height:1.4">{summary_}</td>'
+            f'<td style="padding:8px 6px;text-align:right;font-size:.76rem;white-space:nowrap;color:{"#22c55e" if pnl_>=0 else "#ef4444"}">'
+            f'&#8377;{pnl_:+,.0f}</td>'
             f'</tr>'
         )
 
+    last = log[-1]
+    last_when = last.get("triggered_at", last.get("date", ""))
     return f"""<div class="section" id="runlog">
-  <h2>Run Log <span>Each trigger — what time, what session, what happened</span></h2>
+  <h2>Run Log <span>Each trigger &mdash; time fired, session, what happened</span></h2>
+  <div class="card" style="padding:10px 14px;margin-bottom:10px;font-size:.74rem;color:var(--muted)">
+    Last run: <strong style="color:var(--text)">{last_when}</strong>
+    &middot; {len(log)} total runs logged. The dashboard refreshes at the end of every run.
+  </div>
   <div class="card" style="overflow-x:auto">
     <table style="width:100%;border-collapse:collapse;font-size:.8rem;min-width:480px">
       <thead><tr style="color:var(--muted);font-size:.72rem">
-        <th style="text-align:left;padding:6px 4px">Date</th>
-        <th style="text-align:left">Session</th>
-        <th style="text-align:left">Phase</th>
-        <th style="text-align:center">Positions</th>
-        <th style="text-align:center">Trades</th>
-        <th style="text-align:right">P&amp;L</th>
+        <th style="text-align:left;padding:6px 6px">Time fired (IST)</th>
+        <th style="text-align:left;padding:6px 6px">Session</th>
+        <th style="text-align:left;padding:6px 6px">What happened</th>
+        <th style="text-align:right;padding:6px 6px">P&amp;L</th>
       </tr></thead>
       <tbody>{rows}</tbody>
     </table>

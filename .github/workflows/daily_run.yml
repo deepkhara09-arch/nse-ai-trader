@@ -32,6 +32,13 @@ on:
         type: choice
         options: [test, preopen, morning, midday, afternoon, preclose]
 
+  # External punctual trigger (cron-job.org etc.) — fires GitHub on time via API.
+  # POST to /repos/<owner>/<repo>/dispatches with:
+  #   {"event_type":"run-session","client_payload":{"session":"morning"}}
+  # This path runs the EXACT session in the payload, no time-window guessing.
+  repository_dispatch:
+    types: [run-session]
+
 permissions:
   contents: write   # needed to commit brain + dashboard back to repo
 
@@ -58,10 +65,15 @@ jobs:
       - name: Detect session from schedule
         id: session
         run: |
-          # If manually triggered, use the input; otherwise map the CURRENT UTC
-          # time to a session WINDOW. Window-based mapping means a cron that fires
-          # late still resolves to the correct session instead of the wrong one.
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+          # Priority of session source:
+          #   1) repository_dispatch (external punctual trigger) -> exact session
+          #      from client_payload — no guessing, fires on time.
+          #   2) workflow_dispatch (manual UI) -> the chosen dropdown input.
+          #   3) schedule (GitHub cron fallback) -> WINDOW-based mapping so a late
+          #      fire still resolves to the right session.
+          if [ "${{ github.event_name }}" = "repository_dispatch" ]; then
+            echo "name=${{ github.event.client_payload.session }}" >> $GITHUB_OUTPUT
+          elif [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             echo "name=${{ github.event.inputs.session }}" >> $GITHUB_OUTPUT
           else
             # Minutes since UTC midnight = robust single number to bucket on.

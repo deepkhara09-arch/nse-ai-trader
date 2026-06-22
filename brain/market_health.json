@@ -1,13 +1,13 @@
 {
-  "date": "2026-06-21",
-  "session": "test",
+  "date": "2026-06-22",
+  "session": "preclose",
   "nifty": {
     "symbol": "^NSEI",
     "value": 24013.1,
     "day_change_pct": -0.64,
     "trend_5d": "sideways",
     "trend_20d": "up",
-    "ath_pct_60d": -2.05
+    "ath_pct_60d": -1.92
   },
   "vix": {
     "value": 12.97,
@@ -31,7 +31,7 @@
       "day_change_pct": -3.83,
       "trend_5d": "down",
       "trend_20d": "strong_down",
-      "ath_pct_60d": -12.77
+      "ath_pct_60d": -12.24
     },
     "Pharma": {
       "symbol": "PHARMABEES.NS",
@@ -60,7 +60,9 @@
   },
   "market_mood": "neutral",
   "trade_allowed": true,
-  "warnings": [],
+  "warnings": [
+    "Nifty choppy intraday \u2014 wait for cleaner setups"
+  ],
   "leading_sectors": [
     "Pharma",
     "Bank",
@@ -72,6 +74,7 @@
     "IT"
   ],
   "broad_market_strength": true,
+  "intraday_regime": "choppy",
   "macro": {
     "date": "2026-06-21",
     "session": "test",

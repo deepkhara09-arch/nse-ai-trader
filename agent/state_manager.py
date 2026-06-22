@@ -35,6 +35,7 @@ def _fresh_state() -> dict:
         "start_date":        date.today().isoformat(),
         "phase_start_date":  date.today().isoformat(),
         "last_run_date":     None,
+        "last_counted_date": None,   # last date the day-counter advanced (dedupe)
         "last_updated":      None,
         "focus_stocks":      [],
         "dropped_stocks":    [],   # stocks removed due to poor pattern reliability
@@ -51,19 +52,43 @@ def _fresh_state() -> dict:
 
 def advance_session(state: dict, current_session: str) -> dict:
     """
-    Advance the session pointer and increment day when we've done preclose.
-    Returns updated state.
+    Advance the session pointer, and increment the phase "day" ONLY when a real
+    trading day completes.
+
+    A day advances at preclose, but ONLY if BOTH are true:
+      1. Today is a weekday (Mon–Fri) — NSE doesn't trade weekends, so weekend
+         runs never count toward exploration/analysis/paper-trading day counts.
+      2. We haven't already counted today — guards against multiple preclose runs
+         on the same calendar date double-counting the day (e.g. duplicate crons).
+
+    This means every phase counts only genuine trading days that the tool observed,
+    exactly as intended. (Holidays where no run happens simply don't advance, which
+    is also correct.)
     """
     order = ["morning", "midday", "afternoon", "preclose"]
     try:
         idx = order.index(current_session)
     except ValueError:
         idx = 0
+
     if idx == len(order) - 1:
-        # preclose done → end of trading day
-        state["day"] += 1
+        # preclose done → candidate for end-of-trading-day rollover
+        today = date.today()
+        today_str = today.isoformat()
+        is_weekday = today.weekday() < 5          # 0–4 = Mon–Fri
+        already_counted_today = state.get("last_counted_date") == today_str
+
+        if is_weekday and not already_counted_today:
+            state["day"] += 1
+            state["last_counted_date"] = today_str
+            print(f"[state] Trading day complete → day advanced to {state['day']} ({today_str})")
+        else:
+            reason = ("weekend — not a trading day" if not is_weekday
+                      else "day already counted today (duplicate preclose)")
+            print(f"[state] Preclose ran but day NOT advanced ({reason}); staying on day {state['day']}")
+
         state["session"] = "morning"
-        state["last_run_date"] = date.today().isoformat()
+        state["last_run_date"] = today_str
     else:
         state["session"] = order[idx + 1]
     return state

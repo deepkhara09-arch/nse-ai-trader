@@ -46,6 +46,11 @@ NSE_UNIVERSE = [
     "EMAMILTD.NS", "VBL.NS", "TATAPOWER.NS", "ADANIGREEN.NS", "ADANIPORTS.NS",
     "NHPC.NS", "SJVN.NS", "RECLTD.NS", "PFC.NS", "GAIL.NS",
     "IOC.NS", "HINDPETRO.NS", "APLAPOLLO.NS", "POLYCAB.NS", "CUMMINSIND.NS",
+
+    # ── User-added stocks (June 2026) — treated identically across all phases ──
+    "ANANTRAJ.NS", "ETERNAL.NS", "JIOFIN.NS", "ASHOKLEY.NS", "TMPV.NS",
+    "FEDERALBNK.NS", "SWIGGY.NS", "BAJAJFL.NS", "BHEL.NS",
+    # (ITC, TATASTEEL, TATAPOWER, PAYTM, BEL already present above)
 ]
 # Deduplicate (ADANIPORTS appears in both halves)
 NSE_UNIVERSE = list(dict.fromkeys(NSE_UNIVERSE))

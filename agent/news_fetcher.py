@@ -117,6 +117,16 @@ _NAMES: Dict[str, List[str]] = {
     "HOMEFIRST.NS":  ["home first finance", "home first"],
     "M&MFIN.NS":     ["mahindra finance", "m&m financial", "mahindra financial"],
     "PGHH.NS":       ["p&g", "procter & gamble", "procter and gamble"],
+    # ── User-added stocks (June 2026) ──────────────────────────────────────────
+    "ANANTRAJ.NS":   ["anant raj", "anantraj"],
+    "ETERNAL.NS":    ["eternal", "zomato", "blinkit"],          # Zomato renamed to Eternal
+    "JIOFIN.NS":     ["jio financial", "jio finance", "jiofin"],
+    "ASHOKLEY.NS":   ["ashok leyland", "ashok leylnd"],
+    "TMPV.NS":       ["tata motors passenger", "tmpv", "tata motors pv"],
+    "FEDERALBNK.NS": ["federal bank", "federalbank"],
+    "SWIGGY.NS":     ["swiggy"],
+    "BAJAJFL.NS":    ["bajaj finance"],                          # Bajaj Finance
+    "BHEL.NS":       ["bhel", "bharat heavy electricals"],
 }
 
 

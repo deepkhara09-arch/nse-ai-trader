@@ -99,9 +99,30 @@ def main():
     obs = {"opened": 0, "closed": 0, "max_trades": 0, "phases": set(), "alerted": False,
            "recs_seen": 0, "errors": []}
 
+    # Controllable clock so the trading-day counter (which only advances once per
+    # distinct weekday) can actually progress through the lifecycle in the sim.
+    import datetime as _dt
+    import agent.state_manager as SM
+    _real_date = _dt.date
+    clock = {"d": _dt.date(2026, 1, 5)}  # a Monday
+
+    class _FakeDate(_real_date):
+        @classmethod
+        def today(cls):
+            return clock["d"]
+    SM.date = _FakeDate   # advance_session reads date.today() from state_manager
+    M.date = _FakeDate    # main.py weekend-guard + logging use the same clock
+
+    def _next_weekday():
+        d = clock["d"] + _dt.timedelta(days=1)
+        while d.weekday() >= 5:   # skip Sat/Sun
+            d += _dt.timedelta(days=1)
+        clock["d"] = d
+
     buf = io.StringIO()
     with contextlib.redirect_stdout(buf):
         for day in range(60):
+            _next_weekday()   # each loop iteration = a new trading day
             for s in ["preopen", "morning", "midday", "afternoon", "preclose"]:
                 os.environ["SESSION"] = s
                 try:

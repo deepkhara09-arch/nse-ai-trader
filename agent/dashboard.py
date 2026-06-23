@@ -130,27 +130,48 @@ def _build_html(
 </head>
 <body>
 {_header(phase, day, now_utc, mood, trade_ok, nifty_str, vix_str)}
-{_phase_strip(phase)}
+
 <div class="container">
-  {_nav()}
   {_alert_banner(alert, stats) if alert else ""}
-  {_market_bar(nifty, vix, mood, mkt_warn, market_health)}
-  {_section_status(state, phase, day, focus, stock_data)}
-  {_section_heatmap(stock_data)}
-  {_section_portfolio(stats, portfolio, pnl_total, pnl_pct, book)}
-  {_section_sectors(sector_scores)}
-  {_section_rankings(ranked_stocks)}
-  {_section_recommendations(recommendations)}
-  {_section_changelog(changelog)}
-  {_section_watchlist(focus, stock_data, news_data, patterns, fundamentals)}
-  {_section_trades(book)}
-  {_section_research(state, decisions)}
-  {_section_attribution(attribution)}
-  {_section_coach(coach_memory)}
-  {_section_health(run_health)}
-  {_section_runlog(state)}
-  {_section_brain(focus, patterns)}
+
+  <!-- ── HOME tab ── -->
+  <section class="tab-panel" id="tab-home">
+    {_market_bar(nifty, vix, mood, mkt_warn, market_health)}
+    {_section_status(state, phase, day, focus, stock_data)}
+    {_section_heatmap(stock_data)}
+  </section>
+
+  <!-- ── TRADE tab ── -->
+  <section class="tab-panel" id="tab-trade" hidden>
+    {_section_recommendations(recommendations)}
+    {_section_rankings(ranked_stocks)}
+    {_section_changelog(changelog)}
+  </section>
+
+  <!-- ── WATCH tab ── -->
+  <section class="tab-panel" id="tab-watch" hidden>
+    {_section_portfolio(stats, portfolio, pnl_total, pnl_pct, book)}
+    {_section_watchlist(focus, stock_data, news_data, patterns, fundamentals)}
+    {_section_sectors(sector_scores)}
+    {_section_trades(book)}
+  </section>
+
+  <!-- ── LEARN tab ── -->
+  <section class="tab-panel" id="tab-learn" hidden>
+    {_section_coach(coach_memory)}
+    {_section_attribution(attribution)}
+    {_section_research(state, decisions)}
+    {_section_brain(focus, patterns)}
+  </section>
+
+  <!-- ── LOG tab ── -->
+  <section class="tab-panel" id="tab-log" hidden>
+    {_section_runlog(state)}
+    {_section_health(run_health)}
+  </section>
 </div>
+
+{_bottom_nav()}
 {_scripts()}
 </body>
 </html>"""
@@ -251,16 +272,48 @@ h3 { font-size: .85rem; font-weight: 500; letter-spacing: -.02em }
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }
-.logo { display: flex; align-items: center; gap: 10px }
+.logo { display: flex; align-items: center; gap: 9px; flex-shrink: 0 }
 .logo-icon {
   width: 28px; height: 28px;
   background: var(--green);
   border-radius: 8px;
   display: flex; align-items: center; justify-content: center;
-  font-size: .75rem; font-weight: 700; color: var(--bg);
+  font-size: .72rem; font-weight: 700; color: var(--bg);
   flex-shrink: 0;
 }
-.logo-text { font-size: 1rem; font-weight: 600; letter-spacing: -.03em }
+.logo-text { font-size: 1rem; font-weight: 600; letter-spacing: -.03em; white-space: nowrap }
+.hdr-chips {
+  display: flex; align-items: center; gap: 6px;
+  overflow-x: auto; -ms-overflow-style: none; scrollbar-width: none;
+  flex-shrink: 1; min-width: 0;
+}
+.hdr-chips::-webkit-scrollbar { display: none }
+.hdr-chips .badge { flex-shrink: 0; font-size: .6rem }
+
+/* ── Tab panels ── */
+.tab-panel { animation: fadeIn .18s ease }
+.tab-panel[hidden] { display: none }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(4px) } to { opacity: 1; transform: none } }
+
+/* ── Bottom navigation (Flowr-style) ── */
+.bottom-nav {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 200;
+  display: flex; justify-content: space-around; align-items: stretch;
+  background: color-mix(in srgb, var(--bg) 94%, transparent);
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  border-top: 0.5px solid var(--border);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.nt {
+  flex: 1; display: flex; flex-direction: column; align-items: center; gap: 3px;
+  background: none; border: none; cursor: pointer;
+  color: var(--muted); padding: 9px 0 7px; min-height: 52px;
+  font-family: inherit; font-size: .6rem; font-weight: 500; letter-spacing: .02em;
+  transition: color .15s;
+}
+.nt svg { width: 21px; height: 21px }
+.nt-active { color: var(--green) }
+.nt:active { opacity: .6 }
 .logo-sub { font-size: .6rem; color: var(--muted); margin-top: -1px }
 .header-right { display: flex; align-items: center; gap: 14px }
 .hdr-stat { display: flex; flex-direction: column; align-items: flex-end }
@@ -295,7 +348,8 @@ h3 { font-size: .85rem; font-weight: 500; letter-spacing: -.02em }
 .ps-line.ps-line-done { background: var(--bull) }
 
 /* ── Layout ── */
-.container { max-width: 1200px; margin: 0 auto; padding: 14px 16px }
+.container { max-width: 1200px; margin: 0 auto; padding: 14px 16px;
+  padding-bottom: calc(70px + env(safe-area-inset-bottom)) }  /* clear the bottom nav */
 .section { margin-bottom: 24px; scroll-margin-top: 88px }
 .grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 10px }
 .grid3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px }
@@ -417,18 +471,18 @@ tr:hover td { background: var(--card2) }
 .hmap-chg  { font-size: .76rem; font-weight: 700; font-variant-numeric: tabular-nums }
 .hmap-rsi  { font-size: .56rem; color: var(--muted); margin-top: 1px }
 
-/* ── Banners ── */
+/* ── Banners (advisory = amber 'heads up', not alarming red) ── */
 .warn-banner {
-  background: #dc262608; border: 1px solid #dc262625; border-radius: 6px;
-  padding: 7px 11px; margin-bottom: 8px; font-size: .76rem; color: #f87171;
+  background: var(--a-bg); border: 0.5px solid var(--amber); border-radius: 10px;
+  padding: 9px 13px; margin-bottom: 8px; font-size: .76rem; color: var(--amber);
 }
 .alert-banner {
-  background: #16a34a06; border: 1px solid #16a34a22; border-radius: 8px;
+  background: var(--g-bg); border: 0.5px solid var(--green); border-radius: 12px;
   padding: 11px 14px; margin-bottom: 14px; display: flex; align-items: center; gap: 10px;
 }
 
 /* ── Notes ── */
-.note-line { padding: 4px 0; border-bottom: 1px solid #12121a; font-size: .73rem; color: var(--muted) }
+.note-line { padding: 4px 0; border-bottom: 0.5px solid var(--border); font-size: .73rem; color: var(--muted) }
 .note-line:last-child { border: none }
 .note-line strong { color: var(--text) }
 
@@ -597,84 +651,47 @@ tr:hover td { background: var(--card2) }
 # ─────────────────────────────────────────────────────────────────────────────
 
 def _header(phase, day, now_utc, mood, trade_ok, nifty_str, vix_str) -> str:
-    mood_color = {"bullish": "var(--green)", "bearish": "var(--red)"}.get(mood, "var(--yellow)")
-    mood_label = mood.title()
-    trade_badge = (
-        '<span class="badge badge-green">Trading Allowed</span>' if trade_ok
-        else '<span class="badge badge-red">Trading Paused</span>'
-    )
-    phase_badge = f'<span class="badge badge-blue">{phase.replace("_", " ").title()}</span>'
-    live_dot = '<span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--green);margin-right:4px;box-shadow:0 0 5px var(--green)"></span>'
+    """Compact single-row header (Flowr-style) — no wrapping on phones.
+    Logo + name on the left; a tidy phase/day/status chip row on the right that
+    stays on one line and scrolls horizontally if ever needed."""
+    phase_label = {"exploration": "Exploration", "analysis": "Analysis",
+                   "paper_trading": "Paper Trade", "alerting": "Live"}.get(phase, phase.title())
+    trade_cls = "badge-green" if trade_ok else "badge-red"
+    trade_txt = "Trading" if trade_ok else "Paused"
 
     return f"""<div class="header">
   <div class="logo">
     <div class="logo-icon">AI</div>
-    <div>
-      <div class="logo-text">Deep's NSE AI Tracker</div>
-      <div class="logo-sub">Nifty 100 &middot; Self-Learning</div>
-    </div>
-    {phase_badge}
-    <span class="badge badge-cyan" style="font-size:.58rem">Day {day}</span>
+    <div class="logo-text">NSE&nbsp;AI</div>
   </div>
-  <div class="header-right">
-    <div class="hdr-stat">
-      <div class="hdr-val">{live_dot}Nifty {nifty_str}</div>
-      <div class="hdr-lbl">VIX {vix_str} &middot; <span style="color:{mood_color}">{mood_label}</span></div>
-    </div>
-    {trade_badge}
-    <span class="muted" style="font-size:.57rem">{now_utc}</span>
+  <div class="hdr-chips">
+    <span class="badge badge-blue">{phase_label}</span>
+    <span class="badge badge-gray">Day&nbsp;{day}</span>
+    <span class="badge {trade_cls}">{trade_txt}</span>
   </div>
 </div>"""
 
 
-def _phase_strip(phase) -> str:
-    phase_order = ["exploration", "analysis", "paper_trading", "alerting"]
-    phase_names = {
-        "exploration":   "Exploration",
-        "analysis":      "Analysis",
-        "paper_trading": "Paper Trading",
-        "alerting":      "Recommendations",
-    }
-    current_idx = phase_order.index(phase) if phase in phase_order else 0
-    parts = []
-    for i, p in enumerate(phase_order):
-        if i < current_idx:
-            cls = "ps-done"
-        elif i == current_idx:
-            cls = "ps-active"
-        else:
-            cls = ""
-        parts.append(
-            f'<div class="ps-item {cls}">'
-            f'<div class="ps-dot"></div>'
-            f'<span>{phase_names[p]}</span>'
-            f'</div>'
+def _bottom_nav() -> str:
+    """Flowr-style fixed bottom navigation. Each item switches a tab panel.
+    Five tabs cover all sections; touch-friendly with safe-area inset."""
+    items = [
+        ("home",  "Home",  "M3 11l9-8 9 8M5 10v10h14V10"),
+        ("trade", "Trade", "M3 17l6-6 4 4 8-8M21 7h-5M21 7v5"),
+        ("watch", "Watch", "M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12zM12 9a3 3 0 100 6 3 3 0 000-6z"),
+        ("learn", "Learn", "M12 3L2 8l10 5 10-5-10-5zM6 10v5c0 1 3 3 6 3s6-2 6-3v-5"),
+        ("log",   "Log",   "M4 5h16M4 12h16M4 19h10"),
+    ]
+    btns = ""
+    for i, (key, label, path) in enumerate(items):
+        active = " nt-active" if i == 0 else ""
+        btns += (
+            f'<button class="nt{active}" data-tab="{key}" onclick="switchTab(\'{key}\')">'
+            f'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" '
+            f'stroke-linecap="round" stroke-linejoin="round"><path d="{path}"/></svg>'
+            f'<span>{label}</span></button>'
         )
-        if i < len(phase_order) - 1:
-            line_cls = "ps-line-done" if i < current_idx else ""
-            parts.append(f'<div class="ps-line {line_cls}"></div>')
-
-    return f'<div class="phase-strip">{"".join(parts)}</div>'
-
-
-def _nav() -> str:
-    return """<nav class="nav">
-  <a href="#status">Status</a>
-  <a href="#heatmap">Heatmap</a>
-  <a href="#portfolio">Portfolio</a>
-  <a href="#sectors">Sectors</a>
-  <a href="#rankings">Rankings</a>
-  <a href="#recommendations">Recommendations</a>
-  <a href="#changelog">Changelog</a>
-  <a href="#watchlist">Watchlist</a>
-  <a href="#trades">Paper Trades</a>
-  <a href="#research">Research Log</a>
-  <a href="#attribution">Attribution</a>
-  <a href="#coach">Coach</a>
-  <a href="#health">System Health</a>
-  <a href="#runlog">Run Log</a>
-  <a href="#brain">Brain Insights</a>
-</nav>"""
+    return f'<nav class="bottom-nav">{btns}</nav>'
 
 
 def _alert_banner(alert, stats) -> str:
@@ -710,7 +727,11 @@ def _market_bar(nifty, vix, mood, warnings, market_health) -> str:
     bn_cls = "green" if bn_chg >= 0 else "red"
     bn_str = f"{bn_val:,.0f}" if isinstance(bn_val, (int, float)) else "—"
 
-    warn_html = "".join(f'<div class="warn-banner">&#9888; {w}</div>' for w in warnings)
+    # Market warnings are ADVISORY heads-ups (e.g. "Nifty choppy — wait for cleaner
+    # setups"), not errors — the tool keeps running normally. Labelled as such.
+    warn_html = "".join(
+        f'<div class="warn-banner">&#9432; Heads up: {w}</div>' for w in warnings
+    )
 
     n_str = f"{n_val:,.0f}" if isinstance(n_val, (int, float)) else str(n_val)
     mood_color = {"bullish": "var(--green)", "bearish": "var(--red)"}.get(mood, "var(--yellow)")
@@ -2241,6 +2262,25 @@ def _section_runlog(state: dict) -> str:
 
 def _scripts() -> str:
     return """<script>
+// ── Bottom-nav tab switching ──────────────────────────────────────────────
+function switchTab(key) {
+  document.querySelectorAll('.tab-panel').forEach(function(p) {
+    p.hidden = (p.id !== 'tab-' + key);
+  });
+  document.querySelectorAll('.nt').forEach(function(b) {
+    b.classList.toggle('nt-active', b.dataset.tab === key);
+  });
+  // remember last tab + scroll to top of content
+  try { localStorage.setItem('nse_tab', key); } catch(e) {}
+  window.scrollTo({top: 0, behavior: 'instant'});
+}
+// restore last-viewed tab on load (default: home)
+(function() {
+  var saved = 'home';
+  try { saved = localStorage.getItem('nse_tab') || 'home'; } catch(e) {}
+  if (saved !== 'home' && document.getElementById('tab-' + saved)) switchTab(saved);
+})();
+
 document.querySelectorAll('[data-spark]').forEach(function(el) {
   var vals = JSON.parse(el.dataset.spark || '[]');
   if (!vals.length) return;

@@ -61,7 +61,7 @@
   "market_mood": "neutral",
   "trade_allowed": true,
   "warnings": [
-    "Nifty choppy intraday \u2014 wait for cleaner setups"
+    "Nifty in intraday downtrend \u2014 avoid new longs this session"
   ],
   "leading_sectors": [
     "Pharma",
@@ -74,14 +74,14 @@
     "IT"
   ],
   "broad_market_strength": true,
-  "intraday_regime": "choppy",
+  "intraday_regime": "trending_down",
   "macro": {
     "date": "2026-06-23",
     "session": "midday",
-    "generated_at": "2026-06-23T06:15:43.602721",
-    "global_score": 0.224,
+    "generated_at": "2026-06-23T06:42:53.470544",
+    "global_score": 0.216,
     "india_score": 0.0,
-    "overall_score": 0.123,
+    "overall_score": 0.119,
     "mood": "neutral",
     "drivers": [
       "These 6 fast-growing stocks sit at the cutting edge of space and military technology",
@@ -107,8 +107,8 @@
         "chg_pct": -0.37
       },
       "nikkei": {
-        "last": 70187.76,
-        "chg_pct": -2.99
+        "last": 69935.53,
+        "chg_pct": -3.34
       },
       "crude": {
         "last": 74.82,
@@ -116,7 +116,7 @@
       },
       "usdinr": {
         "last": 94.71,
-        "chg_pct": 0.41
+        "chg_pct": 0.4
       },
       "gold": {
         "last": 4181.9,

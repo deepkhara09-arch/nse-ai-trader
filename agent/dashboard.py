@@ -108,7 +108,7 @@ def _build_html(
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Deep's NSE AI Tracker</title>
 <meta http-equiv="refresh" content="300">
 <meta name="description" content="AI-powered NSE stock tracker for Nifty 100">
@@ -302,10 +302,11 @@ h3 { font-size: .85rem; font-weight: 500; letter-spacing: -.02em }
   background: color-mix(in srgb, var(--bg) 94%, transparent);
   backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
   border-top: 0.5px solid var(--border);
-  /* Lift the whole bar above the iPhone home indicator: a base gap PLUS the
-     device's safe-area inset, so icons never sit on/under the home bar. */
+  /* Lift the whole bar above the iPhone home indicator: a generous base gap PLUS
+     the device's safe-area inset (requires viewport-fit=cover in the meta tag,
+     otherwise iOS reports the inset as 0 and the bar sits too low). */
   padding-top: 8px;
-  padding-bottom: calc(10px + env(safe-area-inset-bottom));
+  padding-bottom: calc(18px + env(safe-area-inset-bottom));
 }
 .nt {
   flex: 1; display: flex; flex-direction: column; align-items: center; gap: 4px;
@@ -352,7 +353,7 @@ h3 { font-size: .85rem; font-weight: 500; letter-spacing: -.02em }
 
 /* ── Layout ── */
 .container { max-width: 1200px; margin: 0 auto; padding: 14px 16px;
-  padding-bottom: calc(90px + env(safe-area-inset-bottom)) }  /* clear the taller bottom nav */
+  padding-bottom: calc(100px + env(safe-area-inset-bottom)) }  /* clear the taller bottom nav */
 .section { margin-bottom: 24px; scroll-margin-top: 88px }
 .grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 10px }
 .grid3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px }

@@ -17,6 +17,7 @@ import json
 import os
 from datetime import date, datetime
 from typing import Dict, List
+from agent.trading_calendar import ist_today
 
 CHANGELOG_FILE = "brain/rec_changelog.json"
 
@@ -25,7 +26,7 @@ def compute_changes(prev_recs: List[dict], new_recs: List[dict]) -> List[dict]:
     """Diff two recommendation lists and return a list of change events."""
     changes = []
     now = datetime.utcnow().isoformat()
-    today = date.today().isoformat()
+    today = ist_today().isoformat()
 
     prev_map = {r["ticker"]: r for r in prev_recs}
     new_map  = {r["ticker"]: r for r in new_recs}

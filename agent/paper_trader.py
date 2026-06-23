@@ -19,6 +19,7 @@ from agent.config import (
     VOL_REGIME_NORMAL_MAX_PCT, VOL_REGIME_CAUTION_MAX_PCT, VOL_REGIME_DANGER_MAX_PCT,
 )
 from agent.brain import learn_from_trade
+from agent.trading_calendar import ist_today
 
 Tuple2 = tuple   # (book, patterns_db)
 
@@ -163,7 +164,7 @@ def _try_open_positions(book: dict, opinions: List[dict], patterns_db: Dict, ses
         pos = {
             "ticker":        ticker,
             "sector":        sector,
-            "open_date":     date.today().isoformat(),
+            "open_date":     ist_today().isoformat(),
             "open_session":  session,
             "action":        signal,
             "entry":         entry,
@@ -291,7 +292,7 @@ def _resolve_hit_order(pos: dict, target: float, stop_loss: float, data: dict):
 
 def _check_exits(book: dict, stock_data: Dict, session: str, patterns_db: Dict):
     still_open = []
-    today = date.today().isoformat()
+    today = ist_today().isoformat()
 
     for pos in book["open_positions"]:
         ticker  = pos["ticker"]
@@ -374,7 +375,7 @@ def _check_exits(book: dict, stock_data: Dict, session: str, patterns_db: Dict):
 def _close_intraday_positions(book: dict, stock_data: Dict, patterns_db: Dict = None) -> Tuple2:
     """Force-close any intraday positions at preclose. Also teaches the brain
     from each outcome so intraday trades update pattern reliability too."""
-    today = date.today().isoformat()
+    today = ist_today().isoformat()
     still_open = []
     for pos in book["open_positions"]:
         if pos.get("style") == "intraday":
@@ -418,7 +419,7 @@ def _mark_to_market(book: dict, stock_data: Dict) -> dict:
 
 
 def _snapshot(book: dict) -> dict:
-    today = date.today().isoformat()
+    today = ist_today().isoformat()
     if book.get("last_snapshot_date") == today:
         return book
     total_unrealized = sum(p.get("unrealized_pnl", 0) for p in book["open_positions"])
@@ -454,7 +455,7 @@ def _snapshot(book: dict) -> dict:
 
 
 def _reset_daily_pnl_if_new_day(book: dict) -> dict:
-    today = date.today().isoformat()
+    today = ist_today().isoformat()
     if book.get("last_snapshot_date") != today:
         book["daily_pnl_today"] = 0.0
     return book

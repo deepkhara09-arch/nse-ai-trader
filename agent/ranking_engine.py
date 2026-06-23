@@ -19,6 +19,7 @@ from datetime import date
 from typing import Dict, List, Tuple
 
 from agent.config import BRAIN_DIR, FOCUS_STOCK_COUNT, MAX_STOCK_PRICE
+from agent.trading_calendar import ist_today
 
 RANK_HISTORY_FILE  = "brain/rank_history.json"
 WATCHLIST_FILE     = "brain/watchlist_signals.json"   # tracks near-miss strong signals
@@ -248,7 +249,7 @@ def update_watchlist_signals(
     from agent.fundamentals_fetcher import score_fundamentals
     from agent.brain import get_reliable_patterns_list
 
-    today = date.today().isoformat()
+    today = ist_today().isoformat()
     non_focus = [t for t in NSE_UNIVERSE if t not in focus]
 
     for ticker in non_focus:
@@ -328,7 +329,7 @@ def _load_prev_ranks() -> Dict[str, int]:
 def _save_rank_history(ranked: List[dict]) -> None:
     history = load_rank_history()
     history.append({
-        "date":   date.today().isoformat(),
+        "date":   ist_today().isoformat(),
         "ranked": [{"ticker": r["ticker"], "rank": r["rank"],
                     "composite_score": r["composite_score"],
                     "success_probability": r["success_probability"]}

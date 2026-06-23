@@ -33,7 +33,7 @@ RANK_HISTORY_FILE    = "brain/rank_history.json"
 WATCHLIST_FILE       = "brain/watchlist_signals.json"
 DECISIONS_FILE       = "brain/decisions.json"
 
-CURRENT_SCHEMA_VERSION = 8   # bump this when you add a new migration
+CURRENT_SCHEMA_VERSION = 9   # bump this when you add a new migration
 
 
 # ── Migration functions ────────────────────────────────────────────────────────
@@ -248,6 +248,15 @@ def _migrate_v8(state, stock_data, patterns, book, fundamentals, decisions):
     return state, stock_data, patterns, book, fundamentals, decisions
 
 
+def _migrate_v9(state, stock_data, patterns, book, fundamentals, decisions):
+    """
+    v9: per-session duplicate guard. Adds sessions_done {session: date} so a
+    duplicate/backup trigger for a session already completed today no-ops.
+    """
+    state.setdefault("sessions_done", {})
+    return state, stock_data, patterns, book, fundamentals, decisions
+
+
 # ── Registry: maps schema version → migration that brings data UP to that version
 MIGRATIONS = {
     1: _migrate_v1,
@@ -258,6 +267,7 @@ MIGRATIONS = {
     6: _migrate_v6,
     7: _migrate_v7,
     8: _migrate_v8,
+    9: _migrate_v9,
 }
 
 

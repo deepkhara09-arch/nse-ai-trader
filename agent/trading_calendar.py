@@ -13,7 +13,26 @@ worst a holiday is counted, which the data layer also guards since fetches retur
 empty on a closed day).
 """
 
-from datetime import date
+from datetime import date, datetime, timezone, timedelta
+
+# NSE operates on India Standard Time (UTC+5:30). GitHub Actions runs in UTC, so
+# every date/time decision in this tool MUST be computed in IST — otherwise a run
+# near the date boundary could read the wrong calendar day (wrong holiday/weekend
+# check, wrong "today" for the day counter). ist_today() is the single source of
+# truth for "what date is it for NSE right now".
+IST = timezone(timedelta(hours=5, minutes=30))
+
+
+def ist_today() -> date:
+    """Today's date in IST (NSE timezone) — use this everywhere instead of
+    date.today(), which would return the server's UTC date on GitHub Actions."""
+    return datetime.now(IST).date()
+
+
+def ist_now() -> datetime:
+    """Current datetime in IST."""
+    return datetime.now(IST)
+
 
 # NSE equity-segment trading holidays (full-day). Extend yearly from the official
 # NSE holiday circular. Format: "YYYY-MM-DD".
@@ -46,8 +65,8 @@ NSE_HOLIDAYS = {
 
 
 def is_trading_day(d: date = None) -> bool:
-    """True only if d is a weekday AND not an NSE holiday."""
-    d = d or date.today()
+    """True only if d is a weekday AND not an NSE holiday. Defaults to IST today."""
+    d = d or ist_today()
     if d.weekday() >= 5:          # Sat/Sun
         return False
     if d.isoformat() in NSE_HOLIDAYS:
@@ -56,14 +75,14 @@ def is_trading_day(d: date = None) -> bool:
 
 
 def is_holiday(d: date = None) -> bool:
-    """True if d is an NSE full-day holiday (weekday that's closed)."""
-    d = d or date.today()
+    """True if d is an NSE full-day holiday (weekday that's closed). IST default."""
+    d = d or ist_today()
     return d.weekday() < 5 and d.isoformat() in NSE_HOLIDAYS
 
 
 def reason_not_trading(d: date = None) -> str:
-    """Human-readable reason a given day isn't a trading day (or '')."""
-    d = d or date.today()
+    """Human-readable reason a given day isn't a trading day (or ''). IST default."""
+    d = d or ist_today()
     if d.weekday() >= 5:
         return "weekend"
     if d.isoformat() in NSE_HOLIDAYS:

@@ -6,11 +6,12 @@ from datetime import date
 from agent.config import STRATEGY_REPORT
 from agent.paper_trader import compute_stats
 from agent.recommendations import format_recommendation_text, load_recommendations
+from agent.trading_calendar import ist_today
 
 
 def generate_report(state, stock_data, patterns, news_data, book):
     stats = compute_stats(book)
-    today = date.today().isoformat()
+    today = ist_today().isoformat()
     recs  = load_recommendations()
 
     lines = [

@@ -26,6 +26,7 @@ from typing import Dict, List, Optional
 import pandas as pd
 
 from agent.config import BRAIN_DIR
+from agent.trading_calendar import ist_today
 
 HISTORY_FILE = "brain/history_context.json"
 
@@ -42,7 +43,7 @@ def fetch_history_context(tickers: List[str], sleep_s: float = 0.4) -> Dict:
     """
     from agent.data_fetcher import _download_daily
 
-    today = date.today()
+    today = ist_today()
     start = (today - timedelta(days=HISTORY_DAYS)).isoformat()
     end   = today.isoformat()
 
@@ -89,7 +90,7 @@ def refresh_universe_history(tickers: List[str], max_age_days: int = 7,
     then settles into weekly top-ups. Returns the full merged context.
     """
     existing = load_history_context()
-    today    = date.today()
+    today    = ist_today()
 
     stale = []
     for t in tickers:
@@ -133,7 +134,7 @@ def extend_foundation(stock_data: Dict) -> Dict:
     if not ctx_all:
         return ctx_all
 
-    today = date.today().isoformat()
+    today = ist_today().isoformat()
     changed = 0
     for ticker, ctx in ctx_all.items():
         entry = stock_data.get(ticker)
@@ -204,7 +205,7 @@ def _build_context(df: pd.DataFrame, ticker: str) -> Optional[dict]:
 
     return {
         "ticker":      ticker,
-        "updated":     date.today().isoformat(),
+        "updated":     ist_today().isoformat(),
         "days":        len(df),
         "regime":      regime,
         "personality": personality,

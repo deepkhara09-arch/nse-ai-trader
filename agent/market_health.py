@@ -12,6 +12,7 @@ from typing import Dict
 import pandas as pd
 
 from agent.config import BRAIN_DIR
+from agent.trading_calendar import ist_today
 
 VIX_NORMAL  = 15.0
 VIX_CAUTION = 20.0
@@ -42,7 +43,7 @@ def _log_health(component: str, detail: str, message: str, session: str) -> None
 def assess_market(session: str = "morning") -> dict:
     from agent.data_fetcher import _download_daily, _fetch_intraday_candles
 
-    today = date.today()
+    today = ist_today()
     start = (today - timedelta(days=60)).isoformat()   # extended to 60d for VIX percentile
     end   = today.isoformat()
 
@@ -330,7 +331,7 @@ def _fetch_index(symbol: str, start: str, end: str, downloader) -> dict:
 def _fetch_vix_with_percentile(downloader) -> dict:
     """Fetch VIX with 30-day percentile context to judge if current level is extreme."""
     try:
-        today = date.today()
+        today = ist_today()
         df = downloader("^INDIAVIX", start=(today - timedelta(days=45)).isoformat(), end=today.isoformat())
         if df is None or df.empty:
             return {"value": 15.0, "level": "normal", "percentile_30d": 50}

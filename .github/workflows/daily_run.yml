@@ -1,12 +1,22 @@
 name: NSE AI Trader
 
 on:
-  # ── Triggering: cron-job.org (external, punctual) is the SOLE scheduler ──────
-  # The GitHub-hosted `schedule:` cron was REMOVED: it fires late/unreliably AND
-  # was double-firing alongside cron-job.org, producing duplicate runs in the log.
-  # cron-job.org calls repository_dispatch (below) at exact IST times, on time,
-  # once per session. (If you ever want a GitHub fallback again, re-add a
-  # `schedule:` block — the per-day dedup guard makes overlaps harmless.)
+  # ── Triggering: two-layer for reliability ───────────────────────────────────
+  # PRIMARY: cron-job.org calls repository_dispatch (below) at exact IST times —
+  #   punctual, once per session. This is what normally runs.
+  # BACKUP: the GitHub schedule: below fires each session ~25 MIN LATER than the
+  #   primary. It exists ONLY to catch a session the primary missed:
+  #     - if the primary already ran that session today, the per-session dedup
+  #       guard makes the backup a harmless dashboard-only no-op (no duplicate).
+  #     - if the primary FAILED to fire, the backup runs the session for real.
+  #   So you get punctual primary + guaranteed coverage, without duplicate work.
+  #   (Backup times are deliberately a bit late since GitHub cron itself drifts.)
+  schedule:
+    - cron: "25 3 * * 1-5"   # ~08:55 IST — backup for pre-open (primary 08:35)
+    - cron: "35 4 * * 1-5"   # ~10:05 IST — backup for morning  (primary 09:35)
+    - cron: "45 6 * * 1-5"   # ~12:15 IST — backup for midday   (primary 11:45)
+    - cron: "15 8 * * 1-5"   # ~13:45 IST — backup for afternoon(primary 13:15)
+    - cron: "15 10 * * 1-5"  # ~15:45 IST — backup for preclose (primary 15:15)
 
   # Manual trigger (pick a session from the UI dropdown).
   # Default is "test" — a fully SAFE dry run: it only rebuilds the dashboard from

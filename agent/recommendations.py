@@ -45,6 +45,7 @@ from agent.config import (
 from agent.support_resistance import compute_levels, nearest_strong_support, nearest_strong_resistance
 from agent.brain import analyse_stock, get_reliable_patterns_list
 from agent.ranking_engine import rank_focus_stocks
+from agent.trading_calendar import ist_today
 
 RECOMMENDATIONS_FILE = "brain/recommendations.json"
 
@@ -582,7 +583,7 @@ def generate_recommendations(
             "ticker":       ticker,
             "nse_code":     ticker.replace(".NS", ""),
             "company_name": STOCK_NAMES.get(ticker, ticker),
-            "date":         date.today().isoformat(),
+            "date":         ist_today().isoformat(),
             "generated_at": generated_at,
             "valid_until":  valid_until_ist,
             "session":      session,

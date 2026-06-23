@@ -36,6 +36,7 @@ from typing import Dict, List
 from urllib.request import urlopen, Request
 
 from agent.config import BRAIN_DIR, POSITIVE_WORDS, NEGATIVE_WORDS
+from agent.trading_calendar import ist_today
 
 MACRO_FILE = "brain/macro_sentiment.json"
 
@@ -138,7 +139,7 @@ def assess_macro_sentiment(session: str = "preopen", use_llm: bool = True) -> di
         summary = _rule_summary(overall, mood, global_cues, playbook)
 
     snap = {
-        "date":          date.today().isoformat(),
+        "date":          ist_today().isoformat(),
         "session":       session,
         "generated_at":  datetime.utcnow().isoformat(),
         "global_score":  round(global_score, 3),
@@ -260,8 +261,8 @@ def _fetch_global_cues() -> dict:
         "usdinr":  "INR=X",
         "gold":    "GC=F",
     }
-    start = (date.today() - timedelta(days=7)).isoformat()
-    end   = date.today().isoformat()
+    start = (ist_today() - timedelta(days=7)).isoformat()
+    end   = ist_today().isoformat()
     for name, sym in symbols.items():
         try:
             df = _download_daily(sym, start=start, end=end)

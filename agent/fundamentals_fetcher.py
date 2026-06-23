@@ -22,6 +22,7 @@ from datetime import datetime
 from typing import Dict, List
 
 from agent.config import BRAIN_DIR
+from agent.trading_calendar import ist_today
 
 FUNDAMENTALS_FILE = "brain/fundamentals.json"
 
@@ -244,7 +245,7 @@ def _fetch_one(ticker: str, session, crumb: str) -> dict:
                     from datetime import date as _date
                     earn_dt = _date.fromtimestamp(int(raw_val))
                     earnings_date = earn_dt.isoformat()
-                    days_to_earnings = (earn_dt - _date.today()).days
+                    days_to_earnings = (earn_dt - ist_today()).days
         except Exception:
             pass
 

@@ -7,6 +7,7 @@ import json
 import os
 from datetime import date
 
+from agent.trading_calendar import ist_today
 from agent.migrations import run_migrations, check_schema_health
 from agent.config import (
     NSE_UNIVERSE, FOCUS_STOCK_COUNT,
@@ -64,7 +65,7 @@ def run():
     # dashboard from the EXISTING brain data. Use it to confirm everything works
     # after a code change, any time, any day.
     if raw_session == "test":
-        print(f"\n{'='*60}\nNSE AI Trader  {date.today()}  session=TEST (dry run, no side effects)\n{'='*60}\n")
+        print(f"\n{'='*60}\nNSE AI Trader  {ist_today()}  session=TEST (dry run, no side effects)\n{'='*60}\n")
         run_migrations()
         start_run("test")
         try:
@@ -81,7 +82,7 @@ def run():
         except Exception as e:
             import traceback
             print(f"[test] error: {e}"); traceback.print_exc()
-            record_issue("test_run", str(date.today()), str(e), "test")
+            record_issue("test_run", str(ist_today()), str(e), "test")
         finish_run("test")
         print(f"\n[done] TEST run complete — nothing was changed.\n")
         return
@@ -98,7 +99,7 @@ def run():
         session = raw_session
 
     print(f"\n{'='*60}")
-    print(f"NSE AI Trader  {date.today()}  session={session}")
+    print(f"NSE AI Trader  {ist_today()}  session={session}")
     print(f"{'='*60}\n")
 
     # ── Non-trading-day guard (weekend OR NSE holiday) ──────────────────────────
@@ -107,9 +108,9 @@ def run():
     # refresh the dashboard (so you can view it) but skip all data fetch / trading.
     # Set ALLOW_WEEKEND=1 to override (e.g. forced testing).
     from agent.trading_calendar import is_trading_day, reason_not_trading
-    if not is_trading_day(date.today()) and os.environ.get("ALLOW_WEEKEND", "") != "1":
-        why = reason_not_trading(date.today())
-        print(f"[run] {date.today()} is a {why} — NSE is closed. Refreshing dashboard "
+    if not is_trading_day(ist_today()) and os.environ.get("ALLOW_WEEKEND", "") != "1":
+        why = reason_not_trading(ist_today())
+        print(f"[run] {ist_today()} is a {why} — NSE is closed. Refreshing dashboard "
               f"only; skipping data fetch & trading. (Set ALLOW_WEEKEND=1 to force.)")
         start_run(session)
         try:
@@ -120,7 +121,7 @@ def run():
             _refresh_outputs(state, market_health, session)
         except Exception as e:
             print(f"[run] weekend dashboard refresh failed (non-fatal): {e}")
-            record_issue("weekend_refresh", str(date.today()), str(e), session)
+            record_issue("weekend_refresh", str(ist_today()), str(e), session)
         finish_run(session)
         print(f"\n[done] weekend no-op complete ({session}).\n")
         return
@@ -147,6 +148,26 @@ def run():
     focus = state.get("focus_stocks", [])
     print(f"Phase={phase}  Day={day}  FocusStocks={focus}\n")
 
+    # ── Session-level duplicate guard ───────────────────────────────────────────
+    # Prevents the same session running its full work twice in one day (e.g. when a
+    # backup trigger fires after the primary already succeeded). If THIS session
+    # already completed today, do a lightweight dashboard-only refresh and stop —
+    # no re-fetch, no duplicate trade attempts, no duplicate log spam. This is what
+    # makes a backup trigger safe: a redundant fire becomes a harmless no-op.
+    done_today = state.get("sessions_done", {})
+    today_iso  = ist_today().isoformat()
+    if done_today.get(session) == today_iso:
+        print(f"[run] '{session}' already completed today ({today_iso}) — "
+              f"duplicate trigger, refreshing dashboard only (no re-run).")
+        start_run(session)
+        try:
+            mh = assess_market(session)
+            _refresh_outputs(state, mh, session, read_only=True)
+        except Exception as e:
+            print(f"[run] duplicate-guard refresh failed (non-fatal): {e}")
+        finish_run(session)
+        return
+
     # ── Market health check (every session) ────────────────────────────────────
     # For the pre-open sweep this also runs the global+India macro sentiment pass.
     market_health = assess_market(session)
@@ -162,6 +183,7 @@ def run():
         note  = (f"Pre-open macro: {macro.get('mood','neutral')} "
                  f"({macro.get('overall_score',0):+.2f})")
         state = add_brain_note(state, note)
+        _mark_session_done(state, session)
         save_state(state)
         _append_log(state, session)   # log first so the dashboard includes this run
         _refresh_outputs(state, market_health, session)
@@ -182,6 +204,12 @@ def run():
         record_issue("phase", f"{phase} phase", str(e), session)
         # Reload the last good state from disk so outputs reflect a consistent view
         state = load_state()
+
+    # Mark this session complete for today so a later backup/duplicate trigger
+    # no-ops instead of re-running. Persist it (the phase already saved state, so
+    # we re-save with the completion mark).
+    _mark_session_done(state, session)
+    save_state(state)
 
     # ── Always: write this run's log entry, THEN rebuild outputs ──────────────
     # Order matters: _append_log must run BEFORE _refresh_outputs so the dashboard
@@ -467,8 +495,8 @@ def _tick_background_cohorts(state: dict, session: str, skip_fetch: bool = False
     # main day-counter so duplicate/overlapping precloses or weekend/holiday runs
     # don't make batches "age" multiple steps or on non-trading days.
     from agent.trading_calendar import is_trading_day
-    today_str = date.today().isoformat()
-    if not is_trading_day(date.today()):
+    today_str = ist_today().isoformat()
+    if not is_trading_day(ist_today()):
         print("[cohort] Not a trading day — batches not advanced.")
         return
     if state.get("cohort_last_tick_date") == today_str:
@@ -497,7 +525,7 @@ def _tick_background_cohorts(state: dict, session: str, skip_fetch: bool = False
         batches.append({
             "id":         new_id,
             "day":        0,
-            "start_date": date.today().isoformat(),
+            "start_date": ist_today().isoformat(),
             "ready":      False,
             "candidates": [],
         })
@@ -550,7 +578,7 @@ def _tick_background_cohorts(state: dict, session: str, skip_fetch: bool = False
                 sent = {t: v.get("latest", {}) for t, v in nd.items()}
                 top  = select_focus_stocks(sd, sent, FOCUS_STOCK_COUNT * 2, load_fundamentals())
                 batch["candidates"]  = [t for t, _ in top]
-                batch["scored_date"] = date.today().isoformat()
+                batch["scored_date"] = ist_today().isoformat()
                 batch["ready"]       = True
                 print(f"[cohort] Batch #{batch_id} ready — {len(top)} candidates scored")
                 state = add_brain_note(state, f"Cohort batch #{batch_id} complete — {len(top)} candidates ready")
@@ -715,29 +743,44 @@ def _refresh_outputs(state: dict, market_health: dict, session: str, read_only: 
         record_issue("dashboard", "refresh outputs", str(e), session)
 
 
+def _mark_session_done(state: dict, session: str) -> None:
+    """Record that `session` finished its real work today, so a later duplicate or
+    backup trigger for the same session no-ops. Keeps only today's marks (auto-
+    resets each new day)."""
+    today = ist_today().isoformat()
+    done = state.get("sessions_done", {})
+    # Drop any marks from previous days, then set today's.
+    done = {s: d for s, d in done.items() if d == today}
+    done[session] = today
+    state["sessions_done"] = done
+
+
 def _append_log(state: dict, session: str) -> None:
-    from datetime import datetime, timezone, timedelta
-    ist = timezone(timedelta(hours=5, minutes=30))
-    now_ist = datetime.now(ist)
+    from agent.trading_calendar import ist_now
+    now_ist = ist_now()
 
     book   = load_book()
     stats  = compute_stats(book)
     open_n = len(book.get("open_positions", []))
+    phase_label = {"exploration": "Exploration", "analysis": "Analysis",
+                   "paper_trading": "Paper-trading", "alerting": "Live"}.get(state["phase"], state["phase"])
 
     # A brief human-readable summary of what this run actually did.
+    # "day N" = the Nth TRADING day of the current phase (weekends/holidays don't
+    # count), not a calendar day — wording kept explicit to avoid confusion.
     recs = load_recommendations()
     mood = load_market_health().get("market_mood", "?")
     if session == "preopen":
-        summary = f"Pre-open sweep — macro mood {mood}; dashboard refreshed."
+        summary = f"Pre-open sweep — macro mood {mood}; dashboard refreshed (no trading)."
     elif session == "test":
         summary = "Test dry-run — dashboard rebuilt, no trading, day unchanged."
     else:
-        summary = (f"{session.title()} run — {state['phase']} day {state['day']}; "
-                   f"{open_n} open position(s), {stats['total']} closed trades "
-                   f"({stats['win_rate']*100:.0f}% WR); {len(recs)} live recommendation(s).")
+        summary = (f"{session.title()} run · {phase_label} trading-day {state['day']} · "
+                   f"{open_n} open · {stats['total']} closed ({stats['win_rate']*100:.0f}% WR) · "
+                   f"{len(recs)} live rec(s).")
 
     entry = {
-        "date":         date.today().isoformat(),
+        "date":         ist_today().isoformat(),
         "triggered_at": now_ist.strftime("%Y-%m-%d %H:%M IST"),  # when the run fired
         "session":      session,
         "phase":        state["phase"],

@@ -22,6 +22,7 @@ from urllib.request import urlopen, Request
 from urllib.error import URLError
 
 from agent.config import BRAIN_DIR
+from agent.trading_calendar import ist_today
 
 COACH_MEMORY_FILE  = "brain/coach_memory.json"
 COACH_QUESTIONS_FILE = "brain/coach_questions.json"   # questions queued during the day
@@ -50,7 +51,7 @@ def run_coach(closed_trades: List[dict], patterns: dict, market_health: dict) ->
         return load_coach_memory()
 
     memory   = load_coach_memory()
-    today    = date.today().isoformat()
+    today    = ist_today().isoformat()
     lessons  = []
 
     # ── 1. Review today's closed trades ──────────────────────────────────────
@@ -237,7 +238,7 @@ Only return valid JSON. No markdown, no explanation outside the JSON."""
             ticker = next((t.get("ticker", "") for t in trades
                            if t.get("ticker", "").replace(".NS", "") in ref), "")
             lessons.append({
-                "date":          date.today().isoformat(),
+                "date":          ist_today().isoformat(),
                 "ticker":        ticker,
                 "setup_key":     raw.get("setup_key", "unknown"),
                 "what_happened": raw.get("what_happened", ""),
@@ -294,7 +295,7 @@ Only return valid JSON."""
         try:
             ans = json.loads(response)
             lessons.append({
-                "date":          date.today().isoformat(),
+                "date":          ist_today().isoformat(),
                 "ticker":        ans.get("applies_to_ticker", ""),
                 "setup_key":     ans.get("setup_key", "qa_lesson"),
                 "what_happened": ans.get("answer", ""),

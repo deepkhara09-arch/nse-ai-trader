@@ -20,6 +20,7 @@ from datetime import date
 from typing import Dict
 
 from agent.config import BRAIN_DIR
+from agent.trading_calendar import ist_today
 
 FII_DII_FILE = "brain/fii_dii.json"
 
@@ -56,7 +57,7 @@ def fetch_fii_dii() -> dict:
                 dii_net = net
         combined = round(fii_net + dii_net, 2)
         snap = {
-            "date":            date.today().isoformat(),
+            "date":            ist_today().isoformat(),
             "fii_net_cr":      round(fii_net, 2),
             "dii_net_cr":      round(dii_net, 2),
             "combined_net_cr": combined,

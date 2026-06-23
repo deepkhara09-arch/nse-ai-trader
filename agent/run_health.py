@@ -92,7 +92,7 @@ def start_run(session: str) -> None:
         data = _load()
         data["_run_start_count"] = len(data["issues"])
         data["last_run"] = {
-            "date":        date.today().isoformat(),
+            "date":        datetime.now(IST).date().isoformat(),
             "session":     session,
             "started_at":  datetime.now(IST).strftime("%Y-%m-%d %H:%M IST"),
             "ok":          True,
@@ -110,7 +110,7 @@ def finish_run(session: str) -> None:
         start_count = data.pop("_run_start_count", len(data["issues"]))
         this_run = len(data["issues"]) - start_count
         data["last_run"] = {
-            "date":         date.today().isoformat(),
+            "date":         datetime.now(IST).date().isoformat(),
             "session":      session,
             "finished_at":  datetime.now(IST).strftime("%Y-%m-%d %H:%M IST"),
             "ok":           this_run == 0,

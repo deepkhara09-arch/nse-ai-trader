@@ -18,6 +18,7 @@ from typing import Dict, List
 import requests
 
 from agent.config import BRAIN_DIR
+from agent.trading_calendar import ist_today
 
 DELIVERY_FILE = "brain/delivery_data.json"
 
@@ -36,7 +37,7 @@ def fetch_delivery(tickers: List[str], lookback_days: int = 5) -> Dict:
     """
     # Collect last N trading days of bhavcopy data
     raw: Dict[str, list] = {}   # ticker → list of (date, delivery_pct)
-    today = date.today()
+    today = ist_today()
 
     days_checked = 0
     days_fetched = 0

@@ -102,16 +102,19 @@ def main():
     # Controllable clock so the trading-day counter (which only advances once per
     # distinct weekday) can actually progress through the lifecycle in the sim.
     import datetime as _dt
-    import agent.state_manager as SM
-    _real_date = _dt.date
+    import sys as _sys
     clock = {"d": _dt.date(2026, 1, 5)}  # a Monday
 
-    class _FakeDate(_real_date):
-        @classmethod
-        def today(cls):
-            return clock["d"]
-    SM.date = _FakeDate   # advance_session reads date.today() from state_manager
-    M.date = _FakeDate    # main.py weekend-guard + logging use the same clock
+    # The whole tool now derives "today" from trading_calendar.ist_today(). To
+    # drive the lifecycle in the sim we override ist_today() everywhere it's used:
+    # the source function AND every module that did `from ... import ist_today`.
+    import agent.trading_calendar as TC
+    def _fake_ist_today():
+        return clock["d"]
+    TC.ist_today = _fake_ist_today
+    for modname, mod in list(_sys.modules.items()):
+        if modname.startswith("agent.") and hasattr(mod, "ist_today"):
+            setattr(mod, "ist_today", _fake_ist_today)
 
     def _next_weekday():
         d = clock["d"] + _dt.timedelta(days=1)

@@ -14,6 +14,7 @@ import json
 import os
 from datetime import date
 from typing import Dict, List
+from agent.trading_calendar import ist_today
 
 from agent.config import BRAIN_DIR
 
@@ -219,7 +220,7 @@ def compute_sector_scores(stock_data: Dict) -> Dict[str, dict]:
             "avg_vol_rel": round(avg_vol, 2),
             "stock_count": n,
             "stocks":      [s["ticker"].replace(".NS", "") for s in stocks],
-            "date":        date.today().isoformat(),
+            "date":        ist_today().isoformat(),
         }
 
     return results
@@ -253,7 +254,7 @@ def save_sector_scores(data: Dict) -> None:
     os.makedirs(BRAIN_DIR, exist_ok=True)
     existing = load_sector_scores()
     # Keep history: append today's scores per sector
-    today = date.today().isoformat()
+    today = ist_today().isoformat()
     for sector, info in data.items():
         if sector not in existing:
             existing[sector] = {"history": [], "latest": {}}

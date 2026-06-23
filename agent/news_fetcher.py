@@ -12,6 +12,7 @@ from typing import Dict, List
 from urllib.request import urlopen, Request
 
 from agent.config import BRAIN_DIR, NEWS_FILE, NEWS_FEEDS, POSITIVE_WORDS, NEGATIVE_WORDS
+from agent.trading_calendar import ist_today
 
 
 # Ticker → company name fragments for article matching (full Nifty-100 coverage)
@@ -144,7 +145,7 @@ def fetch_news(tickers: List[str]) -> Dict:
         matched = [a for a in articles if any(f in a["text"] for f in frags)]
         score = _sentiment(matched)
         result[ticker] = {
-            "date":       date.today().isoformat(),
+            "date":       ist_today().isoformat(),
             "count":      len(matched),
             "score":      score,
             "headlines":  [a["title"] for a in matched[:6]],
@@ -217,7 +218,7 @@ def load_news() -> Dict:
 def save_news(data: Dict) -> None:
     os.makedirs(BRAIN_DIR, exist_ok=True)
     existing = load_news()
-    today = date.today().isoformat()
+    today = ist_today().isoformat()
     for ticker, info in data.items():
         if ticker not in existing:
             existing[ticker] = {"history": [], "latest": {}}

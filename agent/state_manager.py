@@ -7,6 +7,7 @@ import json
 import os
 from datetime import date, datetime
 from agent.config import STATE_FILE, BRAIN_DIR
+from agent.trading_calendar import ist_today
 
 
 def load_state() -> dict:
@@ -32,11 +33,12 @@ def _fresh_state() -> dict:
         "phase":             "exploration",
         "day":               1,
         "session":           "morning",
-        "start_date":        date.today().isoformat(),
-        "phase_start_date":  date.today().isoformat(),
+        "start_date":        ist_today().isoformat(),
+        "phase_start_date":  ist_today().isoformat(),
         "last_run_date":     None,
         "last_counted_date": None,   # last date the phase day-counter advanced (dedupe)
         "cohort_last_tick_date": None,  # last date background batches advanced (dedupe)
+        "sessions_done":     {},     # {session: date} — per-session duplicate guard
         "last_updated":      None,
         "focus_stocks":      [],
         "dropped_stocks":    [],   # stocks removed due to poor pattern reliability
@@ -68,7 +70,7 @@ def advance_session(state: dict, current_session: str) -> dict:
     actually runs on an uncounted trading day, so a missed session/day simply means
     that day isn't counted — never a wrong count.
     """
-    from agent.trading_calendar import is_trading_day, reason_not_trading
+    from agent.trading_calendar import is_trading_day, reason_not_trading, ist_today
 
     order = ["morning", "midday", "afternoon", "preclose"]
     try:
@@ -77,8 +79,9 @@ def advance_session(state: dict, current_session: str) -> dict:
         idx = 0
 
     if idx == len(order) - 1:
-        # preclose done → candidate for end-of-trading-day rollover
-        today = date.today()
+        # preclose done → candidate for end-of-trading-day rollover.
+        # Use IST date (NSE timezone), NOT the server's UTC date.
+        today = ist_today()
         today_str = today.isoformat()
         trading_day = is_trading_day(today)
         already_counted_today = state.get("last_counted_date") == today_str
@@ -100,19 +103,19 @@ def advance_session(state: dict, current_session: str) -> dict:
 
 
 def set_phase(state: dict, phase: str, note: str = "") -> dict:
-    msg = f"Phase → {phase} on day {state['day']} ({date.today().isoformat()})"
+    msg = f"Phase → {phase} on day {state['day']} ({ist_today().isoformat()})"
     if note:
         msg += f" | {note}"
     print(f"[state] {msg}")
     state["phase"] = phase
-    state["phase_start_date"] = date.today().isoformat()
+    state["phase_start_date"] = ist_today().isoformat()
     state["brain_notes"].append(msg)
     state["brain_notes"] = state["brain_notes"][-100:]   # keep last 100
     return state
 
 
 def add_brain_note(state: dict, note: str) -> dict:
-    stamped = f"[{date.today().isoformat()}] {note}"
+    stamped = f"[{ist_today().isoformat()}] {note}"
     state["brain_notes"].append(stamped)
     state["brain_notes"] = state["brain_notes"][-100:]
     return state

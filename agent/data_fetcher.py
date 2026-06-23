@@ -24,6 +24,7 @@ from agent.config import (
     RSI_PERIOD, MACD_FAST, MACD_SLOW, MACD_SIGNAL,
     BB_PERIOD, BB_STD, ATR_PERIOD, VOLUME_MA,
 )
+from agent.trading_calendar import ist_today
 
 # ── Stooq HTTP session (no auth, works from any IP) ──────────────────────────
 _STOOQ = requests.Session()
@@ -347,7 +348,7 @@ def _warm_nse_session() -> bool:
 
 
 def _fetch_one(ticker: str, session: str) -> dict:
-    today       = date.today()
+    today       = ist_today()
     start_daily = today - timedelta(days=120)
 
     df_daily = _download_daily(

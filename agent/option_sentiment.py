@@ -18,6 +18,7 @@ import os
 from datetime import date
 
 from agent.config import BRAIN_DIR
+from agent.trading_calendar import ist_today
 
 PCR_FILE = "brain/option_sentiment.json"
 # NSE retired the old /api/option-chain-indices path (now 404) and the v3
@@ -55,7 +56,7 @@ def fetch_pcr() -> dict:
             return prev
         pcr = round(total_pe / total_ce, 3)
         snap = {
-            "date":       date.today().isoformat(),
+            "date":       ist_today().isoformat(),
             "pcr":        pcr,
             "total_pe_oi": total_pe,
             "total_ce_oi": total_ce,

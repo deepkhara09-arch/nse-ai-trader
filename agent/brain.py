@@ -24,6 +24,7 @@ from agent.config import (
     FLAT_STOP_PCT,
     PATTERN_DECAY_RATE, MIN_PATTERN_SAMPLES, CONFIDENCE_FLOOR,
 )
+from agent.trading_calendar import ist_today
 
 
 # ═══════════════════════════════════════════════════════════════════════════════
@@ -845,7 +846,7 @@ def analyse_stock(
 
     return {
         "ticker":       ticker,
-        "date":         date.today().isoformat(),
+        "date":         ist_today().isoformat(),
         "session":      session,
         "signal":       signal,
         "buy_score":    buy_score,
@@ -899,7 +900,7 @@ def learn_from_trade(
         }
 
     tk = patterns_db[ticker]
-    today = date.today().isoformat()
+    today = ist_today().isoformat()
 
     # Update each pattern's win/loss record
     for p in patterns_at_entry:
@@ -963,7 +964,7 @@ def learn_from_trade(
 
 def _apply_decay(patterns: dict) -> None:
     """Nudge reliability of stale patterns back toward 0.5 (uncertainty)."""
-    today = date.today()
+    today = ist_today()
     for name, p in patterns.items():
         if not p.get("last_seen"):
             continue
@@ -980,7 +981,7 @@ def record_decision(decisions: List, opinion: dict, action: str, reason: str) ->
     """Append a timestamped decision record to the decisions log."""
     decisions.append({
         "timestamp": datetime.utcnow().isoformat(),
-        "date":      date.today().isoformat(),
+        "date":      ist_today().isoformat(),
         "ticker":    opinion.get("ticker"),
         "session":   opinion.get("session"),
         "action":    action,

@@ -60,7 +60,9 @@
   },
   "market_mood": "neutral",
   "trade_allowed": true,
-  "warnings": [],
+  "warnings": [
+    "Nifty in intraday downtrend \u2014 avoid new longs this session"
+  ],
   "leading_sectors": [
     "Pharma",
     "Bank",
@@ -72,7 +74,7 @@
     "IT"
   ],
   "broad_market_strength": true,
-  "intraday_regime": "mixed",
+  "intraday_regime": "trending_down",
   "macro": {
     "date": "2026-06-23",
     "session": "midday",
@@ -128,5 +130,19 @@
     "playbook_bias": "risk_off",
     "article_count": 60
   },
-  "macro_risk_factor": 1.0
+  "macro_risk_factor": 1.0,
+  "fii_dii": {
+    "date": null,
+    "fii_net_cr": 0.0,
+    "dii_net_cr": 0.0,
+    "combined_net_cr": 0.0,
+    "signal": "neutral"
+  },
+  "pcr": {
+    "date": null,
+    "pcr": 0,
+    "total_pe_oi": 0,
+    "total_ce_oi": 0,
+    "reading": "neutral"
+  }
 }

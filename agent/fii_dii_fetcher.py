@@ -34,12 +34,15 @@ def fetch_fii_dii() -> dict:
     have to handle errors.
     """
     prev = load_fii_dii()
+    prev = dict(prev); prev["ok"] = False; prev["error"] = ""
     try:
         from agent.data_fetcher import _NSE_SESSION, _warm_nse_session
         _warm_nse_session()
         r = _NSE_SESSION.get(NSE_FII_DII_URL, timeout=12)
         if r.status_code != 200:
-            print(f"[fii-dii] HTTP {r.status_code} — keeping last-known")
+            msg = f"HTTP {r.status_code}"
+            print(f"[fii-dii] {msg} — keeping last-known")
+            prev["error"] = msg
             return prev
         data = r.json()
         # Response is a list of two dicts: one FII, one DII (each with netValue).
@@ -58,6 +61,8 @@ def fetch_fii_dii() -> dict:
             "dii_net_cr":      round(dii_net, 2),
             "combined_net_cr": combined,
             "signal":          _classify(combined, fii_net),
+            "ok":              True,
+            "error":           "",
         }
         _save(snap)
         print(f"[fii-dii] FII {fii_net:+,.0f} Cr | DII {dii_net:+,.0f} Cr "
@@ -65,6 +70,7 @@ def fetch_fii_dii() -> dict:
         return snap
     except Exception as e:
         print(f"[fii-dii] fetch failed (non-fatal, keeping last-known): {e}")
+        prev["error"] = str(e)[:120]
         return prev
 
 

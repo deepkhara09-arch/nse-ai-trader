@@ -29,6 +29,16 @@ SECTOR_PROXIES = {
 }
 
 
+def _log_health(component: str, detail: str, message: str, session: str) -> None:
+    """Record a non-fatal data-source failure to the System Health panel.
+    Never raises — health logging must never break market assessment."""
+    try:
+        from agent.run_health import record_issue
+        record_issue(component, detail, message, session)
+    except Exception:
+        pass
+
+
 def assess_market(session: str = "morning") -> dict:
     from agent.data_fetcher import _download_daily, _fetch_intraday_candles
 
@@ -40,6 +50,14 @@ def assess_market(session: str = "morning") -> dict:
     bank_nifty = _fetch_index("^NSEBANK", start, end, _download_daily)
     vix_data   = _fetch_vix_with_percentile(_download_daily)
     sectors    = _sector_strength(start, end, _download_daily)
+
+    # Surface core index-data failures on the dashboard health panel.
+    if not nifty:
+        _log_health("market_index", "Nifty 50", "index data unavailable — using neutral", session)
+    if not bank_nifty:
+        _log_health("market_index", "Bank Nifty", "index data unavailable", session)
+    if not sectors:
+        _log_health("market_index", "sectors", "sector ETF data unavailable", session)
 
     health = {
         "date":          today.isoformat(),
@@ -166,11 +184,19 @@ def assess_market(session: str = "morning") -> dict:
 
     # ── Real FII/DII institutional flows (biggest Nifty driver) ─────────────────
     # Published once daily by NSE; fetch fresh at preopen/preclose, reuse otherwise.
+    # A failed LIVE fetch (only on the fetch sessions) is logged to System Health so
+    # you can SEE if it stops working, while the tool keeps using last-known data.
     try:
         from agent.fii_dii_fetcher import fetch_fii_dii, load_fii_dii
-        flows = fetch_fii_dii() if session in ("preopen", "preclose") else load_fii_dii()
+        if session in ("preopen", "preclose"):
+            flows = fetch_fii_dii()
+            if not flows.get("ok"):
+                _log_health("fii_dii", "NSE FII/DII", flows.get("error") or "fetch returned no fresh data", session)
+        else:
+            flows = load_fii_dii()
     except Exception as e:
         print(f"[market] FII/DII fetch failed (non-fatal): {e}")
+        _log_health("fii_dii", "NSE FII/DII", str(e), session)
         flows = {}
     health["fii_dii"] = flows
     fd_sig = flows.get("signal", "neutral")

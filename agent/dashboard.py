@@ -764,6 +764,22 @@ def _market_bar(nifty, vix, mood, warnings, market_health) -> str:
         if playbook:
             pb_html = ('<div style="margin-top:6px;font-size:.66rem;color:var(--muted)">'
                        + "<br>".join(f"&#9656; {p}" for p in playbook[:3]) + "</div>")
+        # ── Real FII/DII flows + Nifty PCR row ─────────────────────────────────
+        flow_html = ""
+        fd = market_health.get("fii_dii", {})
+        pcr = market_health.get("pcr", {})
+        chips = []
+        if fd and fd.get("date"):
+            fii = fd.get("fii_net_cr", 0); dii = fd.get("dii_net_cr", 0)
+            fcol = "var(--green)" if fii >= 0 else "var(--red)"
+            dcol = "var(--green)" if dii >= 0 else "var(--red)"
+            chips.append(f'FII <b style="color:{fcol}">&#8377;{fii:+,.0f} Cr</b>')
+            chips.append(f'DII <b style="color:{dcol}">&#8377;{dii:+,.0f} Cr</b>')
+        if pcr and pcr.get("pcr"):
+            chips.append(f'PCR <b>{pcr.get("pcr")}</b>')
+        if chips:
+            flow_html = ('<div style="margin-top:7px;font-size:.68rem;color:var(--text)">'
+                         + ' &nbsp;·&nbsp; '.join(chips) + '</div>')
         macro_html = f"""<div class="card" style="margin-bottom:12px;padding:12px 14px">
   <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px">
     <div style="font-size:.72rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)">
@@ -776,6 +792,7 @@ def _market_bar(nifty, vix, mood, warnings, market_health) -> str:
     </div>
   </div>
   <div style="margin-top:7px;font-size:.68rem;color:var(--text)">{cue_chips or ''}</div>
+  {flow_html}
   {f'<div style="margin-top:7px;font-size:.74rem;line-height:1.5;color:var(--text)">{summary}</div>' if summary else ''}
   {pb_html}
 </div>"""

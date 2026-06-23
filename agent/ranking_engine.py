@@ -116,6 +116,13 @@ def rank_focus_stocks(
             regime_raw -= 0.15
         if vol_state == "compressed":
             regime_raw += 0.05   # primed for expansion
+        # Real FII/DII institutional flow — a market-wide tailwind/headwind that
+        # nudges every long setup's odds (institutions move Nifty-100 the most).
+        fd_sig = (market_health or {}).get("fii_dii", {}).get("signal", "neutral")
+        if fd_sig == "strong_inflow":   regime_raw += 0.08
+        elif fd_sig == "inflow":        regime_raw += 0.04
+        elif fd_sig == "strong_outflow":regime_raw -= 0.08
+        elif fd_sig == "outflow":       regime_raw -= 0.04
         regime_raw = max(0.0, min(1.0, regime_raw))
 
         # ── Bayesian success probability ──────────────────────────────────────

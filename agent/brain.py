@@ -466,10 +466,30 @@ def analyse_stock(
 
     def _score(pattern, side, pts, reason):
         nonlocal buy_score, sell_score
-        rel = reliable.get(pattern, {}).get("reliability", 0.5)
-        if rel < CONFIDENCE_FLOOR and reliable.get(pattern):
-            return   # pattern exists in DB but is unreliable — ignore
-        weighted = pts * (0.7 + 0.6 * rel)   # scale by learned reliability
+        info  = reliable.get(pattern, {})
+        rel   = info.get("reliability", 0.5)
+        wins  = info.get("wins", 0)
+        losses= info.get("losses", 0)
+        sample = wins + losses
+
+        if rel < CONFIDENCE_FLOOR and info:
+            return   # pattern exists in DB but is proven unreliable — ignore
+
+        # ── Outcome-weighted scoring ───────────────────────────────────────────
+        # Lean HARDER on a pattern's real win-rate, but only as the sample grows —
+        # so 1-2 lucky/unlucky trades don't swing it, while a genuinely proven
+        # pattern (many trades) gets a strong boost and a proven loser gets cut.
+        #   confidence ramps 0→1 over the first ~10 trades on this pattern.
+        if sample <= 0:
+            mult = 1.0   # never traded — use the base points as-is
+        else:
+            confidence = min(1.0, sample / 10.0)
+            # base gentle scaling (as before) blended toward an aggressive,
+            # win-rate-driven multiplier the more evidence we have.
+            gentle     = 0.7 + 0.6 * rel                # ~0.94–1.30x
+            aggressive = 0.4 + 1.4 * rel                # ~0.4x (loser) – 1.8x (winner)
+            mult = gentle * (1 - confidence) + aggressive * confidence
+        weighted = pts * mult
         if side == "buy":
             buy_score  += weighted
             buy_reasons.append(reason)
@@ -844,6 +864,7 @@ def analyse_stock(
         "hold_days":    "5–10 days" if style == "swing" else "same day",
         "news_score":   round(news_score, 3),
         "coach_notes":  coach_notes,
+        "days_to_earnings": days_to_earnings,   # for earnings-aware sizing downstream
     }
 
 

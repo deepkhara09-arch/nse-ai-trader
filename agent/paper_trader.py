@@ -146,7 +146,16 @@ def _try_open_positions(book: dict, opinions: List[dict], patterns_db: Dict, ses
             print(f"[paper] Skipping {ticker} — capital ₹{book['capital']:.0f} < entry ₹{entry:.0f}")
             continue
 
-        max_invest = book["capital"] * vol_max_pct
+        # ── Earnings guard: halve size for a swing held through results (gap risk).
+        # Intraday is squared off same day so earnings gap risk doesn't apply.
+        pos_pct = vol_max_pct
+        dte = op.get("days_to_earnings")
+        earnings_soon = (dte is not None and 0 <= dte <= 3 and op.get("style") != "intraday")
+        if earnings_soon:
+            pos_pct = vol_max_pct * 0.5
+            print(f"[paper] {ticker}: earnings in {dte}d → size halved (overnight gap risk)")
+
+        max_invest = book["capital"] * pos_pct
         qty = int(max_invest // entry)
         if qty < 1:
             continue

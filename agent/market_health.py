@@ -164,6 +164,40 @@ def assess_market(session: str = "morning") -> dict:
         health["macro_tailwind"] = True
     health["macro_risk_factor"] = macro_risk_factor
 
+    # ── Real FII/DII institutional flows (biggest Nifty driver) ─────────────────
+    # Published once daily by NSE; fetch fresh at preopen/preclose, reuse otherwise.
+    try:
+        from agent.fii_dii_fetcher import fetch_fii_dii, load_fii_dii
+        flows = fetch_fii_dii() if session in ("preopen", "preclose") else load_fii_dii()
+    except Exception as e:
+        print(f"[market] FII/DII fetch failed (non-fatal): {e}")
+        flows = {}
+    health["fii_dii"] = flows
+    fd_sig = flows.get("signal", "neutral")
+    if fd_sig == "strong_outflow":
+        warnings.append(f"Heavy FII/DII outflow (₹{flows.get('combined_net_cr',0):+,.0f} Cr) — institutions selling")
+        macro_risk_factor = min(macro_risk_factor, 0.75)
+    elif fd_sig == "outflow":
+        warnings.append(f"Net institutional outflow (₹{flows.get('combined_net_cr',0):+,.0f} Cr)")
+    elif fd_sig == "strong_inflow":
+        health["flow_tailwind"] = True
+    health["macro_risk_factor"] = macro_risk_factor
+
+    # ── Nifty Put-Call Ratio (contrarian option-sentiment gauge) ────────────────
+    try:
+        from agent.option_sentiment import fetch_pcr, load_pcr
+        pcr = fetch_pcr() if session in ("preopen", "preclose") else load_pcr()
+    except Exception as e:
+        print(f"[market] PCR fetch failed (non-fatal): {e}")
+        pcr = {}
+    health["pcr"] = pcr
+    pcr_val = pcr.get("pcr", 0)
+    # Extreme PCR is contrarian: very high = over-hedged (bullish), very low = complacent (bearish)
+    if pcr_val and pcr_val >= 1.5:
+        health["pcr_note"] = "PCR very high — excessive put hedging, often a contrarian bullish sign"
+    elif pcr_val and pcr_val <= 0.6 and pcr_val > 0:
+        warnings.append(f"PCR low ({pcr_val:.2f}) — market complacent, caution")
+
     # ── Overall mood ──────────────────────────────────────────────────────────
     if not warnings and n_trend in ("up", "strong_up") and vix_val < VIX_CAUTION and breadth >= 0.5 and macro_mood != "risk_off":
         health["market_mood"] = "bullish"

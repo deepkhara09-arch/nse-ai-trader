@@ -443,7 +443,8 @@ tr:hover td { background: var(--card2) }
   .logo-sub { display: none }
   .header-right .hdr-stat { display: none }
   .phase-strip { height: 26px; padding: 0 12px }
-  .container { padding: 8px 10px }
+  /* keep generous bottom padding so content clears the fixed bottom nav */
+  .container { padding: 8px 10px; padding-bottom: calc(110px + env(safe-area-inset-bottom)) }
   .section { margin-bottom: 16px; scroll-margin-top: 80px }
   .card { padding: 13px }
   .stat-val { font-size: 1.3rem }
@@ -465,7 +466,7 @@ tr:hover td { background: var(--card2) }
 @media (min-width: 481px) and (max-width: 767px) {
   .header-right .hdr-stat:not(:last-child) { display: none }
   .logo-sub { display: none }
-  .container { padding: 10px 12px }
+  .container { padding: 10px 12px; padding-bottom: calc(110px + env(safe-area-inset-bottom)) }
   .grid2 { grid-template-columns: 1fr }
   .grid3, .grid4 { grid-template-columns: 1fr 1fr }
   .heatmap-grid { grid-template-columns: repeat(auto-fill, minmax(66px, 1fr)) }

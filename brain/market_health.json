@@ -1,6 +1,6 @@
 {
   "date": "2026-06-23",
-  "session": "morning",
+  "session": "midday",
   "nifty": {
     "symbol": "^NSEI",
     "value": 24102.9,
@@ -27,11 +27,11 @@
   "sectors": {
     "IT": {
       "symbol": "ITBEES.NS",
-      "value": 30.41,
-      "day_change_pct": -3.83,
-      "trend_5d": "down",
+      "value": 30.69,
+      "day_change_pct": 0.92,
+      "trend_5d": "strong_down",
       "trend_20d": "strong_down",
-      "ath_pct_60d": -12.24
+      "ath_pct_60d": -11.43
     },
     "Pharma": {
       "symbol": "PHARMABEES.NS",
@@ -43,24 +43,26 @@
     },
     "Bank": {
       "symbol": "BANKBEES.NS",
-      "value": 597.32,
-      "day_change_pct": -0.08,
+      "value": 598.96,
+      "day_change_pct": 0.27,
       "trend_5d": "up",
       "trend_20d": "strong_up",
-      "ath_pct_60d": -0.12
+      "ath_pct_60d": -0.14
     },
     "Infra": {
       "symbol": "INFRABEES.NS",
-      "value": 981.32,
-      "day_change_pct": 0.18,
+      "value": 985.18,
+      "day_change_pct": 0.39,
       "trend_5d": "up",
-      "trend_20d": "sideways",
-      "ath_pct_60d": -1.97
+      "trend_20d": "up",
+      "ath_pct_60d": -1.59
     }
   },
   "market_mood": "neutral",
   "trade_allowed": true,
-  "warnings": [],
+  "warnings": [
+    "Nifty choppy intraday \u2014 wait for cleaner setups"
+  ],
   "leading_sectors": [
     "Pharma",
     "Bank",
@@ -72,14 +74,14 @@
     "IT"
   ],
   "broad_market_strength": true,
-  "intraday_regime": "mixed",
+  "intraday_regime": "choppy",
   "macro": {
     "date": "2026-06-23",
-    "session": "preopen",
-    "generated_at": "2026-06-23T03:05:41.262177",
-    "global_score": 0.129,
+    "session": "midday",
+    "generated_at": "2026-06-23T06:15:43.602721",
+    "global_score": 0.224,
     "india_score": 0.0,
-    "overall_score": 0.071,
+    "overall_score": 0.123,
     "mood": "neutral",
     "drivers": [
       "These 6 fast-growing stocks sit at the cutting edge of space and military technology",
@@ -105,23 +107,23 @@
         "chg_pct": -0.37
       },
       "nikkei": {
-        "last": 71711.67,
-        "chg_pct": -0.89
+        "last": 70187.76,
+        "chg_pct": -2.99
       },
       "crude": {
-        "last": 74.1,
-        "chg_pct": -0.96
+        "last": 74.82,
+        "chg_pct": -2.32
       },
       "usdinr": {
-        "last": 94.67,
-        "chg_pct": 0.36
+        "last": 94.71,
+        "chg_pct": 0.41
       },
       "gold": {
-        "last": 4171.7,
-        "chg_pct": -0.24
+        "last": 4181.9,
+        "chg_pct": -1.0
       }
     },
-    "summary": "Overall macro mood is neutral (+0.07). US Dow +0.3% overnight. Crude -1.0%. USD/INR +0.4%. Notable: Geopolitical conflict / war.",
+    "summary": "Overall macro mood is neutral (+0.12). US Dow +0.3% overnight. Crude -2.3%. USD/INR +0.4%. Notable: Geopolitical conflict / war.",
     "playbook": [
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially."
     ],

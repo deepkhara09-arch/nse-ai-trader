@@ -1,20 +1,12 @@
 name: NSE AI Trader
 
 on:
-  # ── 5 runs per weekday (IST = UTC+5:30) ──────────────────────────────────
-  # IMPORTANT: GitHub-hosted cron is BEST-EFFORT — it commonly fires 5–30 min
-  # late under load (occasionally skips). We cannot force exact-time execution
-  # on free Actions. Two mitigations:
-  #   1) Schedule each run a few minutes EARLY so typical delay lands it near
-  #      the intended IST time.
-  #   2) Session detection below is WINDOW-based (a delayed run still maps to the
-  #      right session instead of falling through to the wrong one).
-  schedule:
-    - cron: "0 3 * * 1-5"    # target ~08:35 IST — PRE-OPEN sentiment sweep (NEW)
-    - cron: "3 4 * * 1-5"    # target ~09:35 IST — market open (morning)
-    - cron: "13 6 * * 1-5"   # target ~11:45 IST — midday review (+ global sentiment)
-    - cron: "43 7 * * 1-5"   # target ~13:15 IST — early afternoon (post-lunch)
-    - cron: "43 9 * * 1-5"   # target ~15:15 IST — pre-close decisions
+  # ── Triggering: cron-job.org (external, punctual) is the SOLE scheduler ──────
+  # The GitHub-hosted `schedule:` cron was REMOVED: it fires late/unreliably AND
+  # was double-firing alongside cron-job.org, producing duplicate runs in the log.
+  # cron-job.org calls repository_dispatch (below) at exact IST times, on time,
+  # once per session. (If you ever want a GitHub fallback again, re-add a
+  # `schedule:` block — the per-day dedup guard makes overlaps harmless.)
 
   # Manual trigger (pick a session from the UI dropdown).
   # Default is "test" — a fully SAFE dry run: it only rebuilds the dashboard from
@@ -65,12 +57,12 @@ jobs:
       - name: Detect session from schedule
         id: session
         run: |
-          # Priority of session source:
-          #   1) repository_dispatch (external punctual trigger) -> exact session
-          #      from client_payload — no guessing, fires on time.
+          # Session source:
+          #   1) repository_dispatch (cron-job.org — the live trigger) -> exact
+          #      session from client_payload. This is the normal path.
           #   2) workflow_dispatch (manual UI) -> the chosen dropdown input.
-          #   3) schedule (GitHub cron fallback) -> WINDOW-based mapping so a late
-          #      fire still resolves to the right session.
+          #   3) else (only if a GitHub schedule: is ever re-added) -> WINDOW-based
+          #      time mapping so a late fire still resolves to the right session.
           if [ "${{ github.event_name }}" = "repository_dispatch" ]; then
             echo "name=${{ github.event.client_payload.session }}" >> $GITHUB_OUTPUT
           elif [ "${{ github.event_name }}" = "workflow_dispatch" ]; then

@@ -20,11 +20,21 @@ from datetime import date
 from agent.config import BRAIN_DIR
 
 PCR_FILE = "brain/option_sentiment.json"
-NSE_OPTION_CHAIN_URL = "https://www.nseindia.com/api/option-chain-indices?symbol=NIFTY"
+# NSE retired the old /api/option-chain-indices path (now 404) and the v3
+# replacement returns an empty body without a separate expiry lookup — i.e. there
+# is no stable, free, single-call PCR endpoint right now. Rather than ship a
+# permanently-failing fetch (404 noise every run), PCR is DISABLED until a stable
+# source is available. The wiring (market health + dashboard) already treats a
+# neutral PCR as "no signal", so disabling it changes nothing else.
+PCR_ENABLED = False
+NSE_OPTION_CHAIN_URL = "https://www.nseindia.com/api/option-chain-v3?type=Indices&symbol=NIFTY"
 
 
 def fetch_pcr() -> dict:
-    """Fetch Nifty PCR from the NSE option chain. Returns last-known on any error."""
+    """Fetch Nifty PCR from the NSE option chain. Returns last-known on any error.
+    Currently disabled (no stable free endpoint) — returns neutral cleanly."""
+    if not PCR_ENABLED:
+        return load_pcr()   # neutral; no network call, no log noise
     prev = load_pcr()
     try:
         from agent.data_fetcher import _NSE_SESSION, _warm_nse_session

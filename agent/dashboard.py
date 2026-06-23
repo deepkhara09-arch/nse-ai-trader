@@ -112,7 +112,9 @@ def _build_html(
 <title>Deep's NSE AI Tracker</title>
 <meta http-equiv="refresh" content="300">
 <meta name="description" content="AI-powered NSE stock tracker for Nifty 100">
-<meta name="theme-color" content="#0a0a0f">
+<meta name="theme-color" content="#0e0e0e" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#fafaf8" media="(prefers-color-scheme: light)">
+<meta name="color-scheme" content="dark light">
 <!-- PWA / iPhone home screen -->
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -160,25 +162,53 @@ def _build_html(
 
 def _css() -> str:
     return """
+/* ── Flowr-inspired design system (dark default, light via prefers-color-scheme) ── */
 :root {
-  --bg:     #060608;
-  --card:   #0d0d12;
-  --card2:  #13131a;
-  --card3:  #17171f;
-  --border: #1e1e28;
-  --border2:#252530;
-  --text:   #dddde8;
-  --muted:  #4a4a62;
-  --muted2: #6a6a85;
-  --bull:   #16a34a;
-  --bear:   #dc2626;
-  --yellow: #ca8a04;
-  --blue:   #4f46e5;
-  --cyan:   #0891b2;
-  --green:  #16a34a;
-  --red:    #dc2626;
-  --font:   -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
+  /* surfaces */
+  --bg:     #0e0e0e;
+  --card:   #181818;
+  --card2:  #222;
+  --card3:  #262626;
+  --border: #282828;
+  --border2:#333;
+  /* ink */
+  --text:   #efefef;
+  --muted:  #888;
+  --muted2: #aaa;
+  --ink3:   #444;
+  /* accents (Flowr palette) */
+  --green:  #3ecf8e;  --g-bg: #0a2318;
+  --red:    #e07070;  --r-bg: #280e0e;
+  --amber:  #e6a93a;  --a-bg: #2a1e00;
+  --bull:   #3ecf8e;
+  --bear:   #e07070;
+  --yellow: #e6a93a;
+  --blue:   #7eb3ff;
+  --cyan:   #3ecf8e;
+  --font:   -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --mono:   'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg:     #fafaf8;
+    --card:   #f2f2ef;
+    --card2:  #e8e8e4;
+    --card3:  #e8e8e4;
+    --border: #e4e4e0;
+    --border2:#d8d8d2;
+    --text:   #111;
+    --muted:  #777;
+    --muted2: #555;
+    --ink3:   #bbb;
+    --green:  #1a6b42;  --g-bg: #edf6f1;
+    --red:    #c0392b;  --r-bg: #fdf0ef;
+    --amber:  #c8860a;  --a-bg: #fdf4e3;
+    --bull:   #1a6b42;
+    --bear:   #c0392b;
+    --yellow: #c8860a;
+    --blue:   #2563eb;
+    --cyan:   #1a6b42;
+  }
 }
 *,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0 }
 html { scroll-behavior: smooth; -webkit-tap-highlight-color: transparent }
@@ -186,50 +216,51 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: var(--font);
-  font-size: 13.5px;
-  line-height: 1.55;
+  font-size: 14px;
+  line-height: 1.5;
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
 }
 a { color: inherit; text-decoration: none }
 h2 {
-  font-size: .88rem;
-  font-weight: 600;
+  font-size: 1rem;
+  font-weight: 500;
   color: var(--text);
   margin-bottom: 12px;
   display: flex;
-  align-items: center;
+  align-items: baseline;
   gap: 8px;
-  letter-spacing: -.01em;
+  letter-spacing: -.03em;
+  flex-wrap: wrap;
 }
-h2 span { font-size: .68rem; color: var(--muted); font-weight: 400 }
-h3 { font-size: .82rem; font-weight: 600 }
+h2 span { font-size: .68rem; color: var(--muted); font-weight: 400; letter-spacing: 0 }
+h3 { font-size: .85rem; font-weight: 500; letter-spacing: -.02em }
 
-/* ── Header ── */
+/* ── Header (Flowr: clean, hairline, system font) ── */
 .header {
-  background: rgba(6,6,8,.96);
-  border-bottom: 1px solid var(--border);
+  background: color-mix(in srgb, var(--bg) 92%, transparent);
+  border-bottom: 0.5px solid var(--border);
   padding: 0 20px;
-  height: 50px;
+  height: 54px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: sticky;
   top: 0;
   z-index: 100;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 .logo { display: flex; align-items: center; gap: 10px }
 .logo-icon {
   width: 28px; height: 28px;
-  background: linear-gradient(135deg, #4f46e5 0%, #0891b2 100%);
-  border-radius: 7px;
+  background: var(--green);
+  border-radius: 8px;
   display: flex; align-items: center; justify-content: center;
-  font-size: .75rem; font-weight: 800; color: #fff;
+  font-size: .75rem; font-weight: 700; color: var(--bg);
   flex-shrink: 0;
 }
-.logo-text { font-size: .95rem; font-weight: 700; letter-spacing: -.02em }
+.logo-text { font-size: 1rem; font-weight: 600; letter-spacing: -.03em }
 .logo-sub { font-size: .6rem; color: var(--muted); margin-top: -1px }
 .header-right { display: flex; align-items: center; gap: 14px }
 .hdr-stat { display: flex; flex-direction: column; align-items: flex-end }
@@ -270,53 +301,51 @@ h3 { font-size: .82rem; font-weight: 600 }
 .grid3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px }
 .grid4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px }
 
-/* ── Cards ── */
+/* ── Cards (Flowr: soft surface, hairline border, gentle radius) ── */
 .card {
   background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 14px;
+  border: 0.5px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
 }
-.card:hover { border-color: var(--border2) }
 .stat-card {
   background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 12px 14px;
+  border: 0.5px solid var(--border);
+  border-radius: 12px;
+  padding: 14px 16px;
 }
-.stat-card:hover { border-color: var(--border2) }
-.stat-val { font-size: 1.35rem; font-weight: 700; line-height: 1.15; margin-bottom: 2px; font-variant-numeric: tabular-nums }
-.stat-label { font-size: .62rem; color: var(--muted); font-weight: 500; text-transform: uppercase; letter-spacing: .06em }
+.stat-val { font-size: 1.6rem; font-weight: 400; line-height: 1.1; margin-bottom: 3px; letter-spacing: -.04em; font-variant-numeric: tabular-nums }
+.stat-label { font-size: .62rem; color: var(--muted); font-weight: 500; text-transform: uppercase; letter-spacing: .07em }
 
-/* ── Badges ── */
+/* ── Badges (Flowr: 99px pills with soft accent backgrounds) ── */
 .badge {
-  display: inline-block; padding: 1px 7px; border-radius: 20px;
+  display: inline-block; padding: 2px 9px; border-radius: 99px;
   font-size: .63rem; font-weight: 600; white-space: nowrap; letter-spacing: .01em;
 }
-.badge-green  { background: #16a34a14; color: #4ade80; border: 1px solid #16a34a30 }
-.badge-red    { background: #dc262614; color: #f87171; border: 1px solid #dc262630 }
-.badge-yellow { background: #ca8a0414; color: #fbbf24; border: 1px solid #ca8a0430 }
-.badge-blue   { background: #4f46e514; color: #818cf8; border: 1px solid #4f46e530 }
-.badge-cyan   { background: #0891b214; color: #22d3ee; border: 1px solid #0891b230 }
-.badge-orange { background: #ea580c14; color: #fb923c; border: 1px solid #ea580c30 }
-.badge-gray   { background: #4a4a6214; color: #9ca3af; border: 1px solid #4a4a6240 }
+.badge-green  { background: var(--g-bg); color: var(--green) }
+.badge-red    { background: var(--r-bg); color: var(--red) }
+.badge-yellow { background: var(--a-bg); color: var(--amber) }
+.badge-blue   { background: var(--card2); color: var(--blue) }
+.badge-cyan   { background: var(--g-bg); color: var(--green) }
+.badge-orange { background: var(--a-bg); color: var(--amber) }
+.badge-gray   { background: var(--card2); color: var(--muted) }
 .pill {
-  display: inline-flex; align-items: center; padding: 1px 6px; border-radius: 3px;
+  display: inline-flex; align-items: center; padding: 2px 8px; border-radius: 99px;
   font-size: .63rem; font-weight: 600; white-space: nowrap;
 }
-.pill-green  { background: #16a34a12; color: #4ade80; border: 1px solid #16a34a25 }
-.pill-red    { background: #dc262612; color: #f87171; border: 1px solid #dc262625 }
-.pill-yellow { background: #ca8a0412; color: #fbbf24; border: 1px solid #ca8a0425 }
-.pill-blue   { background: #4f46e512; color: #818cf8; border: 1px solid #4f46e525 }
-.pill-cyan   { background: #0891b212; color: #22d3ee; border: 1px solid #0891b225 }
-.pill-gray   { background: #4a4a6212; color: #9ca3af; border: 1px solid #4a4a6230 }
+.pill-green  { background: var(--g-bg); color: var(--green) }
+.pill-red    { background: var(--r-bg); color: var(--red) }
+.pill-yellow { background: var(--a-bg); color: var(--amber) }
+.pill-blue   { background: var(--card2); color: var(--blue) }
+.pill-cyan   { background: var(--g-bg); color: var(--green) }
+.pill-gray   { background: var(--card2); color: var(--muted) }
 
 /* ── Colors ── */
-.green  { color: #4ade80 }
-.red    { color: #f87171 }
-.yellow { color: #fbbf24 }
-.blue   { color: #818cf8 }
-.cyan   { color: #22d3ee }
+.green  { color: var(--green) }
+.red    { color: var(--red) }
+.yellow { color: var(--amber) }
+.blue   { color: var(--blue) }
+.cyan   { color: var(--green) }
 .muted  { color: var(--muted) }
 .muted2 { color: var(--muted2) }
 
@@ -324,58 +353,58 @@ h3 { font-size: .82rem; font-weight: 600 }
 table { width: 100%; border-collapse: collapse }
 th {
   color: var(--muted); font-size: .62rem; font-weight: 500;
-  text-transform: uppercase; letter-spacing: .06em;
-  padding: 7px 10px; border-bottom: 1px solid var(--border); text-align: left; white-space: nowrap;
+  text-transform: uppercase; letter-spacing: .07em;
+  padding: 8px 10px; border-bottom: 0.5px solid var(--border); text-align: left; white-space: nowrap;
 }
-td { padding: 7px 10px; border-bottom: 1px solid #12121a; font-size: .77rem; vertical-align: middle }
+td { padding: 9px 10px; border-bottom: 0.5px solid var(--border); font-size: .8rem; vertical-align: middle }
 tr:last-child td { border: none }
-tr:hover td { background: #0f0f16 }
+tr:hover td { background: var(--card2) }
 .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch }
 
-/* ── Progress ── */
-.progress { height: 3px; border-radius: 2px; background: var(--border); overflow: hidden }
-.progress-fill { height: 100%; border-radius: 2px; transition: width .4s }
+/* ── Progress (Flowr: 2px hairline bar) ── */
+.progress { height: 2px; border-radius: 99px; background: var(--border); overflow: hidden }
+.progress-fill { height: 100%; border-radius: 99px; transition: width .4s }
 
 /* ── Market bar ── */
 .market-bar {
   background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 9px 14px;
+  border: 0.5px solid var(--border);
+  border-radius: 12px;
+  padding: 12px 16px;
   margin-bottom: 14px;
-  display: flex; flex-wrap: wrap; gap: 16px; align-items: center;
+  display: flex; flex-wrap: wrap; gap: 18px; align-items: center;
 }
 .mkt-item { display: flex; flex-direction: column; gap: 0 }
-.mkt-val { font-size: .9rem; font-weight: 700; font-variant-numeric: tabular-nums }
-.mkt-lbl { font-size: .58rem; color: var(--muted); text-transform: uppercase; letter-spacing: .06em }
+.mkt-val { font-size: .95rem; font-weight: 500; letter-spacing: -.02em; font-variant-numeric: tabular-nums }
+.mkt-lbl { font-size: .58rem; color: var(--muted); text-transform: uppercase; letter-spacing: .07em }
 
 /* ── Info rows ── */
 .irow {
   display: flex; justify-content: space-between; align-items: center;
-  padding: 4px 0; border-bottom: 1px solid #12121a; font-size: .77rem;
+  padding: 6px 0; border-bottom: 0.5px solid var(--border); font-size: .8rem;
 }
 .irow:last-child { border: none }
 .fund-row {
   display: flex; justify-content: space-between;
-  padding: 3px 0; border-bottom: 1px solid #14141c; font-size: .71rem;
+  padding: 5px 0; border-bottom: 0.5px solid var(--border); font-size: .73rem;
 }
 .fund-row:last-child { border: none }
 
-/* ── Nav ── */
+/* ── Nav (Flowr pill tabs) ── */
 .nav {
-  display: flex; gap: 2px; margin-bottom: 16px;
-  padding-bottom: 10px; border-bottom: 1px solid var(--border);
+  display: flex; gap: 4px; margin-bottom: 16px;
+  padding-bottom: 10px; border-bottom: 0.5px solid var(--border);
   overflow-x: auto; white-space: nowrap;
   -ms-overflow-style: none; scrollbar-width: none;
 }
 .nav::-webkit-scrollbar { display: none }
 .nav a {
-  color: var(--muted); padding: 4px 10px; border-radius: 5px;
-  font-size: .7rem; border: 1px solid transparent;
-  min-height: 30px; display: inline-flex; align-items: center;
+  color: var(--muted); padding: 6px 12px; border-radius: 99px;
+  font-size: .72rem; border: 0.5px solid transparent;
+  min-height: 32px; display: inline-flex; align-items: center;
   transition: color .12s, border-color .12s, background .12s;
 }
-.nav a:hover { color: var(--text); border-color: var(--border); background: var(--card2) }
+.nav a:hover { color: var(--text); background: var(--card2) }
 
 /* ── Heatmap ── */
 .heatmap-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(74px, 1fr)); gap: 4px }
@@ -520,16 +549,16 @@ tr:hover td { background: #0f0f16 }
   .phase-strip { height: 26px; padding: 0 12px }
   .container { padding: 8px 10px }
   .section { margin-bottom: 16px; scroll-margin-top: 80px }
-  .card { padding: 10px }
-  .stat-val { font-size: 1.05rem }
+  .card { padding: 13px }
+  .stat-val { font-size: 1.3rem }
   .stat-label { font-size: .58rem }
   .heatmap-grid { grid-template-columns: repeat(auto-fill, minmax(62px, 1fr)); gap: 3px }
   .hmap-cell { padding: 5px 3px }
-  .rec-card { padding: 11px }
+  .rec-card { padding: 13px }
   .rec-grid { grid-template-columns: 1fr 1fr }
   .rec-name { font-size: .85rem }
-  td, th { padding: 5px 6px; font-size: .72rem }
-  .nav a { padding: 3px 8px; font-size: .65rem }
+  td, th { padding: 6px 7px; font-size: .73rem }
+  .nav a { padding: 6px 11px; font-size: .68rem; min-height: 34px }
   .grid2, .grid3, .grid4 { grid-template-columns: 1fr }
   h2 { font-size: .82rem }
   .market-bar { gap: 10px; padding: 7px 10px }
@@ -1225,7 +1254,7 @@ def _section_sectors(sector_scores: dict) -> str:
         lbl  = "Bullish" if m > 0.15 else "Bearish" if m < -0.15 else "Neutral"
         return (
             f'<div style="display:flex;align-items:center;gap:8px">'
-            f'<div style="flex:1;height:5px;background:#23232e;border-radius:3px">'
+            f'<div style="flex:1;height:5px;background:var(--card2);border-radius:3px">'
             f'<div style="width:{pct}%;height:5px;background:{col};border-radius:3px"></div>'
             f'</div>'
             f'<span style="font-size:.68rem;color:{col};min-width:48px">{lbl}</span>'
@@ -1320,7 +1349,7 @@ def _section_rankings(ranked: list) -> str:
         pct = round(min(100, max(0, val * 100)))
         return (
             f'<div style="display:flex;align-items:center;gap:6px">'
-            f'<div style="flex:1;height:5px;background:#23232e;border-radius:3px">'
+            f'<div style="flex:1;height:5px;background:var(--card2);border-radius:3px">'
             f'<div style="width:{pct}%;height:5px;background:{color};border-radius:3px"></div>'
             f'</div>'
             f'<span style="font-size:.7rem;color:var(--muted);min-width:32px">{pct}%</span>'
@@ -1369,7 +1398,7 @@ def _section_rankings(ranked: list) -> str:
   <div style="overflow-x:auto">
   <table style="width:100%;border-collapse:collapse;font-size:.8rem">
     <thead>
-      <tr style="color:var(--muted);font-size:.72rem;border-bottom:1px solid #23232e">
+      <tr style="color:var(--muted);font-size:.72rem;border-bottom:1px solid var(--card2)">
         <th style="padding:6px 8px;text-align:left">Rank</th>
         <th style="padding:6px 8px;text-align:left">Stock</th>
         <th style="padding:6px 8px;text-align:left">Trend</th>
@@ -1622,7 +1651,7 @@ def _section_recommendations(recs) -> str:
   {'<div class="timing-row"><span class="timing-icon">🕐</span><div><div class="timing-label">When to Enter</div><div class="timing-val">' + entry_window + '</div></div></div>' if entry_window else ""}
   {'<div class="timing-row"><span class="timing-icon">🎯</span><div><div class="timing-label">Target Timeframe</div><div class="timing-val">' + tgt_timeframe + '</div></div></div>' if tgt_timeframe else ""}
   {'<div class="timing-row"><span class="timing-icon">🚪</span><div><div class="timing-label">Exit / Monitoring</div><div class="timing-val">' + exit_window + '</div></div></div>' if exit_window else ""}
-  {'<div style="margin-top:6px;padding:5px 8px;border-radius:4px;background:#0f0f16;font-size:.67rem;font-weight:600;color:' + ('#fb923c' if is_intraday else '#9ca3af') + '">' + action_urgency + '</div>' if action_urgency else ""}
+  {'<div style="margin-top:6px;padding:5px 8px;border-radius:4px;background:var(--card2);font-size:.67rem;font-weight:600;color:' + ('#fb923c' if is_intraday else '#9ca3af') + '">' + action_urgency + '</div>' if action_urgency else ""}
 </div>"""
 
         cards += f"""<div class="rec-card {cls}">
@@ -1663,17 +1692,17 @@ def _section_recommendations(recs) -> str:
         <span class="badge {conf_badge_cls}" style="font-size:.5rem;padding:1px 4px" title="{data_conf_note}">{data_conf}</span>
       </div>
       <div style="font-size:1rem;font-weight:700;color:{'#4ade80' if sp_pct>=55 else '#fbbf24'}">{sp_pct}%</div>
-      <div style="height:3px;background:#1a1a24;border-radius:2px;margin-top:4px"><div style="width:{sp_pct}%;height:3px;background:{'#4ade80' if sp_pct>=55 else '#fbbf24'};border-radius:2px"></div></div>
+      <div style="height:3px;background:var(--border);border-radius:2px;margin-top:4px"><div style="width:{sp_pct}%;height:3px;background:{'#4ade80' if sp_pct>=55 else '#fbbf24'};border-radius:2px"></div></div>
     </div>
     <div style="flex:1;min-width:110px;background:var(--card2);border-radius:6px;padding:7px 9px;border:1px solid var(--border)">
       <div style="font-size:.58rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:3px">Profit Edge</div>
       <div style="font-size:1rem;font-weight:700;color:{'#4ade80' if profit_prob>0 else '#f87171'}">{pp_pct}%</div>
-      <div style="height:3px;background:#1a1a24;border-radius:2px;margin-top:4px"><div style="width:{pp_pct}%;height:3px;background:{'#4ade80' if profit_prob>0 else '#f87171'};border-radius:2px"></div></div>
+      <div style="height:3px;background:var(--border);border-radius:2px;margin-top:4px"><div style="width:{pp_pct}%;height:3px;background:{'#4ade80' if profit_prob>0 else '#f87171'};border-radius:2px"></div></div>
     </div>
     <div style="flex:1;min-width:110px;background:var(--card2);border-radius:6px;padding:7px 9px;border:1px solid var(--border)">
       <div style="font-size:.58rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:3px">AI Score</div>
       <div style="font-size:1rem;font-weight:700;color:#22d3ee">{composite_sc:.0f}/100</div>
-      <div style="height:3px;background:#1a1a24;border-radius:2px;margin-top:4px"><div style="width:{min(100,composite_sc):.0f}%;height:3px;background:#22d3ee;border-radius:2px"></div></div>
+      <div style="height:3px;background:var(--border);border-radius:2px;margin-top:4px"><div style="width:{min(100,composite_sc):.0f}%;height:3px;background:#22d3ee;border-radius:2px"></div></div>
     </div>
   </div>
 

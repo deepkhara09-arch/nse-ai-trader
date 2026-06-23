@@ -136,20 +136,23 @@ h3 { font-size: .85rem; font-weight: 500; letter-spacing: -.02em }
 /* ── Bottom navigation (Flowr-style) ── */
 .bottom-nav {
   position: fixed; left: 0; right: 0; bottom: 0; z-index: 200;
-  display: flex; justify-content: space-around; align-items: stretch;
+  display: flex; justify-content: space-around; align-items: flex-start;
   background: color-mix(in srgb, var(--bg) 94%, transparent);
   backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
   border-top: 0.5px solid var(--border);
-  padding-bottom: env(safe-area-inset-bottom);
+  /* Lift the whole bar above the iPhone home indicator: a base gap PLUS the
+     device's safe-area inset, so icons never sit on/under the home bar. */
+  padding-top: 8px;
+  padding-bottom: calc(10px + env(safe-area-inset-bottom));
 }
 .nt {
-  flex: 1; display: flex; flex-direction: column; align-items: center; gap: 3px;
+  flex: 1; display: flex; flex-direction: column; align-items: center; gap: 4px;
   background: none; border: none; cursor: pointer;
-  color: var(--muted); padding: 9px 0 7px; min-height: 52px;
+  color: var(--muted); padding: 2px 0; min-height: 44px;
   font-family: inherit; font-size: .6rem; font-weight: 500; letter-spacing: .02em;
   transition: color .15s;
 }
-.nt svg { width: 21px; height: 21px }
+.nt svg { width: 22px; height: 22px }
 .nt-active { color: var(--green) }
 .nt:active { opacity: .6 }
 .logo-sub { font-size: .6rem; color: var(--muted); margin-top: -1px }
@@ -187,7 +190,7 @@ h3 { font-size: .85rem; font-weight: 500; letter-spacing: -.02em }
 
 /* ── Layout ── */
 .container { max-width: 1200px; margin: 0 auto; padding: 14px 16px;
-  padding-bottom: calc(70px + env(safe-area-inset-bottom)) }  /* clear the bottom nav */
+  padding-bottom: calc(90px + env(safe-area-inset-bottom)) }  /* clear the taller bottom nav */
 .section { margin-bottom: 24px; scroll-margin-top: 88px }
 .grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 10px }
 .grid3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px }
@@ -487,7 +490,7 @@ tr:hover td { background: var(--card2) }
 <div class="header">
   <div class="logo">
     <div class="logo-icon">AI</div>
-    <div class="logo-text">NSE&nbsp;AI</div>
+    <div class="logo-text">Deep's&nbsp;NSE&nbsp;Tracker</div>
   </div>
   <div class="hdr-chips">
     <span class="badge badge-blue">Exploration</span>

@@ -73,8 +73,9 @@ def run():
             # read_only=True -> rebuild dashboard from existing data ONLY; no recs
             # regeneration, no report, no history extend, no file writes beyond the
             # dashboard + market_health snapshot. True zero-side-effect dry run.
+            # Log THIS run first so the dashboard we then build includes it.
+            _append_log(state, "test")
             _refresh_outputs(state, market_health, "test", read_only=True)
-            _append_log(state, "test")   # so the test run shows in the Run Log
             print(f"[test] Dashboard rebuilt from existing data. "
                   f"phase={state['phase']} day={state['day']} (UNCHANGED). No trades, no day advance.")
         except Exception as e:
@@ -115,6 +116,7 @@ def run():
             state = load_state()
             state["session"] = session
             market_health = assess_market(session)
+            _append_log(state, session)   # log first so the dashboard includes this run
             _refresh_outputs(state, market_health, session)
         except Exception as e:
             print(f"[run] weekend dashboard refresh failed (non-fatal): {e}")
@@ -161,8 +163,8 @@ def run():
                  f"({macro.get('overall_score',0):+.2f})")
         state = add_brain_note(state, note)
         save_state(state)
+        _append_log(state, session)   # log first so the dashboard includes this run
         _refresh_outputs(state, market_health, session)
-        _append_log(state, session)
         finish_run(session)
         print(f"\n[done] pre-open sweep complete. {note}\n")
         return
@@ -181,9 +183,12 @@ def run():
         # Reload the last good state from disk so outputs reflect a consistent view
         state = load_state()
 
-    # ── Always: generate recommendations + rebuild dashboard ──────────────────
-    _refresh_outputs(state, market_health, session)
+    # ── Always: write this run's log entry, THEN rebuild outputs ──────────────
+    # Order matters: _append_log must run BEFORE _refresh_outputs so the dashboard
+    # it builds includes the CURRENT run in the Run Log (otherwise the dashboard is
+    # always one run behind — e.g. morning's run wouldn't appear until the next run).
     _append_log(state, session)
+    _refresh_outputs(state, market_health, session)
     finish_run(session)
     print(f"\n[done] {session} complete. Phase={state['phase']} Day={state['day']}\n")
 

@@ -122,7 +122,7 @@ def save_changelog(changes: List[dict]) -> None:
     if not changes:
         return
     existing = load_changelog()
-    existing = (existing + changes)[-200:]   # keep last 200 events
+    existing = (existing + changes)[-600:]   # rec-change history (display feed)
     os.makedirs("brain", exist_ok=True)
     with open(CHANGELOG_FILE, "w") as f:
         json.dump(existing, f, indent=2)

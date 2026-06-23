@@ -756,7 +756,7 @@ def _append_log(state: dict, session: str) -> None:
             except Exception:
                 log = []
     log.append(entry)
-    log = log[-270:]
+    log = log[-750:]   # ~3 years of run-activity history (display feed, not learning)
     with open(DAILY_LOG_FILE, "w") as f:
         json.dump(log, f, indent=2)
 

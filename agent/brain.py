@@ -48,7 +48,7 @@ def load_decisions() -> List:
 
 def save_decisions(decisions: List) -> None:
     os.makedirs(BRAIN_DIR, exist_ok=True)
-    decisions = decisions[-200:]   # keep last 200
+    decisions = decisions[-1000:]   # research/audit trail (display only, not learning)
     with open(BRAIN_DECISIONS_FILE, "w") as f:
         json.dump(decisions, f, indent=2)
 

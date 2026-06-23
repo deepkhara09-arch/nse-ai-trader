@@ -145,9 +145,13 @@ def extend_foundation(stock_data: Dict) -> Dict:
         series = ctx.get("price_2y_weekly", [])
         if not series:
             continue
-        # Append today's price as the newest point only once per day
+        # Append today's price as the newest point only once per day.
+        # Cap matches the weekly series length (~110); the WEEKLY refresh
+        # (refresh_universe_history) rebuilds the true 2-year history every week,
+        # so this daily-extend only keeps the series current between rebuilds and
+        # must not grow past the weekly length (avoids mixed-cadence drift).
         if ctx.get("last_extended") != today:
-            series = (series + [round(float(close_today), 2)])[-160:]
+            series = (series + [round(float(close_today), 2)])[-110:]
             ctx["price_2y_weekly"] = series
             ctx["last_extended"]   = today
             # Recompute the cheap 52w-position field from the extended series

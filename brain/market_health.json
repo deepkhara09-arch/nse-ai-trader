@@ -1,6 +1,6 @@
 {
   "date": "2026-06-24",
-  "session": "preopen",
+  "session": "morning",
   "nifty": {
     "symbol": "^NSEI",
     "value": 23824.1,
@@ -62,7 +62,7 @@
   "trade_allowed": true,
   "warnings": [
     "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
-    "Nifty in intraday downtrend \u2014 avoid new longs this session"
+    "Nifty choppy intraday \u2014 wait for cleaner setups"
   ],
   "leading_sectors": [
     "Pharma",
@@ -75,7 +75,7 @@
     "IT"
   ],
   "broad_market_strength": true,
-  "intraday_regime": "trending_down",
+  "intraday_regime": "choppy",
   "macro": {
     "date": "2026-06-24",
     "session": "preopen",

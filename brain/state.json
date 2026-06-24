@@ -1,13 +1,13 @@
 {
   "phase": "exploration",
   "day": 3,
-  "session": "morning",
+  "session": "preopen",
   "start_date": "2026-06-22",
   "phase_start_date": "2026-06-22",
   "last_run_date": "2026-06-23",
   "last_counted_date": "2026-06-23",
   "cohort_last_tick_date": "2026-06-23",
-  "last_updated": "2026-06-23T10:50:30.515810",
+  "last_updated": "2026-06-24T03:05:41.395626",
   "focus_stocks": [],
   "dropped_stocks": [],
   "paper_trade_stats": {
@@ -21,10 +21,11 @@
     "expectancy": 0.0
   },
   "brain_notes": [
-    "[2026-06-23] Pre-open macro: neutral (+0.07)"
+    "[2026-06-23] Pre-open macro: neutral (+0.07)",
+    "[2026-06-24] Pre-open macro: neutral (+0.00)"
   ],
   "alert_sent": false,
-  "schema_version": 8,
+  "schema_version": 9,
   "background_batches": [
     {
       "id": 1,
@@ -41,5 +42,8 @@
       "candidates": []
     }
   ],
-  "background_cohort": null
+  "background_cohort": null,
+  "sessions_done": {
+    "preopen": "2026-06-24"
+  }
 }

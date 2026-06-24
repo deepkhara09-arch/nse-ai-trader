@@ -1,6 +1,6 @@
 {
   "date": "2026-06-24",
-  "session": "midday",
+  "session": "afternoon",
   "nifty": {
     "symbol": "^NSEI",
     "value": 23824.1,
@@ -58,7 +58,7 @@
       "ath_pct_60d": -2.48
     }
   },
-  "market_mood": "neutral",
+  "market_mood": "bullish",
   "trade_allowed": true,
   "warnings": [
     "Nifty in downtrend (down) \u2014 only high-confidence BUY signals"
@@ -71,7 +71,7 @@
   "lagging_sectors": [
     "IT"
   ],
-  "intraday_regime": "mixed",
+  "intraday_regime": "trending_up",
   "macro": {
     "date": "2026-06-24",
     "session": "midday",

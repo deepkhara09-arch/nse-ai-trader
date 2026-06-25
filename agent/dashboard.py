@@ -9,7 +9,15 @@ import os
 from datetime import datetime
 from typing import Dict, List
 
-from agent.config import DASHBOARD_FILE, INITIAL_CAPITAL, WIN_RATE_THRESHOLD
+from agent.config import (
+    DASHBOARD_FILE, INITIAL_CAPITAL, WIN_RATE_THRESHOLD,
+    EXPLORATION_DAYS, ANALYSIS_DAYS, FOCUS_STOCK_COUNT, MIN_TRADES_FOR_SIGNAL,
+)
+
+# Real phase boundaries derived from config — the dashboard must never display a
+# day-range or count that contradicts the actual logic. (Honesty guarantee.)
+_ANALYSIS_END = EXPLORATION_DAYS + ANALYSIS_DAYS          # last analysis day
+_PAPER_START  = _ANALYSIS_END + 1                         # first paper-trading day
 from agent.paper_trader import compute_stats
 
 
@@ -860,9 +868,9 @@ def _section_status(state, phase, day, focus, stock_data=None) -> str:
         return "done" if idx < current_idx else ""
 
     phase_descs = {
-        "exploration":   "Days 1-5",
-        "analysis":      "Days 6-15",
-        "paper_trading": "Days 16+",
+        "exploration":   f"Days 1-{EXPLORATION_DAYS}",
+        "analysis":      f"Days {EXPLORATION_DAYS+1}-{_ANALYSIS_END}",
+        "paper_trading": f"Days {_PAPER_START}+",
         "alerting":      "Live",
     }
     phase_names_map = {
@@ -886,19 +894,19 @@ def _section_status(state, phase, day, focus, stock_data=None) -> str:
 
     if phase == "exploration":
         stocks_fetched = len(stock_data)
-        days_left = max(0, 5 - day)
+        days_left = max(0, EXPLORATION_DAYS - day)
         next_ms = (
             f"Focus stock selection in ~{days_left} day(s)" if days_left > 0
             else "Focus stock selection due at next preclose"
         )
         activity_lines = [
-            f"Watching all {stocks_fetched} stocks 3x per day — building price, volume, and indicator baselines",
-            "Detecting candlestick patterns on every bar: hammer, engulfing, morning star, doji, and 25+ more",
-            "Scoring each stock on: momentum trend, RSI zone, MACD direction, volume strength",
-            f"Next milestone: {next_ms} — top 12 by momentum score selected for deep analysis",
+            f"Watching all {stocks_fetched} stocks every session — building price, volume, and indicator baselines",
+            "Detecting candlestick patterns on every bar: hammer, engulfing, morning star, doji, and more",
+            "Scoring each stock on: momentum trend, RSI zone, MACD direction, ADX trend-strength, volume",
+            f"Next milestone: {next_ms} — top {FOCUS_STOCK_COUNT} by momentum score selected for deep analysis",
         ]
     elif phase == "analysis":
-        days_left = max(0, 15 - day)
+        days_left = max(0, _ANALYSIS_END - day)
         activity_lines = [
             f"Deep-analysing {len(focus)} focus stocks — running full pattern detection each session",
             "Building pattern reliability database — learning which patterns work on which stocks",
@@ -909,8 +917,8 @@ def _section_status(state, phase, day, focus, stock_data=None) -> str:
         activity_lines = [
             f"Paper trading {len(focus)} focus stocks with virtual capital",
             "Each session: opening new positions, updating stops, closing completed trades",
-            "4-layer scoring active: Technical (40) + Fundamental (30) + News (20) + Pattern (10)",
-            "Recommendations appear when any stock scores 65/100 with R:R 2:1 or better",
+            "Scoring: Technical + Fundamental + News + Pattern, with multi-timeframe & options-flow context",
+            "Recommendations appear when a stock scores 65/100 with R:R 2:1 or better",
         ]
     else:
         activity_lines = ["Agent initialising — check back after first run."]
@@ -923,8 +931,8 @@ def _section_status(state, phase, day, focus, stock_data=None) -> str:
     )
 
     next_milestone_map = {
-        "exploration":   f"Day {min(day+1, 5)}: Add more stocks to analysis",
-        "analysis":      f"Day {min(day+1, 15)}: Paper trading begins",
+        "exploration":   f"Day {min(day+1, EXPLORATION_DAYS)}: Continue building baselines",
+        "analysis":      f"Day {min(day+1, _ANALYSIS_END)}: Paper trading begins",
         "paper_trading": "Await 65+ score setup",
         "alerting":      "Live signals active",
     }
@@ -995,9 +1003,14 @@ def _section_heatmap(stock_data: dict) -> str:
 
 def _section_portfolio(stats, portfolio, pnl_total, pnl_pct, book) -> str:
     p_cls   = "green" if pnl_total >= 0 else "red"
-    wr_cls  = "green" if stats["win_rate"] >= WIN_RATE_THRESHOLD else "yellow"
-    exp_cls = "green" if stats["expectancy"] > 0 else "red"
+    # Honesty: a win-rate over ZERO trades is not 0% — it's "not measured yet".
+    # Showing 0.0% would look like a failed track record. Use "—" until trades exist.
+    has_trades = stats["total"] > 0
     wr_pct  = round(stats["win_rate"] * 100, 1)
+    wr_disp = f"{wr_pct:.1f}%" if has_trades else "—"
+    wr_cls  = ("green" if stats["win_rate"] >= WIN_RATE_THRESHOLD else "yellow") if has_trades else "muted"
+    exp_disp = f"&#8377;{stats['expectancy']:+,.0f}" if has_trades else "—"
+    exp_cls = ("green" if stats["expectancy"] > 0 else "red") if has_trades else "muted"
     prog_color = "var(--green)" if wr_pct >= WIN_RATE_THRESHOLD * 100 else "var(--yellow)"
 
     def sc(label, val, cls=""):
@@ -1024,7 +1037,7 @@ def _section_portfolio(stats, portfolio, pnl_total, pnl_pct, book) -> str:
   <div class="grid4" style="margin-bottom:13px">
     {sc("Portfolio Value",   f"&#8377;{portfolio:,.0f}", p_cls)}
     {sc("Total P&amp;L",    f"&#8377;{pnl_total:+,.0f} ({pnl_pct:+.1f}%)", p_cls)}
-    {sc("Win Rate",          f"{wr_pct:.1f}%", wr_cls)}
+    {sc("Win Rate",          wr_disp, wr_cls)}
     {sc("Total Trades",      f"{stats['total']} ({stats['wins']}W / {stats['losses']}L)")}
   </div>
   <div class="grid4" style="margin-bottom:13px">
@@ -1036,10 +1049,10 @@ def _section_portfolio(stats, portfolio, pnl_total, pnl_pct, book) -> str:
   <div style="margin-bottom:13px">
     <div style="display:flex;justify-content:space-between;font-size:.68rem;color:var(--muted);margin-bottom:3px">
       <span>Win rate toward {WIN_RATE_THRESHOLD*100:.0f}% target</span>
-      <span>{wr_pct:.1f}% / {WIN_RATE_THRESHOLD*100:.0f}%</span>
+      <span>{wr_disp} / {WIN_RATE_THRESHOLD*100:.0f}%{'' if has_trades else ' (no trades yet)'}</span>
     </div>
     <div class="progress">
-      <div class="progress-fill" style="width:{min(wr_pct/(WIN_RATE_THRESHOLD*100)*100, 100):.1f}%;background:{prog_color}"></div>
+      <div class="progress-fill" style="width:{(min(wr_pct/(WIN_RATE_THRESHOLD*100)*100, 100) if has_trades else 0):.1f}%;background:{prog_color}"></div>
     </div>
   </div>
   <div class="grid2">
@@ -1048,8 +1061,8 @@ def _section_portfolio(stats, portfolio, pnl_total, pnl_pct, book) -> str:
       <h3 style="margin-bottom:10px">Trade Stats</h3>
       <div class="irow"><span class="muted">Avg winning trade</span><span class="green">&#8377;{stats['avg_win']:+,.0f}</span></div>
       <div class="irow"><span class="muted">Avg losing trade</span><span class="red">&#8377;{stats['avg_loss']:+,.0f}</span></div>
-      <div class="irow"><span class="muted">Win rate</span><span class="{wr_cls}">{wr_pct:.1f}%</span></div>
-      <div class="irow"><span class="muted">Expectancy / trade</span><span class="{exp_cls}">&#8377;{stats['expectancy']:+,.0f}</span></div>
+      <div class="irow"><span class="muted">Win rate</span><span class="{wr_cls}">{wr_disp}</span></div>
+      <div class="irow"><span class="muted">Expectancy / trade</span><span class="{exp_cls}">{exp_disp}</span></div>
       <div class="irow"><span class="muted">Free capital</span><span>&#8377;{book.get('capital', INITIAL_CAPITAL):,.0f}</span></div>
       <div class="irow"><span class="muted">Open positions</span><span class="blue">{len(book.get('open_positions', []))}</span></div>
       <div class="irow"><span class="muted">Max drawdown</span><span class="{max_dd_cls}">{max_dd:.1f}%</span></div>
@@ -1554,15 +1567,15 @@ def _section_watchlist(focus, stock_data, news_data, patterns, fundamentals=None
 
 def _section_recommendations(recs) -> str:
     if not recs:
-        no_recs = """<div class="card" style="padding:20px;text-align:center">
+        no_recs = f"""<div class="card" style="padding:20px;text-align:center">
   <div style="font-size:.8rem;color:var(--muted);line-height:2">
     <div style="font-size:1.6rem;margin-bottom:8px">&#128300;</div>
     <div style="font-weight:700;color:var(--text);margin-bottom:6px">Agent is still learning</div>
     <div>No recommendations yet. The agent needs to:<br>
-    1. Complete 5-day exploration &#8594; select 12 focus stocks<br>
-    2. Complete 10-day deep analysis on focus stocks<br>
-    3. Find a setup scoring &#8805;65/100 across Technical + Fundamental + News + Pattern<br>
-    4. Confirm R:R &#8805; 2:1 with a clear stop loss and target<br>
+    1. Complete {EXPLORATION_DAYS}-day exploration &#8594; select {FOCUS_STOCK_COUNT} focus stocks<br>
+    2. Complete {ANALYSIS_DAYS}-day deep analysis on focus stocks<br>
+    3. Validate its strategy with {MIN_TRADES_FOR_SIGNAL}+ paper trades at a &#8805;{WIN_RATE_THRESHOLD*100:.0f}% win rate<br>
+    4. Find a setup scoring &#8805;65/100 with R:R &#8805; 2:1, a clear stop loss and target<br>
     <br>Check the Watchlist to see which stocks are being scored right now.</div>
   </div>
 </div>"""

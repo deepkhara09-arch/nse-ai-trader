@@ -135,6 +135,17 @@ def rank_focus_stocks(
         oi_bias = pcr_d.get("oi_bias")
         if oi_bias == "put_heavy_support":      regime_raw += 0.03
         elif oi_bias == "call_heavy_resistance":regime_raw -= 0.03
+
+        # Multi-timeframe alignment: a (long) setup whose higher-timeframe trend
+        # agrees is genuinely higher quality and should rank above one that fights
+        # it. Derived from the SAME history fields the brain's MTF gate uses, so
+        # ranking and the gate stay consistent (no contradictory signals).
+        htf_lt = d.get("hist_long_trend")
+        htf_6m = d.get("hist_ret_6m")
+        htf_up   = htf_lt in ("uptrend", "strong_uptrend")   or (htf_6m is not None and htf_6m > 3)
+        htf_down = htf_lt in ("downtrend", "strong_downtrend") or (htf_6m is not None and htf_6m < -3)
+        if htf_up:     regime_raw += 0.05   # bigger trend supports a long
+        elif htf_down: regime_raw -= 0.05   # bigger trend fights a long
         regime_raw = max(0.0, min(1.0, regime_raw))
 
         # ── Bayesian success probability ──────────────────────────────────────

@@ -766,8 +766,16 @@ def _append_log(state: dict, session: str) -> None:
                    "paper_trading": "Paper-trading", "alerting": "Live"}.get(state["phase"], state["phase"])
 
     # A brief human-readable summary of what this run actually did.
-    # "day N" = the Nth TRADING day of the current phase (weekends/holidays don't
+    # "day N" = the Nth TRADING day of the CURRENT phase (weekends/holidays don't
     # count), not a calendar day — wording kept explicit to avoid confusion.
+    # state['day'] is the GLOBAL trading-day counter, so subtract the days spent in
+    # earlier phases to get a phase-relative number (else "Analysis trading-day 8").
+    from agent.config import EXPLORATION_DAYS, ANALYSIS_DAYS
+    _phase_offset = {"exploration": 0,
+                     "analysis": EXPLORATION_DAYS,
+                     "paper_trading": EXPLORATION_DAYS + ANALYSIS_DAYS,
+                     "alerting": EXPLORATION_DAYS + ANALYSIS_DAYS}.get(state["phase"], 0)
+    phase_day = max(1, state["day"] - _phase_offset)
     recs = load_recommendations()
     mood = load_market_health().get("market_mood", "?")
     if session == "preopen":
@@ -775,7 +783,7 @@ def _append_log(state: dict, session: str) -> None:
     elif session == "test":
         summary = "Test dry-run — dashboard rebuilt, no trading, day unchanged."
     else:
-        summary = (f"{session.title()} run · {phase_label} trading-day {state['day']} · "
+        summary = (f"{session.title()} run · {phase_label} trading-day {phase_day} · "
                    f"{open_n} open · {stats['total']} closed ({stats['win_rate']*100:.0f}% WR) · "
                    f"{len(recs)} live rec(s).")
 

@@ -1,6 +1,10 @@
 """
 News fetcher — free RSS feeds + rule-based sentiment scoring.
-No API key. No paid service. Runs 3x daily.
+No API key. No paid service. Runs once daily (preclose).
+
+Two layers: (1) market-wide RSS feeds (Moneycontrol/ET/BS/Mint) matched to each
+stock by company name; (2) per-stock Google News RSS as a fallback when a stock
+isn't mentioned in the market feeds — closes the coverage gap for smaller names.
 """
 
 import json
@@ -131,6 +135,14 @@ _NAMES: Dict[str, List[str]] = {
 }
 
 
+# Google News RSS — free, no key. A per-stock query closes the coverage gap where
+# a stock simply isn't mentioned in the 4 market-wide feeds on a given day.
+_GOOGLE_NEWS = "https://news.google.com/rss/search?q={q}+stock+when:7d&hl=en-IN&gl=IN&ceid=IN:en"
+# Cap how many stocks we hit per run so we never hammer Google (news runs once/day
+# at preclose; after exploration it's only the focus stocks anyway).
+_GOOGLE_NEWS_MAX = 30
+
+
 def fetch_news(tickers: List[str]) -> Dict:
     articles = []
     for url in NEWS_FEEDS:
@@ -140,9 +152,20 @@ def fetch_news(tickers: List[str]) -> Dict:
     print(f"[news] {len(articles)} articles fetched from {len(NEWS_FEEDS)} feeds")
 
     result = {}
-    for ticker in tickers:
+    for i, ticker in enumerate(tickers):
         frags = _NAMES.get(ticker, [ticker.replace(".NS", "").lower()])
         matched = [a for a in articles if any(f in a["text"] for f in frags)]
+
+        # If the market-wide feeds gave little/nothing for this stock, ask Google
+        # News directly for it. Only for a bounded number of stocks per run.
+        if len(matched) < 2 and i < _GOOGLE_NEWS_MAX:
+            g = _fetch_google_news(ticker, frags)
+            if g:
+                # de-dupe by title against what we already matched
+                seen = {a["title"] for a in matched}
+                matched.extend(a for a in g if a["title"] not in seen)
+            time.sleep(0.5)   # be polite to Google
+
         score = _sentiment(matched)
         result[ticker] = {
             "date":       ist_today().isoformat(),
@@ -151,6 +174,18 @@ def fetch_news(tickers: List[str]) -> Dict:
             "headlines":  [a["title"] for a in matched[:6]],
         }
     return result
+
+
+def _fetch_google_news(ticker: str, frags: List[str]) -> List[dict]:
+    """Per-stock Google News RSS. Returns [] on any failure (never raises)."""
+    name = frags[0].replace(" ", "+") if frags else ticker.replace(".NS", "")
+    url = _GOOGLE_NEWS.format(q=name)
+    try:
+        items = _fetch_rss(url)
+    except Exception:
+        return []
+    # Keep only items that actually mention the company (Google search can be loose)
+    return [a for a in items if any(f in a["text"] for f in frags)]
 
 
 def _fetch_rss(url: str) -> List[dict]:

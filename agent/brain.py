@@ -229,17 +229,23 @@ def detect_all_patterns(d: dict, prev: dict = None, prev2: dict = None) -> List[
             patterns.append("pivot_s1_breakdown")
 
     # ── ADX — trend strength (avoids false signals in sideways markets) ──────────
-    # ADX > 25 = trending, < 20 = ranging. We proxy from price volatility.
-    adx_proxy = d.get("adx", None)
-    if adx_proxy is None:
-        # Use 10-day volatility as proxy: high vol + directional = trending
+    # ADX > 25 = trending, < 20 = ranging. Real ADX is now computed in
+    # data_fetcher; we fall back to a volatility proxy only if it's missing.
+    # When real +DI/-DI are present we use them for direction (more accurate than
+    # the candle colour), else fall back to the candle.
+    adx_val   = d.get("adx", None)
+    plus_di   = d.get("plus_di")
+    minus_di  = d.get("minus_di")
+    if adx_val is None:
         vol_10d = d.get("volatility_10d", 1.5)
-        adx_proxy = min(50, vol_10d * 15)   # rough proxy
-    if adx_proxy > 25 and bullish_candle:
+        adx_val = min(50, vol_10d * 15)   # rough proxy when real ADX unavailable
+    up_dir   = (plus_di > minus_di) if (plus_di is not None and minus_di is not None) else bullish_candle
+    down_dir = (minus_di > plus_di) if (plus_di is not None and minus_di is not None) else bearish_candle
+    if adx_val > 25 and up_dir:
         patterns.append("adx_strong_trend_up")
-    elif adx_proxy > 25 and bearish_candle:
+    elif adx_val > 25 and down_dir:
         patterns.append("adx_strong_trend_down")
-    elif adx_proxy < 18:
+    elif adx_val < 18:
         patterns.append("adx_ranging_market")   # reduce conviction in all signals
 
     # ── Stochastic RSI (faster RSI-of-RSI — catches turns earlier) ───────────────

@@ -502,6 +502,23 @@ def _compute_indicators(df: pd.DataFrame) -> pd.DataFrame:
     df["atr"]     = tr.rolling(ATR_PERIOD).mean()
     df["atr_pct"] = df["atr"] / close * 100
 
+    # ── ADX (Average Directional Index) — trend STRENGTH, not direction ──────────
+    # Reuses the True Range above (Wilder's method). ADX answers a question none of
+    # the other indicators do: "is this a real trend or just chop?" High ADX (>25)
+    # = strong trend worth trading; low ADX (<20) = choppy/range-bound, where
+    # breakout signals are unreliable. Lets the brain stand down in chop.
+    up_move   = high.diff()
+    down_move = -low.diff()
+    plus_dm   = up_move.where((up_move > down_move) & (up_move > 0), 0.0)
+    minus_dm  = down_move.where((down_move > up_move) & (down_move > 0), 0.0)
+    atr_w     = tr.ewm(alpha=1 / ATR_PERIOD, adjust=False).mean()
+    plus_di   = 100 * plus_dm.ewm(alpha=1 / ATR_PERIOD, adjust=False).mean() / atr_w.replace(0, 1e-9)
+    minus_di  = 100 * minus_dm.ewm(alpha=1 / ATR_PERIOD, adjust=False).mean() / atr_w.replace(0, 1e-9)
+    dx        = 100 * (plus_di - minus_di).abs() / (plus_di + minus_di).replace(0, 1e-9)
+    df["adx"]      = dx.ewm(alpha=1 / ATR_PERIOD, adjust=False).mean()
+    df["plus_di"]  = plus_di
+    df["minus_di"] = minus_di
+
     df["vol_ma"]  = volume.rolling(VOLUME_MA).mean()
     df["vol_rel"] = volume / df["vol_ma"].replace(0, 1)
 
@@ -566,6 +583,11 @@ def _summarize_daily(df: pd.DataFrame, ticker: str) -> dict:
             "bb_pct":         f(l["bb_pct"]),
             "atr":            f(l["atr"]),
             "atr_pct":        f(l["atr_pct"]),
+            "adx":            f(l["adx"]),
+            "plus_di":        f(l["plus_di"]),
+            "minus_di":       f(l["minus_di"]),
+            "trend_strength": ("strong" if f(l["adx"]) >= 25 else
+                               "weak"   if f(l["adx"]) <  20 else "moderate"),
             "vol_rel":        f(l["vol_rel"]),
             "volatility_10d": f(l["volatility_10d"]),
             "body_pct":       f(l["body_pct"]),

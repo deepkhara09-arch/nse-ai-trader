@@ -58,10 +58,11 @@
       "ath_pct_60d": -2.18
     }
   },
-  "market_mood": "neutral",
+  "market_mood": "bearish",
   "trade_allowed": true,
   "warnings": [
-    "Bank Nifty move (+1.7%) outpacing Nifty \u2014 high banking sector volatility"
+    "Bank Nifty move (+1.7%) outpacing Nifty \u2014 high banking sector volatility",
+    "Nifty choppy intraday \u2014 wait for cleaner setups"
   ],
   "leading_sectors": [
     "Pharma"
@@ -71,7 +72,7 @@
   "lagging_sectors": [
     "IT"
   ],
-  "intraday_regime": "mixed",
+  "intraday_regime": "choppy",
   "macro": {
     "date": "2026-06-25",
     "session": "midday",

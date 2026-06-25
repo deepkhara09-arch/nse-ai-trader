@@ -225,6 +225,21 @@ def assess_market(session: str = "morning") -> dict:
     elif pcr_val and pcr_val <= 0.6 and pcr_val > 0:
         warnings.append(f"PCR low ({pcr_val:.2f}) — market complacent, caution")
 
+    # Options-flow extras (max-pain pull near expiry, OI-implied support/resistance)
+    mp_dist = pcr.get("max_pain_dist_pct", 0) or 0
+    if abs(mp_dist) >= 1.0:
+        health["max_pain_note"] = (
+            f"Spot {abs(mp_dist):.1f}% {'above' if mp_dist > 0 else 'below'} max-pain "
+            f"({pcr.get('max_pain')}) — option writers pull toward it into expiry")
+    oi_bias = pcr.get("oi_bias")
+    if oi_bias == "put_heavy_support":
+        health["oi_note"] = "Heavy put OI below spot — option writers see a floor (bullish lean)"
+    elif oi_bias == "call_heavy_resistance":
+        health["oi_note"] = "Heavy call OI above spot — option writers see a lid (bearish lean)"
+    # Surface a recurring options-flow outage on System Health
+    if pcr.get("ok") is False and pcr.get("error"):
+        _log_health("options_flow", "NIFTY option chain", pcr.get("error"), session)
+
     # ── Overall mood ──────────────────────────────────────────────────────────
     if not warnings and n_trend in ("up", "strong_up") and vix_val < VIX_CAUTION and breadth >= 0.5 and macro_mood != "risk_off":
         health["market_mood"] = "bullish"

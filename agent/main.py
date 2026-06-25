@@ -666,11 +666,14 @@ def _inject_history_context(stock_data: dict, history_ctx: dict) -> dict:
         d  = entry["latest"]
         rg = ctx.get("regime", {})
         pr = ctx.get("personality", {})
+        bh = ctx.get("behaviour", {})
         d["hist_long_trend"]          = rg.get("long_trend")
         d["hist_pct_of_52w_range"]    = rg.get("pct_of_52w_range")
         d["hist_vol_state"]           = rg.get("vol_state")
         d["hist_drawdown_from_high"]  = rg.get("drawdown_from_high")
         d["hist_personality"]         = pr.get("type")
+        d["hist_ret_6m"]              = bh.get("ret_6m")   # higher-timeframe momentum
+        d["hist_ret_3m"]              = bh.get("ret_3m")
         # Promote real 52w levels from deep history (more accurate than 120d)
         if rg.get("week52_high"):
             d["week52_high"] = rg["week52_high"]

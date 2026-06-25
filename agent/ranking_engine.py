@@ -124,6 +124,17 @@ def rank_focus_stocks(
         elif fd_sig == "inflow":        regime_raw += 0.04
         elif fd_sig == "strong_outflow":regime_raw -= 0.08
         elif fd_sig == "outflow":       regime_raw -= 0.04
+
+        # Options-flow tilt (Nifty PCR + OI structure). Extreme PCR is contrarian;
+        # OI-implied floor/lid is a directional lean. Small weight — it's a market-
+        # wide backdrop, not a per-stock signal.
+        pcr_d  = (market_health or {}).get("pcr", {}) or {}
+        pcr_v  = pcr_d.get("pcr", 0) or 0
+        if pcr_v >= 1.5:    regime_raw += 0.04   # over-hedged → contrarian bullish
+        elif pcr_v <= 0.6 and pcr_v > 0:  regime_raw -= 0.04   # complacent → caution
+        oi_bias = pcr_d.get("oi_bias")
+        if oi_bias == "put_heavy_support":      regime_raw += 0.03
+        elif oi_bias == "call_heavy_resistance":regime_raw -= 0.03
         regime_raw = max(0.0, min(1.0, regime_raw))
 
         # ── Bayesian success probability ──────────────────────────────────────

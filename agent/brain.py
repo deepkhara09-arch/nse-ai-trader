@@ -760,14 +760,44 @@ def analyse_stock(
         if hist_long_trend in ("uptrend", "strong_uptrend") and buy_score > sell_score:
             buy_score += 0.5; buy_reasons.append("Clean trender aligned with its long-term uptrend")
 
+    # ── Multi-timeframe CONFIRMATION gate ──────────────────────────────────────
+    # The single biggest free precision upgrade: don't just nudge the score for the
+    # higher timeframe — REQUIRE it to not strongly disagree. A daily BUY setup that
+    # fights a strong 2-year/6-month downtrend is exactly the kind of false signal
+    # that erodes precision. We don't forbid counter-trend trades, but we demand a
+    # higher bar (extra conviction) when the bigger picture disagrees, and we tag
+    # the alignment so it's visible in the recommendation + learnable by the brain.
+    ret_6m = d.get("hist_ret_6m")          # injected from history behaviour (may be None)
+    htf_up   = hist_long_trend in ("uptrend", "strong_uptrend")   or (ret_6m is not None and ret_6m > 3)
+    htf_down = hist_long_trend in ("downtrend", "strong_downtrend") or (ret_6m is not None and ret_6m < -3)
+    leaning_buy  = buy_score > sell_score
+    leaning_sell = sell_score > buy_score
+
+    mtf_alignment = "neutral"
+    mtf_penalty   = 0.0   # extra score the leading side must clear when fighting the HTF
+    if leaning_buy and htf_down:
+        mtf_alignment = "conflict"            # daily buy vs higher-timeframe down
+        mtf_penalty   = 1.5
+        buy_reasons.append("⚠ Daily buy fights the higher-timeframe trend — needs extra conviction")
+    elif leaning_sell and htf_up:
+        mtf_alignment = "conflict"
+        mtf_penalty   = 1.5
+        sell_reasons.append("⚠ Daily sell fights the higher-timeframe uptrend — needs extra conviction")
+    elif (leaning_buy and htf_up) or (leaning_sell and htf_down):
+        mtf_alignment = "aligned"             # all timeframes agree — highest quality
+        if leaning_buy:
+            buy_reasons.append("✓ Daily setup aligned with the higher-timeframe trend")
+        else:
+            sell_reasons.append("✓ Daily setup aligned with the higher-timeframe trend")
+
     buy_score  = round(buy_score,  2)
     sell_score = round(sell_score, 2)
     gap = abs(buy_score - sell_score)
 
-    # ── Determine signal ──────────────────────────────────────────────────────
-    if buy_score >= BUY_SIGNAL_MIN_SCORE and buy_score > sell_score and gap >= SIGNAL_SCORE_GAP:
+    # ── Determine signal (HTF conflict raises the required bar) ────────────────
+    if buy_score >= BUY_SIGNAL_MIN_SCORE + mtf_penalty and buy_score > sell_score and gap >= SIGNAL_SCORE_GAP:
         signal = "BUY"
-    elif sell_score >= SELL_SIGNAL_MIN_SCORE and sell_score > buy_score and gap >= SIGNAL_SCORE_GAP:
+    elif sell_score >= SELL_SIGNAL_MIN_SCORE + mtf_penalty and sell_score > buy_score and gap >= SIGNAL_SCORE_GAP:
         signal = "SELL"
     else:
         signal = "WATCH"   # no trade — keep monitoring
@@ -872,6 +902,7 @@ def analyse_stock(
         "news_score":   round(news_score, 3),
         "coach_notes":  coach_notes,
         "days_to_earnings": days_to_earnings,   # for earnings-aware sizing downstream
+        "mtf_alignment": mtf_alignment,         # aligned / conflict / neutral (multi-timeframe)
     }
 
 

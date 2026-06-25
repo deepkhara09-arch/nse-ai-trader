@@ -1,9 +1,9 @@
 {
-  "date": "2026-06-24",
-  "fii_net_cr": 17.86,
-  "dii_net_cr": 680.21,
-  "combined_net_cr": 698.07,
-  "signal": "neutral",
+  "date": "2026-06-25",
+  "fii_net_cr": -1843.4,
+  "dii_net_cr": 3637.26,
+  "combined_net_cr": 1793.86,
+  "signal": "inflow",
   "ok": true,
   "error": "",
   "history": [
@@ -18,6 +18,12 @@
       "fii": 17.86,
       "dii": 680.21,
       "combined": 698.07
+    },
+    {
+      "date": "2026-06-25",
+      "fii": -1843.4,
+      "dii": 3637.26,
+      "combined": 1793.86
     }
   ]
 }

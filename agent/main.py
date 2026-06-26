@@ -116,14 +116,27 @@ def run():
         try:
             state = load_state()
             state["session"] = session
+            today_iso = ist_today().isoformat()
+            # Same per-session dedup as a trading day: a backup trigger that fires
+            # after this session already refreshed today must NOT re-log. Without
+            # this, every backup fire on a closed day appends a duplicate entry.
+            if state.get("sessions_done", {}).get(session) == today_iso:
+                print(f"[run] '{session}' already refreshed today ({today_iso}) on a "
+                      f"closed day — duplicate trigger, dashboard-only, no re-log.")
+                mh = assess_market(session)
+                _refresh_outputs(state, mh, session, read_only=True)
+                finish_run(session)
+                return
             market_health = assess_market(session)
-            _append_log(state, session)   # log first so the dashboard includes this run
+            _mark_session_done(state, session)
+            save_state(state)
+            _append_log(state, session, closed_day=why)   # honest "market closed" wording
             _refresh_outputs(state, market_health, session)
         except Exception as e:
             print(f"[run] weekend dashboard refresh failed (non-fatal): {e}")
             record_issue("weekend_refresh", str(ist_today()), str(e), session)
         finish_run(session)
-        print(f"\n[done] weekend no-op complete ({session}).\n")
+        print(f"\n[done] {why} no-op complete ({session}).\n")
         return
 
     # Begin run-health tracking so any non-fatal failure this run is visible on
@@ -758,7 +771,7 @@ def _mark_session_done(state: dict, session: str) -> None:
     state["sessions_done"] = done
 
 
-def _append_log(state: dict, session: str) -> None:
+def _append_log(state: dict, session: str, closed_day: str = "") -> None:
     from agent.trading_calendar import ist_now
     now_ist = ist_now()
 
@@ -781,7 +794,12 @@ def _append_log(state: dict, session: str) -> None:
     phase_day = max(1, state["day"] - _phase_offset)
     recs = load_recommendations()
     mood = load_market_health().get("market_mood", "?")
-    if session == "preopen":
+    if closed_day:
+        # Market is closed (weekend / NSE holiday): be explicit, and do NOT imply a
+        # trading day happened. The day counter is untouched on closed days.
+        summary = (f"{session.title()} — NSE closed ({closed_day}); dashboard refreshed, "
+                   f"no trading, day unchanged.")
+    elif session == "preopen":
         summary = f"Pre-open sweep — macro mood {mood}; dashboard refreshed (no trading)."
     elif session == "test":
         summary = "Test dry-run — dashboard rebuilt, no trading, day unchanged."

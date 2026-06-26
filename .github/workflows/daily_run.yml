@@ -1,27 +1,27 @@
 name: NSE AI Trader
 
 on:
-  # ── Triggering: two-layer for reliability, self-contained PRIMARY ────────────
-  # PRIMARY: GitHub's own schedule: below. It fires EXACTLY 5 times per weekday —
-  #   once per session — and needs no external service, so the tool runs on
-  #   schedule even if nothing else is ever configured. (GitHub cron can drift a
-  #   few minutes late, never early; the window-based session detection below maps
-  #   a slightly-late fire to the correct session anyway.)
-  # BACKUP: repository_dispatch (cron-job.org or any external pinger) can fire the
-  #   exact session via client_payload. If the primary already ran that session
-  #   today, the per-session dedup guard makes the backup a harmless dashboard-only
-  #   no-op (no duplicate). If the primary somehow missed, the backup runs it for
-  #   real. So: guaranteed on-schedule coverage with NO duplicate work — even if a
-  #   misconfigured external pinger fires many times, every extra fire is a no-op.
-  # NOTE: exactly 5 schedule entries = 5 runs/session. Do NOT add interval-style
-  #   crons here, and keep any external pinger at 5 fixed times (not an interval),
-  #   or you waste Actions minutes on redundant (still-safe) no-op runs.
+  # ── Triggering: two-layer, PUNCTUAL primary + safety-net backup ──────────────
+  # Priority: NEVER MISS a session. A few extra runs are fine — the per-session
+  # dedup guard turns any redundant fire into a harmless dashboard-only no-op — but
+  # a missed session is not acceptable. So we run BOTH layers and tolerate overlap.
+  #
+  # PRIMARY: cron-job.org (external pinger) -> repository_dispatch with the EXACT
+  #   session in client_payload, at the 5 session times. GitHub's OWN cron is known
+  #   to run late or skip under load, so an external pinger is the punctual source.
+  #   Keep it at 5 FIXED times (NOT an interval like "every 15 min").
+  # BACKUP: GitHub schedule: below, fired ~20-25 MIN AFTER each primary. It exists
+  #   only to catch a session the primary missed:
+  #     - primary already ran it  -> dedup makes the backup a no-op (no duplicate)
+  #     - primary missed/late      -> the backup runs the session for real
+  #   GitHub cron drift only helps here (a late backup is still a valid catch-up).
+  #   Window-based session detection below maps a drifted backup to the right one.
   schedule:
-    - cron: "3 3 * * 1-5"    # ~08:33 IST — pre-open  (target 08:35)
-    - cron: "5 4 * * 1-5"    # ~09:35 IST — morning   (target 09:35)
-    - cron: "15 6 * * 1-5"   # ~11:45 IST — midday    (target 11:45)
-    - cron: "45 7 * * 1-5"   # ~13:15 IST — afternoon (target 13:15)
-    - cron: "45 9 * * 1-5"   # ~15:15 IST — preclose  (target 15:15)
+    - cron: "30 3 * * 1-5"   # ~09:00 IST — backup for pre-open  (primary 08:35)
+    - cron: "30 4 * * 1-5"   # ~10:00 IST — backup for morning   (primary 09:35)
+    - cron: "10 7 * * 1-5"   # ~12:40 IST — backup for midday    (primary 11:45)
+    - cron: "40 8 * * 1-5"   # ~14:10 IST — backup for afternoon (primary 13:15)
+    - cron: "10 10 * * 1-5"  # ~15:40 IST — backup for preclose  (primary 15:15)
 
   # Manual trigger (pick a session from the UI dropdown).
   # Default is "test" — a fully SAFE dry run: it only rebuilds the dashboard from
@@ -39,15 +39,15 @@ on:
         type: choice
         options: [test, preopen, morning, midday, afternoon, preclose]
 
-  # BACKUP trigger (optional external pinger such as cron-job.org) — fires GitHub
-  # via API for an EXACT session, no time-window guessing. The GitHub schedule:
-  # above is the primary; this is only a safety net. The per-session dedup guard
-  # makes it a harmless no-op if the primary already ran. POST to
+  # PRIMARY trigger — cron-job.org (or any external pinger). Fires GitHub via API
+  # for an EXACT session (no time-window guessing), punctually, because GitHub's
+  # own cron is unreliable on timing. This is the normal trigger path. POST to
   #   /repos/<owner>/<repo>/dispatches  with
   #   {"event_type":"run-session","client_payload":{"session":"morning"}}
-  # IMPORTANT: if you use an external pinger, schedule it at the 5 FIXED session
-  # times (08:35/09:35/11:45/13:15/15:15 IST) — NOT an interval like "every 15
-  # min", which is what caused redundant (still-safe) runs before.
+  # Configure cron-job.org with 5 FIXED daily times (Mon-Fri), one per session:
+  #   preopen 08:35 · morning 09:35 · midday 11:45 · afternoon 13:15 · preclose 15:15 IST
+  # Use 5 separate fixed-time jobs — NOT one "every 15 min" job (that fires ~15x
+  # and, while each extra is a safe dedup no-op, it wastes Actions minutes).
   repository_dispatch:
     types: [run-session]
 
@@ -78,11 +78,11 @@ jobs:
         id: session
         run: |
           # Session source:
-          #   1) repository_dispatch (external pinger / backup) -> exact session
-          #      from client_payload — no time guessing.
+          #   1) repository_dispatch (cron-job.org — the PUNCTUAL PRIMARY) -> exact
+          #      session from client_payload, no time guessing. The normal path.
           #   2) workflow_dispatch (manual UI) -> the chosen dropdown input.
-          #   3) schedule (GitHub cron — the PRIMARY) -> WINDOW-based time mapping
-          #      so a slightly-late fire still resolves to the right session.
+          #   3) schedule (GitHub cron — the BACKUP) -> WINDOW-based time mapping so
+          #      a late/drifted backup fire still resolves to the right session.
           if [ "${{ github.event_name }}" = "repository_dispatch" ]; then
             echo "name=${{ github.event.client_payload.session }}" >> $GITHUB_OUTPUT
           elif [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
@@ -94,14 +94,13 @@ jobs:
             # for base" error. 10# makes the arithmetic explicitly decimal.
             H=$(date -u +%H); MM=$(date -u +%M)
             MINS=$(( 10#$H * 60 + 10#$MM ))
-            # GitHub-cron fire times (UTC min): preopen 183 morning 245 midday 375
-            #                                   afternoon 465 preclose 585
-            # Boundaries are the MIDPOINTS between consecutive sessions, so even a
-            # large cron drift (gaps are 60-130 min) still lands on the right one.
-            if   [ "$MINS" -lt 214 ];  then echo "name=preopen"   >> $GITHUB_OUTPUT   # < 03:34
-            elif [ "$MINS" -lt 310 ];  then echo "name=morning"   >> $GITHUB_OUTPUT   # < 05:10
-            elif [ "$MINS" -lt 420 ];  then echo "name=midday"    >> $GITHUB_OUTPUT   # < 07:00
-            elif [ "$MINS" -lt 525 ];  then echo "name=afternoon" >> $GITHUB_OUTPUT   # < 08:45
+            # GitHub-cron BACKUP fire times (UTC min): preopen 210 morning 270
+            #   midday 430 afternoon 520 preclose 610. Boundaries are the MIDPOINTS
+            #   between consecutive backups, so even +25min drift still lands right.
+            if   [ "$MINS" -lt 240 ];  then echo "name=preopen"   >> $GITHUB_OUTPUT   # < 04:00
+            elif [ "$MINS" -lt 350 ];  then echo "name=morning"   >> $GITHUB_OUTPUT   # < 05:50
+            elif [ "$MINS" -lt 475 ];  then echo "name=midday"    >> $GITHUB_OUTPUT   # < 07:55
+            elif [ "$MINS" -lt 565 ];  then echo "name=afternoon" >> $GITHUB_OUTPUT   # < 09:25
             else                            echo "name=preclose"  >> $GITHUB_OUTPUT
             fi
           fi

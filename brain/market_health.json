@@ -1,27 +1,27 @@
 {
-  "date": "2026-06-25",
-  "session": "preclose",
+  "date": "2026-06-26",
+  "session": "preopen",
   "nifty": {
     "symbol": "^NSEI",
-    "value": 24021.65,
-    "day_change_pct": 0.83,
+    "value": 24056.0,
+    "day_change_pct": 0.14,
     "trend_5d": "sideways",
-    "trend_20d": "sideways",
-    "ath_pct_60d": -1.88
+    "trend_20d": "up",
+    "ath_pct_60d": -1.74
   },
   "vix": {
-    "value": 13.39,
+    "value": 13.05,
     "level": "normal",
-    "percentile_30d": 17.0,
-    "avg_30d": 15.95
+    "percentile_30d": 10.0,
+    "avg_30d": 15.74
   },
   "bank_nifty": {
     "symbol": "^NSEBANK",
-    "value": 58150.35,
-    "day_change_pct": 1.69,
-    "trend_5d": "sideways",
+    "value": 58177.05,
+    "day_change_pct": 0.05,
+    "trend_5d": "up",
     "trend_20d": "strong_up",
-    "ath_pct_60d": -0.18,
+    "ath_pct_60d": -0.9,
     "diverging": false
   },
   "sectors": {
@@ -35,11 +35,11 @@
     },
     "Pharma": {
       "symbol": "PHARMABEES.NS",
-      "value": 25.72,
-      "day_change_pct": 0.12,
-      "trend_5d": "strong_up",
+      "value": 25.63,
+      "day_change_pct": -0.35,
+      "trend_5d": "up",
       "trend_20d": "up",
-      "ath_pct_60d": -2.32
+      "ath_pct_60d": -2.77
     },
     "Bank": {
       "symbol": "BANKBEES.NS",
@@ -60,9 +60,7 @@
   },
   "market_mood": "neutral",
   "trade_allowed": true,
-  "warnings": [
-    "Bank Nifty move (+1.7%) outpacing Nifty \u2014 high banking sector volatility"
-  ],
+  "warnings": [],
   "leading_sectors": [
     "Pharma"
   ],
@@ -73,68 +71,68 @@
   ],
   "intraday_regime": "mixed",
   "macro": {
-    "date": "2026-06-25",
-    "session": "midday",
-    "generated_at": "2026-06-25T06:58:41.227615",
-    "global_score": 0.366,
-    "india_score": 0.0,
-    "overall_score": 0.201,
+    "date": "2026-06-26",
+    "session": "preopen",
+    "generated_at": "2026-06-26T03:05:41.662023",
+    "global_score": 0.265,
+    "india_score": 1.0,
+    "overall_score": 0.596,
     "mood": "risk_on",
     "drivers": [
-      "Tesla and Waymo duel in the robotaxi race \u2014 but the company spending the most builds no cars at all",
-      "Why SK Hynix\u2019s $30 billion U.S. listing could be a double-edged sword for Micron\u2019s stock",
-      "These hidden PCE triggers could force a Fed rate hike \u2014 and shock the market",
-      "Everyone on Wall Street now believes in buying the dip. That is exactly why you should worry.",
-      "My houseguest left heat marks all over my table. I didn\u2019t notice them until she was gone. Do I ask her to pay to remove them?",
-      "I had gallbladder surgery. After I got home, the hospital asked me for a financial donation. Is this ethical?",
-      "Qualcomm\u2019s stock is soaring as these big numbers excite Wall Street",
-      "Rocket Lab, Lockheed Martin among the partners in SpaceX\u2019s military space-laser project"
+      "SpaceX FOMO is officially over. Space stocks across the board are getting punished.",
+      "SpaceX stock is a terrible buy \u2014 what that actually means for the bull market",
+      "A world rejecting OPEC controls could usher in oil below $50 a barrel",
+      "\u2018I have full guardianship\u2019: My son has special needs. If I buy him a condo, will that hurt his benefits?",
+      "The S&P 500 is at a critical crossroads. A break lower could signal more losses ahead.",
+      "After losing my son, would it be a mistake to sell my recently purchased house and move to my hometown?",
+      "Microsoft\u2019s stock is suffering a historic June rout as investors balk at heavy spending",
+      "Japanese stocks are on fire. Here\u2019s what\u2019s driving the hot streak."
     ],
     "global_cues": {
       "dow": {
-        "last": 51848.9,
-        "chg_pct": 0.35
+        "last": 51920.62,
+        "chg_pct": 0.14
       },
       "nasdaq": {
-        "last": 25476.64,
-        "chg_pct": -0.43
+        "last": 25358.6,
+        "chg_pct": -0.46
       },
       "sp500": {
-        "last": 7358.22,
-        "chg_pct": -0.1
+        "last": 7357.49,
+        "chg_pct": -0.01
       },
       "nikkei": {
-        "last": 72366.34,
-        "chg_pct": 4.61
+        "last": 69602.72,
+        "chg_pct": -3.82
       },
       "crude": {
-        "last": 70.34,
-        "chg_pct": -3.92
+        "last": 70.93,
+        "chg_pct": -1.38
       },
       "usdinr": {
-        "last": 94.46,
-        "chg_pct": -0.77
+        "last": 94.39,
+        "chg_pct": -0.06
       },
       "gold": {
-        "last": 3990.3,
-        "chg_pct": -3.38
+        "last": 4000.7,
+        "chg_pct": -0.74
       }
     },
-    "summary": "Overall macro mood is risk-on (+0.20). US Dow +0.3% overnight. Crude -3.9%. USD/INR -0.8%. Notable: US Fed rate hike / hawkish; Geopolitical conflict / war.",
+    "summary": "Overall macro mood is risk-on (+0.60). US Dow +0.1% overnight. Crude -1.4%. USD/INR -0.1%. Notable: Geopolitical conflict / war.",
     "playbook": [
-      "Hawkish Fed pressures Nifty via FII outflows and stronger USD.",
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially."
     ],
     "playbook_bias": "risk_off",
     "article_count": 60
   },
+  "macro_tailwind": true,
   "macro_risk_factor": 1.0,
   "fii_dii": {
-    "date": "2026-06-25",
-    "fii_net_cr": -1843.4,
-    "dii_net_cr": 3637.26,
-    "combined_net_cr": 1793.86,
-    "signal": "inflow",
+    "date": "2026-06-26",
+    "fii_net_cr": 383.76,
+    "dii_net_cr": 5747.75,
+    "combined_net_cr": 6131.51,
+    "signal": "strong_inflow",
     "ok": true,
     "error": "",
     "history": [
@@ -155,14 +153,27 @@
         "fii": -1843.4,
         "dii": 3637.26,
         "combined": 1793.86
+      },
+      {
+        "date": "2026-06-26",
+        "fii": 383.76,
+        "dii": 5747.75,
+        "combined": 6131.51
       }
     ]
   },
+  "flow_tailwind": true,
   "pcr": {
-    "date": null,
-    "pcr": 0,
-    "total_pe_oi": 0,
-    "total_ce_oi": 0,
-    "reading": "neutral"
+    "date": "2026-06-26",
+    "pcr": 1.025,
+    "reading": "neutral",
+    "total_pe_oi": 2637674,
+    "total_ce_oi": 2573651,
+    "spot": 24056.0,
+    "max_pain": 24100.0,
+    "max_pain_dist_pct": -0.18,
+    "oi_bias": "balanced",
+    "ok": true,
+    "error": ""
   }
 }

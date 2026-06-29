@@ -1,6 +1,6 @@
 {
-  "date": "2026-06-26",
-  "session": "preclose",
+  "date": "2026-06-29",
+  "session": "preopen",
   "nifty": {
     "symbol": "^NSEI",
     "value": 24056.0,
@@ -13,7 +13,7 @@
     "value": 13.05,
     "level": "normal",
     "percentile_30d": 10.0,
-    "avg_30d": 15.74
+    "avg_30d": 15.64
   },
   "bank_nifty": {
     "symbol": "^NSEBANK",
@@ -28,8 +28,8 @@
     "IT": {
       "symbol": "ITBEES.NS",
       "value": 30.36,
-      "day_change_pct": -0.82,
-      "trend_5d": "sideways",
+      "day_change_pct": 0.0,
+      "trend_5d": "down",
       "trend_20d": "strong_down",
       "ath_pct_60d": -12.38
     },
@@ -44,7 +44,7 @@
     "Bank": {
       "symbol": "BANKBEES.NS",
       "value": 601.92,
-      "day_change_pct": -0.06,
+      "day_change_pct": 0.0,
       "trend_5d": "sideways",
       "trend_20d": "strong_up",
       "ath_pct_60d": -0.88
@@ -52,79 +52,84 @@
     "Infra": {
       "symbol": "INFRABEES.NS",
       "value": 978.27,
-      "day_change_pct": -0.1,
+      "day_change_pct": 0.0,
       "trend_5d": "sideways",
       "trend_20d": "up",
       "ath_pct_60d": -2.28
     }
   },
-  "market_mood": "neutral",
+  "market_mood": "bearish",
   "trade_allowed": true,
-  "warnings": [],
+  "warnings": [
+    "Global macro risk-off (-0.46) \u2014 Overall macro mood is risk-off (-0.46). US Dow -0.1% overnight. Crude +0.9%. USD/INR -0.0%. Notable: Crude oil spike; Ge"
+  ],
   "leading_sectors": [
     "Pharma"
   ],
   "market_regime": "normal",
   "sector_breadth": 0.25,
-  "lagging_sectors": [],
+  "lagging_sectors": [
+    "IT"
+  ],
   "macro": {
-    "date": "2026-06-26",
-    "session": "midday",
-    "generated_at": "2026-06-26T06:15:41.576188",
-    "global_score": 0.083,
-    "india_score": 0.0,
-    "overall_score": 0.046,
-    "mood": "neutral",
+    "date": "2026-06-29",
+    "session": "preopen",
+    "generated_at": "2026-06-29T03:05:38.759134",
+    "global_score": -0.026,
+    "india_score": -1.0,
+    "overall_score": -0.464,
+    "mood": "risk_off",
     "drivers": [
-      "The Wall Street equivalent of roster-cut day happens Friday. It\u2019ll be one of the biggest volume days of the year.",
-      "SpaceX FOMO is officially over. Space stocks across the board are getting punished.",
-      "SpaceX stock is a terrible buy \u2014 what that actually means for the bull market",
-      "A world rejecting OPEC controls could usher in oil below $50 a barrel",
-      "\u2018I have full guardianship\u2019: My son has special needs. If I buy him a condo, will that hurt his benefits?",
-      "The S&P 500 is at a critical crossroads. A break lower could signal more losses ahead.",
-      "After losing my son, would it be a mistake to sell my recently purchased house and move to my hometown?",
-      "Microsoft\u2019s stock is suffering a historic June rout as investors balk at heavy spending"
+      "Oil prices, stock futures inch higher as U.S. and Iran reportedly agree to halt attacks",
+      "I had gallbladder surgery. After I got home, the hospital asked me for a financial donation. Is this ethical?",
+      "Your health insurer shouldn\u2019t decide your treatment plan. That\u2019s what your doctor \u2014 and AI \u2014 should be doing.",
+      "\u2018It feels like a medical miracle\u2019: How did a single QR code coupon cut my $618 Walgreens prescription to $15?",
+      "Micron is about to be more profitable than any U.S. company except Nvidia and Google",
+      "Forget the \u2018Sell America\u2019 trade: Why U.S. markets keep proving the naysayers wrong",
+      "\u2018She is retired\u2019: Do I dip into my 401(k) to pay my mother\u2019s $30,000 credit-card debt?",
+      "\u2018I\u2019ll happily wait\u2019: Does delaying Social Security make sense for high earners like me?"
     ],
     "global_cues": {
       "dow": {
-        "last": 51920.62,
-        "chg_pct": 0.14
+        "last": 51876.11,
+        "chg_pct": -0.09
       },
       "nasdaq": {
-        "last": 25358.6,
-        "chg_pct": -0.46
+        "last": 25297.62,
+        "chg_pct": -0.24
       },
       "sp500": {
-        "last": 7357.49,
-        "chg_pct": -0.01
+        "last": 7354.02,
+        "chg_pct": -0.05
       },
       "nikkei": {
-        "last": 69136.76,
-        "chg_pct": -4.46
+        "last": 68869.43,
+        "chg_pct": -0.71
       },
       "crude": {
-        "last": 71.92,
-        "chg_pct": 2.25
+        "last": 69.89,
+        "chg_pct": 0.95
       },
       "usdinr": {
         "last": 94.39,
-        "chg_pct": -0.06
+        "chg_pct": -0.02
       },
       "gold": {
-        "last": 4030.5,
-        "chg_pct": 1.01
+        "last": 4081.8,
+        "chg_pct": 0.08
       }
     },
-    "summary": "Overall macro mood is neutral (+0.05). US Dow +0.1% overnight. Crude +2.2%. USD/INR -0.1%. Notable: Geopolitical conflict / war.",
+    "summary": "Overall macro mood is risk-off (-0.46). US Dow -0.1% overnight. Crude +0.9%. USD/INR -0.0%. Notable: Crude oil spike; Geopolitical conflict / war.",
     "playbook": [
+      "India imports most of its oil \u2014 crude spikes hurt rupee, inflation, OMCs.",
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially."
     ],
     "playbook_bias": "risk_off",
     "article_count": 60
   },
-  "macro_risk_factor": 1.0,
+  "macro_risk_factor": 0.7,
   "fii_dii": {
-    "date": "2026-06-26",
+    "date": "2026-06-29",
     "fii_net_cr": 383.76,
     "dii_net_cr": 5747.75,
     "combined_net_cr": 6131.51,
@@ -155,12 +160,18 @@
         "fii": 383.76,
         "dii": 5747.75,
         "combined": 6131.51
+      },
+      {
+        "date": "2026-06-29",
+        "fii": 383.76,
+        "dii": 5747.75,
+        "combined": 6131.51
       }
     ]
   },
   "flow_tailwind": true,
   "pcr": {
-    "date": "2026-06-26",
+    "date": "2026-06-29",
     "pcr": 1.025,
     "reading": "neutral",
     "total_pe_oi": 2637674,

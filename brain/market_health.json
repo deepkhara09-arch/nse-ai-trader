@@ -1,6 +1,6 @@
 {
   "date": "2026-06-29",
-  "session": "morning",
+  "session": "midday",
   "nifty": {
     "symbol": "^NSEI",
     "value": 24056.0,
@@ -61,7 +61,7 @@
   "market_mood": "bearish",
   "trade_allowed": true,
   "warnings": [
-    "Global macro risk-off (-0.46) \u2014 Overall macro mood is risk-off (-0.46). US Dow -0.1% overnight. Crude +0.9%. USD/INR -0.0%. Notable: Crude oil spike; Ge"
+    "Global macro risk-off (-0.44) \u2014 Overall macro mood is risk-off (-0.44). US Dow -0.1% overnight. Crude -3.7%. USD/INR -0.1%. Notable: Geopolitical confli"
   ],
   "leading_sectors": [
     "Pharma"
@@ -74,11 +74,11 @@
   "intraday_regime": "mixed",
   "macro": {
     "date": "2026-06-29",
-    "session": "preopen",
-    "generated_at": "2026-06-29T03:05:38.759134",
-    "global_score": -0.026,
+    "session": "midday",
+    "generated_at": "2026-06-29T06:15:46.817579",
+    "global_score": 0.015,
     "india_score": -1.0,
-    "overall_score": -0.464,
+    "overall_score": -0.442,
     "mood": "risk_off",
     "drivers": [
       "Oil prices, stock futures inch higher as U.S. and Iran reportedly agree to halt attacks",
@@ -104,25 +104,24 @@
         "chg_pct": -0.05
       },
       "nikkei": {
-        "last": 68869.43,
-        "chg_pct": -0.71
+        "last": 69309.39,
+        "chg_pct": -0.07
       },
       "crude": {
-        "last": 69.89,
-        "chg_pct": 0.95
+        "last": 69.23,
+        "chg_pct": -3.74
       },
       "usdinr": {
-        "last": 94.39,
-        "chg_pct": -0.02
+        "last": 94.34,
+        "chg_pct": -0.06
       },
       "gold": {
-        "last": 4081.8,
-        "chg_pct": 0.08
+        "last": 4078.7,
+        "chg_pct": 1.2
       }
     },
-    "summary": "Overall macro mood is risk-off (-0.46). US Dow -0.1% overnight. Crude +0.9%. USD/INR -0.0%. Notable: Crude oil spike; Geopolitical conflict / war.",
+    "summary": "Overall macro mood is risk-off (-0.44). US Dow -0.1% overnight. Crude -3.7%. USD/INR -0.1%. Notable: Geopolitical conflict / war.",
     "playbook": [
-      "India imports most of its oil \u2014 crude spikes hurt rupee, inflation, OMCs.",
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially."
     ],
     "playbook_bias": "risk_off",

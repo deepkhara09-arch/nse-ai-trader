@@ -28,23 +28,26 @@ It shows:
 
 ## How the Agent Thinks
 
-The agent runs **3 times per trading day** (IST):
+The agent runs **5 times per trading day** (IST):
 
 | Time (IST) | Session | What happens |
 |------------|---------|-------------|
-| 09:30 AM | Morning | Fetch market data, open new positions, analyse all stocks |
-| 12:00 PM | Midday | Refresh prices, update unrealised P&L, add swing signals |
-| 03:00 PM | Pre-close | Final data refresh, close intraday trades, record daily stats |
+| 08:35 AM | Pre-open | Refresh global/India macro sentiment + dashboard (no trading) |
+| 09:35 AM | Morning | Fetch market data, open new positions, analyse all stocks |
+| 11:45 AM | Midday | Refresh prices, update unrealised P&L, add swing signals |
+| 01:15 PM | Afternoon | Re-assess positions, trail stops, add intraday/swing signals |
+| 03:40 PM | Pre-close | Post-close (after 15:30) full-session capture, close trades, record stats, roll the trading day |
 
 ### Autonomous learning phases
 
 ```
-Days 1–5          Days 6–15           Days 16–50+
+Days 1–7          Days 8–21           Days 22+
 ────────────      ────────────────    ─────────────────────────
 EXPLORATION  →    ANALYSIS       →    PAPER TRADING → SIGNAL READY
-Watch 50 NSE      Pick 12 stocks      Simulate real trades
-stocks daily      Deep-study them     Learn what works
-Score each one    Learn patterns      Win rate ≥ 58% → alert you
+Watch all NSE-    Pick 15 focus       Simulate real trades
+100 daily         stocks, study them  Learn what works
+Score each one    Learn patterns      Win rate ≥ 60% over 25+
+                                      trades → alert you
 ```
 
 ### What it analyses (100% computed from raw price data)
@@ -120,7 +123,7 @@ Reasoning: All EMAs stacked bullish · RSI=52 healthy buy zone ·
 - Maximum 5 open positions at once
 - Stop all new trades if daily paper loss > 3%
 - Minimum risk:reward of 2:1 (ATR-based, not fixed %)
-- Intraday positions always force-closed by 3:00 PM
+- Intraday positions always force-closed at the pre-close run (after the 15:30 close), using the closing price
 - Signals only generated when buy/sell score gap ≥ 2 points (no marginal trades)
 
 ---
@@ -150,7 +153,7 @@ nse-ai-trader/
 ├── docs/
 │   └── index.html          # ← Live dashboard (GitHub Pages)
 ├── .github/workflows/
-│   └── daily_run.yml       # 3x daily schedule
+│   └── daily_run.yml       # 5x daily schedule (preopen→preclose)
 └── requirements.txt        # yfinance, pandas, numpy only
 ```
 

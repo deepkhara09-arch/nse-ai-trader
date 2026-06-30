@@ -43,7 +43,11 @@ with no time-window guessing.
 | NSE morning   | 09:35 | every weekday 09:35 | `morning`   |
 | NSE midday    | 11:45 | every weekday 11:45 | `midday`    |
 | NSE afternoon | 13:15 | every weekday 13:15 | `afternoon` |
-| NSE preclose  | 15:15 | every weekday 15:15 | `preclose`  |
+| NSE preclose  | 15:40 | every weekday 15:40 | `preclose`  |
+
+> **Preclose is 15:40 IST on purpose** — *after* the 15:30 market close — so it
+> captures the full session including the closing-auction move. Do NOT set it to
+> 15:0x (e.g. 15:02), which misses the last ~28 minutes of trading.
 
 3. For each job's **Request settings**:
    - **URL:** `https://api.github.com/repos/deepkhara09-arch/nse-ai-trader/dispatches`

@@ -166,8 +166,8 @@ def _classify_trade_type(opinion: dict, d: dict, fund: dict, learned_style: str)
             "trade_type":       "Intraday",
             "trade_type_key":   "intraday",
             "hold_period":      "Same day — square off before 3:15 PM IST",
-            "entry_window":     "9:30 AM – 10:30 AM IST (first-hour momentum)",
-            "exit_window":      "Exit by 3:00 PM IST latest — never carry overnight",
+            "entry_window":     "9:35 AM – 10:30 AM IST (first-hour momentum)",
+            "exit_window":      "Exit by 3:15 PM IST latest — before the 3:30 close, never carry overnight",
             "target_timeframe": "2–5 hours after entry",
             "action_urgency":   "ACT THIS SESSION — intraday setups expire at market close",
         }

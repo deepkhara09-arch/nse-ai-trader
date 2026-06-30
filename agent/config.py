@@ -21,7 +21,7 @@ SESSIONS = {
     "morning":   {"utc_hour": 4,  "utc_min": 5,  "ist": "09:35"},   # market open
     "midday":    {"utc_hour": 6,  "utc_min": 15, "ist": "11:45"},   # midday review
     "afternoon": {"utc_hour": 7,  "utc_min": 45, "ist": "13:15"},   # afternoon positioning
-    "preclose":  {"utc_hour": 9,  "utc_min": 45, "ist": "15:15"},   # pre-close decisions + day rollover
+    "preclose":  {"utc_hour": 10, "utc_min": 10, "ist": "15:40"},   # post-close: captures full session incl 3:30 close + day rollover
 }
 
 # ── Phase durations (trading sessions) ───────────────────────────────────────
@@ -110,10 +110,13 @@ MIN_TRADES_FOR_SIGNAL  = 25        # raised from 12 — need 25 closed paper tra
 # If price moves more than this % away from entry zone, rec is flagged as STALE
 REC_STALE_PRICE_MOVE_PCT = 0.8    # flag if CMP has moved >0.8% from entry midpoint
 # Session validity windows (IST) — what each session's recs are valid until
+# (i.e. until the NEXT session that regenerates them). Matches the 5-session day.
 REC_SESSION_VALID_UNTIL = {
-    "morning":  "12:00 IST",   # morning recs valid until midday run
-    "midday":   "15:00 IST",   # midday recs valid until preclose run
-    "preclose": "09:30 IST",   # preclose recs valid until next morning (next trading day)
+    "preopen":   "09:35 IST",   # pre-open backdrop valid until the morning run
+    "morning":   "11:45 IST",   # morning recs valid until midday run
+    "midday":    "13:15 IST",   # midday recs valid until afternoon run
+    "afternoon": "15:40 IST",   # afternoon recs valid until preclose run
+    "preclose":  "09:35 IST",   # preclose recs valid until next morning (next trading day)
 }
 
 # ── Technical indicator parameters ───────────────────────────────────────────

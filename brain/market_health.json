@@ -1,27 +1,27 @@
 {
-  "date": "2026-06-29",
-  "session": "preclose",
+  "date": "2026-06-30",
+  "session": "preopen",
   "nifty": {
     "symbol": "^NSEI",
-    "value": 24056.0,
-    "day_change_pct": 0.14,
+    "value": 23946.25,
+    "day_change_pct": -0.46,
     "trend_5d": "sideways",
     "trend_20d": "up",
-    "ath_pct_60d": -1.74
+    "ath_pct_60d": -2.19
   },
   "vix": {
-    "value": 13.05,
+    "value": 13.61,
     "level": "normal",
-    "percentile_30d": 10.0,
-    "avg_30d": 15.64
+    "percentile_30d": 24.0,
+    "avg_30d": 15.46
   },
   "bank_nifty": {
     "symbol": "^NSEBANK",
-    "value": 58177.05,
-    "day_change_pct": 0.05,
-    "trend_5d": "up",
+    "value": 57727.35,
+    "day_change_pct": -0.77,
+    "trend_5d": "sideways",
     "trend_20d": "strong_up",
-    "ath_pct_60d": -0.9,
+    "ath_pct_60d": -1.67,
     "diverging": false
   },
   "sectors": {
@@ -35,11 +35,11 @@
     },
     "Pharma": {
       "symbol": "PHARMABEES.NS",
-      "value": 25.63,
-      "day_change_pct": -0.35,
+      "value": 25.9,
+      "day_change_pct": 1.05,
       "trend_5d": "up",
-      "trend_20d": "up",
-      "ath_pct_60d": -2.77
+      "trend_20d": "strong_up",
+      "ath_pct_60d": -3.72
     },
     "Bank": {
       "symbol": "BANKBEES.NS",
@@ -55,14 +55,12 @@
       "day_change_pct": 0.0,
       "trend_5d": "sideways",
       "trend_20d": "up",
-      "ath_pct_60d": -2.28
+      "ath_pct_60d": -1.68
     }
   },
-  "market_mood": "bearish",
+  "market_mood": "neutral",
   "trade_allowed": true,
-  "warnings": [
-    "Global macro risk-off (-0.44) \u2014 Overall macro mood is risk-off (-0.44). US Dow -0.1% overnight. Crude -3.7%. USD/INR -0.1%. Notable: Geopolitical confli"
-  ],
+  "warnings": [],
   "leading_sectors": [
     "Pharma"
   ],
@@ -73,63 +71,63 @@
   ],
   "intraday_regime": "mixed",
   "macro": {
-    "date": "2026-06-29",
-    "session": "midday",
-    "generated_at": "2026-06-29T06:15:46.817579",
-    "global_score": 0.015,
-    "india_score": -1.0,
-    "overall_score": -0.442,
-    "mood": "risk_off",
+    "date": "2026-06-30",
+    "session": "preopen",
+    "generated_at": "2026-06-30T03:05:46.617682",
+    "global_score": 0.287,
+    "india_score": -0.2,
+    "overall_score": 0.068,
+    "mood": "neutral",
     "drivers": [
-      "Oil prices, stock futures inch higher as U.S. and Iran reportedly agree to halt attacks",
-      "I had gallbladder surgery. After I got home, the hospital asked me for a financial donation. Is this ethical?",
-      "Your health insurer shouldn\u2019t decide your treatment plan. That\u2019s what your doctor \u2014 and AI \u2014 should be doing.",
-      "\u2018It feels like a medical miracle\u2019: How did a single QR code coupon cut my $618 Walgreens prescription to $15?",
-      "Micron is about to be more profitable than any U.S. company except Nvidia and Google",
-      "Forget the \u2018Sell America\u2019 trade: Why U.S. markets keep proving the naysayers wrong",
-      "\u2018She is retired\u2019: Do I dip into my 401(k) to pay my mother\u2019s $30,000 credit-card debt?",
-      "\u2018I\u2019ll happily wait\u2019: Does delaying Social Security make sense for high earners like me?"
+      "Trump\u2019s weekend Iran strikes keep sparking Monday stock rallies. Here\u2019s what the data shows us.",
+      "\u2018I don\u2019t think I\u2019ll make it to 80\u2019: I\u2019m 70 and single. Do I take out a reverse mortgage or a home-equity agreement?",
+      "\u2018I claimed Social Security at 62\u2019: At 76, I\u2019m working at Walmart. Why do I still owe payroll taxes?",
+      "Rocket Lab to take on SpaceX\u2019s Starlink with $8 billion acquisition",
+      "Tesla\u2019s stock rips higher after a long-awaited update to self-driving technology",
+      "Charter may be making \u2018frenemies\u2019 with SpaceX, and its stock is soaring",
+      "Most Americans have no idea how close we just came to financial chaos",
+      "Value stocks beat growth when inflation is high. Here are 13 stocks top newsletters are betting on now."
     ],
     "global_cues": {
       "dow": {
-        "last": 51876.11,
-        "chg_pct": -0.09
+        "last": 52182.74,
+        "chg_pct": 0.59
       },
       "nasdaq": {
-        "last": 25297.62,
-        "chg_pct": -0.24
+        "last": 25820.14,
+        "chg_pct": 2.07
       },
       "sp500": {
-        "last": 7354.02,
-        "chg_pct": -0.05
+        "last": 7440.43,
+        "chg_pct": 1.18
       },
       "nikkei": {
-        "last": 69309.39,
-        "chg_pct": -0.07
+        "last": 70116.82,
+        "chg_pct": 0.93
       },
       "crude": {
-        "last": 69.23,
-        "chg_pct": -3.74
+        "last": 70.78,
+        "chg_pct": 0.04
       },
       "usdinr": {
-        "last": 94.34,
-        "chg_pct": -0.06
+        "last": 94.36,
+        "chg_pct": -0.04
       },
       "gold": {
-        "last": 4078.7,
-        "chg_pct": 1.2
+        "last": 3978.6,
+        "chg_pct": -1.09
       }
     },
-    "summary": "Overall macro mood is risk-off (-0.44). US Dow -0.1% overnight. Crude -3.7%. USD/INR -0.1%. Notable: Geopolitical conflict / war.",
+    "summary": "Overall macro mood is neutral (+0.07). US Dow +0.6% overnight. Crude +0.0%. USD/INR -0.0%. Notable: Geopolitical conflict / war.",
     "playbook": [
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially."
     ],
     "playbook_bias": "risk_off",
     "article_count": 60
   },
-  "macro_risk_factor": 0.7,
+  "macro_risk_factor": 1.0,
   "fii_dii": {
-    "date": "2026-06-29",
+    "date": "2026-06-30",
     "fii_net_cr": -1350.1,
     "dii_net_cr": 2801.45,
     "combined_net_cr": 1451.35,
@@ -166,15 +164,21 @@
         "fii": -1350.1,
         "dii": 2801.45,
         "combined": 1451.35
+      },
+      {
+        "date": "2026-06-30",
+        "fii": -1350.1,
+        "dii": 2801.45,
+        "combined": 1451.35
       }
     ]
   },
   "pcr": {
-    "date": "2026-06-29",
-    "pcr": 0.77,
+    "date": "2026-06-30",
+    "pcr": 0.773,
     "reading": "bearish_bias",
-    "total_pe_oi": 2807526,
-    "total_ce_oi": 3645354,
+    "total_pe_oi": 2715950,
+    "total_ce_oi": 3515255,
     "spot": 23946.25,
     "max_pain": 24000.0,
     "max_pain_dist_pct": -0.22,

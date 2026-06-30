@@ -2,12 +2,26 @@
 Central configuration — all tunable parameters in one place.
 """
 
+# ── UTF-8 safety (imported by ~every module, so this runs everywhere) ──────────
+# Log lines use unicode glyphs (₹ → — · ✅ ❌). On a non-UTF-8 console (Windows
+# cp1252) a bare print() of those crashes the process. GitHub Actions is UTF-8 so
+# prod is fine, but this makes the tool crash-proof for ANY entry point (tests,
+# local runs, imported use) — not just main.py.
+import sys as _sys
+for _s in (_sys.stdout, _sys.stderr):
+    try:
+        _s.reconfigure(encoding="utf-8")
+    except Exception:
+        pass
+
 # ── Trading sessions (IST) ────────────────────────────────────────────────────
-# The agent runs 3x per day. Each session has a role:
+# The agent runs 5x per trading day; each session has a distinct role:
 SESSIONS = {
-    "morning":   {"utc_hour": 4,  "utc_min": 0,  "ist": "09:30"},   # market open
-    "midday":    {"utc_hour": 6,  "utc_min": 30, "ist": "12:00"},   # midday review
-    "preclose":  {"utc_hour": 9,  "utc_min": 30, "ist": "15:00"},   # pre-close decisions
+    "preopen":   {"utc_hour": 3,  "utc_min": 5,  "ist": "08:35"},   # pre-open macro sweep (no trading)
+    "morning":   {"utc_hour": 4,  "utc_min": 5,  "ist": "09:35"},   # market open
+    "midday":    {"utc_hour": 6,  "utc_min": 15, "ist": "11:45"},   # midday review
+    "afternoon": {"utc_hour": 7,  "utc_min": 45, "ist": "13:15"},   # afternoon positioning
+    "preclose":  {"utc_hour": 9,  "utc_min": 45, "ist": "15:15"},   # pre-close decisions + day rollover
 }
 
 # ── Phase durations (trading sessions) ───────────────────────────────────────

@@ -60,7 +60,9 @@
   },
   "market_mood": "neutral",
   "trade_allowed": true,
-  "warnings": [],
+  "warnings": [
+    "Nifty choppy intraday \u2014 wait for cleaner setups"
+  ],
   "leading_sectors": [
     "Pharma",
     "Bank"
@@ -68,7 +70,7 @@
   "market_regime": "normal",
   "sector_breadth": 0.5,
   "lagging_sectors": [],
-  "intraday_regime": "mixed",
+  "intraday_regime": "choppy",
   "macro": {
     "date": "2026-06-30",
     "session": "midday",
@@ -174,16 +176,15 @@
   },
   "pcr": {
     "date": "2026-06-30",
-    "pcr": 0.813,
-    "reading": "neutral",
-    "total_pe_oi": 3550556,
-    "total_ce_oi": 4365876,
-    "spot": 23863.5,
+    "pcr": 0.8,
+    "reading": "bearish_bias",
+    "total_pe_oi": 2740063,
+    "total_ce_oi": 3423502,
+    "spot": 23918.3,
     "max_pain": 23900.0,
-    "max_pain_dist_pct": -0.15,
-    "oi_bias": "call_heavy_resistance",
+    "max_pain_dist_pct": 0.08,
+    "oi_bias": "balanced",
     "ok": true,
     "error": ""
-  },
-  "oi_note": "Heavy call OI above spot \u2014 option writers see a lid (bearish lean)"
+  }
 }

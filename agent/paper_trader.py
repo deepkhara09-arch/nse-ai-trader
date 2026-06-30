@@ -92,6 +92,24 @@ def midday_session(book: dict, opinions: List[dict], stock_data: Dict, patterns_
     return book, patterns_db
 
 
+def intraday_close_session(book: dict, stock_data: Dict, patterns_db: Dict) -> Tuple2:
+    """Square off ONLY intraday positions at ~3:15 PM (before the 3:30 close), as a
+    real intraday trader would. Swing positions are untouched (they ride to their
+    stop/target across days). Runs at the dedicated 3:15 'intraday_close' session.
+
+    Resilient to a late trigger: it first checks if each intraday position hit its
+    stop/target during the day (exit at that level), otherwise squares off at the
+    3:15-reference price — so even if this fires at 3:25/3:35 the exit is anchored
+    to the intended ~3:15 level, not the late-fire price."""
+    book = _mark_to_market(book, stock_data)
+    # Honour stop/target hits that occurred earlier in the day first…
+    book, patterns_db = _check_exits(book, stock_data, session="intraday_close", patterns_db=patterns_db)
+    # …then square off whatever intraday remains at the 3:15 reference price.
+    book, patterns_db = _close_intraday_positions(book, stock_data, patterns_db,
+                                                  close_session="intraday_close")
+    return book, patterns_db
+
+
 def preclose_session(book: dict, opinions: List[dict], stock_data: Dict, patterns_db: Dict, market_health: dict = None) -> Tuple2:
     """Force-close all intraday positions before market close. Check swing exits."""
     book = _mark_to_market(book, stock_data)
@@ -404,20 +422,32 @@ def _check_exits(book: dict, stock_data: Dict, session: str, patterns_db: Dict):
     return book, patterns_db
 
 
-def _close_intraday_positions(book: dict, stock_data: Dict, patterns_db: Dict = None) -> Tuple2:
-    """Force-close any intraday positions at preclose. Also teaches the brain
-    from each outcome so intraday trades update pattern reliability too."""
+def _close_intraday_positions(book: dict, stock_data: Dict, patterns_db: Dict = None,
+                              close_session: str = "preclose") -> Tuple2:
+    """Force-close any intraday positions. Also teaches the brain from each outcome
+    so intraday trades update pattern reliability too.
+
+    close_session="intraday_close" → this is the dedicated 3:15 square-off. We
+    anchor the exit to the ~3:15 reference price (price_315 if the fetcher captured
+    it, else the current price) so a LATE trigger fire still books the intended
+    3:15 level rather than a stale late price. close_session="preclose" is the 3:40
+    backstop that mops up any intraday position the 3:15 run missed."""
     today = ist_today().isoformat()
     still_open = []
     for pos in book["open_positions"]:
         if pos.get("style") == "intraday":
             ticker  = pos["ticker"]
             data    = stock_data.get(ticker, {}).get("latest", {})
-            current = data.get("current_price") or data.get("close", pos["entry"])
+            # At the 3:15 square-off, prefer a captured 3:15 reference price so a
+            # late-firing trigger doesn't book a later price. Fall back to current.
+            if close_session == "intraday_close":
+                current = data.get("price_315") or data.get("current_price") or data.get("close", pos["entry"])
+            else:
+                current = data.get("current_price") or data.get("close", pos["entry"])
             pnl     = (current - pos["entry"]) * pos["qty"] * (1 if pos["action"] == "BUY" else -1)
             won     = pnl > 0
             trade   = {**pos,
-                "close_date": today, "close_session": "preclose",
+                "close_date": today, "close_session": close_session,
                 "exit_price": round(current, 2), "exit_reason": "intraday_forced_close",
                 "pnl": round(pnl, 2), "pnl_pct": round(pnl / pos["invested"] * 100, 2),
                 "won": won,

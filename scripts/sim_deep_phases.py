@@ -134,7 +134,7 @@ def main():
     with contextlib.redirect_stdout(buf):
         for day in range(60):
             _next_weekday()   # each loop iteration = a new trading day
-            for s in ["preopen", "morning", "midday", "afternoon", "preclose"]:
+            for s in ["preopen", "morning", "midday", "afternoon", "intraday_close", "preclose"]:
                 os.environ["SESSION"] = s
                 try:
                     M.run()

@@ -1,6 +1,6 @@
 """
 Main orchestrator — runs 5x per trading day via GitHub Actions.
-SESSION env var: preopen | morning | midday | afternoon | preclose
+SESSION env var: preopen | morning | midday | afternoon | intraday_close | preclose
 """
 
 import json
@@ -39,7 +39,7 @@ from agent.brain          import (
 )
 from agent.paper_trader   import (
     load_book, save_book,
-    morning_session, midday_session, preclose_session,
+    morning_session, midday_session, preclose_session, intraday_close_session,
     compute_stats, is_ready_to_alert,
 )
 from agent.recommendations import generate_recommendations, load_recommendations
@@ -100,7 +100,7 @@ def run():
     # SESSION must come from the workflow. If it's missing/blank (e.g. a manual
     # trigger where the dropdown didn't register), fail loud rather than silently
     # pretending it's "morning" — a wrong session pollutes the trading record.
-    valid_sessions = {"preopen", "morning", "midday", "afternoon", "preclose"}
+    valid_sessions = {"preopen", "morning", "midday", "afternoon", "intraday_close", "preclose"}
     if raw_session not in valid_sessions:
         print(f"[run] SESSION='{raw_session}' invalid/empty — defaulting to 'preopen' "
               f"(safe: no trading). Valid: {sorted(valid_sessions)}")
@@ -248,6 +248,14 @@ def _run_phase(state, phase, session, market_health, day, focus):
     """All phase-specific processing. Extracted so run() can guard it and always
     still refresh outputs even if a phase step fails unexpectedly.
     Returns the (possibly updated) state so run() always has the latest view."""
+    # ── intraday_close is a LIGHTWEIGHT close-only session ──────────────────────
+    # It only has work to do once paper trading is live (intraday positions can
+    # exist). In exploration/analysis there are no positions, so doing a full
+    # universe fetch here would be wasteful (and slow). No-op cleanly in that case.
+    if session == "intraday_close" and phase not in ("paper_trading", "alerting"):
+        print("[intraday_close] No live positions in this phase — nothing to square off.")
+        return state
+
     # ── EXPLORATION ────────────────────────────────────────────────────────────
     if phase == "exploration":
         tickers = NSE_UNIVERSE
@@ -374,6 +382,13 @@ def _run_phase(state, phase, session, market_health, day, focus):
         if not fresh:
             record_issue("data_fetch", "focus stocks", "all price sources returned no data — using last-known", session)
         merged = merge_stock_data(load_stock_data(), fresh)
+        # At the 3:15 square-off, stamp the live price as the 3:15 reference so the
+        # intraday exit books THIS price even if the close runs a few minutes late.
+        if session == "intraday_close":
+            for _t, _e in merged.items():
+                _lat = _e.get("latest") if isinstance(_e, dict) else None
+                if _lat and _lat.get("price_is_live") and _lat.get("current_price"):
+                    _lat["price_315"] = _lat["current_price"]
         sector_scores = compute_sector_scores(merged)
         save_sector_scores(sector_scores)
         merged = inject_sector_momentum(merged, sector_scores)
@@ -423,6 +438,11 @@ def _run_phase(state, phase, session, market_health, day, focus):
             book, patterns = morning_session(book, tradeable_opinions, patterns, market_health=market_health)
         elif session in ("midday", "afternoon"):
             book, patterns = midday_session(book, tradeable_opinions, merged, patterns, market_health=market_health)
+        elif session == "intraday_close":
+            # 3:15 square-off: close ONLY intraday positions at the ~3:15 price.
+            # Opens nothing new, leaves swing positions to ride to stop/target, and
+            # does NOT advance the day (preclose still owns the rollover).
+            book, patterns = intraday_close_session(book, merged, patterns)
         elif session == "preclose":
             book, patterns = preclose_session(book, tradeable_opinions, merged, patterns, market_health=market_health)
 
@@ -850,6 +870,9 @@ def _append_log(state: dict, session: str, closed_day: str = "") -> None:
                    f"no trading, day unchanged.")
     elif session == "preopen":
         summary = f"Pre-open sweep — macro mood {mood}; dashboard refreshed (no trading)."
+    elif session == "intraday_close":
+        summary = (f"Intraday square-off (3:15) · {phase_label} trading-day {phase_day} · "
+                   f"{open_n} open · {stats['total']} closed ({stats['win_rate']*100:.0f}% WR).")
     elif session == "test":
         summary = "Test dry-run — dashboard rebuilt, no trading, day unchanged."
     else:

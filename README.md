@@ -28,7 +28,7 @@ It shows:
 
 ## How the Agent Thinks
 
-The agent runs **5 times per trading day** (IST):
+The agent runs **6 times per trading day** (IST):
 
 | Time (IST) | Session | What happens |
 |------------|---------|-------------|
@@ -36,6 +36,7 @@ The agent runs **5 times per trading day** (IST):
 | 09:35 AM | Morning | Fetch market data, open new positions, analyse all stocks |
 | 11:45 AM | Midday | Refresh prices, update unrealised P&L, add swing signals |
 | 01:15 PM | Afternoon | Re-assess positions, trail stops, add intraday/swing signals |
+| 03:15 PM | Intraday close | Square off intraday positions before the 15:30 close (swing positions ride on) |
 | 03:40 PM | Pre-close | Post-close (after 15:30) full-session capture, close trades, record stats, roll the trading day |
 
 ### Autonomous learning phases

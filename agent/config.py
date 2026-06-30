@@ -21,6 +21,7 @@ SESSIONS = {
     "morning":   {"utc_hour": 4,  "utc_min": 5,  "ist": "09:35"},   # market open
     "midday":    {"utc_hour": 6,  "utc_min": 15, "ist": "11:45"},   # midday review
     "afternoon": {"utc_hour": 7,  "utc_min": 45, "ist": "13:15"},   # afternoon positioning
+    "intraday_close": {"utc_hour": 9, "utc_min": 45, "ist": "15:15"},  # square off intraday before 3:30 close
     "preclose":  {"utc_hour": 10, "utc_min": 10, "ist": "15:40"},   # post-close: captures full session incl 3:30 close + day rollover
 }
 
@@ -115,7 +116,8 @@ REC_SESSION_VALID_UNTIL = {
     "preopen":   "09:35 IST",   # pre-open backdrop valid until the morning run
     "morning":   "11:45 IST",   # morning recs valid until midday run
     "midday":    "13:15 IST",   # midday recs valid until afternoon run
-    "afternoon": "15:40 IST",   # afternoon recs valid until preclose run
+    "afternoon": "15:15 IST",   # afternoon recs valid until intraday-close run
+    "intraday_close": "15:40 IST",  # intraday square-off valid until preclose run
     "preclose":  "09:35 IST",   # preclose recs valid until next morning (next trading day)
 }
 

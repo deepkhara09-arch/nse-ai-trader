@@ -1,6 +1,6 @@
 {
   "date": "2026-06-30",
-  "session": "afternoon",
+  "session": "preclose",
   "nifty": {
     "symbol": "^NSEI",
     "value": 23946.25,
@@ -60,9 +60,7 @@
   },
   "market_mood": "neutral",
   "trade_allowed": true,
-  "warnings": [
-    "Nifty choppy intraday \u2014 wait for cleaner setups"
-  ],
+  "warnings": [],
   "leading_sectors": [
     "Pharma",
     "Bank"
@@ -70,7 +68,7 @@
   "market_regime": "normal",
   "sector_breadth": 0.5,
   "lagging_sectors": [],
-  "intraday_regime": "choppy",
+  "intraday_regime": "mixed",
   "macro": {
     "date": "2026-06-30",
     "session": "midday",
@@ -176,13 +174,13 @@
   },
   "pcr": {
     "date": "2026-06-30",
-    "pcr": 0.773,
+    "pcr": 0.785,
     "reading": "bearish_bias",
-    "total_pe_oi": 2715950,
-    "total_ce_oi": 3515255,
-    "spot": 23946.25,
-    "max_pain": 24000.0,
-    "max_pain_dist_pct": -0.22,
+    "total_pe_oi": 3868898,
+    "total_ce_oi": 4929515,
+    "spot": 23865.65,
+    "max_pain": 23950.0,
+    "max_pain_dist_pct": -0.35,
     "oi_bias": "call_heavy_resistance",
     "ok": true,
     "error": ""

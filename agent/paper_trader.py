@@ -152,6 +152,14 @@ def _try_open_positions(book: dict, opinions: List[dict], patterns_db: Dict, ses
 
         if signal not in ("BUY", "SELL"):
             continue
+        # ── Stale-price safety: never OPEN a position on a non-live price ────────
+        # If the live quote fetch failed, the tool falls back to a (possibly day-
+        # old) close. Opening a real entry on a stale price is a correctness risk —
+        # the entry/stop/target would be anchored to a wrong number. Skip it; we'll
+        # re-evaluate next session when a fresh price is available.
+        if op.get("price_is_live") is False:
+            print(f"[paper] Skipping {ticker} — price not live this run (stale fetch), won't open on stale price")
+            continue
         if ticker in open_tickers:
             continue
         if len(book["open_positions"]) >= MAX_OPEN_POSITIONS:

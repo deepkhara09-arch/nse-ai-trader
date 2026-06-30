@@ -151,7 +151,7 @@ def _build_html(
 
   <!-- ── TRADE tab ── -->
   <section class="tab-panel" id="tab-trade" hidden>
-    {_section_recommendations(recommendations)}
+    {_section_recommendations(recommendations, validated=alert, stats=stats)}
     {_section_rankings(ranked_stocks)}
     {_section_changelog(changelog)}
   </section>
@@ -1640,7 +1640,27 @@ def _section_watchlist(focus, stock_data, news_data, patterns, fundamentals=None
 </div>"""
 
 
-def _section_recommendations(recs) -> str:
+def _section_recommendations(recs, validated: bool = False, stats: dict = None) -> str:
+    # Honesty: until the strategy passes its paper-trade validation gate
+    # (alert_sent / `validated`), any setups shown are the tool PRACTICING — not
+    # proven calls. Frame them as such so a user never mistakes a pre-validation
+    # candidate for a validated, track-record-backed recommendation.
+    stats = stats or {}
+    if validated:
+        section_sub = "High-confidence setups with full trade details"
+        practice_banner = ""
+    else:
+        n = stats.get("total", 0)
+        section_sub = "Practice setups — strategy not yet validated"
+        practice_banner = (
+            '<div style="background:#1a1605;border:1px solid #e6a93a55;border-radius:8px;'
+            'padding:9px 12px;margin-bottom:12px;font-size:.72rem;color:#e6a93a;line-height:1.5">'
+            '<b>⚠ Not yet validated — these are practice calls.</b> The tool is still '
+            f'paper-trading to prove its edge ({n}/{MIN_TRADES_FOR_SIGNAL} trades toward a '
+            f'&#8805;{WIN_RATE_THRESHOLD*100:.0f}% win-rate gate). Setups below show what it '
+            '<i>would</i> do, for transparency — do not treat them as proven recommendations yet.'
+            '</div>'
+        )
     if not recs:
         no_recs = f"""<div class="card" style="padding:20px;text-align:center">
   <div style="font-size:.8rem;color:var(--muted);line-height:2">
@@ -1655,7 +1675,7 @@ def _section_recommendations(recs) -> str:
   </div>
 </div>"""
         return f"""<div class="section" id="recommendations">
-  <h2>Stock Recommendations <span>High-confidence setups with full trade details</span></h2>
+  <h2>Stock Recommendations <span>{section_sub}</span></h2>
   {no_recs}
 </div>"""
 
@@ -1903,8 +1923,10 @@ def _section_recommendations(recs) -> str:
   </div>
 </div>"""
 
+    rec_word = "high-confidence setup(s)" if validated else "practice setup(s)"
     return f"""<div class="section" id="recommendations">
-  <h2>Stock Recommendations <span>{len(recs)} high-confidence setup(s)</span></h2>
+  <h2>Stock Recommendations <span>{len(recs)} {rec_word}</span></h2>
+  {practice_banner}
   {cards}
 </div>"""
 

@@ -39,30 +39,38 @@ def main():
             "ICICIBANK.NS", "WIPRO.NS", "HCLTECH.NS", "AXISBANK.NS"]
     C.NSE_UNIVERSE = UNIV; M.NSE_UNIVERSE = UNIV
 
-    # Engineer prices: each stock trends UP steadily so BUYs fire and targets hit.
-    # We advance a global "tick" so prices rise across sessions -> winning trades.
+    # Engineer a REALISTIC mix: most stocks trend up (BUYs fire, targets hit) but
+    # ~40% trend DOWN so the loss path is actually exercised — stop-loss handling,
+    # losing-trade bookkeeping, and learn-from-loss all get tested (a pure-uptrend
+    # sim hides bugs in exactly the code that matters most for a learning tool).
     state_tick = {"t": 0}
 
     def fake_fetch(tickers, session="morning"):
         state_tick["t"] += 1
         out = {}
         for j, t in enumerate(tickers):
-            # rising price: base climbs each tick so open positions hit targets
             base = 300 + (j * 40)
-            c = base * (1.0 + 0.004 * state_tick["t"])   # +0.4% drift per fetch
+            losing = (j % 5) in (0, 2)   # ~40% of stocks decline -> stops get hit
+            drift  = (-0.004 if losing else 0.004) * state_tick["t"]
+            c = base * (1.0 + drift)
+            up = not losing
             out[t] = {"ticker": t, "fetched_at": "now", "session": session,
-                      "latest": {"close": c, "rsi": 48, "macd_hist": 0.8,
-                                 "ema_short": c*1.03, "ema_long": c*1.01, "ema_trend": c*0.98,
+                      "latest": {"close": c, "rsi": 48 if up else 42,
+                                 "macd_hist": 0.8 if up else -0.6,
+                                 "ema_short": c*(1.03 if up else 0.97),
+                                 "ema_long": c*(1.01 if up else 0.99), "ema_trend": c*0.98,
                                  "atr": c*0.02, "atr_pct": 2.0, "vol_rel": 1.8, "bb_pct": 0.25,
                                  "open": c*0.995, "high": c*1.03, "low": c*0.985, "volume": 1e6,
                                  "current_price": c, "session_high": c*1.03, "session_low": c*0.985,
                                  "day_high": c*1.03, "day_low": c*0.985, "day_open": c*0.995,
+                                 "price_is_live": True,
                                  "candle_sequence": [], "delivery_signal": "strong_accumulation",
                                  "delivery_pct": 70},
                       "daily": {}, "price_history_60d": [base*0.9 + i for i in range(60)],
                       "volume_history_20d": [1e6]*20,
                       "prev_bar": {"close": c*0.97, "open": c*0.96, "high": c*0.98, "low": c*0.95},
-                      "prev2_bar": {"close": c*0.95}, "trend_10d": "strong_up"}
+                      "prev2_bar": {"close": c*0.95},
+                      "trend_10d": "strong_up" if up else "strong_down"}
         return out
 
     DF.fetch_stock_data = fake_fetch; M.fetch_stock_data = fake_fetch
@@ -164,12 +172,17 @@ def main():
     print("final win rate:", final_stats["win_rate"], "| total PnL:", final_stats["total_pnl"])
     print("recommendations seen:", obs["recs_seen"])
     print("reached alerting:", obs["alerted"])
-    # Assertions
+    # Assertions — now also require that the LOSS path actually ran (some losers),
+    # so stop-loss handling and learn-from-loss are genuinely exercised, not skipped.
+    had_losses = final_stats["losses"] > 0
+    had_wins   = final_stats["wins"] > 0
     checks = {
         "no errors":            len(obs["errors"]) == 0,
         "positions opened":     obs["opened"] > 0,
         "trades closed":        obs["max_trades"] > 0,
         "reached paper_trading": "paper_trading" in obs["phases"],
+        "winning trades exist":  had_wins,
+        "losing trades exist (loss path tested)": had_losses,
     }
     print("--- CHECKS ---")
     for k, v in checks.items():

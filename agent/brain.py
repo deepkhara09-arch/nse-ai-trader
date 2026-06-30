@@ -904,6 +904,7 @@ def analyse_stock(
         "coach_notes":  coach_notes,
         "days_to_earnings": days_to_earnings,   # for earnings-aware sizing downstream
         "mtf_alignment": mtf_alignment,         # aligned / conflict / neutral (multi-timeframe)
+        "price_is_live": d.get("price_is_live", True),  # gate trading on stale prices
     }
 
 

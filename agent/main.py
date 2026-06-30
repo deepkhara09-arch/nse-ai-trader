@@ -530,19 +530,27 @@ def _tick_background_cohorts(state: dict, session: str, skip_fetch: bool = False
     focus     = state.get("focus_stocks", [])
     batches   = state.setdefault("background_batches", [])
 
-    # ── Start a new batch if: no batches exist, OR the newest batch finished day 1
-    should_start_new = (
-        not batches or
-        batches[-1].get("day", 0) >= 1   # newest batch has passed day 1 → spawn next
-    )
-    # But don't spawn another if newest is still on day 0 (just created)
-    if batches and batches[-1].get("day", 0) == 0:
-        should_start_new = False
-    # Cap concurrent in-flight batches to keep each preclose under the Actions
-    # timeout. Batches reuse already-fetched universe data (no extra network), so
-    # the cost is scoring CPU — 5 staggered scans keep the competition pool fresh
-    # without blowing the runner. (CONCURRENT_BATCH_CAP in config.)
+    # ── Decide whether to start a new batch ────────────────────────────────────
+    # Goal: keep a staggered pipeline of in-flight batches so the competition pool
+    # is continuously refreshed (a new batch's candidates can challenge incumbents
+    # every few days). Spawn when the newest batch has passed day 1 (normal
+    # staggering) OR when the in-flight pool has fallen below the cap — the latter
+    # is SELF-HEALING: if a state hiccup or run gap ever loses batches, the pool
+    # refills itself instead of leaving a permanent gap. (Prior logic could leave
+    # the pool under-filled after a missed/duplicate run; this repairs it.)
     active_count = sum(1 for b in batches if not b.get("ready"))
+    newest_day   = batches[-1].get("day", 0) if batches else 99
+    should_start_new = (
+        not batches
+        or newest_day >= 1                       # normal staggering
+        or active_count < CONCURRENT_BATCH_CAP    # self-heal: top the pool back up
+    )
+    # Never spawn a second brand-new batch in the same tick (newest still day 0)
+    # unless we're below the cap and genuinely need to refill.
+    if batches and newest_day == 0 and active_count >= CONCURRENT_BATCH_CAP:
+        should_start_new = False
+    # Hard cap on concurrent in-flight batches to keep each preclose under the
+    # Actions timeout (batches reuse already-fetched data, so cost is scoring CPU).
     if active_count >= CONCURRENT_BATCH_CAP:
         should_start_new = False
 

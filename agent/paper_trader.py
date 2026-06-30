@@ -46,7 +46,31 @@ def _fresh_book() -> dict:
         "daily_snapshots":  [],
         "daily_pnl_today":  0.0,
         "last_snapshot_date": None,
+        # Lifetime aggregates — survive any trimming of the trade records below, so
+        # the all-time win-rate / count is never lost even years out.
+        "lifetime_wins":    0,
+        "lifetime_losses":  0,
+        "lifetime_pnl":     0.0,
     }
+
+
+# A high cap on STORED trade records (≈ many years of trading). Records beyond this
+# are dropped from storage, but lifetime aggregates are preserved separately so
+# stats and the validation gate stay correct. This only bounds disk growth; it is
+# deliberately high so it never interferes with normal operation.
+MAX_STORED_TRADES = 3000
+
+
+def _record_closed_trade(book: dict, trade: dict) -> None:
+    """Append a closed trade, update lifetime aggregates, and bound stored records.
+    Lifetime counters persist even if old records are trimmed."""
+    book.setdefault("closed_trades", []).append(trade)
+    won = trade.get("won", trade.get("pnl", 0) > 0)
+    book["lifetime_wins"]   = book.get("lifetime_wins", 0)   + (1 if won else 0)
+    book["lifetime_losses"] = book.get("lifetime_losses", 0) + (0 if won else 1)
+    book["lifetime_pnl"]    = round(book.get("lifetime_pnl", 0.0) + trade.get("pnl", 0), 2)
+    if len(book["closed_trades"]) > MAX_STORED_TRADES:
+        book["closed_trades"] = book["closed_trades"][-MAX_STORED_TRADES:]
 
 
 # ── Session actions ────────────────────────────────────────────────────────────
@@ -349,7 +373,7 @@ def _check_exits(book: dict, stock_data: Dict, session: str, patterns_db: Dict):
                 "won":           won,
                 "open_days":     open_days,
             }
-            book["closed_trades"].append(trade)
+            _record_closed_trade(book, trade)
             book["capital"] += pos["invested"] + pnl
             book["daily_pnl_today"] = book.get("daily_pnl_today", 0) + pnl
 
@@ -391,7 +415,7 @@ def _close_intraday_positions(book: dict, stock_data: Dict, patterns_db: Dict = 
                 "won": won,
                 "open_days": _days_between(pos["open_date"], today),
             }
-            book["closed_trades"].append(trade)
+            _record_closed_trade(book, trade)
             book["capital"] += pos["invested"] + pnl
             book["daily_pnl_today"] = book.get("daily_pnl_today", 0) + pnl
             # Teach the brain from intraday outcomes too (was previously skipped)
@@ -478,17 +502,30 @@ def compute_stats(book: dict) -> dict:
     # never raises — defensiveness for older brain data.
     wins   = [t for t in trades if t.get("won", t.get("pnl", 0) > 0)]
     losses = [t for t in trades if not t.get("won", t.get("pnl", 0) > 0)]
-    wr     = len(wins) / len(trades)
     avg_w  = sum(t["pnl"] for t in wins)   / max(len(wins),   1)
     avg_l  = sum(t["pnl"] for t in losses) / max(len(losses), 1)
+
+    # All-time totals: prefer lifetime aggregates if old records were ever trimmed
+    # (records bounded at MAX_STORED_TRADES). Until then they equal the record
+    # counts. This keeps the headline count/win-rate honest for the long haul.
+    lt_w = book.get("lifetime_wins", 0)
+    lt_l = book.get("lifetime_losses", 0)
+    if lt_w + lt_l >= len(trades):
+        n_wins, n_losses = lt_w, lt_l
+        total_pnl = round(book.get("lifetime_pnl", sum(t["pnl"] for t in trades)), 2)
+    else:
+        n_wins, n_losses = len(wins), len(losses)
+        total_pnl = round(sum(t["pnl"] for t in trades), 2)
+    total = n_wins + n_losses
+    wr    = n_wins / max(total, 1)
     # Expectancy: E = (WR × avg_win) + (LR × avg_loss)
     expectancy = round(wr * avg_w + (1 - wr) * avg_l, 2)
     return {
-        "total":      len(trades),
-        "wins":       len(wins),
-        "losses":     len(losses),
+        "total":      total,
+        "wins":       n_wins,
+        "losses":     n_losses,
         "win_rate":   round(wr, 3),
-        "total_pnl":  round(sum(t["pnl"] for t in trades), 2),
+        "total_pnl":  total_pnl,
         "avg_win":    round(avg_w, 2),
         "avg_loss":   round(avg_l, 2),
         "expectancy": expectancy,

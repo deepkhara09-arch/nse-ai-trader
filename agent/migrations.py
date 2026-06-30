@@ -33,7 +33,7 @@ RANK_HISTORY_FILE    = "brain/rank_history.json"
 WATCHLIST_FILE       = "brain/watchlist_signals.json"
 DECISIONS_FILE       = "brain/decisions.json"
 
-CURRENT_SCHEMA_VERSION = 9   # bump this when you add a new migration
+CURRENT_SCHEMA_VERSION = 10   # bump this when you add a new migration
 
 
 # ── Migration functions ────────────────────────────────────────────────────────
@@ -257,6 +257,21 @@ def _migrate_v9(state, stock_data, patterns, book, fundamentals, decisions):
     return state, stock_data, patterns, book, fundamentals, decisions
 
 
+def _migrate_v10(state, stock_data, patterns, book, fundamentals, decisions):
+    """
+    v10: lifetime trade aggregates. Backfills lifetime_wins/losses/pnl from the
+    existing closed_trades so the all-time win-rate/count survives any future
+    trimming of stored trade records (records are bounded at MAX_STORED_TRADES).
+    """
+    trades = book.get("closed_trades", []) or []
+    if "lifetime_wins" not in book:
+        wins = sum(1 for t in trades if t.get("won", t.get("pnl", 0) > 0))
+        book["lifetime_wins"]   = wins
+        book["lifetime_losses"] = len(trades) - wins
+        book["lifetime_pnl"]    = round(sum(t.get("pnl", 0) for t in trades), 2)
+    return state, stock_data, patterns, book, fundamentals, decisions
+
+
 # ── Registry: maps schema version → migration that brings data UP to that version
 MIGRATIONS = {
     1: _migrate_v1,
@@ -268,6 +283,7 @@ MIGRATIONS = {
     7: _migrate_v7,
     8: _migrate_v8,
     9: _migrate_v9,
+    10: _migrate_v10,
 }
 
 

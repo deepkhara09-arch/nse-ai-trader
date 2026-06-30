@@ -782,10 +782,11 @@ def _market_bar(nifty, vix, mood, warnings, market_health) -> str:
             fii = fd.get("fii_net_cr", 0); dii = fd.get("dii_net_cr", 0)
             fcol = "var(--green)" if fii >= 0 else "var(--red)"
             dcol = "var(--green)" if dii >= 0 else "var(--red)"
-            chips.append(f'FII <b style="color:{fcol}">&#8377;{fii:+,.0f} Cr</b>')
+            stale = _stale_tag(fd.get("date"))
+            chips.append(f'FII <b style="color:{fcol}">&#8377;{fii:+,.0f} Cr</b>{stale}')
             chips.append(f'DII <b style="color:{dcol}">&#8377;{dii:+,.0f} Cr</b>')
         if pcr and pcr.get("pcr"):
-            chips.append(f'PCR <b>{pcr.get("pcr")}</b>')
+            chips.append(f'PCR <b>{pcr.get("pcr")}</b>{_stale_tag(pcr.get("date"))}')
         if chips:
             flow_html = ('<div style="margin-top:7px;font-size:.68rem;color:var(--text)">'
                          + ' &nbsp;·&nbsp; '.join(chips) + '</div>')
@@ -1348,6 +1349,35 @@ def _section_sectors(sector_scores: dict) -> str:
   <h2>Sector Rotation <span>Real-time sector momentum — updates every session</span></h2>
   <div class="grid3">{cards}</div>
 </div>"""
+
+
+def _stale_tag(data_date: str, fresh_within_days: int = 1) -> str:
+    """Return an amber '(Nd old)' marker when a feed's last value is older than
+    the last trading day, so stale last-known data is never shown as if current.
+    Honesty: a number from days ago must look like a number from days ago.
+    Returns '' when the data is current (today or the previous trading day)."""
+    if not data_date:
+        return ""
+    try:
+        from datetime import date as _date
+        from agent.trading_calendar import ist_today, is_trading_day
+        d = _date.fromisoformat(str(data_date)[:10])
+        today = ist_today()
+        gap = (today - d).days
+        # Count back over weekends/holidays: how many TRADING days stale?
+        trading_gap = 0
+        probe = today
+        from datetime import timedelta as _td
+        while probe > d and trading_gap <= 10:
+            probe -= _td(days=1)
+            if is_trading_day(probe):
+                trading_gap += 1
+        if trading_gap <= fresh_within_days:
+            return ""
+        return (f' <span style="color:var(--amber,#e6a93a);font-size:.6rem;font-weight:600" '
+                f'title="last successful update {data_date}">({trading_gap}d old)</span>')
+    except Exception:
+        return ""
 
 
 def _section_focus_competition() -> str:

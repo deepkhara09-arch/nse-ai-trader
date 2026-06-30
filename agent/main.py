@@ -1,11 +1,21 @@
 """
-Main orchestrator — runs 3x per trading day via GitHub Actions.
-SESSION env var: morning | midday | preclose
+Main orchestrator — runs 5x per trading day via GitHub Actions.
+SESSION env var: preopen | morning | midday | afternoon | preclose
 """
 
 import json
 import os
+import sys
 from datetime import date
+
+# Force UTF-8 stdout/stderr so the unicode glyphs used in log lines (→ — · ✅ ❌)
+# never crash a run on a non-UTF-8 console (e.g. Windows cp1252). On Linux/Actions
+# this is already UTF-8; this just makes the tool portable and crash-proof.
+for _stream in (sys.stdout, sys.stderr):
+    try:
+        _stream.reconfigure(encoding="utf-8")
+    except Exception:
+        pass
 
 from agent.trading_calendar import ist_today
 from agent.migrations import run_migrations, check_schema_health

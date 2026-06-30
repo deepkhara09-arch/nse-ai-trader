@@ -118,7 +118,13 @@ VWAP_ENABLED = True    # computed from intraday ticks
 
 # ── Brain self-improvement ────────────────────────────────────────────────────
 # Pattern reliability decays over time if it hasn't been tested recently
-PATTERN_DECAY_RATE     = 0.02      # reliability shrinks by this if untested > 7 days
+PATTERN_DECAY_RATE     = 0.02      # (legacy) kept for back-compat; superseded by half-life
+# Recency decay half-life for learned pattern evidence (in days). The accumulated
+# wins/losses behind a pattern's reliability halve over this span, so RECENT trade
+# outcomes dominate and a pattern that stops working loses its edge instead of
+# coasting on old wins. Markets are non-stationary — this keeps learning adaptive.
+# ~120 days ≈ 6 months: fast enough to adapt, slow enough to ignore short noise.
+PATTERN_DECAY_HALFLIFE_DAYS = 120
 MIN_PATTERN_SAMPLES    = 3         # minimum trades before trusting a pattern
 CONFIDENCE_FLOOR       = 0.40      # patterns below this are ignored
 

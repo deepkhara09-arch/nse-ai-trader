@@ -22,7 +22,8 @@ from agent.config import (
     BUY_SIGNAL_MIN_SCORE, SELL_SIGNAL_MIN_SCORE, SIGNAL_SCORE_GAP,
     ATR_STOP_MULTIPLIER, ATR_TARGET_MULTIPLIER,
     FLAT_STOP_PCT,
-    PATTERN_DECAY_RATE, MIN_PATTERN_SAMPLES, CONFIDENCE_FLOOR,
+    PATTERN_DECAY_RATE, PATTERN_DECAY_HALFLIFE_DAYS,
+    MIN_PATTERN_SAMPLES, CONFIDENCE_FLOOR,
 )
 from agent.trading_calendar import ist_today
 
@@ -943,15 +944,34 @@ def learn_from_trade(
     for p in patterns_at_entry:
         if p not in tk["reliable_patterns"]:
             tk["reliable_patterns"][p] = {
-                "wins": 0, "losses": 0, "reliability": 0.5,
+                "wins": 0.0, "losses": 0.0, "reliability": 0.5,
                 "last_seen": today,
             }
         pr = tk["reliable_patterns"][p]
+
+        # ── Recency decay (non-stationary markets) ─────────────────────────────
+        # The market changes regime over time; a pattern that worked 18 months ago
+        # may not work now. Before recording this outcome, exponentially decay the
+        # accumulated wins/losses by how long it's been since this pattern last
+        # produced a trade. This makes RECENT outcomes dominate, so a pattern that
+        # stops working loses reliability instead of coasting on stale old wins.
+        # Half-life ~ PATTERN_DECAY_HALFLIFE_DAYS: evidence halves over that span.
+        try:
+            from datetime import date as _date
+            last = _date.fromisoformat(pr.get("last_seen", today))
+            days_gap = max(0, (ist_today() - last).days)
+        except Exception:
+            days_gap = 0
+        if days_gap > 0:
+            decay = 0.5 ** (days_gap / PATTERN_DECAY_HALFLIFE_DAYS)
+            pr["wins"]   = round(pr.get("wins", 0)   * decay, 3)
+            pr["losses"] = round(pr.get("losses", 0) * decay, 3)
+
         pr["last_seen"] = today
         if won:
-            pr["wins"] += 1
+            pr["wins"]   = round(pr.get("wins", 0) + 1, 3)
         else:
-            pr["losses"] += 1
+            pr["losses"] = round(pr.get("losses", 0) + 1, 3)
         total = pr["wins"] + pr["losses"]
         # Bayesian-ish smoothing: start at 0.5, drift toward evidence
         prior_weight = max(3 - total, 0)
@@ -1000,17 +1020,33 @@ def learn_from_trade(
 
 
 def _apply_decay(patterns: dict) -> None:
-    """Nudge reliability of stale patterns back toward 0.5 (uncertainty)."""
+    """Fade patterns the brain hasn't re-confirmed lately back toward uncertainty.
+
+    Two effects, both driven by how long since the pattern last produced a trade:
+      1. Decay the underlying EVIDENCE (wins/losses) on the same half-life used when
+         a pattern fires, so a pattern that goes quiet doesn't keep a stale, heavy
+         track record — its sample shrinks toward 0 (i.e. 'we're no longer sure').
+      2. Recompute reliability from the decayed evidence (Bayesian smoothing pulls
+         a low-sample pattern back toward 0.5 automatically).
+    This is what keeps the learned knowledge from going stale in a market that
+    changes regime — old, unconfirmed edges fade instead of lingering forever.
+    """
     today = ist_today()
     for name, p in patterns.items():
         if not p.get("last_seen"):
             continue
-        days_since = (today - date.fromisoformat(p["last_seen"])).days
+        try:
+            days_since = (today - date.fromisoformat(p["last_seen"])).days
+        except Exception:
+            continue
         if days_since > 7:
-            # Pull toward 0.5 at decay rate per day of staleness
-            drift = PATTERN_DECAY_RATE * (days_since - 7)
+            decay = 0.5 ** (days_since / PATTERN_DECAY_HALFLIFE_DAYS)
+            p["wins"]   = round(p.get("wins", 0)   * decay, 3)
+            p["losses"] = round(p.get("losses", 0) * decay, 3)
+            total = p["wins"] + p["losses"]
+            prior_weight = max(3 - total, 0)
             p["reliability"] = round(
-                p["reliability"] + drift * (0.5 - p["reliability"]), 3
+                (p["wins"] + prior_weight * 0.5) / (total + prior_weight), 3
             )
 
 

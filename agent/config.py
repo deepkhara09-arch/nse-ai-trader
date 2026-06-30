@@ -57,6 +57,13 @@ NSE_UNIVERSE = list(dict.fromkeys(NSE_UNIVERSE))
 
 FOCUS_STOCK_COUNT = 15   # increased from 12 → wider coverage across sectors
 
+# Concurrent background exploration batches. Each is an independent full-universe
+# scan that feeds the perpetual focus-competition pool. More batches = a fresher,
+# more diverse candidate pool, at the cost of more scoring CPU per preclose. They
+# reuse already-fetched data (no extra network), so 5 stays well under the runner
+# timeout. This is the engine that keeps recommendations from ever going stale.
+CONCURRENT_BATCH_CAP = 5
+
 # ── Capital & risk ────────────────────────────────────────────────────────────
 INITIAL_CAPITAL        = 100_000   # virtual INR
 MAX_POSITION_SIZE_PCT  = 0.12      # max 12% per trade (normal market)

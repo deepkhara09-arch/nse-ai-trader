@@ -35,10 +35,13 @@ def rank_focus_stocks(
     fundamentals: Dict,
     book: dict,
     market_health: dict,
+    record_history: bool = True,
 ) -> List[dict]:
     """
     Returns focus stocks sorted best→worst with probability scores.
-    Saves rank history for trend display.
+    Saves rank history for trend display (unless record_history=False — used when
+    scoring background-competition challengers, which must NOT pollute the focus
+    stocks' rank history or the demotion logic that reads it).
     """
     from agent.fundamentals_fetcher import score_fundamentals
     from agent.brain import get_reliable_patterns_list
@@ -204,7 +207,8 @@ def rank_focus_stocks(
         prev = prev_ranks.get(r["ticker"])
         r["rank_delta"] = (prev - r["rank"]) if prev else 0   # positive = moved up
 
-    _save_rank_history(ranked)
+    if record_history:
+        _save_rank_history(ranked)
     return ranked
 
 
@@ -238,13 +242,31 @@ def evaluate_focus_refresh(
         not_in_focus = [t for t in promotion_pool if t not in focus]
         promote_candidates = list(dict.fromkeys(not_in_focus + promote_candidates))
 
-    if not demote_candidates and not promote_candidates:
+    # ── Direct competition: challenge mediocre incumbents ──────────────────────
+    # The demotion rule above only fires for stocks stuck at the very bottom. But
+    # the goal is a perpetual competition: a clearly-stronger candidate should be
+    # able to unseat an incumbent that's merely average, not just a bottom-3 one.
+    # We score each pooled candidate on the SAME composite scale as the focus
+    # stocks, and if it beats the weakest incumbent by a clear margin, we challenge.
+    comp_demoted, comp_promoted = _competitive_challenges(
+        focus, ranked, promotion_pool or [], stock_data, patterns,
+        news_data, fundamentals, watchlist_signals,
+    )
+
+    if not demote_candidates and not promote_candidates and not comp_promoted:
         return focus, [], []
 
-    # Only do a swap if we have both a demote and a promote candidate
+    # Existing bottom-3 swaps (need both a demote and a promote candidate)
     n_swaps = min(len(demote_candidates), len(promote_candidates))
     demoted  = demote_candidates[:n_swaps]
     promoted = promote_candidates[:n_swaps]
+
+    # Add the competition-driven challenges (already paired weakest-incumbent →
+    # stronger-candidate), avoiding double-counting anything already swapped.
+    for inc, cand in zip(comp_demoted, comp_promoted):
+        if inc not in demoted and cand not in promoted and cand not in focus:
+            demoted.append(inc)
+            promoted.append(cand)
 
     new_focus = [t for t in focus if t not in demoted] + promoted
     new_focus = list(dict.fromkeys(new_focus))[:n]   # dedup, cap at n
@@ -361,6 +383,71 @@ def _save_rank_history(ranked: List[dict]) -> None:
     os.makedirs(BRAIN_DIR, exist_ok=True)
     with open(RANK_HISTORY_FILE, "w") as f:
         json.dump(history, f, indent=2)
+
+
+# How much higher (composite points) a challenger must score than the incumbent
+# it replaces. A margin prevents churn on tiny, noisy differences — only a clearly
+# better stock wins a focus slot.
+COMPETITION_MARGIN = 8.0
+# At most this many competitive swaps per refresh, so the focus list evolves
+# steadily rather than lurching wholesale in one session.
+MAX_COMPETITIVE_SWAPS = 3
+
+
+def _competitive_challenges(
+    focus: List[str],
+    ranked: List[dict],
+    pool: List[str],
+    stock_data: Dict,
+    patterns: Dict,
+    news_data: Dict,
+    fundamentals: Dict,
+    watchlist_signals: Dict,
+) -> Tuple[List[str], List[str]]:
+    """
+    Perpetual competition: score each pooled candidate on the same composite scale
+    as the focus stocks and let a clearly-stronger candidate unseat the weakest
+    incumbent (by COMPETITION_MARGIN). Returns (incumbents_out, challengers_in),
+    paired and ordered weakest-incumbent → strongest-challenger.
+    """
+    challengers = [t for t in pool if t and t not in focus and t in stock_data]
+    if not focus or not challengers:
+        return [], []
+
+    # Incumbent composite scores (from the ranking we already computed this run).
+    inc_score = {r["ticker"]: r.get("composite_score", 0) for r in ranked}
+    # Weakest incumbents first.
+    incumbents_sorted = sorted(focus, key=lambda t: inc_score.get(t, 0))
+
+    # Score the challengers with the SAME composite engine, so the comparison is
+    # apples-to-apples. Reuse rank_focus_stocks on just the challenger set.
+    try:
+        from agent.market_health import load_market_health
+        mh = load_market_health()
+    except Exception:
+        mh = {}
+    challenger_ranked = rank_focus_stocks(
+        challengers, stock_data, patterns, news_data, fundamentals,
+        {"closed_trades": []}, mh, record_history=False,
+    )
+    cand_score = sorted(
+        ((r["ticker"], r.get("composite_score", 0)) for r in challenger_ranked),
+        key=lambda kv: -kv[1],
+    )
+
+    out, in_ = [], []
+    used_inc = set()
+    for cand, cscore in cand_score:
+        if len(out) >= MAX_COMPETITIVE_SWAPS:
+            break
+        # Find the weakest incumbent not already challenged this round.
+        for inc in incumbents_sorted:
+            if inc in used_inc:
+                continue
+            if cscore >= inc_score.get(inc, 0) + COMPETITION_MARGIN:
+                out.append(inc); in_.append(cand); used_inc.add(inc)
+            break   # only test against the current weakest; stop either way
+    return out, in_
 
 
 def _get_demotion_candidates(ranked: List[dict]) -> List[str]:

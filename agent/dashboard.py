@@ -167,6 +167,7 @@ def _build_html(
   <!-- ── LEARN tab ── -->
   <section class="tab-panel" id="tab-learn" hidden>
     {_section_coach(coach_memory)}
+    {_section_focus_competition()}
     {_section_attribution(attribution)}
     {_section_research(state, decisions)}
     {_section_brain(focus, patterns)}
@@ -1346,6 +1347,50 @@ def _section_sectors(sector_scores: dict) -> str:
     return f"""<div class="section" id="sectors">
   <h2>Sector Rotation <span>Real-time sector momentum — updates every session</span></h2>
   <div class="grid3">{cards}</div>
+</div>"""
+
+
+def _section_focus_competition() -> str:
+    """Honest, visible record of every focus-list change driven by the perpetual
+    background competition — what came in, what went out, and exactly why."""
+    try:
+        from agent.focus_competition import load_focus_competition
+        events = load_focus_competition()
+    except Exception:
+        events = []
+
+    if not events:
+        body = ("""<div class="card" style="padding:18px;text-align:center;font-size:.8rem;color:var(--muted)">
+      Background batches keep re-scanning the whole universe. When one finds a stock
+      stronger than a current focus stock, the swap and its reason appear here —
+      so the focus list never changes silently. No competition swaps yet.
+    </div>""")
+    else:
+        recent = list(reversed(events))[:25]
+        rows = ""
+        for e in recent:
+            act = e.get("action", "")
+            color = "var(--green)" if act == "promoted" else "var(--red)"
+            label = "IN" if act == "promoted" else "OUT"
+            rows += (
+                f'<tr>'
+                f'<td style="color:var(--muted);font-size:.7rem;white-space:nowrap">{e.get("ts","")}</td>'
+                f'<td><span style="color:{color};font-size:.7rem;font-weight:700">{label}</span></td>'
+                f'<td><strong style="font-size:.8rem">{e.get("ticker","")}</strong></td>'
+                f'<td style="font-size:.7rem;color:var(--muted)">{(str(e.get("score")) if e.get("score") else "")}</td>'
+                f'<td style="font-size:.74rem;color:var(--fg)">{e.get("reason","")}</td>'
+                f'</tr>'
+            )
+        body = f"""<div class="card table-wrap">
+    <table>
+      <thead><tr><th>When</th><th>In/Out</th><th>Stock</th><th>Score</th><th>Why</th></tr></thead>
+      <tbody>{rows}</tbody>
+    </table>
+  </div>"""
+
+    return f"""<div class="section" id="focus-competition">
+  <h2>Focus Competition <span>Every focus change, and exactly why — never silent</span></h2>
+  {body}
 </div>"""
 
 

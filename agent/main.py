@@ -11,7 +11,7 @@ from agent.trading_calendar import ist_today
 from agent.migrations import run_migrations, check_schema_health
 from agent.config import (
     NSE_UNIVERSE, FOCUS_STOCK_COUNT,
-    EXPLORATION_DAYS, ANALYSIS_DAYS,
+    EXPLORATION_DAYS, ANALYSIS_DAYS, CONCURRENT_BATCH_CAP,
     BRAIN_DIR, DAILY_LOG_FILE,
 )
 from agent.state_manager import (
@@ -528,9 +528,12 @@ def _tick_background_cohorts(state: dict, session: str, skip_fetch: bool = False
     # But don't spawn another if newest is still on day 0 (just created)
     if batches and batches[-1].get("day", 0) == 0:
         should_start_new = False
-    # Cap at 3 concurrent in-flight batches to avoid overloading the runner
+    # Cap concurrent in-flight batches to keep each preclose under the Actions
+    # timeout. Batches reuse already-fetched universe data (no extra network), so
+    # the cost is scoring CPU — 5 staggered scans keep the competition pool fresh
+    # without blowing the runner. (CONCURRENT_BATCH_CAP in config.)
     active_count = sum(1 for b in batches if not b.get("ready"))
-    if active_count >= 3:
+    if active_count >= CONCURRENT_BATCH_CAP:
         should_start_new = False
 
     if should_start_new:
@@ -547,7 +550,7 @@ def _tick_background_cohorts(state: dict, session: str, skip_fetch: bool = False
     active_batches = [b for b in batches if not b.get("ready")]
     if not active_batches:
         # Nothing to tick — still refresh the legacy pointer below
-        state["background_batches"] = batches[-5:]
+        state["background_batches"] = batches[-(CONCURRENT_BATCH_CAP + 3):]
         ready = [b for b in batches if b.get("ready")]
         state["background_cohort"] = ready[-1] if ready else None
         return
@@ -598,8 +601,9 @@ def _tick_background_cohorts(state: dict, session: str, skip_fetch: bool = False
             except Exception as e:
                 print(f"[cohort] Batch #{batch_id} scoring error: {e}")
 
-    # Keep only last 5 batches (older ones are stale)
-    state["background_batches"] = batches[-5:]
+    # Retain active + a few recently-graduated batches so their candidates still
+    # feed the competition pool before being rotated out.
+    state["background_batches"] = batches[-(CONCURRENT_BATCH_CAP + 3):]
     # Legacy compat: expose most-recent ready batch as background_cohort
     ready = [b for b in batches if b.get("ready")]
     state["background_cohort"] = ready[-1] if ready else None
@@ -625,11 +629,31 @@ def _maybe_refresh_focus(state, stock_data, patterns, news_data, fund, book, mar
     wl = update_watchlist_signals(wl, stock_data, patterns, news_data, fund, focus)
     save_watchlist_signals(wl)
 
-    # Use background cohort candidates as the promotion candidate pool if ready
-    cohort = state.get("background_cohort", {})
-    cohort_candidates = cohort.get("candidates", []) if cohort.get("ready") else []
+    # ── Competition pool: ALL ready batches, not just the latest ────────────────
+    # Each background batch is an independent full-universe scan. Pooling every
+    # ready batch's candidates means the focus list competes against the combined
+    # findings of multiple staggered scans — so a genuinely strong stock that shows
+    # up across batches gets surfaced, and incumbents are continually challenged.
+    batches = state.get("background_batches", [])
+    pool_counts = {}
+    for b in batches:
+        if b.get("ready"):
+            for t in b.get("candidates", []):
+                pool_counts[t] = pool_counts.get(t, 0) + 1
+    # Rank the pool by how many independent batches surfaced each stock (consensus
+    # = stronger signal), preserving order for ties.
+    cohort_candidates = [t for t, _ in sorted(pool_counts.items(),
+                                              key=lambda kv: -kv[1])]
+    # Back-compat: also fold in the legacy single-cohort pointer if present.
+    legacy = state.get("background_cohort", {}) or {}
+    if legacy.get("ready"):
+        for t in legacy.get("candidates", []):
+            if t not in cohort_candidates:
+                cohort_candidates.append(t)
     if cohort_candidates:
-        print(f"[cohort] Using {len(cohort_candidates)} background candidates for focus refresh")
+        n_ready = sum(1 for b in batches if b.get("ready"))
+        print(f"[cohort] Competition pool: {len(cohort_candidates)} candidates from "
+              f"{n_ready} ready batch(es) for focus refresh")
 
     new_focus, promoted, demoted = evaluate_focus_refresh(
         focus, ranked, stock_data, patterns, news_data, fund, wl,
@@ -643,6 +667,13 @@ def _maybe_refresh_focus(state, stock_data, patterns, news_data, fund, book, mar
         note = f"Focus refresh — promoted: {[t.replace('.NS','') for t in promoted]} | " \
                f"demoted: {[t.replace('.NS','') for t in demoted]}"
         state = add_brain_note(state, note)
+        # Honest, visible competition log: record every swap + why (with scores).
+        try:
+            from agent.focus_competition import record_focus_changes
+            scores = {r["ticker"]: r.get("composite_score", 0) for r in ranked}
+            record_focus_changes(promoted, demoted, scores=scores, driver="competition")
+        except Exception as e:
+            print(f"[competition] could not log focus changes (non-fatal): {e}")
         # Fetch fundamentals + 2yr history for any newly promoted stocks
         if promoted:
             new_fund = fetch_fundamentals(promoted)

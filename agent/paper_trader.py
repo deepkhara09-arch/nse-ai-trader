@@ -562,9 +562,27 @@ def _reset_daily_pnl_if_new_day(book: dict) -> dict:
 
 
 def _days_between(d1: str, d2: str) -> int:
-    a = date.fromisoformat(d1)
-    b = date.fromisoformat(d2)
-    return (b - a).days
+    """TRADING days between two ISO dates (weekends/holidays excluded), so a
+    max_held_days limit means trading days — consistent with the rest of the tool
+    and with how the config comments describe it. A swing opened before a weekend
+    doesn't lose 2 of its held-days to Sat/Sun."""
+    try:
+        from agent.trading_calendar import is_trading_day
+        from datetime import timedelta
+        a = date.fromisoformat(d1)
+        b = date.fromisoformat(d2)
+        if b <= a:
+            return 0
+        n = 0
+        probe = a
+        while probe < b:
+            probe += timedelta(days=1)
+            if is_trading_day(probe):
+                n += 1
+        return n
+    except Exception:
+        # Fall back to calendar days if anything goes wrong — never break an exit.
+        return (date.fromisoformat(d2) - date.fromisoformat(d1)).days
 
 
 # ── Stats ──────────────────────────────────────────────────────────────────────

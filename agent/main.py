@@ -336,10 +336,17 @@ def _run_phase(state, phase, session, market_health, day, focus):
         if session == "preclose":
             news = fetch_news(focus)
             save_news(news)
-            # Refresh fundamentals weekly (every 5 preclose sessions in analysis)
-            if state.get("day", 1) % 5 == 0:
+            # Refresh fundamentals weekly (every 5 preclose sessions) OR self-heal if
+            # they're missing/empty — e.g. the one-time fetch at focus selection
+            # failed. Without this, empty fundamentals would block long-term
+            # classification and weaken rec quality for up to 5 days.
+            fund_missing = not load_fundamentals()
+            if state.get("day", 1) % 5 == 0 or fund_missing:
+                if fund_missing:
+                    print("[main] Fundamentals empty — self-healing fetch for focus stocks")
                 fund_data = fetch_fundamentals(focus)
-                save_fundamentals(fund_data)
+                if fund_data:
+                    save_fundamentals(fund_data)
                 save_history_context(fetch_history_context(focus))   # refresh 2yr context weekly
             # Fetch and inject delivery % data into stock latest dicts
             try:
@@ -481,10 +488,11 @@ def _run_phase(state, phase, session, market_health, day, focus):
             _maybe_refresh_focus(state, merged, patterns, nd, fund, book, market_health)
             focus = state.get("focus_stocks", focus)
 
-            # ── Refresh fundamentals + 2yr history weekly ─────────────────────
-            if state.get("day", 1) % 5 == 0:
+            # ── Refresh fundamentals + 2yr history weekly (or self-heal if empty) ──
+            if state.get("day", 1) % 5 == 0 or not load_fundamentals():
                 fund_data = fetch_fundamentals(focus)
-                save_fundamentals(fund_data)
+                if fund_data:
+                    save_fundamentals(fund_data)
                 save_history_context(fetch_history_context(focus))
 
             # ── Parallel background cohort exploration ────────────────────────

@@ -35,7 +35,7 @@ from agent.market_health  import assess_market, load_market_health
 from agent.stock_scorer   import select_focus_stocks
 from agent.brain          import (
     load_patterns, save_patterns, load_decisions, save_decisions,
-    analyse_stock, record_decision,
+    analyse_stock, record_decision, evaluate_dry_decisions,
 )
 from agent.paper_trader   import (
     load_book, save_book,
@@ -370,6 +370,12 @@ def _run_phase(state, phase, session, market_health, day, focus):
                 if op["signal"] != "WATCH":
                     print(f"  [{ticker.replace('.NS','')}] {op['signal']} score={op['confidence']:.0f}%")
 
+            # ── Forward-test earlier dry calls against the real price since ────
+            # This is the analysis phase's actual LEARNING: each past "I would
+            # BUY/SELL here" is scored days later against what happened, seeding
+            # pattern reliability before a single paper trade is placed.
+            decisions, patterns, _ = evaluate_dry_decisions(decisions, sd, patterns)
+
             save_patterns(patterns)
             save_decisions(decisions)
             state = advance_session(state, session)
@@ -456,6 +462,9 @@ def _run_phase(state, phase, session, market_health, day, focus):
         # Update win rate attribution after each session's trade activity
         if session == "preclose":
             patterns = update_attribution(patterns, book.get("closed_trades", []))
+            # Finish forward-testing any dry ANALYSE calls from late in the
+            # analysis phase that were still inside their proving window.
+            decisions, patterns, _ = evaluate_dry_decisions(decisions, merged, patterns)
 
         save_patterns(patterns)
         save_decisions(decisions)

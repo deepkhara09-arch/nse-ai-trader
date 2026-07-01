@@ -911,11 +911,10 @@ def _section_status(state, phase, day, focus, stock_data=None) -> str:
         days_left = max(0, _ANALYSIS_END - day)
         activity_lines = [
             f"Deep-analysing {len(focus)} focus stocks — running full pattern detection each session",
-            "Recording what it WOULD trade each day (dry decisions) + fetching quarterly "
-            "fundamentals: P/E, ROE, debt ratio, revenue growth, promoter holding",
-            "Building 2-year regime/personality profiles per stock (trend, volatility, shock behaviour)",
-            f"Pattern reliability starts being learned from real outcomes once paper trading "
-            f"begins in ~{days_left} day(s)",
+            "Recording what it WOULD trade each day, then forward-testing each call days later "
+            "against the REAL price — right calls and wrong calls both teach pattern reliability",
+            "Building 2-year regime/personality profiles + quarterly fundamentals per stock",
+            f"Paper trading starts in ~{days_left} day(s) — with reliability priors already learned",
         ]
     elif phase in ("paper_trading", "alerting"):
         activity_lines = [

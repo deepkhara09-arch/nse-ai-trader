@@ -971,11 +971,18 @@ def learn_from_trade(
     won: bool,
     style: str,
     patterns_db: Dict,
+    weight: float = 1.0,
+    dry: bool = False,
     **kwargs,
 ) -> Dict:
     """
-    Updates pattern reliability for a ticker based on a closed trade outcome.
+    Updates pattern reliability for a ticker based on a trade outcome.
     Also adjusts swing vs intraday preference.
+
+    weight/dry: forward-tested DRY decisions (analysis phase — "I would buy here",
+    checked days later against the real price) also teach pattern reliability, but
+    at reduced weight (they're close-based approximations, not executed trades),
+    and they never touch style preference or ATR tuning (those need real exits).
     """
     if ticker not in patterns_db:
         patterns_db[ticker] = {
@@ -1028,15 +1035,21 @@ def learn_from_trade(
 
         pr["last_seen"] = today
         if won:
-            pr["wins"]   = round(pr.get("wins", 0) + 1, 3)
+            pr["wins"]   = round(pr.get("wins", 0) + weight, 3)
         else:
-            pr["losses"] = round(pr.get("losses", 0) + 1, 3)
+            pr["losses"] = round(pr.get("losses", 0) + weight, 3)
         total = pr["wins"] + pr["losses"]
         # Bayesian-ish smoothing: start at 0.5, drift toward evidence
         prior_weight = max(3 - total, 0)
         pr["reliability"] = round(
             (pr["wins"] + prior_weight * 0.5) / (total + prior_weight), 3
         )
+
+    # Dry forward-tests only teach pattern reliability — style preference and ATR
+    # tuning need REAL executed exits, so they stop here.
+    if dry:
+        tk["last_updated"] = today
+        return patterns_db
 
     # Update style preference across all three horizons (intraday/swing/long_term).
     style_key = style if style in ("swing", "intraday", "long_term") else "swing"
@@ -1137,6 +1150,106 @@ def record_decision(decisions: List, opinion: dict, action: str, reason: str) ->
         "patterns":  opinion.get("patterns", []),
     })
     return decisions
+
+
+# How many trading days a dry decision gets to prove itself before it's scored
+# on direction alone (if it hasn't crossed its stop/target earlier).
+DRY_EVAL_TRADING_DAYS = 5
+# Below this absolute forward move the outcome is judged "flat" — noise, no lesson.
+DRY_EVAL_FLAT_BAND = 0.015
+
+
+def evaluate_dry_decisions(decisions: List, stock_data: Dict, patterns_db: Dict):
+    """Forward-test past ANALYSE (dry) decisions against what price ACTUALLY did.
+
+    This is what turns the analysis phase from passive watching into real
+    learning: every 'I would BUY here' call is checked days later —
+      • crossed its stop level first   → the call was WRONG  (loss lesson)
+      • crossed its target level first → the call was RIGHT  (win lesson)
+      • after DRY_EVAL_TRADING_DAYS with neither crossed → judged on direction
+        (>= +1.5% in the signal's favour = win, <= -1.5% = loss, else flat/no lesson)
+    Lessons feed pattern reliability at HALF weight (close-based approximation,
+    not an executed trade) and never touch style preference / ATR tuning.
+    Honest by construction: it predicts first, checks reality later — no hindsight.
+
+    Returns (decisions, patterns_db, evaluated_count).
+    """
+    from datetime import date as _date, timedelta as _td
+    from agent.trading_calendar import is_trading_day
+
+    today = ist_today()
+
+    def _trading_age(d_iso: str) -> int:
+        try:
+            start = _date.fromisoformat(d_iso)
+        except Exception:
+            return 0
+        if start >= today:
+            return 0
+        n, probe = 0, start
+        while probe < today and n <= 30:
+            probe += _td(days=1)
+            if is_trading_day(probe):
+                n += 1
+        return n
+
+    evaluated = 0
+    for d in decisions:
+        if d.get("action") != "ANALYSE" or d.get("dry_evaluated"):
+            continue
+        sig = d.get("signal")
+        if sig not in ("BUY", "SELL"):
+            continue
+        ticker = d.get("ticker")
+        entry, stop, target = d.get("entry"), d.get("stop_loss"), d.get("target")
+        if not (ticker and entry and stop and target):
+            d["dry_evaluated"] = True; d["dry_outcome"] = "invalid"
+            continue
+
+        age = _trading_age(d.get("date", ""))
+        if age < 1:
+            continue   # too fresh — check again next session
+
+        latest = stock_data.get(ticker, {}).get("latest", {})
+        current = latest.get("current_price") or latest.get("close")
+        history = latest.get("price_history") or []
+        if not current:
+            continue   # no data this run — try again later
+        # Closes since the decision (~one per trading day; approximation is honest
+        # because it can only UNDER-detect touches, never invent them).
+        recent = history[-age:] if age <= len(history) else history
+        lo = min(recent) if recent else current
+        hi = max(recent) if recent else current
+
+        won = None
+        if sig == "BUY":
+            if lo <= stop:      won = False   # stop crossed → call failed
+            elif hi >= target:  won = True    # target crossed → call worked
+        else:  # SELL
+            if hi >= stop:      won = False
+            elif lo <= target:  won = True
+
+        if won is None:
+            if age < DRY_EVAL_TRADING_DAYS:
+                continue   # still in its proving window
+            fwd = (current - entry) / entry * (1 if sig == "BUY" else -1)
+            if fwd >= DRY_EVAL_FLAT_BAND:    won = True
+            elif fwd <= -DRY_EVAL_FLAT_BAND: won = False
+            else:
+                d["dry_evaluated"] = True; d["dry_outcome"] = "flat"
+                continue   # noise — no lesson either way
+
+        patterns_db = learn_from_trade(
+            ticker, d.get("patterns", []), won, "swing", patterns_db,
+            weight=0.5, dry=True,
+        )
+        d["dry_evaluated"] = True
+        d["dry_outcome"]   = "win" if won else "loss"
+        evaluated += 1
+
+    if evaluated:
+        print(f"[dry-test] forward-tested {evaluated} past analysis call(s) against real price — pattern reliability updated")
+    return decisions, patterns_db, evaluated
 
 
 def get_reliable_patterns_list(ticker: str, patterns_db: Dict, min_rel: float = 0.55) -> List[str]:

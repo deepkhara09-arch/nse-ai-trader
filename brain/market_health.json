@@ -1,6 +1,6 @@
 {
   "date": "2026-07-01",
-  "session": "morning",
+  "session": "midday",
   "nifty": {
     "symbol": "^NSEI",
     "value": 23865.75,
@@ -27,11 +27,11 @@
   "sectors": {
     "IT": {
       "symbol": "ITBEES.NS",
-      "value": 30.02,
-      "day_change_pct": -1.12,
-      "trend_5d": "sideways",
+      "value": 29.2,
+      "day_change_pct": -2.73,
+      "trend_5d": "strong_down",
       "trend_20d": "strong_down",
-      "ath_pct_60d": -13.36
+      "ath_pct_60d": -15.73
     },
     "Pharma": {
       "symbol": "PHARMABEES.NS",
@@ -43,41 +43,42 @@
     },
     "Bank": {
       "symbol": "BANKBEES.NS",
-      "value": 598.0,
-      "day_change_pct": -0.65,
-      "trend_5d": "up",
+      "value": 596.37,
+      "day_change_pct": -0.27,
+      "trend_5d": "down",
       "trend_20d": "strong_up",
-      "ath_pct_60d": -1.52
+      "ath_pct_60d": -5.02
     },
     "Infra": {
       "symbol": "INFRABEES.NS",
-      "value": 971.11,
-      "day_change_pct": -0.73,
-      "trend_5d": "sideways",
+      "value": 969.18,
+      "day_change_pct": -0.2,
+      "trend_5d": "down",
       "trend_20d": "up",
-      "ath_pct_60d": -2.4
+      "ath_pct_60d": -2.59
     }
   },
   "market_mood": "neutral",
   "trade_allowed": true,
-  "warnings": [
-    "Nifty choppy intraday \u2014 wait for cleaner setups"
-  ],
+  "warnings": [],
   "leading_sectors": [
-    "Pharma",
-    "Bank"
+    "Pharma"
   ],
   "market_regime": "normal",
-  "sector_breadth": 0.5,
-  "lagging_sectors": [],
-  "intraday_regime": "choppy",
+  "sector_breadth": 0.25,
+  "lagging_sectors": [
+    "IT",
+    "Bank",
+    "Infra"
+  ],
+  "intraday_regime": "mixed",
   "macro": {
     "date": "2026-07-01",
-    "session": "preopen",
-    "generated_at": "2026-07-01T03:05:39.349703",
-    "global_score": 0.03,
+    "session": "midday",
+    "generated_at": "2026-07-01T06:15:48.682978",
+    "global_score": 0.16,
     "india_score": 0.0,
-    "overall_score": 0.017,
+    "overall_score": 0.088,
     "mood": "neutral",
     "drivers": [
       "Your aging parent has a new romance. Here\u2019s how to protect your inheritance \u2014 without looking greedy.",
@@ -103,25 +104,24 @@
         "chg_pct": 0.79
       },
       "nikkei": {
-        "last": 70246.66,
-        "chg_pct": 0.26
+        "last": 70650.53,
+        "chg_pct": 0.84
       },
       "crude": {
-        "last": 69.78,
-        "chg_pct": 0.4
+        "last": 69.5,
+        "chg_pct": -1.77
       },
       "usdinr": {
-        "last": 94.65,
-        "chg_pct": -0.15
+        "last": 94.72,
+        "chg_pct": -0.07
       },
       "gold": {
-        "last": 3993.3,
-        "chg_pct": -0.74
+        "last": 4022.9,
+        "chg_pct": 0.01
       }
     },
-    "summary": "Overall macro mood is neutral (+0.02). US Dow +0.3% overnight. Crude +0.4%. USD/INR -0.1%. Notable: US Fed rate hike / hawkish; Geopolitical conflict / war; Tariffs / trade war.",
+    "summary": "Overall macro mood is neutral (+0.09). US Dow +0.3% overnight. Crude -1.8%. USD/INR -0.1%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
-      "Hawkish Fed pressures Nifty via FII outflows and stronger USD.",
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
       "Trade-war headlines spook global markets; IT & export names react most."
     ],

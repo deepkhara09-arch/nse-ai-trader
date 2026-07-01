@@ -15,7 +15,7 @@ from agent.config import (
     BRAIN_DIR, PAPER_TRADES_FILE,
     INITIAL_CAPITAL, MAX_OPEN_POSITIONS,
     MAX_DAILY_LOSS_PCT, WIN_RATE_THRESHOLD, MIN_TRADES_FOR_SIGNAL,
-    PAPER_TRADING_DAYS, MAX_SECTOR_POSITIONS,
+    PAPER_TRADING_DAYS, MAX_SECTOR_POSITIONS, MAX_HELD_DAYS,
     VOL_REGIME_NORMAL_MAX_PCT, VOL_REGIME_CAUTION_MAX_PCT, VOL_REGIME_DANGER_MAX_PCT,
 )
 from agent.brain import learn_from_trade
@@ -83,12 +83,14 @@ def morning_session(book: dict, opinions: List[dict], patterns_db: Dict, market_
 
 
 def midday_session(book: dict, opinions: List[dict], stock_data: Dict, patterns_db: Dict, market_health: dict = None) -> Tuple2:
-    """Update mark-to-market, close intraday positions gone wrong, add swing signals."""
+    """Update mark-to-market, close intraday positions gone wrong, add longer-horizon
+    (swing / long-term) signals. Intraday is only opened in the morning session —
+    entering an intraday trade at midday leaves too little runway before the close."""
     book = _mark_to_market(book, stock_data)
     book = _update_trailing_stops(book, stock_data)
     book, patterns_db = _check_exits(book, stock_data, session="midday", patterns_db=patterns_db)
-    swing_opinions = [o for o in opinions if o.get("style") == "swing"]
-    book, patterns_db = _try_open_positions(book, swing_opinions, patterns_db, session="midday", market_health=market_health)
+    positional_opinions = [o for o in opinions if o.get("style") in ("swing", "long_term")]
+    book, patterns_db = _try_open_positions(book, positional_opinions, patterns_db, session="midday", market_health=market_health)
     return book, patterns_db
 
 
@@ -228,7 +230,9 @@ def _try_open_positions(book: dict, opinions: List[dict], patterns_db: Dict, ses
             "buy_reasons":   op.get("buy_reasons", []) + op.get("sell_reasons", []),
             "current_price": entry,
             "unrealized_pnl":0.0,
-            "max_held_days": 10 if op.get("style") == "swing" else 1,
+            # Hold period is driven by the trade's STYLE (config), so intraday exits
+            # same day, swing rides ~2 weeks, and long_term holds ~3 months.
+            "max_held_days": MAX_HELD_DAYS.get(op.get("style", "swing"), 10),
             "vol_regime_pct":vol_max_pct,
             # Capture market context AT ENTRY so the coach can later explain whether
             # the outcome was driven by the setup or by the conditions at open time.

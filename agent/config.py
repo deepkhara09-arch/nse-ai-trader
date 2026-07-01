@@ -86,6 +86,16 @@ MAX_OPEN_POSITIONS     = 5         # never hold more than 5 at once
 MAX_DAILY_LOSS_PCT     = 0.03      # stop all trading if day loss > 3%
 MAX_SECTOR_POSITIONS   = 2         # max open positions from the same sector simultaneously
 
+# Max holding period (trading days) per style before a time-based exit. Intraday
+# is squared off same day; swing rides a couple of weeks; long-term is a
+# fundamentally-driven hold of a couple of months. These make the paper trade's
+# behaviour MATCH the horizon the recommendation shows the user.
+MAX_HELD_DAYS = {
+    "intraday":  1,
+    "swing":     10,
+    "long_term": 60,   # ~3 trading months — a genuine positional hold
+}
+
 # ATR-based stop/target (overrides flat % when ATR is available)
 ATR_STOP_MULTIPLIER    = 1.5       # stop = entry ± 1.5x ATR
 ATR_TARGET_MULTIPLIER  = 3.0       # target = entry ± 3.0x ATR (2:1 R:R minimum)

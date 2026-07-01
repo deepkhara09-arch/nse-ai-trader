@@ -733,6 +733,17 @@ def _inject_fund_context(stock_data: dict, fund: dict) -> dict:
             d["week52_high"] = f.get("week52_high", 0)
         if "week52_low" in f and d.get("week52_low", 0) == 0:
             d["week52_low"] = f.get("week52_low", 0)
+        # Fundamental strength so the brain can classify a LONG-TERM style
+        # consistently with how recommendations classify the horizon.
+        try:
+            from agent.fundamentals_fetcher import score_fundamentals
+            d["fund_strength"] = score_fundamentals(f) if f else 0
+        except Exception:
+            d["fund_strength"] = 0
+        d["roe"]            = f.get("roe") or 0
+        d["roce"]           = f.get("roce") or 0
+        d["debt_equity"]    = f.get("debt_equity")
+        d["revenue_growth_pct"] = f.get("revenue_growth_pct") or 0
     return stock_data
 
 

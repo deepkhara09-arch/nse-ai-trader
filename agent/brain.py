@@ -441,6 +441,59 @@ def detect_all_patterns(d: dict, prev: dict = None, prev2: dict = None) -> List[
     return list(set(patterns))   # deduplicate
 
 
+# Signal character sets — which fired patterns imply which trading horizon.
+# (Kept consistent with recommendations._classify_trade_type so the paper trade
+#  and the recommendation the user sees always agree on the horizon.)
+_INTRADAY_PATTERNS = {
+    "gap_up_continuation", "gap_down_continuation", "gap_up_reversal",
+    "gap_down_reversal", "above_vwap_strong", "below_vwap_strong", "vwap_magnet",
+    "volume_climax_top", "volume_climax_bottom", "pivot_r1_breakout",
+    "pivot_s1_bounce", "pivot_point_test", "intraday_bullish_vwap",
+    "intraday_bearish_vwap", "intraday_vol_surge_up",
+}
+_SWING_PATTERNS = {
+    "supertrend_bullish", "supertrend_bearish", "ichimoku_bullish_kumo",
+    "macd_bullish_divergence", "macd_bearish_divergence", "52w_breakout",
+    "pivot_r2_breakout", "adx_strong_trend_up", "adx_strong_trend_down",
+    "engulfing_bullish", "morning_star", "three_white_soldiers",
+}
+
+
+def _classify_style(d: dict, patterns: List[str], tk_known: dict, signal: str) -> str:
+    """Classify the trade horizon — intraday / swing / long_term — from the same
+    signals recommendations use, so the paper trade MATCHES the shown horizon.
+
+    • long_term: only for a BUY in a genuinely strong fundamental + uptrend name
+      (a real positional hold). Shorts are never held long-term.
+    • intraday: same-day-character signals, unless the stock has learned it's a
+      swing name.
+    • swing: the default multi-day hold.
+    """
+    pset = set(patterns)
+    intraday_hits = len(pset & _INTRADAY_PATTERNS)
+    swing_hits    = len(pset & _SWING_PATTERNS)
+    learned       = tk_known.get("preferred_style", "swing")
+
+    fund_strength = d.get("fund_strength", 0) or 0
+    roe   = d.get("roe", 0) or 0
+    roce  = d.get("roce", 0) or 0
+    de    = d.get("debt_equity")
+    rev_g = d.get("revenue_growth_pct", 0) or 0
+    trend = d.get("trend_10d") or d.get("hist_long_trend") or ""
+    accumulating = d.get("delivery_signal", "neutral") in ("accumulation", "strong_accumulation")
+    strong_fundamentals = (
+        fund_strength >= 65 and roe >= 12 and roce >= 12
+        and (de is None or de < 1.0) and rev_g >= 0
+    )
+
+    if signal == "BUY" and strong_fundamentals and \
+       trend in ("up", "strong_up", "uptrend", "strong_uptrend") and (swing_hits or accumulating):
+        return "long_term"
+    if intraday_hits > swing_hits and learned != "swing":
+        return "intraday"
+    return "swing"
+
+
 # ═══════════════════════════════════════════════════════════════════════════════
 # ANALYST OPINION — per-stock, per-session structured assessment
 # ═══════════════════════════════════════════════════════════════════════════════
@@ -814,12 +867,12 @@ def analyse_stock(
         entry     = close
         stop_loss = round(close - atr * atr_mult, 2)
         target    = round(close + atr * atr_target, 2)
-        style     = tk_known.get("preferred_style", "swing")
+        style     = _classify_style(d, patterns, tk_known, signal)
     elif signal == "SELL":
         entry     = close
         stop_loss = round(close + atr * atr_mult, 2)
         target    = round(close - atr * atr_target, 2)
-        style     = tk_known.get("preferred_style", "swing")
+        style     = _classify_style(d, patterns, tk_known, signal)
     else:
         entry = stop_loss = target = close
         style = "watch"
@@ -932,11 +985,16 @@ def learn_from_trade(
             "swing_losses":      0,
             "intraday_wins":     0,
             "intraday_losses":   0,
+            "long_term_wins":    0,
+            "long_term_losses":  0,
             "atr_stop_hits":     0,
             "atr_target_hits":   0,
             "atr_multiplier":    ATR_STOP_MULTIPLIER,   # per-stock tuned value
             "last_updated":      None,
         }
+    # Back-fill long_term counters on pre-existing per-stock records (pre-v11 data).
+    patterns_db[ticker].setdefault("long_term_wins", 0)
+    patterns_db[ticker].setdefault("long_term_losses", 0)
 
     tk = patterns_db[ticker]
     today = ist_today().isoformat()
@@ -980,16 +1038,27 @@ def learn_from_trade(
             (pr["wins"] + prior_weight * 0.5) / (total + prior_weight), 3
         )
 
-    # Update style preference
-    style_key = "swing" if style == "swing" else "intraday"
+    # Update style preference across all three horizons (intraday/swing/long_term).
+    style_key = style if style in ("swing", "intraday", "long_term") else "swing"
     if won:
         tk[f"{style_key}_wins"] += 1
     else:
         tk[f"{style_key}_losses"] += 1
 
-    sw  = tk["swing_wins"]    / max(tk["swing_wins"]    + tk["swing_losses"],   1)
-    inw = tk["intraday_wins"] / max(tk["intraday_wins"] + tk["intraday_losses"],1)
-    tk["preferred_style"] = "swing" if sw >= inw else "intraday"
+    def _wr(w, l):
+        return tk[w] / max(tk[w] + tk[l], 1)
+    rates = {
+        "swing":     _wr("swing_wins", "swing_losses"),
+        "intraday":  _wr("intraday_wins", "intraday_losses"),
+        "long_term": _wr("long_term_wins", "long_term_losses"),
+    }
+    # Prefer the horizon with the best realised win-rate; swing wins ties (safest
+    # default). Only a style with at least one trade can be preferred.
+    traded = {k: v for k, v in rates.items()
+              if (tk[f"{k}_wins"] + tk[f"{k}_losses"]) > 0}
+    if traded:
+        best = max(traded, key=lambda k: (traded[k], k == "swing"))
+        tk["preferred_style"] = best
 
     # ── Per-stock ATR multiplier auto-tuning ──────────────────────────────────
     # Track how often stop gets hit vs target. If stops hit >50% → widen multiplier.

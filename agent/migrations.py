@@ -33,7 +33,7 @@ RANK_HISTORY_FILE    = "brain/rank_history.json"
 WATCHLIST_FILE       = "brain/watchlist_signals.json"
 DECISIONS_FILE       = "brain/decisions.json"
 
-CURRENT_SCHEMA_VERSION = 10   # bump this when you add a new migration
+CURRENT_SCHEMA_VERSION = 11   # bump this when you add a new migration
 
 
 # ── Migration functions ────────────────────────────────────────────────────────
@@ -272,6 +272,21 @@ def _migrate_v10(state, stock_data, patterns, book, fundamentals, decisions):
     return state, stock_data, patterns, book, fundamentals, decisions
 
 
+def _migrate_v11(state, stock_data, patterns, book, fundamentals, decisions):
+    """
+    v11: long-term as a first-class trade style. Backfill long_term_wins/losses
+    counters on each stock's pattern record so the style-preference logic can pick
+    long_term. (Previously only swing/intraday existed and long_term was mis-tracked
+    as intraday.)
+    """
+    if isinstance(patterns, dict):
+        for tk, rec in patterns.items():
+            if isinstance(rec, dict) and "reliable_patterns" in rec:
+                rec.setdefault("long_term_wins", 0)
+                rec.setdefault("long_term_losses", 0)
+    return state, stock_data, patterns, book, fundamentals, decisions
+
+
 # ── Registry: maps schema version → migration that brings data UP to that version
 MIGRATIONS = {
     1: _migrate_v1,
@@ -284,6 +299,7 @@ MIGRATIONS = {
     8: _migrate_v8,
     9: _migrate_v9,
     10: _migrate_v10,
+    11: _migrate_v11,
 }
 
 

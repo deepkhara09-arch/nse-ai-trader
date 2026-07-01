@@ -75,9 +75,18 @@ def _record_closed_trade(book: dict, trade: dict) -> None:
 
 # ── Session actions ────────────────────────────────────────────────────────────
 
-def morning_session(book: dict, opinions: List[dict], patterns_db: Dict, market_health: dict = None) -> Tuple2:
-    """Open new positions from morning signals. No intraday exits yet."""
+def morning_session(book: dict, opinions: List[dict], patterns_db: Dict, market_health: dict = None,
+                    stock_data: Dict = None) -> Tuple2:
+    """At the open: FIRST mark-to-market and check exits on existing positions —
+    so a swing/long-term position that gapped through its stop or target overnight
+    is exited right at the open, not hours later at midday. THEN open new positions.
+    (Checking exits every session is what guarantees a held position is evaluated
+    every trading day for its stop/target, and force-closed at its max-held day.)"""
     book = _reset_daily_pnl_if_new_day(book)
+    if stock_data:
+        book = _mark_to_market(book, stock_data)
+        book = _update_trailing_stops(book, stock_data)
+        book, patterns_db = _check_exits(book, stock_data, session="morning", patterns_db=patterns_db)
     book, patterns_db = _try_open_positions(book, opinions, patterns_db, session="morning", market_health=market_health)
     return book, patterns_db
 
@@ -128,6 +137,10 @@ def preclose_session(book: dict, opinions: List[dict], stock_data: Dict, pattern
 # ── Position management ────────────────────────────────────────────────────────
 
 def _try_open_positions(book: dict, opinions: List[dict], patterns_db: Dict, session: str, market_health: dict = None):
+    # Defensive daily reset: normally done in morning_session, but if the morning
+    # run was ever missed and a later session opens first, yesterday's daily_pnl
+    # must not carry over and wrongly block today's trades via the loss limit.
+    book = _reset_daily_pnl_if_new_day(book)
     open_tickers = {p["ticker"] for p in book["open_positions"]}
     daily_loss   = book.get("daily_pnl_today", 0)
 
@@ -256,6 +269,12 @@ def _update_trailing_stops(book: dict, stock_data: Dict) -> dict:
     """
     Trailing stop: once a position is up > 4%, move stop loss to breakeven.
     Once up > 6%, trail stop to lock in half the profit.
+
+    IMPORTANT (avoids a self-trigger bug): a newly-raised stop must not sit ABOVE
+    (for a BUY) the current session's low — otherwise the very next exit-check
+    would stop us out on a low that happened BEFORE the stop was raised (the low
+    and the trail are computed from the same session snapshot). We clamp the new
+    stop just below the session low so trailing only bites on FUTURE downside.
     """
     for pos in book["open_positions"]:
         if pos.get("style") == "intraday":
@@ -266,30 +285,40 @@ def _update_trailing_stops(book: dict, stock_data: Dict) -> dict:
         entry   = pos["entry"]
         if entry <= 0:
             continue
+        sess_low  = data.get("session_low")  or data.get("day_low")  or data.get("low",  current)
+        sess_high = data.get("session_high") or data.get("day_high") or data.get("high", current)
 
         if pos["action"] == "BUY":
             profit_pct = (current - entry) / entry * 100
+            def _clamp_buy(sl):
+                # never above this session's low (leave a hair of room)
+                return min(sl, round(sess_low * 0.999, 2)) if sess_low else sl
             if profit_pct >= 6.0:
                 # Trail stop to lock in 50% of profit
-                new_sl = round(entry + (current - entry) * 0.5, 2)
+                new_sl = _clamp_buy(round(entry + (current - entry) * 0.5, 2))
                 if new_sl > pos["stop_loss"]:
                     pos["stop_loss"] = new_sl
                     pos["trailing_active"] = True
             elif profit_pct >= 4.0:
                 # Move stop to breakeven
-                if pos["stop_loss"] < entry:
-                    pos["stop_loss"] = round(entry * 1.001, 2)
+                new_sl = _clamp_buy(round(entry * 1.001, 2))
+                if pos["stop_loss"] < entry and new_sl > pos["stop_loss"]:
+                    pos["stop_loss"] = new_sl
                     pos["trailing_active"] = True
         else:
             profit_pct = (entry - current) / entry * 100
+            def _clamp_sell(sl):
+                # never below this session's high (for a short, stop is above)
+                return max(sl, round(sess_high * 1.001, 2)) if sess_high else sl
             if profit_pct >= 6.0:
-                new_sl = round(entry - (entry - current) * 0.5, 2)
+                new_sl = _clamp_sell(round(entry - (entry - current) * 0.5, 2))
                 if new_sl < pos["stop_loss"]:
                     pos["stop_loss"] = new_sl
                     pos["trailing_active"] = True
             elif profit_pct >= 4.0:
-                if pos["stop_loss"] > entry:
-                    pos["stop_loss"] = round(entry * 0.999, 2)
+                new_sl = _clamp_sell(round(entry * 0.999, 2))
+                if pos["stop_loss"] > entry and new_sl < pos["stop_loss"]:
+                    pos["stop_loss"] = new_sl
                     pos["trailing_active"] = True
     return book
 
@@ -521,9 +550,14 @@ def _snapshot(book: dict) -> dict:
 
 
 def _reset_daily_pnl_if_new_day(book: dict) -> dict:
+    """Reset the intraday P&L exactly ONCE per calendar day, tracked by its own
+    date field. (Using last_snapshot_date was subtly wrong — that's only set at
+    preclose, so a mid-day call could reset again and wipe the morning's losses,
+    defeating the daily-loss limit.) Idempotent: safe to call every session."""
     today = ist_today().isoformat()
-    if book.get("last_snapshot_date") != today:
-        book["daily_pnl_today"] = 0.0
+    if book.get("last_pnl_reset_date") != today:
+        book["daily_pnl_today"]    = 0.0
+        book["last_pnl_reset_date"] = today
     return book
 
 

@@ -435,7 +435,7 @@ def _run_phase(state, phase, session, market_health, day, focus):
 
         # Session trading
         if session == "morning":
-            book, patterns = morning_session(book, tradeable_opinions, patterns, market_health=market_health)
+            book, patterns = morning_session(book, tradeable_opinions, patterns, market_health=market_health, stock_data=merged)
         elif session in ("midday", "afternoon"):
             book, patterns = midday_session(book, tradeable_opinions, merged, patterns, market_health=market_health)
         elif session == "intraday_close":

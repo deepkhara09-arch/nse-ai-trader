@@ -93,7 +93,7 @@ MAX_SECTOR_POSITIONS   = 2         # max open positions from the same sector sim
 MAX_HELD_DAYS = {
     "intraday":  1,
     "swing":     10,
-    "long_term": 60,   # ~3 trading months — a genuine positional hold
+    "long_term": 30,   # ~6 trading weeks — a positional hold, force-exit at day 30
 }
 
 # ATR-based stop/target (overrides flat % when ATR is available)

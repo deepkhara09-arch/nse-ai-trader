@@ -175,10 +175,10 @@ def _classify_trade_type(opinion: dict, d: dict, fund: dict, learned_style: str)
         return {
             "trade_type":       "Long-term / Investment",
             "trade_type_key":   "long_term",
-            "hold_period":      "Several weeks to months (fundamentally backed)",
+            "hold_period":      "Up to ~30 trading days (~6 weeks), or exit on stop/target",
             "entry_window":     "Accumulate in 3–4 tranches over several sessions; no rush",
-            "exit_window":      "Review on quarterly results / thesis change, not daily noise",
-            "target_timeframe": "1–6 months — let the compounding play out",
+            "exit_window":      "Held up to ~6 weeks; reviewed EVERY session for its stop/target",
+            "target_timeframe": "Several weeks — let the trend play out (force-exit by day 30)",
             "action_urgency":   "Patient build — averaging on dips is fine for this horizon",
         }
     return {

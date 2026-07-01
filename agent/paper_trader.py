@@ -647,6 +647,19 @@ def is_ready_to_alert(stats: dict, book: dict = None) -> bool:
         if distinct_days < PAPER_TRADING_DAYS:
             print(f"[alert] Not ready: only {distinct_days}/{PAPER_TRADING_DAYS} paper trading days elapsed")
             return False
+        # Recent-form gate: the ROLLING window must meet the same bar, not just the
+        # lifetime average — old wins can't carry decayed recent form. Also gives
+        # hysteresis vs the drift monitor (demote < DRIFT_WR_FLOOR, re-earn only at
+        # >= WIN_RATE_THRESHOLD on recent trades), so validation can't flip-flop.
+        from agent.config import DRIFT_WINDOW_TRADES
+        recent = book.get("closed_trades", [])[-DRIFT_WINDOW_TRADES:]
+        if len(recent) >= DRIFT_WINDOW_TRADES:
+            wr_recent = sum(1 for t in recent
+                            if t.get("won", t.get("pnl", 0) > 0)) / len(recent)
+            if wr_recent < WIN_RATE_THRESHOLD:
+                print(f"[alert] Not ready: recent-form win-rate {wr_recent*100:.0f}% "
+                      f"(last {len(recent)}) below {WIN_RATE_THRESHOLD*100:.0f}%")
+                return False
     return True
 
 

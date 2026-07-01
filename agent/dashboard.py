@@ -151,7 +151,7 @@ def _build_html(
 
   <!-- ── TRADE tab ── -->
   <section class="tab-panel" id="tab-trade" hidden>
-    {_section_recommendations(recommendations, validated=alert, stats=stats)}
+    {_section_recommendations(recommendations, validated=alert, stats=stats, decisions=decisions)}
     {_section_rankings(ranked_stocks)}
     {_section_changelog(changelog)}
   </section>
@@ -1641,12 +1641,33 @@ def _section_watchlist(focus, stock_data, news_data, patterns, fundamentals=None
 </div>"""
 
 
-def _section_recommendations(recs, validated: bool = False, stats: dict = None) -> str:
+def _section_recommendations(recs, validated: bool = False, stats: dict = None,
+                             decisions: list = None) -> str:
     # Honesty: until the strategy passes its paper-trade validation gate
     # (alert_sent / `validated`), any setups shown are the tool PRACTICING — not
     # proven calls. Frame them as such so a user never mistakes a pre-validation
     # candidate for a validated, track-record-backed recommendation.
     stats = stats or {}
+
+    # ── Track record of PAST recommendations (forward-tested vs real price) ────
+    # RECOMMEND decisions are snapshotted daily at preclose and scored days later:
+    # win = target level reached first, loss = stop level breached first (or the
+    # move went against the call). Flat drifts are excluded — they prove nothing.
+    rec_hist = [d for d in (decisions or [])
+                if d.get("action") == "RECOMMEND" and d.get("dry_outcome") in ("win", "loss")]
+    rr_wins  = sum(1 for d in rec_hist if d["dry_outcome"] == "win")
+    rr_total = len(rec_hist)
+    if rr_total >= 3:
+        rr_pct = rr_wins / rr_total * 100
+        rr_col = "var(--green)" if rr_pct >= 55 else ("var(--amber,#e6a93a)" if rr_pct >= 45 else "var(--red)")
+        track_html = (
+            '<div style="font-size:.7rem;color:var(--muted);margin-bottom:10px">'
+            f'Past recommendations, forward-tested against the real price: '
+            f'<b style="color:{rr_col}">{rr_wins}/{rr_total} worked ({rr_pct:.0f}%)</b>'
+            ' &middot; win = target hit first, loss = stop hit first</div>'
+        )
+    else:
+        track_html = ""
     if validated:
         section_sub = "High-confidence setups with full trade details"
         practice_banner = ""
@@ -1677,6 +1698,7 @@ def _section_recommendations(recs, validated: bool = False, stats: dict = None) 
 </div>"""
         return f"""<div class="section" id="recommendations">
   <h2>Stock Recommendations <span>{section_sub}</span></h2>
+  {track_html}
   {no_recs}
 </div>"""
 
@@ -1928,6 +1950,7 @@ def _section_recommendations(recs, validated: bool = False, stats: dict = None) 
     return f"""<div class="section" id="recommendations">
   <h2>Stock Recommendations <span>{len(recs)} {rec_word}</span></h2>
   {practice_banner}
+  {track_html}
   {cards}
 </div>"""
 

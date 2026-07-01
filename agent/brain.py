@@ -1195,7 +1195,10 @@ def evaluate_dry_decisions(decisions: List, stock_data: Dict, patterns_db: Dict)
 
     evaluated = 0
     for d in decisions:
-        if d.get("action") != "ANALYSE" or d.get("dry_evaluated"):
+        # ANALYSE = analysis-phase dry calls; RECOMMEND = daily snapshots of the
+        # recommendations shown to the user — both are forward-tested the same
+        # honest way, and RECOMMEND outcomes power the visible track record.
+        if d.get("action") not in ("ANALYSE", "RECOMMEND") or d.get("dry_evaluated"):
             continue
         sig = d.get("signal")
         if sig not in ("BUY", "SELL"):
@@ -1239,16 +1242,21 @@ def evaluate_dry_decisions(decisions: List, stock_data: Dict, patterns_db: Dict)
                 d["dry_evaluated"] = True; d["dry_outcome"] = "flat"
                 continue   # noise — no lesson either way
 
-        patterns_db = learn_from_trade(
-            ticker, d.get("patterns", []), won, "swing", patterns_db,
-            weight=0.5, dry=True,
-        )
+        # Only ANALYSE calls teach pattern reliability. RECOMMEND snapshots are
+        # scored purely for the user-visible track record — the same underlying
+        # signal already teaches via its ANALYSE record or its real paper trade,
+        # so letting RECOMMEND teach too would double-count the lesson.
+        if d.get("action") == "ANALYSE":
+            patterns_db = learn_from_trade(
+                ticker, d.get("patterns", []), won, "swing", patterns_db,
+                weight=0.5, dry=True,
+            )
         d["dry_evaluated"] = True
         d["dry_outcome"]   = "win" if won else "loss"
         evaluated += 1
 
     if evaluated:
-        print(f"[dry-test] forward-tested {evaluated} past analysis call(s) against real price — pattern reliability updated")
+        print(f"[dry-test] forward-tested {evaluated} past call(s) against real price")
     return decisions, patterns_db, evaluated
 
 

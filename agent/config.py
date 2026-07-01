@@ -115,6 +115,15 @@ VOL_REGIME_DANGER_ATR_MULT  = 2.25   # even wider when VIX 20-25
 # Win rate needed before alerting you
 # Conservative thresholds — we'd rather wait longer and be right than rush
 WIN_RATE_THRESHOLD     = 0.60      # raised from 0.57 — need 60%+ win rate
+
+# ── Post-validation drift monitor ─────────────────────────────────────────────
+# Validation must be EARNED CONTINUOUSLY, not once. In the alerting phase the
+# rolling win-rate over the last DRIFT_WINDOW_TRADES closed trades is re-checked
+# every preclose; if it decays below DRIFT_WR_FLOOR the tool demotes itself back
+# to paper_trading (alert_sent=False) — recommendations automatically revert to
+# the honest 'practice / not-yet-validated' framing until the edge is re-proven.
+DRIFT_WINDOW_TRADES = 20
+DRIFT_WR_FLOOR      = 0.45
 MIN_TRADES_FOR_SIGNAL  = 25        # raised from 12 — need 25 closed paper trades
 
 # Recommendation validity — how long a rec stays "fresh" after generation

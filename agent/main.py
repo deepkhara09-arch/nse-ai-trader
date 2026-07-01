@@ -17,7 +17,7 @@ for _stream in (sys.stdout, sys.stderr):
     except Exception:
         pass
 
-from agent.trading_calendar import ist_today
+from agent.trading_calendar import ist_today, ist_now
 from agent.migrations import run_migrations, check_schema_health
 from agent.config import (
     NSE_UNIVERSE, FOCUS_STOCK_COUNT,
@@ -523,6 +523,30 @@ def _run_phase(state, phase, session, market_health, day, focus):
                 # Keep running indefinitely — never stop after alerting
                 state = add_brain_note(state, "Continuing live paper trading post-alert (perpetual mode)")
 
+                # ── Drift monitor: validation must stay earned ─────────────────
+                # The 60% gate proved the edge ONCE; markets change. Re-check the
+                # rolling win-rate over the most recent trades every preclose. If
+                # it has decayed below the floor, demote back to paper_trading —
+                # alert_sent=False automatically flips recommendations back to the
+                # honest 'practice' framing until the edge is re-proven through
+                # the full validation gate again.
+                from agent.config import DRIFT_WINDOW_TRADES, DRIFT_WR_FLOOR
+                recent = book.get("closed_trades", [])[-DRIFT_WINDOW_TRADES:]
+                if len(recent) >= DRIFT_WINDOW_TRADES:
+                    wins_r = sum(1 for t in recent
+                                 if t.get("won", t.get("pnl", 0) > 0))
+                    roll_wr = wins_r / len(recent)
+                    if roll_wr < DRIFT_WR_FLOOR:
+                        state["alert_sent"] = False
+                        note = (f"DRIFT: rolling win-rate {roll_wr*100:.0f}% over last "
+                                f"{len(recent)} trades fell below {DRIFT_WR_FLOOR*100:.0f}% — "
+                                f"validation revoked, back to paper trading until re-proven")
+                        state = add_brain_note(state, note)
+                        state = set_phase(state, "paper_trading", note)
+                        record_issue("strategy_drift", "rolling win-rate",
+                                     note, session)
+                        print(f"[drift] {note}")
+
         save_state(state)
 
     return state
@@ -836,6 +860,38 @@ def _refresh_outputs(state: dict, market_health: dict, session: str, read_only: 
             # Full strategy report only needs refreshing at preclose (heavier write)
             if session == "preclose":
                 generate_report(state, sd, pats, nd, book)
+                # ── Snapshot today's recs for the TRACK RECORD ─────────────────
+                # One RECOMMEND decision per ticker per day (preclose = the day's
+                # settled view). These get forward-tested against the real price by
+                # evaluate_dry_decisions, so the dashboard can show honestly how
+                # past recommendations actually played out.
+                existing_keys = {(x.get("ticker"), x.get("date"))
+                                 for x in decs if x.get("action") == "RECOMMEND"}
+                today_iso = ist_today().isoformat()
+                added = 0
+                for r in recs:
+                    key = (r.get("ticker"), today_iso)
+                    if key in existing_keys or not r.get("ticker"):
+                        continue
+                    entry_mid = round(((r.get("entry_low") or 0) + (r.get("entry_high") or 0)) / 2, 2)
+                    decs.append({
+                        "timestamp": ist_now().isoformat(),
+                        "date":      today_iso,
+                        "ticker":    r["ticker"],
+                        "session":   session,
+                        "action":    "RECOMMEND",
+                        "signal":    r.get("direction_short") or r.get("signal"),
+                        "confidence": r.get("confidence"),
+                        "entry":     entry_mid or r.get("cmp"),
+                        "stop_loss": r.get("stop_loss"),
+                        "target":    r.get("target1"),
+                        "reason":    f"rec snapshot ({r.get('trade_type_key','')})",
+                        "patterns":  r.get("patterns_seen", []) or [],
+                    })
+                    added += 1
+                if added:
+                    save_decisions(decs)
+                    decs = load_decisions()
         else:
             recs = load_recommendations()
 

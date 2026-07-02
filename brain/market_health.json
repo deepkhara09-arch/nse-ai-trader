@@ -1,6 +1,6 @@
 {
   "date": "2026-07-02",
-  "session": "morning",
+  "session": "midday",
   "nifty": {
     "symbol": "^NSEI",
     "value": 24005.85,
@@ -27,11 +27,11 @@
   "sectors": {
     "IT": {
       "symbol": "ITBEES.NS",
-      "value": 29.2,
-      "day_change_pct": -2.73,
+      "value": 28.63,
+      "day_change_pct": -1.95,
       "trend_5d": "strong_down",
       "trend_20d": "strong_down",
-      "ath_pct_60d": -15.73
+      "ath_pct_60d": -17.37
     },
     "Pharma": {
       "symbol": "PHARMABEES.NS",
@@ -43,40 +43,40 @@
     },
     "Bank": {
       "symbol": "BANKBEES.NS",
-      "value": 596.37,
-      "day_change_pct": -0.27,
-      "trend_5d": "down",
+      "value": 601.57,
+      "day_change_pct": 0.87,
+      "trend_5d": "sideways",
       "trend_20d": "strong_up",
-      "ath_pct_60d": -5.02
+      "ath_pct_60d": -4.19
     },
     "Infra": {
       "symbol": "INFRABEES.NS",
-      "value": 969.18,
-      "day_change_pct": -0.2,
-      "trend_5d": "down",
+      "value": 975.9,
+      "day_change_pct": 0.69,
+      "trend_5d": "sideways",
       "trend_20d": "up",
-      "ath_pct_60d": -2.59
+      "ath_pct_60d": -1.92
     }
   },
   "market_mood": "neutral",
   "trade_allowed": true,
-  "warnings": [],
+  "warnings": [
+    "Nifty choppy intraday \u2014 wait for cleaner setups"
+  ],
   "leading_sectors": [],
   "market_regime": "normal",
   "sector_breadth": 0.0,
   "lagging_sectors": [
-    "IT",
-    "Bank",
-    "Infra"
+    "IT"
   ],
-  "intraday_regime": "mixed",
+  "intraday_regime": "choppy",
   "macro": {
     "date": "2026-07-02",
-    "session": "preopen",
-    "generated_at": "2026-07-02T03:05:41.331971",
-    "global_score": 0.144,
+    "session": "midday",
+    "generated_at": "2026-07-02T06:15:50.445407",
+    "global_score": 0.195,
     "india_score": 1.0,
-    "overall_score": 0.529,
+    "overall_score": 0.557,
     "mood": "risk_on",
     "drivers": [
       "Protein-packed Cheerios and cat food: How General Mills plans to combat a tough spending backdrop",
@@ -102,23 +102,23 @@
         "chg_pct": -0.22
       },
       "nikkei": {
-        "last": 69591.75,
-        "chg_pct": -1.25
+        "last": 69110.74,
+        "chg_pct": -1.94
       },
       "crude": {
-        "last": 67.69,
-        "chg_pct": -1.3
+        "last": 68.58,
+        "chg_pct": -1.32
       },
       "usdinr": {
-        "last": 95.24,
-        "chg_pct": 0.34
+        "last": 95.21,
+        "chg_pct": 0.31
       },
       "gold": {
-        "last": 4069.9,
-        "chg_pct": 0.04
+        "last": 4068.3,
+        "chg_pct": 1.13
       }
     },
-    "summary": "Overall macro mood is risk-on (+0.53). US Dow -0.0% overnight. Crude -1.3%. USD/INR +0.3%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
+    "summary": "Overall macro mood is risk-on (+0.56). US Dow -0.0% overnight. Crude -1.3%. USD/INR +0.3%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
       "Trade-war headlines spook global markets; IT & export names react most."

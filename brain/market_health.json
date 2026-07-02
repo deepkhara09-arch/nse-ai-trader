@@ -1,6 +1,6 @@
 {
   "date": "2026-07-02",
-  "session": "afternoon",
+  "session": "midday",
   "nifty": {
     "symbol": "^NSEI",
     "value": 24005.85,
@@ -58,7 +58,7 @@
       "ath_pct_60d": -1.92
     }
   },
-  "market_mood": "neutral",
+  "market_mood": "bullish",
   "trade_allowed": true,
   "warnings": [],
   "leading_sectors": [],
@@ -67,14 +67,14 @@
   "lagging_sectors": [
     "IT"
   ],
-  "intraday_regime": "mixed",
+  "intraday_regime": "trending_up",
   "macro": {
     "date": "2026-07-02",
     "session": "midday",
-    "generated_at": "2026-07-02T06:55:02.692653",
-    "global_score": 0.193,
-    "india_score": 1.0,
-    "overall_score": 0.556,
+    "generated_at": "2026-07-02T07:50:39.269732",
+    "global_score": 0.183,
+    "india_score": 0.6,
+    "overall_score": 0.371,
     "mood": "risk_on",
     "drivers": [
       "Protein-packed Cheerios and cat food: How General Mills plans to combat a tough spending backdrop",
@@ -108,15 +108,15 @@
         "chg_pct": -1.32
       },
       "usdinr": {
-        "last": 95.25,
-        "chg_pct": 0.35
+        "last": 95.18,
+        "chg_pct": 0.28
       },
       "gold": {
         "last": 4068.3,
         "chg_pct": 1.13
       }
     },
-    "summary": "Overall macro mood is risk-on (+0.56). US Dow -0.0% overnight. Crude -1.3%. USD/INR +0.3%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
+    "summary": "Overall macro mood is risk-on (+0.37). US Dow -0.0% overnight. Crude -1.3%. USD/INR +0.3%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
       "Trade-war headlines spook global markets; IT & export names react most."

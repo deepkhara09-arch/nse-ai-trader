@@ -4,9 +4,9 @@
     "nse_code": "BAJFINANCE",
     "company_name": "Bajaj Finance Ltd",
     "date": "2026-07-02",
-    "generated_at": "2026-07-02 07:45 UTC",
-    "valid_until": "15:15 IST",
-    "session": "afternoon",
+    "generated_at": "2026-07-02 09:45 UTC",
+    "valid_until": "15:40 IST",
+    "session": "intraday_close",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -86,10 +86,10 @@
       "History backtest: this kind of BUY setup worked 53% of the time over ~1 week on this stock (sample: 53)"
     ],
     "patterns_seen": [
-      "supertrend_bullish",
       "adx_strong_trend_up",
-      "three_white_soldiers",
-      "full_bullish_alignment"
+      "full_bullish_alignment",
+      "supertrend_bullish",
+      "three_white_soldiers"
     ],
     "reliable_patterns": [],
     "nearest_support": 975.16,
@@ -123,9 +123,9 @@
     "nse_code": "ICICIBANK",
     "company_name": "ICICI Bank Ltd",
     "date": "2026-07-02",
-    "generated_at": "2026-07-02 07:45 UTC",
-    "valid_until": "15:15 IST",
-    "session": "afternoon",
+    "generated_at": "2026-07-02 09:45 UTC",
+    "valid_until": "15:40 IST",
+    "session": "intraday_close",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -206,12 +206,12 @@
       "History backtest: this kind of BUY setup worked 47% of the time over ~1 week on this stock (sample: 49)"
     ],
     "patterns_seen": [
-      "full_bullish_alignment",
-      "tweezer_bottom",
-      "adx_strong_trend_up",
       "stoch_rsi_oversold_reversal",
-      "supertrend_bullish",
-      "inside_bar"
+      "adx_strong_trend_up",
+      "tweezer_bottom",
+      "inside_bar",
+      "full_bullish_alignment",
+      "supertrend_bullish"
     ],
     "reliable_patterns": [],
     "nearest_support": 1375.2,
@@ -245,9 +245,9 @@
     "nse_code": "NESTLEIND",
     "company_name": "Nestle India Ltd",
     "date": "2026-07-02",
-    "generated_at": "2026-07-02 07:45 UTC",
-    "valid_until": "15:15 IST",
-    "session": "afternoon",
+    "generated_at": "2026-07-02 09:45 UTC",
+    "valid_until": "15:40 IST",
+    "session": "intraday_close",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -331,13 +331,13 @@
       "History backtest: this kind of BUY setup worked 45% of the time over ~1 week on this stock (sample: 51)"
     ],
     "patterns_seen": [
-      "macd_bullish_crossover",
       "adx_ranging_market",
+      "macd_bullish_crossover",
       "full_bullish_alignment",
-      "bb_upper_rejection",
       "ema_golden_cross",
       "pivot_r1_breakout",
       "momentum_continuation",
+      "bb_upper_rejection",
       "supertrend_bullish"
     ],
     "reliable_patterns": [],

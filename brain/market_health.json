@@ -1,6 +1,6 @@
 {
   "date": "2026-07-02",
-  "session": "midday",
+  "session": "intraday_close",
   "nifty": {
     "symbol": "^NSEI",
     "value": 24005.85,
@@ -58,7 +58,7 @@
       "ath_pct_60d": -1.92
     }
   },
-  "market_mood": "bullish",
+  "market_mood": "neutral",
   "trade_allowed": true,
   "warnings": [],
   "leading_sectors": [],
@@ -67,7 +67,7 @@
   "lagging_sectors": [
     "IT"
   ],
-  "intraday_regime": "trending_up",
+  "intraday_regime": "mixed",
   "macro": {
     "date": "2026-07-02",
     "session": "midday",

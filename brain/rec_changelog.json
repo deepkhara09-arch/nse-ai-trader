@@ -138,5 +138,55 @@
     "ts": "2026-07-02T07:45:46.382944",
     "detail": "Stop loss moved \u20b91351.55 \u2192 \u20b91365.95 | Target 1 moved \u20b91454.30 \u2192 \u20b91468.70",
     "confidence": 66.7
+  },
+  {
+    "type": "new",
+    "ticker": "FEDERALBNK.NS",
+    "nse_code": "FEDERALBNK",
+    "signal": "BUY",
+    "date": "2026-07-02",
+    "ts": "2026-07-02T10:12:56.795334",
+    "detail": "New BUY recommendation \u2014 confidence 76/100",
+    "confidence": 76.1
+  },
+  {
+    "type": "new",
+    "ticker": "ABCAPITAL.NS",
+    "nse_code": "ABCAPITAL",
+    "signal": "BUY",
+    "date": "2026-07-02",
+    "ts": "2026-07-02T10:12:56.795334",
+    "detail": "New BUY recommendation \u2014 confidence 72/100",
+    "confidence": 71.6
+  },
+  {
+    "type": "new",
+    "ticker": "PIDILITIND.NS",
+    "nse_code": "PIDILITIND",
+    "signal": "BUY",
+    "date": "2026-07-02",
+    "ts": "2026-07-02T10:12:56.795334",
+    "detail": "New BUY recommendation \u2014 confidence 66/100",
+    "confidence": 65.7
+  },
+  {
+    "type": "updated",
+    "ticker": "ICICIBANK.NS",
+    "nse_code": "ICICIBANK",
+    "signal": "BUY",
+    "date": "2026-07-02",
+    "ts": "2026-07-02T10:12:56.795334",
+    "detail": "Confidence \u25b212 (67 \u2192 78)",
+    "confidence": 78.3
+  },
+  {
+    "type": "updated",
+    "ticker": "BAJFINANCE.NS",
+    "nse_code": "BAJFINANCE",
+    "signal": "BUY",
+    "date": "2026-07-02",
+    "ts": "2026-07-02T10:12:56.795334",
+    "detail": "Confidence \u25b26 (67 \u2192 72) | Rank \u25bc1 (#9 \u2192 #10)",
+    "confidence": 72.4
   }
 ]

@@ -38,5 +38,65 @@
     "ts": "2026-07-01T10:12:52.592242",
     "detail": "New BUY recommendation \u2014 confidence 66/100",
     "confidence": 66.4
+  },
+  {
+    "type": "new",
+    "ticker": "ICICIBANK.NS",
+    "nse_code": "ICICIBANK",
+    "signal": "BUY",
+    "date": "2026-07-02",
+    "ts": "2026-07-02T04:05:41.644105",
+    "detail": "New BUY recommendation \u2014 confidence 67/100",
+    "confidence": 66.7
+  },
+  {
+    "type": "new",
+    "ticker": "NESTLEIND.NS",
+    "nse_code": "NESTLEIND",
+    "signal": "BUY",
+    "date": "2026-07-02",
+    "ts": "2026-07-02T04:05:41.644105",
+    "detail": "New BUY recommendation \u2014 confidence 66/100",
+    "confidence": 66.2
+  },
+  {
+    "type": "removed",
+    "ticker": "FEDERALBNK.NS",
+    "nse_code": "FEDERALBNK",
+    "signal": "BUY",
+    "date": "2026-07-02",
+    "ts": "2026-07-02T04:05:41.644105",
+    "detail": "Dropped \u2014 no longer meets threshold (was 68/100)",
+    "confidence": 0
+  },
+  {
+    "type": "removed",
+    "ticker": "RECLTD.NS",
+    "nse_code": "RECLTD",
+    "signal": "BUY",
+    "date": "2026-07-02",
+    "ts": "2026-07-02T04:05:41.644105",
+    "detail": "Dropped \u2014 no longer meets threshold (was 67/100)",
+    "confidence": 0
+  },
+  {
+    "type": "removed",
+    "ticker": "MARICO.NS",
+    "nse_code": "MARICO",
+    "signal": "BUY",
+    "date": "2026-07-02",
+    "ts": "2026-07-02T04:05:41.644105",
+    "detail": "Dropped \u2014 no longer meets threshold (was 66/100)",
+    "confidence": 0
+  },
+  {
+    "type": "updated",
+    "ticker": "BAJFINANCE.NS",
+    "nse_code": "BAJFINANCE",
+    "signal": "BUY",
+    "date": "2026-07-02",
+    "ts": "2026-07-02T04:05:41.644105",
+    "detail": "Confidence \u25bc5 (72 \u2192 67) | Rank \u25b23 (#12 \u2192 #9) | Stop loss moved \u20b9977.29 \u2192 \u20b9971.73",
+    "confidence": 66.9
   }
 ]

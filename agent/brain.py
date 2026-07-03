@@ -844,14 +844,33 @@ def analyse_stock(
         else:
             sell_reasons.append("✓ Daily setup aligned with the higher-timeframe trend")
 
+    # ── Market-mood alignment: don't fight the tape ─────────────────────────────
+    # A per-stock setup that fights the WHOLE market's mood fails more often —
+    # buying breakouts in a bearish tape is a classic false-signal factory. Like
+    # the multi-timeframe gate, this doesn't forbid counter-tape trades; it
+    # demands extra conviction for them.
+    mood_penalty = 0.0
+    try:
+        from agent.market_health import load_market_health
+        _mood = load_market_health().get("market_mood", "neutral")
+        if leaning_buy and _mood == "bearish":
+            mood_penalty = 1.5
+            buy_reasons.append("⚠ Market mood is bearish — buying against the tape needs extra conviction")
+        elif leaning_sell and _mood == "bullish":
+            mood_penalty = 1.5
+            sell_reasons.append("⚠ Market mood is bullish — shorting against the tape needs extra conviction")
+    except Exception:
+        pass
+
     buy_score  = round(buy_score,  2)
     sell_score = round(sell_score, 2)
     gap = abs(buy_score - sell_score)
 
-    # ── Determine signal (HTF conflict raises the required bar) ────────────────
-    if buy_score >= BUY_SIGNAL_MIN_SCORE + mtf_penalty and buy_score > sell_score and gap >= SIGNAL_SCORE_GAP:
+    # ── Determine signal (HTF conflict / counter-tape raise the required bar) ──
+    extra_bar = mtf_penalty + mood_penalty
+    if buy_score >= BUY_SIGNAL_MIN_SCORE + extra_bar and buy_score > sell_score and gap >= SIGNAL_SCORE_GAP:
         signal = "BUY"
-    elif sell_score >= SELL_SIGNAL_MIN_SCORE + mtf_penalty and sell_score > buy_score and gap >= SIGNAL_SCORE_GAP:
+    elif sell_score >= SELL_SIGNAL_MIN_SCORE + extra_bar and sell_score > buy_score and gap >= SIGNAL_SCORE_GAP:
         signal = "SELL"
     else:
         signal = "WATCH"   # no trade — keep monitoring

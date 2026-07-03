@@ -15,9 +15,17 @@ from agent.config import (
     BRAIN_DIR, PAPER_TRADES_FILE,
     INITIAL_CAPITAL, MAX_OPEN_POSITIONS,
     MAX_DAILY_LOSS_PCT, WIN_RATE_THRESHOLD, MIN_TRADES_FOR_SIGNAL,
-    PAPER_TRADING_DAYS, MAX_SECTOR_POSITIONS, MAX_HELD_DAYS,
+    PAPER_TRADING_DAYS, MAX_SECTOR_POSITIONS, MAX_HELD_DAYS, TRADE_COST_PCT_SIDE,
     VOL_REGIME_NORMAL_MAX_PCT, VOL_REGIME_CAUTION_MAX_PCT, VOL_REGIME_DANGER_MAX_PCT,
 )
+
+
+def _trade_costs(pos: dict, exit_price: float) -> float:
+    """Round-trip trading costs for this position: per-side fraction of turnover
+    (brokerage + STT + charges + slippage) on BOTH the entry and exit legs."""
+    side = TRADE_COST_PCT_SIDE.get(pos.get("style", "swing"), 0.0015)
+    qty  = pos.get("qty", 0)
+    return (pos.get("entry", 0) + exit_price) * qty * side
 from agent.brain import learn_from_trade
 from agent.trading_calendar import ist_today
 
@@ -417,7 +425,26 @@ def _check_exits(book: dict, stock_data: Dict, session: str, patterns_db: Dict):
                 exit_price = current
                 exit_reason = "time_exit"
 
-            pnl = (exit_price - pos["entry"]) * pos["qty"] * (1 if pos["action"] == "BUY" else -1)
+            # ── Gap-fill realism ────────────────────────────────────────────────
+            # A stop order can't fill at the stop price if the stock OPENED beyond
+            # it — a real exit fills at the open. Booking the stop price on a gap
+            # would flatter the results. (Favourable gaps through the target fill
+            # at the better open too — realism cuts both ways.)
+            day_open = data.get("day_open") or data.get("open")
+            if day_open:
+                buy = pos["action"] == "BUY"
+                if exit_reason == "stop_hit" and (
+                        (buy and day_open < exit_price) or (not buy and day_open > exit_price)):
+                    exit_price = day_open
+                    exit_reason = "stop_hit_gap"
+                elif exit_reason == "target_hit" and (
+                        (buy and day_open > exit_price) or (not buy and day_open < exit_price)):
+                    exit_price = day_open
+                    exit_reason = "target_hit_gap"
+
+            pnl_gross = (exit_price - pos["entry"]) * pos["qty"] * (1 if pos["action"] == "BUY" else -1)
+            costs     = _trade_costs(pos, exit_price)
+            pnl       = pnl_gross - costs        # NET — what real money would keep
             won = pnl > 0
             pnl_pct = round(pnl / pos["invested"] * 100, 2)
 
@@ -428,6 +455,8 @@ def _check_exits(book: dict, stock_data: Dict, session: str, patterns_db: Dict):
                 "exit_price":    round(exit_price, 2),
                 "exit_reason":   exit_reason,
                 "pnl":           round(pnl, 2),
+                "pnl_gross":     round(pnl_gross, 2),
+                "costs":         round(costs, 2),
                 "pnl_pct":       pnl_pct,
                 "won":           won,
                 "open_days":     open_days,
@@ -437,12 +466,14 @@ def _check_exits(book: dict, stock_data: Dict, session: str, patterns_db: Dict):
             book["daily_pnl_today"] = book.get("daily_pnl_today", 0) + pnl
 
             icon = "✅" if won else "❌"
-            print(f"[paper] CLOSE {icon} {ticker} | {exit_reason} | PnL ₹{pnl:+.0f} ({pnl_pct:+.1f}%)")
+            print(f"[paper] CLOSE {icon} {ticker} | {exit_reason} | PnL ₹{pnl:+.0f} net "
+                  f"(₹{costs:.0f} costs) ({pnl_pct:+.1f}%)")
 
-            # Teach the brain — pass exit_reason for ATR multiplier auto-tuning
+            # Teach the brain — pass the BASE reason (gap suffix stripped) so the
+            # ATR auto-tuner's stop_hit/target_hit matching still works.
             patterns_db = learn_from_trade(
                 ticker, pos.get("patterns", []), won, pos.get("style", "swing"),
-                patterns_db, exit_reason=exit_reason
+                patterns_db, exit_reason=exit_reason.replace("_gap", "")
             )
         else:
             pos["current_price"] = round(current, 2)
@@ -477,12 +508,16 @@ def _close_intraday_positions(book: dict, stock_data: Dict, patterns_db: Dict = 
                 current = data.get("price_315") or data.get("current_price") or data.get("close", pos["entry"])
             else:
                 current = data.get("current_price") or data.get("close", pos["entry"])
-            pnl     = (current - pos["entry"]) * pos["qty"] * (1 if pos["action"] == "BUY" else -1)
-            won     = pnl > 0
+            pnl_gross = (current - pos["entry"]) * pos["qty"] * (1 if pos["action"] == "BUY" else -1)
+            costs     = _trade_costs(pos, current)
+            pnl       = pnl_gross - costs        # NET of costs, like every close
+            won       = pnl > 0
             trade   = {**pos,
                 "close_date": today, "close_session": close_session,
                 "exit_price": round(current, 2), "exit_reason": "intraday_forced_close",
-                "pnl": round(pnl, 2), "pnl_pct": round(pnl / pos["invested"] * 100, 2),
+                "pnl": round(pnl, 2), "pnl_gross": round(pnl_gross, 2),
+                "costs": round(costs, 2),
+                "pnl_pct": round(pnl / pos["invested"] * 100, 2),
                 "won": won,
                 "open_days": _days_between(pos["open_date"], today),
             }

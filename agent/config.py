@@ -96,6 +96,18 @@ MAX_HELD_DAYS = {
     "long_term": 30,   # ~6 trading weeks — a positional hold, force-exit at day 30
 }
 
+# Realistic PER-SIDE trading costs as a fraction of turnover — brokerage + STT +
+# exchange/SEBI charges + GST + stamp duty + typical slippage, for a discount
+# broker on NSE. Delivery (swing/long_term) ≈ 0.15%/side; intraday ≈ 0.07%/side.
+# Paper P&L is booked NET of these so the validated edge is the edge YOUR real
+# money would actually experience — a 60% win-rate that only exists before costs
+# would be a dishonest validation.
+TRADE_COST_PCT_SIDE = {
+    "intraday":  0.0007,
+    "swing":     0.0015,
+    "long_term": 0.0015,
+}
+
 # ATR-based stop/target (overrides flat % when ATR is available)
 ATR_STOP_MULTIPLIER    = 1.5       # stop = entry ± 1.5x ATR
 ATR_TARGET_MULTIPLIER  = 3.0       # target = entry ± 3.0x ATR (2:1 R:R minimum)

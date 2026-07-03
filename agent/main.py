@@ -320,7 +320,7 @@ def _run_phase(state, phase, session, market_health, day, focus):
 
     # ── ANALYSIS ───────────────────────────────────────────────────────────────
     elif phase == "analysis":
-        fresh = fetch_stock_data(focus, session=session)
+        fresh = fetch_stock_data(_tickers_to_fetch(focus), session=session)
         if not fresh:
             record_issue("data_fetch", "focus stocks", "all price sources returned no data — using last-known", session)
         merged_anal = merge_stock_data(load_stock_data(), fresh)
@@ -390,8 +390,12 @@ def _run_phase(state, phase, session, market_health, day, focus):
 
     # ── PAPER TRADING ──────────────────────────────────────────────────────────
     elif phase in ("paper_trading", "alerting"):
-        # Fetch data for ALL focus stocks every session for full paper trading
-        fresh  = fetch_stock_data(focus, session=session)
+        # Fetch data for ALL focus stocks every session — PLUS any stock still
+        # HELD (paper position or the user's real My Trades position) that has
+        # been demoted out of focus. Without this, a demoted-but-held stock goes
+        # price-blind: exits would evaluate on stale prices and the user's panel
+        # would silently show old numbers.
+        fresh  = fetch_stock_data(_tickers_to_fetch(focus), session=session)
         if not fresh:
             record_issue("data_fetch", "focus stocks", "all price sources returned no data — using last-known", session)
         merged = merge_stock_data(load_stock_data(), fresh)
@@ -759,6 +763,29 @@ def _maybe_refresh_focus(state, stock_data, patterns, news_data, fund, book, mar
             save_fundamentals(new_fund)
             save_history_context(fetch_history_context(promoted))
         save_state(state)
+
+
+def _tickers_to_fetch(focus: list) -> list:
+    """Focus stocks PLUS every ticker still held anywhere — open paper positions
+    and the user's real My Trades positions. A held stock must keep receiving
+    live prices even after the focus competition demotes it, or its exit checks
+    and the user's panel would silently run on stale data."""
+    tickers = list(focus or [])
+    try:
+        from agent.paper_trader import load_book
+        tickers += [p.get("ticker") for p in load_book().get("open_positions", [])]
+    except Exception:
+        pass
+    try:
+        from agent.my_trades import load_my_positions
+        tickers += [p.get("ticker") for p in load_my_positions().get("open", [])]
+    except Exception:
+        pass
+    seen, out = set(), []
+    for t in tickers:
+        if t and t not in seen:
+            seen.add(t); out.append(t)
+    return out
 
 
 def _inject_fund_context(stock_data: dict, fund: dict) -> dict:

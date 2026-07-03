@@ -1,13 +1,13 @@
 {
   "phase": "analysis",
   "day": 9,
-  "session": "morning",
+  "session": "preopen",
   "start_date": "2026-06-22",
   "phase_start_date": "2026-07-01",
   "last_run_date": "2026-07-02",
   "last_counted_date": "2026-07-02",
   "cohort_last_tick_date": "2026-07-02",
-  "last_updated": "2026-07-02T10:12:56.712341",
+  "last_updated": "2026-07-03T03:05:44.530885",
   "focus_stocks": [
     "MARICO.NS",
     "RECLTD.NS",
@@ -47,7 +47,8 @@
     "[2026-07-01] Selected 15 focus stocks. Scores: MARICO=59 | RECLTD=59 | FEDERALBNK=52 | SBIN=51 | KOTAKBANK=51 | HOMEFIRST=51 | NESTLEIND=50 | ICICIBANK=49 | BAJFINANCE=49 | UNIONBANK=49 | ABCAPITAL=49 | PFC=49 | GAIL=49 | AXISBANK=48 | PIDILITIND=48",
     "Phase \u2192 analysis on day 8 (2026-07-01) | Selected 15 focus stocks. Scores: MARICO=59 | RECLTD=59 | FEDERALBNK=52 | SBIN=51 | KOTAKBANK=51 | HOMEFIRST=51 | NESTLEIND=50 | ICICIBANK=49 | BAJFINANCE=49 | UNIONBANK=49 | ABCAPITAL=49 | PFC=49 | GAIL=49 | AXISBANK=48 | PIDILITIND=48",
     "[2026-07-02] Pre-open macro: risk_on (+0.53)",
-    "[2026-07-02] Cohort batch #2 complete \u2014 30 candidates ready"
+    "[2026-07-02] Cohort batch #2 complete \u2014 30 candidates ready",
+    "[2026-07-03] Pre-open macro: risk_on (+0.62)"
   ],
   "alert_sent": false,
   "schema_version": 11,
@@ -199,11 +200,6 @@
     "scored_date": "2026-07-02"
   },
   "sessions_done": {
-    "preopen": "2026-07-02",
-    "morning": "2026-07-02",
-    "midday": "2026-07-02",
-    "afternoon": "2026-07-02",
-    "intraday_close": "2026-07-02",
-    "preclose": "2026-07-02"
+    "preopen": "2026-07-03"
   }
 }

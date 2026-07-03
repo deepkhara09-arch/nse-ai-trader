@@ -151,7 +151,7 @@ def _build_html(
 
   <!-- ── TRADE tab ── -->
   <section class="tab-panel" id="tab-trade" hidden>
-    {_section_recommendations(recommendations, validated=alert, stats=stats, decisions=decisions)}
+    {_section_recommendations(recommendations, validated=alert, stats=stats, decisions=decisions, book=book)}
     {_section_rankings(ranked_stocks)}
     {_section_changelog(changelog)}
   </section>
@@ -1642,7 +1642,7 @@ def _section_watchlist(focus, stock_data, news_data, patterns, fundamentals=None
 
 
 def _section_recommendations(recs, validated: bool = False, stats: dict = None,
-                             decisions: list = None) -> str:
+                             decisions: list = None, book: dict = None) -> str:
     # Honesty: until the strategy passes its paper-trade validation gate
     # (alert_sent / `validated`), any setups shown are the tool PRACTICING — not
     # proven calls. Frame them as such so a user never mistakes a pre-validation
@@ -1702,10 +1702,47 @@ def _section_recommendations(recs, validated: bool = False, stats: dict = None,
   {no_recs}
 </div>"""
 
+    # Persistence per ticker: how many DISTINCT days it has appeared on the rec
+    # list (from the daily RECOMMEND snapshots). A setup that survives several
+    # sessions is structurally stronger than a one-day flash — this is the main
+    # signal a user should use to pick which recommendation to act on.
+    persist_days: dict = {}
+    for d_ in (decisions or []):
+        if d_.get("action") == "RECOMMEND" and d_.get("ticker"):
+            persist_days.setdefault(d_["ticker"], set()).add(d_.get("date"))
+    # Live paper position per ticker: when the tool itself HOLDS this stock, show
+    # its actual position management (entry, trailed stop, target) so a user who
+    # followed the rec can mirror the same stop/target updates.
+    held = {p.get("ticker"): p for p in (book or {}).get("open_positions", [])}
+
     cards = ""
     for rec in recs:
         signal = rec["signal"]
         cls    = "rec-buy" if signal == "BUY" else "rec-sell"
+
+        n_persist = len(persist_days.get(rec.get("ticker"), set()) | {None}) - 1
+        persist_html = ""
+        if n_persist >= 2:
+            persist_html = (f'<span class="badge badge-green" style="margin-left:6px;font-size:.6rem" '
+                            f'title="This setup has stayed on the list {n_persist} trading days — persistent, not a one-day flash">'
+                            f'on the list {n_persist} days</span>')
+        elif n_persist == 1:
+            persist_html = ('<span class="badge badge-gray" style="margin-left:6px;font-size:.6rem" '
+                            'title="First day on the list — watch if it persists">new today</span>')
+
+        pos = held.get(rec.get("ticker"))
+        held_html = ""
+        if pos:
+            held_html = (
+                '<div style="background:#0a1a10;border:1px solid #3ecf8e55;border-radius:8px;'
+                'padding:8px 11px;margin:8px 0;font-size:.72rem;color:#3ecf8e;line-height:1.5">'
+                f'<b>&#9679; The tool is holding this</b> — {pos.get("action","BUY")} '
+                f'{pos.get("qty","?")}x @ &#8377;{pos.get("entry",0):,.2f} since {pos.get("open_date","?")}'
+                f'<br>Live management: stop <b>&#8377;{pos.get("stop_loss",0):,.2f}</b>'
+                f'{" (trailed up)" if pos.get("trailing_active") else ""} &middot; '
+                f'target <b>&#8377;{pos.get("target",0):,.2f}</b> &middot; style {pos.get("style","swing")}'
+                '<br>If you followed this call, mirror these stop/target updates.</div>'
+            )
         rr1    = rec.get("rr_target1", 0)
         rr2    = rec.get("rr_target2", 0)
         conf   = rec.get("confidence", 0)
@@ -1838,10 +1875,13 @@ def _section_recommendations(recs, validated: bool = False, stats: dict = None,
     <div style="display:flex;gap:4px;flex-wrap:wrap;justify-content:flex-end;align-items:flex-start">
       <span class="badge {sig_badge_cls}">{signal}</span>
       <span class="badge {trade_type_badge_cls}">{trade_type}</span>
+      {persist_html}
       {f'<span class="badge" style="background:#0e1624;color:#7eb3ff;border:1px solid #1e3050">#{focus_rank} {delta_html}</span>' if focus_rank else ""}
       {'<span class="badge badge-red">STALE</span>' if is_stale else ""}
     </div>
   </div>
+
+  {held_html}
 
   <div style="margin:6px 0 9px;padding:9px 11px;border-radius:6px;background:var(--card2);border:1px solid var(--border)">
     <div style="font-size:.8rem;font-weight:700;color:{'#4ade80' if signal=='BUY' else '#f87171'};line-height:1.4">

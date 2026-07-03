@@ -1,75 +1,5 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of strong_bullish_marubozu, full_bullish_alignment, pivot_r1_breakout mean for a swing trade on HOMEFIRST? Current RSI=71, MACD hist=+7.3678, Vol=1.4x average. Signal is BUY.",
-    "context": {
-      "ticker": "HOMEFIRST.NS",
-      "signal": "BUY",
-      "patterns": "strong_bullish_marubozu, full_bullish_alignment, pivot_r1_breakout",
-      "rsi": 71.5
-    },
-    "queued_at": "2026-07-03T03:05:44.608379"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of momentum_continuation, pivot_r1_breakout, ema_golden_cross mean for a swing trade on NESTLEIND? Current RSI=57, MACD hist=+3.4373, Vol=1.5x average. Signal is BUY.",
-    "context": {
-      "ticker": "NESTLEIND.NS",
-      "signal": "BUY",
-      "patterns": "momentum_continuation, pivot_r1_breakout, ema_golden_cross",
-      "rsi": 56.6
-    },
-    "queued_at": "2026-07-03T03:05:44.609191"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of stoch_rsi_oversold_reversal, supertrend_bullish, adx_strong_trend_up mean for a swing trade on ICICIBANK? Current RSI=72, MACD hist=+4.2195, Vol=0.8x average. Signal is BUY.",
-    "context": {
-      "ticker": "ICICIBANK.NS",
-      "signal": "BUY",
-      "patterns": "stoch_rsi_oversold_reversal, supertrend_bullish, adx_strong_trend_up",
-      "rsi": 72.1
-    },
-    "queued_at": "2026-07-03T03:05:44.612087"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of supertrend_bullish, full_bullish_alignment, adx_strong_trend_up mean for a swing trade on BAJFINANCE? Current RSI=90, MACD hist=+7.7680, Vol=0.7x average. Signal is BUY.",
-    "context": {
-      "ticker": "BAJFINANCE.NS",
-      "signal": "BUY",
-      "patterns": "supertrend_bullish, full_bullish_alignment, adx_strong_trend_up",
-      "rsi": 90.5
-    },
-    "queued_at": "2026-07-03T03:05:44.614946"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of supertrend_bullish, full_bullish_alignment, bullish_harami mean for a swing trade on UNIONBANK? Current RSI=75, MACD hist=+0.1326, Vol=1.1x average. Signal is BUY.",
-    "context": {
-      "ticker": "UNIONBANK.NS",
-      "signal": "BUY",
-      "patterns": "supertrend_bullish, full_bullish_alignment, bullish_harami",
-      "rsi": 74.7
-    },
-    "queued_at": "2026-07-03T03:05:44.617795"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of spinning_top, supertrend_bullish, adx_strong_trend_up mean for a swing trade on ABCAPITAL? Current RSI=79, MACD hist=+1.7254, Vol=0.5x average. Signal is BUY.",
-    "context": {
-      "ticker": "ABCAPITAL.NS",
-      "signal": "BUY",
-      "patterns": "spinning_top, supertrend_bullish, adx_strong_trend_up",
-      "rsi": 78.7
-    },
-    "queued_at": "2026-07-03T03:05:44.618246"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of supertrend_bullish, tweezer_bottom, full_bearish_alignment mean for a swing trade on PFC? Current RSI=63, MACD hist=+0.2841, Vol=0.7x average. Signal is BUY.",
-    "context": {
-      "ticker": "PFC.NS",
-      "signal": "BUY",
-      "patterns": "supertrend_bullish, tweezer_bottom, full_bearish_alignment",
-      "rsi": 62.7
-    },
-    "queued_at": "2026-07-03T03:05:44.621139"
-  },
-  {
     "question": "In Indian NSE markets, what does the combination of supertrend_bullish, full_bullish_alignment, inside_bar mean for a swing trade on GAIL? Current RSI=65, MACD hist=-0.3797, Vol=0.6x average. Signal is BUY.",
     "context": {
       "ticker": "GAIL.NS",
@@ -98,5 +28,75 @@
       "rsi": 78.2
     },
     "queued_at": "2026-07-03T03:05:44.622386"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_up, pivot_point_test, near_52w_high mean for a swing trade on MARICO? Current RSI=70, MACD hist=+3.8761, Vol=0.6x average. Signal is BUY.",
+    "context": {
+      "ticker": "MARICO.NS",
+      "signal": "BUY",
+      "patterns": "adx_strong_trend_up, pivot_point_test, near_52w_high",
+      "rsi": 70.0
+    },
+    "queued_at": "2026-07-03T04:05:48.003269"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of supertrend_bullish, adx_strong_trend_up, rsi_bearish_divergence mean for a swing trade on FEDERALBNK? Current RSI=75, MACD hist=+0.2209, Vol=0.9x average. Signal is BUY.",
+    "context": {
+      "ticker": "FEDERALBNK.NS",
+      "signal": "BUY",
+      "patterns": "supertrend_bullish, adx_strong_trend_up, rsi_bearish_divergence",
+      "rsi": 74.7
+    },
+    "queued_at": "2026-07-03T04:05:48.003777"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of spinning_top, supertrend_bullish, full_bullish_alignment mean for a swing trade on HOMEFIRST? Current RSI=75, MACD hist=+7.7730, Vol=1.0x average. Signal is BUY.",
+    "context": {
+      "ticker": "HOMEFIRST.NS",
+      "signal": "BUY",
+      "patterns": "spinning_top, supertrend_bullish, full_bullish_alignment",
+      "rsi": 75.5
+    },
+    "queued_at": "2026-07-03T04:05:48.007232"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of supertrend_bullish, adx_strong_trend_up, rsi_bearish_divergence mean for a swing trade on ICICIBANK? Current RSI=71, MACD hist=+4.2114, Vol=1.1x average. Signal is BUY.",
+    "context": {
+      "ticker": "ICICIBANK.NS",
+      "signal": "BUY",
+      "patterns": "supertrend_bullish, adx_strong_trend_up, rsi_bearish_divergence",
+      "rsi": 71.4
+    },
+    "queued_at": "2026-07-03T04:05:48.007734"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of supertrend_bullish, outside_bar, adx_strong_trend_up mean for a swing trade on BAJFINANCE? Current RSI=88, MACD hist=+7.8311, Vol=0.9x average. Signal is BUY.",
+    "context": {
+      "ticker": "BAJFINANCE.NS",
+      "signal": "BUY",
+      "patterns": "supertrend_bullish, outside_bar, adx_strong_trend_up",
+      "rsi": 87.5
+    },
+    "queued_at": "2026-07-03T04:05:48.008108"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of supertrend_bullish, adx_strong_trend_up, rsi_bearish_divergence mean for a swing trade on ABCAPITAL? Current RSI=73, MACD hist=+1.3705, Vol=0.7x average. Signal is BUY.",
+    "context": {
+      "ticker": "ABCAPITAL.NS",
+      "signal": "BUY",
+      "patterns": "supertrend_bullish, adx_strong_trend_up, rsi_bearish_divergence",
+      "rsi": 72.6
+    },
+    "queued_at": "2026-07-03T04:05:48.011018"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of supertrend_bullish, adx_strong_trend_up, rsi_bearish_divergence mean for a swing trade on PIDILITIND? Current RSI=76, MACD hist=-0.4616, Vol=0.8x average. Signal is BUY.",
+    "context": {
+      "ticker": "PIDILITIND.NS",
+      "signal": "BUY",
+      "patterns": "supertrend_bullish, adx_strong_trend_up, rsi_bearish_divergence",
+      "rsi": 76.1
+    },
+    "queued_at": "2026-07-03T04:05:48.013990"
   }
 ]

@@ -1,6 +1,6 @@
 {
   "date": "2026-07-03",
-  "session": "morning",
+  "session": "midday",
   "nifty": {
     "symbol": "^NSEI",
     "value": 24175.7,
@@ -27,11 +27,11 @@
   "sectors": {
     "IT": {
       "symbol": "ITBEES.NS",
-      "value": 28.63,
-      "day_change_pct": -1.95,
-      "trend_5d": "strong_down",
+      "value": 29.94,
+      "day_change_pct": 4.58,
+      "trend_5d": "down",
       "trend_20d": "strong_down",
-      "ath_pct_60d": -17.37
+      "ath_pct_60d": -13.59
     },
     "Pharma": {
       "symbol": "PHARMABEES.NS",
@@ -43,19 +43,19 @@
     },
     "Bank": {
       "symbol": "BANKBEES.NS",
-      "value": 601.57,
-      "day_change_pct": 0.87,
+      "value": 600.07,
+      "day_change_pct": -0.25,
       "trend_5d": "sideways",
       "trend_20d": "strong_up",
-      "ath_pct_60d": -4.19
+      "ath_pct_60d": -4.43
     },
     "Infra": {
       "symbol": "INFRABEES.NS",
-      "value": 975.9,
-      "day_change_pct": 0.69,
+      "value": 977.14,
+      "day_change_pct": 0.13,
       "trend_5d": "sideways",
-      "trend_20d": "up",
-      "ath_pct_60d": -1.92
+      "trend_20d": "strong_up",
+      "ath_pct_60d": -1.79
     }
   },
   "market_mood": "neutral",
@@ -72,21 +72,21 @@
   "intraday_regime": "mixed",
   "macro": {
     "date": "2026-07-03",
-    "session": "preopen",
-    "generated_at": "2026-07-03T03:05:43.576885",
-    "global_score": 0.314,
+    "session": "midday",
+    "generated_at": "2026-07-03T06:15:41.957096",
+    "global_score": 0.326,
     "india_score": 1.0,
-    "overall_score": 0.623,
+    "overall_score": 0.629,
     "mood": "risk_on",
     "drivers": [
+      "Is the stock market open today? Here\u2019s how Fourth of July weekend affects trading hours.",
       "My doctor friend objected to his hospital\u2019s fundraising tactics. Did management go too far?",
       "\u2018I claimed Social Security at 62\u2019: At 76, I\u2019m working at Walmart. Why do I still owe payroll taxes?",
       "When does my kid get the free \u2018Trump account\u2019 money?",
       "Dow scores fresh record despite tepid jobs report. Why the rest of 2026 is about workers.",
       "Trump blasts \u2018hostile\u2019 Fed and says Warsh \u2018has to do what he has to do\u2019 on interest rates",
       "I have no kids. Will I cause family drama by leaving different amounts to my nieces and nephews?",
-      "5 things to know about Jersey Mike\u2019s ahead of its IPO",
-      "Trump\u2019s billion-dollar crypto haul triggers some everyday investors sitting on big losses"
+      "5 things to know about Jersey Mike\u2019s ahead of its IPO"
     ],
     "global_cues": {
       "dow": {
@@ -102,23 +102,23 @@
         "chg_pct": 0.0
       },
       "nikkei": {
-        "last": 69243.68,
-        "chg_pct": 0.74
+        "last": 69632.72,
+        "chg_pct": 1.31
       },
       "crude": {
-        "last": 68.93,
-        "chg_pct": 0.51
+        "last": 69.13,
+        "chg_pct": 0.64
       },
       "usdinr": {
-        "last": 95.38,
-        "chg_pct": -0.04
+        "last": 95.29,
+        "chg_pct": -0.14
       },
       "gold": {
-        "last": 4196.5,
-        "chg_pct": 2.04
+        "last": 4180.0,
+        "chg_pct": 1.64
       }
     },
-    "summary": "Overall macro mood is risk-on (+0.62). US Dow +1.1% overnight. Crude +0.5%. USD/INR -0.0%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
+    "summary": "Overall macro mood is risk-on (+0.63). US Dow +1.1% overnight. Crude +0.6%. USD/INR -0.1%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
       "Trade-war headlines spook global markets; IT & export names react most."

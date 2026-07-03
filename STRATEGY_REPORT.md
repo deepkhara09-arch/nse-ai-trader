@@ -1,5 +1,5 @@
 # NSE AI Trader — Strategy Report
-> Updated: 2026-07-02 &nbsp;|&nbsp; Day 9 &nbsp;|&nbsp; Phase: analysis
+> Updated: 2026-07-03 &nbsp;|&nbsp; Day 10 &nbsp;|&nbsp; Phase: analysis
 
 ---
 
@@ -21,184 +21,128 @@
 > **Important:** These are paper trade signals based on the agent's learned patterns.
 > Not financial advice. Always use your own judgement and consult a SEBI advisor.
 
-BUY ICICI Bank Ltd (ICICIBANK)
-   CMP:           Rs.1,400.00
-   Entry Zone:    Rs.1,397.20 - Rs.1,407.00
-   Stop Loss:     Rs.1,365.75  (2.5% risk)
-   Target 1:      Rs.1,468.50  (R:R 1:2.0)
-   Target 2:      Rs.1,491.34  (R:R 1:2.7)
-   Hold:          5–15 trading days (swing)
-   Qty (2% risk): 8 shares -> Rs.11,200 invested
-   Max loss:      Rs.274 if SL hit
-   Confidence:    78/100  (Tech:38 Fund:15 News:17 Pat:1)
-   Reasons:
-     - All EMAs stacked bullish
-     - MACD histogram positive
-     - Positive news sentiment (0.33)
-     - News sentiment improving across sessions
-     - Candlestick: tweezer bottom
-     - Sector tailwind (momentum=0.34)
-     - Supertrend bullish — price above trend band
-     - ADX strong trend — directional move confirmed
-     - StochRSI oversold with bullish candle — reversal
-     - High delivery 66% — strong institutional accumulation
-     - In a long-term uptrend (2yr) — trend on our side
-     - ✓ Daily setup aligned with the higher-timeframe trend
-     - Support at ₹1375.20 cushions downside
-     - Resistance at ₹1500.00 is natural target
-     - Latest news: 'ICICI Bank Share Price Today, ICICI Bank Stock Price Live NSE/BSE Upda'
-     - Confluence: 5 independent signal families agree (trend, momentum, volume, pattern, news)
-     - History backtest: this kind of BUY setup worked 46% of the time over ~1 week on this stock (sample: 52)
-
----
-
-BUY FEDERALBNK.NS (FEDERALBNK)
-   CMP:           Rs.331.00
-   Entry Zone:    Rs.330.34 - Rs.332.65
-   Stop Loss:     Rs.322.96  (2.4% risk)
-   Target 1:      Rs.347.08  (R:R 1:2.0)
-   Target 2:      Rs.352.44  (R:R 1:2.7)
-   Hold:          5–15 trading days (swing)
-   Qty (2% risk): 36 shares -> Rs.11,916 invested
-   Max loss:      Rs.289 if SL hit
-   Confidence:    76/100  (Tech:36 Fund:15 News:14 Pat:1)
-   Reasons:
-     - All EMAs stacked bullish
-     - MACD histogram positive
-     - Candlestick: three white soldiers
-     - Near 52-week high — potential breakout zone
-     - Supertrend bullish — price above trend band
-     - ADX strong trend — directional move confirmed
-     - High delivery 63% — strong institutional accumulation
-     - In a long-term strong uptrend (2yr) — trend on our side
-     - Near 52-week high (100% of range) — breakout zone
-     - ✓ Daily setup aligned with the higher-timeframe trend
-     - Support at ₹324.05 cushions downside
-     - Resistance at ₹340.00 is natural target
-     - Latest news: 'Momentum Stocks: Oracle Financial, KIMS, Marico, Delhivery, Federal Ba'
-     - Confluence: 6 independent signal families agree (trend, momentum, volume, pattern, news, regime)
-     - History backtest: this kind of BUY setup worked 54% of the time over ~1 week on this stock (sample: 59)
-
----
-
 BUY Bajaj Finance Ltd (BAJFINANCE)
-   CMP:           Rs.1,018.40
-   Entry Zone:    Rs.1,016.36 - Rs.1,023.49
-   Stop Loss:     Rs.979.93  (3.8% risk)
-   Target 1:      Rs.1,095.34  (R:R 1:2.0)
-   Target 2:      Rs.1,120.99  (R:R 1:2.7)
+   CMP:           Rs.1,031.40
+   Entry Zone:    Rs.1,029.34 - Rs.1,036.56
+   Stop Loss:     Rs.995.53  (3.5% risk)
+   Target 1:      Rs.1,103.14  (R:R 1:2.0)
+   Target 2:      Rs.1,127.11  (R:R 1:2.7)
    Hold:          5–15 trading days (swing)
-   Qty (2% risk): 11 shares -> Rs.11,202 invested
-   Max loss:      Rs.423 if SL hit
-   Confidence:    72/100  (Tech:32 Fund:15 News:17 Pat:1)
+   Qty (2% risk): 11 shares -> Rs.11,345 invested
+   Max loss:      Rs.395 if SL hit
+   Confidence:    80/100  (Tech:34 Fund:15 News:20 Pat:1)
    Reasons:
      - All EMAs stacked bullish
      - MACD histogram positive
-     - Positive news sentiment (0.39)
+     - Positive news sentiment (0.45)
      - News sentiment improving across sessions
      - Candlestick: three white soldiers
-     - Sector tailwind (momentum=0.44)
+     - Sector tailwind (momentum=0.47)
      - Supertrend bullish — price above trend band
      - ADX strong trend — directional move confirmed
-     - Delivery 58% above avg — institutional buying
+     - Gap down reversal — buyers stepping in at lower open
+     - Delivery 55% above avg — institutional buying
      - In a long-term uptrend (2yr) — trend on our side
-     - ⚠ Daily buy fights the higher-timeframe trend — needs extra conviction
-     - Support at ₹975.16 cushions downside
+     - ✓ Daily setup aligned with the higher-timeframe trend
+     - Support at ₹1003.56 cushions downside
      - Resistance at ₹1100.00 is natural target
-     - Latest news: 'Bajaj Finance advances Monday, outperforms market - MarketWatch'
-     - Confluence: 5 independent signal families agree (trend, momentum, volume, pattern, news)
-     - History backtest: this kind of BUY setup worked 51% of the time over ~1 week on this stock (sample: 53)
+     - Latest news: 'Stocks to buy: Dalmia Bharat, Chalet Hotels, Minda Corp, among 6 mid-c'
+     - Confluence: 6 independent signal families agree (trend, momentum, volume, pattern, news, regime)
+     - History backtest: this kind of BUY setup worked 48% of the time over ~1 week on this stock (sample: 48)
+   Market warnings: Nifty choppy intraday — wait for cleaner setups
 
 ---
 
 BUY ABCAPITAL.NS (ABCAPITAL)
-   CMP:           Rs.392.95
-   Entry Zone:    Rs.392.16 - Rs.394.91
-   Stop Loss:     Rs.382.22  (2.7% risk)
-   Target 1:      Rs.419.49  (R:R 1:2.5)
-   Target 2:      Rs.430.11  (R:R 1:3.5)
+   CMP:           Rs.401.25
+   Entry Zone:    Rs.400.45 - Rs.403.26
+   Stop Loss:     Rs.391.64  (2.4% risk)
+   Target 1:      Rs.425.16  (R:R 1:2.5)
+   Target 2:      Rs.434.72  (R:R 1:3.5)
    Hold:          5–15 trading days (swing)
-   Qty (2% risk): 30 shares -> Rs.11,788 invested
-   Max loss:      Rs.322 if SL hit
-   Confidence:    72/100  (Tech:28 Fund:15 News:18 Pat:1)
+   Qty (2% risk): 29 shares -> Rs.11,636 invested
+   Max loss:      Rs.279 if SL hit
+   Confidence:    78/100  (Tech:34 Fund:15 News:17 Pat:2)
    Reasons:
      - All EMAs stacked bullish
      - MACD histogram positive
-     - Positive news sentiment (0.20)
+     - Positive news sentiment (0.29)
      - News sentiment improving across sessions
+     - Candlestick: three white soldiers
      - Near 52-week high — potential breakout zone
+     - Sector tailwind (momentum=0.36)
      - Supertrend bullish — price above trend band
      - ADX strong trend — directional move confirmed
-     - Testing pivot point — decision zone
-     - Delivery 48% above avg — institutional buying
+     - Delivery 45% above avg — institutional buying
      - In a long-term strong uptrend (2yr) — trend on our side
      - Near 52-week high (100% of range) — breakout zone
      - ✓ Daily setup aligned with the higher-timeframe trend
-     - Support at ₹385.30 cushions downside
-     - Resistance at ₹400.00 is natural target
+     - Support at ₹394.80 cushions downside
+     - Resistance at ₹410.00 is natural target
      - Latest news: 'Aditya Birla Capital raises Rs 300 Cr via NCDs - scanx.trade'
      - Confluence: 6 independent signal families agree (trend, momentum, volume, pattern, news, regime)
-     - History backtest: this kind of BUY setup worked 54% of the time over ~1 week on this stock (sample: 56)
+     - History backtest: this kind of BUY setup worked 65% of the time over ~1 week on this stock (sample: 54)
+   Market warnings: Nifty choppy intraday — wait for cleaner setups
 
 ---
 
-BUY Nestle India Ltd (NESTLEIND)
-   CMP:           Rs.1,445.70
-   Entry Zone:    Rs.1,442.81 - Rs.1,452.93
-   Stop Loss:     Rs.1,397.52  (3.3% risk)
-   Target 1:      Rs.1,542.06  (R:R 1:2.0)
-   Target 2:      Rs.1,574.18  (R:R 1:2.7)
+BUY ICICI Bank Ltd (ICICIBANK)
+   CMP:           Rs.1,411.40
+   Entry Zone:    Rs.1,408.58 - Rs.1,418.46
+   Stop Loss:     Rs.1,377.05  (2.4% risk)
+   Target 1:      Rs.1,480.10  (R:R 1:2.0)
+   Target 2:      Rs.1,503.00  (R:R 1:2.7)
    Hold:          5–15 trading days (swing)
-   Qty (2% risk): 8 shares -> Rs.11,566 invested
-   Max loss:      Rs.385 if SL hit
-   Confidence:    68/100  (Tech:23 Fund:15 News:19 Pat:1)
+   Qty (2% risk): 8 shares -> Rs.11,291 invested
+   Max loss:      Rs.275 if SL hit
+   Confidence:    70/100  (Tech:29 Fund:15 News:16 Pat:2)
    Reasons:
      - All EMAs stacked bullish
      - MACD histogram positive
-     - High volume confirmation (1.5x avg)
-     - Positive news sentiment (0.40)
-     - News sentiment improving across sessions
-     - Supertrend bullish — price above trend band
-     - ADX low — market ranging, signals less reliable
-     - Broke above Pivot R1 with volume — bullish
-     - In a long-term uptrend (2yr) — trend on our side
-     - Near 52-week high (93% of range) — breakout zone
-     - Clean trender aligned with its long-term uptrend
-     - ✓ Daily setup aligned with the higher-timeframe trend
-     - Support at ₹1404.42 cushions downside
-     - Resistance at ₹1486.10 is natural target
-     - Latest news: 'Stocks to watch, July 1: RIL, Nestle India, Paras Defence, KPIT Tech, '
-     - Confluence: 6 independent signal families agree (trend, momentum, volume, pattern, news, regime)
-     - History backtest: this kind of BUY setup worked 49% of the time over ~1 week on this stock (sample: 49)
-
----
-
-BUY Pidilite Industries (PIDILITIND)
-   CMP:           Rs.1,605.40
-   Entry Zone:    Rs.1,602.19 - Rs.1,613.43
-   Stop Loss:     Rs.1,562.15  (2.7% risk)
-   Target 1:      Rs.1,691.90  (R:R 1:2.0)
-   Target 2:      Rs.1,720.74  (R:R 1:2.7)
-   Hold:          5–15 trading days (swing)
-   Qty (2% risk): 7 shares -> Rs.11,238 invested
-   Max loss:      Rs.303 if SL hit
-   Confidence:    66/100  (Tech:36 Fund:15 News:12 Pat:1)
-   Reasons:
-     - All EMAs stacked bullish
-     - Candlestick: bullish harami
-     - Near 52-week high — potential breakout zone
-     - Sector tailwind (momentum=0.45)
+     - Positive news sentiment (0.30)
      - Supertrend bullish — price above trend band
      - ADX strong trend — directional move confirmed
      - StochRSI oversold with bullish candle — reversal
      - High delivery 62% — strong institutional accumulation
-     - In a long-term strong uptrend (2yr) — trend on our side
+     - In a long-term uptrend (2yr) — trend on our side
      - ✓ Daily setup aligned with the higher-timeframe trend
-     - Support at ₹1569.92 cushions downside
-     - Resistance at ₹1700.00 is natural target
-     - Latest news: 'Pidilite Industries Limited Actuals & Estimates (NSE:PIDILITIND) - Tra'
-     - Confluence: 3 independent signal families agree (trend, volume, pattern)
-     - History backtest: this kind of BUY setup worked 49% of the time over ~1 week on this stock (sample: 49)
+     - Support at ₹1375.20 cushions downside
+     - Resistance at ₹1500.00 is natural target
+     - Latest news: 'Stocks to buy for short term: Delhivery among 3 stocks Ajit Mishra of '
+     - Confluence: 5 independent signal families agree (trend, momentum, volume, pattern, news)
+     - History backtest: this kind of BUY setup worked 41% of the time over ~1 week on this stock (sample: 46)
+   Market warnings: Nifty choppy intraday — wait for cleaner setups
+
+---
+
+BUY Marico Ltd (MARICO)
+   CMP:           Rs.838.55
+   Entry Zone:    Rs.836.87 - Rs.842.74
+   Stop Loss:     Rs.814.75  (2.8% risk)
+   Target 1:      Rs.886.15  (R:R 1:2.0)
+   Target 2:      Rs.902.02  (R:R 1:2.7)
+   Hold:          5–15 trading days (swing)
+   Qty (2% risk): 14 shares -> Rs.11,740 invested
+   Max loss:      Rs.333 if SL hit
+   Confidence:    67/100  (Tech:24 Fund:15 News:18 Pat:0)
+   Reasons:
+     - All EMAs stacked bullish
+     - MACD histogram positive
+     - Positive news sentiment (0.31)
+     - News sentiment improving across sessions
+     - Near 52-week high — potential breakout zone
+     - Sector tailwind (momentum=0.44)
+     - ADX strong trend — directional move confirmed
+     - Delivery 54% above avg — institutional buying
+     - In a long-term strong uptrend (2yr) — trend on our side
+     - Near 52-week high (100% of range) — breakout zone
+     - ✓ Daily setup aligned with the higher-timeframe trend
+     - Support at ₹820.23 cushions downside
+     - Resistance at ₹860.00 is natural target
+     - Latest news: 'Marico shares hit 52-week high after Q1 FY27 business update, pare gai'
+     - Confluence: 6 independent signal families agree (trend, momentum, volume, pattern, news, regime)
+     - History backtest: this kind of BUY setup worked 50% of the time over ~1 week on this stock (sample: 48)
+   Market warnings: Nifty choppy intraday — wait for cleaner setups
 
 ---
 

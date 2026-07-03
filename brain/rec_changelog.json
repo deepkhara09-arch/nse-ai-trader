@@ -278,5 +278,45 @@
     "ts": "2026-07-03T07:45:55.884273",
     "detail": "Dropped \u2014 no longer meets threshold (was 67/100)",
     "confidence": 0
+  },
+  {
+    "type": "new",
+    "ticker": "ICICIBANK.NS",
+    "nse_code": "ICICIBANK",
+    "signal": "BUY",
+    "date": "2026-07-03",
+    "ts": "2026-07-03T10:12:40.609176",
+    "detail": "New BUY recommendation \u2014 confidence 70/100",
+    "confidence": 69.7
+  },
+  {
+    "type": "new",
+    "ticker": "MARICO.NS",
+    "nse_code": "MARICO",
+    "signal": "BUY",
+    "date": "2026-07-03",
+    "ts": "2026-07-03T10:12:40.609176",
+    "detail": "New BUY recommendation \u2014 confidence 67/100",
+    "confidence": 67.1
+  },
+  {
+    "type": "updated",
+    "ticker": "BAJFINANCE.NS",
+    "nse_code": "BAJFINANCE",
+    "signal": "BUY",
+    "date": "2026-07-03",
+    "ts": "2026-07-03T10:12:40.609176",
+    "detail": "Confidence \u25b29 (71 \u2192 80) | Rank \u25b23 (#11 \u2192 #8)",
+    "confidence": 80.1
+  },
+  {
+    "type": "updated",
+    "ticker": "ABCAPITAL.NS",
+    "nse_code": "ABCAPITAL",
+    "signal": "BUY",
+    "date": "2026-07-03",
+    "ts": "2026-07-03T10:12:40.609176",
+    "detail": "Confidence \u25b25 (73 \u2192 78) | Rank \u25bc1 (#3 \u2192 #4) | Target 1 moved \u20b9428.42 \u2192 \u20b9425.16",
+    "confidence": 78.2
   }
 ]

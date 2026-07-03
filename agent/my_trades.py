@@ -1,0 +1,199 @@
+"""
+My Trades — the USER's real positions, managed by the tool.
+
+When you actually act on a recommendation, you tell the tool via the GitHub
+Actions "My Trades" workflow (a simple form: bought/sold, ticker, price, qty).
+From then on, every session the tool manages YOUR position exactly like its own
+paper positions — mark-to-market with the live price, trail the stop with the
+same rules, and flag EXIT NOW when your stop/target/time is hit — all anchored
+to YOUR fill price, shown in a "My Positions" panel on the Trade tab.
+
+The tool NEVER auto-closes your position (it can't know your real fill): it
+flags the exit and you confirm by logging "sold" in the same form.
+
+Storage: brain/my_positions.json
+  { "open":   [ {ticker, action, entry, qty, open_date, stop_loss, target,
+                 style, source, exit_signal, ...} ],
+    "closed": [ ... + {close_date, exit_price, pnl, pnl_pct} ] }
+
+CLI (used by the workflow):
+  python -m agent.my_trades bought BAJFINANCE 1015.50 9
+  python -m agent.my_trades sold   BAJFINANCE 1088.00
+"""
+
+import json
+import os
+import sys
+
+from agent.config import BRAIN_DIR, NSE_UNIVERSE, ATR_STOP_MULTIPLIER, ATR_TARGET_MULTIPLIER
+from agent.trading_calendar import ist_today
+
+MY_POSITIONS_FILE = "brain/my_positions.json"
+
+
+def load_my_positions() -> dict:
+    from agent.io_safe import load_json_dict
+    d = load_json_dict(MY_POSITIONS_FILE)
+    if not isinstance(d, dict):
+        d = {}
+    d.setdefault("open", [])
+    d.setdefault("closed", [])
+    return d
+
+
+def save_my_positions(data: dict) -> None:
+    os.makedirs(BRAIN_DIR, exist_ok=True)
+    with open(MY_POSITIONS_FILE, "w") as f:
+        json.dump(data, f, indent=2)
+
+
+def _normalize_ticker(raw: str) -> str:
+    t = (raw or "").strip().upper().replace(" ", "")
+    if not t.endswith(".NS"):
+        t += ".NS"
+    return t
+
+
+def _personal_stop_target(ticker: str, side: str, entry: float):
+    """Stop/target anchored to YOUR fill price.
+
+    Preference order:
+      1. The live recommendation for this stock — reuse its RISK GEOMETRY (the
+         rupee distance from its entry to its stop/target) around your fill, so
+         your plan matches the call you acted on even if your fill differs a bit.
+      2. ATR from current stock data (same multipliers as paper trades).
+      3. Flat % fallback (3.5% stop / 7% target) if no data at all.
+    Returns (stop, target, source_str).
+    """
+    sgn = 1 if side == "BUY" else -1
+    # 1) live rec geometry
+    try:
+        from agent.recommendations import load_recommendations
+        for r in load_recommendations():
+            if r.get("ticker") == ticker:
+                mid = ((r.get("entry_low") or 0) + (r.get("entry_high") or 0)) / 2 or r.get("cmp") or entry
+                d_stop = abs(mid - (r.get("stop_loss") or 0))
+                d_tgt  = abs((r.get("target1") or 0) - mid)
+                if d_stop > 0 and d_tgt > 0:
+                    return (round(entry - sgn * d_stop, 2),
+                            round(entry + sgn * d_tgt, 2),
+                            "recommendation geometry")
+    except Exception:
+        pass
+    # 2) ATR
+    try:
+        from agent.data_fetcher import load_stock_data
+        atr = load_stock_data().get(ticker, {}).get("latest", {}).get("atr")
+        if atr:
+            return (round(entry - sgn * atr * ATR_STOP_MULTIPLIER, 2),
+                    round(entry + sgn * atr * ATR_TARGET_MULTIPLIER, 2),
+                    "ATR")
+    except Exception:
+        pass
+    # 3) flat
+    return (round(entry * (1 - sgn * 0.035), 2),
+            round(entry * (1 + sgn * 0.07), 2), "flat %")
+
+
+def record_bought(ticker_raw: str, price: float, qty: int, side: str = "BUY") -> str:
+    ticker = _normalize_ticker(ticker_raw)
+    data = load_my_positions()
+    if any(p["ticker"] == ticker for p in data["open"]):
+        return f"REJECTED: you already have an open position in {ticker} — log 'sold' first."
+    stop, target, src = _personal_stop_target(ticker, side, price)
+    pos = {
+        "ticker":       ticker,
+        "action":       side,
+        "entry":        round(price, 2),
+        "qty":          int(qty),
+        "invested":     round(price * int(qty), 2),
+        "open_date":    ist_today().isoformat(),
+        "stop_loss":    stop,
+        "target":       target,
+        "style":        "swing",            # user trades are managed as swing
+        "plan_source":  src,
+        "known_stock":  ticker in NSE_UNIVERSE,
+        "exit_signal":  "",                  # set by session runs: target_hit/stop_hit
+        "current_price": round(price, 2),
+        "unrealized_pnl": 0.0,
+    }
+    data["open"].append(pos)
+    save_my_positions(data)
+    note = "" if pos["known_stock"] else " (NOT in the tool's universe — no live price management!)"
+    return (f"RECORDED: {side} {qty}x {ticker} @ {price:.2f} | plan from {src}: "
+            f"stop {stop:.2f}, target {target:.2f}{note}")
+
+
+def record_sold(ticker_raw: str, price: float) -> str:
+    ticker = _normalize_ticker(ticker_raw)
+    data = load_my_positions()
+    pos = next((p for p in data["open"] if p["ticker"] == ticker), None)
+    if not pos:
+        return f"REJECTED: no open position in {ticker} to close."
+    sgn = 1 if pos.get("action", "BUY") == "BUY" else -1
+    pnl = round((price - pos["entry"]) * pos["qty"] * sgn, 2)
+    pos.update({
+        "close_date":  ist_today().isoformat(),
+        "exit_price":  round(price, 2),
+        "pnl":         pnl,
+        "pnl_pct":     round(pnl / max(pos.get("invested", 1), 1) * 100, 2),
+        "won":         pnl > 0,
+    })
+    data["open"] = [p for p in data["open"] if p["ticker"] != ticker]
+    data["closed"] = (data["closed"] + [pos])[-100:]
+    save_my_positions(data)
+    return (f"CLOSED: {ticker} @ {price:.2f} | P&L {pnl:+,.2f} ({pos['pnl_pct']:+.2f}%) "
+            f"| {'WIN' if pnl > 0 else 'LOSS'}")
+
+
+def manage_positions(stock_data: dict, save: bool = True) -> dict:
+    """Run once per session: mark-to-market, trail stops (same rules as paper
+    trades), and set exit_signal flags. NEVER closes — the user confirms exits."""
+    data = load_my_positions()
+    if not data["open"]:
+        return data
+    # Reuse the paper trader's trailing logic on a wrapper book (same field names).
+    try:
+        from agent.paper_trader import _update_trailing_stops
+        wrapper = {"open_positions": data["open"]}
+        _update_trailing_stops(wrapper, stock_data)
+        data["open"] = wrapper["open_positions"]
+    except Exception as e:
+        print(f"[my-trades] trailing skipped (non-fatal): {e}")
+
+    for pos in data["open"]:
+        d = stock_data.get(pos["ticker"], {}).get("latest", {})
+        cur = d.get("current_price") or d.get("close")
+        if not cur:
+            continue
+        sgn = 1 if pos.get("action", "BUY") == "BUY" else -1
+        pos["current_price"]  = round(cur, 2)
+        pos["unrealized_pnl"] = round((cur - pos["entry"]) * pos["qty"] * sgn, 2)
+        hi = d.get("session_high") or d.get("day_high") or cur
+        lo = d.get("session_low")  or d.get("day_low")  or cur
+        if pos.get("action", "BUY") == "BUY":
+            if lo <= pos["stop_loss"]:   pos["exit_signal"] = "stop_hit"
+            elif hi >= pos["target"]:    pos["exit_signal"] = "target_hit"
+        else:
+            if hi >= pos["stop_loss"]:   pos["exit_signal"] = "stop_hit"
+            elif lo <= pos["target"]:    pos["exit_signal"] = "target_hit"
+    if save:
+        save_my_positions(data)
+    return data
+
+
+if __name__ == "__main__":
+    # CLI for the GitHub Actions form:  bought TICKER PRICE QTY | sold TICKER PRICE
+    args = sys.argv[1:]
+    if len(args) < 3:
+        print("usage: python -m agent.my_trades bought TICKER PRICE QTY | sold TICKER PRICE")
+        sys.exit(1)
+    verb, tick, price = args[0].lower(), args[1], float(args[2])
+    if verb == "bought":
+        qty = int(float(args[3])) if len(args) > 3 else 1
+        print(record_bought(tick, price, qty))
+    elif verb == "sold":
+        print(record_sold(tick, price))
+    else:
+        print(f"unknown action '{verb}' — use bought/sold")
+        sys.exit(1)

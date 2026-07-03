@@ -112,9 +112,27 @@ Reasoning: All EMAs stacked bullish · RSI=52 healthy buy zone ·
 ```
 
 **Important:** Signals only appear when:
-1. The agent has closed at least 12 paper trades
-2. Win rate is ≥ 58%
+1. The agent has closed at least 25 paper trades over 30+ trading days
+2. Win rate is ≥ 60% — including over the most recent 20 trades (recent form
+   must hold; if it later decays below 45%, validation is revoked automatically)
 3. Expectancy is positive (average trade makes money)
+
+---
+
+## Log YOUR real trades ("My Trades")
+
+When you act on a recommendation, tell the tool — it will then manage YOUR
+position live (trail your stop each session, flag EXIT NOW at stop/target):
+
+1. GitHub repo → **Actions** → **My Trades** → **Run workflow**
+2. Fill the form: `bought` / ticker (e.g. `BAJFINANCE`) / your fill price / qty
+3. The dashboard's **My Positions** panel (Trade tab) now tracks it with a
+   stop/target anchored to *your* entry (using the recommendation's risk
+   geometry). Mirror its stop updates in your broker app.
+4. When it shows **EXIT NOW** (or you exit on your own), log `sold` + price.
+   Your P&L history builds up in the same panel.
+
+The tool never auto-closes your trade — it flags, you confirm.
 
 ---
 

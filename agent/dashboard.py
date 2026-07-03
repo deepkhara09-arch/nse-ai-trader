@@ -39,6 +39,7 @@ def build_dashboard(
     attribution: Dict = None,
     coach_memory: Dict = None,
     run_health: Dict = None,
+    my_positions: Dict = None,
 ) -> None:
     os.makedirs("docs", exist_ok=True)
     if market_health is None:
@@ -82,6 +83,7 @@ def build_dashboard(
         ranked_stocks, sector_scores, changelog, attribution or {},
         coach_memory=coach_memory or {},
         run_health=run_health or {},
+        my_positions=my_positions or {},
     )
 
     with open(DASHBOARD_FILE, "w", encoding="utf-8") as f:
@@ -98,7 +100,7 @@ def _build_html(
     focus, phase, day, alert, now_utc, portfolio, pnl_total, pnl_pct,
     nifty, vix, mood, trade_ok, mkt_warn, recommendations, market_health,
     fundamentals=None, ranked_stocks=None, sector_scores=None, changelog=None,
-    attribution=None, coach_memory=None, run_health=None,
+    attribution=None, coach_memory=None, run_health=None, my_positions=None,
 ):
     fundamentals  = fundamentals  or {}
     ranked_stocks = ranked_stocks or []
@@ -151,6 +153,7 @@ def _build_html(
 
   <!-- ── TRADE tab ── -->
   <section class="tab-panel" id="tab-trade" hidden>
+    {_section_my_positions(my_positions or {})}
     {_section_recommendations(recommendations, validated=alert, stats=stats, decisions=decisions, book=book)}
     {_section_rankings(ranked_stocks)}
     {_section_changelog(changelog)}
@@ -1638,6 +1641,74 @@ def _section_watchlist(focus, stock_data, news_data, patterns, fundamentals=None
     return f"""<div class="section" id="watchlist">
   <h2>Watchlist <span>{len(display_tickers)} stocks &mdash; {phase_label}</span></h2>
   <div class="grid3">{cards}</div>
+</div>"""
+
+
+def _section_my_positions(my_positions: dict) -> str:
+    """The USER's real positions (logged via the 'My Trades' Actions workflow),
+    managed live: entry, P&L at the current price, trailed stop, target, and a
+    HOLD / EXIT NOW status. Renders nothing until the user logs a first trade."""
+    opens  = my_positions.get("open", [])
+    closed = my_positions.get("closed", [])
+    if not opens and not closed:
+        return ""
+
+    rows = ""
+    for p in opens:
+        sig  = p.get("exit_signal", "")
+        upnl = p.get("unrealized_pnl", 0.0)
+        pcol = "var(--green)" if upnl >= 0 else "var(--red)"
+        if sig == "target_hit":
+            status = ('<span class="badge badge-green" style="font-weight:700">EXIT NOW — TARGET HIT '
+                      '&#127919;</span>')
+        elif sig == "stop_hit":
+            status = ('<span class="badge badge-red" style="font-weight:700">EXIT NOW — STOP HIT</span>')
+        else:
+            status = '<span class="badge badge-gray">HOLD</span>'
+        trailed = " <span style='color:var(--green);font-size:.6rem'>(trailed)</span>" if p.get("trailing_active") else ""
+        unknown = ("<div style='color:var(--amber,#e6a93a);font-size:.62rem;margin-top:2px'>"
+                   "&#9888; not in the tool's universe — prices not managed live</div>"
+                   if not p.get("known_stock", True) else "")
+        rows += f"""<div class="card" style="margin-bottom:9px;padding:11px 13px">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px">
+    <div style="font-weight:700">{p.get('action','BUY')} {p.get('qty','?')}x {p.get('ticker','').replace('.NS','')}
+      <span style="color:var(--muted);font-weight:400;font-size:.7rem"> since {p.get('open_date','')}</span></div>
+    {status}
+  </div>
+  <div style="font-size:.74rem;margin-top:6px;color:var(--text)">
+    Your entry &#8377;{p.get('entry',0):,.2f} &middot; now &#8377;{p.get('current_price',0):,.2f}
+    &middot; P&amp;L <b style="color:{pcol}">&#8377;{upnl:+,.0f}</b>
+  </div>
+  <div style="font-size:.72rem;margin-top:3px;color:var(--muted)">
+    Stop <b style="color:var(--text)">&#8377;{p.get('stop_loss',0):,.2f}</b>{trailed}
+    &middot; Target <b style="color:var(--text)">&#8377;{p.get('target',0):,.2f}</b>
+    &middot; plan from {p.get('plan_source','')}
+  </div>
+  {unknown}
+</div>"""
+
+    closed_html = ""
+    if closed:
+        recent = list(reversed(closed[-5:]))
+        items = " &middot; ".join(
+            f"{t.get('ticker','').replace('.NS','')} "
+            f"<b style='color:{'var(--green)' if t.get('pnl',0)>=0 else 'var(--red)'}'>"
+            f"&#8377;{t.get('pnl',0):+,.0f}</b>"
+            for t in recent
+        )
+        w = sum(1 for t in closed if t.get("pnl", 0) > 0)
+        closed_html = (f'<div style="font-size:.68rem;color:var(--muted);margin-top:4px">'
+                       f'Your closed trades: {w}/{len(closed)} wins &middot; recent: {items}</div>')
+
+    return f"""<div class="section" id="my-positions">
+  <h2>My Positions <span>your real trades — managed live by the tool</span></h2>
+  {rows}
+  {closed_html}
+  <div style="font-size:.64rem;color:var(--muted);margin-top:7px">
+    Log a buy/sell: GitHub &#8594; Actions &#8594; <b>My Trades</b> &#8594; Run workflow.
+    The tool trails your stop every session and flags EXIT NOW — it never closes
+    your trade by itself; you confirm by logging &lsquo;sold&rsquo;.
+  </div>
 </div>"""
 
 

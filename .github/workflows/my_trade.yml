@@ -1,0 +1,85 @@
+name: My Trades
+
+# Log YOUR real trades so the tool manages them for you.
+# GitHub renders these inputs as a simple form:
+#   repo → Actions → "My Trades" → Run workflow →
+#     action: bought or sold
+#     ticker: e.g. BAJFINANCE   (with or without .NS)
+#     price:  your actual fill price, e.g. 1015.50
+#     qty:    number of shares (ignored for 'sold')
+# After it runs, the dashboard's "My Positions" panel shows your position with a
+# personalized stop/target (anchored to YOUR fill), trails the stop every
+# session, and flags EXIT NOW when your stop/target is hit. The tool never
+# auto-closes your trade — you confirm by logging 'sold' here.
+
+on:
+  workflow_dispatch:
+    inputs:
+      action:
+        description: "Did you buy or sell?"
+        required: true
+        type: choice
+        options: [bought, sold]
+      ticker:
+        description: "Stock symbol (e.g. BAJFINANCE)"
+        required: true
+        type: string
+      price:
+        description: "Your actual fill price (e.g. 1015.50)"
+        required: true
+        type: string
+      qty:
+        description: "Quantity (shares) — only used for 'bought'"
+        required: false
+        default: "1"
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  record:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Record the trade
+        run: |
+          python -m agent.my_trades "${{ github.event.inputs.action }}" \
+            "${{ github.event.inputs.ticker }}" \
+            "${{ github.event.inputs.price }}" \
+            "${{ github.event.inputs.qty }}"
+
+      - name: Rebuild dashboard so the panel shows immediately
+        env:
+          SESSION: test
+        run: python -m agent.main
+
+      - name: Commit
+        run: |
+          git config user.name  "NSE AI Trader Bot"
+          git config user.email "bot@nse-ai-trader.local"
+          git add brain/ docs/
+          if ! git diff --cached --quiet; then
+            git commit -m "[my-trades] ${{ github.event.inputs.action }} ${{ github.event.inputs.ticker }} @ ${{ github.event.inputs.price }}"
+            for attempt in 1 2 3; do
+              git pull --rebase origin main && git push && break
+              echo "Push attempt $attempt failed — retrying in 10s..."
+              sleep 10
+            done
+          else
+            echo "Nothing changed."
+          fi

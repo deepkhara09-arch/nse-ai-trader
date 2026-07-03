@@ -898,12 +898,21 @@ def _refresh_outputs(state: dict, market_health: dict, session: str, read_only: 
         # Always rebuild ranking (runs fast, no API calls)
         ranked = rank_focus_stocks(focus, sd, pats, nd, fund, book, market_health) if focus else []
 
+        # ── Manage the USER's real positions every session ─────────────────────
+        # Mark-to-market with the live price, trail their stops with the same
+        # rules as paper trades, and flag EXIT NOW when stop/target is hit.
+        # Never auto-closes (the tool can't know their real fill) — the user
+        # confirms via the 'My Trades' workflow. Read-only in test mode.
+        from agent.my_trades import manage_positions
+        my_pos = manage_positions(sd, save=not read_only)
+
         attr_summary = aggregate_attribution(pats)
         coach_mem    = load_coach_memory()
         from agent.run_health import load_run_health
         build_dashboard(state, sd, book, pats, decs, nd, market_health,
                         recs, fund, ranked, sectors, clog, attr_summary,
-                        coach_memory=coach_mem, run_health=load_run_health())
+                        coach_memory=coach_mem, run_health=load_run_health(),
+                        my_positions=my_pos)
 
     except Exception as e:
         import traceback

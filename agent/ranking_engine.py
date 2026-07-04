@@ -372,14 +372,18 @@ def _load_prev_ranks() -> Dict[str, int]:
 
 def _save_rank_history(ranked: List[dict]) -> None:
     history = load_rank_history()
-    history.append({
-        "date":   ist_today().isoformat(),
+    today = ist_today().isoformat()
+    snap = {
+        "date":   today,
         "ranked": [{"ticker": r["ticker"], "rank": r["rank"],
                     "composite_score": r["composite_score"],
                     "success_probability": r["success_probability"]}
                    for r in ranked],
-    })
-    history = history[-180:]   # ~6 months of daily snapshots
+    }
+    # ONE snapshot per date — rankings rebuild every session (6x/day), so replace
+    # today's entry instead of appending six near-identical copies a day.
+    history = [h for h in history if h.get("date") != today] + [snap]
+    history = history[-180:]   # ~180 trading days ≈ 8-9 months of daily snapshots
     os.makedirs(BRAIN_DIR, exist_ok=True)
     with open(RANK_HISTORY_FILE, "w") as f:
         json.dump(history, f, indent=2)

@@ -611,14 +611,26 @@ def analyse_stock(
     news_score = sentiment.get("weighted_score",
                                sentiment.get("score", 0)) if sentiment else 0
     news_trend = sentiment.get("trend", "stable") if sentiment else "stable"
+    # Weight news by how PREDICTIVE it has proven on THIS stock (forward-tested
+    # by news_learning): proven-predictive news counts up to ~1.4x, proven-noise
+    # fades toward 0.6x, unknown = 1.0x.
+    try:
+        from agent.news_learning import news_weight
+        _nw = news_weight(ticker)
+    except Exception:
+        _nw = 1.0
     if news_score > 0.15:
-        buy_score += 0.5; buy_reasons.append(f"Positive news sentiment ({news_score:.2f})")
+        buy_score += 0.5 * _nw
+        buy_reasons.append(f"Positive news sentiment ({news_score:.2f}"
+                           + (f", news {_nw:.1f}x reliable here" if _nw != 1.0 else "") + ")")
         if news_trend == "improving":
-            buy_score += 0.3; buy_reasons.append("News sentiment improving across sessions")
+            buy_score += 0.3 * _nw; buy_reasons.append("News sentiment improving across sessions")
     elif news_score < -0.15:
-        sell_score += 0.5; sell_reasons.append(f"Negative news sentiment ({news_score:.2f})")
+        sell_score += 0.5 * _nw
+        sell_reasons.append(f"Negative news sentiment ({news_score:.2f}"
+                            + (f", news {_nw:.1f}x reliable here" if _nw != 1.0 else "") + ")")
         if news_trend == "worsening":
-            sell_score += 0.3; sell_reasons.append("News sentiment worsening across sessions")
+            sell_score += 0.3 * _nw; sell_reasons.append("News sentiment worsening across sessions")
 
     # Learned pattern scores
     for p in patterns:

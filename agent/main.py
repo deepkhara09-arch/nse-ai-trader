@@ -376,6 +376,15 @@ def _run_phase(state, phase, session, market_health, day, focus):
             # pattern reliability before a single paper trade is placed.
             decisions, patterns, _ = evaluate_dry_decisions(decisions, sd, patterns)
 
+            # ── News-outcome learning: was the news RIGHT about this stock? ────
+            # Score past news calls against real price moves, then log today's.
+            try:
+                from agent.news_learning import record_news_calls, evaluate_news_calls
+                evaluate_news_calls(sd)
+                record_news_calls(focus, nd, sd)
+            except Exception as e:
+                print(f"[news-learn] non-fatal: {e}")
+
             save_patterns(patterns)
             save_decisions(decisions)
             state = advance_session(state, session)
@@ -469,6 +478,13 @@ def _run_phase(state, phase, session, market_health, day, focus):
             # Finish forward-testing any dry ANALYSE calls from late in the
             # analysis phase that were still inside their proving window.
             decisions, patterns, _ = evaluate_dry_decisions(decisions, merged, patterns)
+            # News-outcome learning continues through paper trading & alerting.
+            try:
+                from agent.news_learning import record_news_calls, evaluate_news_calls
+                evaluate_news_calls(merged)
+                record_news_calls(focus, nd, merged)
+            except Exception as e:
+                print(f"[news-learn] non-fatal: {e}")
 
         save_patterns(patterns)
         save_decisions(decisions)

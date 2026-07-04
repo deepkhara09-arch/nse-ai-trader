@@ -135,6 +135,25 @@ _NAMES: Dict[str, List[str]] = {
 }
 
 
+# Analyst-call / recommendation pieces are NOT news. We study what is HAPPENING
+# to the company and its industry (orders, results, deals, probes, capacity…) —
+# not what some brokerage tells people to do. These markers drop an article
+# entirely: it never reaches sentiment scoring, the dashboard headlines, or the
+# news-outcome learner.
+_ANALYST_CALL_MARKERS = [
+    "buy call", "sell call", "hold call", "target price", "price target",
+    "brokerage", "initiates coverage", "upgrades", "downgrades", "maintains",
+    "rating", "recommend", "top picks", "stock picks", "stocks to buy",
+    "stocks to sell", "stocks to watch", "multibagger", "analyst",
+    "overweight", "underweight", "outperform", "underperform",
+    "should you buy", "technical pick", "trading strategy", "share price target",
+]
+
+
+def _is_analyst_piece(text: str) -> bool:
+    return any(m in text for m in _ANALYST_CALL_MARKERS)
+
+
 # Google News RSS — free, no key. A per-stock query closes the coverage gap where
 # a stock simply isn't mentioned in the 4 market-wide feeds on a given day.
 _GOOGLE_NEWS = "https://news.google.com/rss/search?q={q}+stock+when:7d&hl=en-IN&gl=IN&ceid=IN:en"
@@ -165,6 +184,10 @@ def fetch_news(tickers: List[str]) -> Dict:
                 seen = {a["title"] for a in matched}
                 matched.extend(a for a in g if a["title"] not in seen)
             time.sleep(0.5)   # be polite to Google
+
+        # Keep only REAL company/industry news — drop analyst-call/recommendation
+        # pieces from scoring, headlines and the news-outcome learner alike.
+        matched = [a for a in matched if not _is_analyst_piece(a["text"])]
 
         score = _sentiment(matched)
         result[ticker] = {

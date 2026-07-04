@@ -887,6 +887,19 @@ def analyse_stock(
     else:
         signal = "WATCH"   # no trade — keep monitoring
 
+    # ── Price-sanity guard: never act on a suspect bar ─────────────────────────
+    # An >18% single-day move is usually a corporate action (split/bonus the feed
+    # hasn't adjusted yet) or a data glitch — an entry/stop anchored to it would
+    # be garbage. Stand down for this session; if the move is real, tomorrow's
+    # clean bar will still show the setup.
+    _pc = (prev or {}).get("close")
+    _c  = d.get("close", 0)
+    if signal != "WATCH" and _pc and _c and abs(_c / _pc - 1) > 0.18:
+        note = (f"⚠ Suspect {abs(_c/_pc-1)*100:.0f}% day move (possible corporate "
+                f"action / data glitch) — standing down this session")
+        (buy_reasons if signal == "BUY" else sell_reasons).append(note)
+        signal = "WATCH"
+
     # ── Compute entry / stop / target via ATR ─────────────────────────────────
     close = d.get("close", 0)
     atr   = d.get("atr", close * FLAT_STOP_PCT)

@@ -1936,6 +1936,27 @@ def _section_recommendations(recs, validated: bool = False, stats: dict = None,
   {'<div style="margin-top:6px;padding:5px 8px;border-radius:4px;background:var(--card2);font-size:.67rem;font-weight:600;color:' + ('#fb923c' if is_intraday else '#9ca3af') + '">' + action_urgency + '</div>' if action_urgency else ""}
 </div>"""
 
+        # ── READY-TO-ACT: one unmistakable aggregate state per rec ─────────────
+        # The user's workflow is "watch fresh recs, act when the tool is
+        # confident". Instead of mentally combining five signals, one state:
+        # every gate green -> READY; otherwise name exactly what's missing.
+        _gates = [
+            ("strategy validated",       validated),
+            ("setup persisted 2+ days",  n_persist >= 2),
+            ("price still in entry zone", not is_stale),
+            ("confidence 70+",           conf >= 70),
+        ]
+        _missing = [g for g, ok in _gates if not ok]
+        if not _missing:
+            ready_html = ('<div style="background:#0a2416;border:1px solid #3ecf8e;border-radius:8px;'
+                          'padding:10px 13px;margin:8px 0;font-size:.82rem;font-weight:700;color:#3ecf8e">'
+                          '&#9889; READY TO ACT — all gates green: validated strategy · persistent setup · '
+                          'fresh price · high confidence</div>')
+        else:
+            ready_html = ('<div style="background:var(--card2);border:1px solid var(--border);border-radius:8px;'
+                          'padding:8px 12px;margin:8px 0;font-size:.7rem;color:var(--muted)">'
+                          f'<b>WATCH</b> — waiting on: {" · ".join(_missing)}</div>')
+
         cards += f"""<div class="rec-card {cls}">
   <div class="rec-header">
     <div>
@@ -1953,6 +1974,7 @@ def _section_recommendations(recs, validated: bool = False, stats: dict = None,
   </div>
 
   {held_html}
+  {ready_html}
 
   <div style="margin:6px 0 9px;padding:9px 11px;border-radius:6px;background:var(--card2);border:1px solid var(--border)">
     <div style="font-size:.8rem;font-weight:700;color:{'#4ade80' if signal=='BUY' else '#f87171'};line-height:1.4">

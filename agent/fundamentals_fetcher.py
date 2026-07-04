@@ -31,18 +31,27 @@ _CR = 1e7
 
 
 def fetch_fundamentals(tickers: List[str]) -> Dict:
-    from agent.data_fetcher import _YF, _yf_crumb
-    crumb  = _yf_crumb()
+    """Fetch via the yfinance library (it handles Yahoo's cookie/crumb dance
+    internally). The old direct quoteSummary/v11 HTTP endpoint is dead — it
+    silently returned 0 stocks, which is why total failure is now also
+    recorded on System Health instead of vanishing into the logs."""
     result = {}
     for ticker in tickers:
         try:
-            entry = _fetch_one(ticker, _YF, crumb)
+            entry = _fetch_one(ticker)
             if entry:
                 result[ticker] = entry
-            time.sleep(0.8)
+            time.sleep(0.6)
         except Exception as e:
             print(f"[fund] {ticker}: {e}")
     print(f"[fund] fetched fundamentals for {len(result)}/{len(tickers)} stocks")
+    if tickers and not result:
+        try:
+            from agent.run_health import record_issue
+            record_issue("fundamentals", f"{len(tickers)} tickers",
+                         "fundamentals fetch returned 0 stocks — source may be down")
+        except Exception:
+            pass
     return result
 
 
@@ -143,139 +152,116 @@ def score_fundamentals(fund: dict) -> float:
 
 # ── Internal ──────────────────────────────────────────────────────────────────
 
-def _fetch_one(ticker: str, session, crumb: str) -> dict:
-    modules = (
-        "financialData,defaultKeyStatistics,summaryDetail,"
-        "earningsTrend,incomeStatementHistoryQuarterly,"
-        "cashflowStatementHistoryQuarterly,calendarEvents"
-    )
-    url = (
-        f"https://query1.finance.yahoo.com/v11/finance/quoteSummary/{ticker}"
-        f"?modules={modules}&crumb={crumb}"
-    )
+def _fetch_one(ticker: str) -> dict:
+    """One stock's fundamentals via yfinance's Ticker.info (plus quarterly
+    statements and the earnings calendar). Same output schema as before."""
     try:
-        r = session.get(url, timeout=20)
-        if r.status_code != 200:
-            return {}
-        data   = r.json()
-        result = data.get("quoteSummary", {}).get("result", [])
-        if not result:
+        import yfinance as yf
+        tk   = yf.Ticker(ticker)
+        info = tk.info or {}
+        if not info or info.get("regularMarketPrice") is None and info.get("currentPrice") is None:
             return {}
 
-        res = result[0]
-        fd  = res.get("financialData", {})
-        ks  = res.get("defaultKeyStatistics", {})
-        sd  = res.get("summaryDetail", {})
-        et  = res.get("earningsTrend", {})
-        ish = res.get("incomeStatementHistoryQuarterly", {})
-        cal = res.get("calendarEvents", {})
-
-        def v(d, key):
-            x = d.get(key, {})
-            return x.get("raw") if isinstance(x, dict) else x
+        v = info.get
 
         # ── 52-week range ──────────────────────────────────────────────────────
-        low52  = v(sd, "fiftyTwoWeekLow")
-        high52 = v(sd, "fiftyTwoWeekHigh")
-        price  = v(fd, "currentPrice")
+        low52  = v("fiftyTwoWeekLow")
+        high52 = v("fiftyTwoWeekHigh")
+        price  = v("currentPrice") or v("regularMarketPrice")
         wk52_pos = None
         if low52 and high52 and high52 > low52 and price:
             wk52_pos = round((price - low52) / (high52 - low52) * 100, 1)
 
         # ── Market cap in Rs. Cr. ─────────────────────────────────────────────
-        mktcap_raw = v(ks, "marketCap")
+        mktcap_raw = v("marketCap")
         mktcap_cr  = round(mktcap_raw / _CR, 2) if mktcap_raw else None
 
         # ── Quarterly income statement (last 2 quarters) ──────────────────────
-        stmts = ish.get("statements", [])
-        np_qtr       = None   # Net Profit latest quarter Rs. Cr.
-        np_qtr_prev  = None
-        sales_qtr    = None   # Sales latest quarter Rs. Cr.
-        sales_qtr_prev = None
-        np_qtr_var   = None   # % change vs prior quarter
-        sales_qtr_var = None
-
-        if len(stmts) >= 1:
-            q0 = stmts[0]
-            ni0     = v(q0, "netIncome")
-            rev0    = v(q0, "totalRevenue")
-            np_qtr   = round(ni0  / _CR, 2) if ni0  else None
-            sales_qtr = round(rev0 / _CR, 2) if rev0 else None
-
-        if len(stmts) >= 2:
-            q1 = stmts[1]
-            ni1      = v(q1, "netIncome")
-            rev1     = v(q1, "totalRevenue")
-            np_qtr_prev   = round(ni1  / _CR, 2) if ni1  else None
-            sales_qtr_prev = round(rev1 / _CR, 2) if rev1 else None
-            if np_qtr and np_qtr_prev and np_qtr_prev != 0:
-                np_qtr_var = round((np_qtr - np_qtr_prev) / abs(np_qtr_prev) * 100, 1)
-            if sales_qtr and sales_qtr_prev and sales_qtr_prev != 0:
-                sales_qtr_var = round((sales_qtr - sales_qtr_prev) / abs(sales_qtr_prev) * 100, 1)
+        np_qtr = np_qtr_prev = sales_qtr = sales_qtr_prev = None
+        np_qtr_var = sales_qtr_var = None
+        try:
+            q = tk.quarterly_income_stmt      # DataFrame, newest column first
+            if q is not None and not q.empty:
+                def row(label, col):
+                    try:
+                        x = q.loc[label].iloc[col]
+                        return round(float(x) / _CR, 2) if x == x else None
+                    except Exception:
+                        return None
+                np_qtr,    np_qtr_prev    = row("Net Income", 0),    row("Net Income", 1)
+                sales_qtr, sales_qtr_prev = row("Total Revenue", 0), row("Total Revenue", 1)
+                if np_qtr and np_qtr_prev:
+                    np_qtr_var = round((np_qtr - np_qtr_prev) / abs(np_qtr_prev) * 100, 1)
+                if sales_qtr and sales_qtr_prev:
+                    sales_qtr_var = round((sales_qtr - sales_qtr_prev) / abs(sales_qtr_prev) * 100, 1)
+        except Exception:
+            pass
 
         # ── ROCE approximation ────────────────────────────────────────────────
-        # ROCE = EBIT / Capital Employed; Yahoo gives operatingIncome & totalDebt + equity
-        # We approximate: ROCE ≈ operatingMargins * (revenue / (totalDebt + bookValue))
-        op_margin = v(fd, "operatingMargins")
-        total_rev = v(fd, "totalRevenue")
-        total_debt = v(fd, "totalDebt")
-        book_val   = v(ks, "bookValue")
-        shares_out = v(ks, "sharesOutstanding")
+        # ROCE ≈ EBIT / Capital Employed, from operating margin, revenue,
+        # total debt and book equity — same approximation as before.
+        op_margin  = v("operatingMargins")
+        total_rev  = v("totalRevenue")
+        total_debt = v("totalDebt")
+        book_val   = v("bookValue")
+        shares_out = v("sharesOutstanding")
         roce = None
         if op_margin and total_rev and total_debt is not None and book_val and shares_out:
-            ebit            = op_margin * total_rev
-            equity_val      = book_val * shares_out
-            capital_employed = equity_val + total_debt
+            capital_employed = book_val * shares_out + total_debt
             if capital_employed > 0:
-                roce = round(ebit / capital_employed * 100, 2)
-
-        # ── Earnings trend ────────────────────────────────────────────────────
-        trends = et.get("trend", [])
-        earnings_trend = _earnings_trend(trends)
+                roce = round(op_margin * total_rev / capital_employed * 100, 2)
 
         # ── Earnings date & days to results ──────────────────────────────────
         earnings_date = None
         days_to_earnings = None
         try:
-            earn_dates = cal.get("earnings", {}).get("earningsDate", [])
+            cal = tk.calendar or {}
+            earn_dates = cal.get("Earnings Date") or []
             if earn_dates:
-                raw_ts = earn_dates[0]
-                raw_val = raw_ts.get("raw") if isinstance(raw_ts, dict) else raw_ts
-                if raw_val:
+                earn_dt = earn_dates[0]
+                earn_dt = earn_dt.date() if hasattr(earn_dt, "date") and not hasattr(earn_dt, "isoformat") else earn_dt
+                if hasattr(earn_dt, "isoformat"):
+                    earnings_date = earn_dt.isoformat()[:10]
                     from datetime import date as _date
-                    earn_dt = _date.fromtimestamp(int(raw_val))
-                    earnings_date = earn_dt.isoformat()
-                    days_to_earnings = (earn_dt - ist_today()).days
+                    d0 = _date.fromisoformat(earnings_date)
+                    days_to_earnings = (d0 - ist_today()).days
         except Exception:
             pass
 
         # ── Analyst target & upside ───────────────────────────────────────────
-        target_price = v(fd, "targetMeanPrice")
+        target_price = v("targetMeanPrice")
         analyst_upside = None
         if price and target_price and price > 0:
             analyst_upside = round((target_price - price) / price * 100, 1)
+
+        # Yahoo reports debtToEquity as a PERCENT (150.0 == 1.5x). Every consumer
+        # in this tool treats debt_equity as a plain ratio (< 1.0 checks), so
+        # normalise here. (Latent bug in the old fetcher — it never bit because
+        # that endpoint always returned nothing.)
+        de_raw = v("debtToEquity")
+        debt_equity = round(de_raw / 100.0, 2) if de_raw is not None else None
 
         entry = {
             "ticker":               ticker,
             "fetched_at":           datetime.utcnow().isoformat(),
 
             # Valuation
-            "pe_ratio":             _r(v(sd, "trailingPE") or v(ks, "forwardPE")),
-            "forward_pe":           _r(v(ks, "forwardPE")),
-            "pb_ratio":             _r(v(ks, "priceToBook")),
-            "ev_ebitda":            _r(v(ks, "enterpriseToEbitda")),
+            "pe_ratio":             _r(v("trailingPE") or v("forwardPE")),
+            "forward_pe":           _r(v("forwardPE")),
+            "pb_ratio":             _r(v("priceToBook")),
+            "ev_ebitda":            _r(v("enterpriseToEbitda")),
 
             # Size
             "market_cap_cr":        mktcap_cr,
 
             # Profitability
-            "roe":                  _pct(v(fd, "returnOnEquity")),
-            "roa":                  _pct(v(fd, "returnOnAssets")),
+            "roe":                  _pct(v("returnOnEquity")),
+            "roa":                  _pct(v("returnOnAssets")),
             "roce":                 roce,
-            "net_margin_pct":       _pct(v(fd, "profitMargins")),
-            "operating_margin_pct": _pct(v(fd, "operatingMargins")),
+            "net_margin_pct":       _pct(v("profitMargins")),
+            "operating_margin_pct": _pct(v("operatingMargins")),
 
-            # Quarterly financials (the ones you asked for)
+            # Quarterly financials
             "np_qtr_cr":            np_qtr,           # Net Profit latest qtr Rs.Cr.
             "np_qtr_prev_cr":       np_qtr_prev,      # Net Profit prior qtr Rs.Cr.
             "np_qtr_var_pct":       np_qtr_var,       # Qtr Profit Var %
@@ -284,20 +270,20 @@ def _fetch_one(ticker: str, session, crumb: str) -> dict:
             "sales_qtr_var_pct":    sales_qtr_var,    # Qtr Sales Var %
 
             # Annual growth
-            "revenue_growth_pct":   _pct(v(fd, "revenueGrowth")),
-            "earnings_growth_pct":  _pct(v(fd, "earningsGrowth")),
+            "revenue_growth_pct":   _pct(v("revenueGrowth")),
+            "earnings_growth_pct":  _pct(v("earningsGrowth")),
 
-            # Balance sheet
-            "debt_equity":          _r(v(fd, "debtToEquity")),
-            "current_ratio":        _r(v(fd, "currentRatio")),
+            # Balance sheet (debt_equity normalised to a RATIO, see above)
+            "debt_equity":          debt_equity,
+            "current_ratio":        _r(v("currentRatio")),
 
             # Returns to shareholders
-            "dividend_yield_pct":   _pct(v(sd, "dividendYield")),
-            "payout_ratio":         _pct(v(sd, "payoutRatio")),
+            "dividend_yield_pct":   _pct(v("dividendYield")),
+            "payout_ratio":         _pct(v("payoutRatio")),
 
             # Ownership
-            "promoter_holding_pct":  _pct(v(ks, "heldPercentInsiders")),
-            "institutional_pct":     _pct(v(ks, "heldPercentInstitutions")),
+            "promoter_holding_pct":  _pct(v("heldPercentInsiders")),
+            "institutional_pct":     _pct(v("heldPercentInstitutions")),
 
             # 52-week context
             "week52_high":          _r(high52),
@@ -307,14 +293,13 @@ def _fetch_one(ticker: str, session, crumb: str) -> dict:
             # Analyst view
             "analyst_target":       _r(target_price),
             "analyst_upside_pct":   analyst_upside,
-            "analyst_recommendation": fd.get("recommendationKey", ""),
-            "analyst_count":        v(fd, "numberOfAnalystOpinions"),
+            "analyst_recommendation": v("recommendationKey", ""),
+            "analyst_count":        v("numberOfAnalystOpinions"),
 
-            # Earnings quality & calendar
-            "earnings_trend":       earnings_trend,
+            # Earnings calendar
             "earnings_date":        earnings_date,
             "days_to_earnings":     days_to_earnings,
-            "beta":                 _r(v(ks, "beta")),
+            "beta":                 _r(v("beta")),
         }
         # Strip None values to keep JSON clean
         return {k: val for k, val in entry.items() if val is not None}

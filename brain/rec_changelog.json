@@ -428,5 +428,25 @@
     "ts": "2026-07-06T06:15:51.496081",
     "detail": "Stop loss moved \u20b91417.19 \u2192 \u20b91426.79",
     "confidence": 71.8
+  },
+  {
+    "type": "removed",
+    "ticker": "BAJFINANCE.NS",
+    "nse_code": "BAJFINANCE",
+    "signal": "BUY",
+    "date": "2026-07-06",
+    "ts": "2026-07-06T07:45:49.954681",
+    "detail": "Dropped \u2014 no longer meets threshold (was 76/100)",
+    "confidence": 0
+  },
+  {
+    "type": "updated",
+    "ticker": "ABCAPITAL.NS",
+    "nse_code": "ABCAPITAL",
+    "signal": "BUY",
+    "date": "2026-07-06",
+    "ts": "2026-07-06T07:45:49.954681",
+    "detail": "Stop loss moved \u20b9392.47 \u2192 \u20b9397.73",
+    "confidence": 85.8
   }
 ]

@@ -398,5 +398,35 @@
     "ts": "2026-07-06T04:05:49.276296",
     "detail": "Confidence \u25b28 (78 \u2192 86) | Target 1 moved \u20b9425.16 \u2192 \u20b9427.52",
     "confidence": 85.8
+  },
+  {
+    "type": "new",
+    "ticker": "BAJFINANCE.NS",
+    "nse_code": "BAJFINANCE",
+    "signal": "BUY",
+    "date": "2026-07-06",
+    "ts": "2026-07-06T06:15:51.496081",
+    "detail": "New BUY recommendation \u2014 confidence 76/100",
+    "confidence": 76.0
+  },
+  {
+    "type": "updated",
+    "ticker": "ABCAPITAL.NS",
+    "nse_code": "ABCAPITAL",
+    "signal": "BUY",
+    "date": "2026-07-06",
+    "ts": "2026-07-06T06:15:51.496081",
+    "detail": "Target 1 moved \u20b9427.52 \u2192 \u20b9434.11",
+    "confidence": 85.8
+  },
+  {
+    "type": "updated",
+    "ticker": "NESTLEIND.NS",
+    "nse_code": "NESTLEIND",
+    "signal": "BUY",
+    "date": "2026-07-06",
+    "ts": "2026-07-06T06:15:51.496081",
+    "detail": "Stop loss moved \u20b91417.19 \u2192 \u20b91426.79",
+    "confidence": 71.8
   }
 ]

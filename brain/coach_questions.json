@@ -1,75 +1,5 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of outside_bar, supertrend_bullish, three_white_soldiers mean for a swing trade on BAJFINANCE? Current RSI=88, MACD hist=+7.8311, Vol=0.9x average. Signal is BUY.",
-    "context": {
-      "ticker": "BAJFINANCE.NS",
-      "signal": "BUY",
-      "patterns": "outside_bar, supertrend_bullish, three_white_soldiers",
-      "rsi": 87.5
-    },
-    "queued_at": "2026-07-06T03:05:49.298585"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of near_52w_high, supertrend_bullish, three_white_soldiers mean for a swing trade on ABCAPITAL? Current RSI=73, MACD hist=+1.3705, Vol=0.7x average. Signal is BUY.",
-    "context": {
-      "ticker": "ABCAPITAL.NS",
-      "signal": "BUY",
-      "patterns": "near_52w_high, supertrend_bullish, three_white_soldiers",
-      "rsi": 72.6
-    },
-    "queued_at": "2026-07-06T03:05:49.301733"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of pivot_s1_breakdown, engulfing_bearish, full_bullish_alignment mean for a swing trade on AXISBANK? Current RSI=52, MACD hist=-1.2514, Vol=0.6x average. Signal is SELL.",
-    "context": {
-      "ticker": "AXISBANK.NS",
-      "signal": "SELL",
-      "patterns": "pivot_s1_breakdown, engulfing_bearish, full_bullish_alignment",
-      "rsi": 52.3
-    },
-    "queued_at": "2026-07-06T03:05:49.305067"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of near_52w_high, supertrend_bullish, full_bullish_alignment mean for a swing trade on PIDILITIND? Current RSI=76, MACD hist=-0.4616, Vol=0.8x average. Signal is BUY.",
-    "context": {
-      "ticker": "PIDILITIND.NS",
-      "signal": "BUY",
-      "patterns": "near_52w_high, supertrend_bullish, full_bullish_alignment",
-      "rsi": 76.1
-    },
-    "queued_at": "2026-07-06T03:05:49.305565"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_up, volume_breakdown_bearish, strong_bearish_marubozu mean for a swing trade on MARICO? Current RSI=64, MACD hist=+2.9879, Vol=2.3x average. Signal is SELL.",
-    "context": {
-      "ticker": "MARICO.NS",
-      "signal": "SELL",
-      "patterns": "adx_strong_trend_up, volume_breakdown_bearish, strong_bearish_marubozu",
-      "rsi": 64.4
-    },
-    "queued_at": "2026-07-06T04:05:49.266659"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of macd_bearish_crossover, adx_strong_trend_up, pivot_s1_breakdown mean for a swing trade on FEDERALBNK? Current RSI=66, MACD hist=-0.1486, Vol=0.7x average. Signal is BUY.",
-    "context": {
-      "ticker": "FEDERALBNK.NS",
-      "signal": "BUY",
-      "patterns": "macd_bearish_crossover, adx_strong_trend_up, pivot_s1_breakdown",
-      "rsi": 65.5
-    },
-    "queued_at": "2026-07-06T04:05:49.267320"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of tweezer_bottom, bb_upper_rejection, pivot_point_test mean for a swing trade on NESTLEIND? Current RSI=70, MACD hist=+6.7245, Vol=1.0x average. Signal is BUY.",
-    "context": {
-      "ticker": "NESTLEIND.NS",
-      "signal": "BUY",
-      "patterns": "tweezer_bottom, bb_upper_rejection, pivot_point_test",
-      "rsi": 70.3
-    },
-    "queued_at": "2026-07-06T04:05:49.268161"
-  },
-  {
     "question": "In Indian NSE markets, what does the combination of adx_strong_trend_up, three_white_soldiers, spinning_top mean for a swing trade on ICICIBANK? Current RSI=81, MACD hist=+4.4139, Vol=0.9x average. Signal is BUY.",
     "context": {
       "ticker": "ICICIBANK.NS",
@@ -98,5 +28,75 @@
       "rsi": 46.7
     },
     "queued_at": "2026-07-06T04:05:49.275258"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of gap_up_reversal, pivot_s1_breakdown, near_52w_high mean for a swing trade on MARICO? Current RSI=64, MACD hist=+2.9879, Vol=2.3x average. Signal is SELL.",
+    "context": {
+      "ticker": "MARICO.NS",
+      "signal": "SELL",
+      "patterns": "gap_up_reversal, pivot_s1_breakdown, near_52w_high",
+      "rsi": 64.4
+    },
+    "queued_at": "2026-07-06T06:15:51.483654"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of pivot_s1_breakdown, near_52w_high, macd_bearish_crossover mean for a swing trade on FEDERALBNK? Current RSI=66, MACD hist=-0.1486, Vol=0.7x average. Signal is BUY.",
+    "context": {
+      "ticker": "FEDERALBNK.NS",
+      "signal": "BUY",
+      "patterns": "pivot_s1_breakdown, near_52w_high, macd_bearish_crossover",
+      "rsi": 65.5
+    },
+    "queued_at": "2026-07-06T06:15:51.484284"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of tweezer_bottom, outside_bar, full_bullish_alignment mean for a swing trade on NESTLEIND? Current RSI=70, MACD hist=+6.7245, Vol=1.0x average. Signal is BUY.",
+    "context": {
+      "ticker": "NESTLEIND.NS",
+      "signal": "BUY",
+      "patterns": "tweezer_bottom, outside_bar, full_bullish_alignment",
+      "rsi": 70.3
+    },
+    "queued_at": "2026-07-06T06:15:51.485178"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of spinning_top, adx_strong_trend_up, three_white_soldiers mean for a swing trade on ICICIBANK? Current RSI=81, MACD hist=+4.4139, Vol=0.9x average. Signal is BUY.",
+    "context": {
+      "ticker": "ICICIBANK.NS",
+      "signal": "BUY",
+      "patterns": "spinning_top, adx_strong_trend_up, three_white_soldiers",
+      "rsi": 80.6
+    },
+    "queued_at": "2026-07-06T06:15:51.488450"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_up, three_white_soldiers, full_bullish_alignment mean for a swing trade on BAJFINANCE? Current RSI=86, MACD hist=+8.0898, Vol=1.1x average. Signal is BUY.",
+    "context": {
+      "ticker": "BAJFINANCE.NS",
+      "signal": "BUY",
+      "patterns": "adx_strong_trend_up, three_white_soldiers, full_bullish_alignment",
+      "rsi": 86.5
+    },
+    "queued_at": "2026-07-06T06:15:51.488924"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of pivot_r1_breakout, near_52w_high, pivot_r2_breakout mean for a swing trade on ABCAPITAL? Current RSI=72, MACD hist=+1.5157, Vol=1.5x average. Signal is BUY.",
+    "context": {
+      "ticker": "ABCAPITAL.NS",
+      "signal": "BUY",
+      "patterns": "pivot_r1_breakout, near_52w_high, pivot_r2_breakout",
+      "rsi": 72.0
+    },
+    "queued_at": "2026-07-06T06:15:51.491915"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of stoch_rsi_oversold_reversal, doji, full_bullish_alignment mean for a swing trade on GAIL? Current RSI=47, MACD hist=-0.3918, Vol=0.6x average. Signal is BUY.",
+    "context": {
+      "ticker": "GAIL.NS",
+      "signal": "BUY",
+      "patterns": "stoch_rsi_oversold_reversal, doji, full_bullish_alignment",
+      "rsi": 46.7
+    },
+    "queued_at": "2026-07-06T06:15:51.495020"
   }
 ]

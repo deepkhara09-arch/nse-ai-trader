@@ -42,7 +42,7 @@ The agent runs **6 times per trading day** (IST):
 ### Autonomous learning phases
 
 ```
-Days 1–7          Days 8–21           Days 22+
+Days 1–7          Days 8–17           Days 18+
 ────────────      ────────────────    ─────────────────────────
 EXPLORATION  →    ANALYSIS       →    PAPER TRADING → SIGNAL READY
 Watch all NSE-    Pick 15 focus       Simulate real trades

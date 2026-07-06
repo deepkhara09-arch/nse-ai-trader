@@ -28,7 +28,11 @@ SESSIONS = {
 # ── Phase durations (trading sessions) ───────────────────────────────────────
 # Longer phases = more data = better decisions. We'd rather wait.
 EXPLORATION_DAYS   = 7    # raised from 5 → 7 days watching full universe
-ANALYSIS_DAYS      = 14   # raised from 10 → 14 days deep watching selected stocks
+ANALYSIS_DAYS      = 10   # back to 10 (was 14): analysis is no longer passive —
+                          # dry forward-testing + news-learning run daily AND keep
+                          # running through paper trading, and paper trades are
+                          # richer lessons (real fills + costs). The honest safety
+                          # bar is the validation gate, not analysis length.
 PAPER_TRADING_DAYS = 30   # raised from 20 → 30 days paper trading before alerting
 # After paper trading, agent cycles back to keep signals fresh
 

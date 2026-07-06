@@ -3,10 +3,10 @@
     "ticker": "BAJFINANCE.NS",
     "nse_code": "BAJFINANCE",
     "company_name": "Bajaj Finance Ltd",
-    "date": "2026-07-03",
-    "generated_at": "2026-07-03 10:12 UTC",
+    "date": "2026-07-06",
+    "generated_at": "2026-07-06 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -40,12 +40,12 @@
     "pattern_score": 1.0,
     "confluence_bonus": 10,
     "paper_bonus": 0.0,
-    "success_probability": 0.508,
-    "base_success_prob": 0.521,
-    "profit_probability": 0.563,
-    "composite_score": 56.31,
+    "success_probability": 0.507,
+    "base_success_prob": 0.514,
+    "profit_probability": 0.542,
+    "composite_score": 55.35,
     "focus_rank": 8,
-    "rank_delta": 3,
+    "rank_delta": 0,
     "intention": "BUY BAJFINANCE for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
     "confluence_count": 6,
     "confluence_families": [
@@ -57,9 +57,9 @@
       "regime"
     ],
     "backtest_tested": true,
-    "backtest_hit_5d": 0.479,
-    "backtest_hit_10d": 0.479,
-    "backtest_sample": 48,
+    "backtest_hit_5d": 0.49,
+    "backtest_hit_10d": 0.49,
+    "backtest_sample": 49,
     "hist_long_trend": "uptrend",
     "hist_52w_position": 86.1,
     "hist_personality": "choppy",
@@ -67,7 +67,7 @@
     "data_confidence": "Estimated",
     "data_confidence_key": "estimated",
     "data_confidence_note": "Only 0 paper trade(s) \u2014 probability is an indicator-based estimate, not yet proven",
-    "expected_edge_r": 0.563,
+    "expected_edge_r": 0.542,
     "buy_score": 12.8,
     "sell_score": 2.5,
     "reasons": [
@@ -86,16 +86,17 @@
       "Support at \u20b91003.56 cushions downside",
       "Resistance at \u20b91100.00 is natural target",
       "Latest news: 'Stocks to buy: Dalmia Bharat, Chalet Hotels, Minda Corp, among 6 mid-c'",
+      "Broad market bullish \u2014 tailwind in play",
       "Confluence: 6 independent signal families agree (trend, momentum, volume, pattern, news, regime)",
-      "History backtest: this kind of BUY setup worked 48% of the time over ~1 week on this stock (sample: 48)"
+      "History backtest: this kind of BUY setup worked 49% of the time over ~1 week on this stock (sample: 49)"
     ],
     "patterns_seen": [
-      "three_white_soldiers",
-      "full_bullish_alignment",
-      "adx_strong_trend_up",
+      "outside_bar",
       "supertrend_bullish",
+      "three_white_soldiers",
       "gap_down_reversal",
-      "outside_bar"
+      "adx_strong_trend_up",
+      "full_bullish_alignment"
     ],
     "reliable_patterns": [],
     "nearest_support": 1003.56,
@@ -121,19 +122,17 @@
     "paper_win_rate": 0,
     "paper_pnl": 0,
     "paper_expectancy": 0,
-    "market_mood": "neutral",
-    "market_warning": [
-      "Nifty choppy intraday \u2014 wait for cleaner setups"
-    ]
+    "market_mood": "bullish",
+    "market_warning": []
   },
   {
     "ticker": "ABCAPITAL.NS",
     "nse_code": "ABCAPITAL",
     "company_name": "ABCAPITAL.NS",
-    "date": "2026-07-03",
-    "generated_at": "2026-07-03 10:12 UTC",
+    "date": "2026-07-06",
+    "generated_at": "2026-07-06 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -167,11 +166,11 @@
     "pattern_score": 2.0,
     "confluence_bonus": 10,
     "paper_bonus": 0.0,
-    "success_probability": 0.577,
-    "base_success_prob": 0.546,
-    "profit_probability": 0.638,
-    "composite_score": 59.95,
-    "focus_rank": 4,
+    "success_probability": 0.574,
+    "base_success_prob": 0.539,
+    "profit_probability": 0.617,
+    "composite_score": 58.99,
+    "focus_rank": 5,
     "rank_delta": -1,
     "intention": "BUY ABCAPITAL for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
     "confluence_count": 6,
@@ -184,9 +183,9 @@
       "regime"
     ],
     "backtest_tested": true,
-    "backtest_hit_5d": 0.648,
-    "backtest_hit_10d": 0.611,
-    "backtest_sample": 54,
+    "backtest_hit_5d": 0.655,
+    "backtest_hit_10d": 0.618,
+    "backtest_sample": 55,
     "hist_long_trend": "strong_uptrend",
     "hist_52w_position": 100.0,
     "hist_personality": "mean_reverter",
@@ -194,7 +193,7 @@
     "data_confidence": "Estimated",
     "data_confidence_key": "estimated",
     "data_confidence_note": "Only 0 paper trade(s) \u2014 probability is an indicator-based estimate, not yet proven",
-    "expected_edge_r": 0.638,
+    "expected_edge_r": 0.617,
     "buy_score": 12.9,
     "sell_score": 3.5,
     "reasons": [
@@ -214,18 +213,19 @@
       "Support at \u20b9394.80 cushions downside",
       "Resistance at \u20b9410.00 is natural target",
       "Latest news: 'Aditya Birla Capital raises Rs 300 Cr via NCDs - scanx.trade'",
+      "Broad market bullish \u2014 tailwind in play",
       "Confluence: 6 independent signal families agree (trend, momentum, volume, pattern, news, regime)",
-      "History backtest: this kind of BUY setup worked 65% of the time over ~1 week on this stock (sample: 54)"
+      "History backtest: this kind of BUY setup worked 66% of the time over ~1 week on this stock (sample: 55)"
     ],
     "patterns_seen": [
       "near_52w_high",
-      "three_white_soldiers",
-      "full_bullish_alignment",
-      "rsi_bearish_divergence",
-      "adx_strong_trend_up",
       "supertrend_bullish",
+      "three_white_soldiers",
+      "doji",
       "spinning_top",
-      "doji"
+      "full_bullish_alignment",
+      "adx_strong_trend_up",
+      "rsi_bearish_divergence"
     ],
     "reliable_patterns": [],
     "nearest_support": 394.8,
@@ -251,19 +251,17 @@
     "paper_win_rate": 0,
     "paper_pnl": 0,
     "paper_expectancy": 0,
-    "market_mood": "neutral",
-    "market_warning": [
-      "Nifty choppy intraday \u2014 wait for cleaner setups"
-    ]
+    "market_mood": "bullish",
+    "market_warning": []
   },
   {
     "ticker": "ICICIBANK.NS",
     "nse_code": "ICICIBANK",
     "company_name": "ICICI Bank Ltd",
-    "date": "2026-07-03",
-    "generated_at": "2026-07-03 10:12 UTC",
+    "date": "2026-07-06",
+    "generated_at": "2026-07-06 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -297,12 +295,12 @@
     "pattern_score": 2.0,
     "confluence_bonus": 7.5,
     "paper_bonus": 0.0,
-    "success_probability": 0.505,
+    "success_probability": 0.509,
     "base_success_prob": 0.545,
     "profit_probability": 0.635,
     "composite_score": 59.85,
-    "focus_rank": 5,
-    "rank_delta": -3,
+    "focus_rank": 2,
+    "rank_delta": 3,
     "intention": "BUY ICICIBANK for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
     "confluence_count": 5,
     "confluence_families": [
@@ -313,9 +311,9 @@
       "news"
     ],
     "backtest_tested": true,
-    "backtest_hit_5d": 0.413,
-    "backtest_hit_10d": 0.391,
-    "backtest_sample": 46,
+    "backtest_hit_5d": 0.426,
+    "backtest_hit_10d": 0.404,
+    "backtest_sample": 47,
     "hist_long_trend": "uptrend",
     "hist_52w_position": 77.4,
     "hist_personality": "choppy",
@@ -339,14 +337,15 @@
       "Support at \u20b91375.20 cushions downside",
       "Resistance at \u20b91500.00 is natural target",
       "Latest news: 'Stocks to buy for short term: Delhivery among 3 stocks Ajit Mishra of '",
+      "Broad market bullish \u2014 tailwind in play",
       "Confluence: 5 independent signal families agree (trend, momentum, volume, pattern, news)",
-      "History backtest: this kind of BUY setup worked 41% of the time over ~1 week on this stock (sample: 46)"
+      "History backtest: this kind of BUY setup worked 43% of the time over ~1 week on this stock (sample: 47)"
     ],
     "patterns_seen": [
-      "full_bullish_alignment",
-      "rsi_bearish_divergence",
-      "adx_strong_trend_up",
       "supertrend_bullish",
+      "full_bullish_alignment",
+      "adx_strong_trend_up",
+      "rsi_bearish_divergence",
       "stoch_rsi_oversold_reversal"
     ],
     "reliable_patterns": [],
@@ -373,19 +372,17 @@
     "paper_win_rate": 0,
     "paper_pnl": 0,
     "paper_expectancy": 0,
-    "market_mood": "neutral",
-    "market_warning": [
-      "Nifty choppy intraday \u2014 wait for cleaner setups"
-    ]
+    "market_mood": "bullish",
+    "market_warning": []
   },
   {
     "ticker": "MARICO.NS",
     "nse_code": "MARICO",
     "company_name": "Marico Ltd",
-    "date": "2026-07-03",
-    "generated_at": "2026-07-03 10:12 UTC",
+    "date": "2026-07-06",
+    "generated_at": "2026-07-06 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -419,12 +416,12 @@
     "pattern_score": 0.0,
     "confluence_bonus": 10,
     "paper_bonus": 0.0,
-    "success_probability": 0.536,
-    "base_success_prob": 0.551,
-    "profit_probability": 0.653,
-    "composite_score": 60.57,
-    "focus_rank": 2,
-    "rank_delta": 2,
+    "success_probability": 0.533,
+    "base_success_prob": 0.543,
+    "profit_probability": 0.629,
+    "composite_score": 59.51,
+    "focus_rank": 3,
+    "rank_delta": -1,
     "intention": "BUY MARICO for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
     "confluence_count": 6,
     "confluence_families": [
@@ -436,9 +433,9 @@
       "regime"
     ],
     "backtest_tested": true,
-    "backtest_hit_5d": 0.5,
-    "backtest_hit_10d": 0.479,
-    "backtest_sample": 48,
+    "backtest_hit_5d": 0.51,
+    "backtest_hit_10d": 0.49,
+    "backtest_sample": 49,
     "hist_long_trend": "strong_uptrend",
     "hist_52w_position": 100.0,
     "hist_personality": "mean_reverter",
@@ -446,7 +443,7 @@
     "data_confidence": "Estimated",
     "data_confidence_key": "estimated",
     "data_confidence_note": "Only 0 paper trade(s) \u2014 probability is an indicator-based estimate, not yet proven",
-    "expected_edge_r": 0.653,
+    "expected_edge_r": 0.629,
     "buy_score": 8.9,
     "sell_score": 5.0,
     "reasons": [
@@ -464,16 +461,17 @@
       "Support at \u20b9820.23 cushions downside",
       "Resistance at \u20b9860.00 is natural target",
       "Latest news: 'Marico shares hit 52-week high after Q1 FY27 business update, pare gai'",
+      "Broad market bullish \u2014 tailwind in play",
       "Confluence: 6 independent signal families agree (trend, momentum, volume, pattern, news, regime)",
-      "History backtest: this kind of BUY setup worked 50% of the time over ~1 week on this stock (sample: 48)"
+      "History backtest: this kind of BUY setup worked 51% of the time over ~1 week on this stock (sample: 49)"
     ],
     "patterns_seen": [
-      "near_52w_high",
-      "full_bullish_alignment",
-      "adx_strong_trend_up",
-      "stoch_rsi_overbought_reversal",
       "bb_upper_rejection",
-      "pivot_s1_breakdown"
+      "near_52w_high",
+      "pivot_s1_breakdown",
+      "stoch_rsi_overbought_reversal",
+      "full_bullish_alignment",
+      "adx_strong_trend_up"
     ],
     "reliable_patterns": [],
     "nearest_support": 820.23,
@@ -499,9 +497,7 @@
     "paper_win_rate": 0,
     "paper_pnl": 0,
     "paper_expectancy": 0,
-    "market_mood": "neutral",
-    "market_warning": [
-      "Nifty choppy intraday \u2014 wait for cleaner setups"
-    ]
+    "market_mood": "bullish",
+    "market_warning": []
   }
 ]

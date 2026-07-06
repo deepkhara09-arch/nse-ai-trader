@@ -1,13 +1,13 @@
 {
   "phase": "analysis",
-  "day": 10,
-  "session": "intraday_close",
+  "day": 11,
+  "session": "morning",
   "start_date": "2026-06-22",
   "phase_start_date": "2026-07-01",
-  "last_run_date": "2026-07-03",
-  "last_counted_date": "2026-07-03",
-  "cohort_last_tick_date": "2026-07-03",
-  "last_updated": "2026-07-06T09:45:35.586493",
+  "last_run_date": "2026-07-06",
+  "last_counted_date": "2026-07-06",
+  "cohort_last_tick_date": "2026-07-06",
+  "last_updated": "2026-07-06T10:12:55.543007",
   "focus_stocks": [
     "MARICO.NS",
     "RECLTD.NS",
@@ -174,29 +174,36 @@
     },
     {
       "id": 4,
-      "day": 4,
+      "day": 5,
       "start_date": "2026-06-30",
       "ready": false,
       "candidates": []
     },
     {
       "id": 5,
-      "day": 3,
+      "day": 4,
       "start_date": "2026-07-01",
       "ready": false,
       "candidates": []
     },
     {
       "id": 6,
-      "day": 2,
+      "day": 3,
       "start_date": "2026-07-02",
       "ready": false,
       "candidates": []
     },
     {
       "id": 7,
-      "day": 1,
+      "day": 2,
       "start_date": "2026-07-03",
+      "ready": false,
+      "candidates": []
+    },
+    {
+      "id": 8,
+      "day": 1,
+      "start_date": "2026-07-06",
       "ready": false,
       "candidates": []
     }
@@ -245,6 +252,7 @@
     "morning": "2026-07-06",
     "midday": "2026-07-06",
     "afternoon": "2026-07-06",
-    "intraday_close": "2026-07-06"
+    "intraday_close": "2026-07-06",
+    "preclose": "2026-07-06"
   }
 }

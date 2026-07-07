@@ -58,9 +58,11 @@
       "ath_pct_60d": -1.34
     }
   },
-  "market_mood": "bullish",
+  "market_mood": "neutral",
   "trade_allowed": true,
-  "warnings": [],
+  "warnings": [
+    "Nifty choppy intraday \u2014 wait for cleaner setups"
+  ],
   "leading_sectors": [
     "IT",
     "Pharma",
@@ -71,14 +73,14 @@
   "sector_breadth": 1.0,
   "lagging_sectors": [],
   "broad_market_strength": true,
-  "intraday_regime": "mixed",
+  "intraday_regime": "choppy",
   "macro": {
     "date": "2026-07-07",
     "session": "midday",
-    "generated_at": "2026-07-07T06:15:46.125781",
-    "global_score": 0.297,
+    "generated_at": "2026-07-07T07:01:55.354386",
+    "global_score": 0.25,
     "india_score": 0.0,
-    "overall_score": 0.163,
+    "overall_score": 0.138,
     "mood": "neutral",
     "drivers": [
       "Trump calls Walmart \u2018patriotic\u2019 for cutting beef prices \u2014 in a stark change of tune",
@@ -104,23 +106,23 @@
         "chg_pct": 0.72
       },
       "nikkei": {
-        "last": 68575.07,
-        "chg_pct": -1.67
+        "last": 68256.96,
+        "chg_pct": -2.12
       },
       "crude": {
         "last": 68.55,
         "chg_pct": -0.2
       },
       "usdinr": {
-        "last": 95.32,
-        "chg_pct": 0.11
+        "last": 95.31,
+        "chg_pct": 0.1
       },
       "gold": {
         "last": 4155.1,
         "chg_pct": 1.03
       }
     },
-    "summary": "Overall macro mood is neutral (+0.16). US Dow +0.3% overnight. Crude -0.2%. USD/INR +0.1%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
+    "summary": "Overall macro mood is neutral (+0.14). US Dow +0.3% overnight. Crude -0.2%. USD/INR +0.1%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
       "Trade-war headlines spook global markets; IT & export names react most."

@@ -131,10 +131,10 @@
   "macro_risk_factor": 1.0,
   "fii_dii": {
     "date": "2026-07-07",
-    "fii_net_cr": 243.03,
-    "dii_net_cr": 3791.42,
-    "combined_net_cr": 4034.45,
-    "signal": "strong_inflow",
+    "fii_net_cr": 393.19,
+    "dii_net_cr": -383.43,
+    "combined_net_cr": 9.76,
+    "signal": "neutral",
     "ok": true,
     "error": "",
     "history": [
@@ -200,13 +200,12 @@
       },
       {
         "date": "2026-07-07",
-        "fii": 243.03,
-        "dii": 3791.42,
-        "combined": 4034.45
+        "fii": 393.19,
+        "dii": -383.43,
+        "combined": 9.76
       }
     ]
   },
-  "flow_tailwind": true,
   "pcr": {
     "date": "2026-07-07",
     "pcr": 1.032,

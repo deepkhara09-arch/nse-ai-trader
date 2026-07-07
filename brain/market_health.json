@@ -1,6 +1,6 @@
 {
   "date": "2026-07-07",
-  "session": "afternoon",
+  "session": "intraday_close",
   "nifty": {
     "symbol": "^NSEI",
     "value": 24430.35,
@@ -58,11 +58,9 @@
       "ath_pct_60d": -1.34
     }
   },
-  "market_mood": "neutral",
+  "market_mood": "bullish",
   "trade_allowed": true,
-  "warnings": [
-    "Nifty choppy intraday \u2014 wait for cleaner setups"
-  ],
+  "warnings": [],
   "leading_sectors": [
     "IT",
     "Pharma",
@@ -73,7 +71,7 @@
   "sector_breadth": 1.0,
   "lagging_sectors": [],
   "broad_market_strength": true,
-  "intraday_regime": "choppy",
+  "intraday_regime": "mixed",
   "macro": {
     "date": "2026-07-07",
     "session": "midday",

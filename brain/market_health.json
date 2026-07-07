@@ -1,27 +1,27 @@
 {
-  "date": "2026-07-06",
-  "session": "preclose",
+  "date": "2026-07-07",
+  "session": "preopen",
   "nifty": {
     "symbol": "^NSEI",
-    "value": 24270.85,
-    "day_change_pct": 0.39,
+    "value": 24430.35,
+    "day_change_pct": 0.66,
     "trend_5d": "up",
     "trend_20d": "strong_up",
-    "ath_pct_60d": -0.86
+    "ath_pct_60d": -0.12
   },
   "vix": {
-    "value": 11.8,
+    "value": 11.82,
     "level": "normal",
-    "percentile_30d": 0.0,
-    "avg_30d": 14.64
+    "percentile_30d": 3.0,
+    "avg_30d": 14.43
   },
   "bank_nifty": {
     "symbol": "^NSEBANK",
-    "value": 57938.5,
-    "day_change_pct": -0.16,
-    "trend_5d": "sideways",
+    "value": 58291.5,
+    "day_change_pct": 0.61,
+    "trend_5d": "up",
     "trend_20d": "strong_up",
-    "ath_pct_60d": -1.31,
+    "ath_pct_60d": -0.71,
     "diverging": false
   },
   "sectors": {
@@ -35,8 +35,8 @@
     },
     "Pharma": {
       "symbol": "PHARMABEES.NS",
-      "value": 26.48,
-      "day_change_pct": 2.0,
+      "value": 26.53,
+      "day_change_pct": 0.19,
       "trend_5d": "up",
       "trend_20d": "strong_up",
       "ath_pct_60d": -1.56
@@ -72,56 +72,55 @@
   "broad_market_strength": true,
   "intraday_regime": "mixed",
   "macro": {
-    "date": "2026-07-06",
-    "session": "midday",
-    "generated_at": "2026-07-06T06:15:43.433538",
-    "global_score": 0.198,
+    "date": "2026-07-07",
+    "session": "preopen",
+    "generated_at": "2026-07-07T03:05:40.059310",
+    "global_score": 0.268,
     "india_score": 0.0,
-    "overall_score": 0.109,
+    "overall_score": 0.147,
     "mood": "neutral",
     "drivers": [
-      "U.S. stock futures rise as Wall Street looks to extend its rally coming off the holiday weekend",
-      "OPEC+ raises output levels again despite tumbling crude prices",
-      "I have no kids. Will I cause family drama by leaving different amounts to my nieces and nephews?",
-      "Hybrids are the breakout star of the U.S. car market as EV demand fades",
-      "Why the stock market\u2019s red-hot momentum trade might be headed for a violent unwind this month",
-      "\u2018We were stunned\u2019: My daughter, 39, said her mother-in-law gives her more money than we do. Should I confront her?",
-      "Gamer trades in $1,000 of physical discs at GameStop, days after Sony announces end of disc era",
-      "\u2018She wants him gone\u2019: My friend took in a homeless man as a caretaker. After 10 years, how can she evict him?"
+      "Trump calls Walmart \u2018patriotic\u2019 for cutting beef prices \u2014 in a stark change of tune",
+      "The Nasdaq-100 has been far more volatile than the S&P 500. Now add SpaceX to the mix.",
+      "U.S.-Belgium match could draw record TV audience amid the Trump World Cup controversy",
+      "Your data built the AI boom \u2014 but Big Tech is pocketing 100% of the equity",
+      "Your investing expectations are more than double the reality. Here is the tough truth.",
+      "Stocks rally when Congress goes on summer break. Here\u2019s why.",
+      "You want a portfolio that matches your morals. Your retirement plan might disagree.",
+      "If the stock market\u2019s double bubble bursts, it could usher in the next crash"
     ],
     "global_cues": {
       "dow": {
-        "last": 52900.07,
-        "chg_pct": 1.14
+        "last": 53055.91,
+        "chg_pct": 0.29
       },
       "nasdaq": {
-        "last": 25832.67,
-        "chg_pct": -0.8
+        "last": 26121.16,
+        "chg_pct": 1.12
       },
       "sp500": {
-        "last": 7483.24,
-        "chg_pct": 0.0
+        "last": 7537.43,
+        "chg_pct": 0.72
       },
       "nikkei": {
-        "last": 69605.67,
-        "chg_pct": -0.2
+        "last": 68848.59,
+        "chg_pct": -1.27
       },
       "crude": {
-        "last": 68.69,
-        "chg_pct": 0.16
+        "last": 69.09,
+        "chg_pct": 0.58
       },
       "usdinr": {
-        "last": 95.42,
-        "chg_pct": -0.11
+        "last": 95.38,
+        "chg_pct": 0.17
       },
       "gold": {
-        "last": 4112.7,
-        "chg_pct": 1.09
+        "last": 4144.0,
+        "chg_pct": 0.76
       }
     },
-    "summary": "Overall macro mood is neutral (+0.11). US Dow +1.1% overnight. Crude +0.2%. USD/INR -0.1%. Notable: US Fed rate hike / hawkish; Geopolitical conflict / war; Tariffs / trade war.",
+    "summary": "Overall macro mood is neutral (+0.15). US Dow +0.3% overnight. Crude +0.6%. USD/INR +0.2%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
-      "Hawkish Fed pressures Nifty via FII outflows and stronger USD.",
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
       "Trade-war headlines spook global markets; IT & export names react most."
     ],
@@ -130,7 +129,7 @@
   },
   "macro_risk_factor": 1.0,
   "fii_dii": {
-    "date": "2026-07-06",
+    "date": "2026-07-07",
     "fii_net_cr": 243.03,
     "dii_net_cr": 3791.42,
     "combined_net_cr": 4034.45,
@@ -197,12 +196,18 @@
         "fii": 243.03,
         "dii": 3791.42,
         "combined": 4034.45
+      },
+      {
+        "date": "2026-07-07",
+        "fii": 243.03,
+        "dii": 3791.42,
+        "combined": 4034.45
       }
     ]
   },
   "flow_tailwind": true,
   "pcr": {
-    "date": "2026-07-06",
+    "date": "2026-07-07",
     "pcr": 1.497,
     "reading": "bullish_bias",
     "total_pe_oi": 3241273,

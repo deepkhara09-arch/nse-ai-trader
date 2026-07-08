@@ -61,7 +61,7 @@
   "market_mood": "neutral",
   "trade_allowed": true,
   "warnings": [
-    "Nifty choppy intraday \u2014 wait for cleaner setups"
+    "Nifty in intraday downtrend \u2014 avoid new longs this session"
   ],
   "leading_sectors": [
     "IT",
@@ -70,14 +70,14 @@
   "market_regime": "normal",
   "sector_breadth": 0.5,
   "lagging_sectors": [],
-  "intraday_regime": "choppy",
+  "intraday_regime": "trending_down",
   "macro": {
     "date": "2026-07-08",
     "session": "midday",
-    "generated_at": "2026-07-08T06:15:51.457889",
-    "global_score": -0.097,
+    "generated_at": "2026-07-08T07:03:49.929130",
+    "global_score": -0.139,
     "india_score": 0.0,
-    "overall_score": -0.053,
+    "overall_score": -0.076,
     "mood": "neutral",
     "drivers": [
       "Plot twist: Gen Z is buying houses after all. Here\u2019s how they\u2019re doing it.",
@@ -103,23 +103,23 @@
         "chg_pct": -0.45
       },
       "nikkei": {
-        "last": 67279.27,
-        "chg_pct": -1.43
+        "last": 66819.05,
+        "chg_pct": -2.11
       },
       "crude": {
         "last": 70.44,
         "chg_pct": 2.76
       },
       "usdinr": {
-        "last": 95.22,
-        "chg_pct": -0.4
+        "last": 95.19,
+        "chg_pct": -0.43
       },
       "gold": {
         "last": 4145.3,
         "chg_pct": -0.24
       }
     },
-    "summary": "Overall macro mood is neutral (-0.05). US Dow -0.2% overnight. Crude +2.8%. USD/INR -0.4%. Notable: Crude oil spike; Geopolitical conflict / war; Tariffs / trade war.",
+    "summary": "Overall macro mood is neutral (-0.08). US Dow -0.2% overnight. Crude +2.8%. USD/INR -0.4%. Notable: Crude oil spike; Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
       "India imports most of its oil \u2014 crude spikes hurt rupee, inflation, OMCs.",
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",

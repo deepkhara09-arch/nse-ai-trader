@@ -1,53 +1,54 @@
 {
-  "date": "2026-07-07",
-  "session": "midday",
-  "generated_at": "2026-07-07T07:01:55.354386",
-  "global_score": 0.25,
+  "date": "2026-07-08",
+  "session": "preopen",
+  "generated_at": "2026-07-08T03:05:41.646741",
+  "global_score": -0.085,
   "india_score": 0.0,
-  "overall_score": 0.138,
+  "overall_score": -0.047,
   "mood": "neutral",
   "drivers": [
-    "Trump calls Walmart \u2018patriotic\u2019 for cutting beef prices \u2014 in a stark change of tune",
-    "The Nasdaq-100 has been far more volatile than the S&P 500. Now add SpaceX to the mix.",
-    "U.S.-Belgium match could draw record TV audience amid the Trump World Cup controversy",
-    "Your data built the AI boom \u2014 but Big Tech is pocketing 100% of the equity",
-    "Your investing expectations are more than double the reality. Here is the tough truth.",
-    "Stocks rally when Congress goes on summer break. Here\u2019s why.",
-    "You want a portfolio that matches your morals. Your retirement plan might disagree.",
-    "If the stock market\u2019s double bubble bursts, it could usher in the next crash"
+    "Plot twist: Gen Z is buying houses after all. Here\u2019s how they\u2019re doing it.",
+    "Rivian\u2019s stock sale triggers worst rout for the shares in nearly two years",
+    "\u2018Our family is broken beyond repair\u2019: My brother took over my parents\u2019 finances. What can I do?",
+    "Micron\u2019s stock falls as investors wonder if the memory market is near the top",
+    "Adobe\u2019s stock is temptingly cheap. Should investors bite?",
+    "AI-related debt sells off sharply as Amazon looks to borrow another $25 billion",
+    "Tesla\u2019s stock could rise 20% thanks to the potential for a SpaceX merger, analyst says",
+    "Crude prices rise as U.S. launches strikes on Iran shortly after canceling its license to sell oil"
   ],
   "global_cues": {
     "dow": {
-      "last": 53055.91,
-      "chg_pct": 0.29
+      "last": 52925.15,
+      "chg_pct": -0.25
     },
     "nasdaq": {
-      "last": 26121.16,
-      "chg_pct": 1.12
+      "last": 25818.69,
+      "chg_pct": -1.16
     },
     "sp500": {
-      "last": 7537.43,
-      "chg_pct": 0.72
+      "last": 7503.85,
+      "chg_pct": -0.45
     },
     "nikkei": {
-      "last": 68256.96,
-      "chg_pct": -2.12
+      "last": 67758.64,
+      "chg_pct": -0.73
     },
     "crude": {
-      "last": 68.55,
-      "chg_pct": -0.2
+      "last": 72.27,
+      "chg_pct": 5.43
     },
     "usdinr": {
-      "last": 95.31,
-      "chg_pct": 0.1
+      "last": 94.96,
+      "chg_pct": -0.68
     },
     "gold": {
-      "last": 4155.1,
-      "chg_pct": 1.03
+      "last": 4126.8,
+      "chg_pct": -0.68
     }
   },
-  "summary": "Overall macro mood is neutral (+0.14). US Dow +0.3% overnight. Crude -0.2%. USD/INR +0.1%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
+  "summary": "Overall macro mood is neutral (-0.05). US Dow -0.2% overnight. Crude +5.4%. USD/INR -0.7%. Notable: Crude oil spike; Geopolitical conflict / war; Tariffs / trade war.",
   "playbook": [
+    "India imports most of its oil \u2014 crude spikes hurt rupee, inflation, OMCs.",
     "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
     "Trade-war headlines spook global markets; IT & export names react most."
   ],

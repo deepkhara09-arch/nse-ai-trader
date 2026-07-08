@@ -1,6 +1,6 @@
 {
   "date": "2026-07-08",
-  "session": "midday",
+  "session": "afternoon",
   "nifty": {
     "symbol": "^NSEI",
     "value": 24398.7,
@@ -58,11 +58,9 @@
       "ath_pct_60d": -1.57
     }
   },
-  "market_mood": "neutral",
+  "market_mood": "bullish",
   "trade_allowed": true,
-  "warnings": [
-    "Nifty in intraday downtrend \u2014 avoid new longs this session"
-  ],
+  "warnings": [],
   "leading_sectors": [
     "IT",
     "Pharma"
@@ -70,7 +68,7 @@
   "market_regime": "normal",
   "sector_breadth": 0.5,
   "lagging_sectors": [],
-  "intraday_regime": "trending_down",
+  "intraday_regime": "mixed",
   "macro": {
     "date": "2026-07-08",
     "session": "midday",

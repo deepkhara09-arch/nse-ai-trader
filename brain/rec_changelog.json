@@ -598,5 +598,55 @@
     "ts": "2026-07-08T03:05:44.107993",
     "detail": "Rank \u25b22 (#11 \u2192 #9)",
     "confidence": 65.2
+  },
+  {
+    "type": "new",
+    "ticker": "BAJFINANCE.NS",
+    "nse_code": "BAJFINANCE",
+    "signal": "BUY",
+    "date": "2026-07-08",
+    "ts": "2026-07-08T04:05:45.090210",
+    "detail": "New BUY recommendation \u2014 confidence 71/100",
+    "confidence": 71.2
+  },
+  {
+    "type": "removed",
+    "ticker": "MARICO.NS",
+    "nse_code": "MARICO",
+    "signal": "BUY",
+    "date": "2026-07-08",
+    "ts": "2026-07-08T04:05:45.090210",
+    "detail": "Dropped \u2014 no longer meets threshold (was 81/100)",
+    "confidence": 0
+  },
+  {
+    "type": "removed",
+    "ticker": "ICICIBANK.NS",
+    "nse_code": "ICICIBANK",
+    "signal": "BUY",
+    "date": "2026-07-08",
+    "ts": "2026-07-08T04:05:45.090210",
+    "detail": "Dropped \u2014 no longer meets threshold (was 73/100)",
+    "confidence": 0
+  },
+  {
+    "type": "removed",
+    "ticker": "PIDILITIND.NS",
+    "nse_code": "PIDILITIND",
+    "signal": "BUY",
+    "date": "2026-07-08",
+    "ts": "2026-07-08T04:05:45.090210",
+    "detail": "Dropped \u2014 no longer meets threshold (was 69/100)",
+    "confidence": 0
+  },
+  {
+    "type": "removed",
+    "ticker": "GAIL.NS",
+    "nse_code": "GAIL",
+    "signal": "BUY",
+    "date": "2026-07-08",
+    "ts": "2026-07-08T04:05:45.090210",
+    "detail": "Dropped \u2014 no longer meets threshold (was 65/100)",
+    "confidence": 0
   }
 ]

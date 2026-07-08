@@ -658,5 +658,35 @@
     "ts": "2026-07-08T06:13:47.716077",
     "detail": "Confidence \u25bc4 (71 \u2192 67)",
     "confidence": 67.2
+  },
+  {
+    "type": "new",
+    "ticker": "MARICO.NS",
+    "nse_code": "MARICO",
+    "signal": "BUY",
+    "date": "2026-07-08",
+    "ts": "2026-07-08T10:12:32.287498",
+    "detail": "New BUY recommendation \u2014 confidence 68/100",
+    "confidence": 68.5
+  },
+  {
+    "type": "removed",
+    "ticker": "BAJFINANCE.NS",
+    "nse_code": "BAJFINANCE",
+    "signal": "BUY",
+    "date": "2026-07-08",
+    "ts": "2026-07-08T10:12:32.287498",
+    "detail": "Dropped \u2014 no longer meets threshold (was 67/100)",
+    "confidence": 0
+  },
+  {
+    "type": "updated",
+    "ticker": "NESTLEIND.NS",
+    "nse_code": "NESTLEIND",
+    "signal": "BUY",
+    "date": "2026-07-08",
+    "ts": "2026-07-08T10:12:32.287498",
+    "detail": "Stop loss moved \u20b91426.79 \u2192 \u20b91410.84 | Target 1 moved \u20b91546.82 \u2192 \u20b91529.82",
+    "confidence": 70.8
   }
 ]

@@ -1,55 +1,5 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of rsi_bullish_divergence, full_bullish_alignment, pivot_s1_breakdown mean for a swing trade on AXISBANK? Current RSI=46, MACD hist=-5.2059, Vol=1.0x average. Signal is BUY.",
-    "context": {
-      "ticker": "AXISBANK.NS",
-      "signal": "BUY",
-      "patterns": "rsi_bullish_divergence, full_bullish_alignment, pivot_s1_breakdown",
-      "rsi": 46.2
-    },
-    "queued_at": "2026-07-09T03:05:48.306187"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_up, full_bullish_alignment, supertrend_bullish mean for a swing trade on MARICO? Current RSI=70, MACD hist=+2.1309, Vol=1.0x average. Signal is BUY.",
-    "context": {
-      "ticker": "MARICO.NS",
-      "signal": "BUY",
-      "patterns": "adx_strong_trend_up, full_bullish_alignment, supertrend_bullish",
-      "rsi": 70.2
-    },
-    "queued_at": "2026-07-09T04:05:44.852482"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_up, strong_bullish_marubozu, pivot_point_test mean for a swing trade on HOMEFIRST? Current RSI=62, MACD hist=+4.7156, Vol=0.6x average. Signal is BUY.",
-    "context": {
-      "ticker": "HOMEFIRST.NS",
-      "signal": "BUY",
-      "patterns": "adx_strong_trend_up, strong_bullish_marubozu, pivot_point_test",
-      "rsi": 62.5
-    },
-    "queued_at": "2026-07-09T04:05:44.853944"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of pivot_point_test, pivot_s1_bounce, stoch_rsi_oversold_reversal mean for a swing trade on NESTLEIND? Current RSI=62, MACD hist=+7.0182, Vol=1.0x average. Signal is BUY.",
-    "context": {
-      "ticker": "NESTLEIND.NS",
-      "signal": "BUY",
-      "patterns": "pivot_point_test, pivot_s1_bounce, stoch_rsi_oversold_reversal",
-      "rsi": 62.1
-    },
-    "queued_at": "2026-07-09T04:05:44.854504"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of pivot_s1_breakdown, adx_strong_trend_up, rsi_bearish_divergence mean for a swing trade on ABCAPITAL? Current RSI=70, MACD hist=+1.8036, Vol=0.9x average. Signal is SELL.",
-    "context": {
-      "ticker": "ABCAPITAL.NS",
-      "signal": "SELL",
-      "patterns": "pivot_s1_breakdown, adx_strong_trend_up, rsi_bearish_divergence",
-      "rsi": 70.3
-    },
-    "queued_at": "2026-07-09T04:05:44.858559"
-  },
-  {
     "question": "In Indian NSE markets, what does the combination of full_bullish_alignment, near_52w_high, adx_strong_trend_up mean for a swing trade on MARICO? Current RSI=70, MACD hist=+2.1309, Vol=1.0x average. Signal is BUY.",
     "context": {
       "ticker": "MARICO.NS",
@@ -98,5 +48,55 @@
       "rsi": 70.3
     },
     "queued_at": "2026-07-09T07:07:20.680196"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of near_52w_high, supertrend_bullish, adx_strong_trend_up mean for a swing trade on MARICO? Current RSI=70, MACD hist=+2.1309, Vol=1.0x average. Signal is BUY.",
+    "context": {
+      "ticker": "MARICO.NS",
+      "signal": "BUY",
+      "patterns": "near_52w_high, supertrend_bullish, adx_strong_trend_up",
+      "rsi": 70.2
+    },
+    "queued_at": "2026-07-09T07:45:54.549256"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_up, near_52w_high, pivot_point_test mean for a swing trade on FEDERALBNK? Current RSI=59, MACD hist=-0.7135, Vol=0.7x average. Signal is BUY.",
+    "context": {
+      "ticker": "FEDERALBNK.NS",
+      "signal": "BUY",
+      "patterns": "adx_strong_trend_up, near_52w_high, pivot_point_test",
+      "rsi": 58.8
+    },
+    "queued_at": "2026-07-09T07:45:54.552882"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of pivot_point_test, supertrend_bullish, inside_bar mean for a swing trade on HOMEFIRST? Current RSI=62, MACD hist=+4.7156, Vol=0.6x average. Signal is BUY.",
+    "context": {
+      "ticker": "HOMEFIRST.NS",
+      "signal": "BUY",
+      "patterns": "pivot_point_test, supertrend_bullish, inside_bar",
+      "rsi": 62.5
+    },
+    "queued_at": "2026-07-09T07:45:54.553847"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of pivot_point_test, near_52w_high, supertrend_bullish mean for a swing trade on NESTLEIND? Current RSI=62, MACD hist=+7.0182, Vol=1.0x average. Signal is BUY.",
+    "context": {
+      "ticker": "NESTLEIND.NS",
+      "signal": "BUY",
+      "patterns": "pivot_point_test, near_52w_high, supertrend_bullish",
+      "rsi": 62.1
+    },
+    "queued_at": "2026-07-09T07:45:54.555716"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of pivot_s1_breakdown, near_52w_high, tweezer_top mean for a swing trade on ABCAPITAL? Current RSI=70, MACD hist=+1.8036, Vol=0.9x average. Signal is SELL.",
+    "context": {
+      "ticker": "ABCAPITAL.NS",
+      "signal": "SELL",
+      "patterns": "pivot_s1_breakdown, near_52w_high, tweezer_top",
+      "rsi": 70.3
+    },
+    "queued_at": "2026-07-09T07:45:54.559322"
   }
 ]

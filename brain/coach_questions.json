@@ -1,45 +1,5 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of full_bullish_alignment, engulfing_bearish, rsi_bullish_divergence mean for a swing trade on GAIL? Current RSI=47, MACD hist=-0.3848, Vol=0.8x average. Signal is BUY.",
-    "context": {
-      "ticker": "GAIL.NS",
-      "signal": "BUY",
-      "patterns": "full_bullish_alignment, engulfing_bearish, rsi_bullish_divergence",
-      "rsi": 47.3
-    },
-    "queued_at": "2026-07-08T10:12:32.286005"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of three_black_crows, rsi_bullish_divergence, inside_bar mean for a swing trade on AXISBANK? Current RSI=46, MACD hist=-5.2059, Vol=1.0x average. Signal is BUY.",
-    "context": {
-      "ticker": "AXISBANK.NS",
-      "signal": "BUY",
-      "patterns": "three_black_crows, rsi_bullish_divergence, inside_bar",
-      "rsi": 46.2
-    },
-    "queued_at": "2026-07-08T10:12:32.286540"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of pivot_point_test, supertrend_bullish, full_bullish_alignment mean for a swing trade on MARICO? Current RSI=70, MACD hist=+2.1569, Vol=1.0x average. Signal is BUY.",
-    "context": {
-      "ticker": "MARICO.NS",
-      "signal": "BUY",
-      "patterns": "pivot_point_test, supertrend_bullish, full_bullish_alignment",
-      "rsi": 70.2
-    },
-    "queued_at": "2026-07-09T03:05:48.295497"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of full_bullish_alignment, pivot_s1_breakdown, rsi_bearish_divergence mean for a swing trade on FEDERALBNK? Current RSI=64, MACD hist=-0.2993, Vol=0.6x average. Signal is BUY.",
-    "context": {
-      "ticker": "FEDERALBNK.NS",
-      "signal": "BUY",
-      "patterns": "full_bullish_alignment, pivot_s1_breakdown, rsi_bearish_divergence",
-      "rsi": 63.9
-    },
-    "queued_at": "2026-07-09T03:05:48.299316"
-  },
-  {
     "question": "In Indian NSE markets, what does the combination of strong_bullish_marubozu, pivot_point_test, full_bullish_alignment mean for a swing trade on HOMEFIRST? Current RSI=62, MACD hist=+4.7404, Vol=0.6x average. Signal is BUY.",
     "context": {
       "ticker": "HOMEFIRST.NS",
@@ -98,5 +58,45 @@
       "rsi": 46.2
     },
     "queued_at": "2026-07-09T03:05:48.306187"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_up, full_bullish_alignment, supertrend_bullish mean for a swing trade on MARICO? Current RSI=70, MACD hist=+2.1309, Vol=1.0x average. Signal is BUY.",
+    "context": {
+      "ticker": "MARICO.NS",
+      "signal": "BUY",
+      "patterns": "adx_strong_trend_up, full_bullish_alignment, supertrend_bullish",
+      "rsi": 70.2
+    },
+    "queued_at": "2026-07-09T04:05:44.852482"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_up, strong_bullish_marubozu, pivot_point_test mean for a swing trade on HOMEFIRST? Current RSI=62, MACD hist=+4.7156, Vol=0.6x average. Signal is BUY.",
+    "context": {
+      "ticker": "HOMEFIRST.NS",
+      "signal": "BUY",
+      "patterns": "adx_strong_trend_up, strong_bullish_marubozu, pivot_point_test",
+      "rsi": 62.5
+    },
+    "queued_at": "2026-07-09T04:05:44.853944"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of pivot_point_test, pivot_s1_bounce, stoch_rsi_oversold_reversal mean for a swing trade on NESTLEIND? Current RSI=62, MACD hist=+7.0182, Vol=1.0x average. Signal is BUY.",
+    "context": {
+      "ticker": "NESTLEIND.NS",
+      "signal": "BUY",
+      "patterns": "pivot_point_test, pivot_s1_bounce, stoch_rsi_oversold_reversal",
+      "rsi": 62.1
+    },
+    "queued_at": "2026-07-09T04:05:44.854504"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of pivot_s1_breakdown, adx_strong_trend_up, rsi_bearish_divergence mean for a swing trade on ABCAPITAL? Current RSI=70, MACD hist=+1.8036, Vol=0.9x average. Signal is SELL.",
+    "context": {
+      "ticker": "ABCAPITAL.NS",
+      "signal": "SELL",
+      "patterns": "pivot_s1_breakdown, adx_strong_trend_up, rsi_bearish_divergence",
+      "rsi": 70.3
+    },
+    "queued_at": "2026-07-09T04:05:44.858559"
   }
 ]

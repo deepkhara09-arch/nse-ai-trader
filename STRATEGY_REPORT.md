@@ -1,5 +1,5 @@
 # NSE AI Trader — Strategy Report
-> Updated: 2026-07-08 &nbsp;|&nbsp; Day 13 &nbsp;|&nbsp; Phase: analysis
+> Updated: 2026-07-09 &nbsp;|&nbsp; Day 14 &nbsp;|&nbsp; Phase: analysis
 
 ---
 
@@ -22,26 +22,28 @@
 > Not financial advice. Always use your own judgement and consult a SEBI advisor.
 
 BUY Nestle India Ltd (NESTLEIND)
-   CMP:           Rs.1,450.50
-   Entry Zone:    Rs.1,447.60 - Rs.1,457.75
-   Stop Loss:     Rs.1,410.84  (2.7% risk)
-   Target 1:      Rs.1,529.82  (R:R 1:2.0)
-   Target 2:      Rs.1,556.26  (R:R 1:2.7)
+   CMP:           Rs.1,463.20
+   Entry Zone:    Rs.1,460.27 - Rs.1,470.52
+   Stop Loss:     Rs.1,421.55  (2.9% risk)
+   Target 1:      Rs.1,546.50  (R:R 1:2.0)
+   Target 2:      Rs.1,574.26  (R:R 1:2.7)
    Hold:          5–15 trading days (swing)
-   Qty (2% risk): 8 shares -> Rs.11,604 invested
-   Max loss:      Rs.317 if SL hit
-   Confidence:    71/100  (Tech:22 Fund:18 News:20 Pat:1)
+   Qty (2% risk): 8 shares -> Rs.11,706 invested
+   Max loss:      Rs.333 if SL hit
+   Confidence:    83/100  (Tech:34 Fund:18 News:20 Pat:1)
    Reasons:
      - All EMAs stacked bullish
      - MACD histogram positive
-     - Positive news sentiment (0.58)
-     - News sentiment improving across sessions
-     - Sector tailwind (momentum=0.35)
-     - Delivery 59% above avg — institutional buying
+     - Positive news sentiment (0.59)
+     - Supertrend bullish — price above trend band
+     - Bounced off Pivot S1 support
+     - StochRSI oversold with bullish candle — reversal
+     - High delivery 64% — strong institutional accumulation
      - In a long-term strong uptrend (2yr) — trend on our side
-     - Near 52-week high (96% of range) — breakout zone
+     - Near 52-week high (92% of range) — breakout zone
      - Clean trender aligned with its long-term uptrend
      - ✓ Daily setup aligned with the higher-timeframe trend
+     - ⚠ Market mood is bearish — buying against the tape needs extra conviction
      - Valuation: P/E 81.4x
      - ROE: 76.3%
      - ROCE: 94.7%
@@ -54,38 +56,38 @@ BUY Nestle India Ltd (NESTLEIND)
      - Promoter holding: 62.8%
      - Dividend yield: 82.0%
      - Low debt: D/E 0.09
-     - Support at ₹1404.42 cushions downside
+     - Support at ₹1403.73 cushions downside
      - Resistance at ₹1486.10 is natural target
      - Latest news: 'NESTLEIND Outlook for the Week (July 06, 2026 – July 10, 2026) - Equit'
-     - Broad market bullish — tailwind in play
      - Confluence: 7 independent signal families agree (trend, momentum, volume, pattern, news, fundamentals, regime)
-     - History backtest: this kind of BUY setup worked 48% of the time over ~1 week on this stock (sample: 52)
+     - History backtest: this kind of BUY setup worked 47% of the time over ~1 week on this stock (sample: 53)
+   Market warnings: Nifty in downtrend (down) — only high-confidence BUY signals | Nifty down -2.1% today — likely institutional selling | Nifty choppy intraday — wait for cleaner setups
 
 ---
 
 BUY Marico Ltd (MARICO)
-   CMP:           Rs.841.20
-   Entry Zone:    Rs.839.52 - Rs.845.41
-   Stop Loss:     Rs.815.75  (3.0% risk)
-   Target 1:      Rs.892.10  (R:R 1:2.0)
-   Target 2:      Rs.909.06  (R:R 1:2.7)
+   CMP:           Rs.857.90
+   Entry Zone:    Rs.856.18 - Rs.862.19
+   Stop Loss:     Rs.833.58  (2.8% risk)
+   Target 1:      Rs.906.54  (R:R 1:2.0)
+   Target 2:      Rs.922.75  (R:R 1:2.7)
    Hold:          5–15 trading days (swing)
-   Qty (2% risk): 14 shares -> Rs.11,777 invested
-   Max loss:      Rs.356 if SL hit
-   Confidence:    68/100  (Tech:27 Fund:13 News:17 Pat:1)
+   Qty (2% risk): 13 shares -> Rs.11,153 invested
+   Max loss:      Rs.316 if SL hit
+   Confidence:    72/100  (Tech:29 Fund:13 News:18 Pat:2)
    Reasons:
      - All EMAs stacked bullish
      - MACD histogram positive
-     - Positive news sentiment (0.38)
-     - News sentiment improving across sessions
-     - Sector tailwind (momentum=0.35)
+     - Positive news sentiment (0.38, news 1.3x reliable here)
+     - Near 52-week high — potential breakout zone
      - Supertrend bullish — price above trend band
      - ADX strong trend — directional move confirmed
-     - Testing pivot point — decision zone
-     - Delivery 54% above avg — institutional buying
+     - StochRSI oversold with bullish candle — reversal
+     - Delivery 56% above avg — institutional buying
      - In a long-term strong uptrend (2yr) — trend on our side
-     - Near 52-week high (100% of range) — breakout zone
+     - Near 52-week high (97% of range) — breakout zone
      - ✓ Daily setup aligned with the higher-timeframe trend
+     - ⚠ Market mood is bearish — buying against the tape needs extra conviction
      - Valuation: P/E 61.7x
      - ROE: 41.4%
      - ROCE: 39.2%
@@ -97,12 +99,12 @@ BUY Marico Ltd (MARICO)
      - Promoter holding: 59.0%
      - Dividend yield: 48.0%
      - Low debt: D/E 0.12
-     - Support at ₹820.23 cushions downside
-     - Resistance at ₹860.00 is natural target
+     - Support at ₹838.80 cushions downside
+     - Resistance at ₹880.00 is natural target
      - Latest news: 'Marico Share Slips Over 1% After Giving Up Early Gains Despite Strong '
-     - Broad market bullish — tailwind in play
      - Confluence: 6 independent signal families agree (trend, momentum, volume, pattern, news, regime)
      - History backtest: this kind of BUY setup worked 52% of the time over ~1 week on this stock (sample: 56)
+   Market warnings: Nifty in downtrend (down) — only high-confidence BUY signals | Nifty down -2.1% today — likely institutional selling | Nifty choppy intraday — wait for cleaner setups
 
 ---
 

@@ -4,9 +4,9 @@
     "nse_code": "NESTLEIND",
     "company_name": "Nestle India Ltd",
     "date": "2026-07-09",
-    "generated_at": "2026-07-09 07:45 UTC",
-    "valid_until": "15:15 IST",
-    "session": "afternoon",
+    "generated_at": "2026-07-09 09:45 UTC",
+    "valid_until": "15:40 IST",
+    "session": "intraday_close",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -103,11 +103,11 @@
       "History backtest: this kind of BUY setup worked 47% of the time over ~1 week on this stock (sample: 53)"
     ],
     "patterns_seen": [
-      "pivot_point_test",
-      "near_52w_high",
-      "supertrend_bullish",
       "stoch_rsi_oversold_reversal",
-      "full_bullish_alignment"
+      "pivot_point_test",
+      "full_bullish_alignment",
+      "near_52w_high",
+      "supertrend_bullish"
     ],
     "reliable_patterns": [],
     "nearest_support": 1403.73,
@@ -145,9 +145,9 @@
     "nse_code": "MARICO",
     "company_name": "Marico Ltd",
     "date": "2026-07-09",
-    "generated_at": "2026-07-09 07:45 UTC",
-    "valid_until": "15:15 IST",
-    "session": "afternoon",
+    "generated_at": "2026-07-09 09:45 UTC",
+    "valid_until": "15:40 IST",
+    "session": "intraday_close",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -241,11 +241,11 @@
       "History backtest: this kind of BUY setup worked 52% of the time over ~1 week on this stock (sample: 56)"
     ],
     "patterns_seen": [
-      "near_52w_high",
-      "supertrend_bullish",
       "adx_strong_trend_up",
       "full_bullish_alignment",
-      "morning_star"
+      "morning_star",
+      "near_52w_high",
+      "supertrend_bullish"
     ],
     "reliable_patterns": [],
     "nearest_support": 838.8,

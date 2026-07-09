@@ -1,27 +1,27 @@
 {
-  "date": "2026-07-08",
-  "session": "preclose",
+  "date": "2026-07-09",
+  "session": "preopen",
   "nifty": {
     "symbol": "^NSEI",
-    "value": 24398.7,
-    "day_change_pct": -0.13,
-    "trend_5d": "up",
-    "trend_20d": "strong_up",
-    "ath_pct_60d": -0.54
+    "value": 23882.05,
+    "day_change_pct": -2.12,
+    "trend_5d": "down",
+    "trend_20d": "up",
+    "ath_pct_60d": -2.65
   },
   "vix": {
-    "value": 11.65,
+    "value": 14.68,
     "level": "normal",
-    "percentile_30d": 0.0,
-    "avg_30d": 14.34
+    "percentile_30d": 53.0,
+    "avg_30d": 14.27
   },
   "bank_nifty": {
     "symbol": "^NSEBANK",
-    "value": 58200.7,
-    "day_change_pct": -0.16,
-    "trend_5d": "sideways",
-    "trend_20d": "strong_up",
-    "ath_pct_60d": -0.86,
+    "value": 56742.6,
+    "day_change_pct": -2.51,
+    "trend_5d": "down",
+    "trend_20d": "up",
+    "ath_pct_60d": -3.34,
     "diverging": false
   },
   "sectors": {
@@ -35,11 +35,11 @@
     },
     "Pharma": {
       "symbol": "PHARMABEES.NS",
-      "value": 26.4,
-      "day_change_pct": -0.49,
-      "trend_5d": "up",
+      "value": 26.16,
+      "day_change_pct": -0.91,
+      "trend_5d": "sideways",
       "trend_20d": "strong_up",
-      "ath_pct_60d": -2.44
+      "ath_pct_60d": -3.33
     },
     "Bank": {
       "symbol": "BANKBEES.NS",
@@ -58,68 +58,69 @@
       "ath_pct_60d": -1.57
     }
   },
-  "market_mood": "bullish",
+  "market_mood": "bearish",
   "trade_allowed": true,
-  "warnings": [],
+  "warnings": [
+    "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
+    "Nifty down -2.1% today \u2014 likely institutional selling"
+  ],
   "leading_sectors": [
-    "IT",
-    "Pharma"
+    "IT"
   ],
   "market_regime": "normal",
-  "sector_breadth": 0.5,
+  "sector_breadth": 0.25,
   "lagging_sectors": [],
   "intraday_regime": "mixed",
   "macro": {
-    "date": "2026-07-08",
-    "session": "midday",
-    "generated_at": "2026-07-08T07:03:49.929130",
-    "global_score": -0.139,
+    "date": "2026-07-09",
+    "session": "preopen",
+    "generated_at": "2026-07-09T03:05:46.723011",
+    "global_score": 0.105,
     "india_score": 0.0,
-    "overall_score": -0.076,
+    "overall_score": 0.058,
     "mood": "neutral",
     "drivers": [
-      "Plot twist: Gen Z is buying houses after all. Here\u2019s how they\u2019re doing it.",
-      "Rivian\u2019s stock sale triggers worst rout for the shares in nearly two years",
-      "\u2018Our family is broken beyond repair\u2019: My brother took over my parents\u2019 finances. What can I do?",
-      "Micron\u2019s stock falls as investors wonder if the memory market is near the top",
-      "Adobe\u2019s stock is temptingly cheap. Should investors bite?",
-      "AI-related debt sells off sharply as Amazon looks to borrow another $25 billion",
-      "Tesla\u2019s stock could rise 20% thanks to the potential for a SpaceX merger, analyst says",
-      "Crude prices rise as U.S. launches strikes on Iran shortly after canceling its license to sell oil"
+      "Levi\u2019s is finding new ways to win customers \u2014 by looking toward tops and \u2018denim luxury\u2019",
+      "Higher gas prices aren\u2019t the only way rising tensions with Iran will hit home",
+      "I started retirement with $3 million. Now I\u2019m 89 and down to $2 million. What if I get sick?",
+      "Did you mess up on your taxes? The IRS just made it easier to avoid paying a penalty.",
+      "Oil prices extend gains after hours as U.S. forces conduct additional strikes on Iran",
+      "Investors haven\u2019t been this bullish on the dollar in a decade. How the buck can keep climbing.",
+      "This chart shows stamp prices over the years as USPS hikes postage again this weekend",
+      "The Strait of Hormuz is back under \u2018full-conflict conditions\u2019 \u2014 and energy markets are scrambling"
     ],
     "global_cues": {
       "dow": {
-        "last": 52925.15,
-        "chg_pct": -0.25
+        "last": 52348.39,
+        "chg_pct": -1.09
       },
       "nasdaq": {
-        "last": 25818.69,
-        "chg_pct": -1.16
+        "last": 25870.65,
+        "chg_pct": 0.2
       },
       "sp500": {
-        "last": 7503.85,
-        "chg_pct": -0.45
+        "last": 7482.71,
+        "chg_pct": -0.28
       },
       "nikkei": {
-        "last": 66819.05,
-        "chg_pct": -2.11
+        "last": 68180.55,
+        "chg_pct": 2.04
       },
       "crude": {
-        "last": 70.44,
-        "chg_pct": 2.76
+        "last": 74.58,
+        "chg_pct": 5.88
       },
       "usdinr": {
-        "last": 95.19,
-        "chg_pct": -0.43
+        "last": 95.54,
+        "chg_pct": -0.05
       },
       "gold": {
-        "last": 4145.3,
-        "chg_pct": -0.24
+        "last": 4077.2,
+        "chg_pct": -1.64
       }
     },
-    "summary": "Overall macro mood is neutral (-0.08). US Dow -0.2% overnight. Crude +2.8%. USD/INR -0.4%. Notable: Crude oil spike; Geopolitical conflict / war; Tariffs / trade war.",
+    "summary": "Overall macro mood is neutral (+0.06). US Dow -1.1% overnight. Crude +5.9%. USD/INR -0.1%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
-      "India imports most of its oil \u2014 crude spikes hurt rupee, inflation, OMCs.",
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
       "Trade-war headlines spook global markets; IT & export names react most."
     ],
@@ -128,11 +129,11 @@
   },
   "macro_risk_factor": 1.0,
   "fii_dii": {
-    "date": "2026-07-08",
-    "fii_net_cr": 393.19,
-    "dii_net_cr": -383.43,
-    "combined_net_cr": 9.76,
-    "signal": "neutral",
+    "date": "2026-07-09",
+    "fii_net_cr": 1962.8,
+    "dii_net_cr": 790.16,
+    "combined_net_cr": 2752.96,
+    "signal": "strong_inflow",
     "ok": true,
     "error": "",
     "history": [
@@ -207,15 +208,22 @@
         "fii": 393.19,
         "dii": -383.43,
         "combined": 9.76
+      },
+      {
+        "date": "2026-07-09",
+        "fii": 1962.8,
+        "dii": 790.16,
+        "combined": 2752.96
       }
     ]
   },
+  "flow_tailwind": true,
   "pcr": {
-    "date": "2026-07-08",
+    "date": "2026-07-09",
     "pcr": 0.605,
     "reading": "bearish_bias",
-    "total_pe_oi": 1416857,
-    "total_ce_oi": 2341713,
+    "total_pe_oi": 1405427,
+    "total_ce_oi": 2321289,
     "spot": 23882.05,
     "max_pain": 24100.0,
     "max_pain_dist_pct": -0.91,

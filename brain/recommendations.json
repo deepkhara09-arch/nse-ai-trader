@@ -3,10 +3,10 @@
     "ticker": "NESTLEIND.NS",
     "nse_code": "NESTLEIND",
     "company_name": "Nestle India Ltd",
-    "date": "2026-07-08",
-    "generated_at": "2026-07-08 10:12 UTC",
+    "date": "2026-07-09",
+    "generated_at": "2026-07-09 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -40,10 +40,10 @@
     "pattern_score": 1.0,
     "confluence_bonus": 10,
     "paper_bonus": 0.0,
-    "success_probability": 0.546,
-    "base_success_prob": 0.574,
-    "profit_probability": 0.722,
-    "composite_score": 64.35,
+    "success_probability": 0.553,
+    "base_success_prob": 0.588,
+    "profit_probability": 0.764,
+    "composite_score": 66.28,
     "focus_rank": 1,
     "rank_delta": 0,
     "intention": "BUY NESTLEIND for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
@@ -58,9 +58,9 @@
       "regime"
     ],
     "backtest_tested": true,
-    "backtest_hit_5d": 0.481,
-    "backtest_hit_10d": 0.462,
-    "backtest_sample": 52,
+    "backtest_hit_5d": 0.472,
+    "backtest_hit_10d": 0.453,
+    "backtest_sample": 53,
     "hist_long_trend": "strong_uptrend",
     "hist_52w_position": 96.5,
     "hist_personality": "trender",
@@ -68,7 +68,7 @@
     "data_confidence": "Estimated",
     "data_confidence_key": "estimated",
     "data_confidence_note": "Only 0 paper trade(s) \u2014 probability is an indicator-based estimate, not yet proven",
-    "expected_edge_r": 0.722,
+    "expected_edge_r": 0.764,
     "buy_score": 8.1,
     "sell_score": 5.0,
     "reasons": [
@@ -82,6 +82,7 @@
       "Near 52-week high (96% of range) \u2014 breakout zone",
       "Clean trender aligned with its long-term uptrend",
       "\u2713 Daily setup aligned with the higher-timeframe trend",
+      "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
       "Valuation: P/E 81.4x",
       "ROE: 76.3%",
       "ROCE: 94.7%",
@@ -97,15 +98,14 @@
       "Support at \u20b91404.42 cushions downside",
       "Resistance at \u20b91486.10 is natural target",
       "Latest news: 'NESTLEIND Outlook for the Week (July 06, 2026 \u2013 July 10, 2026) - Equit'",
-      "Broad market bullish \u2014 tailwind in play",
       "Confluence: 7 independent signal families agree (trend, momentum, volume, pattern, news, fundamentals, regime)",
-      "History backtest: this kind of BUY setup worked 48% of the time over ~1 week on this stock (sample: 52)"
+      "History backtest: this kind of BUY setup worked 47% of the time over ~1 week on this stock (sample: 53)"
     ],
     "patterns_seen": [
       "bb_upper_rejection",
       "full_bullish_alignment",
-      "rsi_bearish_divergence",
-      "pivot_s1_breakdown"
+      "pivot_s1_breakdown",
+      "rsi_bearish_divergence"
     ],
     "reliable_patterns": [],
     "nearest_support": 1404.42,
@@ -131,17 +131,20 @@
     "paper_win_rate": 0,
     "paper_pnl": 0,
     "paper_expectancy": 0,
-    "market_mood": "bullish",
-    "market_warning": []
+    "market_mood": "bearish",
+    "market_warning": [
+      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
+      "Nifty down -2.1% today \u2014 likely institutional selling"
+    ]
   },
   {
     "ticker": "MARICO.NS",
     "nse_code": "MARICO",
     "company_name": "Marico Ltd",
-    "date": "2026-07-08",
-    "generated_at": "2026-07-08 10:12 UTC",
+    "date": "2026-07-09",
+    "generated_at": "2026-07-09 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -175,12 +178,12 @@
     "pattern_score": 1.0,
     "confluence_bonus": 10,
     "paper_bonus": 0.0,
-    "success_probability": 0.52,
-    "base_success_prob": 0.521,
-    "profit_probability": 0.563,
-    "composite_score": 56.19,
+    "success_probability": 0.531,
+    "base_success_prob": 0.536,
+    "profit_probability": 0.608,
+    "composite_score": 58.21,
     "focus_rank": 3,
-    "rank_delta": 2,
+    "rank_delta": 0,
     "intention": "BUY MARICO for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
     "confluence_count": 6,
     "confluence_families": [
@@ -202,7 +205,7 @@
     "data_confidence": "Estimated",
     "data_confidence_key": "estimated",
     "data_confidence_note": "Only 0 paper trade(s) \u2014 probability is an indicator-based estimate, not yet proven",
-    "expected_edge_r": 0.563,
+    "expected_edge_r": 0.608,
     "buy_score": 10.1,
     "sell_score": 2.5,
     "reasons": [
@@ -218,6 +221,7 @@
       "In a long-term strong uptrend (2yr) \u2014 trend on our side",
       "Near 52-week high (100% of range) \u2014 breakout zone",
       "\u2713 Daily setup aligned with the higher-timeframe trend",
+      "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
       "Valuation: P/E 61.7x",
       "ROE: 41.4%",
       "ROCE: 39.2%",
@@ -232,15 +236,14 @@
       "Support at \u20b9820.23 cushions downside",
       "Resistance at \u20b9860.00 is natural target",
       "Latest news: 'Marico Share Slips Over 1% After Giving Up Early Gains Despite Strong '",
-      "Broad market bullish \u2014 tailwind in play",
       "Confluence: 6 independent signal families agree (trend, momentum, volume, pattern, news, regime)",
       "History backtest: this kind of BUY setup worked 52% of the time over ~1 week on this stock (sample: 56)"
     ],
     "patterns_seen": [
-      "adx_strong_trend_up",
-      "full_bullish_alignment",
+      "pivot_point_test",
       "supertrend_bullish",
-      "pivot_point_test"
+      "full_bullish_alignment",
+      "adx_strong_trend_up"
     ],
     "reliable_patterns": [],
     "nearest_support": 820.23,
@@ -266,7 +269,10 @@
     "paper_win_rate": 0,
     "paper_pnl": 0,
     "paper_expectancy": 0,
-    "market_mood": "bullish",
-    "market_warning": []
+    "market_mood": "bearish",
+    "market_warning": [
+      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
+      "Nifty down -2.1% today \u2014 likely institutional selling"
+    ]
   }
 ]

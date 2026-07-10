@@ -788,5 +788,35 @@
     "ts": "2026-07-10T06:15:58.330762",
     "detail": "Dropped \u2014 no longer meets threshold (was 66/100)",
     "confidence": 0
+  },
+  {
+    "type": "new",
+    "ticker": "BAJFINANCE.NS",
+    "nse_code": "BAJFINANCE",
+    "signal": "BUY",
+    "date": "2026-07-10",
+    "ts": "2026-07-10T07:45:53.235826",
+    "detail": "New BUY recommendation \u2014 confidence 68/100",
+    "confidence": 68.2
+  },
+  {
+    "type": "new",
+    "ticker": "UNIONBANK.NS",
+    "nse_code": "UNIONBANK",
+    "signal": "BUY",
+    "date": "2026-07-10",
+    "ts": "2026-07-10T07:45:53.235826",
+    "detail": "New BUY recommendation \u2014 confidence 65/100",
+    "confidence": 65.4
+  },
+  {
+    "type": "removed",
+    "ticker": "FEDERALBNK.NS",
+    "nse_code": "FEDERALBNK",
+    "signal": "BUY",
+    "date": "2026-07-10",
+    "ts": "2026-07-10T07:45:53.235826",
+    "detail": "Dropped \u2014 no longer meets threshold (was 66/100)",
+    "confidence": 0
   }
 ]

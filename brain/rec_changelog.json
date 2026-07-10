@@ -818,5 +818,65 @@
     "ts": "2026-07-10T07:45:53.235826",
     "detail": "Dropped \u2014 no longer meets threshold (was 66/100)",
     "confidence": 0
+  },
+  {
+    "type": "new",
+    "ticker": "NESTLEIND.NS",
+    "nse_code": "NESTLEIND",
+    "signal": "BUY",
+    "date": "2026-07-10",
+    "ts": "2026-07-10T10:12:33.200360",
+    "detail": "New BUY recommendation \u2014 confidence 89/100",
+    "confidence": 89.2
+  },
+  {
+    "type": "new",
+    "ticker": "ICICIBANK.NS",
+    "nse_code": "ICICIBANK",
+    "signal": "BUY",
+    "date": "2026-07-10",
+    "ts": "2026-07-10T10:12:33.200360",
+    "detail": "New BUY recommendation \u2014 confidence 71/100",
+    "confidence": 71.3
+  },
+  {
+    "type": "new",
+    "ticker": "FEDERALBNK.NS",
+    "nse_code": "FEDERALBNK",
+    "signal": "BUY",
+    "date": "2026-07-10",
+    "ts": "2026-07-10T10:12:33.200360",
+    "detail": "New BUY recommendation \u2014 confidence 70/100",
+    "confidence": 70.5
+  },
+  {
+    "type": "new",
+    "ticker": "MARICO.NS",
+    "nse_code": "MARICO",
+    "signal": "BUY",
+    "date": "2026-07-10",
+    "ts": "2026-07-10T10:12:33.200360",
+    "detail": "New BUY recommendation \u2014 confidence 70/100",
+    "confidence": 69.7
+  },
+  {
+    "type": "removed",
+    "ticker": "UNIONBANK.NS",
+    "nse_code": "UNIONBANK",
+    "signal": "BUY",
+    "date": "2026-07-10",
+    "ts": "2026-07-10T10:12:33.200360",
+    "detail": "Dropped \u2014 no longer meets threshold (was 65/100)",
+    "confidence": 0
+  },
+  {
+    "type": "updated",
+    "ticker": "BAJFINANCE.NS",
+    "nse_code": "BAJFINANCE",
+    "signal": "BUY",
+    "date": "2026-07-10",
+    "ts": "2026-07-10T10:12:33.200360",
+    "detail": "Confidence \u25b28 (68 \u2192 76) | Stop loss moved \u20b9982.89 \u2192 \u20b9995.53 | Target 1 moved \u20b91093.62 \u2192 \u20b91082.02",
+    "confidence": 76.5
   }
 ]

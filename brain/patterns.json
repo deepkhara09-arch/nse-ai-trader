@@ -345,15 +345,27 @@
       },
       "full_bullish_alignment": {
         "wins": 0.0,
-        "losses": 0.5,
-        "reliability": 0.417,
-        "last_seen": "2026-07-09"
+        "losses": 0.997,
+        "reliability": 0.334,
+        "last_seen": "2026-07-10"
       },
       "low_volume_drift": {
         "wins": 0.0,
         "losses": 0.5,
         "reliability": 0.417,
         "last_seen": "2026-07-09"
+      },
+      "pivot_s1_breakdown": {
+        "wins": 0.0,
+        "losses": 0.5,
+        "reliability": 0.417,
+        "last_seen": "2026-07-10"
+      },
+      "strong_bearish_marubozu": {
+        "wins": 0.0,
+        "losses": 0.5,
+        "reliability": 0.417,
+        "last_seen": "2026-07-10"
       }
     },
     "preferred_style": "swing",
@@ -366,7 +378,7 @@
     "atr_stop_hits": 0,
     "atr_target_hits": 0,
     "atr_multiplier": 1.5,
-    "last_updated": "2026-07-09"
+    "last_updated": "2026-07-10"
   },
   "ABCAPITAL.NS": {
     "reliable_patterns": {
@@ -586,5 +598,89 @@
     "atr_target_hits": 0,
     "atr_multiplier": 1.5,
     "last_updated": "2026-07-09"
+  },
+  "MARICO.NS": {
+    "reliable_patterns": {
+      "near_52w_high": {
+        "wins": 0.5,
+        "losses": 0.0,
+        "reliability": 0.583,
+        "last_seen": "2026-07-10"
+      },
+      "full_bullish_alignment": {
+        "wins": 0.5,
+        "losses": 0.0,
+        "reliability": 0.583,
+        "last_seen": "2026-07-10"
+      },
+      "adx_strong_trend_up": {
+        "wins": 0.5,
+        "losses": 0.0,
+        "reliability": 0.583,
+        "last_seen": "2026-07-10"
+      },
+      "stoch_rsi_overbought_reversal": {
+        "wins": 0.5,
+        "losses": 0.0,
+        "reliability": 0.583,
+        "last_seen": "2026-07-10"
+      },
+      "bb_upper_rejection": {
+        "wins": 0.5,
+        "losses": 0.0,
+        "reliability": 0.583,
+        "last_seen": "2026-07-10"
+      },
+      "pivot_s1_breakdown": {
+        "wins": 0.5,
+        "losses": 0.0,
+        "reliability": 0.583,
+        "last_seen": "2026-07-10"
+      }
+    },
+    "preferred_style": "swing",
+    "swing_wins": 0,
+    "swing_losses": 0,
+    "intraday_wins": 0,
+    "intraday_losses": 0,
+    "long_term_wins": 0,
+    "long_term_losses": 0,
+    "atr_stop_hits": 0,
+    "atr_target_hits": 0,
+    "atr_multiplier": 1.5,
+    "last_updated": "2026-07-10"
+  },
+  "BAJFINANCE.NS": {
+    "reliable_patterns": {
+      "rsi_bearish_divergence": {
+        "wins": 0.0,
+        "losses": 0.5,
+        "reliability": 0.417,
+        "last_seen": "2026-07-10"
+      },
+      "adx_strong_trend_up": {
+        "wins": 0.0,
+        "losses": 0.5,
+        "reliability": 0.417,
+        "last_seen": "2026-07-10"
+      },
+      "full_bullish_alignment": {
+        "wins": 0.0,
+        "losses": 0.5,
+        "reliability": 0.417,
+        "last_seen": "2026-07-10"
+      }
+    },
+    "preferred_style": "swing",
+    "swing_wins": 0,
+    "swing_losses": 0,
+    "intraday_wins": 0,
+    "intraday_losses": 0,
+    "long_term_wins": 0,
+    "long_term_losses": 0,
+    "atr_stop_hits": 0,
+    "atr_target_hits": 0,
+    "atr_multiplier": 1.5,
+    "last_updated": "2026-07-10"
   }
 }

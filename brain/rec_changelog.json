@@ -758,5 +758,35 @@
     "ts": "2026-07-10T04:05:55.329999",
     "detail": "Confidence \u25bc6 (72 \u2192 66)",
     "confidence": 65.5
+  },
+  {
+    "type": "new",
+    "ticker": "FEDERALBNK.NS",
+    "nse_code": "FEDERALBNK",
+    "signal": "BUY",
+    "date": "2026-07-10",
+    "ts": "2026-07-10T06:15:58.330762",
+    "detail": "New BUY recommendation \u2014 confidence 66/100",
+    "confidence": 65.6
+  },
+  {
+    "type": "removed",
+    "ticker": "NESTLEIND.NS",
+    "nse_code": "NESTLEIND",
+    "signal": "BUY",
+    "date": "2026-07-10",
+    "ts": "2026-07-10T06:15:58.330762",
+    "detail": "Dropped \u2014 no longer meets threshold (was 77/100)",
+    "confidence": 0
+  },
+  {
+    "type": "removed",
+    "ticker": "MARICO.NS",
+    "nse_code": "MARICO",
+    "signal": "BUY",
+    "date": "2026-07-10",
+    "ts": "2026-07-10T06:15:58.330762",
+    "detail": "Dropped \u2014 no longer meets threshold (was 66/100)",
+    "confidence": 0
   }
 ]

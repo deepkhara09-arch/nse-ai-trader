@@ -4,9 +4,9 @@
     "nse_code": "BAJFINANCE",
     "company_name": "Bajaj Finance Ltd",
     "date": "2026-07-10",
-    "generated_at": "2026-07-10 07:45 UTC",
-    "valid_until": "15:15 IST",
-    "session": "afternoon",
+    "generated_at": "2026-07-10 09:45 UTC",
+    "valid_until": "15:40 IST",
+    "session": "intraday_close",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -100,14 +100,14 @@
       "History backtest: this kind of BUY setup worked 51% of the time over ~1 week on this stock (sample: 55)"
     ],
     "patterns_seen": [
-      "pivot_point_test",
-      "piercing_line",
-      "supertrend_bullish",
-      "spinning_top",
-      "adx_strong_trend_up",
       "stoch_rsi_oversold_reversal",
+      "spinning_top",
       "full_bullish_alignment",
-      "gap_down_reversal"
+      "gap_down_reversal",
+      "supertrend_bullish",
+      "adx_strong_trend_up",
+      "piercing_line",
+      "pivot_point_test"
     ],
     "reliable_patterns": [],
     "nearest_support": 975.16,
@@ -136,7 +136,6 @@
     "market_mood": "bearish",
     "market_warning": [
       "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
-      "Nifty choppy intraday \u2014 wait for cleaner setups",
       "Global macro risk-off (-0.49) \u2014 Overall macro mood is risk-off (-0.49). US Dow +0.3% overnight. Crude -2.0%. USD/INR -0.5%. Notable: US Fed rate hike / "
     ]
   },
@@ -145,9 +144,9 @@
     "nse_code": "UNIONBANK",
     "company_name": "UNIONBANK.NS",
     "date": "2026-07-10",
-    "generated_at": "2026-07-10 07:45 UTC",
-    "valid_until": "15:15 IST",
-    "session": "afternoon",
+    "generated_at": "2026-07-10 09:45 UTC",
+    "valid_until": "15:40 IST",
+    "session": "intraday_close",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -211,8 +210,8 @@
     "reasons": [
       "RSI=14 oversold \u2014 reversal watch",
       "Near lower Bollinger Band",
-      "Candlestick: morning star",
       "Candlestick: engulfing bullish",
+      "Candlestick: morning star",
       "Sector headwind (momentum=-0.33)",
       "Supertrend bullish \u2014 price above trend band",
       "Testing pivot point \u2014 decision zone",
@@ -237,14 +236,14 @@
       "History backtest: this kind of BUY setup worked 53% of the time over ~1 week on this stock (sample: 53)"
     ],
     "patterns_seen": [
-      "strong_bullish_marubozu",
-      "pivot_point_test",
-      "morning_star",
-      "supertrend_bullish",
       "stoch_rsi_oversold_reversal",
+      "strong_bullish_marubozu",
+      "supertrend_bullish",
       "full_bearish_alignment",
+      "bb_lower_bounce",
       "engulfing_bullish",
-      "bb_lower_bounce"
+      "pivot_point_test",
+      "morning_star"
     ],
     "reliable_patterns": [],
     "nearest_support": 159.91,
@@ -273,7 +272,6 @@
     "market_mood": "bearish",
     "market_warning": [
       "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
-      "Nifty choppy intraday \u2014 wait for cleaner setups",
       "Global macro risk-off (-0.49) \u2014 Overall macro mood is risk-off (-0.49). US Dow +0.3% overnight. Crude -2.0%. USD/INR -0.5%. Notable: US Fed rate hike / "
     ]
   }

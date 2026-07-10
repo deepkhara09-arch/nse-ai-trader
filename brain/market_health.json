@@ -1,6 +1,6 @@
 {
   "date": "2026-07-10",
-  "session": "afternoon",
+  "session": "intraday_close",
   "nifty": {
     "symbol": "^NSEI",
     "value": 23962.8,
@@ -62,7 +62,6 @@
   "trade_allowed": true,
   "warnings": [
     "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
-    "Nifty choppy intraday \u2014 wait for cleaner setups",
     "Global macro risk-off (-0.49) \u2014 Overall macro mood is risk-off (-0.49). US Dow +0.3% overnight. Crude -2.0%. USD/INR -0.5%. Notable: US Fed rate hike / "
   ],
   "leading_sectors": [],
@@ -72,7 +71,7 @@
     "Bank",
     "Infra"
   ],
-  "intraday_regime": "choppy",
+  "intraday_regime": "mixed",
   "macro": {
     "date": "2026-07-10",
     "session": "midday",

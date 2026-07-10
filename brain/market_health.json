@@ -63,7 +63,7 @@
   "warnings": [
     "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
     "Nifty choppy intraday \u2014 wait for cleaner setups",
-    "Global macro risk-off (-0.47) \u2014 Overall macro mood is risk-off (-0.47). US Dow +0.3% overnight. Crude -2.0%. USD/INR -0.6%. Notable: US Fed rate hike / "
+    "Global macro risk-off (-0.49) \u2014 Overall macro mood is risk-off (-0.49). US Dow +0.3% overnight. Crude -2.0%. USD/INR -0.5%. Notable: US Fed rate hike / "
   ],
   "leading_sectors": [],
   "market_regime": "normal",
@@ -76,20 +76,20 @@
   "macro": {
     "date": "2026-07-10",
     "session": "midday",
-    "generated_at": "2026-07-10T06:15:49.073401",
-    "global_score": -0.044,
+    "generated_at": "2026-07-10T07:01:24.251154",
+    "global_score": -0.078,
     "india_score": -1.0,
-    "overall_score": -0.474,
+    "overall_score": -0.493,
     "mood": "risk_off",
     "drivers": [
+      "Bidding war breaks out for easyJet as Apollo tops rival private-equity group\u2019s bid",
       "SK Hynix raises $26.5 billion in U.S. offering. What to know about the stock.",
       "Taco Bell is reportedly pulling produce from some stores. Here\u2019s what to know.",
       "Why a hidden divergence between the VIX and Nasdaq volatility has the smart money on edge",
       "\u2018I\u2019ve no idea how they got her number\u2019: My student-loan servicer called a friend after I missed a payment. Is that legal?",
       "Can Walmart help the Fed harness real-time U.S. economic data? We\u2019re about to find out.",
       "A junior employee saved this company six figures using AI. Here\u2019s how.",
-      "The dot-com crash was a $5 trillion blip. Why the next financial crisis could hit 4 times harder.",
-      "\u2018The money would have been life-changing\u2019: My father told my grandmother to slash my inheritance. Is that fair?"
+      "The dot-com crash was a $5 trillion blip. Why the next financial crisis could hit 4 times harder."
     ],
     "global_cues": {
       "dow": {
@@ -105,23 +105,23 @@
         "chg_pct": 0.81
       },
       "nikkei": {
-        "last": 68701.98,
-        "chg_pct": 1.41
+        "last": 68557.73,
+        "chg_pct": 1.2
       },
       "crude": {
         "last": 72.08,
         "chg_pct": -1.96
       },
       "usdinr": {
-        "last": 95.31,
-        "chg_pct": -0.58
+        "last": 95.39,
+        "chg_pct": -0.5
       },
       "gold": {
         "last": 4130.6,
         "chg_pct": 1.47
       }
     },
-    "summary": "Overall macro mood is risk-off (-0.47). US Dow +0.3% overnight. Crude -2.0%. USD/INR -0.6%. Notable: US Fed rate hike / hawkish; Geopolitical conflict / war; Tariffs / trade war.",
+    "summary": "Overall macro mood is risk-off (-0.49). US Dow +0.3% overnight. Crude -2.0%. USD/INR -0.5%. Notable: US Fed rate hike / hawkish; Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
       "Hawkish Fed pressures Nifty via FII outflows and stronger USD.",
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",

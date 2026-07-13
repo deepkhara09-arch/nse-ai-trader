@@ -968,5 +968,55 @@
     "ts": "2026-07-13T07:45:56.977640",
     "detail": "Target 1 moved \u20b91469.90 \u2192 \u20b91482.84",
     "confidence": 67.1
+  },
+  {
+    "type": "new",
+    "ticker": "NESTLEIND.NS",
+    "nse_code": "NESTLEIND",
+    "signal": "BUY",
+    "date": "2026-07-13",
+    "ts": "2026-07-13T10:13:31.979396",
+    "detail": "New BUY recommendation \u2014 confidence 71/100",
+    "confidence": 71.4
+  },
+  {
+    "type": "new",
+    "ticker": "FEDERALBNK.NS",
+    "nse_code": "FEDERALBNK",
+    "signal": "BUY",
+    "date": "2026-07-13",
+    "ts": "2026-07-13T10:13:31.979396",
+    "detail": "New BUY recommendation \u2014 confidence 70/100",
+    "confidence": 70.0
+  },
+  {
+    "type": "updated",
+    "ticker": "ICICIBANK.NS",
+    "nse_code": "ICICIBANK",
+    "signal": "BUY",
+    "date": "2026-07-13",
+    "ts": "2026-07-13T10:13:31.979396",
+    "detail": "Confidence \u25b28 (67 \u2192 75) | Rank \u25bc1 (#6 \u2192 #7) | Stop loss moved \u20b91364.88 \u2192 \u20b91376.40",
+    "confidence": 75.0
+  },
+  {
+    "type": "updated",
+    "ticker": "BAJFINANCE.NS",
+    "nse_code": "BAJFINANCE",
+    "signal": "BUY",
+    "date": "2026-07-13",
+    "ts": "2026-07-13T10:13:31.979396",
+    "detail": "Confidence \u25b23 (67 \u2192 70) | Rank \u25bc1 (#8 \u2192 #9) | Stop loss moved \u20b9981.86 \u2192 \u20b9995.53 | Target 1 moved \u20b91093.58 \u2192 \u20b91084.67",
+    "confidence": 70.3
+  },
+  {
+    "type": "updated",
+    "ticker": "UNIONBANK.NS",
+    "nse_code": "UNIONBANK",
+    "signal": "BUY",
+    "date": "2026-07-13",
+    "ts": "2026-07-13T10:13:31.979396",
+    "detail": "Rank \u25bc1 (#1 \u2192 #2) | Stop loss moved \u20b9162.13 \u2192 \u20b9163.19 | Target 1 moved \u20b9181.30 \u2192 \u20b9184.99",
+    "confidence": 65.1
   }
 ]

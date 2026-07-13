@@ -682,5 +682,95 @@
     "atr_target_hits": 0,
     "atr_multiplier": 1.5,
     "last_updated": "2026-07-10"
+  },
+  "HOMEFIRST.NS": {
+    "reliable_patterns": {
+      "pivot_point_test": {
+        "wins": 0.5,
+        "losses": 0.0,
+        "reliability": 0.583,
+        "last_seen": "2026-07-13"
+      },
+      "spinning_top": {
+        "wins": 0.5,
+        "losses": 0.0,
+        "reliability": 0.583,
+        "last_seen": "2026-07-13"
+      },
+      "rsi_bearish_divergence": {
+        "wins": 0.5,
+        "losses": 0.0,
+        "reliability": 0.583,
+        "last_seen": "2026-07-13"
+      },
+      "full_bullish_alignment": {
+        "wins": 0.5,
+        "losses": 0.0,
+        "reliability": 0.583,
+        "last_seen": "2026-07-13"
+      }
+    },
+    "preferred_style": "swing",
+    "swing_wins": 0,
+    "swing_losses": 0,
+    "intraday_wins": 0,
+    "intraday_losses": 0,
+    "long_term_wins": 0,
+    "long_term_losses": 0,
+    "atr_stop_hits": 0,
+    "atr_target_hits": 0,
+    "atr_multiplier": 1.5,
+    "last_updated": "2026-07-13"
+  },
+  "NESTLEIND.NS": {
+    "reliable_patterns": {
+      "outside_bar": {
+        "wins": 0.0,
+        "losses": 0.5,
+        "reliability": 0.417,
+        "last_seen": "2026-07-13"
+      },
+      "tweezer_bottom": {
+        "wins": 0.0,
+        "losses": 0.5,
+        "reliability": 0.417,
+        "last_seen": "2026-07-13"
+      },
+      "near_52w_high": {
+        "wins": 0.0,
+        "losses": 0.5,
+        "reliability": 0.417,
+        "last_seen": "2026-07-13"
+      },
+      "bb_upper_rejection": {
+        "wins": 0.0,
+        "losses": 0.5,
+        "reliability": 0.417,
+        "last_seen": "2026-07-13"
+      },
+      "supertrend_bullish": {
+        "wins": 0.0,
+        "losses": 0.5,
+        "reliability": 0.417,
+        "last_seen": "2026-07-13"
+      },
+      "full_bullish_alignment": {
+        "wins": 0.0,
+        "losses": 0.5,
+        "reliability": 0.417,
+        "last_seen": "2026-07-13"
+      }
+    },
+    "preferred_style": "swing",
+    "swing_wins": 0,
+    "swing_losses": 0,
+    "intraday_wins": 0,
+    "intraday_losses": 0,
+    "long_term_wins": 0,
+    "long_term_losses": 0,
+    "atr_stop_hits": 0,
+    "atr_target_hits": 0,
+    "atr_multiplier": 1.5,
+    "last_updated": "2026-07-13"
   }
 }

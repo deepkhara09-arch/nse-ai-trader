@@ -3,10 +3,10 @@
     "ticker": "NESTLEIND.NS",
     "nse_code": "NESTLEIND",
     "company_name": "Nestle India Ltd",
-    "date": "2026-07-10",
-    "generated_at": "2026-07-10 10:12 UTC",
+    "date": "2026-07-13",
+    "generated_at": "2026-07-13 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -45,7 +45,7 @@
     "profit_probability": 0.908,
     "composite_score": 73.13,
     "focus_rank": 1,
-    "rank_delta": 1,
+    "rank_delta": 0,
     "intention": "BUY NESTLEIND for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
     "confluence_count": 7,
     "confluence_families": [
@@ -75,8 +75,8 @@
       "All EMAs stacked bullish",
       "MACD histogram positive",
       "Positive news sentiment (0.56)",
-      "Candlestick: bullish harami",
       "Candlestick: inverted hammer",
+      "Candlestick: bullish harami",
       "Supertrend bullish \u2014 price above trend band",
       "Testing pivot point \u2014 decision zone",
       "StochRSI oversold with bullish candle \u2014 reversal",
@@ -85,7 +85,6 @@
       "Near 52-week high (96% of range) \u2014 breakout zone",
       "Clean trender aligned with its long-term uptrend",
       "\u2713 Daily setup aligned with the higher-timeframe trend",
-      "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
       "Valuation: P/E 81.4x",
       "ROE: 76.3%",
       "ROCE: 94.7%",
@@ -105,12 +104,12 @@
       "History backtest: this kind of BUY setup worked 47% of the time over ~1 week on this stock (sample: 53)"
     ],
     "patterns_seen": [
-      "bullish_harami",
-      "supertrend_bullish",
-      "full_bullish_alignment",
       "inverted_hammer",
       "stoch_rsi_oversold_reversal",
-      "pivot_point_test"
+      "supertrend_bullish",
+      "bullish_harami",
+      "pivot_point_test",
+      "full_bullish_alignment"
     ],
     "reliable_patterns": [],
     "nearest_support": 1397.87,
@@ -136,20 +135,19 @@
     "paper_win_rate": 0,
     "paper_pnl": 0,
     "paper_expectancy": 0,
-    "market_mood": "bearish",
+    "market_mood": "neutral",
     "market_warning": [
-      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
-      "Global macro risk-off (-0.49) \u2014 Overall macro mood is risk-off (-0.49). US Dow +0.3% overnight. Crude -2.0%. USD/INR -0.5%. Notable: US Fed rate hike / "
+      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals"
     ]
   },
   {
     "ticker": "BAJFINANCE.NS",
     "nse_code": "BAJFINANCE",
     "company_name": "Bajaj Finance Ltd",
-    "date": "2026-07-10",
-    "generated_at": "2026-07-10 10:12 UTC",
+    "date": "2026-07-13",
+    "generated_at": "2026-07-13 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -183,10 +181,10 @@
     "pattern_score": 1.0,
     "confluence_bonus": 7.5,
     "paper_bonus": 0.0,
-    "success_probability": 0.513,
-    "base_success_prob": 0.515,
-    "profit_probability": 0.545,
-    "composite_score": 55.06,
+    "success_probability": 0.517,
+    "base_success_prob": 0.52,
+    "profit_probability": 0.56,
+    "composite_score": 55.76,
     "focus_rank": 7,
     "rank_delta": 0,
     "intention": "BUY BAJFINANCE for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
@@ -209,7 +207,7 @@
     "data_confidence": "Estimated",
     "data_confidence_key": "estimated",
     "data_confidence_note": "Only 0 paper trade(s) \u2014 probability is an indicator-based estimate, not yet proven",
-    "expected_edge_r": 0.545,
+    "expected_edge_r": 0.56,
     "buy_score": 15.3,
     "sell_score": 0.5,
     "reasons": [
@@ -226,7 +224,6 @@
       "High delivery 67% \u2014 strong institutional accumulation",
       "In a long-term uptrend (2yr) \u2014 trend on our side",
       "\u2713 Daily setup aligned with the higher-timeframe trend",
-      "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
       "Valuation: P/E 33.7x",
       "ROE: 17.9%",
       "ROCE: 5.5%",
@@ -245,14 +242,14 @@
       "History backtest: this kind of BUY setup worked 51% of the time over ~1 week on this stock (sample: 55)"
     ],
     "patterns_seen": [
-      "supertrend_bullish",
-      "full_bullish_alignment",
       "stoch_rsi_oversold_reversal",
+      "supertrend_bullish",
+      "adx_strong_trend_up",
       "spinning_top",
+      "gap_down_reversal",
       "piercing_line",
       "pivot_point_test",
-      "adx_strong_trend_up",
-      "gap_down_reversal"
+      "full_bullish_alignment"
     ],
     "reliable_patterns": [],
     "nearest_support": 1003.56,
@@ -278,20 +275,19 @@
     "paper_win_rate": 0,
     "paper_pnl": 0,
     "paper_expectancy": 0,
-    "market_mood": "bearish",
+    "market_mood": "neutral",
     "market_warning": [
-      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
-      "Global macro risk-off (-0.49) \u2014 Overall macro mood is risk-off (-0.49). US Dow +0.3% overnight. Crude -2.0%. USD/INR -0.5%. Notable: US Fed rate hike / "
+      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals"
     ]
   },
   {
     "ticker": "ICICIBANK.NS",
     "nse_code": "ICICIBANK",
     "company_name": "ICICI Bank Ltd",
-    "date": "2026-07-10",
-    "generated_at": "2026-07-10 10:12 UTC",
+    "date": "2026-07-13",
+    "generated_at": "2026-07-13 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -330,7 +326,7 @@
     "profit_probability": 0.701,
     "composite_score": 63.53,
     "focus_rank": 2,
-    "rank_delta": -1,
+    "rank_delta": 0,
     "intention": "BUY ICICIBANK for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
     "confluence_count": 5,
     "confluence_families": [
@@ -365,7 +361,6 @@
       "Delivery 49% above avg \u2014 institutional buying",
       "In a long-term uptrend (2yr) \u2014 trend on our side",
       "\u2713 Daily setup aligned with the higher-timeframe trend",
-      "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
       "Valuation: P/E 19.1x",
       "ROE: 16.4%",
       "ROCE: 12.4%",
@@ -384,14 +379,14 @@
       "History backtest: this kind of BUY setup worked 50% of the time over ~1 week on this stock (sample: 50)"
     ],
     "patterns_seen": [
-      "doji",
-      "macd_bearish_crossover",
-      "tweezer_bottom",
-      "supertrend_bullish",
-      "full_bullish_alignment",
-      "stoch_rsi_oversold_reversal",
       "inside_bar",
-      "adx_strong_trend_up"
+      "stoch_rsi_oversold_reversal",
+      "supertrend_bullish",
+      "adx_strong_trend_up",
+      "tweezer_bottom",
+      "macd_bearish_crossover",
+      "doji",
+      "full_bullish_alignment"
     ],
     "reliable_patterns": [],
     "nearest_support": 1374.4,
@@ -417,20 +412,19 @@
     "paper_win_rate": 0,
     "paper_pnl": 0,
     "paper_expectancy": 0,
-    "market_mood": "bearish",
+    "market_mood": "neutral",
     "market_warning": [
-      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
-      "Global macro risk-off (-0.49) \u2014 Overall macro mood is risk-off (-0.49). US Dow +0.3% overnight. Crude -2.0%. USD/INR -0.5%. Notable: US Fed rate hike / "
+      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals"
     ]
   },
   {
     "ticker": "FEDERALBNK.NS",
     "nse_code": "FEDERALBNK",
     "company_name": "FEDERALBNK.NS",
-    "date": "2026-07-10",
-    "generated_at": "2026-07-10 10:12 UTC",
+    "date": "2026-07-13",
+    "generated_at": "2026-07-13 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -505,7 +499,6 @@
       "In a long-term strong uptrend (2yr) \u2014 trend on our side",
       "Near 52-week high (98% of range) \u2014 breakout zone",
       "\u2713 Daily setup aligned with the higher-timeframe trend",
-      "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
       "Valuation: P/E 18.9x",
       "ROE: 11.7%",
       "ROCE: 8.6%",
@@ -523,12 +516,12 @@
       "History backtest: this kind of BUY setup worked 59% of the time over ~1 week on this stock (sample: 63)"
     ],
     "patterns_seen": [
-      "supertrend_bullish",
-      "full_bullish_alignment",
       "inverted_hammer",
       "stoch_rsi_oversold_reversal",
+      "supertrend_bullish",
       "adx_strong_trend_up",
-      "near_52w_high"
+      "near_52w_high",
+      "full_bullish_alignment"
     ],
     "reliable_patterns": [],
     "nearest_support": 323.38,
@@ -554,20 +547,19 @@
     "paper_win_rate": 0,
     "paper_pnl": 0,
     "paper_expectancy": 0,
-    "market_mood": "bearish",
+    "market_mood": "neutral",
     "market_warning": [
-      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
-      "Global macro risk-off (-0.49) \u2014 Overall macro mood is risk-off (-0.49). US Dow +0.3% overnight. Crude -2.0%. USD/INR -0.5%. Notable: US Fed rate hike / "
+      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals"
     ]
   },
   {
     "ticker": "MARICO.NS",
     "nse_code": "MARICO",
     "company_name": "Marico Ltd",
-    "date": "2026-07-10",
-    "generated_at": "2026-07-10 10:12 UTC",
+    "date": "2026-07-13",
+    "generated_at": "2026-07-13 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -601,12 +593,12 @@
     "pattern_score": 2.0,
     "confluence_bonus": 10,
     "paper_bonus": 0.0,
-    "success_probability": 0.526,
+    "success_probability": 0.529,
     "base_success_prob": 0.534,
     "profit_probability": 0.602,
     "composite_score": 57.96,
     "focus_rank": 5,
-    "rank_delta": -2,
+    "rank_delta": 0,
     "intention": "BUY MARICO for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
     "confluence_count": 6,
     "confluence_families": [
@@ -618,9 +610,9 @@
       "regime"
     ],
     "backtest_tested": true,
-    "backtest_hit_5d": 0.509,
-    "backtest_hit_10d": 0.579,
-    "backtest_sample": 57,
+    "backtest_hit_5d": 0.517,
+    "backtest_hit_10d": 0.586,
+    "backtest_sample": 58,
     "hist_long_trend": "strong_uptrend",
     "hist_52w_position": 100.0,
     "hist_personality": "mean_reverter",
@@ -641,7 +633,6 @@
       "In a long-term strong uptrend (2yr) \u2014 trend on our side",
       "Near 52-week high (100% of range) \u2014 breakout zone",
       "\u2713 Daily setup aligned with the higher-timeframe trend",
-      "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
       "Valuation: P/E 61.7x",
       "ROE: 41.4%",
       "ROCE: 39.2%",
@@ -657,14 +648,14 @@
       "Resistance at \u20b9870.00 is natural target",
       "Latest news: 'Buy Marico; target of Rs 1000: Motilal Oswal - Moneycontrol.com'",
       "Confluence: 6 independent signal families agree (trend, momentum, volume, pattern, news, regime)",
-      "History backtest: this kind of BUY setup worked 51% of the time over ~1 week on this stock (sample: 57)"
+      "History backtest: this kind of BUY setup worked 52% of the time over ~1 week on this stock (sample: 58)"
     ],
     "patterns_seen": [
       "rsi_bearish_divergence",
       "supertrend_bullish",
-      "full_bullish_alignment",
       "adx_strong_trend_up",
-      "bb_upper_rejection"
+      "bb_upper_rejection",
+      "full_bullish_alignment"
     ],
     "reliable_patterns": [],
     "nearest_support": 837.4,
@@ -690,10 +681,9 @@
     "paper_win_rate": 0,
     "paper_pnl": 0,
     "paper_expectancy": 0,
-    "market_mood": "bearish",
+    "market_mood": "neutral",
     "market_warning": [
-      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
-      "Global macro risk-off (-0.49) \u2014 Overall macro mood is risk-off (-0.49). US Dow +0.3% overnight. Crude -2.0%. USD/INR -0.5%. Notable: US Fed rate hike / "
+      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals"
     ]
   }
 ]

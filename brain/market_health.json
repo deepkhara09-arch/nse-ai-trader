@@ -1,6 +1,6 @@
 {
   "date": "2026-07-13",
-  "session": "preopen",
+  "session": "morning",
   "nifty": {
     "symbol": "^NSEI",
     "value": 24206.9,
@@ -58,10 +58,11 @@
       "ath_pct_60d": -2.12
     }
   },
-  "market_mood": "neutral",
+  "market_mood": "bearish",
   "trade_allowed": true,
   "warnings": [
-    "Nifty in downtrend (down) \u2014 only high-confidence BUY signals"
+    "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
+    "Nifty choppy intraday \u2014 wait for cleaner setups"
   ],
   "leading_sectors": [
     "IT"
@@ -71,6 +72,7 @@
   "lagging_sectors": [
     "Infra"
   ],
+  "intraday_regime": "choppy",
   "macro": {
     "date": "2026-07-13",
     "session": "preopen",

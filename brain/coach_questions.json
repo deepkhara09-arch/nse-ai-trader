@@ -1,35 +1,5 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of engulfing_bullish, outside_bar, stoch_rsi_oversold_reversal mean for a swing trade on HOMEFIRST? Current RSI=59, MACD hist=+2.4528, Vol=0.5x average. Signal is BUY.",
-    "context": {
-      "ticker": "HOMEFIRST.NS",
-      "signal": "BUY",
-      "patterns": "engulfing_bullish, outside_bar, stoch_rsi_oversold_reversal",
-      "rsi": 59.3
-    },
-    "queued_at": "2026-07-13T03:05:44.984859"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of inverted_hammer, stoch_rsi_oversold_reversal, supertrend_bullish mean for a swing trade on NESTLEIND? Current RSI=62, MACD hist=+6.3272, Vol=0.7x average. Signal is BUY.",
-    "context": {
-      "ticker": "NESTLEIND.NS",
-      "signal": "BUY",
-      "patterns": "inverted_hammer, stoch_rsi_oversold_reversal, supertrend_bullish",
-      "rsi": 61.8
-    },
-    "queued_at": "2026-07-13T03:05:44.985436"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of inside_bar, stoch_rsi_oversold_reversal, tweezer_bottom mean for a swing trade on ICICIBANK? Current RSI=60, MACD hist=-1.3291, Vol=1.1x average. Signal is BUY.",
-    "context": {
-      "ticker": "ICICIBANK.NS",
-      "signal": "BUY",
-      "patterns": "inside_bar, stoch_rsi_oversold_reversal, tweezer_bottom",
-      "rsi": 59.5
-    },
-    "queued_at": "2026-07-13T03:05:44.988918"
-  },
-  {
     "question": "In Indian NSE markets, what does the combination of stoch_rsi_oversold_reversal, supertrend_bullish, spinning_top mean for a swing trade on BAJFINANCE? Current RSI=65, MACD hist=+2.0062, Vol=1.3x average. Signal is BUY.",
     "context": {
       "ticker": "BAJFINANCE.NS",
@@ -98,5 +68,35 @@
       "rsi": 52.8
     },
     "queued_at": "2026-07-13T03:05:44.998389"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of rsi_bearish_divergence, engulfing_bearish mean for a swing trade on RECLTD? Current RSI=29, MACD hist=-2.1770, Vol=0.7x average. Signal is SELL.",
+    "context": {
+      "ticker": "RECLTD.NS",
+      "signal": "SELL",
+      "patterns": "rsi_bearish_divergence, engulfing_bearish",
+      "rsi": 29.2
+    },
+    "queued_at": "2026-07-13T04:05:51.458253"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of strong_bullish_marubozu, pivot_r1_breakout, pivot_r2_breakout mean for a swing trade on UNIONBANK? Current RSI=39, MACD hist=-1.1605, Vol=1.7x average. Signal is BUY.",
+    "context": {
+      "ticker": "UNIONBANK.NS",
+      "signal": "BUY",
+      "patterns": "strong_bullish_marubozu, pivot_r1_breakout, pivot_r2_breakout",
+      "rsi": 39.0
+    },
+    "queued_at": "2026-07-13T04:05:51.460652"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of pivot_point_test, doji, pivot_s1_breakdown mean for a swing trade on PFC? Current RSI=24, MACD hist=-2.6192, Vol=0.6x average. Signal is SELL.",
+    "context": {
+      "ticker": "PFC.NS",
+      "signal": "SELL",
+      "patterns": "pivot_point_test, doji, pivot_s1_breakdown",
+      "rsi": 23.7
+    },
+    "queued_at": "2026-07-13T04:05:51.464591"
   }
 ]

@@ -1,13 +1,13 @@
 {
   "phase": "analysis",
   "day": 15,
-  "session": "afternoon",
+  "session": "intraday_close",
   "start_date": "2026-06-22",
   "phase_start_date": "2026-07-01",
   "last_run_date": "2026-07-10",
   "last_counted_date": "2026-07-10",
   "cohort_last_tick_date": "2026-07-10",
-  "last_updated": "2026-07-13T07:45:56.901049",
+  "last_updated": "2026-07-13T09:45:38.042043",
   "focus_stocks": [
     "MARICO.NS",
     "RECLTD.NS",
@@ -291,6 +291,7 @@
     "preopen": "2026-07-13",
     "morning": "2026-07-13",
     "midday": "2026-07-13",
-    "afternoon": "2026-07-13"
+    "afternoon": "2026-07-13",
+    "intraday_close": "2026-07-13"
   }
 }

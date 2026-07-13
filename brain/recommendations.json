@@ -4,9 +4,9 @@
     "nse_code": "BAJFINANCE",
     "company_name": "Bajaj Finance Ltd",
     "date": "2026-07-13",
-    "generated_at": "2026-07-13 07:45 UTC",
-    "valid_until": "15:15 IST",
-    "session": "afternoon",
+    "generated_at": "2026-07-13 09:45 UTC",
+    "valid_until": "15:40 IST",
+    "session": "intraday_close",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -99,11 +99,11 @@
     ],
     "patterns_seen": [
       "rsi_bearish_divergence",
-      "stoch_rsi_oversold_reversal",
-      "adx_strong_trend_up",
       "morning_star",
-      "supertrend_bullish",
-      "full_bullish_alignment"
+      "adx_strong_trend_up",
+      "stoch_rsi_oversold_reversal",
+      "full_bullish_alignment",
+      "supertrend_bullish"
     ],
     "reliable_patterns": [],
     "nearest_support": 975.16,
@@ -139,9 +139,9 @@
     "nse_code": "ICICIBANK",
     "company_name": "ICICI Bank Ltd",
     "date": "2026-07-13",
-    "generated_at": "2026-07-13 07:45 UTC",
-    "valid_until": "15:15 IST",
-    "session": "afternoon",
+    "generated_at": "2026-07-13 09:45 UTC",
+    "valid_until": "15:40 IST",
+    "session": "intraday_close",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -230,11 +230,11 @@
       "History backtest: this kind of BUY setup worked 50% of the time over ~1 week on this stock (sample: 50)"
     ],
     "patterns_seen": [
-      "stoch_rsi_oversold_reversal",
-      "adx_strong_trend_up",
       "morning_star",
-      "supertrend_bullish",
-      "full_bullish_alignment"
+      "adx_strong_trend_up",
+      "stoch_rsi_oversold_reversal",
+      "full_bullish_alignment",
+      "supertrend_bullish"
     ],
     "reliable_patterns": [],
     "nearest_support": 1374.4,
@@ -270,9 +270,9 @@
     "nse_code": "UNIONBANK",
     "company_name": "UNIONBANK.NS",
     "date": "2026-07-13",
-    "generated_at": "2026-07-13 07:45 UTC",
-    "valid_until": "15:15 IST",
-    "session": "afternoon",
+    "generated_at": "2026-07-13 09:45 UTC",
+    "valid_until": "15:40 IST",
+    "session": "intraday_close",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -361,11 +361,11 @@
       "History backtest: this kind of BUY setup worked 53% of the time over ~1 week on this stock (sample: 53)"
     ],
     "patterns_seen": [
+      "pivot_r2_breakout",
       "full_bearish_alignment",
       "strong_bullish_marubozu",
-      "pivot_r2_breakout",
-      "supertrend_bullish",
-      "pivot_r1_breakout"
+      "pivot_r1_breakout",
+      "supertrend_bullish"
     ],
     "reliable_patterns": [],
     "nearest_support": 163.44,

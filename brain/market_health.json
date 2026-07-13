@@ -1,6 +1,6 @@
 {
   "date": "2026-07-13",
-  "session": "morning",
+  "session": "midday",
   "nifty": {
     "symbol": "^NSEI",
     "value": 24206.9,
@@ -58,11 +58,10 @@
       "ath_pct_60d": -2.12
     }
   },
-  "market_mood": "bearish",
+  "market_mood": "neutral",
   "trade_allowed": true,
   "warnings": [
-    "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
-    "Nifty choppy intraday \u2014 wait for cleaner setups"
+    "Nifty in downtrend (down) \u2014 only high-confidence BUY signals"
   ],
   "leading_sectors": [
     "IT"
@@ -72,14 +71,14 @@
   "lagging_sectors": [
     "Infra"
   ],
-  "intraday_regime": "choppy",
+  "intraday_regime": "mixed",
   "macro": {
     "date": "2026-07-13",
-    "session": "preopen",
-    "generated_at": "2026-07-13T03:05:43.335433",
-    "global_score": 0.176,
+    "session": "midday",
+    "generated_at": "2026-07-13T06:15:43.636152",
+    "global_score": 0.242,
     "india_score": 0.0,
-    "overall_score": 0.097,
+    "overall_score": 0.133,
     "mood": "neutral",
     "drivers": [
       "Oil prices rise, stock futures dip after latest flare-up of strikes between U.S. and Iran",
@@ -105,23 +104,23 @@
         "chg_pct": 0.42
       },
       "nikkei": {
-        "last": 67786.86,
-        "chg_pct": -1.12
+        "last": 67331.89,
+        "chg_pct": -1.79
       },
       "crude": {
-        "last": 74.25,
-        "chg_pct": 3.98
+        "last": 71.41,
+        "chg_pct": -0.93
       },
       "usdinr": {
-        "last": 95.37,
-        "chg_pct": -0.02
+        "last": 95.79,
+        "chg_pct": 0.42
       },
       "gold": {
-        "last": 4079.9,
-        "chg_pct": -0.59
+        "last": 4104.1,
+        "chg_pct": -0.64
       }
     },
-    "summary": "Overall macro mood is neutral (+0.10). US Dow +0.3% overnight. Crude +4.0%. USD/INR -0.0%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
+    "summary": "Overall macro mood is neutral (+0.13). US Dow +0.3% overnight. Crude -0.9%. USD/INR +0.4%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
       "Trade-war headlines spook global markets; IT & export names react most."

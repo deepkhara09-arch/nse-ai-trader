@@ -3,10 +3,10 @@
     "ticker": "ICICIBANK.NS",
     "nse_code": "ICICIBANK",
     "company_name": "ICICI Bank Ltd",
-    "date": "2026-07-13",
-    "generated_at": "2026-07-13 10:13 UTC",
+    "date": "2026-07-14",
+    "generated_at": "2026-07-14 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -40,12 +40,12 @@
     "pattern_score": 2.0,
     "confluence_bonus": 7.5,
     "paper_bonus": 0.0,
-    "success_probability": 0.506,
+    "success_probability": 0.509,
     "base_success_prob": 0.508,
     "profit_probability": 0.524,
     "composite_score": 55.3,
     "focus_rank": 7,
-    "rank_delta": -1,
+    "rank_delta": 0,
     "intention": "BUY ICICIBANK for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
     "confluence_count": 5,
     "confluence_families": [
@@ -56,9 +56,9 @@
       "fundamentals"
     ],
     "backtest_tested": true,
-    "backtest_hit_5d": 0.5,
-    "backtest_hit_10d": 0.438,
-    "backtest_sample": 48,
+    "backtest_hit_5d": 0.51,
+    "backtest_hit_10d": 0.449,
+    "backtest_sample": 49,
     "hist_long_trend": "uptrend",
     "hist_52w_position": 76.7,
     "hist_personality": "choppy",
@@ -94,14 +94,14 @@
       "Resistance at \u20b91500.00 is natural target",
       "Latest news: 'ICICI Bank Share Price Today, ICICI Bank Stock Price Live NSE/BSE Upda'",
       "Confluence: 5 independent signal families agree (trend, volume, pattern, news, fundamentals)",
-      "History backtest: this kind of BUY setup worked 50% of the time over ~1 week on this stock (sample: 48)"
+      "History backtest: this kind of BUY setup worked 51% of the time over ~1 week on this stock (sample: 49)"
     ],
     "patterns_seen": [
-      "morning_star",
-      "adx_strong_trend_up",
       "stoch_rsi_oversold_reversal",
+      "supertrend_bullish",
       "full_bullish_alignment",
-      "supertrend_bullish"
+      "morning_star",
+      "adx_strong_trend_up"
     ],
     "reliable_patterns": [],
     "nearest_support": 1387.5,
@@ -129,17 +129,17 @@
     "paper_expectancy": 0,
     "market_mood": "neutral",
     "market_warning": [
-      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals"
+      "Net institutional outflow (\u20b9-891 Cr)"
     ]
   },
   {
     "ticker": "NESTLEIND.NS",
     "nse_code": "NESTLEIND",
     "company_name": "Nestle India Ltd",
-    "date": "2026-07-13",
-    "generated_at": "2026-07-13 10:13 UTC",
+    "date": "2026-07-14",
+    "generated_at": "2026-07-14 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -173,12 +173,12 @@
     "pattern_score": 1.0,
     "confluence_bonus": 10,
     "paper_bonus": 0.0,
-    "success_probability": 0.554,
-    "base_success_prob": 0.581,
-    "profit_probability": 0.743,
-    "composite_score": 65.4,
+    "success_probability": 0.549,
+    "base_success_prob": 0.578,
+    "profit_probability": 0.734,
+    "composite_score": 64.97,
     "focus_rank": 1,
-    "rank_delta": 1,
+    "rank_delta": 0,
     "intention": "BUY NESTLEIND for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
     "confluence_count": 7,
     "confluence_families": [
@@ -191,9 +191,9 @@
       "regime"
     ],
     "backtest_tested": true,
-    "backtest_hit_5d": 0.49,
-    "backtest_hit_10d": 0.451,
-    "backtest_sample": 51,
+    "backtest_hit_5d": 0.481,
+    "backtest_hit_10d": 0.442,
+    "backtest_sample": 52,
     "hist_long_trend": "strong_uptrend",
     "hist_52w_position": 93.6,
     "hist_personality": "trender",
@@ -201,7 +201,7 @@
     "data_confidence": "Estimated",
     "data_confidence_key": "estimated",
     "data_confidence_note": "Only 0 paper trade(s) \u2014 probability is an indicator-based estimate, not yet proven",
-    "expected_edge_r": 0.743,
+    "expected_edge_r": 0.734,
     "buy_score": 8.67,
     "sell_score": 4.5,
     "reasons": [
@@ -229,11 +229,11 @@
       "Resistance at \u20b91478.99 is natural target",
       "Latest news: 'NESTLEIND Outlook for the Week (July 13, 2026 \u2013 July 17, 2026) - Equit'",
       "Confluence: 7 independent signal families agree (trend, momentum, volume, pattern, news, fundamentals, regime)",
-      "History backtest: this kind of BUY setup worked 49% of the time over ~1 week on this stock (sample: 51)"
+      "History backtest: this kind of BUY setup worked 48% of the time over ~1 week on this stock (sample: 52)"
     ],
     "patterns_seen": [
-      "full_bullish_alignment",
       "engulfing_bearish",
+      "full_bullish_alignment",
       "pivot_s1_breakdown"
     ],
     "reliable_patterns": [],
@@ -262,17 +262,17 @@
     "paper_expectancy": 0,
     "market_mood": "neutral",
     "market_warning": [
-      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals"
+      "Net institutional outflow (\u20b9-891 Cr)"
     ]
   },
   {
     "ticker": "BAJFINANCE.NS",
     "nse_code": "BAJFINANCE",
     "company_name": "Bajaj Finance Ltd",
-    "date": "2026-07-13",
-    "generated_at": "2026-07-13 10:13 UTC",
+    "date": "2026-07-14",
+    "generated_at": "2026-07-14 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -306,12 +306,12 @@
     "pattern_score": 3.0,
     "confluence_bonus": 7.5,
     "paper_bonus": 0.0,
-    "success_probability": 0.512,
-    "base_success_prob": 0.505,
-    "profit_probability": 0.515,
-    "composite_score": 53.86,
-    "focus_rank": 9,
-    "rank_delta": -1,
+    "success_probability": 0.505,
+    "base_success_prob": 0.492,
+    "profit_probability": 0.476,
+    "composite_score": 52.1,
+    "focus_rank": 11,
+    "rank_delta": 0,
     "intention": "BUY BAJFINANCE for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
     "confluence_count": 5,
     "confluence_families": [
@@ -322,9 +322,9 @@
       "regime"
     ],
     "backtest_tested": true,
-    "backtest_hit_5d": 0.528,
-    "backtest_hit_10d": 0.585,
-    "backtest_sample": 53,
+    "backtest_hit_5d": 0.537,
+    "backtest_hit_10d": 0.593,
+    "backtest_sample": 54,
     "hist_long_trend": "uptrend",
     "hist_52w_position": 87.6,
     "hist_personality": "choppy",
@@ -332,7 +332,7 @@
     "data_confidence": "Estimated",
     "data_confidence_key": "estimated",
     "data_confidence_note": "Only 0 paper trade(s) \u2014 probability is an indicator-based estimate, not yet proven",
-    "expected_edge_r": 0.515,
+    "expected_edge_r": 0.476,
     "buy_score": 13.87,
     "sell_score": 2.5,
     "reasons": [
@@ -363,15 +363,15 @@
       "Resistance at \u20b91100.00 is natural target",
       "Latest news: 'Bajaj Finance stock stays supported by consumer lending growth - ad-ho'",
       "Confluence: 5 independent signal families agree (trend, momentum, volume, pattern, regime)",
-      "History backtest: this kind of BUY setup worked 53% of the time over ~1 week on this stock (sample: 53)"
+      "History backtest: this kind of BUY setup worked 54% of the time over ~1 week on this stock (sample: 54)"
     ],
     "patterns_seen": [
-      "morning_star",
-      "adx_strong_trend_up",
+      "rsi_bearish_divergence",
       "stoch_rsi_oversold_reversal",
-      "full_bullish_alignment",
       "supertrend_bullish",
-      "rsi_bearish_divergence"
+      "full_bullish_alignment",
+      "morning_star",
+      "adx_strong_trend_up"
     ],
     "reliable_patterns": [],
     "nearest_support": 1003.56,
@@ -399,17 +399,17 @@
     "paper_expectancy": 0,
     "market_mood": "neutral",
     "market_warning": [
-      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals"
+      "Net institutional outflow (\u20b9-891 Cr)"
     ]
   },
   {
     "ticker": "FEDERALBNK.NS",
     "nse_code": "FEDERALBNK",
     "company_name": "FEDERALBNK.NS",
-    "date": "2026-07-13",
-    "generated_at": "2026-07-13 10:13 UTC",
+    "date": "2026-07-14",
+    "generated_at": "2026-07-14 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -444,11 +444,11 @@
     "confluence_bonus": 7.5,
     "paper_bonus": 0.0,
     "success_probability": 0.55,
-    "base_success_prob": 0.532,
-    "profit_probability": 0.596,
-    "composite_score": 57.55,
+    "base_success_prob": 0.529,
+    "profit_probability": 0.587,
+    "composite_score": 57.11,
     "focus_rank": 6,
-    "rank_delta": 1,
+    "rank_delta": 0,
     "intention": "BUY FEDERALBNK for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
     "confluence_count": 5,
     "confluence_families": [
@@ -459,9 +459,9 @@
       "regime"
     ],
     "backtest_tested": true,
-    "backtest_hit_5d": 0.593,
-    "backtest_hit_10d": 0.576,
-    "backtest_sample": 59,
+    "backtest_hit_5d": 0.6,
+    "backtest_hit_10d": 0.583,
+    "backtest_sample": 60,
     "hist_long_trend": "strong_uptrend",
     "hist_52w_position": 98.8,
     "hist_personality": "choppy",
@@ -469,7 +469,7 @@
     "data_confidence": "Estimated",
     "data_confidence_key": "estimated",
     "data_confidence_note": "Only 0 paper trade(s) \u2014 probability is an indicator-based estimate, not yet proven",
-    "expected_edge_r": 0.596,
+    "expected_edge_r": 0.587,
     "buy_score": 10.9,
     "sell_score": 1,
     "reasons": [
@@ -497,16 +497,16 @@
       "Resistance at \u20b9340.00 is natural target",
       "Latest news: 'Federal Bank Ltd gains for third straight session - Business Standard'",
       "Confluence: 5 independent signal families agree (trend, volume, pattern, news, regime)",
-      "History backtest: this kind of BUY setup worked 59% of the time over ~1 week on this stock (sample: 59)"
+      "History backtest: this kind of BUY setup worked 60% of the time over ~1 week on this stock (sample: 60)"
     ],
     "patterns_seen": [
-      "adx_strong_trend_up",
-      "full_bullish_alignment",
-      "spinning_top",
-      "inside_bar",
-      "supertrend_bullish",
       "doji",
-      "near_52w_high"
+      "spinning_top",
+      "near_52w_high",
+      "supertrend_bullish",
+      "full_bullish_alignment",
+      "adx_strong_trend_up",
+      "inside_bar"
     ],
     "reliable_patterns": [],
     "nearest_support": 325.2,
@@ -534,17 +534,17 @@
     "paper_expectancy": 0,
     "market_mood": "neutral",
     "market_warning": [
-      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals"
+      "Net institutional outflow (\u20b9-891 Cr)"
     ]
   },
   {
     "ticker": "UNIONBANK.NS",
     "nse_code": "UNIONBANK",
     "company_name": "UNIONBANK.NS",
-    "date": "2026-07-13",
-    "generated_at": "2026-07-13 10:13 UTC",
+    "date": "2026-07-14",
+    "generated_at": "2026-07-14 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -578,12 +578,12 @@
     "pattern_score": 2.0,
     "confluence_bonus": 7.5,
     "paper_bonus": 0.0,
-    "success_probability": 0.556,
-    "base_success_prob": 0.572,
-    "profit_probability": 0.716,
-    "composite_score": 64.5,
+    "success_probability": 0.541,
+    "base_success_prob": 0.55,
+    "profit_probability": 0.65,
+    "composite_score": 61.51,
     "focus_rank": 2,
-    "rank_delta": -1,
+    "rank_delta": 0,
     "intention": "BUY UNIONBANK for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
     "confluence_count": 5,
     "confluence_families": [
@@ -604,7 +604,7 @@
     "data_confidence": "Estimated",
     "data_confidence_key": "estimated",
     "data_confidence_note": "Only 0 paper trade(s) \u2014 probability is an indicator-based estimate, not yet proven",
-    "expected_edge_r": 0.716,
+    "expected_edge_r": 0.65,
     "buy_score": 7.8,
     "sell_score": 4,
     "reasons": [
@@ -633,11 +633,11 @@
       "History backtest: this kind of BUY setup worked 52% of the time over ~1 week on this stock (sample: 52)"
     ],
     "patterns_seen": [
-      "pivot_r1_breakout",
-      "pivot_r2_breakout",
       "strong_bullish_marubozu",
+      "pivot_r1_breakout",
+      "full_bearish_alignment",
       "supertrend_bullish",
-      "full_bearish_alignment"
+      "pivot_r2_breakout"
     ],
     "reliable_patterns": [],
     "nearest_support": 164.51,
@@ -665,7 +665,7 @@
     "paper_expectancy": 0,
     "market_mood": "neutral",
     "market_warning": [
-      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals"
+      "Net institutional outflow (\u20b9-891 Cr)"
     ]
   }
 ]

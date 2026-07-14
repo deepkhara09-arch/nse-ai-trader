@@ -1028,5 +1028,55 @@
     "ts": "2026-07-14T03:05:44.256270",
     "detail": "Rank \u25bc2 (#9 \u2192 #11)",
     "confidence": 70.3
+  },
+  {
+    "type": "removed",
+    "ticker": "ICICIBANK.NS",
+    "nse_code": "ICICIBANK",
+    "signal": "BUY",
+    "date": "2026-07-14",
+    "ts": "2026-07-14T04:05:52.367169",
+    "detail": "Dropped \u2014 no longer meets threshold (was 75/100)",
+    "confidence": 0
+  },
+  {
+    "type": "removed",
+    "ticker": "NESTLEIND.NS",
+    "nse_code": "NESTLEIND",
+    "signal": "BUY",
+    "date": "2026-07-14",
+    "ts": "2026-07-14T04:05:52.367169",
+    "detail": "Dropped \u2014 no longer meets threshold (was 71/100)",
+    "confidence": 0
+  },
+  {
+    "type": "removed",
+    "ticker": "BAJFINANCE.NS",
+    "nse_code": "BAJFINANCE",
+    "signal": "BUY",
+    "date": "2026-07-14",
+    "ts": "2026-07-14T04:05:52.367169",
+    "detail": "Dropped \u2014 no longer meets threshold (was 70/100)",
+    "confidence": 0
+  },
+  {
+    "type": "updated",
+    "ticker": "FEDERALBNK.NS",
+    "nse_code": "FEDERALBNK",
+    "signal": "BUY",
+    "date": "2026-07-14",
+    "ts": "2026-07-14T04:05:52.367169",
+    "detail": "Confidence \u25b25 (70 \u2192 75) | Rank \u25bc5 (#6 \u2192 #11) | Target 1 moved \u20b9349.88 \u2192 \u20b9347.05",
+    "confidence": 75.1
+  },
+  {
+    "type": "updated",
+    "ticker": "UNIONBANK.NS",
+    "nse_code": "UNIONBANK",
+    "signal": "BUY",
+    "date": "2026-07-14",
+    "ts": "2026-07-14T04:05:52.367169",
+    "detail": "Rank \u25b21 (#2 \u2192 #1) | Target 1 moved \u20b9184.99 \u2192 \u20b9183.99",
+    "confidence": 67.2
   }
 ]

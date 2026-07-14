@@ -1,6 +1,6 @@
 {
   "date": "2026-07-14",
-  "session": "preopen",
+  "session": "morning",
   "nifty": {
     "symbol": "^NSEI",
     "value": 24211.0,
@@ -58,9 +58,10 @@
       "ath_pct_60d": -2.12
     }
   },
-  "market_mood": "neutral",
+  "market_mood": "bearish",
   "trade_allowed": true,
   "warnings": [
+    "Nifty choppy intraday \u2014 wait for cleaner setups",
     "Net institutional outflow (\u20b9-891 Cr)"
   ],
   "leading_sectors": [
@@ -71,7 +72,7 @@
   "lagging_sectors": [
     "Infra"
   ],
-  "intraday_regime": "mixed",
+  "intraday_regime": "choppy",
   "macro": {
     "date": "2026-07-14",
     "session": "preopen",

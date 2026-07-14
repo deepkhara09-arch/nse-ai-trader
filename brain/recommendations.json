@@ -4,9 +4,9 @@
     "nse_code": "UNIONBANK",
     "company_name": "UNIONBANK.NS",
     "date": "2026-07-14",
-    "generated_at": "2026-07-14 07:45 UTC",
-    "valid_until": "15:15 IST",
-    "session": "afternoon",
+    "generated_at": "2026-07-14 09:45 UTC",
+    "valid_until": "15:40 IST",
+    "session": "intraday_close",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -97,12 +97,12 @@
       "History backtest: this kind of BUY setup worked 52% of the time over ~1 week on this stock (sample: 52)"
     ],
     "patterns_seen": [
+      "strong_bullish_marubozu",
+      "supertrend_bullish",
       "three_white_soldiers",
       "pivot_r1_breakout",
-      "pivot_r2_breakout",
-      "supertrend_bullish",
       "full_bearish_alignment",
-      "strong_bullish_marubozu"
+      "pivot_r2_breakout"
     ],
     "reliable_patterns": [],
     "nearest_support": 164.51,

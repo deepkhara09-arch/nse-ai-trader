@@ -1078,5 +1078,15 @@
     "ts": "2026-07-14T04:05:52.367169",
     "detail": "Rank \u25b21 (#2 \u2192 #1) | Target 1 moved \u20b9184.99 \u2192 \u20b9183.99",
     "confidence": 67.2
+  },
+  {
+    "type": "removed",
+    "ticker": "FEDERALBNK.NS",
+    "nse_code": "FEDERALBNK",
+    "signal": "BUY",
+    "date": "2026-07-14",
+    "ts": "2026-07-14T05:53:30.379963",
+    "detail": "Dropped \u2014 no longer meets threshold (was 75/100)",
+    "confidence": 0
   }
 ]

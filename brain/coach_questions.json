@@ -1,25 +1,5 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of stoch_rsi_oversold_reversal, morning_star mean for a swing trade on ICICIBANK? Current RSI=63, MACD hist=-1.6711, Vol=0.5x average. Signal is BUY.",
-    "context": {
-      "ticker": "ICICIBANK.NS",
-      "signal": "BUY",
-      "patterns": "stoch_rsi_oversold_reversal, morning_star",
-      "rsi": 62.6
-    },
-    "queued_at": "2026-07-14T03:05:44.244635"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of stoch_rsi_oversold_reversal, supertrend_bullish, morning_star mean for a swing trade on BAJFINANCE? Current RSI=67, MACD hist=+1.1113, Vol=0.8x average. Signal is BUY.",
-    "context": {
-      "ticker": "BAJFINANCE.NS",
-      "signal": "BUY",
-      "patterns": "stoch_rsi_oversold_reversal, supertrend_bullish, morning_star",
-      "rsi": 66.8
-    },
-    "queued_at": "2026-07-14T03:05:44.247651"
-  },
-  {
     "question": "In Indian NSE markets, what does the combination of strong_bullish_marubozu, pivot_r1_breakout, full_bearish_alignment mean for a swing trade on UNIONBANK? Current RSI=39, MACD hist=-1.1605, Vol=1.7x average. Signal is BUY.",
     "context": {
       "ticker": "UNIONBANK.NS",
@@ -98,5 +78,25 @@
       "rsi": 53.4
     },
     "queued_at": "2026-07-14T04:05:52.366498"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of pivot_r1_breakout, pivot_r2_breakout, strong_bullish_marubozu mean for a swing trade on UNIONBANK? Current RSI=50, MACD hist=-0.4086, Vol=2.0x average. Signal is BUY.",
+    "context": {
+      "ticker": "UNIONBANK.NS",
+      "signal": "BUY",
+      "patterns": "pivot_r1_breakout, pivot_r2_breakout, strong_bullish_marubozu",
+      "rsi": 50.4
+    },
+    "queued_at": "2026-07-14T05:53:30.375001"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of evening_star, pivot_s1_breakdown, doji mean for a swing trade on PIDILITIND? Current RSI=53, MACD hist=-6.0287, Vol=0.9x average. Signal is BUY.",
+    "context": {
+      "ticker": "PIDILITIND.NS",
+      "signal": "BUY",
+      "patterns": "evening_star, pivot_s1_breakdown, doji",
+      "rsi": 53.4
+    },
+    "queued_at": "2026-07-14T05:53:30.379284"
   }
 ]

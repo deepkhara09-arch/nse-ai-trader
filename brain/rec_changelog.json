@@ -1118,5 +1118,35 @@
     "ts": "2026-07-14T10:12:34.337631",
     "detail": "Rank \u25bc2 (#1 \u2192 #3)",
     "confidence": 67.5
+  },
+  {
+    "type": "new",
+    "ticker": "FEDERALBNK.NS",
+    "nse_code": "FEDERALBNK",
+    "signal": "BUY",
+    "date": "2026-07-15",
+    "ts": "2026-07-15T04:05:49.570774",
+    "detail": "New BUY recommendation \u2014 confidence 67/100",
+    "confidence": 66.6
+  },
+  {
+    "type": "removed",
+    "ticker": "NESTLEIND.NS",
+    "nse_code": "NESTLEIND",
+    "signal": "BUY",
+    "date": "2026-07-15",
+    "ts": "2026-07-15T04:05:49.570774",
+    "detail": "Dropped \u2014 no longer meets threshold (was 69/100)",
+    "confidence": 0
+  },
+  {
+    "type": "removed",
+    "ticker": "UNIONBANK.NS",
+    "nse_code": "UNIONBANK",
+    "signal": "BUY",
+    "date": "2026-07-15",
+    "ts": "2026-07-15T04:05:49.570774",
+    "detail": "Dropped \u2014 no longer meets threshold (was 68/100)",
+    "confidence": 0
   }
 ]

@@ -1,6 +1,6 @@
 {
-  "date": "2026-07-14",
-  "session": "preclose",
+  "date": "2026-07-15",
+  "session": "preopen",
   "nifty": {
     "symbol": "^NSEI",
     "value": 24211.0,
@@ -10,10 +10,10 @@
     "ath_pct_60d": -1.3
   },
   "vix": {
-    "value": 13.28,
+    "value": 13.75,
     "level": "normal",
-    "percentile_30d": 37.0,
-    "avg_30d": 13.99
+    "percentile_30d": 57.0,
+    "avg_30d": 13.9
   },
   "bank_nifty": {
     "symbol": "^NSEBANK",
@@ -35,11 +35,11 @@
     },
     "Pharma": {
       "symbol": "PHARMABEES.NS",
-      "value": 26.39,
-      "day_change_pct": -0.15,
-      "trend_5d": "sideways",
+      "value": 26.59,
+      "day_change_pct": 0.76,
+      "trend_5d": "up",
       "trend_20d": "strong_up",
-      "ath_pct_60d": -2.48
+      "ath_pct_60d": -1.74
     },
     "Bank": {
       "symbol": "BANKBEES.NS",
@@ -60,69 +60,67 @@
   },
   "market_mood": "neutral",
   "trade_allowed": true,
-  "warnings": [
-    "Net institutional outflow (\u20b9-891 Cr)"
-  ],
+  "warnings": [],
   "leading_sectors": [
-    "IT"
+    "IT",
+    "Pharma"
   ],
   "market_regime": "normal",
-  "sector_breadth": 0.25,
+  "sector_breadth": 0.5,
   "lagging_sectors": [
     "Infra"
   ],
   "intraday_regime": "mixed",
   "macro": {
-    "date": "2026-07-14",
-    "session": "midday",
-    "generated_at": "2026-07-14T06:34:35.038362",
-    "global_score": -0.062,
+    "date": "2026-07-15",
+    "session": "preopen",
+    "generated_at": "2026-07-15T03:05:41.003859",
+    "global_score": -0.098,
     "india_score": 0.0,
-    "overall_score": -0.034,
+    "overall_score": -0.054,
     "mood": "neutral",
     "drivers": [
-      "The U.S. is maxing out its strategic oil reserves as Trump vows to control the Strait of Hormuz",
-      "Sandisk\u2019s stock is plunging, but some analysts are getting even more bullish",
+      "Brace for $4 gas again: How U.S.-Iran tensions are threatening to end the price break at the pump",
+      "This overlooked index is a better investment than the S&P 500",
       "\u2018It\u2019s heartbreaking\u2019: My brother claimed Social Security at 70. He died from cancer after one payment. Why wait to claim?",
-      "I\u2019m 67 with a $140,000 pension. Should I wait until 70 to claim Social Security so my wife gets more?",
-      "Why a borrowing binge by investors is a warning sign for the stock market",
-      "SpaceX\u2019s stock threatens to fall below the IPO price. Do investors face a \u2018crisis\u2019 if it does?",
-      "Lindsey Graham died from a rare heart condition. Here\u2019s how to know if you\u2019re at risk.",
-      "You don\u2019t have to be rich to be financially independent. Here\u2019s how to take control of your money."
+      "Your monthly Netflix bill is up 29% in just over a year. Critics say Washington needs to fix it.",
+      "Three powerful forces are draining family wealth \u2014 and your estate plan is completely unprepared",
+      "What IBM\u2019s profit warning means: Hardware is \u2018eating everyone\u2019s lunch\u2019",
+      "Taco Bell reportedly being investigated by health officials, as cyclosporiasis outbreak spreads",
+      "Wall Street has set a sky-high bar for companies to clear this earnings season. They just might pull it off."
     ],
     "global_cues": {
       "dow": {
-        "last": 52498.64,
-        "chg_pct": -0.26
+        "last": 52508.27,
+        "chg_pct": 0.02
       },
       "nasdaq": {
-        "last": 25873.18,
-        "chg_pct": -1.55
+        "last": 26107.01,
+        "chg_pct": 0.9
       },
       "sp500": {
-        "last": 7515.34,
-        "chg_pct": -0.79
+        "last": 7543.59,
+        "chg_pct": 0.38
       },
       "nikkei": {
-        "last": 67766.72,
-        "chg_pct": 0.78
+        "last": 68353.91,
+        "chg_pct": 1.65
       },
       "crude": {
-        "last": 78.14,
-        "chg_pct": 9.42
+        "last": 80.39,
+        "chg_pct": 1.32
       },
       "usdinr": {
-        "last": 96.11,
-        "chg_pct": 0.83
+        "last": 96.3,
+        "chg_pct": 1.02
       },
       "gold": {
-        "last": 3997.0,
-        "chg_pct": -2.61
+        "last": 4042.0,
+        "chg_pct": -0.47
       }
     },
-    "summary": "Overall macro mood is neutral (-0.03). US Dow -0.3% overnight. Crude +9.4%. USD/INR +0.8%. Notable: US Fed rate hike / hawkish; Geopolitical conflict / war; Tariffs / trade war.",
+    "summary": "Overall macro mood is neutral (-0.05). US Dow +0.0% overnight. Crude +1.3%. USD/INR +1.0%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
-      "Hawkish Fed pressures Nifty via FII outflows and stronger USD.",
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
       "Trade-war headlines spook global markets; IT & export names react most."
     ],
@@ -131,11 +129,11 @@
   },
   "macro_risk_factor": 1.0,
   "fii_dii": {
-    "date": "2026-07-14",
-    "fii_net_cr": -3062.27,
-    "dii_net_cr": 2171.7,
-    "combined_net_cr": -890.57,
-    "signal": "outflow",
+    "date": "2026-07-15",
+    "fii_net_cr": -739.69,
+    "dii_net_cr": 2927.71,
+    "combined_net_cr": 2188.02,
+    "signal": "inflow",
     "ok": true,
     "error": "",
     "history": [
@@ -234,15 +232,21 @@
         "fii": -3062.27,
         "dii": 2171.7,
         "combined": -890.57
+      },
+      {
+        "date": "2026-07-15",
+        "fii": -739.69,
+        "dii": 2927.71,
+        "combined": 2188.02
       }
     ]
   },
   "pcr": {
-    "date": "2026-07-14",
-    "pcr": 1.016,
+    "date": "2026-07-15",
+    "pcr": 1.006,
     "reading": "neutral",
-    "total_pe_oi": 3226498,
-    "total_ce_oi": 3177053,
+    "total_pe_oi": 3145090,
+    "total_ce_oi": 3127490,
     "spot": 24052.05,
     "max_pain": 24050.0,
     "max_pain_dist_pct": 0.01,

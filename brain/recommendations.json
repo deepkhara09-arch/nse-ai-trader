@@ -3,10 +3,10 @@
     "ticker": "NESTLEIND.NS",
     "nse_code": "NESTLEIND",
     "company_name": "Nestle India Ltd",
-    "date": "2026-07-14",
-    "generated_at": "2026-07-14 10:12 UTC",
+    "date": "2026-07-15",
+    "generated_at": "2026-07-15 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -40,12 +40,12 @@
     "pattern_score": 0.0,
     "confluence_bonus": 10,
     "paper_bonus": 0.0,
-    "success_probability": 0.571,
-    "base_success_prob": 0.609,
-    "profit_probability": 0.827,
-    "composite_score": 69.45,
+    "success_probability": 0.58,
+    "base_success_prob": 0.623,
+    "profit_probability": 0.869,
+    "composite_score": 71.37,
     "focus_rank": 1,
-    "rank_delta": 1,
+    "rank_delta": 0,
     "intention": "BUY NESTLEIND for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
     "confluence_count": 7,
     "confluence_families": [
@@ -68,7 +68,7 @@
     "data_confidence": "Estimated",
     "data_confidence_key": "estimated",
     "data_confidence_note": "Only 0 paper trade(s) \u2014 probability is an indicator-based estimate, not yet proven",
-    "expected_edge_r": 0.827,
+    "expected_edge_r": 0.869,
     "buy_score": 7.8,
     "sell_score": 1.5,
     "reasons": [
@@ -98,9 +98,9 @@
       "History backtest: this kind of BUY setup worked 48% of the time over ~1 week on this stock (sample: 52)"
     ],
     "patterns_seen": [
-      "strong_bearish_marubozu",
+      "pivot_s1_breakdown",
       "full_bullish_alignment",
-      "pivot_s1_breakdown"
+      "strong_bearish_marubozu"
     ],
     "reliable_patterns": [],
     "nearest_support": 1397.87,
@@ -127,18 +127,16 @@
     "paper_pnl": 0,
     "paper_expectancy": 0,
     "market_mood": "neutral",
-    "market_warning": [
-      "Net institutional outflow (\u20b9-891 Cr)"
-    ]
+    "market_warning": []
   },
   {
     "ticker": "UNIONBANK.NS",
     "nse_code": "UNIONBANK",
     "company_name": "UNIONBANK.NS",
-    "date": "2026-07-14",
-    "generated_at": "2026-07-14 10:12 UTC",
+    "date": "2026-07-15",
+    "generated_at": "2026-07-15 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -172,12 +170,12 @@
     "pattern_score": 2.0,
     "confluence_bonus": 7.5,
     "paper_bonus": 0.0,
-    "success_probability": 0.532,
-    "base_success_prob": 0.538,
-    "profit_probability": 0.614,
-    "composite_score": 59.87,
+    "success_probability": 0.54,
+    "base_success_prob": 0.553,
+    "profit_probability": 0.659,
+    "composite_score": 61.89,
     "focus_rank": 3,
-    "rank_delta": -2,
+    "rank_delta": 0,
     "intention": "BUY UNIONBANK for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
     "confluence_count": 5,
     "confluence_families": [
@@ -188,9 +186,9 @@
       "fundamentals"
     ],
     "backtest_tested": true,
-    "backtest_hit_5d": 0.519,
-    "backtest_hit_10d": 0.481,
-    "backtest_sample": 52,
+    "backtest_hit_5d": 0.509,
+    "backtest_hit_10d": 0.491,
+    "backtest_sample": 53,
     "hist_long_trend": "strong_uptrend",
     "hist_52w_position": 73.6,
     "hist_personality": "choppy",
@@ -198,7 +196,7 @@
     "data_confidence": "Estimated",
     "data_confidence_key": "estimated",
     "data_confidence_note": "Only 0 paper trade(s) \u2014 probability is an indicator-based estimate, not yet proven",
-    "expected_edge_r": 0.614,
+    "expected_edge_r": 0.659,
     "buy_score": 8.58,
     "sell_score": 2.4,
     "reasons": [
@@ -226,15 +224,15 @@
       "Resistance at \u20b9180.00 is natural target",
       "Latest news: 'Stock to buy today: City Union Bank (\u20b9230) \u2013 BUY - BusinessLine'",
       "Confluence: 5 independent signal families agree (trend, volume, pattern, news, fundamentals)",
-      "History backtest: this kind of BUY setup worked 52% of the time over ~1 week on this stock (sample: 52)"
+      "History backtest: this kind of BUY setup worked 51% of the time over ~1 week on this stock (sample: 53)"
     ],
     "patterns_seen": [
-      "pivot_r2_breakout",
       "three_white_soldiers",
-      "pivot_r1_breakout",
-      "full_bearish_alignment",
       "strong_bullish_marubozu",
-      "supertrend_bullish"
+      "full_bearish_alignment",
+      "pivot_r1_breakout",
+      "supertrend_bullish",
+      "pivot_r2_breakout"
     ],
     "reliable_patterns": [],
     "nearest_support": 164.51,
@@ -261,8 +259,6 @@
     "paper_pnl": 0,
     "paper_expectancy": 0,
     "market_mood": "neutral",
-    "market_warning": [
-      "Net institutional outflow (\u20b9-891 Cr)"
-    ]
+    "market_warning": []
   }
 ]

@@ -856,6 +856,26 @@ def analyse_stock(
         else:
             sell_reasons.append("✓ Daily setup aligned with the higher-timeframe trend")
 
+    # ── Self-accuracy throttle: act on the tool's OWN measured recent form ──────
+    # The dry forward-tester scores every daily call against reality. If the last
+    # ~20 scored calls have mostly FAILED, the signal engine is out of sync with
+    # the current tape — so demand extra conviction before any new call, exactly
+    # like the mood/MTF gates. Self-awareness from real data, not a fixed rule.
+    self_penalty = 0.0
+    try:
+        acc, n_scored = _recent_call_accuracy()
+        if n_scored >= 10:
+            if acc < 0.25:
+                self_penalty = 1.5
+            elif acc < 0.35:
+                self_penalty = 1.0
+            if self_penalty:
+                note = (f"⚠ Recent forward-tested call accuracy only {acc*100:.0f}% "
+                        f"(last {n_scored} scored) — raising the conviction bar")
+                (buy_reasons if leaning_buy else sell_reasons).append(note)
+    except Exception:
+        pass
+
     # ── Market-mood alignment: don't fight the tape ─────────────────────────────
     # A per-stock setup that fights the WHOLE market's mood fails more often —
     # buying breakouts in a bearish tape is a classic false-signal factory. Like
@@ -878,8 +898,9 @@ def analyse_stock(
     sell_score = round(sell_score, 2)
     gap = abs(buy_score - sell_score)
 
-    # ── Determine signal (HTF conflict / counter-tape raise the required bar) ──
-    extra_bar = mtf_penalty + mood_penalty
+    # ── Determine signal (HTF conflict / counter-tape / poor recent form all
+    #    raise the required bar) ──────────────────────────────────────────────────
+    extra_bar = mtf_penalty + mood_penalty + self_penalty
     if buy_score >= BUY_SIGNAL_MIN_SCORE + extra_bar and buy_score > sell_score and gap >= SIGNAL_SCORE_GAP:
         signal = "BUY"
     elif sell_score >= SELL_SIGNAL_MIN_SCORE + extra_bar and sell_score > buy_score and gap >= SIGNAL_SCORE_GAP:
@@ -1194,6 +1215,34 @@ def record_decision(decisions: List, opinion: dict, action: str, reason: str) ->
         "patterns":  opinion.get("patterns", []),
     })
     return decisions
+
+
+_ACC_CACHE = {"key": None, "val": (1.0, 0)}
+
+
+def _recent_call_accuracy(window: int = 20):
+    """(hit_rate, n) over the last `window` SCORED dry ANALYSE calls (win/loss
+    only — flats prove nothing). Cached per file-mtime so a 15-stock session
+    doesn't reload the file 15 times."""
+    import os as _os
+    try:
+        mt = _os.path.getmtime(BRAIN_DECISIONS_FILE)
+    except Exception:
+        return (1.0, 0)
+    if _ACC_CACHE["key"] == mt:
+        return _ACC_CACHE["val"]
+    try:
+        with open(BRAIN_DECISIONS_FILE, encoding="utf-8") as f:
+            decs = json.load(f)
+    except Exception:
+        return (1.0, 0)
+    scored = [d for d in decs
+              if d.get("action") == "ANALYSE" and d.get("dry_outcome") in ("win", "loss")]
+    recent = scored[-window:]
+    n = len(recent)
+    acc = (sum(1 for d in recent if d["dry_outcome"] == "win") / n) if n else 1.0
+    _ACC_CACHE["key"], _ACC_CACHE["val"] = mt, (acc, n)
+    return (acc, n)
 
 
 # How many trading days a dry decision gets to prove itself before it's scored

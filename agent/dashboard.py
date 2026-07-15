@@ -169,6 +169,7 @@ def _build_html(
 
   <!-- ── LEARN tab ── -->
   <section class="tab-panel" id="tab-learn" hidden>
+    {_section_learning_progress(decisions)}
     {_section_coach(coach_memory)}
     {_section_focus_competition()}
     {_section_attribution(attribution)}
@@ -1641,6 +1642,76 @@ def _section_watchlist(focus, stock_data, news_data, patterns, fundamentals=None
     return f"""<div class="section" id="watchlist">
   <h2>Watchlist <span>{len(display_tickers)} stocks &mdash; {phase_label}</span></h2>
   <div class="grid3">{cards}</div>
+</div>"""
+
+
+def _section_learning_progress(decisions: list) -> str:
+    """What the tool has LEARNED so far, from forward-tested reality: dry-call
+    scoreboard (with the self-throttle state), and per-stock news reliability.
+    This answers 'how is the tool doing?' from the dashboard itself, honestly —
+    including when the answer is 'its calls have been mostly wrong lately'."""
+    from collections import Counter
+    scored = [d for d in (decisions or [])
+              if d.get("action") == "ANALYSE" and d.get("dry_outcome") in ("win", "loss", "flat")]
+    counts = Counter(d["dry_outcome"] for d in scored)
+    wins, losses, flats = counts.get("win", 0), counts.get("loss", 0), counts.get("flat", 0)
+    n_wl = wins + losses
+    recent = [d for d in scored if d["dry_outcome"] in ("win", "loss")][-20:]
+    r_n = len(recent)
+    r_acc = (sum(1 for d in recent if d["dry_outcome"] == "win") / r_n * 100) if r_n else None
+
+    if r_acc is None:
+        throttle = "not enough scored calls yet"
+        acc_col  = "var(--muted)"
+    elif r_n >= 10 and r_acc < 25:
+        throttle = "ACTIVE (strong) — recent calls mostly wrong, conviction bar raised +1.5"
+        acc_col  = "var(--red)"
+    elif r_n >= 10 and r_acc < 35:
+        throttle = "ACTIVE — recent accuracy weak, conviction bar raised +1.0"
+        acc_col  = "var(--amber,#e6a93a)"
+    else:
+        throttle = "off — recent form acceptable"
+        acc_col  = "var(--green)"
+
+    news_html = ""
+    try:
+        import json as _json
+        nc = _json.load(open("brain/news_calls.json", encoding="utf-8"))
+        rel = nc.get("reliability", {})
+        if rel:
+            rows = ""
+            for t, v in sorted(rel.items(), key=lambda x: -x[1].get("reliability", 0.5)):
+                r = v.get("reliability", 0.5)
+                col = "var(--green)" if r >= 0.55 else ("var(--red)" if r <= 0.4 else "var(--text)")
+                rows += (f'<div class="irow"><span class="muted">{t.replace(".NS","")}</span>'
+                         f'<span style="color:{col}">{r:.2f}</span></div>')
+            oc = Counter(c.get("outcome") for c in nc.get("calls", []) if c.get("evaluated"))
+            news_html = f"""<div class="card" style="margin-top:10px;padding:12px 14px">
+  <h3 style="margin-bottom:6px">Is the news actually predictive, per stock?</h3>
+  <div style="font-size:.66rem;color:var(--muted);margin-bottom:8px">
+    Each strong news signal is checked against the real move 3 days later —
+    right {oc.get('right',0)} · wrong {oc.get('wrong',0)} · flat {oc.get('flat',0)}.
+    Score &gt;0.55 = news earns extra weight here; &lt;0.40 = news is faded.
+  </div>
+  {rows}
+</div>"""
+    except Exception:
+        pass
+
+    return f"""<div class="section" id="learning">
+  <h2>Learning Progress <span>forward-tested against reality — no self-grading</span></h2>
+  <div class="grid4" style="margin-bottom:10px">
+    <div class="stat-card"><div class="stat-val">{wins}W / {losses}L</div><div class="stat-label">Dry calls scored ({flats} flat, excluded)</div></div>
+    <div class="stat-card"><div class="stat-val" style="color:{acc_col}">{f"{r_acc:.0f}%" if r_acc is not None else "—"}</div><div class="stat-label">Recent call accuracy (last {r_n})</div></div>
+    <div class="stat-card"><div class="stat-val" style="font-size:.72rem;line-height:1.3;color:{acc_col}">{throttle}</div><div class="stat-label">Self-accuracy throttle</div></div>
+    <div class="stat-card"><div class="stat-val">{n_wl + flats}</div><div class="stat-label">Total calls forward-tested</div></div>
+  </div>
+  <div style="font-size:.66rem;color:var(--muted)">
+    Every daily call ("I would BUY here") is scored days later against the real price.
+    Wrong calls lower the involved patterns' reliability; the throttle makes the tool
+    demand extra conviction whenever its own recent form is poor.
+  </div>
+  {news_html}
 </div>"""
 
 

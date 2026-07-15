@@ -60,7 +60,9 @@
   },
   "market_mood": "neutral",
   "trade_allowed": true,
-  "warnings": [],
+  "warnings": [
+    "Nifty choppy intraday \u2014 wait for cleaner setups"
+  ],
   "leading_sectors": [
     "IT",
     "Pharma",
@@ -71,7 +73,7 @@
   "sector_breadth": 1.0,
   "lagging_sectors": [],
   "broad_market_strength": true,
-  "intraday_regime": "mixed",
+  "intraday_regime": "choppy",
   "macro": {
     "date": "2026-07-15",
     "session": "midday",

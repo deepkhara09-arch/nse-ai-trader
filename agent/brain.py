@@ -876,6 +876,22 @@ def analyse_stock(
     except Exception:
         pass
 
+    # ── Sector-tape alignment: don't fight the stock's OWN sector ───────────────
+    # Live lesson from the first two weeks of forward-testing: 12 of the failed
+    # calls were BUYs into Banking / Infra Finance while those sectors' momentum
+    # was clearly negative — the market-wide mood gate stayed silent because
+    # Nifty was sideways. The ±0.5 sector nudge is too weak to stop a marginal
+    # call, so, same mechanism as the mood gate: a call against its own sector's
+    # tape must clear a higher bar.
+    sector_penalty = 0.0
+    _sec_mom = d.get("sector_momentum", 0) or 0
+    if leaning_buy and _sec_mom < -0.25:
+        sector_penalty = 1.0
+        buy_reasons.append(f"⚠ Sector momentum {_sec_mom:+.2f} — buying into a falling sector needs extra conviction")
+    elif leaning_sell and _sec_mom > 0.25:
+        sector_penalty = 1.0
+        sell_reasons.append(f"⚠ Sector momentum {_sec_mom:+.2f} — shorting a rising sector needs extra conviction")
+
     # ── Market-mood alignment: don't fight the tape ─────────────────────────────
     # A per-stock setup that fights the WHOLE market's mood fails more often —
     # buying breakouts in a bearish tape is a classic false-signal factory. Like
@@ -898,9 +914,9 @@ def analyse_stock(
     sell_score = round(sell_score, 2)
     gap = abs(buy_score - sell_score)
 
-    # ── Determine signal (HTF conflict / counter-tape / poor recent form all
-    #    raise the required bar) ──────────────────────────────────────────────────
-    extra_bar = mtf_penalty + mood_penalty + self_penalty
+    # ── Determine signal (HTF conflict / counter-tape / falling sector / poor
+    #    recent form all raise the required bar) ─────────────────────────────────
+    extra_bar = mtf_penalty + mood_penalty + self_penalty + sector_penalty
     if buy_score >= BUY_SIGNAL_MIN_SCORE + extra_bar and buy_score > sell_score and gap >= SIGNAL_SCORE_GAP:
         signal = "BUY"
     elif sell_score >= SELL_SIGNAL_MIN_SCORE + extra_bar and sell_score > buy_score and gap >= SIGNAL_SCORE_GAP:

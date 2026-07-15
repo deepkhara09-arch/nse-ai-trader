@@ -1,75 +1,5 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of macd_bearish_crossover, pivot_point_test mean for a swing trade on ABCAPITAL? Current RSI=52, MACD hist=-0.2227, Vol=1.2x average. Signal is BUY.",
-    "context": {
-      "ticker": "ABCAPITAL.NS",
-      "signal": "BUY",
-      "patterns": "macd_bearish_crossover, pivot_point_test",
-      "rsi": 52.5
-    },
-    "queued_at": "2026-07-15T04:05:49.568495"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of rsi_bearish_divergence, three_white_soldiers mean for a swing trade on PFC? Current RSI=27, MACD hist=-2.5136, Vol=0.9x average. Signal is BUY.",
-    "context": {
-      "ticker": "PFC.NS",
-      "signal": "BUY",
-      "patterns": "rsi_bearish_divergence, three_white_soldiers",
-      "rsi": 27.3
-    },
-    "queued_at": "2026-07-15T04:05:49.569074"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of rsi_bullish_divergence, hammer, doji mean for a swing trade on PIDILITIND? Current RSI=53, MACD hist=-6.0256, Vol=0.9x average. Signal is BUY.",
-    "context": {
-      "ticker": "PIDILITIND.NS",
-      "signal": "BUY",
-      "patterns": "rsi_bullish_divergence, hammer, doji",
-      "rsi": 53.4
-    },
-    "queued_at": "2026-07-15T04:05:49.570093"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of pivot_r1_breakout, pivot_r2_breakout, bb_upper_rejection mean for a swing trade on HOMEFIRST? Current RSI=74, MACD hist=+5.0188, Vol=1.7x average. Signal is BUY.",
-    "context": {
-      "ticker": "HOMEFIRST.NS",
-      "signal": "BUY",
-      "patterns": "pivot_r1_breakout, pivot_r2_breakout, bb_upper_rejection",
-      "rsi": 73.5
-    },
-    "queued_at": "2026-07-15T05:53:46.002837"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of overbought_macd_divergence, outside_bar mean for a swing trade on ICICIBANK? Current RSI=69, MACD hist=-1.5210, Vol=0.9x average. Signal is BUY.",
-    "context": {
-      "ticker": "ICICIBANK.NS",
-      "signal": "BUY",
-      "patterns": "overbought_macd_divergence, outside_bar",
-      "rsi": 68.9
-    },
-    "queued_at": "2026-07-15T05:53:46.003706"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of doji, spinning_top, pivot_point_test mean for a swing trade on BAJFINANCE? Current RSI=57, MACD hist=-1.3762, Vol=0.8x average. Signal is BUY.",
-    "context": {
-      "ticker": "BAJFINANCE.NS",
-      "signal": "BUY",
-      "patterns": "doji, spinning_top, pivot_point_test",
-      "rsi": 56.9
-    },
-    "queued_at": "2026-07-15T05:53:46.004281"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of hammer, ema_golden_cross, three_white_soldiers mean for a swing trade on UNIONBANK? Current RSI=51, MACD hist=+0.1030, Vol=1.0x average. Signal is BUY.",
-    "context": {
-      "ticker": "UNIONBANK.NS",
-      "signal": "BUY",
-      "patterns": "hammer, ema_golden_cross, three_white_soldiers",
-      "rsi": 51.2
-    },
-    "queued_at": "2026-07-15T05:53:46.004816"
-  },
-  {
     "question": "In Indian NSE markets, what does the combination of pivot_point_test, macd_bearish_crossover mean for a swing trade on ABCAPITAL? Current RSI=52, MACD hist=-0.2227, Vol=1.2x average. Signal is BUY.",
     "context": {
       "ticker": "ABCAPITAL.NS",
@@ -98,5 +28,75 @@
       "rsi": 53.4
     },
     "queued_at": "2026-07-15T05:53:46.006842"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of supertrend_bullish, bb_upper_rejection, adx_strong_trend_up mean for a swing trade on HOMEFIRST? Current RSI=74, MACD hist=+5.0188, Vol=1.7x average. Signal is BUY.",
+    "context": {
+      "ticker": "HOMEFIRST.NS",
+      "signal": "BUY",
+      "patterns": "supertrend_bullish, bb_upper_rejection, adx_strong_trend_up",
+      "rsi": 73.5
+    },
+    "queued_at": "2026-07-15T07:45:51.838467"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of overbought_macd_divergence, outside_bar mean for a swing trade on ICICIBANK? Current RSI=69, MACD hist=-1.5210, Vol=0.9x average. Signal is BUY.",
+    "context": {
+      "ticker": "ICICIBANK.NS",
+      "signal": "BUY",
+      "patterns": "overbought_macd_divergence, outside_bar",
+      "rsi": 68.9
+    },
+    "queued_at": "2026-07-15T07:45:51.839343"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of supertrend_bullish, doji, spinning_top mean for a swing trade on BAJFINANCE? Current RSI=57, MACD hist=-1.3762, Vol=0.8x average. Signal is BUY.",
+    "context": {
+      "ticker": "BAJFINANCE.NS",
+      "signal": "BUY",
+      "patterns": "supertrend_bullish, doji, spinning_top",
+      "rsi": 56.9
+    },
+    "queued_at": "2026-07-15T07:45:51.839950"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of ema_golden_cross, hammer, momentum_continuation mean for a swing trade on UNIONBANK? Current RSI=51, MACD hist=+0.1030, Vol=1.0x average. Signal is BUY.",
+    "context": {
+      "ticker": "UNIONBANK.NS",
+      "signal": "BUY",
+      "patterns": "ema_golden_cross, hammer, momentum_continuation",
+      "rsi": 51.2
+    },
+    "queued_at": "2026-07-15T07:45:51.840569"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of macd_bearish_crossover, pivot_s1_breakdown, pivot_point_test mean for a swing trade on ABCAPITAL? Current RSI=52, MACD hist=-0.2227, Vol=1.2x average. Signal is BUY.",
+    "context": {
+      "ticker": "ABCAPITAL.NS",
+      "signal": "BUY",
+      "patterns": "macd_bearish_crossover, pivot_s1_breakdown, pivot_point_test",
+      "rsi": 52.5
+    },
+    "queued_at": "2026-07-15T07:45:51.841138"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of pivot_s1_bounce, rsi_bearish_divergence, pivot_point_test mean for a swing trade on PFC? Current RSI=27, MACD hist=-2.5136, Vol=0.9x average. Signal is BUY.",
+    "context": {
+      "ticker": "PFC.NS",
+      "signal": "BUY",
+      "patterns": "pivot_s1_bounce, rsi_bearish_divergence, pivot_point_test",
+      "rsi": 27.3
+    },
+    "queued_at": "2026-07-15T07:45:51.841737"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of rsi_bullish_divergence, doji, pivot_s1_breakdown mean for a swing trade on PIDILITIND? Current RSI=53, MACD hist=-6.0256, Vol=0.9x average. Signal is BUY.",
+    "context": {
+      "ticker": "PIDILITIND.NS",
+      "signal": "BUY",
+      "patterns": "rsi_bullish_divergence, doji, pivot_s1_breakdown",
+      "rsi": 53.4
+    },
+    "queued_at": "2026-07-15T07:45:51.842751"
   }
 ]

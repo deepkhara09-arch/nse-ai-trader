@@ -208,6 +208,35 @@ def _data_confidence(paper_trades: int) -> dict:
             "note": f"Only {paper_trades} paper trade(s) — probability is an indicator-based estimate, not yet proven"}
 
 
+# Direction-consistent pattern sets for the confluence gate. Unknown patterns are
+# NEUTRAL (no confirmation) — only a pattern that agrees with the signal counts.
+_BULLISH_PATTERNS = {
+    "full_bullish_alignment", "ema_golden_cross", "macd_bullish_crossover",
+    "bb_lower_bounce", "volume_breakout_bullish", "hammer", "inverted_hammer",
+    "dragonfly_doji", "strong_bullish_marubozu", "engulfing_bullish",
+    "bullish_engulfing", "bullish_harami", "morning_star", "three_white_soldiers",
+    "rsi_bullish_divergence", "macd_bullish_divergence", "oversold_macd_reversal",
+    "early_recovery", "momentum_continuation", "gap_up_continuation",
+    "gap_down_reversal", "52w_breakout", "near_52w_high", "near_52w_low_oversold",
+    "pivot_r1_breakout", "pivot_r2_breakout", "pivot_s1_bounce",
+    "supertrend_bullish", "ichimoku_bullish_kumo", "ichimoku_tk_cross_bullish",
+    "adx_strong_trend_up", "volume_climax_bottom", "stoch_rsi_bullish_cross",
+    "stoch_rsi_oversold_reversal", "above_vwap_strong", "intraday_bullish_vwap",
+    "intraday_vol_surge_up", "volatility_squeeze",
+}
+_BEARISH_PATTERNS = {
+    "full_bearish_alignment", "ema_death_cross", "macd_bearish_crossover",
+    "bb_upper_rejection", "volume_breakdown_bearish", "shooting_star",
+    "gravestone_doji", "strong_bearish_marubozu", "engulfing_bearish",
+    "bearish_engulfing", "bearish_harami", "evening_star",
+    "rsi_bearish_divergence", "macd_bearish_divergence",
+    "overbought_macd_divergence", "gap_down_continuation", "gap_up_reversal",
+    "supertrend_bearish", "ichimoku_bearish_kumo", "adx_strong_trend_down",
+    "volume_climax_top", "stoch_rsi_bearish_cross", "below_vwap_strong",
+    "intraday_bearish_vwap", "low_volume_drift",
+}
+
+
 def _confluence_score(opinion: dict, d: dict, news: dict, fund: dict) -> dict:
     """
     Count how many INDEPENDENT signal families confirm the trade direction.
@@ -241,16 +270,27 @@ def _confluence_score(opinion: dict, d: dict, news: dict, fund: dict) -> dict:
     elif sig == "SELL" and macd_h < 0 and rsi < 55:
         families.append("momentum")
 
-    # 3. Volume / delivery
+    # 3. Volume / delivery — DIRECTION-AWARE. (Bug found via the live forward-test
+    # data: 'distribution' — institutional SELLING — used to count as confluence
+    # for a BUY, and raw high volume confirmed either direction. Volume only
+    # confirms a move in ITS direction.)
     vol_rel = d.get("vol_rel", 1); dsig = d.get("delivery_signal", "neutral")
-    if vol_rel >= 1.3 or dsig in ("accumulation", "strong_accumulation",
-                                  "distribution"):
+    up_bar  = d.get("close", 0) >= d.get("open", d.get("close", 0))
+    if sig == "BUY" and (dsig in ("accumulation", "strong_accumulation")
+                         or (vol_rel >= 1.3 and up_bar)):
+        families.append("volume")
+    elif sig == "SELL" and (dsig == "distribution"
+                            or (vol_rel >= 1.3 and not up_bar)):
         families.append("volume")
 
-    # 4. Pattern
+    # 4. Pattern — only patterns CONSISTENT with the signal's direction count.
+    # (Same bug class: a bearish divergence used to 'confirm' a BUY.)
     pats = set(opinion.get("patterns", []))
-    strong_pats = pats - {"vwap_magnet", "adx_ranging_market", "pivot_point_test"}
-    if strong_pats:
+    if sig == "BUY":
+        dir_pats = pats & _BULLISH_PATTERNS
+    else:
+        dir_pats = pats & _BEARISH_PATTERNS
+    if dir_pats:
         families.append("pattern")
 
     # 5. News

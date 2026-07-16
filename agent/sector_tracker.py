@@ -42,6 +42,7 @@ SECTOR_MAP: Dict[str, str] = {
     "CANBK.NS":      "Banking",
     "BANKBARODA.NS": "Banking",
     "UNIONBANK.NS":  "Banking",
+    "FEDERALBNK.NS": "Banking",
 
     # Financial Services / NBFC
     "BAJFINANCE.NS": "NBFC",
@@ -143,6 +144,14 @@ SECTOR_MAP: Dict[str, str] = {
     "ZOMATO.NS":     "Digital",
     "NYKAA.NS":      "Digital",
     "PAYTM.NS":      "Digital",
+    "ETERNAL.NS":    "Digital",        # Zomato renamed to Eternal
+    "SWIGGY.NS":     "Digital",
+    "JIOFIN.NS":     "NBFC",           # Jio Financial Services
+    "BAJAJFL.NS":    "NBFC",           # Bajaj housing/finance listing
+    "ASHOKLEY.NS":   "Auto",
+    "TMPV.NS":       "Auto",           # Tata Motors PV (post-demerger)
+    "BHEL.NS":       "Infra",
+    "ANANTRAJ.NS":   "Infra",          # realty/data-centres
     "POLICYBZR.NS":  "Digital",
     "IRCTC.NS":      "Digital",
 

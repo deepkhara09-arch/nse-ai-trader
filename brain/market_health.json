@@ -1,6 +1,6 @@
 {
   "date": "2026-07-16",
-  "session": "morning",
+  "session": "midday",
   "nifty": {
     "symbol": "^NSEI",
     "value": 24078.5,
@@ -27,11 +27,11 @@
   "sectors": {
     "IT": {
       "symbol": "ITBEES.NS",
-      "value": 31.85,
-      "day_change_pct": -0.96,
+      "value": 31.66,
+      "day_change_pct": -0.6,
       "trend_5d": "strong_up",
       "trend_20d": "sideways",
-      "ath_pct_60d": -8.08
+      "ath_pct_60d": -8.63
     },
     "Pharma": {
       "symbol": "PHARMABEES.NS",
@@ -43,42 +43,43 @@
     },
     "Bank": {
       "symbol": "BANKBEES.NS",
-      "value": 594.18,
-      "day_change_pct": -1.09,
+      "value": 597.57,
+      "day_change_pct": 0.57,
       "trend_5d": "up",
       "trend_20d": "sideways",
-      "ath_pct_60d": -5.37
+      "ath_pct_60d": -4.83
     },
     "Infra": {
       "symbol": "INFRABEES.NS",
-      "value": 965.85,
-      "day_change_pct": -0.36,
-      "trend_5d": "up",
+      "value": 963.1,
+      "day_change_pct": -0.28,
+      "trend_5d": "sideways",
       "trend_20d": "down",
-      "ath_pct_60d": -2.78
+      "ath_pct_60d": -3.06
     }
   },
   "market_mood": "neutral",
   "trade_allowed": true,
-  "warnings": [],
+  "warnings": [
+    "Nifty choppy intraday \u2014 wait for cleaner setups"
+  ],
   "leading_sectors": [
     "IT",
     "Pharma",
-    "Bank",
-    "Infra"
+    "Bank"
   ],
   "market_regime": "normal",
-  "sector_breadth": 1.0,
+  "sector_breadth": 0.75,
   "lagging_sectors": [],
   "broad_market_strength": true,
-  "intraday_regime": "mixed",
+  "intraday_regime": "choppy",
   "macro": {
     "date": "2026-07-16",
-    "session": "preopen",
-    "generated_at": "2026-07-16T03:05:52.373447",
-    "global_score": 0.075,
+    "session": "midday",
+    "generated_at": "2026-07-16T05:59:48.259530",
+    "global_score": 0.1,
     "india_score": 0.0,
-    "overall_score": 0.041,
+    "overall_score": 0.055,
     "mood": "neutral",
     "drivers": [
       "AI is so big, it\u2019s now impossible for investors to avoid",
@@ -104,23 +105,23 @@
         "chg_pct": 0.38
       },
       "nikkei": {
-        "last": 66796.79,
-        "chg_pct": -2.84
+        "last": 66701.9,
+        "chg_pct": -2.98
       },
       "crude": {
-        "last": 80.1,
-        "chg_pct": 0.63
+        "last": 79.6,
+        "chg_pct": 0.33
       },
       "usdinr": {
-        "last": 96.24,
-        "chg_pct": -0.19
+        "last": 96.3,
+        "chg_pct": -0.13
       },
       "gold": {
-        "last": 4035.0,
-        "chg_pct": -0.22
+        "last": 4044.0,
+        "chg_pct": -0.42
       }
     },
-    "summary": "Overall macro mood is neutral (+0.04). US Dow +0.3% overnight. Crude +0.6%. USD/INR -0.2%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
+    "summary": "Overall macro mood is neutral (+0.06). US Dow +0.3% overnight. Crude +0.3%. USD/INR -0.1%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
       "Trade-war headlines spook global markets; IT & export names react most."

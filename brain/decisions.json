@@ -4070,5 +4070,131 @@
       "three_white_soldiers",
       "momentum_continuation"
     ]
+  },
+  {
+    "timestamp": "2026-07-16T05:59:59.769299",
+    "date": "2026-07-16",
+    "ticker": "MARICO.NS",
+    "session": "midday",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 95,
+    "entry": 847.9,
+    "stop_loss": 824.56,
+    "target": 894.58,
+    "reason": "paper midday",
+    "patterns": [
+      "full_bullish_alignment",
+      "pivot_point_test",
+      "tweezer_bottom",
+      "supertrend_bullish",
+      "adx_strong_trend_up"
+    ]
+  },
+  {
+    "timestamp": "2026-07-16T05:59:59.773224",
+    "date": "2026-07-16",
+    "ticker": "FEDERALBNK.NS",
+    "session": "midday",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 95,
+    "entry": 328.7,
+    "stop_loss": 319.71,
+    "target": 346.68,
+    "reason": "paper midday",
+    "patterns": [
+      "spinning_top",
+      "full_bullish_alignment",
+      "pivot_point_test",
+      "tweezer_bottom",
+      "bullish_harami",
+      "supertrend_bullish",
+      "stoch_rsi_oversold_reversal",
+      "low_volume_drift",
+      "near_52w_high",
+      "adx_strong_trend_up"
+    ]
+  },
+  {
+    "timestamp": "2026-07-16T05:59:59.773841",
+    "date": "2026-07-16",
+    "ticker": "SBIN.NS",
+    "session": "midday",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 74.7,
+    "entry": 1032.0,
+    "stop_loss": 1004.36,
+    "target": 1087.29,
+    "reason": "paper midday",
+    "patterns": [
+      "adx_ranging_market",
+      "full_bullish_alignment",
+      "pivot_r1_breakout",
+      "supertrend_bullish",
+      "stoch_rsi_oversold_reversal"
+    ]
+  },
+  {
+    "timestamp": "2026-07-16T05:59:59.774740",
+    "date": "2026-07-16",
+    "ticker": "NESTLEIND.NS",
+    "session": "midday",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 93.0,
+    "entry": 1428.0,
+    "stop_loss": 1380.18,
+    "target": 1523.64,
+    "reason": "paper midday",
+    "patterns": [
+      "tweezer_bottom",
+      "pivot_point_test",
+      "full_bullish_alignment",
+      "supertrend_bullish"
+    ]
+  },
+  {
+    "timestamp": "2026-07-16T05:59:59.776192",
+    "date": "2026-07-16",
+    "ticker": "ABCAPITAL.NS",
+    "session": "midday",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 81.0,
+    "entry": 403.2,
+    "stop_loss": 387.7,
+    "target": 434.2,
+    "reason": "paper midday",
+    "patterns": [
+      "full_bullish_alignment",
+      "bullish_harami",
+      "supertrend_bullish",
+      "low_volume_drift",
+      "near_52w_high"
+    ]
+  },
+  {
+    "timestamp": "2026-07-16T05:59:59.777606",
+    "date": "2026-07-16",
+    "ticker": "PIDILITIND.NS",
+    "session": "midday",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 95,
+    "entry": 1571.9,
+    "stop_loss": 1527.48,
+    "target": 1660.74,
+    "reason": "paper midday",
+    "patterns": [
+      "full_bullish_alignment",
+      "pivot_point_test",
+      "pivot_s1_bounce",
+      "supertrend_bullish",
+      "stoch_rsi_oversold_reversal",
+      "bb_lower_bounce",
+      "adx_strong_trend_up"
+    ]
   }
 ]

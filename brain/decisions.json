@@ -3968,5 +3968,107 @@
       "full_bullish_alignment",
       "three_white_soldiers"
     ]
+  },
+  {
+    "timestamp": "2026-07-16T04:05:50.770813",
+    "date": "2026-07-16",
+    "ticker": "MARICO.NS",
+    "session": "morning",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 95,
+    "entry": 845.1,
+    "stop_loss": 821.76,
+    "target": 891.78,
+    "reason": "paper morning",
+    "patterns": [
+      "full_bullish_alignment",
+      "pivot_s1_bounce",
+      "supertrend_bullish",
+      "tweezer_bottom",
+      "pivot_point_test",
+      "adx_strong_trend_up"
+    ]
+  },
+  {
+    "timestamp": "2026-07-16T04:05:50.771581",
+    "date": "2026-07-16",
+    "ticker": "FEDERALBNK.NS",
+    "session": "morning",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 69.0,
+    "entry": 327.9,
+    "stop_loss": 318.91,
+    "target": 345.88,
+    "reason": "paper morning",
+    "patterns": [
+      "full_bullish_alignment",
+      "near_52w_high",
+      "low_volume_drift",
+      "spinning_top",
+      "pivot_point_test",
+      "adx_strong_trend_up"
+    ]
+  },
+  {
+    "timestamp": "2026-07-16T04:05:50.772059",
+    "date": "2026-07-16",
+    "ticker": "SBIN.NS",
+    "session": "morning",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 74.7,
+    "entry": 1028.5,
+    "stop_loss": 1000.86,
+    "target": 1083.79,
+    "reason": "paper morning",
+    "patterns": [
+      "adx_ranging_market",
+      "full_bullish_alignment",
+      "supertrend_bullish",
+      "pivot_r1_breakout",
+      "stoch_rsi_oversold_reversal"
+    ]
+  },
+  {
+    "timestamp": "2026-07-16T04:05:50.772773",
+    "date": "2026-07-16",
+    "ticker": "NESTLEIND.NS",
+    "session": "morning",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 93.0,
+    "entry": 1431.4,
+    "stop_loss": 1383.58,
+    "target": 1527.04,
+    "reason": "paper morning",
+    "patterns": [
+      "tweezer_bottom",
+      "full_bullish_alignment",
+      "pivot_point_test",
+      "supertrend_bullish"
+    ]
+  },
+  {
+    "timestamp": "2026-07-16T04:05:50.774011",
+    "date": "2026-07-16",
+    "ticker": "UNIONBANK.NS",
+    "session": "morning",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 85.0,
+    "entry": 171.86,
+    "stop_loss": 162.76,
+    "target": 190.07,
+    "reason": "paper morning",
+    "patterns": [
+      "supertrend_bullish",
+      "full_bullish_alignment",
+      "pivot_r1_breakout",
+      "volume_breakout_bullish",
+      "three_white_soldiers",
+      "momentum_continuation"
+    ]
   }
 ]

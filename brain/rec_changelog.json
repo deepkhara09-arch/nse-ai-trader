@@ -1188,5 +1188,45 @@
     "ts": "2026-07-15T10:12:31.541415",
     "detail": "New BUY recommendation \u2014 confidence 67/100",
     "confidence": 66.8
+  },
+  {
+    "type": "new",
+    "ticker": "MARICO.NS",
+    "nse_code": "MARICO",
+    "signal": "BUY",
+    "date": "2026-07-16",
+    "ts": "2026-07-16T04:05:50.855004",
+    "detail": "New BUY recommendation \u2014 confidence 70/100",
+    "confidence": 69.8
+  },
+  {
+    "type": "removed",
+    "ticker": "PIDILITIND.NS",
+    "nse_code": "PIDILITIND",
+    "signal": "BUY",
+    "date": "2026-07-16",
+    "ts": "2026-07-16T04:05:50.855004",
+    "detail": "Dropped \u2014 no longer meets threshold (was 71/100)",
+    "confidence": 0
+  },
+  {
+    "type": "removed",
+    "ticker": "ICICIBANK.NS",
+    "nse_code": "ICICIBANK",
+    "signal": "BUY",
+    "date": "2026-07-16",
+    "ts": "2026-07-16T04:05:50.855004",
+    "detail": "Dropped \u2014 no longer meets threshold (was 67/100)",
+    "confidence": 0
+  },
+  {
+    "type": "updated",
+    "ticker": "NESTLEIND.NS",
+    "nse_code": "NESTLEIND",
+    "signal": "BUY",
+    "date": "2026-07-16",
+    "ts": "2026-07-16T04:05:50.855004",
+    "detail": "Confidence \u25bc4 (78 \u2192 74) | Target 1 moved \u20b91504.50 \u2192 \u20b91520.82",
+    "confidence": 74.0
   }
 ]

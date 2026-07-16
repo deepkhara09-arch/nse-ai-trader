@@ -1,45 +1,5 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of inside_bar, adx_strong_trend_up, strong_bearish_marubozu mean for a swing trade on HOMEFIRST? Current RSI=60, MACD hist=+3.5101, Vol=0.6x average. Signal is BUY.",
-    "context": {
-      "ticker": "HOMEFIRST.NS",
-      "signal": "BUY",
-      "patterns": "inside_bar, adx_strong_trend_up, strong_bearish_marubozu",
-      "rsi": 60.3
-    },
-    "queued_at": "2026-07-15T10:11:35.934735"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of inside_bar, stoch_rsi_oversold_reversal, rsi_bearish_divergence mean for a swing trade on ICICIBANK? Current RSI=61, MACD hist=-1.7310, Vol=1.2x average. Signal is BUY.",
-    "context": {
-      "ticker": "ICICIBANK.NS",
-      "signal": "BUY",
-      "patterns": "inside_bar, stoch_rsi_oversold_reversal, rsi_bearish_divergence",
-      "rsi": 61.0
-    },
-    "queued_at": "2026-07-15T10:11:35.935632"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of macd_bearish_crossover, stoch_rsi_oversold_reversal, doji mean for a swing trade on BAJFINANCE? Current RSI=57, MACD hist=-1.3762, Vol=0.8x average. Signal is BUY.",
-    "context": {
-      "ticker": "BAJFINANCE.NS",
-      "signal": "BUY",
-      "patterns": "macd_bearish_crossover, stoch_rsi_oversold_reversal, doji",
-      "rsi": 56.9
-    },
-    "queued_at": "2026-07-15T10:11:35.936204"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of stoch_rsi_oversold_reversal, pivot_point_test mean for a swing trade on PFC? Current RSI=24, MACD hist=-2.0269, Vol=0.8x average. Signal is BUY.",
-    "context": {
-      "ticker": "PFC.NS",
-      "signal": "BUY",
-      "patterns": "stoch_rsi_oversold_reversal, pivot_point_test",
-      "rsi": 24.5
-    },
-    "queued_at": "2026-07-15T10:11:35.937284"
-  },
-  {
     "question": "In Indian NSE markets, what does the combination of stoch_rsi_oversold_reversal, pivot_s1_bounce, pivot_point_test mean for a swing trade on PIDILITIND? Current RSI=45, MACD hist=-8.3642, Vol=1.4x average. Signal is BUY.",
     "context": {
       "ticker": "PIDILITIND.NS",
@@ -98,5 +58,45 @@
       "rsi": 44.6
     },
     "queued_at": "2026-07-15T10:12:31.538110"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of full_bullish_alignment, near_52w_high, adx_strong_trend_up mean for a swing trade on FEDERALBNK? Current RSI=54, MACD hist=-1.0787, Vol=0.5x average. Signal is BUY.",
+    "context": {
+      "ticker": "FEDERALBNK.NS",
+      "signal": "BUY",
+      "patterns": "full_bullish_alignment, near_52w_high, adx_strong_trend_up",
+      "rsi": 53.5
+    },
+    "queued_at": "2026-07-16T03:05:53.585998"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of inside_bar, stoch_rsi_oversold_reversal mean for a swing trade on ICICIBANK? Current RSI=61, MACD hist=-1.7310, Vol=1.2x average. Signal is BUY.",
+    "context": {
+      "ticker": "ICICIBANK.NS",
+      "signal": "BUY",
+      "patterns": "inside_bar, stoch_rsi_oversold_reversal",
+      "rsi": 61.0
+    },
+    "queued_at": "2026-07-16T03:05:53.591111"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of supertrend_bullish, pivot_point_test, macd_bearish_crossover mean for a swing trade on BAJFINANCE? Current RSI=57, MACD hist=-1.3762, Vol=0.8x average. Signal is BUY.",
+    "context": {
+      "ticker": "BAJFINANCE.NS",
+      "signal": "BUY",
+      "patterns": "supertrend_bullish, pivot_point_test, macd_bearish_crossover",
+      "rsi": 56.9
+    },
+    "queued_at": "2026-07-16T03:05:53.594394"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of pivot_point_test, pivot_s1_bounce, bb_lower_bounce mean for a swing trade on PIDILITIND? Current RSI=45, MACD hist=-8.3642, Vol=1.4x average. Signal is BUY.",
+    "context": {
+      "ticker": "PIDILITIND.NS",
+      "signal": "BUY",
+      "patterns": "pivot_point_test, pivot_s1_bounce, bb_lower_bounce",
+      "rsi": 44.6
+    },
+    "queued_at": "2026-07-16T03:05:53.596551"
   }
 ]

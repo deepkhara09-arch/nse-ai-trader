@@ -4196,5 +4196,66 @@
       "bb_lower_bounce",
       "adx_strong_trend_up"
     ]
+  },
+  {
+    "timestamp": "2026-07-16T07:45:50.671383",
+    "date": "2026-07-16",
+    "ticker": "SBIN.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 74.7,
+    "entry": 1029.6,
+    "stop_loss": 1001.96,
+    "target": 1084.89,
+    "reason": "paper afternoon",
+    "patterns": [
+      "full_bullish_alignment",
+      "supertrend_bullish",
+      "adx_ranging_market",
+      "pivot_r1_breakout",
+      "stoch_rsi_oversold_reversal"
+    ]
+  },
+  {
+    "timestamp": "2026-07-16T07:45:50.672288",
+    "date": "2026-07-16",
+    "ticker": "NESTLEIND.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 93.0,
+    "entry": 1424.8,
+    "stop_loss": 1376.98,
+    "target": 1520.44,
+    "reason": "paper afternoon",
+    "patterns": [
+      "pivot_point_test",
+      "full_bullish_alignment",
+      "tweezer_bottom",
+      "supertrend_bullish"
+    ]
+  },
+  {
+    "timestamp": "2026-07-16T07:45:50.674793",
+    "date": "2026-07-16",
+    "ticker": "PIDILITIND.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 95,
+    "entry": 1566.5,
+    "stop_loss": 1522.08,
+    "target": 1655.34,
+    "reason": "paper afternoon",
+    "patterns": [
+      "full_bullish_alignment",
+      "supertrend_bullish",
+      "adx_strong_trend_up",
+      "pivot_point_test",
+      "bb_lower_bounce",
+      "pivot_s1_bounce",
+      "stoch_rsi_oversold_reversal"
+    ]
   }
 ]

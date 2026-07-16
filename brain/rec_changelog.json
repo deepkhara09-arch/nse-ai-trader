@@ -1258,5 +1258,25 @@
     "ts": "2026-07-16T05:59:59.864640",
     "detail": "Confidence \u25bc4 (70 \u2192 66)",
     "confidence": 65.8
+  },
+  {
+    "type": "removed",
+    "ticker": "FEDERALBNK.NS",
+    "nse_code": "FEDERALBNK",
+    "signal": "BUY",
+    "date": "2026-07-16",
+    "ts": "2026-07-16T07:45:50.757432",
+    "detail": "Dropped \u2014 no longer meets threshold (was 74/100)",
+    "confidence": 0
+  },
+  {
+    "type": "removed",
+    "ticker": "MARICO.NS",
+    "nse_code": "MARICO",
+    "signal": "BUY",
+    "date": "2026-07-16",
+    "ts": "2026-07-16T07:45:50.757432",
+    "detail": "Dropped \u2014 no longer meets threshold (was 66/100)",
+    "confidence": 0
   }
 ]

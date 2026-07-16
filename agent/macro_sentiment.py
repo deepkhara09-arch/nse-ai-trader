@@ -181,7 +181,7 @@ def _fetch_macro_feeds() -> List[dict]:
     for url in MACRO_FEEDS:
         try:
             req = Request(url, headers={
-                "User-Agent": "Mozilla/5.0 (compatible; NSEMacroBot/1.0)",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36",
                 "Accept": "application/rss+xml, application/xml, text/xml, */*",
             })
             with urlopen(req, timeout=12) as r:

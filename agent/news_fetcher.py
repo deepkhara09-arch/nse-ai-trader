@@ -147,6 +147,9 @@ _ANALYST_CALL_MARKERS = [
     "stocks to sell", "stocks to watch", "multibagger", "analyst",
     "overweight", "underweight", "outperform", "underperform",
     "should you buy", "technical pick", "trading strategy", "share price target",
+    # price-tracker pages and weekly technical-outlook pieces are noise, not news
+    "live nse:", "price & chart", "stock price & chart", "outlook for the week",
+    "support and resistance", "technical outlook",
 ]
 
 

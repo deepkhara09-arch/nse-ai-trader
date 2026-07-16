@@ -48,7 +48,9 @@ MACRO_FEEDS = [
     "https://www.cnbc.com/id/15839135/device/rss/rss.html",            # CNBC world markets
     # India macro / economy
     "https://economictimes.indiatimes.com/news/economy/rssfeeds/1373380680.cms",
-    "https://www.business-standard.com/rss/economy-policy-103.rss",
+    # business-standard economy feed now returns 403 — replaced with moneycontrol
+    # economy (same publisher family as the working stocks feed).
+    "https://www.moneycontrol.com/rss/economy.xml",
 ]
 
 # Words that signal global RISK-OFF / RISK-ON specifically at the macro level

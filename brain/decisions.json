@@ -4549,5 +4549,50 @@
       "macd_bearish_crossover",
       "full_bullish_alignment"
     ]
+  },
+  {
+    "timestamp": "2026-07-17T04:05:45.850455",
+    "date": "2026-07-17",
+    "ticker": "FEDERALBNK.NS",
+    "session": "morning",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 95,
+    "entry": 331.4,
+    "stop_loss": 322.41,
+    "target": 349.38,
+    "reason": "paper morning",
+    "patterns": [
+      "spinning_top",
+      "tweezer_bottom",
+      "supertrend_bullish",
+      "near_52w_high",
+      "stoch_rsi_oversold_reversal",
+      "full_bullish_alignment",
+      "low_volume_drift",
+      "adx_strong_trend_up"
+    ]
+  },
+  {
+    "timestamp": "2026-07-17T04:05:45.851825",
+    "date": "2026-07-17",
+    "ticker": "HOMEFIRST.NS",
+    "session": "morning",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 95,
+    "entry": 1227.4,
+    "stop_loss": 1164.13,
+    "target": 1353.94,
+    "reason": "paper morning",
+    "patterns": [
+      "supertrend_bullish",
+      "stoch_rsi_oversold_reversal",
+      "full_bullish_alignment",
+      "low_volume_drift",
+      "pivot_point_test",
+      "bullish_harami",
+      "adx_strong_trend_up"
+    ]
   }
 ]

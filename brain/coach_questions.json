@@ -1,35 +1,5 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of tweezer_top, engulfing_bearish mean for a swing trade on MARICO? Current RSI=58, MACD hist=+0.1419, Vol=0.6x average. Signal is BUY.",
-    "context": {
-      "ticker": "MARICO.NS",
-      "signal": "BUY",
-      "patterns": "tweezer_top, engulfing_bearish",
-      "rsi": 58.4
-    },
-    "queued_at": "2026-07-16T10:13:11.007878"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of tweezer_bottom, full_bullish_alignment, adx_strong_trend_up mean for a swing trade on FEDERALBNK? Current RSI=56, MACD hist=-1.2399, Vol=0.5x average. Signal is BUY.",
-    "context": {
-      "ticker": "FEDERALBNK.NS",
-      "signal": "BUY",
-      "patterns": "tweezer_bottom, full_bullish_alignment, adx_strong_trend_up",
-      "rsi": 55.6
-    },
-    "queued_at": "2026-07-16T10:13:11.011753"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of stoch_rsi_oversold_reversal, pivot_r1_breakout mean for a swing trade on SBIN? Current RSI=44, MACD hist=-2.9561, Vol=1.4x average. Signal is BUY.",
-    "context": {
-      "ticker": "SBIN.NS",
-      "signal": "BUY",
-      "patterns": "stoch_rsi_oversold_reversal, pivot_r1_breakout",
-      "rsi": 44.3
-    },
-    "queued_at": "2026-07-16T10:13:11.015068"
-  },
-  {
     "question": "In Indian NSE markets, what does the combination of pivot_point_test, inside_bar, macd_bearish_crossover mean for a swing trade on NESTLEIND? Current RSI=58, MACD hist=-0.8045, Vol=0.8x average. Signal is BUY.",
     "context": {
       "ticker": "NESTLEIND.NS",
@@ -88,5 +58,45 @@
       "rsi": 44.3
     },
     "queued_at": "2026-07-17T03:05:47.448655"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of spinning_top, tweezer_bottom, supertrend_bullish mean for a swing trade on FEDERALBNK? Current RSI=56, MACD hist=-1.2450, Vol=0.5x average. Signal is BUY.",
+    "context": {
+      "ticker": "FEDERALBNK.NS",
+      "signal": "BUY",
+      "patterns": "spinning_top, tweezer_bottom, supertrend_bullish",
+      "rsi": 55.6
+    },
+    "queued_at": "2026-07-17T04:05:45.850197"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of low_volume_drift, bullish_harami mean for a swing trade on HOMEFIRST? Current RSI=60, MACD hist=+3.6325, Vol=0.4x average. Signal is BUY.",
+    "context": {
+      "ticker": "HOMEFIRST.NS",
+      "signal": "BUY",
+      "patterns": "low_volume_drift, bullish_harami",
+      "rsi": 59.7
+    },
+    "queued_at": "2026-07-17T04:05:45.851583"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of spinning_top, tweezer_bottom, supertrend_bullish mean for a swing trade on FEDERALBNK? Current RSI=56, MACD hist=-1.2450, Vol=0.5x average. Signal is BUY.",
+    "context": {
+      "ticker": "FEDERALBNK.NS",
+      "signal": "BUY",
+      "patterns": "spinning_top, tweezer_bottom, supertrend_bullish",
+      "rsi": 55.6
+    },
+    "queued_at": "2026-07-17T04:05:45.926101"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of low_volume_drift, bullish_harami mean for a swing trade on HOMEFIRST? Current RSI=60, MACD hist=+3.6325, Vol=0.4x average. Signal is BUY.",
+    "context": {
+      "ticker": "HOMEFIRST.NS",
+      "signal": "BUY",
+      "patterns": "low_volume_drift, bullish_harami",
+      "rsi": 59.7
+    },
+    "queued_at": "2026-07-17T04:05:45.927425"
   }
 ]

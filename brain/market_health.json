@@ -61,7 +61,6 @@
   "market_mood": "bearish",
   "trade_allowed": true,
   "warnings": [
-    "Nifty choppy intraday \u2014 wait for cleaner setups",
     "Global macro risk-off (-0.43) \u2014 Overall macro mood is risk-off (-0.43). US Dow -0.2% overnight. Crude -0.8%. USD/INR -0.1%. Notable: Geopolitical confli",
     "Heavy FII/DII outflow (\u20b9-1,219 Cr) \u2014 institutions selling"
   ],
@@ -74,11 +73,11 @@
   "lagging_sectors": [
     "Infra"
   ],
-  "intraday_regime": "choppy",
+  "intraday_regime": "mixed",
   "macro": {
     "date": "2026-07-17",
     "session": "midday",
-    "generated_at": "2026-07-17T06:00:15.812262",
+    "generated_at": "2026-07-17T06:15:51.669834",
     "global_score": 0.035,
     "india_score": -1.0,
     "overall_score": -0.431,
@@ -107,16 +106,16 @@
         "chg_pct": -0.51
       },
       "nikkei": {
-        "last": 63307.11,
-        "chg_pct": -5.28
+        "last": 63749.83,
+        "chg_pct": -4.62
       },
       "crude": {
         "last": 78.95,
         "chg_pct": -0.82
       },
       "usdinr": {
-        "last": 96.38,
-        "chg_pct": -0.13
+        "last": 96.36,
+        "chg_pct": -0.14
       },
       "gold": {
         "last": 3985.6,

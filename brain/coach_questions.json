@@ -1,25 +1,5 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of stoch_rsi_oversold_reversal, supertrend_bullish, full_bullish_alignment mean for a swing trade on FEDERALBNK? Current RSI=56, MACD hist=-1.2399, Vol=0.5x average. Signal is BUY.",
-    "context": {
-      "ticker": "FEDERALBNK.NS",
-      "signal": "BUY",
-      "patterns": "stoch_rsi_oversold_reversal, supertrend_bullish, full_bullish_alignment",
-      "rsi": 55.6
-    },
-    "queued_at": "2026-07-17T03:05:47.378957"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of stoch_rsi_oversold_reversal, pivot_r1_breakout mean for a swing trade on SBIN? Current RSI=44, MACD hist=-2.9561, Vol=1.4x average. Signal is BUY.",
-    "context": {
-      "ticker": "SBIN.NS",
-      "signal": "BUY",
-      "patterns": "stoch_rsi_oversold_reversal, pivot_r1_breakout",
-      "rsi": 44.3
-    },
-    "queued_at": "2026-07-17T03:05:47.448655"
-  },
-  {
     "question": "In Indian NSE markets, what does the combination of spinning_top, tweezer_bottom, supertrend_bullish mean for a swing trade on FEDERALBNK? Current RSI=56, MACD hist=-1.2450, Vol=0.5x average. Signal is BUY.",
     "context": {
       "ticker": "FEDERALBNK.NS",
@@ -98,5 +78,25 @@
       "rsi": 59.7
     },
     "queued_at": "2026-07-17T06:00:24.055959"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of full_bullish_alignment, spinning_top, supertrend_bullish mean for a swing trade on FEDERALBNK? Current RSI=56, MACD hist=-1.2450, Vol=0.5x average. Signal is BUY.",
+    "context": {
+      "ticker": "FEDERALBNK.NS",
+      "signal": "BUY",
+      "patterns": "full_bullish_alignment, spinning_top, supertrend_bullish",
+      "rsi": 55.6
+    },
+    "queued_at": "2026-07-17T07:45:58.675491"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of full_bullish_alignment, spinning_top, supertrend_bullish mean for a swing trade on FEDERALBNK? Current RSI=56, MACD hist=-1.2450, Vol=0.5x average. Signal is BUY.",
+    "context": {
+      "ticker": "FEDERALBNK.NS",
+      "signal": "BUY",
+      "patterns": "full_bullish_alignment, spinning_top, supertrend_bullish",
+      "rsi": 55.6
+    },
+    "queued_at": "2026-07-17T07:45:58.756634"
   }
 ]

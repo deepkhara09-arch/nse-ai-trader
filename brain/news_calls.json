@@ -456,8 +456,8 @@
       "direction": 1,
       "score": 0.348,
       "price_at_call": 848.25,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "flat"
     },
     {
       "date": "2026-07-14",
@@ -465,8 +465,8 @@
       "direction": -1,
       "score": -0.51,
       "price_at_call": 352.45,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "flat"
     },
     {
       "date": "2026-07-14",
@@ -474,8 +474,8 @@
       "direction": 1,
       "score": 0.393,
       "price_at_call": 327.5,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "right"
     },
     {
       "date": "2026-07-14",
@@ -483,8 +483,8 @@
       "direction": 1,
       "score": 0.22,
       "price_at_call": 1015.4,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "right"
     },
     {
       "date": "2026-07-14",
@@ -492,8 +492,8 @@
       "direction": 1,
       "score": 0.322,
       "price_at_call": 378.65,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "right"
     },
     {
       "date": "2026-07-14",
@@ -501,8 +501,8 @@
       "direction": 1,
       "score": 0.485,
       "price_at_call": 1427.1,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "flat"
     },
     {
       "date": "2026-07-14",
@@ -510,8 +510,8 @@
       "direction": 1,
       "score": 0.221,
       "price_at_call": 1407.7,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "right"
     },
     {
       "date": "2026-07-14",
@@ -519,8 +519,8 @@
       "direction": 1,
       "score": 0.296,
       "price_at_call": 170.67,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "wrong"
     },
     {
       "date": "2026-07-14",
@@ -528,8 +528,8 @@
       "direction": 1,
       "score": 0.287,
       "price_at_call": 171.43,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "flat"
     },
     {
       "date": "2026-07-14",
@@ -537,8 +537,8 @@
       "direction": 1,
       "score": 0.213,
       "price_at_call": 1317.6,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "flat"
     },
     {
       "date": "2026-07-15",
@@ -710,6 +710,87 @@
       "price_at_call": 1310.4,
       "evaluated": false,
       "outcome": ""
+    },
+    {
+      "date": "2026-07-17",
+      "ticker": "MARICO.NS",
+      "direction": 1,
+      "score": 0.413,
+      "price_at_call": 845.0,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-07-17",
+      "ticker": "FEDERALBNK.NS",
+      "direction": 1,
+      "score": 0.592,
+      "price_at_call": 348.55,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-07-17",
+      "ticker": "KOTAKBANK.NS",
+      "direction": 1,
+      "score": 0.323,
+      "price_at_call": 389.95,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-07-17",
+      "ticker": "HOMEFIRST.NS",
+      "direction": 1,
+      "score": 0.221,
+      "price_at_call": 1241.8,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-07-17",
+      "ticker": "NESTLEIND.NS",
+      "direction": 1,
+      "score": 0.48,
+      "price_at_call": 1427.2,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-07-17",
+      "ticker": "ICICIBANK.NS",
+      "direction": 1,
+      "score": 0.244,
+      "price_at_call": 1444.3,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-07-17",
+      "ticker": "UNIONBANK.NS",
+      "direction": 1,
+      "score": 0.321,
+      "price_at_call": 168.27,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-07-17",
+      "ticker": "GAIL.NS",
+      "direction": 1,
+      "score": 0.38,
+      "price_at_call": 171.2,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-07-17",
+      "ticker": "AXISBANK.NS",
+      "direction": 1,
+      "score": 0.328,
+      "price_at_call": 1328.5,
+      "evaluated": false,
+      "outcome": ""
     }
   ],
   "reliability": {
@@ -720,10 +801,10 @@
       "last_seen": "2026-07-15"
     },
     "ICICIBANK.NS": {
-      "wins": 2.983,
-      "losses": 1.938,
-      "reliability": 0.606,
-      "last_seen": "2026-07-15"
+      "wins": 3.949,
+      "losses": 1.916,
+      "reliability": 0.673,
+      "last_seen": "2026-07-17"
     },
     "BAJFINANCE.NS": {
       "wins": 1.0,
@@ -756,22 +837,28 @@
       "last_seen": "2026-07-15"
     },
     "UNIONBANK.NS": {
+      "wins": 0.989,
+      "losses": 1.0,
+      "reliability": 0.498,
+      "last_seen": "2026-07-17"
+    },
+    "FEDERALBNK.NS": {
+      "wins": 1.0,
+      "losses": 0.994,
+      "reliability": 0.501,
+      "last_seen": "2026-07-17"
+    },
+    "KOTAKBANK.NS": {
+      "wins": 1.0,
+      "losses": 0.994,
+      "reliability": 0.501,
+      "last_seen": "2026-07-17"
+    },
+    "SBIN.NS": {
       "wins": 1.0,
       "losses": 0.0,
       "reliability": 0.667,
-      "last_seen": "2026-07-15"
-    },
-    "FEDERALBNK.NS": {
-      "wins": 0.0,
-      "losses": 1.0,
-      "reliability": 0.333,
-      "last_seen": "2026-07-16"
-    },
-    "KOTAKBANK.NS": {
-      "wins": 0.0,
-      "losses": 1.0,
-      "reliability": 0.333,
-      "last_seen": "2026-07-16"
+      "last_seen": "2026-07-17"
     }
   }
 }

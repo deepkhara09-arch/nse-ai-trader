@@ -2484,7 +2484,9 @@
       "full_bullish_alignment",
       "adx_strong_trend_up",
       "bb_upper_rejection"
-    ]
+    ],
+    "dry_evaluated": true,
+    "dry_outcome": "flat"
   },
   {
     "timestamp": "2026-07-10T10:11:36.062345",
@@ -2502,7 +2504,9 @@
       "supertrend_bullish",
       "full_bullish_alignment",
       "pivot_point_test"
-    ]
+    ],
+    "dry_evaluated": true,
+    "dry_outcome": "flat"
   },
   {
     "timestamp": "2026-07-10T10:11:36.062855",
@@ -2523,7 +2527,9 @@
       "stoch_rsi_oversold_reversal",
       "adx_strong_trend_up",
       "near_52w_high"
-    ]
+    ],
+    "dry_evaluated": true,
+    "dry_outcome": "win"
   },
   {
     "timestamp": "2026-07-10T10:11:36.063157",
@@ -2563,7 +2569,9 @@
       "rsi_bullish_divergence",
       "pivot_r1_breakout",
       "bb_lower_bounce"
-    ]
+    ],
+    "dry_evaluated": true,
+    "dry_outcome": "win"
   },
   {
     "timestamp": "2026-07-10T10:11:36.064269",
@@ -2586,7 +2594,9 @@
       "engulfing_bullish",
       "adx_strong_trend_up",
       "outside_bar"
-    ]
+    ],
+    "dry_evaluated": true,
+    "dry_outcome": "flat"
   },
   {
     "timestamp": "2026-07-10T10:11:36.064814",
@@ -2607,7 +2617,9 @@
       "inverted_hammer",
       "stoch_rsi_oversold_reversal",
       "pivot_point_test"
-    ]
+    ],
+    "dry_evaluated": true,
+    "dry_outcome": "loss"
   },
   {
     "timestamp": "2026-07-10T10:11:36.065570",
@@ -2630,7 +2642,9 @@
       "stoch_rsi_oversold_reversal",
       "inside_bar",
       "adx_strong_trend_up"
-    ]
+    ],
+    "dry_evaluated": true,
+    "dry_outcome": "win"
   },
   {
     "timestamp": "2026-07-10T10:11:36.066146",
@@ -2653,7 +2667,9 @@
       "pivot_point_test",
       "adx_strong_trend_up",
       "gap_down_reversal"
-    ]
+    ],
+    "dry_evaluated": true,
+    "dry_outcome": "win"
   },
   {
     "timestamp": "2026-07-10T10:11:36.066678",
@@ -2672,7 +2688,9 @@
       "supertrend_bullish",
       "full_bearish_alignment",
       "inside_bar"
-    ]
+    ],
+    "dry_evaluated": true,
+    "dry_outcome": "win"
   },
   {
     "timestamp": "2026-07-10T10:11:36.067235",
@@ -2694,7 +2712,9 @@
       "inside_bar",
       "adx_strong_trend_up",
       "near_52w_high"
-    ]
+    ],
+    "dry_evaluated": true,
+    "dry_outcome": "loss"
   },
   {
     "timestamp": "2026-07-10T10:11:36.067765",
@@ -2717,7 +2737,9 @@
       "adx_ranging_market",
       "pivot_point_test",
       "bb_lower_bounce"
-    ]
+    ],
+    "dry_evaluated": true,
+    "dry_outcome": "flat"
   },
   {
     "timestamp": "2026-07-10T10:11:36.068312",
@@ -2739,7 +2761,9 @@
       "pivot_r1_breakout",
       "inside_bar",
       "bb_lower_bounce"
-    ]
+    ],
+    "dry_evaluated": true,
+    "dry_outcome": "flat"
   },
   {
     "timestamp": "2026-07-10T10:11:36.068828",
@@ -2760,7 +2784,9 @@
       "stoch_rsi_oversold_reversal",
       "pivot_point_test",
       "bb_lower_bounce"
-    ]
+    ],
+    "dry_evaluated": true,
+    "dry_outcome": "flat"
   },
   {
     "timestamp": "2026-07-10T10:11:36.069368",
@@ -2805,7 +2831,9 @@
       "inverted_hammer",
       "stoch_rsi_oversold_reversal",
       "pivot_point_test"
-    ]
+    ],
+    "dry_evaluated": true,
+    "dry_outcome": "loss"
   },
   {
     "timestamp": "2026-07-10T15:42:33.201954+05:30",
@@ -2828,7 +2856,9 @@
       "pivot_point_test",
       "adx_strong_trend_up",
       "gap_down_reversal"
-    ]
+    ],
+    "dry_evaluated": true,
+    "dry_outcome": "win"
   },
   {
     "timestamp": "2026-07-10T15:42:33.201961+05:30",
@@ -2851,7 +2881,9 @@
       "stoch_rsi_oversold_reversal",
       "inside_bar",
       "adx_strong_trend_up"
-    ]
+    ],
+    "dry_evaluated": true,
+    "dry_outcome": "win"
   },
   {
     "timestamp": "2026-07-10T15:42:33.201965+05:30",
@@ -2872,7 +2904,9 @@
       "stoch_rsi_oversold_reversal",
       "adx_strong_trend_up",
       "near_52w_high"
-    ]
+    ],
+    "dry_evaluated": true,
+    "dry_outcome": "win"
   },
   {
     "timestamp": "2026-07-10T15:42:33.201969+05:30",
@@ -2892,7 +2926,9 @@
       "full_bullish_alignment",
       "adx_strong_trend_up",
       "bb_upper_rejection"
-    ]
+    ],
+    "dry_evaluated": true,
+    "dry_outcome": "flat"
   },
   {
     "timestamp": "2026-07-13T10:12:16.000628",
@@ -4709,6 +4745,200 @@
       "hammer",
       "stoch_rsi_oversold_reversal",
       "three_white_soldiers"
+    ]
+  },
+  {
+    "timestamp": "2026-07-17T10:11:33.808264",
+    "date": "2026-07-17",
+    "ticker": "MARICO.NS",
+    "session": "preclose",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 95,
+    "entry": 845.0,
+    "stop_loss": 820.81,
+    "target": 893.39,
+    "reason": "paper preclose",
+    "patterns": [
+      "pivot_point_test",
+      "stoch_rsi_oversold_reversal",
+      "supertrend_bullish",
+      "full_bullish_alignment",
+      "adx_strong_trend_up",
+      "macd_bearish_crossover"
+    ]
+  },
+  {
+    "timestamp": "2026-07-17T10:11:33.822401",
+    "date": "2026-07-17",
+    "ticker": "FEDERALBNK.NS",
+    "session": "preclose",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 95,
+    "entry": 348.55,
+    "stop_loss": 338.92,
+    "target": 367.8,
+    "reason": "paper preclose",
+    "patterns": [
+      "rsi_bullish_divergence",
+      "near_52w_high",
+      "pivot_r2_breakout",
+      "stoch_rsi_oversold_reversal",
+      "52w_breakout",
+      "supertrend_bullish",
+      "full_bullish_alignment",
+      "adx_strong_trend_up",
+      "morning_star",
+      "pivot_r1_breakout"
+    ]
+  },
+  {
+    "timestamp": "2026-07-17T10:11:33.823213",
+    "date": "2026-07-17",
+    "ticker": "KOTAKBANK.NS",
+    "session": "preclose",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 95,
+    "entry": 389.95,
+    "stop_loss": 376.95,
+    "target": 415.96,
+    "reason": "paper preclose",
+    "patterns": [
+      "full_bearish_alignment",
+      "engulfing_bullish",
+      "inverted_hammer",
+      "tweezer_bottom",
+      "inside_bar",
+      "stoch_rsi_oversold_reversal",
+      "supertrend_bullish",
+      "morning_star"
+    ]
+  },
+  {
+    "timestamp": "2026-07-17T10:11:33.824187",
+    "date": "2026-07-17",
+    "ticker": "ICICIBANK.NS",
+    "session": "preclose",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 90.5,
+    "entry": 1444.3,
+    "stop_loss": 1407.44,
+    "target": 1518.01,
+    "reason": "paper preclose",
+    "patterns": [
+      "rsi_bearish_divergence",
+      "doji",
+      "stoch_rsi_oversold_reversal",
+      "supertrend_bullish",
+      "full_bullish_alignment",
+      "adx_strong_trend_up",
+      "three_white_soldiers",
+      "hammer"
+    ]
+  },
+  {
+    "timestamp": "2026-07-17T10:11:33.824453",
+    "date": "2026-07-17",
+    "ticker": "BAJFINANCE.NS",
+    "session": "preclose",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 85.0,
+    "entry": 1055.6,
+    "stop_loss": 1017.05,
+    "target": 1132.7,
+    "reason": "paper preclose",
+    "patterns": [
+      "full_bullish_alignment",
+      "adx_strong_trend_up",
+      "supertrend_bullish"
+    ]
+  },
+  {
+    "timestamp": "2026-07-17T10:11:33.825465",
+    "date": "2026-07-17",
+    "ticker": "AXISBANK.NS",
+    "session": "preclose",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 82.6,
+    "entry": 1328.5,
+    "stop_loss": 1284.06,
+    "target": 1417.37,
+    "reason": "paper preclose",
+    "patterns": [
+      "stoch_rsi_oversold_reversal",
+      "supertrend_bullish",
+      "pivot_point_test"
+    ]
+  },
+  {
+    "timestamp": "2026-07-17T10:11:33.825704",
+    "date": "2026-07-17",
+    "ticker": "PIDILITIND.NS",
+    "session": "preclose",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 93.0,
+    "entry": 1566.1,
+    "stop_loss": 1518.8,
+    "target": 1660.71,
+    "reason": "paper preclose",
+    "patterns": [
+      "rsi_bearish_divergence",
+      "pivot_s1_breakdown",
+      "shooting_star",
+      "full_bullish_alignment",
+      "adx_strong_trend_up"
+    ]
+  },
+  {
+    "timestamp": "2026-07-17T15:43:28.203145+05:30",
+    "date": "2026-07-17",
+    "ticker": "FEDERALBNK.NS",
+    "session": "preclose",
+    "action": "RECOMMEND",
+    "signal": "BUY",
+    "confidence": 85.8,
+    "entry": 349.07,
+    "stop_loss": 338.92,
+    "target": 367.81,
+    "reason": "rec snapshot (short_term)",
+    "patterns": [
+      "rsi_bullish_divergence",
+      "near_52w_high",
+      "pivot_r2_breakout",
+      "stoch_rsi_oversold_reversal",
+      "52w_breakout",
+      "supertrend_bullish",
+      "full_bullish_alignment",
+      "adx_strong_trend_up",
+      "morning_star",
+      "pivot_r1_breakout"
+    ]
+  },
+  {
+    "timestamp": "2026-07-17T15:43:28.203153+05:30",
+    "date": "2026-07-17",
+    "ticker": "MARICO.NS",
+    "session": "preclose",
+    "action": "RECOMMEND",
+    "signal": "BUY",
+    "confidence": 68.3,
+    "entry": 846.26,
+    "stop_loss": 820.81,
+    "target": 893.38,
+    "reason": "rec snapshot (short_term)",
+    "patterns": [
+      "pivot_point_test",
+      "stoch_rsi_oversold_reversal",
+      "supertrend_bullish",
+      "full_bullish_alignment",
+      "adx_strong_trend_up",
+      "macd_bearish_crossover"
     ]
   }
 ]

@@ -1,13 +1,13 @@
 {
   "phase": "paper_trading",
   "day": 19,
-  "session": "morning",
+  "session": "preopen",
   "start_date": "2026-06-22",
   "phase_start_date": "2026-07-15",
   "last_run_date": "2026-07-16",
   "last_counted_date": "2026-07-16",
   "cohort_last_tick_date": "2026-07-16",
-  "last_updated": "2026-07-16T10:13:10.941369",
+  "last_updated": "2026-07-17T03:05:47.137087",
   "focus_stocks": [
     "MARICO.NS",
     "RECLTD.NS",
@@ -64,7 +64,8 @@
     "[2026-07-14] Cohort batch #8 complete \u2014 30 candidates ready",
     "[2026-07-15] Pre-open macro: neutral (-0.05)",
     "Phase \u2192 paper_trading on day 18 (2026-07-15) | Analysis done \u2014 starting paper trades",
-    "[2026-07-16] Pre-open macro: neutral (+0.04)"
+    "[2026-07-16] Pre-open macro: neutral (+0.04)",
+    "[2026-07-17] Pre-open macro: risk_off (-0.46)"
   ],
   "alert_sent": false,
   "schema_version": 11,
@@ -262,11 +263,6 @@
     "scored_date": "2026-07-14"
   },
   "sessions_done": {
-    "preopen": "2026-07-16",
-    "morning": "2026-07-16",
-    "midday": "2026-07-16",
-    "afternoon": "2026-07-16",
-    "intraday_close": "2026-07-16",
-    "preclose": "2026-07-16"
+    "preopen": "2026-07-17"
   }
 }

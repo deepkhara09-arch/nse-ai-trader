@@ -1,27 +1,27 @@
 {
-  "date": "2026-07-16",
-  "session": "preclose",
+  "date": "2026-07-17",
+  "session": "preopen",
   "nifty": {
     "symbol": "^NSEI",
-    "value": 24078.5,
-    "day_change_pct": 0.11,
+    "value": 24072.75,
+    "day_change_pct": -0.02,
     "trend_5d": "sideways",
     "trend_20d": "sideways",
-    "ath_pct_60d": -1.84
+    "ath_pct_60d": -1.87
   },
   "vix": {
-    "value": 13.27,
+    "value": 12.88,
     "level": "normal",
-    "percentile_30d": 37.0,
-    "avg_30d": 13.83
+    "percentile_30d": 23.0,
+    "avg_30d": 13.72
   },
   "bank_nifty": {
     "symbol": "^NSEBANK",
-    "value": 57757.85,
-    "day_change_pct": 0.51,
-    "trend_5d": "up",
+    "value": 57582.25,
+    "day_change_pct": -0.3,
+    "trend_5d": "sideways",
     "trend_20d": "sideways",
-    "ath_pct_60d": -1.62,
+    "ath_pct_60d": -1.91,
     "diverging": false
   },
   "sectors": {
@@ -35,11 +35,11 @@
     },
     "Pharma": {
       "symbol": "PHARMABEES.NS",
-      "value": 26.75,
-      "day_change_pct": 0.6,
+      "value": 26.76,
+      "day_change_pct": 0.04,
       "trend_5d": "up",
       "trend_20d": "strong_up",
-      "ath_pct_60d": -1.15
+      "ath_pct_60d": -1.8
     },
     "Bank": {
       "symbol": "BANKBEES.NS",
@@ -58,9 +58,12 @@
       "ath_pct_60d": -3.06
     }
   },
-  "market_mood": "neutral",
+  "market_mood": "bearish",
   "trade_allowed": true,
-  "warnings": [],
+  "warnings": [
+    "Global macro risk-off (-0.46) \u2014 Overall macro mood is risk-off (-0.46). US Dow -0.2% overnight. Crude +0.0%. USD/INR -0.2%. Notable: Geopolitical confli",
+    "Heavy FII/DII outflow (\u20b9-1,219 Cr) \u2014 institutions selling"
+  ],
   "leading_sectors": [
     "IT",
     "Pharma",
@@ -72,54 +75,54 @@
   "broad_market_strength": true,
   "intraday_regime": "mixed",
   "macro": {
-    "date": "2026-07-16",
-    "session": "midday",
-    "generated_at": "2026-07-16T06:42:58.252051",
-    "global_score": 0.099,
-    "india_score": 0.0,
-    "overall_score": 0.054,
-    "mood": "neutral",
+    "date": "2026-07-17",
+    "session": "preopen",
+    "generated_at": "2026-07-17T03:05:45.712399",
+    "global_score": -0.016,
+    "india_score": -1.0,
+    "overall_score": -0.459,
+    "mood": "risk_off",
     "drivers": [
-      "AI is so big, it\u2019s now impossible for investors to avoid",
-      "United Airlines gets hit by a $6 billion added-fuel-cost headwind",
-      "The trucking market is tighter than it\u2019s been in years \u2014 but investors are upbeat on J.B. Hunt",
-      "\u2018They cut off online access\u2019: My mother\u2019s bank balance plummeted after her death. What\u2019s going on?",
-      "\u2018I don\u2019t want to sound callous\u2019: Why base your Social Security claim on life expectancy? We could die at any time.",
-      "Your Netflix bill is up 29% in just over a year. It\u2019s time for Washington to step in.",
-      "My husband and I are retired. Our financial adviser, who is in his 30s, called us \u2018you guyses.\u2019 Is that unprofessional?",
-      "You are missing the bond deal of the decade \u2014 and it is guaranteed to beat inflation"
+      "Micron has turned into \u2018the most important stock in the market.\u2019 So is it time to worry?",
+      "Netflix is getting stingier about its viewing data, and Wall Street isn\u2019t happy",
+      "10 U.S. metro areas where builders are slashing prices on new homes",
+      "Palo Alto Networks\u2019 stock has been on a tear \u2014 and it could go even higher, according to these bulls",
+      "As SpaceX\u2019s stock notches first close below IPO price, the company is gearing up for a crucial launch",
+      "Americans say they need $1.2 million to retire. Most are too deep in debt to get there.",
+      "GE boosts profit outlook, but stock falls as booming order growth cools",
+      "\u2018It\u2019s heartbreaking\u2019: My brother claimed Social Security at 70. He died from cancer after one payment. Why wait to claim?"
     ],
     "global_cues": {
       "dow": {
-        "last": 52658.64,
-        "chg_pct": 0.29
+        "last": 52552.97,
+        "chg_pct": -0.2
       },
       "nasdaq": {
-        "last": 26269.23,
-        "chg_pct": 0.62
+        "last": 25881.95,
+        "chg_pct": -1.47
       },
       "sp500": {
-        "last": 7572.4,
-        "chg_pct": 0.38
+        "last": 7533.77,
+        "chg_pct": -0.51
       },
       "nikkei": {
-        "last": 66909.91,
-        "chg_pct": -2.68
+        "last": 63896.48,
+        "chg_pct": -4.4
       },
       "crude": {
-        "last": 79.6,
-        "chg_pct": 0.33
+        "last": 78.95,
+        "chg_pct": 0.0
       },
       "usdinr": {
-        "last": 96.32,
-        "chg_pct": -0.11
+        "last": 96.33,
+        "chg_pct": -0.17
       },
       "gold": {
-        "last": 4044.0,
-        "chg_pct": -0.42
+        "last": 3983.2,
+        "chg_pct": -0.06
       }
     },
-    "summary": "Overall macro mood is neutral (+0.05). US Dow +0.3% overnight. Crude +0.3%. USD/INR -0.1%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
+    "summary": "Overall macro mood is risk-off (-0.46). US Dow -0.2% overnight. Crude +0.0%. USD/INR -0.2%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
       "Trade-war headlines spook global markets; IT & export names react most."
@@ -127,13 +130,13 @@
     "playbook_bias": "risk_off",
     "article_count": 60
   },
-  "macro_risk_factor": 1.0,
+  "macro_risk_factor": 0.7,
   "fii_dii": {
-    "date": "2026-07-16",
-    "fii_net_cr": -735.83,
-    "dii_net_cr": 704.93,
-    "combined_net_cr": -30.9,
-    "signal": "neutral",
+    "date": "2026-07-17",
+    "fii_net_cr": -4205.56,
+    "dii_net_cr": 2986.41,
+    "combined_net_cr": -1219.15,
+    "signal": "strong_outflow",
     "ok": true,
     "error": "",
     "history": [
@@ -244,15 +247,21 @@
         "fii": -735.83,
         "dii": 704.93,
         "combined": -30.9
+      },
+      {
+        "date": "2026-07-17",
+        "fii": -4205.56,
+        "dii": 2986.41,
+        "combined": -1219.15
       }
     ]
   },
   "pcr": {
-    "date": "2026-07-16",
+    "date": "2026-07-17",
     "pcr": 0.828,
     "reading": "neutral",
-    "total_pe_oi": 1686249,
-    "total_ce_oi": 2036477,
+    "total_pe_oi": 1667219,
+    "total_ce_oi": 2013983,
     "spot": 24072.75,
     "max_pain": 24100.0,
     "max_pain_dist_pct": -0.11,

@@ -1328,5 +1328,15 @@
     "ts": "2026-07-16T10:13:11.025522",
     "detail": "New BUY recommendation \u2014 confidence 65/100",
     "confidence": 65.3
+  },
+  {
+    "type": "removed",
+    "ticker": "NESTLEIND.NS",
+    "nse_code": "NESTLEIND",
+    "signal": "BUY",
+    "date": "2026-07-17",
+    "ts": "2026-07-17T03:05:47.452739",
+    "detail": "Dropped \u2014 no longer meets threshold (was 65/100)",
+    "confidence": 0
   }
 ]

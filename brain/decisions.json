@@ -4594,5 +4594,50 @@
       "bullish_harami",
       "adx_strong_trend_up"
     ]
+  },
+  {
+    "timestamp": "2026-07-17T06:00:23.967998",
+    "date": "2026-07-17",
+    "ticker": "FEDERALBNK.NS",
+    "session": "midday",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 95,
+    "entry": 333.9,
+    "stop_loss": 324.91,
+    "target": 351.88,
+    "reason": "paper midday",
+    "patterns": [
+      "spinning_top",
+      "tweezer_bottom",
+      "low_volume_drift",
+      "adx_strong_trend_up",
+      "full_bullish_alignment",
+      "supertrend_bullish",
+      "stoch_rsi_oversold_reversal",
+      "near_52w_high"
+    ]
+  },
+  {
+    "timestamp": "2026-07-17T06:00:23.969376",
+    "date": "2026-07-17",
+    "ticker": "HOMEFIRST.NS",
+    "session": "midday",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 95,
+    "entry": 1228.6,
+    "stop_loss": 1165.33,
+    "target": 1355.14,
+    "reason": "paper midday",
+    "patterns": [
+      "bullish_harami",
+      "low_volume_drift",
+      "supertrend_bullish",
+      "full_bullish_alignment",
+      "pivot_point_test",
+      "adx_strong_trend_up",
+      "stoch_rsi_oversold_reversal"
+    ]
   }
 ]

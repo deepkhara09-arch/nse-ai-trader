@@ -1,6 +1,6 @@
 {
   "date": "2026-07-17",
-  "session": "morning",
+  "session": "midday",
   "nifty": {
     "symbol": "^NSEI",
     "value": 24072.75,
@@ -27,11 +27,11 @@
   "sectors": {
     "IT": {
       "symbol": "ITBEES.NS",
-      "value": 31.66,
-      "day_change_pct": -0.6,
-      "trend_5d": "strong_up",
-      "trend_20d": "sideways",
-      "ath_pct_60d": -8.63
+      "value": 31.87,
+      "day_change_pct": 0.66,
+      "trend_5d": "up",
+      "trend_20d": "strong_up",
+      "ath_pct_60d": -8.02
     },
     "Pharma": {
       "symbol": "PHARMABEES.NS",
@@ -43,45 +43,45 @@
     },
     "Bank": {
       "symbol": "BANKBEES.NS",
-      "value": 597.57,
-      "day_change_pct": 0.57,
-      "trend_5d": "up",
+      "value": 597.09,
+      "day_change_pct": -0.08,
+      "trend_5d": "sideways",
       "trend_20d": "sideways",
-      "ath_pct_60d": -4.83
+      "ath_pct_60d": -4.91
     },
     "Infra": {
       "symbol": "INFRABEES.NS",
-      "value": 963.1,
-      "day_change_pct": -0.28,
-      "trend_5d": "sideways",
+      "value": 960.83,
+      "day_change_pct": -0.24,
+      "trend_5d": "down",
       "trend_20d": "down",
-      "ath_pct_60d": -3.06
+      "ath_pct_60d": -3.29
     }
   },
   "market_mood": "bearish",
   "trade_allowed": true,
   "warnings": [
     "Nifty choppy intraday \u2014 wait for cleaner setups",
-    "Global macro risk-off (-0.46) \u2014 Overall macro mood is risk-off (-0.46). US Dow -0.2% overnight. Crude +0.0%. USD/INR -0.2%. Notable: Geopolitical confli",
+    "Global macro risk-off (-0.43) \u2014 Overall macro mood is risk-off (-0.43). US Dow -0.2% overnight. Crude -0.8%. USD/INR -0.1%. Notable: Geopolitical confli",
     "Heavy FII/DII outflow (\u20b9-1,219 Cr) \u2014 institutions selling"
   ],
   "leading_sectors": [
     "IT",
-    "Pharma",
-    "Bank"
+    "Pharma"
   ],
   "market_regime": "normal",
-  "sector_breadth": 0.75,
-  "lagging_sectors": [],
-  "broad_market_strength": true,
+  "sector_breadth": 0.5,
+  "lagging_sectors": [
+    "Infra"
+  ],
   "intraday_regime": "choppy",
   "macro": {
     "date": "2026-07-17",
-    "session": "preopen",
-    "generated_at": "2026-07-17T03:05:45.712399",
-    "global_score": -0.016,
+    "session": "midday",
+    "generated_at": "2026-07-17T06:00:15.812262",
+    "global_score": 0.035,
     "india_score": -1.0,
-    "overall_score": -0.459,
+    "overall_score": -0.431,
     "mood": "risk_off",
     "drivers": [
       "Micron has turned into \u2018the most important stock in the market.\u2019 So is it time to worry?",
@@ -107,23 +107,23 @@
         "chg_pct": -0.51
       },
       "nikkei": {
-        "last": 63896.48,
-        "chg_pct": -4.4
+        "last": 63307.11,
+        "chg_pct": -5.28
       },
       "crude": {
         "last": 78.95,
-        "chg_pct": 0.0
+        "chg_pct": -0.82
       },
       "usdinr": {
-        "last": 96.33,
-        "chg_pct": -0.17
+        "last": 96.38,
+        "chg_pct": -0.13
       },
       "gold": {
-        "last": 3983.2,
-        "chg_pct": -0.06
+        "last": 3985.6,
+        "chg_pct": -1.44
       }
     },
-    "summary": "Overall macro mood is risk-off (-0.46). US Dow -0.2% overnight. Crude +0.0%. USD/INR -0.2%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
+    "summary": "Overall macro mood is risk-off (-0.43). US Dow -0.2% overnight. Crude -0.8%. USD/INR -0.1%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
       "Trade-war headlines spook global markets; IT & export names react most."

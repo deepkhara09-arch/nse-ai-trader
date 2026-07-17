@@ -4662,5 +4662,53 @@
       "tweezer_bottom",
       "stoch_rsi_oversold_reversal"
     ]
+  },
+  {
+    "timestamp": "2026-07-17T09:45:45.453120",
+    "date": "2026-07-17",
+    "ticker": "FEDERALBNK.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 95,
+    "entry": 348.5,
+    "stop_loss": 338.87,
+    "target": 367.75,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "near_52w_high",
+      "52w_breakout",
+      "supertrend_bullish",
+      "pivot_r1_breakout",
+      "rsi_bullish_divergence",
+      "full_bullish_alignment",
+      "adx_strong_trend_up",
+      "stoch_rsi_oversold_reversal",
+      "morning_star",
+      "pivot_r2_breakout"
+    ]
+  },
+  {
+    "timestamp": "2026-07-17T09:45:45.455102",
+    "date": "2026-07-17",
+    "ticker": "ICICIBANK.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 75.5,
+    "entry": 1442.0,
+    "stop_loss": 1405.14,
+    "target": 1515.71,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "supertrend_bullish",
+      "doji",
+      "full_bullish_alignment",
+      "adx_strong_trend_up",
+      "rsi_bearish_divergence",
+      "hammer",
+      "stoch_rsi_oversold_reversal",
+      "three_white_soldiers"
+    ]
   }
 ]

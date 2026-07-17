@@ -1,45 +1,5 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of spinning_top, tweezer_bottom, supertrend_bullish mean for a swing trade on FEDERALBNK? Current RSI=56, MACD hist=-1.2450, Vol=0.5x average. Signal is BUY.",
-    "context": {
-      "ticker": "FEDERALBNK.NS",
-      "signal": "BUY",
-      "patterns": "spinning_top, tweezer_bottom, supertrend_bullish",
-      "rsi": 55.6
-    },
-    "queued_at": "2026-07-17T04:05:45.850197"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of low_volume_drift, bullish_harami mean for a swing trade on HOMEFIRST? Current RSI=60, MACD hist=+3.6325, Vol=0.4x average. Signal is BUY.",
-    "context": {
-      "ticker": "HOMEFIRST.NS",
-      "signal": "BUY",
-      "patterns": "low_volume_drift, bullish_harami",
-      "rsi": 59.7
-    },
-    "queued_at": "2026-07-17T04:05:45.851583"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of spinning_top, tweezer_bottom, supertrend_bullish mean for a swing trade on FEDERALBNK? Current RSI=56, MACD hist=-1.2450, Vol=0.5x average. Signal is BUY.",
-    "context": {
-      "ticker": "FEDERALBNK.NS",
-      "signal": "BUY",
-      "patterns": "spinning_top, tweezer_bottom, supertrend_bullish",
-      "rsi": 55.6
-    },
-    "queued_at": "2026-07-17T04:05:45.926101"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of low_volume_drift, bullish_harami mean for a swing trade on HOMEFIRST? Current RSI=60, MACD hist=+3.6325, Vol=0.4x average. Signal is BUY.",
-    "context": {
-      "ticker": "HOMEFIRST.NS",
-      "signal": "BUY",
-      "patterns": "low_volume_drift, bullish_harami",
-      "rsi": 59.7
-    },
-    "queued_at": "2026-07-17T04:05:45.927425"
-  },
-  {
     "question": "In Indian NSE markets, what does the combination of spinning_top, tweezer_bottom, low_volume_drift mean for a swing trade on FEDERALBNK? Current RSI=56, MACD hist=-1.2450, Vol=0.5x average. Signal is BUY.",
     "context": {
       "ticker": "FEDERALBNK.NS",
@@ -98,5 +58,45 @@
       "rsi": 55.6
     },
     "queued_at": "2026-07-17T07:45:58.756634"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of near_52w_high, 52w_breakout, supertrend_bullish mean for a swing trade on FEDERALBNK? Current RSI=54, MACD hist=-1.4071, Vol=1.6x average. Signal is BUY.",
+    "context": {
+      "ticker": "FEDERALBNK.NS",
+      "signal": "BUY",
+      "patterns": "near_52w_high, 52w_breakout, supertrend_bullish",
+      "rsi": 53.9
+    },
+    "queued_at": "2026-07-17T09:45:45.452873"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of doji, hammer, stoch_rsi_oversold_reversal mean for a swing trade on ICICIBANK? Current RSI=60, MACD hist=-1.4090, Vol=0.9x average. Signal is BUY.",
+    "context": {
+      "ticker": "ICICIBANK.NS",
+      "signal": "BUY",
+      "patterns": "doji, hammer, stoch_rsi_oversold_reversal",
+      "rsi": 60.1
+    },
+    "queued_at": "2026-07-17T09:45:45.454879"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of 52w_breakout, supertrend_bullish, pivot_r1_breakout mean for a swing trade on FEDERALBNK? Current RSI=54, MACD hist=-1.4071, Vol=1.6x average. Signal is BUY.",
+    "context": {
+      "ticker": "FEDERALBNK.NS",
+      "signal": "BUY",
+      "patterns": "52w_breakout, supertrend_bullish, pivot_r1_breakout",
+      "rsi": 53.9
+    },
+    "queued_at": "2026-07-17T09:45:45.533478"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of doji, hammer, stoch_rsi_oversold_reversal mean for a swing trade on ICICIBANK? Current RSI=60, MACD hist=-1.4090, Vol=0.9x average. Signal is BUY.",
+    "context": {
+      "ticker": "ICICIBANK.NS",
+      "signal": "BUY",
+      "patterns": "doji, hammer, stoch_rsi_oversold_reversal",
+      "rsi": 60.1
+    },
+    "queued_at": "2026-07-17T09:45:45.538437"
   }
 ]

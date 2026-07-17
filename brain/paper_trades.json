@@ -1,5 +1,5 @@
 {
-  "capital": 57738.880000000005,
+  "capital": 65670.87459,
   "open_positions": [
     {
       "ticker": "MARICO.NS",
@@ -37,8 +37,8 @@
         "\u26a0 Recent forward-tested call accuracy only 15% (last 20 scored) \u2014 raising the conviction bar",
         "RSI=63 elevated"
       ],
-      "current_price": 840.75,
-      "unrealized_pnl": -60.9,
+      "current_price": 843.15,
+      "unrealized_pnl": -27.3,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -80,8 +80,8 @@
         "\u26a0 Recent forward-tested call accuracy only 15% (last 20 scored) \u2014 raising the conviction bar",
         "RSI=63 elevated"
       ],
-      "current_price": 1418.4,
-      "unrealized_pnl": -91.0,
+      "current_price": 1427.1,
+      "unrealized_pnl": -30.1,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -125,8 +125,8 @@
         "\u2713 Daily setup aligned with the higher-timeframe trend",
         "\u26a0 Recent forward-tested call accuracy only 15% (last 20 scored) \u2014 raising the conviction bar"
       ],
-      "current_price": 167.59,
-      "unrealized_pnl": -115.29,
+      "current_price": 168.47,
+      "unrealized_pnl": -91.53,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -170,8 +170,8 @@
         "\u26a0 Recent forward-tested call accuracy only 15% (last 20 scored) \u2014 raising the conviction bar",
         "MACD histogram negative"
       ],
-      "current_price": 1041.1,
-      "unrealized_pnl": 100.8,
+      "current_price": 1043.3,
+      "unrealized_pnl": 118.4,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -180,7 +180,9 @@
         "mood": "neutral",
         "regime": "mixed"
       }
-    },
+    }
+  ],
+  "closed_trades": [
     {
       "ticker": "FEDERALBNK.NS",
       "sector": "Other",
@@ -215,8 +217,8 @@
         "\u26a0 Recent forward-tested call accuracy only 15% (last 20 scored) \u2014 raising the conviction bar",
         "MACD histogram negative"
       ],
-      "current_price": 334.15,
-      "unrealized_pnl": 143.75,
+      "current_price": 348.5,
+      "unrealized_pnl": 473.8,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -224,10 +226,19 @@
         "vix": 13.27,
         "mood": "neutral",
         "regime": "mixed"
-      }
+      },
+      "close_date": "2026-07-17",
+      "close_session": "intraday_close",
+      "exit_price": 345.88,
+      "exit_reason": "target_hit",
+      "pnl": 390.29,
+      "pnl_gross": 413.54,
+      "costs": 23.25,
+      "pnl_pct": 5.18,
+      "won": true,
+      "open_days": 1
     }
   ],
-  "closed_trades": [],
   "daily_snapshots": [
     {
       "date": "2026-07-16",
@@ -237,11 +248,11 @@
       "daily_pnl": 0.0
     }
   ],
-  "daily_pnl_today": 0.0,
+  "daily_pnl_today": 390.2945900000004,
   "last_snapshot_date": "2026-07-16",
-  "lifetime_wins": 0,
+  "lifetime_wins": 1,
   "lifetime_losses": 0,
-  "lifetime_pnl": 0,
+  "lifetime_pnl": 390.29,
   "last_pnl_reset_date": "2026-07-17",
   "max_drawdown_pct": 0.0,
   "current_drawdown_pct": 0.0,

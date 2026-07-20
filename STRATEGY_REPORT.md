@@ -1,5 +1,5 @@
 # NSE AI Trader — Strategy Report
-> Updated: 2026-07-17 &nbsp;|&nbsp; Day 20 &nbsp;|&nbsp; Phase: paper_trading
+> Updated: 2026-07-20 &nbsp;|&nbsp; Day 21 &nbsp;|&nbsp; Phase: paper_trading
 
 ---
 
@@ -21,80 +21,164 @@
 > **Important:** These are paper trade signals based on the agent's learned patterns.
 > Not financial advice. Always use your own judgement and consult a SEBI advisor.
 
-BUY FEDERALBNK.NS (FEDERALBNK)
-   CMP:           Rs.348.55
-   Entry Zone:    Rs.347.85 - Rs.350.29
-   Stop Loss:     Rs.338.92  (2.8% risk)
-   Target 1:      Rs.367.81  (R:R 1:2.0)
-   Target 2:      Rs.374.23  (R:R 1:2.7)
+BUY Pidilite Industries (PIDILITIND)
+   CMP:           Rs.1,564.20
+   Entry Zone:    Rs.1,561.07 - Rs.1,572.02
+   Stop Loss:     Rs.1,517.90  (3.0% risk)
+   Target 1:      Rs.1,656.80  (R:R 1:2.0)
+   Target 2:      Rs.1,687.66  (R:R 1:2.7)
    Hold:          5–15 trading days (swing)
-   Qty (2% risk): 34 shares -> Rs.11,851 invested
-   Max loss:      Rs.327 if SL hit
-   Confidence:    86/100  (Tech:40 Fund:13 News:20 Pat:5)
+   Qty (2% risk): 7 shares -> Rs.10,949 invested
+   Max loss:      Rs.324 if SL hit
+   Confidence:    79/100  (Tech:40 Fund:13 News:20 Pat:1)
    Reasons:
      - All EMAs stacked bullish
-     - RSI=54 in healthy buy zone
-     - High volume confirmation (1.6x avg)
-     - Positive news sentiment (0.59)
+     - RSI=43 in healthy buy zone
+     - High volume confirmation (1.8x avg)
+     - Positive news sentiment (0.46)
      - News sentiment improving across sessions
-     - Candlestick: morning star
-     - RSI bullish divergence — price lower but RSI higher
-     - 52-week breakout on high volume — strong momentum
-     - Near 52-week high — potential breakout zone
-     - Supertrend bullish — price above trend band
-     - ADX strong trend — directional move confirmed
-     - Broke above Pivot R1 with volume — bullish
-     - Broke above Pivot R2 — strong momentum
-     - StochRSI oversold with bullish candle — reversal
-     - High delivery 63% — strong institutional accumulation
-     - In a long-term strong uptrend (2yr) — trend on our side
-     - Near 52-week high (98% of range) — breakout zone
-     - ✓ Daily setup aligned with the higher-timeframe trend
-     - ⚠ Market mood is bearish — buying against the tape needs extra conviction
-     - Valuation: P/E 20.0x
-     - ROE: 11.7%
-     - ROCE: 8.6%
-     - Revenue growing 12.3% YoY
-     - Net profit up 22.6% QoQ
-     - Sales up 15.3% QoQ
-     - Latest quarter NP: ₹1,341 Cr
-     - Latest quarter Sales: ₹4,731 Cr
-     - Market Cap: ₹86,099 Cr
-     - Dividend yield: 37.0%
-     - Support at ₹330.04 cushions downside
-     - Resistance at ₹360.00 is natural target
-     - Latest news: 'Federal Bank Q1 Results: Profit jumps 36.5% YoY to  ₹1,177 crore'
-     - Confluence: 5 independent signal families agree (trend, volume, pattern, news, regime)
-     - History backtest: this kind of BUY setup worked 55% of the time over ~1 week on this stock (sample: 58)
-   Market warnings: Global macro risk-off (-0.42) — Overall macro mood is risk-off (-0.42). US Dow -0.2% overnight. Crude -0.8%. USD/INR -0.1%. Notable: Geopolitical confli | Heavy FII/DII outflow (₹-1,219 Cr) — institutions selling
-
----
-
-BUY Marico Ltd (MARICO)
-   CMP:           Rs.845.00
-   Entry Zone:    Rs.843.31 - Rs.849.22
-   Stop Loss:     Rs.820.81  (2.9% risk)
-   Target 1:      Rs.893.38  (R:R 1:2.0)
-   Target 2:      Rs.909.51  (R:R 1:2.7)
-   Hold:          5–15 trading days (swing)
-   Qty (2% risk): 14 shares -> Rs.11,830 invested
-   Max loss:      Rs.339 if SL hit
-   Confidence:    68/100  (Tech:28 Fund:13 News:19 Pat:1)
-   Reasons:
-     - All EMAs stacked bullish
-     - Positive news sentiment (0.41, news 0.7x reliable here)
-     - News sentiment improving across sessions
-     - Sector headwind (momentum=-0.31)
+     - Candlestick: tweezer bottom
+     - Candlestick: bullish harami
      - Supertrend bullish — price above trend band
      - ADX strong trend — directional move confirmed
      - Testing pivot point — decision zone
      - StochRSI oversold with bullish candle — reversal
-     - High delivery 68% — strong institutional accumulation
+     - High delivery 72% — strong institutional accumulation
      - In a long-term strong uptrend (2yr) — trend on our side
-     - Near 52-week high (95% of range) — breakout zone
      - ✓ Daily setup aligned with the higher-timeframe trend
-     - ⚠ Sector momentum -0.31 — buying into a falling sector needs extra conviction
-     - ⚠ Market mood is bearish — buying against the tape needs extra conviction
+     - ⚠ Sector momentum -0.30 — buying into a falling sector needs extra conviction
+     - Valuation: P/E 65.2x
+     - ROE: 23.5%
+     - ROCE: 27.4%
+     - Revenue growing 14.1% YoY
+     - Latest quarter NP: ₹579 Cr
+     - Latest quarter Sales: ₹3,583 Cr
+     - Market Cap: ₹159,396 Cr
+     - Analyst target: +5.5% upside
+     - Promoter holding: 69.4%
+     - Dividend yield: 73.0%
+     - Low debt: D/E 0.04
+     - Support at ₹1483.30 cushions downside
+     - Resistance at ₹1596.79 is natural target
+     - Latest news: 'Pidilite Industries Limited (NSE:PIDILITIND) Passed Our Checks, And It'
+     - Confluence: 4 independent signal families agree (trend, volume, pattern, news)
+     - History backtest: this kind of BUY setup worked 46% of the time over ~1 week on this stock (sample: 50)
+   Market warnings: Nifty choppy intraday — wait for cleaner setups
+
+---
+
+BUY HOMEFIRST.NS (HOMEFIRST)
+   CMP:           Rs.1,273.20
+   Entry Zone:    Rs.1,270.65 - Rs.1,279.57
+   Stop Loss:     Rs.1,212.34  (4.8% risk)
+   Target 1:      Rs.1,394.92  (R:R 1:2.0)
+   Target 2:      Rs.1,435.49  (R:R 1:2.7)
+   Hold:          5–15 trading days (swing)
+   Qty (2% risk): 9 shares -> Rs.11,459 invested
+   Max loss:      Rs.548 if SL hit
+   Confidence:    78/100  (Tech:36 Fund:12 News:20 Pat:3)
+   Reasons:
+     - All EMAs stacked bullish
+     - MACD histogram positive
+     - Positive news sentiment (0.57)
+     - News sentiment improving across sessions
+     - Candlestick: engulfing bullish
+     - RSI bullish divergence — price lower but RSI higher
+     - Supertrend bullish — price above trend band
+     - ADX strong trend — directional move confirmed
+     - Delivery 47% above avg — institutional buying
+     - In a long-term strong uptrend (2yr) — trend on our side
+     - ✓ Daily setup aligned with the higher-timeframe trend
+     - ⚠ Sector momentum -0.29 — buying into a falling sector needs extra conviction
+     - Valuation: P/E 24.1x
+     - ROE: 15.7%
+     - ROCE: 4.7%
+     - Revenue growing 30.6% YoY
+     - Net profit up 6.6% QoQ
+     - Sales up 1.1% QoQ
+     - Latest quarter NP: ₹149 Cr
+     - Latest quarter Sales: ₹454 Cr
+     - Market Cap: ₹12,980 Cr
+     - Analyst target: +13.8% upside
+     - Dividend yield: 42.0%
+     - Support at ₹1220.89 cushions downside
+     - Resistance at ₹1300.00 is natural target
+     - Latest news: 'Home First Finance Company India Ltd Upgraded to Buy on Strong Fundame'
+     - Confluence: 5 independent signal families agree (trend, momentum, volume, pattern, news)
+     - History backtest: this kind of BUY setup worked 39% of the time over ~1 week on this stock (sample: 49)
+   Market warnings: Nifty choppy intraday — wait for cleaner setups
+
+---
+
+BUY Sun Pharmaceutical (SUNPHARMA)
+   CMP:           Rs.1,956.40
+   Entry Zone:    Rs.1,952.49 - Rs.1,966.18
+   Stop Loss:     Rs.1,906.89  (2.5% risk)
+   Target 1:      Rs.2,055.42  (R:R 1:2.0)
+   Target 2:      Rs.2,088.43  (R:R 1:2.7)
+   Hold:          5–15 trading days (swing)
+   Qty (2% risk): 6 shares -> Rs.11,738 invested
+   Max loss:      Rs.297 if SL hit
+   Confidence:    76/100  (Tech:40 Fund:7 News:17 Pat:2)
+   Reasons:
+     - All EMAs stacked bullish
+     - MACD histogram positive
+     - Positive news sentiment (0.38)
+     - News sentiment improving across sessions
+     - Candlestick: morning star
+     - Near 52-week high — potential breakout zone
+     - Supertrend bullish — price above trend band
+     - ADX strong trend — directional move confirmed
+     - Broke above Pivot R1 with volume — bullish
+     - Testing pivot point — decision zone
+     - StochRSI oversold with bullish candle — reversal
+     - High delivery 72% — strong institutional accumulation
+     - In a long-term strong uptrend (2yr) — trend on our side
+     - Near 52-week high (100% of range) — breakout zone
+     - ✓ Daily setup aligned with the higher-timeframe trend
+     - Valuation: P/E 40.5x
+     - ROE: 14.7%
+     - ROCE: 12.8%
+     - Revenue growing 12.8% YoY
+     - Latest quarter NP: ₹2,714 Cr
+     - Latest quarter Sales: ₹14,560 Cr
+     - Market Cap: ₹463,695 Cr
+     - Analyst target: +6.3% upside
+     - Promoter holding: 55.6%
+     - Dividend yield: 82.0%
+     - Low debt: D/E 0.06
+     - Support at ₹1900.41 cushions downside
+     - Resistance at ₹2000.00 is natural target
+     - Latest news: 'Sun Pharma to Announce Q1 FY Results on July 31 with Earnings Call at '
+     - Confluence: 6 independent signal families agree (trend, momentum, volume, pattern, news, regime)
+     - History backtest: this kind of BUY setup worked 67% of the time over ~1 week on this stock (sample: 55)
+   Market warnings: Nifty choppy intraday — wait for cleaner setups
+
+---
+
+BUY Marico Ltd (MARICO)
+   CMP:           Rs.855.70
+   Entry Zone:    Rs.853.99 - Rs.859.98
+   Stop Loss:     Rs.832.09  (2.8% risk)
+   Target 1:      Rs.902.92  (R:R 1:2.0)
+   Target 2:      Rs.919.26  (R:R 1:2.7)
+   Hold:          5–15 trading days (swing)
+   Qty (2% risk): 14 shares -> Rs.11,980 invested
+   Max loss:      Rs.331 if SL hit
+   Confidence:    68/100  (Tech:32 Fund:13 News:14 Pat:1)
+   Reasons:
+     - All EMAs stacked bullish
+     - RSI=52 in healthy buy zone
+     - Positive news sentiment (0.31)
+     - Near 52-week high — potential breakout zone
+     - Supertrend bullish — price above trend band
+     - ADX strong trend — directional move confirmed
+     - StochRSI oversold with bullish candle — reversal
+     - High delivery 70% — strong institutional accumulation
+     - In a long-term strong uptrend (2yr) — trend on our side
+     - Near 52-week high (99% of range) — breakout zone
+     - ✓ Daily setup aligned with the higher-timeframe trend
+     - ⚠ Sector momentum -0.28 — buying into a falling sector needs extra conviction
      - Valuation: P/E 62.1x
      - ROE: 41.4%
      - ROCE: 40.0%
@@ -106,20 +190,101 @@ BUY Marico Ltd (MARICO)
      - Promoter holding: 59.0%
      - Dividend yield: 47.0%
      - Low debt: D/E 0.12
-     - Support at ₹819.95 cushions downside
-     - Resistance at ₹860.04 is natural target
+     - Support at ₹838.80 cushions downside
+     - Resistance at ₹870.00 is natural target
      - Latest news: 'Solid Earnings May Not Tell The Whole Story For Marico (NSE:MARICO) - '
      - Confluence: 5 independent signal families agree (trend, volume, pattern, news, regime)
-     - History backtest: this kind of BUY setup worked 54% of the time over ~1 week on this stock (sample: 48)
-   Market warnings: Global macro risk-off (-0.42) — Overall macro mood is risk-off (-0.42). US Dow -0.2% overnight. Crude -0.8%. USD/INR -0.1%. Notable: Geopolitical confli | Heavy FII/DII outflow (₹-1,219 Cr) — institutions selling
+     - History backtest: this kind of BUY setup worked 53% of the time over ~1 week on this stock (sample: 49)
+   Market warnings: Nifty choppy intraday — wait for cleaner setups
+
+---
+
+BUY ABCAPITAL.NS (ABCAPITAL)
+   CMP:           Rs.401.15
+   Entry Zone:    Rs.400.35 - Rs.403.16
+   Stop Loss:     Rs.391.64  (2.4% risk)
+   Target 1:      Rs.427.85  (R:R 1:2.8)
+   Target 2:      Rs.438.53  (R:R 1:3.9)
+   Hold:          5–15 trading days (swing)
+   Qty (2% risk): 29 shares -> Rs.11,633 invested
+   Max loss:      Rs.276 if SL hit
+   Confidence:    68/100  (Tech:34 Fund:12 News:12 Pat:2)
+   Reasons:
+     - All EMAs stacked bullish
+     - Candlestick: bullish harami
+     - RSI bullish divergence — price lower but RSI higher
+     - Supertrend bullish — price above trend band
+     - Testing pivot point — decision zone
+     - High delivery 63% — strong institutional accumulation
+     - In a long-term strong uptrend (2yr) — trend on our side
+     - Near 52-week high (98% of range) — breakout zone
+     - ✓ Daily setup aligned with the higher-timeframe trend
+     - Valuation: P/E 28.2x
+     - ROE: 11.2%
+     - ROCE: 2.0%
+     - Revenue growing 7.7% YoY
+     - Net profit up 19.5% QoQ
+     - Sales up 13.7% QoQ
+     - Latest quarter NP: ₹1,129 Cr
+     - Latest quarter Sales: ₹13,078 Cr
+     - Market Cap: ₹109,857 Cr
+     - Analyst target: +5.8% upside
+     - Promoter holding: 68.8%
+     - Support at ₹394.80 cushions downside
+     - Resistance at ₹409.88 is natural target
+     - Latest news: 'Merger of Aditya Birla Capital and Aditya Birla Finance, shares rally '
+     - Confluence: 5 independent signal families agree (trend, volume, pattern, news, regime)
+     - History backtest: this kind of BUY setup worked 65% of the time over ~1 week on this stock (sample: 57)
+   Market warnings: Nifty choppy intraday — wait for cleaner setups
+
+---
+
+BUY Nestle India Ltd (NESTLEIND)
+   CMP:           Rs.1,454.30
+   Entry Zone:    Rs.1,451.39 - Rs.1,461.57
+   Stop Loss:     Rs.1,416.69  (2.6% risk)
+   Target 1:      Rs.1,529.95  (R:R 1:2.0)
+   Target 2:      Rs.1,560.21  (R:R 1:2.8)
+   Hold:          5–15 trading days (swing)
+   Qty (2% risk): 8 shares -> Rs.11,634 invested
+   Max loss:      Rs.301 if SL hit
+   Confidence:    65/100  (Tech:17 Fund:18 News:18 Pat:2)
+   Reasons:
+     - All EMAs stacked bullish
+     - Positive news sentiment (0.43, news 0.6x reliable here)
+     - Candlestick: engulfing bullish
+     - ⚠ Earnings in 5d — position size reduced
+     - Supertrend bullish — price above trend band
+     - ADX low — market ranging, signals less reliable
+     - Delivery 58% above avg — institutional buying
+     - In a long-term strong uptrend (2yr) — trend on our side
+     - Clean trender aligned with its long-term uptrend
+     - ✓ Daily setup aligned with the higher-timeframe trend
+     - ⚠ Sector momentum -0.28 — buying into a falling sector needs extra conviction
+     - Valuation: P/E 78.3x
+     - ROE: 76.3%
+     - ROCE: 94.7%
+     - Revenue growing 23.0% YoY
+     - Net profit up 54.4% QoQ
+     - Sales up 11.2% QoQ
+     - Latest quarter NP: ₹998 Cr
+     - Latest quarter Sales: ₹5,644 Cr
+     - Market Cap: ₹275,209 Cr
+     - Promoter holding: 62.8%
+     - Dividend yield: 84.0%
+     - Low debt: D/E 0.09
+     - Support at ₹1428.11 cushions downside
+     - Resistance at ₹1478.99 is natural target
+     - Latest news: 'Nestle India Q1 preview: PAT may rise 34%; strong volumes to aid topli'
+     - Confluence: 6 independent signal families agree (trend, volume, pattern, news, fundamentals, regime)
+     - History backtest: this kind of BUY setup worked 50% of the time over ~1 week on this stock (sample: 48)
+   Market warnings: Nifty choppy intraday — wait for cleaner setups
 
 ---
 
 ## Focus Stocks Being Monitored
 
 - MARICO.NS
-- RECLTD.NS
-- FEDERALBNK.NS
 - SBIN.NS
 - HOMEFIRST.NS
 - NESTLEIND.NS
@@ -130,8 +295,10 @@ BUY Marico Ltd (MARICO)
 - GAIL.NS
 - PIDILITIND.NS
 - SUNPHARMA.NS
-- ADANIENT.NS
 - INDUSINDBK.NS
+- SIEMENS.NS
+- BANDHANBNK.NS
+- NYKAA.NS
 
 ---
 

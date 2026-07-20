@@ -1,6 +1,6 @@
 {
   "date": "2026-07-20",
-  "session": "intraday_close",
+  "session": "preclose",
   "nifty": {
     "symbol": "^NSEI",
     "value": 24334.3,
@@ -268,8 +268,8 @@
     "max_pain": 24200.0,
     "max_pain_dist_pct": 0.16,
     "oi_bias": "put_heavy_support",
-    "ok": true,
-    "error": ""
+    "ok": false,
+    "error": "HTTPSConnectionPool(host='www.nseindia.com', port=443): Read timed out. (read timeout=12)"
   },
   "oi_note": "Heavy put OI below spot \u2014 option writers see a floor (bullish lean)"
 }

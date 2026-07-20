@@ -1,5 +1,5 @@
 {
-  "capital": 65670.87459,
+  "capital": 58181.074590000004,
   "open_positions": [
     {
       "ticker": "MARICO.NS",
@@ -37,8 +37,8 @@
         "\u26a0 Recent forward-tested call accuracy only 15% (last 20 scored) \u2014 raising the conviction bar",
         "RSI=63 elevated"
       ],
-      "current_price": 845.0,
-      "unrealized_pnl": -1.4,
+      "current_price": 842.4,
+      "unrealized_pnl": -37.8,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -80,8 +80,8 @@
         "\u26a0 Recent forward-tested call accuracy only 15% (last 20 scored) \u2014 raising the conviction bar",
         "RSI=63 elevated"
       ],
-      "current_price": 1427.2,
-      "unrealized_pnl": -29.4,
+      "current_price": 1430.0,
+      "unrealized_pnl": -9.8,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -125,8 +125,8 @@
         "\u2713 Daily setup aligned with the higher-timeframe trend",
         "\u26a0 Recent forward-tested call accuracy only 15% (last 20 scored) \u2014 raising the conviction bar"
       ],
-      "current_price": 168.27,
-      "unrealized_pnl": -96.93,
+      "current_price": 170.59,
+      "unrealized_pnl": -34.29,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -170,13 +170,60 @@
         "\u26a0 Recent forward-tested call accuracy only 15% (last 20 scored) \u2014 raising the conviction bar",
         "MACD histogram negative"
       ],
-      "current_price": 1044.3,
-      "unrealized_pnl": 126.4,
+      "current_price": 1046.0,
+      "unrealized_pnl": 140.0,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
         "nifty_trend": "sideways",
         "vix": 13.27,
+        "mood": "neutral",
+        "regime": "mixed"
+      }
+    },
+    {
+      "ticker": "HOMEFIRST.NS",
+      "sector": "Infra Finance",
+      "open_date": "2026-07-20",
+      "open_session": "morning",
+      "action": "BUY",
+      "entry": 1248.3,
+      "qty": 6,
+      "invested": 7489.8,
+      "stop_loss": 1187.44,
+      "target": 1370.01,
+      "style": "swing",
+      "confidence": 95,
+      "patterns": [
+        "low_volume_drift",
+        "engulfing_bullish",
+        "full_bullish_alignment",
+        "adx_strong_trend_up",
+        "rsi_bullish_divergence",
+        "supertrend_bullish",
+        "inside_bar"
+      ],
+      "buy_reasons": [
+        "All EMAs stacked bullish",
+        "MACD histogram positive",
+        "Positive news sentiment (0.22)",
+        "News sentiment improving across sessions",
+        "Candlestick: engulfing bullish",
+        "RSI bullish divergence \u2014 price lower but RSI higher",
+        "Supertrend bullish \u2014 price above trend band",
+        "ADX strong trend \u2014 directional move confirmed",
+        "In a long-term strong uptrend (2yr) \u2014 trend on our side",
+        "\u2713 Daily setup aligned with the higher-timeframe trend",
+        "\u26a0 Sector momentum -0.29 \u2014 buying into a falling sector needs extra conviction",
+        "RSI=62 elevated"
+      ],
+      "current_price": 1248.3,
+      "unrealized_pnl": 0.0,
+      "max_held_days": 10,
+      "vol_regime_pct": 0.12,
+      "entry_market": {
+        "nifty_trend": "sideways",
+        "vix": 13.15,
         "mood": "neutral",
         "regime": "mixed"
       }
@@ -255,12 +302,12 @@
       "daily_pnl": 390.29
     }
   ],
-  "daily_pnl_today": 390.2945900000004,
+  "daily_pnl_today": 0.0,
   "last_snapshot_date": "2026-07-17",
   "lifetime_wins": 1,
   "lifetime_losses": 0,
   "lifetime_pnl": 390.29,
-  "last_pnl_reset_date": "2026-07-17",
+  "last_pnl_reset_date": "2026-07-20",
   "max_drawdown_pct": 0.0,
   "current_drawdown_pct": 0.0,
   "portfolio_peak": 100388.96,

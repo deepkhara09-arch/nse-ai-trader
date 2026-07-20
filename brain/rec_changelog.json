@@ -1478,5 +1478,35 @@
     "ts": "2026-07-20T04:05:53.406062",
     "detail": "Rank \u25b22 (#5 \u2192 #3)",
     "confidence": 68.4
+  },
+  {
+    "type": "removed",
+    "ticker": "UNIONBANK.NS",
+    "nse_code": "UNIONBANK",
+    "signal": "BUY",
+    "date": "2026-07-20",
+    "ts": "2026-07-20T06:16:04.138889",
+    "detail": "Dropped \u2014 no longer meets threshold (was 69/100)",
+    "confidence": 0
+  },
+  {
+    "type": "removed",
+    "ticker": "MARICO.NS",
+    "nse_code": "MARICO",
+    "signal": "BUY",
+    "date": "2026-07-20",
+    "ts": "2026-07-20T06:16:04.138889",
+    "detail": "Dropped \u2014 no longer meets threshold (was 68/100)",
+    "confidence": 0
+  },
+  {
+    "type": "updated",
+    "ticker": "PIDILITIND.NS",
+    "nse_code": "PIDILITIND",
+    "signal": "BUY",
+    "date": "2026-07-20",
+    "ts": "2026-07-20T06:16:04.138889",
+    "detail": "Confidence \u25bc4 (70 \u2192 66)",
+    "confidence": 65.7
   }
 ]

@@ -1,6 +1,6 @@
 {
   "date": "2026-07-20",
-  "session": "morning",
+  "session": "midday",
   "nifty": {
     "symbol": "^NSEI",
     "value": 24334.3,
@@ -60,21 +60,23 @@
   },
   "market_mood": "neutral",
   "trade_allowed": true,
-  "warnings": [],
+  "warnings": [
+    "Nifty choppy intraday \u2014 wait for cleaner setups"
+  ],
   "leading_sectors": [
     "IT"
   ],
   "market_regime": "normal",
   "sector_breadth": 0.25,
   "lagging_sectors": [],
-  "intraday_regime": "mixed",
+  "intraday_regime": "choppy",
   "macro": {
     "date": "2026-07-20",
-    "session": "preopen",
-    "generated_at": "2026-07-20T03:36:51.360057",
-    "global_score": 0.057,
+    "session": "midday",
+    "generated_at": "2026-07-20T06:15:52.311735",
+    "global_score": 0.081,
     "india_score": 0.0,
-    "overall_score": 0.031,
+    "overall_score": 0.045,
     "mood": "neutral",
     "drivers": [
       "Oil prices rise, stock futures flat as fighting between U.S. and Iran intensifies",
@@ -104,19 +106,19 @@
         "chg_pct": -4.03
       },
       "crude": {
-        "last": 83.62,
-        "chg_pct": 1.37
+        "last": 82.49,
+        "chg_pct": 4.48
       },
       "usdinr": {
-        "last": 96.4,
-        "chg_pct": -0.26
+        "last": 96.5,
+        "chg_pct": -0.15
       },
       "gold": {
-        "last": 4028.9,
-        "chg_pct": 0.4
+        "last": 4012.7,
+        "chg_pct": 0.68
       }
     },
-    "summary": "Overall macro mood is neutral (+0.03). US Dow -0.8% overnight. Crude +1.4%. USD/INR -0.3%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
+    "summary": "Overall macro mood is neutral (+0.04). US Dow -0.8% overnight. Crude +4.5%. USD/INR -0.1%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
       "Trade-war headlines spook global markets; IT & export names react most."

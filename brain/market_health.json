@@ -1,128 +1,121 @@
 {
-  "date": "2026-07-17",
-  "session": "preclose",
+  "date": "2026-07-20",
+  "session": "preopen",
   "nifty": {
     "symbol": "^NSEI",
-    "value": 24072.75,
-    "day_change_pct": -0.02,
+    "value": 24334.3,
+    "day_change_pct": 1.09,
     "trend_5d": "sideways",
-    "trend_20d": "sideways",
-    "ath_pct_60d": -1.87
+    "trend_20d": "up",
+    "ath_pct_60d": -0.8
   },
   "vix": {
-    "value": 12.88,
+    "value": 13.15,
     "level": "normal",
-    "percentile_30d": 23.0,
-    "avg_30d": 13.72
+    "percentile_30d": 33.0,
+    "avg_30d": 13.62
   },
   "bank_nifty": {
     "symbol": "^NSEBANK",
-    "value": 57582.25,
-    "day_change_pct": -0.3,
+    "value": 58521.4,
+    "day_change_pct": 1.63,
     "trend_5d": "sideways",
-    "trend_20d": "sideways",
-    "ath_pct_60d": -1.91,
+    "trend_20d": "up",
+    "ath_pct_60d": -0.31,
     "diverging": false
   },
   "sectors": {
     "IT": {
       "symbol": "ITBEES.NS",
-      "value": 31.87,
-      "day_change_pct": 0.66,
+      "value": 32.44,
+      "day_change_pct": 1.79,
       "trend_5d": "up",
       "trend_20d": "strong_up",
-      "ath_pct_60d": -8.02
+      "ath_pct_60d": -6.38
     },
     "Pharma": {
       "symbol": "PHARMABEES.NS",
-      "value": 26.76,
-      "day_change_pct": 0.04,
-      "trend_5d": "up",
+      "value": 26.39,
+      "day_change_pct": -1.38,
+      "trend_5d": "sideways",
       "trend_20d": "strong_up",
-      "ath_pct_60d": -1.8
+      "ath_pct_60d": -3.16
     },
     "Bank": {
       "symbol": "BANKBEES.NS",
-      "value": 597.09,
-      "day_change_pct": -0.08,
+      "value": 604.9,
+      "day_change_pct": 1.31,
       "trend_5d": "sideways",
-      "trend_20d": "sideways",
-      "ath_pct_60d": -4.91
+      "trend_20d": "up",
+      "ath_pct_60d": -3.66
     },
     "Infra": {
       "symbol": "INFRABEES.NS",
-      "value": 960.83,
-      "day_change_pct": -0.24,
-      "trend_5d": "down",
+      "value": 967.31,
+      "day_change_pct": 0.67,
+      "trend_5d": "sideways",
       "trend_20d": "down",
-      "ath_pct_60d": -3.29
+      "ath_pct_60d": -2.64
     }
   },
-  "market_mood": "bearish",
+  "market_mood": "neutral",
   "trade_allowed": true,
-  "warnings": [
-    "Global macro risk-off (-0.42) \u2014 Overall macro mood is risk-off (-0.42). US Dow -0.2% overnight. Crude -0.8%. USD/INR -0.1%. Notable: Geopolitical confli",
-    "Heavy FII/DII outflow (\u20b9-1,219 Cr) \u2014 institutions selling"
-  ],
+  "warnings": [],
   "leading_sectors": [
-    "IT",
-    "Pharma"
+    "IT"
   ],
   "market_regime": "normal",
-  "sector_breadth": 0.5,
-  "lagging_sectors": [
-    "Infra"
-  ],
-  "intraday_regime": "mixed",
+  "sector_breadth": 0.25,
+  "lagging_sectors": [],
   "macro": {
-    "date": "2026-07-17",
-    "session": "midday",
-    "generated_at": "2026-07-17T06:38:00.572952",
-    "global_score": 0.054,
-    "india_score": -1.0,
-    "overall_score": -0.42,
-    "mood": "risk_off",
+    "date": "2026-07-20",
+    "session": "preopen",
+    "generated_at": "2026-07-20T03:36:51.360057",
+    "global_score": 0.057,
+    "india_score": 0.0,
+    "overall_score": 0.031,
+    "mood": "neutral",
     "drivers": [
-      "Micron has turned into \u2018the most important stock in the market.\u2019 So is it time to worry?",
-      "Netflix is getting stingier about its viewing data, and Wall Street isn\u2019t happy",
-      "10 U.S. metro areas where builders are slashing prices on new homes",
-      "Palo Alto Networks\u2019 stock has been on a tear \u2014 and it could go even higher, according to these bulls",
-      "As SpaceX\u2019s stock notches first close below IPO price, the company is gearing up for a crucial launch",
-      "Americans say they need $1.2 million to retire. Most are too deep in debt to get there.",
-      "GE boosts profit outlook, but stock falls as booming order growth cools",
-      "\u2018It\u2019s heartbreaking\u2019: My brother claimed Social Security at 70. He died from cancer after one payment. Why wait to claim?"
+      "Oil prices rise, stock futures flat as fighting between U.S. and Iran intensifies",
+      "World Cup-champion Spain just won $50 million \u2014 and the IRS gets a cut",
+      "Can the \u2018Magnificent Seven\u2019 save a stock market that might be doomed without them?",
+      "Is there a deadline to claim the $1,000 \u2018Trump account\u2019 contribution for my kid?",
+      "Can former employers withhold money from your 401(k) when you\u2019re laid off?",
+      "I racked up $35,000 in credit-card debt. Should I file for bankruptcy?",
+      "\u2018I am at a loss\u2019: My brother is dying. We are not close. What responsibility do I have to help him?",
+      "My husband and I are retired. Our financial adviser, who is in his 30s, called us \u2018you guyses.\u2019 Is that unprofessional?"
     ],
     "global_cues": {
       "dow": {
-        "last": 52552.97,
-        "chg_pct": -0.2
+        "last": 52146.42,
+        "chg_pct": -0.77
       },
       "nasdaq": {
-        "last": 25881.95,
-        "chg_pct": -1.47
+        "last": 25520.24,
+        "chg_pct": -1.4
       },
       "sp500": {
-        "last": 7533.77,
-        "chg_pct": -0.51
+        "last": 7457.69,
+        "chg_pct": -1.01
       },
       "nikkei": {
-        "last": 64050.56,
-        "chg_pct": -4.17
+        "last": 64141.12,
+        "chg_pct": -4.03
       },
       "crude": {
-        "last": 78.95,
-        "chg_pct": -0.82
+        "last": 83.62,
+        "chg_pct": 1.37
       },
       "usdinr": {
-        "last": 96.36,
-        "chg_pct": -0.15
+        "last": 96.4,
+        "chg_pct": -0.26
       },
       "gold": {
-        "last": 3985.6,
-        "chg_pct": -1.44
+        "last": 4028.9,
+        "chg_pct": 0.4
       }
     },
-    "summary": "Overall macro mood is risk-off (-0.42). US Dow -0.2% overnight. Crude -0.8%. USD/INR -0.1%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
+    "summary": "Overall macro mood is neutral (+0.03). US Dow -0.8% overnight. Crude +1.4%. USD/INR -0.3%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
       "Trade-war headlines spook global markets; IT & export names react most."
@@ -130,13 +123,13 @@
     "playbook_bias": "risk_off",
     "article_count": 60
   },
-  "macro_risk_factor": 0.7,
+  "macro_risk_factor": 1.0,
   "fii_dii": {
-    "date": "2026-07-17",
-    "fii_net_cr": -4205.56,
-    "dii_net_cr": 2986.41,
-    "combined_net_cr": -1219.15,
-    "signal": "strong_outflow",
+    "date": "2026-07-20",
+    "fii_net_cr": -376.41,
+    "dii_net_cr": 1017.89,
+    "combined_net_cr": 641.48,
+    "signal": "neutral",
     "ok": true,
     "error": "",
     "history": [
@@ -253,18 +246,24 @@
         "fii": -4205.56,
         "dii": 2986.41,
         "combined": -1219.15
+      },
+      {
+        "date": "2026-07-20",
+        "fii": -376.41,
+        "dii": 1017.89,
+        "combined": 641.48
       }
     ]
   },
   "pcr": {
-    "date": "2026-07-17",
-    "pcr": 1.617,
+    "date": "2026-07-20",
+    "pcr": 1.613,
     "reading": "very_high_contrarian_bullish",
-    "total_pe_oi": 3039366,
-    "total_ce_oi": 1879918,
-    "spot": 24334.3,
+    "total_pe_oi": 2968054,
+    "total_ce_oi": 1840480,
+    "spot": 24212.8,
     "max_pain": 24250.0,
-    "max_pain_dist_pct": 0.35,
+    "max_pain_dist_pct": -0.15,
     "oi_bias": "put_heavy_support",
     "ok": true,
     "error": ""

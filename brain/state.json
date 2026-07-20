@@ -1,13 +1,13 @@
 {
   "phase": "paper_trading",
   "day": 20,
-  "session": "morning",
+  "session": "preopen",
   "start_date": "2026-06-22",
   "phase_start_date": "2026-07-15",
   "last_run_date": "2026-07-17",
   "last_counted_date": "2026-07-17",
   "cohort_last_tick_date": "2026-07-17",
-  "last_updated": "2026-07-17T10:13:28.145726",
+  "last_updated": "2026-07-20T03:36:52.314618",
   "focus_stocks": [
     "MARICO.NS",
     "RECLTD.NS",
@@ -71,7 +71,8 @@
     "[2026-07-16] Pre-open macro: neutral (+0.04)",
     "[2026-07-17] Pre-open macro: risk_off (-0.46)",
     "[2026-07-17] Focus refresh \u2014 promoted: ['SUNPHARMA', 'ADANIENT', 'INDUSINDBK'] | demoted: ['KOTAKBANK', 'BAJFINANCE', 'AXISBANK']",
-    "[2026-07-17] Cohort batch #9 complete \u2014 30 candidates ready"
+    "[2026-07-17] Cohort batch #9 complete \u2014 30 candidates ready",
+    "[2026-07-20] Pre-open macro: neutral (+0.03)"
   ],
   "alert_sent": false,
   "schema_version": 11,
@@ -301,11 +302,6 @@
     "scored_date": "2026-07-17"
   },
   "sessions_done": {
-    "preopen": "2026-07-17",
-    "morning": "2026-07-17",
-    "midday": "2026-07-17",
-    "afternoon": "2026-07-17",
-    "intraday_close": "2026-07-17",
-    "preclose": "2026-07-17"
+    "preopen": "2026-07-20"
   }
 }

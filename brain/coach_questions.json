@@ -1,102 +1,102 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of rsi_bullish_divergence, low_volume_drift, engulfing_bullish mean for a swing trade on HOMEFIRST? Current RSI=62, MACD hist=+1.4033, Vol=0.3x average. Signal is BUY.",
-    "context": {
-      "ticker": "HOMEFIRST.NS",
-      "signal": "BUY",
-      "patterns": "rsi_bullish_divergence, low_volume_drift, engulfing_bullish",
-      "rsi": 62.3
-    },
-    "queued_at": "2026-07-21T07:45:47.874172"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of adx_ranging_market, engulfing_bullish mean for a swing trade on NESTLEIND? Current RSI=63, MACD hist=-2.3677, Vol=0.8x average. Signal is BUY.",
-    "context": {
-      "ticker": "NESTLEIND.NS",
-      "signal": "BUY",
-      "patterns": "adx_ranging_market, engulfing_bullish",
-      "rsi": 63.4
-    },
-    "queued_at": "2026-07-21T07:45:47.877315"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of morning_star, engulfing_bullish mean for a swing trade on UNIONBANK? Current RSI=59, MACD hist=+0.9030, Vol=1.9x average. Signal is BUY.",
-    "context": {
-      "ticker": "UNIONBANK.NS",
-      "signal": "BUY",
-      "patterns": "morning_star, engulfing_bullish",
-      "rsi": 58.9
-    },
-    "queued_at": "2026-07-21T07:45:47.878386"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of hammer, rsi_bullish_divergence mean for a swing trade on ABCAPITAL? Current RSI=59, MACD hist=-1.0530, Vol=1.1x average. Signal is BUY.",
-    "context": {
-      "ticker": "ABCAPITAL.NS",
-      "signal": "BUY",
-      "patterns": "hammer, rsi_bullish_divergence",
-      "rsi": 58.8
-    },
-    "queued_at": "2026-07-21T07:45:47.881619"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of bb_midline_support, adx_ranging_market, engulfing_bullish mean for a swing trade on GAIL? Current RSI=49, MACD hist=-0.4499, Vol=0.8x average. Signal is BUY.",
-    "context": {
-      "ticker": "GAIL.NS",
-      "signal": "BUY",
-      "patterns": "bb_midline_support, adx_ranging_market, engulfing_bullish",
-      "rsi": 48.9
-    },
-    "queued_at": "2026-07-21T07:45:47.882646"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of pivot_point_test, outside_bar mean for a swing trade on PIDILITIND? Current RSI=44, MACD hist=-8.6467, Vol=1.1x average. Signal is BUY.",
-    "context": {
-      "ticker": "PIDILITIND.NS",
-      "signal": "BUY",
-      "patterns": "pivot_point_test, outside_bar",
-      "rsi": 43.8
-    },
-    "queued_at": "2026-07-21T07:45:47.883332"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_up, stoch_rsi_oversold_reversal, pivot_r1_breakout mean for a swing trade on SUNPHARMA? Current RSI=66, MACD hist=+3.3334, Vol=1.3x average. Signal is BUY.",
-    "context": {
-      "ticker": "SUNPHARMA.NS",
-      "signal": "BUY",
-      "patterns": "adx_strong_trend_up, stoch_rsi_oversold_reversal, pivot_r1_breakout",
-      "rsi": 65.8
-    },
-    "queued_at": "2026-07-21T07:45:47.884005"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_up, full_bullish_alignment, near_52w_high mean for a swing trade on INDUSINDBK? Current RSI=77, MACD hist=+3.2369, Vol=1.0x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of full_bullish_alignment, supertrend_bullish, adx_strong_trend_up mean for a swing trade on INDUSINDBK? Current RSI=77, MACD hist=+3.1773, Vol=0.8x average. Signal is BUY.",
     "context": {
       "ticker": "INDUSINDBK.NS",
       "signal": "BUY",
-      "patterns": "adx_strong_trend_up, full_bullish_alignment, near_52w_high",
-      "rsi": 77.4
+      "patterns": "full_bullish_alignment, supertrend_bullish, adx_strong_trend_up",
+      "rsi": 77.1
     },
-    "queued_at": "2026-07-21T07:45:47.887163"
+    "queued_at": "2026-07-21T09:36:57.215714"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_up, pivot_point_test, pivot_s1_breakdown mean for a swing trade on SIEMENS? Current RSI=57, MACD hist=+20.1637, Vol=0.4x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of ema_golden_cross, momentum_continuation, low_volume_drift mean for a swing trade on SIEMENS? Current RSI=57, MACD hist=+20.1637, Vol=0.4x average. Signal is BUY.",
     "context": {
       "ticker": "SIEMENS.NS",
       "signal": "BUY",
-      "patterns": "adx_strong_trend_up, pivot_point_test, pivot_s1_breakdown",
+      "patterns": "ema_golden_cross, momentum_continuation, low_volume_drift",
       "rsi": 57.4
     },
-    "queued_at": "2026-07-21T07:45:47.887827"
+    "queued_at": "2026-07-21T09:36:57.216349"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_up, pivot_point_test, stoch_rsi_oversold_reversal mean for a swing trade on NYKAA? Current RSI=69, MACD hist=-0.3182, Vol=0.5x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of inverted_hammer, engulfing_bullish, full_bullish_alignment mean for a swing trade on NYKAA? Current RSI=63, MACD hist=-0.7344, Vol=0.8x average. Signal is BUY.",
     "context": {
       "ticker": "NYKAA.NS",
       "signal": "BUY",
-      "patterns": "adx_strong_trend_up, pivot_point_test, stoch_rsi_oversold_reversal",
-      "rsi": 68.7
+      "patterns": "inverted_hammer, engulfing_bullish, full_bullish_alignment",
+      "rsi": 63.2
     },
-    "queued_at": "2026-07-21T07:45:47.888830"
+    "queued_at": "2026-07-21T09:36:57.217306"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of bb_upper_rejection, three_white_soldiers, macd_bullish_crossover mean for a swing trade on SBIN? Current RSI=61, MACD hist=+0.2331, Vol=1.5x average. Signal is BUY.",
+    "context": {
+      "ticker": "SBIN.NS",
+      "signal": "BUY",
+      "patterns": "bb_upper_rejection, three_white_soldiers, macd_bullish_crossover",
+      "rsi": 61.3
+    },
+    "queued_at": "2026-07-21T09:36:57.307968"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of engulfing_bullish, morning_star mean for a swing trade on UNIONBANK? Current RSI=59, MACD hist=+0.9030, Vol=1.9x average. Signal is BUY.",
+    "context": {
+      "ticker": "UNIONBANK.NS",
+      "signal": "BUY",
+      "patterns": "engulfing_bullish, morning_star",
+      "rsi": 58.9
+    },
+    "queued_at": "2026-07-21T09:36:57.312751"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of engulfing_bullish, adx_ranging_market, bb_midline_support mean for a swing trade on GAIL? Current RSI=49, MACD hist=-0.4499, Vol=0.8x average. Signal is BUY.",
+    "context": {
+      "ticker": "GAIL.NS",
+      "signal": "BUY",
+      "patterns": "engulfing_bullish, adx_ranging_market, bb_midline_support",
+      "rsi": 48.9
+    },
+    "queued_at": "2026-07-21T09:36:57.316645"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of full_bullish_alignment, supertrend_bullish, adx_strong_trend_up mean for a swing trade on SUNPHARMA? Current RSI=73, MACD hist=+3.1696, Vol=0.9x average. Signal is BUY.",
+    "context": {
+      "ticker": "SUNPHARMA.NS",
+      "signal": "BUY",
+      "patterns": "full_bullish_alignment, supertrend_bullish, adx_strong_trend_up",
+      "rsi": 73.5
+    },
+    "queued_at": "2026-07-21T09:36:57.317713"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of full_bullish_alignment, supertrend_bullish, adx_strong_trend_up mean for a swing trade on INDUSINDBK? Current RSI=77, MACD hist=+3.1773, Vol=0.8x average. Signal is BUY.",
+    "context": {
+      "ticker": "INDUSINDBK.NS",
+      "signal": "BUY",
+      "patterns": "full_bullish_alignment, supertrend_bullish, adx_strong_trend_up",
+      "rsi": 77.1
+    },
+    "queued_at": "2026-07-21T09:36:57.318364"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of ema_golden_cross, momentum_continuation, low_volume_drift mean for a swing trade on SIEMENS? Current RSI=57, MACD hist=+20.1637, Vol=0.4x average. Signal is BUY.",
+    "context": {
+      "ticker": "SIEMENS.NS",
+      "signal": "BUY",
+      "patterns": "ema_golden_cross, momentum_continuation, low_volume_drift",
+      "rsi": 57.4
+    },
+    "queued_at": "2026-07-21T09:36:57.319005"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of inverted_hammer, engulfing_bullish, full_bullish_alignment mean for a swing trade on NYKAA? Current RSI=63, MACD hist=-0.7344, Vol=0.8x average. Signal is BUY.",
+    "context": {
+      "ticker": "NYKAA.NS",
+      "signal": "BUY",
+      "patterns": "inverted_hammer, engulfing_bullish, full_bullish_alignment",
+      "rsi": 63.2
+    },
+    "queued_at": "2026-07-21T09:36:57.319978"
   }
 ]

@@ -1,6 +1,6 @@
 {
   "date": "2026-07-21",
-  "session": "afternoon",
+  "session": "intraday_close",
   "nifty": {
     "symbol": "^NSEI",
     "value": 24238.5,
@@ -60,9 +60,7 @@
   },
   "market_mood": "neutral",
   "trade_allowed": true,
-  "warnings": [
-    "Nifty in intraday downtrend \u2014 avoid new longs this session"
-  ],
+  "warnings": [],
   "leading_sectors": [
     "IT",
     "Bank",
@@ -72,7 +70,7 @@
   "sector_breadth": 0.75,
   "lagging_sectors": [],
   "broad_market_strength": true,
-  "intraday_regime": "trending_down",
+  "intraday_regime": "mixed",
   "macro": {
     "date": "2026-07-21",
     "session": "midday",

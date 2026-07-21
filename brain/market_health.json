@@ -1,6 +1,6 @@
 {
   "date": "2026-07-21",
-  "session": "intraday_close",
+  "session": "preclose",
   "nifty": {
     "symbol": "^NSEI",
     "value": 24238.5,
@@ -267,16 +267,15 @@
   },
   "pcr": {
     "date": "2026-07-21",
-    "pcr": 1.378,
-    "reading": "bullish_bias",
-    "total_pe_oi": 2769046,
-    "total_ce_oi": 2008942,
-    "spot": 24238.5,
+    "pcr": 0.824,
+    "reading": "neutral",
+    "total_pe_oi": 2836888,
+    "total_ce_oi": 3443674,
+    "spot": 24187.7,
     "max_pain": 24200.0,
-    "max_pain_dist_pct": 0.16,
-    "oi_bias": "put_heavy_support",
+    "max_pain_dist_pct": -0.05,
+    "oi_bias": "balanced",
     "ok": true,
     "error": ""
-  },
-  "oi_note": "Heavy put OI below spot \u2014 option writers see a floor (bullish lean)"
+  }
 }

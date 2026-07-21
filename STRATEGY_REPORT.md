@@ -1,5 +1,5 @@
 # NSE AI Trader — Strategy Report
-> Updated: 2026-07-20 &nbsp;|&nbsp; Day 21 &nbsp;|&nbsp; Phase: paper_trading
+> Updated: 2026-07-21 &nbsp;|&nbsp; Day 22 &nbsp;|&nbsp; Phase: paper_trading
 
 ---
 
@@ -21,29 +21,191 @@
 > **Important:** These are paper trade signals based on the agent's learned patterns.
 > Not financial advice. Always use your own judgement and consult a SEBI advisor.
 
-BUY Pidilite Industries (PIDILITIND)
-   CMP:           Rs.1,564.20
-   Entry Zone:    Rs.1,561.07 - Rs.1,572.02
-   Stop Loss:     Rs.1,517.90  (3.0% risk)
-   Target 1:      Rs.1,656.80  (R:R 1:2.0)
-   Target 2:      Rs.1,687.66  (R:R 1:2.7)
+BUY UNIONBANK.NS (UNIONBANK)
+   CMP:           Rs.176.11
+   Entry Zone:    Rs.175.76 - Rs.176.99
+   Stop Loss:     Rs.170.79  (3.0% risk)
+   Target 1:      Rs.191.69  (R:R 1:2.9)
+   Target 2:      Rs.197.92  (R:R 1:4.1)
    Hold:          5–15 trading days (swing)
-   Qty (2% risk): 7 shares -> Rs.10,949 invested
-   Max loss:      Rs.324 if SL hit
-   Confidence:    79/100  (Tech:40 Fund:13 News:20 Pat:1)
+   Qty (2% risk): 68 shares -> Rs.11,975 invested
+   Max loss:      Rs.362 if SL hit
+   Confidence:    91/100  (Tech:40 Fund:19 News:17 Pat:4)
    Reasons:
      - All EMAs stacked bullish
-     - RSI=43 in healthy buy zone
-     - High volume confirmation (1.8x avg)
-     - Positive news sentiment (0.46)
+     - MACD histogram positive
+     - High volume confirmation (1.9x avg)
+     - Positive news sentiment (0.37, news 1.3x reliable here)
      - News sentiment improving across sessions
-     - Candlestick: tweezer bottom
-     - Candlestick: bullish harami
+     - Candlestick: engulfing bullish
+     - Candlestick: morning star
+     - Supertrend bullish — price above trend band
+     - Broke above Pivot R1 with volume — bullish
+     - Broke above Pivot R2 — strong momentum
+     - In a long-term strong uptrend (2yr) — trend on our side
+     - ⚠ Daily buy fights the higher-timeframe trend — needs extra conviction
+     - Valuation: P/E 6.2x
+     - ROE: 15.7%
+     - Net profit up 2.5% QoQ
+     - Latest quarter NP: ₹5,642 Cr
+     - Latest quarter Sales: ₹15,455 Cr
+     - Market Cap: ₹128,596 Cr
+     - Analyst target: +15.8% upside
+     - Promoter holding: 74.8%
+     - Dividend yield: 293.0%
+     - Support at ₹172.17 cushions downside
+     - Resistance at ₹180.00 is natural target
+     - Latest news: 'Union Bank of India Q1 Results: Net Profit Jumps 30% to ₹5,332 Crore; '
+     - Confluence: 6 independent signal families agree (trend, momentum, volume, pattern, news, fundamentals)
+     - History backtest: this kind of BUY setup worked 46% of the time over ~1 week on this stock (sample: 57)
+
+---
+
+BUY ICICI Bank Ltd (ICICIBANK)
+   CMP:           Rs.1,463.10
+   Entry Zone:    Rs.1,460.17 - Rs.1,470.42
+   Stop Loss:     Rs.1,423.81  (2.7% risk)
+   Target 1:      Rs.1,541.68  (R:R 1:2.0)
+   Target 2:      Rs.1,567.87  (R:R 1:2.7)
+   Hold:          5–15 trading days (swing)
+   Qty (2% risk): 8 shares -> Rs.11,705 invested
+   Max loss:      Rs.314 if SL hit
+   Confidence:    89/100  (Tech:36 Fund:17 News:19 Pat:6)
+   Reasons:
+     - All EMAs stacked bullish
+     - MACD histogram positive
+     - High volume confirmation (1.7x avg)
+     - Positive news sentiment (0.29, news 1.4x reliable here)
+     - Learned bullish pattern: full_bullish_alignment (rel=58%)
+     - Learned bullish pattern: adx_strong_trend_up (rel=58%)
+     - ⚠ Earnings in 1d — position size reduced
      - Supertrend bullish — price above trend band
      - ADX strong trend — directional move confirmed
+     - Broke above Pivot R1 with volume — bullish
+     - High delivery 61% — strong institutional accumulation
+     - In a long-term uptrend (2yr) — trend on our side
+     - Near 52-week high (98% of range) — breakout zone
+     - ✓ Daily setup aligned with the higher-timeframe trend
+     - Valuation: P/E 19.3x
+     - ROE: 16.4%
+     - ROCE: 12.4%
+     - Revenue growing 66.9% YoY
+     - Net profit up 17.7% QoQ
+     - Sales up 13.9% QoQ
+     - Latest quarter NP: ₹14,755 Cr
+     - Latest quarter Sales: ₹62,567 Cr
+     - Market Cap: ₹1,036,036 Cr
+     - Analyst target: +16.5% upside
+     - Dividend yield: 85.0%
+     - Reliable patterns on this stock: full_bullish_alignment, adx_strong_trend_up
+     - Support at ₹1400.00 cushions downside
+     - Resistance at ₹1500.00 is natural target
+     - Latest news: 'HDFC Bank vs ICICI Bank vs Yes Bank: Which stock to buy after Q1 resul'
+     - Confluence: 6 independent signal families agree (trend, momentum, volume, pattern, news, regime)
+     - History backtest: this kind of BUY setup worked 43% of the time over ~1 week on this stock (sample: 49)
+
+---
+
+BUY State Bank of India (SBIN)
+   CMP:           Rs.1,044.40
+   Entry Zone:    Rs.1,042.31 - Rs.1,049.62
+   Stop Loss:     Rs.1,014.55  (2.9% risk)
+   Target 1:      Rs.1,104.10  (R:R 1:2.0)
+   Target 2:      Rs.1,124.00  (R:R 1:2.7)
+   Hold:          5–15 trading days (swing)
+   Qty (2% risk): 11 shares -> Rs.11,488 invested
+   Max loss:      Rs.328 if SL hit
+   Confidence:    70/100  (Tech:26 Fund:16 News:20 Pat:1)
+   Reasons:
+     - All EMAs stacked bullish
+     - MACD histogram positive
+     - High volume confirmation (1.5x avg)
+     - Positive news sentiment (0.40, news 1.4x reliable here)
+     - News sentiment improving across sessions
+     - Candlestick: three white soldiers
+     - Supertrend bullish — price above trend band
+     - ADX low — market ranging, signals less reliable
      - Testing pivot point — decision zone
-     - StochRSI oversold with bullish candle — reversal
-     - High delivery 72% — strong institutional accumulation
+     - Delivery 52% above avg — institutional buying
+     - In a long-term uptrend (2yr) — trend on our side
+     - ✓ Daily setup aligned with the higher-timeframe trend
+     - Valuation: P/E 11.4x
+     - ROE: 15.5%
+     - ROCE: 7.5%
+     - Revenue growing 7.1% YoY
+     - Latest quarter NP: ₹19,643 Cr
+     - Latest quarter Sales: ₹101,126 Cr
+     - Market Cap: ₹963,953 Cr
+     - Analyst target: +14.9% upside
+     - Promoter holding: 57.0%
+     - Dividend yield: 168.0%
+     - Support at ₹969.60 cushions downside
+     - Resistance at ₹1076.59 is natural target
+     - Latest news: 'SBI Mutual Fund books partial profit in Rallis India. Shareholding sli'
+     - Confluence: 5 independent signal families agree (trend, momentum, volume, pattern, news)
+     - History backtest: this kind of BUY setup worked 57% of the time over ~1 week on this stock (sample: 58)
+
+---
+
+BUY LICI.NS (LICI)
+   CMP:           Rs.432.70
+   Entry Zone:    Rs.431.83 - Rs.434.86
+   Stop Loss:     Rs.419.96  (2.9% risk)
+   Target 1:      Rs.458.18  (R:R 1:2.0)
+   Target 2:      Rs.467.58  (R:R 1:2.7)
+   Hold:          5–15 trading days (swing)
+   Qty (2% risk): 27 shares -> Rs.11,683 invested
+   Max loss:      Rs.344 if SL hit
+   Confidence:    67/100  (Tech:18 Fund:24 News:20 Pat:0)
+   Reasons:
+     - All EMAs stacked bullish
+     - RSI=52 in healthy buy zone
+     - High volume confirmation (1.7x avg)
+     - Positive news sentiment (0.55)
+     - News sentiment improving across sessions
+     - ADX strong trend — directional move confirmed
+     - In a long-term uptrend (2yr) — trend on our side
+     - ✓ Daily setup aligned with the higher-timeframe trend
+     - Valuation: P/E 9.5x
+     - ROE: 40.8%
+     - ROCE: 98.1%
+     - Revenue growing 14.6% YoY
+     - Net profit up 81.5% QoQ
+     - Sales up 17.1% QoQ
+     - Latest quarter NP: ₹23,467 Cr
+     - Latest quarter Sales: ₹276,668 Cr
+     - Market Cap: ₹271,785 Cr
+     - Analyst target: +23.9% upside
+     - Promoter holding: 96.5%
+     - Dividend yield: 231.0%
+     - Low debt: D/E 0.00
+     - Support at ₹423.35 cushions downside
+     - Resistance at ₹440.00 is natural target
+     - Latest news: 'Shreedhar Spinners IPO listing: Shares hit upper price band after a po'
+     - Confluence: 4 independent signal families agree (trend, pattern, news, fundamentals)
+     - History backtest: this kind of BUY setup worked 38% of the time over ~1 week on this stock (sample: 40)
+
+---
+
+BUY Pidilite Industries (PIDILITIND)
+   CMP:           Rs.1,591.30
+   Entry Zone:    Rs.1,588.12 - Rs.1,599.26
+   Stop Loss:     Rs.1,553.72  (2.4% risk)
+   Target 1:      Rs.1,667.84  (R:R 1:2.0)
+   Target 2:      Rs.1,698.45  (R:R 1:2.9)
+   Hold:          5–15 trading days (swing)
+   Qty (2% risk): 7 shares -> Rs.11,139 invested
+   Max loss:      Rs.263 if SL hit
+   Confidence:    65/100  (Tech:26 Fund:13 News:20 Pat:1)
+   Reasons:
+     - All EMAs stacked bullish
+     - RSI=44 in healthy buy zone
+     - Positive news sentiment (0.53)
+     - News sentiment improving across sessions
+     - Sector headwind (momentum=-0.30)
+     - Supertrend bullish — price above trend band
+     - ADX strong trend — directional move confirmed
+     - High delivery 67% — strong institutional accumulation
      - In a long-term strong uptrend (2yr) — trend on our side
      - ✓ Daily setup aligned with the higher-timeframe trend
      - ⚠ Sector momentum -0.30 — buying into a falling sector needs extra conviction
@@ -58,227 +220,11 @@ BUY Pidilite Industries (PIDILITIND)
      - Promoter holding: 69.4%
      - Dividend yield: 73.0%
      - Low debt: D/E 0.04
-     - Support at ₹1483.30 cushions downside
-     - Resistance at ₹1596.79 is natural target
+     - Support at ₹1566.25 cushions downside
+     - Resistance at ₹1622.30 is natural target
      - Latest news: 'Pidilite Industries Limited (NSE:PIDILITIND) Passed Our Checks, And It'
      - Confluence: 4 independent signal families agree (trend, volume, pattern, news)
      - History backtest: this kind of BUY setup worked 46% of the time over ~1 week on this stock (sample: 50)
-   Market warnings: Nifty choppy intraday — wait for cleaner setups
-
----
-
-BUY HOMEFIRST.NS (HOMEFIRST)
-   CMP:           Rs.1,273.20
-   Entry Zone:    Rs.1,270.65 - Rs.1,279.57
-   Stop Loss:     Rs.1,212.34  (4.8% risk)
-   Target 1:      Rs.1,394.92  (R:R 1:2.0)
-   Target 2:      Rs.1,435.49  (R:R 1:2.7)
-   Hold:          5–15 trading days (swing)
-   Qty (2% risk): 9 shares -> Rs.11,459 invested
-   Max loss:      Rs.548 if SL hit
-   Confidence:    78/100  (Tech:36 Fund:12 News:20 Pat:3)
-   Reasons:
-     - All EMAs stacked bullish
-     - MACD histogram positive
-     - Positive news sentiment (0.57)
-     - News sentiment improving across sessions
-     - Candlestick: engulfing bullish
-     - RSI bullish divergence — price lower but RSI higher
-     - Supertrend bullish — price above trend band
-     - ADX strong trend — directional move confirmed
-     - Delivery 47% above avg — institutional buying
-     - In a long-term strong uptrend (2yr) — trend on our side
-     - ✓ Daily setup aligned with the higher-timeframe trend
-     - ⚠ Sector momentum -0.29 — buying into a falling sector needs extra conviction
-     - Valuation: P/E 24.1x
-     - ROE: 15.7%
-     - ROCE: 4.7%
-     - Revenue growing 30.6% YoY
-     - Net profit up 6.6% QoQ
-     - Sales up 1.1% QoQ
-     - Latest quarter NP: ₹149 Cr
-     - Latest quarter Sales: ₹454 Cr
-     - Market Cap: ₹12,980 Cr
-     - Analyst target: +13.8% upside
-     - Dividend yield: 42.0%
-     - Support at ₹1220.89 cushions downside
-     - Resistance at ₹1300.00 is natural target
-     - Latest news: 'Home First Finance Company India Ltd Upgraded to Buy on Strong Fundame'
-     - Confluence: 5 independent signal families agree (trend, momentum, volume, pattern, news)
-     - History backtest: this kind of BUY setup worked 39% of the time over ~1 week on this stock (sample: 49)
-   Market warnings: Nifty choppy intraday — wait for cleaner setups
-
----
-
-BUY Sun Pharmaceutical (SUNPHARMA)
-   CMP:           Rs.1,956.40
-   Entry Zone:    Rs.1,952.49 - Rs.1,966.18
-   Stop Loss:     Rs.1,906.89  (2.5% risk)
-   Target 1:      Rs.2,055.42  (R:R 1:2.0)
-   Target 2:      Rs.2,088.43  (R:R 1:2.7)
-   Hold:          5–15 trading days (swing)
-   Qty (2% risk): 6 shares -> Rs.11,738 invested
-   Max loss:      Rs.297 if SL hit
-   Confidence:    76/100  (Tech:40 Fund:7 News:17 Pat:2)
-   Reasons:
-     - All EMAs stacked bullish
-     - MACD histogram positive
-     - Positive news sentiment (0.38)
-     - News sentiment improving across sessions
-     - Candlestick: morning star
-     - Near 52-week high — potential breakout zone
-     - Supertrend bullish — price above trend band
-     - ADX strong trend — directional move confirmed
-     - Broke above Pivot R1 with volume — bullish
-     - Testing pivot point — decision zone
-     - StochRSI oversold with bullish candle — reversal
-     - High delivery 72% — strong institutional accumulation
-     - In a long-term strong uptrend (2yr) — trend on our side
-     - Near 52-week high (100% of range) — breakout zone
-     - ✓ Daily setup aligned with the higher-timeframe trend
-     - Valuation: P/E 40.5x
-     - ROE: 14.7%
-     - ROCE: 12.8%
-     - Revenue growing 12.8% YoY
-     - Latest quarter NP: ₹2,714 Cr
-     - Latest quarter Sales: ₹14,560 Cr
-     - Market Cap: ₹463,695 Cr
-     - Analyst target: +6.3% upside
-     - Promoter holding: 55.6%
-     - Dividend yield: 82.0%
-     - Low debt: D/E 0.06
-     - Support at ₹1900.41 cushions downside
-     - Resistance at ₹2000.00 is natural target
-     - Latest news: 'Sun Pharma to Announce Q1 FY Results on July 31 with Earnings Call at '
-     - Confluence: 6 independent signal families agree (trend, momentum, volume, pattern, news, regime)
-     - History backtest: this kind of BUY setup worked 67% of the time over ~1 week on this stock (sample: 55)
-   Market warnings: Nifty choppy intraday — wait for cleaner setups
-
----
-
-BUY Marico Ltd (MARICO)
-   CMP:           Rs.855.70
-   Entry Zone:    Rs.853.99 - Rs.859.98
-   Stop Loss:     Rs.832.09  (2.8% risk)
-   Target 1:      Rs.902.92  (R:R 1:2.0)
-   Target 2:      Rs.919.26  (R:R 1:2.7)
-   Hold:          5–15 trading days (swing)
-   Qty (2% risk): 14 shares -> Rs.11,980 invested
-   Max loss:      Rs.331 if SL hit
-   Confidence:    68/100  (Tech:32 Fund:13 News:14 Pat:1)
-   Reasons:
-     - All EMAs stacked bullish
-     - RSI=52 in healthy buy zone
-     - Positive news sentiment (0.31)
-     - Near 52-week high — potential breakout zone
-     - Supertrend bullish — price above trend band
-     - ADX strong trend — directional move confirmed
-     - StochRSI oversold with bullish candle — reversal
-     - High delivery 70% — strong institutional accumulation
-     - In a long-term strong uptrend (2yr) — trend on our side
-     - Near 52-week high (99% of range) — breakout zone
-     - ✓ Daily setup aligned with the higher-timeframe trend
-     - ⚠ Sector momentum -0.28 — buying into a falling sector needs extra conviction
-     - Valuation: P/E 62.1x
-     - ROE: 41.4%
-     - ROCE: 40.0%
-     - Revenue growing 22.1% YoY
-     - Latest quarter NP: ₹391 Cr
-     - Latest quarter Sales: ₹3,333 Cr
-     - Market Cap: ₹109,373 Cr
-     - Analyst target: +8.1% upside
-     - Promoter holding: 59.0%
-     - Dividend yield: 47.0%
-     - Low debt: D/E 0.12
-     - Support at ₹838.80 cushions downside
-     - Resistance at ₹870.00 is natural target
-     - Latest news: 'Solid Earnings May Not Tell The Whole Story For Marico (NSE:MARICO) - '
-     - Confluence: 5 independent signal families agree (trend, volume, pattern, news, regime)
-     - History backtest: this kind of BUY setup worked 53% of the time over ~1 week on this stock (sample: 49)
-   Market warnings: Nifty choppy intraday — wait for cleaner setups
-
----
-
-BUY ABCAPITAL.NS (ABCAPITAL)
-   CMP:           Rs.401.15
-   Entry Zone:    Rs.400.35 - Rs.403.16
-   Stop Loss:     Rs.391.64  (2.4% risk)
-   Target 1:      Rs.427.85  (R:R 1:2.8)
-   Target 2:      Rs.438.53  (R:R 1:3.9)
-   Hold:          5–15 trading days (swing)
-   Qty (2% risk): 29 shares -> Rs.11,633 invested
-   Max loss:      Rs.276 if SL hit
-   Confidence:    68/100  (Tech:34 Fund:12 News:12 Pat:2)
-   Reasons:
-     - All EMAs stacked bullish
-     - Candlestick: bullish harami
-     - RSI bullish divergence — price lower but RSI higher
-     - Supertrend bullish — price above trend band
-     - Testing pivot point — decision zone
-     - High delivery 63% — strong institutional accumulation
-     - In a long-term strong uptrend (2yr) — trend on our side
-     - Near 52-week high (98% of range) — breakout zone
-     - ✓ Daily setup aligned with the higher-timeframe trend
-     - Valuation: P/E 28.2x
-     - ROE: 11.2%
-     - ROCE: 2.0%
-     - Revenue growing 7.7% YoY
-     - Net profit up 19.5% QoQ
-     - Sales up 13.7% QoQ
-     - Latest quarter NP: ₹1,129 Cr
-     - Latest quarter Sales: ₹13,078 Cr
-     - Market Cap: ₹109,857 Cr
-     - Analyst target: +5.8% upside
-     - Promoter holding: 68.8%
-     - Support at ₹394.80 cushions downside
-     - Resistance at ₹409.88 is natural target
-     - Latest news: 'Merger of Aditya Birla Capital and Aditya Birla Finance, shares rally '
-     - Confluence: 5 independent signal families agree (trend, volume, pattern, news, regime)
-     - History backtest: this kind of BUY setup worked 65% of the time over ~1 week on this stock (sample: 57)
-   Market warnings: Nifty choppy intraday — wait for cleaner setups
-
----
-
-BUY Nestle India Ltd (NESTLEIND)
-   CMP:           Rs.1,454.30
-   Entry Zone:    Rs.1,451.39 - Rs.1,461.57
-   Stop Loss:     Rs.1,416.69  (2.6% risk)
-   Target 1:      Rs.1,529.95  (R:R 1:2.0)
-   Target 2:      Rs.1,560.21  (R:R 1:2.8)
-   Hold:          5–15 trading days (swing)
-   Qty (2% risk): 8 shares -> Rs.11,634 invested
-   Max loss:      Rs.301 if SL hit
-   Confidence:    65/100  (Tech:17 Fund:18 News:18 Pat:2)
-   Reasons:
-     - All EMAs stacked bullish
-     - Positive news sentiment (0.43, news 0.6x reliable here)
-     - Candlestick: engulfing bullish
-     - ⚠ Earnings in 5d — position size reduced
-     - Supertrend bullish — price above trend band
-     - ADX low — market ranging, signals less reliable
-     - Delivery 58% above avg — institutional buying
-     - In a long-term strong uptrend (2yr) — trend on our side
-     - Clean trender aligned with its long-term uptrend
-     - ✓ Daily setup aligned with the higher-timeframe trend
-     - ⚠ Sector momentum -0.28 — buying into a falling sector needs extra conviction
-     - Valuation: P/E 78.3x
-     - ROE: 76.3%
-     - ROCE: 94.7%
-     - Revenue growing 23.0% YoY
-     - Net profit up 54.4% QoQ
-     - Sales up 11.2% QoQ
-     - Latest quarter NP: ₹998 Cr
-     - Latest quarter Sales: ₹5,644 Cr
-     - Market Cap: ₹275,209 Cr
-     - Promoter holding: 62.8%
-     - Dividend yield: 84.0%
-     - Low debt: D/E 0.09
-     - Support at ₹1428.11 cushions downside
-     - Resistance at ₹1478.99 is natural target
-     - Latest news: 'Nestle India Q1 preview: PAT may rise 34%; strong volumes to aid topli'
-     - Confluence: 6 independent signal families agree (trend, volume, pattern, news, fundamentals, regime)
-     - History backtest: this kind of BUY setup worked 50% of the time over ~1 week on this stock (sample: 48)
-   Market warnings: Nifty choppy intraday — wait for cleaner setups
 
 ---
 
@@ -294,11 +240,11 @@ BUY Nestle India Ltd (NESTLEIND)
 - PFC.NS
 - GAIL.NS
 - PIDILITIND.NS
-- SUNPHARMA.NS
-- INDUSINDBK.NS
 - SIEMENS.NS
 - BANDHANBNK.NS
-- NYKAA.NS
+- BHEL.NS
+- JSWSTEEL.NS
+- LICI.NS
 
 ---
 

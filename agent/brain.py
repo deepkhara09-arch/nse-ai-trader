@@ -916,7 +916,11 @@ def analyse_stock(
 
     # ── Determine signal (HTF conflict / counter-tape / falling sector / poor
     #    recent form all raise the required bar) ─────────────────────────────────
-    extra_bar = mtf_penalty + mood_penalty + self_penalty + sector_penalty
+    # Cap the combined penalty. Each gate is a real caution, but if ALL fire we'd
+    # need a ~9-point setup — the tool would go fully dark and stop learning. Cap
+    # at 3.0 (=BUY bar 8.0): only genuinely exceptional setups pass a hostile
+    # regime, but the door isn't fully welded shut.
+    extra_bar = min(3.0, mtf_penalty + mood_penalty + self_penalty + sector_penalty)
     if buy_score >= BUY_SIGNAL_MIN_SCORE + extra_bar and buy_score > sell_score and gap >= SIGNAL_SCORE_GAP:
         signal = "BUY"
     elif sell_score >= SELL_SIGNAL_MIN_SCORE + extra_bar and sell_score > buy_score and gap >= SIGNAL_SCORE_GAP:
@@ -962,9 +966,33 @@ def analyse_stock(
     reward_pct = round(abs(target - entry) / entry * 100, 2) if entry > 0 else 0
     rr_ratio   = round(reward_pct / risk_pct, 2) if risk_pct > 0 else 0
 
-    # Overall confidence (0–100)
+    # ── Overall confidence (0–100), QUALITY-CALIBRATED ─────────────────────────
+    # The old formula was raw_score/10*100 — pure QUANTITY of points. Forward-test
+    # data exposed the flaw: the 85+ band hit only ~35% vs ~50% for the 70-85 band,
+    # because a stock stacking many weak/redundant patterns scored high without any
+    # PROVEN edge (classic momentum-top setup). Confidence must reflect the QUALITY
+    # of the evidence, not just how much of it there is. We scale the raw score by
+    # a quality factor built from things that actually predicted outcomes:
+    #   + proven-reliable patterns fired   + multi-timeframe/sector/mood alignment
+    #   + institutional accumulation       - fighting any of those tapes
     max_score = max(buy_score, sell_score)
-    confidence = min(round((max_score / 10) * 100, 1), 95)
+    base_conf = (max_score / 10) * 100
+
+    # How many of the fired patterns are PROVEN (traded, reliability >= 0.55)?
+    proven = sum(1 for p in patterns
+                 if reliable.get(p, {}).get("reliability", 0.5) >= 0.55
+                 and (reliable.get(p, {}).get("wins", 0) + reliable.get(p, {}).get("losses", 0)) >= 2)
+    quality = 1.0
+    quality += min(0.15, 0.05 * proven)                  # proven patterns: up to +15%
+    if mtf_alignment == "aligned":      quality += 0.08   # all timeframes agree
+    elif mtf_alignment == "conflict":   quality -= 0.15   # fighting the bigger trend
+    if extra_bar >= 1.5:                quality -= 0.15   # a gate flagged this call
+    elif extra_bar >= 1.0:              quality -= 0.08
+    if d.get("delivery_signal") in ("accumulation", "strong_accumulation") and signal == "BUY":
+        quality += 0.05                                  # institutions accumulating
+    quality = max(0.6, min(1.25, quality))
+
+    confidence = min(round(base_conf * quality, 1), 95)
 
     # ── Coach memory — read lessons this tool has already learned ─────────────
     # If the coach flagged caution on this ticker+setup, reduce confidence slightly.

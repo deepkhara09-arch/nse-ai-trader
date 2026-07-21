@@ -1,27 +1,27 @@
 {
-  "date": "2026-07-20",
-  "session": "preclose",
+  "date": "2026-07-21",
+  "session": "preopen",
   "nifty": {
     "symbol": "^NSEI",
-    "value": 24334.3,
-    "day_change_pct": 1.09,
+    "value": 24238.5,
+    "day_change_pct": -0.39,
     "trend_5d": "sideways",
-    "trend_20d": "up",
-    "ath_pct_60d": -0.8
+    "trend_20d": "sideways",
+    "ath_pct_60d": -1.19
   },
   "vix": {
-    "value": 13.15,
+    "value": 12.98,
     "level": "normal",
-    "percentile_30d": 33.0,
-    "avg_30d": 13.62
+    "percentile_30d": 30.0,
+    "avg_30d": 13.53
   },
   "bank_nifty": {
     "symbol": "^NSEBANK",
-    "value": 58521.4,
-    "day_change_pct": 1.63,
-    "trend_5d": "sideways",
-    "trend_20d": "up",
-    "ath_pct_60d": -0.31,
+    "value": 57945.0,
+    "day_change_pct": -0.98,
+    "trend_5d": "up",
+    "trend_20d": "sideways",
+    "ath_pct_60d": -1.3,
     "diverging": false
   },
   "sectors": {
@@ -35,11 +35,11 @@
     },
     "Pharma": {
       "symbol": "PHARMABEES.NS",
-      "value": 26.39,
-      "day_change_pct": -1.38,
+      "value": 26.77,
+      "day_change_pct": 1.44,
       "trend_5d": "sideways",
       "trend_20d": "strong_up",
-      "ath_pct_60d": -3.16
+      "ath_pct_60d": -1.76
     },
     "Bank": {
       "symbol": "BANKBEES.NS",
@@ -71,54 +71,54 @@
   "lagging_sectors": [],
   "intraday_regime": "choppy",
   "macro": {
-    "date": "2026-07-20",
-    "session": "midday",
-    "generated_at": "2026-07-20T07:40:57.492077",
-    "global_score": 0.022,
+    "date": "2026-07-21",
+    "session": "preopen",
+    "generated_at": "2026-07-21T03:05:42.746940",
+    "global_score": 0.186,
     "india_score": 0.0,
-    "overall_score": 0.012,
+    "overall_score": 0.102,
     "mood": "neutral",
     "drivers": [
-      "Oil prices rise, stock futures flat as fighting between U.S. and Iran intensifies",
-      "World Cup-champion Spain just won $50 million \u2014 and the IRS gets a cut",
-      "Can the \u2018Magnificent Seven\u2019 save a stock market that might be doomed without them?",
-      "Is there a deadline to claim the $1,000 \u2018Trump account\u2019 contribution for my kid?",
-      "Can former employers withhold money from your 401(k) when you\u2019re laid off?",
+      "U.S. hits Canada with stiff new tariffs, escalating trade tensions",
       "I racked up $35,000 in credit-card debt. Should I file for bankruptcy?",
-      "\u2018I am at a loss\u2019: My brother is dying. We are not close. What responsibility do I have to help him?",
-      "My husband and I are retired. Our financial adviser, who is in his 30s, called us \u2018you guyses.\u2019 Is that unprofessional?"
+      "Why are gasoline prices rising faster than oil prices? Blame it on the \u2018crack.\u2019",
+      "I will claim Social Security early. Why do so few people talk about the elephant in the room?",
+      "Why cheap Chinese AI models could actually be a boon for Nvidia, Micron and other chip stocks",
+      "We have $8 million in traditional IRAs. Should we tap them to buy a house \u2014 and take the tax hit?",
+      "Americans are skipping lettuce and salads as investigation into cyclospora outbreak continues",
+      "Global oil prices settle at one-month high despite new Iran ceasefire proposal, as blockade on Saudi Arabia by Yemen\u2019s Houthis keeps market on edge"
     ],
     "global_cues": {
       "dow": {
-        "last": 52146.42,
-        "chg_pct": -0.77
+        "last": 51839.26,
+        "chg_pct": -0.59
       },
       "nasdaq": {
-        "last": 25520.24,
-        "chg_pct": -1.4
+        "last": 25508.07,
+        "chg_pct": -0.05
       },
       "sp500": {
-        "last": 7457.69,
-        "chg_pct": -1.01
+        "last": 7443.28,
+        "chg_pct": -0.19
       },
       "nikkei": {
-        "last": 64141.12,
-        "chg_pct": -4.03
+        "last": 65255.68,
+        "chg_pct": 1.74
       },
       "crude": {
-        "last": 82.49,
-        "chg_pct": 4.48
+        "last": 82.16,
+        "chg_pct": -1.29
       },
       "usdinr": {
         "last": 96.43,
-        "chg_pct": -0.23
+        "chg_pct": 0.16
       },
       "gold": {
-        "last": 4012.7,
-        "chg_pct": 0.68
+        "last": 4039.3,
+        "chg_pct": 0.72
       }
     },
-    "summary": "Overall macro mood is neutral (+0.01). US Dow -0.8% overnight. Crude +4.5%. USD/INR -0.2%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
+    "summary": "Overall macro mood is neutral (+0.10). US Dow -0.6% overnight. Crude -1.3%. USD/INR +0.2%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
       "Trade-war headlines spook global markets; IT & export names react most."
@@ -128,7 +128,7 @@
   },
   "macro_risk_factor": 1.0,
   "fii_dii": {
-    "date": "2026-07-20",
+    "date": "2026-07-21",
     "fii_net_cr": -1121.04,
     "dii_net_cr": 1312.03,
     "combined_net_cr": 190.99,
@@ -255,15 +255,21 @@
         "fii": -1121.04,
         "dii": 1312.03,
         "combined": 190.99
+      },
+      {
+        "date": "2026-07-21",
+        "fii": -1121.04,
+        "dii": 1312.03,
+        "combined": 190.99
       }
     ]
   },
   "pcr": {
-    "date": "2026-07-20",
-    "pcr": 1.357,
+    "date": "2026-07-21",
+    "pcr": 1.378,
     "reading": "bullish_bias",
-    "total_pe_oi": 2803774,
-    "total_ce_oi": 2066468,
+    "total_pe_oi": 2769046,
+    "total_ce_oi": 2008942,
     "spot": 24238.5,
     "max_pain": 24200.0,
     "max_pain_dist_pct": 0.16,

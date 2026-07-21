@@ -1,13 +1,13 @@
 {
   "phase": "paper_trading",
   "day": 21,
-  "session": "morning",
+  "session": "preopen",
   "start_date": "2026-06-22",
   "phase_start_date": "2026-07-15",
   "last_run_date": "2026-07-20",
   "last_counted_date": "2026-07-20",
   "cohort_last_tick_date": "2026-07-20",
-  "last_updated": "2026-07-20T10:15:44.772028",
+  "last_updated": "2026-07-21T03:05:44.096872",
   "focus_stocks": [
     "MARICO.NS",
     "SBIN.NS",
@@ -77,7 +77,8 @@
     "[2026-07-17] Cohort batch #9 complete \u2014 30 candidates ready",
     "[2026-07-20] Pre-open macro: neutral (+0.03)",
     "[2026-07-20] Focus refresh \u2014 promoted: ['SIEMENS', 'BANDHANBNK', 'NYKAA'] | demoted: ['ADANIENT', 'RECLTD', 'FEDERALBNK']",
-    "[2026-07-20] Cohort batch #10 complete \u2014 30 candidates ready"
+    "[2026-07-20] Cohort batch #10 complete \u2014 30 candidates ready",
+    "[2026-07-21] Pre-open macro: neutral (+0.10)"
   ],
   "alert_sent": false,
   "schema_version": 11,
@@ -307,11 +308,6 @@
     "scored_date": "2026-07-20"
   },
   "sessions_done": {
-    "preopen": "2026-07-20",
-    "morning": "2026-07-20",
-    "midday": "2026-07-20",
-    "afternoon": "2026-07-20",
-    "intraday_close": "2026-07-20",
-    "preclose": "2026-07-20"
+    "preopen": "2026-07-21"
   }
 }

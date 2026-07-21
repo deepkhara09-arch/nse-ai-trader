@@ -1618,5 +1618,85 @@
     "ts": "2026-07-20T10:15:44.877731",
     "detail": "Confidence \u25b24 (72 \u2192 76) | Rank \u25bc2 (#11 \u2192 #13)",
     "confidence": 76.3
+  },
+  {
+    "type": "new",
+    "ticker": "UNIONBANK.NS",
+    "nse_code": "UNIONBANK",
+    "signal": "BUY",
+    "date": "2026-07-21",
+    "ts": "2026-07-21T04:05:53.592469",
+    "detail": "New BUY recommendation \u2014 confidence 91/100",
+    "confidence": 91.0
+  },
+  {
+    "type": "new",
+    "ticker": "SBIN.NS",
+    "nse_code": "SBIN",
+    "signal": "BUY",
+    "date": "2026-07-21",
+    "ts": "2026-07-21T04:05:53.592469",
+    "detail": "New BUY recommendation \u2014 confidence 74/100",
+    "confidence": 74.5
+  },
+  {
+    "type": "removed",
+    "ticker": "PIDILITIND.NS",
+    "nse_code": "PIDILITIND",
+    "signal": "BUY",
+    "date": "2026-07-21",
+    "ts": "2026-07-21T04:05:53.592469",
+    "detail": "Dropped \u2014 no longer meets threshold (was 79/100)",
+    "confidence": 0
+  },
+  {
+    "type": "removed",
+    "ticker": "SUNPHARMA.NS",
+    "nse_code": "SUNPHARMA",
+    "signal": "BUY",
+    "date": "2026-07-21",
+    "ts": "2026-07-21T04:05:53.592469",
+    "detail": "Dropped \u2014 no longer meets threshold (was 76/100)",
+    "confidence": 0
+  },
+  {
+    "type": "removed",
+    "ticker": "MARICO.NS",
+    "nse_code": "MARICO",
+    "signal": "BUY",
+    "date": "2026-07-21",
+    "ts": "2026-07-21T04:05:53.592469",
+    "detail": "Dropped \u2014 no longer meets threshold (was 68/100)",
+    "confidence": 0
+  },
+  {
+    "type": "removed",
+    "ticker": "ABCAPITAL.NS",
+    "nse_code": "ABCAPITAL",
+    "signal": "BUY",
+    "date": "2026-07-21",
+    "ts": "2026-07-21T04:05:53.592469",
+    "detail": "Dropped \u2014 no longer meets threshold (was 68/100)",
+    "confidence": 0
+  },
+  {
+    "type": "removed",
+    "ticker": "NESTLEIND.NS",
+    "nse_code": "NESTLEIND",
+    "signal": "BUY",
+    "date": "2026-07-21",
+    "ts": "2026-07-21T04:05:53.592469",
+    "detail": "Dropped \u2014 no longer meets threshold (was 65/100)",
+    "confidence": 0
+  },
+  {
+    "type": "updated",
+    "ticker": "HOMEFIRST.NS",
+    "nse_code": "HOMEFIRST",
+    "signal": "BUY",
+    "date": "2026-07-21",
+    "ts": "2026-07-21T04:05:53.592469",
+    "detail": "Confidence \u25bc8 (78 \u2192 70) | Target 1 moved \u20b91394.92 \u2192 \u20b91369.76",
+    "confidence": 70.1
   }
 ]

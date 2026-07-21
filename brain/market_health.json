@@ -1,6 +1,6 @@
 {
   "date": "2026-07-21",
-  "session": "preopen",
+  "session": "morning",
   "nifty": {
     "symbol": "^NSEI",
     "value": 24238.5,
@@ -60,16 +60,14 @@
   },
   "market_mood": "neutral",
   "trade_allowed": true,
-  "warnings": [
-    "Nifty choppy intraday \u2014 wait for cleaner setups"
-  ],
+  "warnings": [],
   "leading_sectors": [
     "IT"
   ],
   "market_regime": "normal",
   "sector_breadth": 0.25,
   "lagging_sectors": [],
-  "intraday_regime": "choppy",
+  "intraday_regime": "mixed",
   "macro": {
     "date": "2026-07-21",
     "session": "preopen",

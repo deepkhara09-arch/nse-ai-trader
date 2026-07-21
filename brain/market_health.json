@@ -60,9 +60,7 @@
   },
   "market_mood": "neutral",
   "trade_allowed": true,
-  "warnings": [
-    "Nifty in intraday downtrend \u2014 avoid new longs this session"
-  ],
+  "warnings": [],
   "leading_sectors": [
     "IT",
     "Bank",
@@ -72,14 +70,14 @@
   "sector_breadth": 0.75,
   "lagging_sectors": [],
   "broad_market_strength": true,
-  "intraday_regime": "trending_down",
+  "intraday_regime": "mixed",
   "macro": {
     "date": "2026-07-21",
     "session": "midday",
-    "generated_at": "2026-07-21T06:15:47.701254",
-    "global_score": 0.093,
+    "generated_at": "2026-07-21T07:07:02.579508",
+    "global_score": 0.11,
     "india_score": 0.0,
-    "overall_score": 0.051,
+    "overall_score": 0.061,
     "mood": "neutral",
     "drivers": [
       "Your healthcare could now cost $185,500 in retirement \u2014 and that doesn\u2019t include long-term care",
@@ -105,8 +103,8 @@
         "chg_pct": -0.19
       },
       "nikkei": {
-        "last": 66055.92,
-        "chg_pct": 2.99
+        "last": 66232.19,
+        "chg_pct": 3.26
       },
       "crude": {
         "last": 83.23,
@@ -114,14 +112,14 @@
       },
       "usdinr": {
         "last": 96.24,
-        "chg_pct": -0.05
+        "chg_pct": -0.04
       },
       "gold": {
         "last": 4010.3,
         "chg_pct": -0.06
       }
     },
-    "summary": "Overall macro mood is neutral (+0.05). US Dow -0.6% overnight. Crude +0.9%. USD/INR -0.1%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
+    "summary": "Overall macro mood is neutral (+0.06). US Dow -0.6% overnight. Crude +0.9%. USD/INR -0.0%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
       "Trade-war headlines spook global markets; IT & export names react most."

@@ -1698,5 +1698,45 @@
     "ts": "2026-07-21T04:05:53.592469",
     "detail": "Confidence \u25bc8 (78 \u2192 70) | Target 1 moved \u20b91394.92 \u2192 \u20b91369.76",
     "confidence": 70.1
+  },
+  {
+    "type": "new",
+    "ticker": "SUNPHARMA.NS",
+    "nse_code": "SUNPHARMA",
+    "signal": "BUY",
+    "date": "2026-07-21",
+    "ts": "2026-07-21T06:12:16.238363",
+    "detail": "New BUY recommendation \u2014 confidence 72/100",
+    "confidence": 72.2
+  },
+  {
+    "type": "updated",
+    "ticker": "UNIONBANK.NS",
+    "nse_code": "UNIONBANK",
+    "signal": "BUY",
+    "date": "2026-07-21",
+    "ts": "2026-07-21T06:12:16.238363",
+    "detail": "Target 1 moved \u20b9193.58 \u2192 \u20b9192.37",
+    "confidence": 91.0
+  },
+  {
+    "type": "updated",
+    "ticker": "HOMEFIRST.NS",
+    "nse_code": "HOMEFIRST",
+    "signal": "BUY",
+    "date": "2026-07-21",
+    "ts": "2026-07-21T06:12:16.238363",
+    "detail": "Stop loss moved \u20b91211.12 \u2192 \u20b91219.14 | Target 1 moved \u20b91369.76 \u2192 \u20b91401.72",
+    "confidence": 70.1
+  },
+  {
+    "type": "updated",
+    "ticker": "SBIN.NS",
+    "nse_code": "SBIN",
+    "signal": "BUY",
+    "date": "2026-07-21",
+    "ts": "2026-07-21T06:12:16.238363",
+    "detail": "Confidence \u25bc6 (74 \u2192 68) | Stop loss moved \u20b91031.05 \u2192 \u20b91021.86 | Target 1 moved \u20b91120.60 \u2192 \u20b91109.28",
+    "confidence": 68.2
   }
 ]

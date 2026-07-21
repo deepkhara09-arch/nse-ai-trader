@@ -1,6 +1,6 @@
 {
   "date": "2026-07-21",
-  "session": "morning",
+  "session": "midday",
   "nifty": {
     "symbol": "^NSEI",
     "value": 24238.5,
@@ -27,11 +27,11 @@
   "sectors": {
     "IT": {
       "symbol": "ITBEES.NS",
-      "value": 32.44,
-      "day_change_pct": 1.79,
+      "value": 32.38,
+      "day_change_pct": -0.18,
       "trend_5d": "up",
       "trend_20d": "strong_up",
-      "ath_pct_60d": -6.38
+      "ath_pct_60d": -6.55
     },
     "Pharma": {
       "symbol": "PHARMABEES.NS",
@@ -43,48 +43,53 @@
     },
     "Bank": {
       "symbol": "BANKBEES.NS",
-      "value": 604.9,
-      "day_change_pct": 1.31,
-      "trend_5d": "sideways",
+      "value": 600.21,
+      "day_change_pct": -0.78,
+      "trend_5d": "up",
       "trend_20d": "up",
-      "ath_pct_60d": -3.66
+      "ath_pct_60d": -4.41
     },
     "Infra": {
       "symbol": "INFRABEES.NS",
-      "value": 967.31,
-      "day_change_pct": 0.67,
-      "trend_5d": "sideways",
-      "trend_20d": "down",
-      "ath_pct_60d": -2.64
+      "value": 974.05,
+      "day_change_pct": 0.7,
+      "trend_5d": "up",
+      "trend_20d": "sideways",
+      "ath_pct_60d": -1.96
     }
   },
   "market_mood": "neutral",
   "trade_allowed": true,
-  "warnings": [],
+  "warnings": [
+    "Nifty in intraday downtrend \u2014 avoid new longs this session"
+  ],
   "leading_sectors": [
-    "IT"
+    "IT",
+    "Bank",
+    "Infra"
   ],
   "market_regime": "normal",
-  "sector_breadth": 0.25,
+  "sector_breadth": 0.75,
   "lagging_sectors": [],
-  "intraday_regime": "mixed",
+  "broad_market_strength": true,
+  "intraday_regime": "trending_down",
   "macro": {
     "date": "2026-07-21",
-    "session": "preopen",
-    "generated_at": "2026-07-21T03:05:42.746940",
-    "global_score": 0.186,
+    "session": "midday",
+    "generated_at": "2026-07-21T06:12:03.492131",
+    "global_score": 0.092,
     "india_score": 0.0,
-    "overall_score": 0.102,
+    "overall_score": 0.051,
     "mood": "neutral",
     "drivers": [
+      "Your healthcare could now cost $185,500 in retirement \u2014 and that doesn\u2019t include long-term care",
       "U.S. hits Canada with stiff new tariffs, escalating trade tensions",
       "I racked up $35,000 in credit-card debt. Should I file for bankruptcy?",
       "Why are gasoline prices rising faster than oil prices? Blame it on the \u2018crack.\u2019",
       "I will claim Social Security early. Why do so few people talk about the elephant in the room?",
       "Why cheap Chinese AI models could actually be a boon for Nvidia, Micron and other chip stocks",
       "We have $8 million in traditional IRAs. Should we tap them to buy a house \u2014 and take the tax hit?",
-      "Americans are skipping lettuce and salads as investigation into cyclospora outbreak continues",
-      "Global oil prices settle at one-month high despite new Iran ceasefire proposal, as blockade on Saudi Arabia by Yemen\u2019s Houthis keeps market on edge"
+      "Americans are skipping lettuce and salads as investigation into cyclospora outbreak continues"
     ],
     "global_cues": {
       "dow": {
@@ -100,23 +105,23 @@
         "chg_pct": -0.19
       },
       "nikkei": {
-        "last": 65255.68,
-        "chg_pct": 1.74
+        "last": 66040.73,
+        "chg_pct": 2.96
       },
       "crude": {
-        "last": 82.16,
-        "chg_pct": -1.29
+        "last": 83.23,
+        "chg_pct": 0.9
       },
       "usdinr": {
-        "last": 96.43,
-        "chg_pct": 0.16
+        "last": 96.25,
+        "chg_pct": -0.04
       },
       "gold": {
-        "last": 4039.3,
-        "chg_pct": 0.72
+        "last": 4010.3,
+        "chg_pct": -0.06
       }
     },
-    "summary": "Overall macro mood is neutral (+0.10). US Dow -0.6% overnight. Crude -1.3%. USD/INR +0.2%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
+    "summary": "Overall macro mood is neutral (+0.05). US Dow -0.6% overnight. Crude +0.9%. USD/INR -0.0%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
       "Trade-war headlines spook global markets; IT & export names react most."

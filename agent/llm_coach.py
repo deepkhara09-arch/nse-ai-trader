@@ -45,13 +45,27 @@ def run_coach(closed_trades: List[dict], patterns: dict, market_health: dict) ->
     Main entry point. Called at preclose.
     Returns the coach memory dict (also saved to disk).
     """
-    api_key = os.environ.get("GEMINI_API_KEY", "")
-    if not api_key:
-        print("[coach] No GEMINI_API_KEY — skipping coach session")
-        return load_coach_memory()
-
     memory   = load_coach_memory()
     today    = ist_today().isoformat()
+
+    # ── FREE context coach (always runs) ─────────────────────────────────────
+    # Deterministic contextual learning from closed trades — needs no API key, so
+    # this learning loop is NEVER dormant. Gemini (below) enriches it when a key
+    # is present, but the tool keeps getting smarter regardless.
+    try:
+        from agent.context_coach import run_context_coach
+        run_context_coach(closed_trades, memory)
+        memory["session_count"] = memory.get("session_count", 0) + 1
+        memory["last_run"] = today
+        save_coach_memory(memory)
+    except Exception as e:
+        print(f"[coach] context coach non-fatal: {e}")
+
+    api_key = os.environ.get("GEMINI_API_KEY", "")
+    if not api_key:
+        print("[coach] No GEMINI_API_KEY — free context coach ran; skipping LLM enrichment")
+        return load_coach_memory()
+
     lessons  = []
 
     # ── 1. Review today's closed trades ──────────────────────────────────────
@@ -73,8 +87,9 @@ def run_coach(closed_trades: List[dict], patterns: dict, market_health: dict) ->
         _clear_questions()
 
     # ── 3. Structural suggestions (once per week — every 5 preclose sessions) ─
-    session_count = memory.get("session_count", 0) + 1
-    memory["session_count"] = session_count
+    # session_count was already incremented above (free coach block); reuse it so
+    # the weekly cadence doesn't drift and we don't double-count.
+    session_count = memory.get("session_count", 0)
     if session_count % 5 == 0 and closed_trades:
         print("[coach] Generating weekly structural suggestions")
         suggestions = _structural_suggestions(closed_trades, patterns, market_health, api_key)

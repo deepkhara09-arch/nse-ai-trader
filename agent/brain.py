@@ -999,25 +999,38 @@ def analyse_stock(
     # If coach flagged it as reliable, add a small boost.
     # This is how the tool accumulates institutional memory across sessions.
     coach_notes  = []
-    coach_caution = False
     try:
         from agent.llm_coach import get_lessons_for, load_coach_memory
         _coach_mem = load_coach_memory()
-        # Pick top pattern as setup key (most important signal that fired)
-        top_pattern = patterns[0] if patterns else "general"
-        lessons = get_lessons_for(ticker, top_pattern, _coach_mem)
-        for lesson in lessons:
-            watch = lesson.get("what_to_watch", "")
-            happened = lesson.get("what_happened", "")
-            if watch:
-                coach_notes.append(f"Coach: {watch}")
-            # If coach lesson is about a loss on this setup, add slight caution
-            if "fail" in happened.lower() or "stop" in happened.lower() or "loss" in happened.lower():
-                coach_caution = True
-        if coach_caution and signal != "WATCH":
-            confidence = max(confidence - 5, 30)   # slight reduction — not a veto
-            if coach_notes:
-                buy_reasons.append(f"⚠ {coach_notes[0]}")
+        # Check EVERY fired pattern's lessons, not just the top one — a failing
+        # context on a secondary pattern is still a real caution.
+        seen_keys = set()
+        worst_wr  = None   # lowest context win-rate among matching "fails-here" lessons
+        boost_wr  = None   # highest among "works-here" lessons
+        for _p in (patterns or ["general"]):
+            for lesson in get_lessons_for(ticker, _p, _coach_mem):
+                k = (lesson.get("context"), lesson.get("what_to_watch"))
+                if k in seen_keys:
+                    continue
+                seen_keys.add(k)
+                happened = lesson.get("what_happened", "").lower()
+                wr = lesson.get("win_rate")
+                if any(w in happened for w in ("fail", "stop", "loss", "cautio")):
+                    if wr is not None:
+                        worst_wr = wr if worst_wr is None else min(worst_wr, wr)
+                    coach_notes.append(f"Coach: {lesson.get('what_to_watch','')}")
+                elif "work" in happened or "favourable" in happened:
+                    if wr is not None:
+                        boost_wr = wr if boost_wr is None else max(boost_wr, wr)
+        if signal != "WATCH":
+            # Scale the confidence adjustment by how skewed the context was, so a
+            # 15%-win context hurts more than a 35% one, and a 75%-win context helps.
+            if worst_wr is not None:
+                confidence = max(round(confidence * (0.75 + 0.5 * worst_wr), 1), 30)
+                if coach_notes:
+                    buy_reasons.append(f"⚠ {coach_notes[0]}")
+            elif boost_wr is not None:
+                confidence = min(round(confidence * (0.95 + 0.1 * boost_wr), 1), 95)
     except Exception:
         pass   # coach is always optional — never block trading logic
 

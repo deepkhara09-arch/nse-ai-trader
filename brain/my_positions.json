@@ -1,5 +1,6 @@
 {
-  "open": [
+  "open": [],
+  "closed": [
     {
       "ticker": "NESTLEIND.NS",
       "action": "BUY",
@@ -24,8 +25,13 @@
         "near_52w_high",
         "supertrend_bullish",
         "doji"
-      ]
+      ],
+      "close_date": "2026-07-23",
+      "exit_price": 1493.6,
+      "exit_reason": "user_closed",
+      "pnl": 0.0,
+      "pnl_pct": 0.0,
+      "won": false
     }
-  ],
-  "closed": []
+  ]
 }

@@ -1236,9 +1236,9 @@
       },
       "near_52w_high": {
         "wins": 0.0,
-        "losses": 0.5,
-        "reliability": 0.417,
-        "last_seen": "2026-07-13"
+        "losses": 0.972,
+        "reliability": 0.338,
+        "last_seen": "2026-07-23"
       },
       "bb_upper_rejection": {
         "wins": 0.0,
@@ -1247,22 +1247,22 @@
         "last_seen": "2026-07-15"
       },
       "supertrend_bullish": {
-        "wins": 0.5,
-        "losses": 1.921,
-        "reliability": 0.263,
-        "last_seen": "2026-07-22"
+        "wins": 0.497,
+        "losses": 2.41,
+        "reliability": 0.181,
+        "last_seen": "2026-07-23"
       },
       "full_bullish_alignment": {
-        "wins": 1.491,
-        "losses": 2.401,
-        "reliability": 0.383,
-        "last_seen": "2026-07-22"
+        "wins": 1.482,
+        "losses": 2.887,
+        "reliability": 0.339,
+        "last_seen": "2026-07-23"
       },
       "rsi_bearish_divergence": {
         "wins": 0.0,
-        "losses": 0.5,
-        "reliability": 0.417,
-        "last_seen": "2026-07-15"
+        "losses": 0.977,
+        "reliability": 0.337,
+        "last_seen": "2026-07-23"
       },
       "pivot_s1_breakdown": {
         "wins": 0.997,
@@ -1272,9 +1272,9 @@
       },
       "stoch_rsi_oversold_reversal": {
         "wins": 0.0,
-        "losses": 0.997,
-        "reliability": 0.334,
-        "last_seen": "2026-07-17"
+        "losses": 1.463,
+        "reliability": 0.256,
+        "last_seen": "2026-07-23"
       },
       "pivot_s1_bounce": {
         "wins": 0.0,
@@ -1311,6 +1311,24 @@
         "losses": 0.0,
         "reliability": 0.583,
         "last_seen": "2026-07-21"
+      },
+      "adx_ranging_market": {
+        "wins": 0.0,
+        "losses": 0.5,
+        "reliability": 0.417,
+        "last_seen": "2026-07-23"
+      },
+      "three_white_soldiers": {
+        "wins": 0.0,
+        "losses": 0.5,
+        "reliability": 0.417,
+        "last_seen": "2026-07-23"
+      },
+      "doji": {
+        "wins": 0.0,
+        "losses": 0.5,
+        "reliability": 0.417,
+        "last_seen": "2026-07-23"
       }
     },
     "preferred_style": "swing",
@@ -1323,7 +1341,7 @@
     "atr_stop_hits": 0,
     "atr_target_hits": 0,
     "atr_multiplier": 1.5,
-    "last_updated": "2026-07-22",
+    "last_updated": "2026-07-23",
     "attribution": {
       "by_pattern": {},
       "by_session": {},

@@ -153,7 +153,7 @@ def _build_html(
 
   <!-- ── TRADE tab ── -->
   <section class="tab-panel" id="tab-trade" hidden>
-    {_section_my_positions(my_positions or {})}
+    {_section_my_positions(my_positions or {}, focus, recommendations)}
     {_section_recommendations(recommendations, validated=alert, stats=stats, decisions=decisions, book=book)}
     {_section_rankings(ranked_stocks)}
     {_section_changelog(changelog)}
@@ -1715,31 +1715,89 @@ def _section_learning_progress(decisions: list) -> str:
 </div>"""
 
 
-def _section_my_positions(my_positions: dict) -> str:
-    """The USER's real positions (logged via the 'My Trades' Actions workflow),
-    managed live: entry, P&L at the current price, trailed stop, target, and a
-    HOLD / EXIT NOW status. Renders nothing until the user logs a first trade."""
+_MY_TRADES_WORKFLOW = ("https://github.com/deepkhara09-arch/nse-ai-trader/"
+                       "actions/workflows/my_trade.yml")
+
+
+def _section_my_positions(my_positions: dict, focus: list = None, recs: list = None) -> str:
+    """The USER's real positions, managed live: entry, P&L, trailed stop, a target
+    that tracks the tool's current view, HOLD / EXIT NOW / CONSIDER EXIT status,
+    a closed-trade record, AND an on-dashboard 'add a trade' form (focus stocks
+    only) that opens the GitHub trigger pre-filled."""
     opens  = my_positions.get("open", [])
     closed = my_positions.get("closed", [])
+
+    # ── Add-a-trade form (focus stocks only) — always shown ────────────────────
+    # A static page can't save data, so 'Log it' opens the My Trades workflow with
+    # your inputs shown to paste — one tap, then Run. Focus stocks only, since the
+    # tool only manages what it has a live view on.
+    focus = focus or []
+    rec_tk = {r.get("ticker") for r in (recs or [])}
+    opts = ""
+    for t in focus:
+        code = t.replace(".NS", "")
+        star = " ★ recommended" if t in rec_tk else ""
+        opts += f'<option value="{code}">{code}{star}</option>'
+    add_form = f"""<div class="card" style="margin-bottom:12px;padding:12px 14px">
+  <div style="font-weight:700;font-size:.82rem;margin-bottom:8px">&#10133; Add a trade you took</div>
+  <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:end">
+    <label style="font-size:.66rem;color:var(--muted)">Stock (focus)<br>
+      <select id="mt_ticker" style="padding:5px;border-radius:5px;min-width:140px">{opts}</select></label>
+    <label style="font-size:.66rem;color:var(--muted)">Avg buy price<br>
+      <input id="mt_price" type="number" step="0.05" placeholder="1028.50" style="padding:5px;border-radius:5px;width:110px"></label>
+    <label style="font-size:.66rem;color:var(--muted)">Quantity<br>
+      <input id="mt_qty" type="number" step="1" placeholder="8" style="padding:5px;border-radius:5px;width:80px"></label>
+    <button onclick="logMyTrade('bought')" style="padding:7px 14px;border-radius:6px;background:var(--green,#3ecf8e);color:#04140b;font-weight:700;border:none;cursor:pointer">Log buy</button>
+  </div>
+  <div id="mt_out" style="font-size:.68rem;color:var(--muted);margin-top:8px;line-height:1.5"></div>
+  <script>
+  function logMyTrade(action) {{
+    var t=document.getElementById('mt_ticker').value;
+    var p=document.getElementById('mt_price').value;
+    var q=document.getElementById('mt_qty').value;
+    var out=document.getElementById('mt_out');
+    if(!t||!p||!q){{out.innerHTML='Fill stock, price and quantity first.';return;}}
+    var body='{{"action":"'+action+'","ticker":"'+t+'","price":"'+p+'","qty":"'+q+'"}}';
+    navigator.clipboard&&navigator.clipboard.writeText(body);
+    out.innerHTML='<b style="color:var(--green,#3ecf8e)">Ready:</b> '+action+' '+q+'x '+t+' @ '+p+
+      '<br>1) opening the <b>My Trades</b> workflow &#8594; click <b>Run workflow</b>, '+
+      'set the fields the same (values copied to clipboard).';
+    window.open('{_MY_TRADES_WORKFLOW}','_blank');
+  }}
+  </script>
+</div>"""
+
     if not opens and not closed:
-        return ""
+        return f"""<div class="section" id="my-positions">
+  <h2>My Positions <span>your real trades — managed live by the tool</span></h2>
+  {add_form}
+  <div style="font-size:.66rem;color:var(--muted)">No positions yet. Add one above once you buy a focus stock — the tool will then trail your stop, keep your target current, and flag when to exit.</div>
+</div>"""
 
     rows = ""
     for p in opens:
         sig  = p.get("exit_signal", "")
+        view = p.get("tool_view", "hold")
         upnl = p.get("unrealized_pnl", 0.0)
         pcol = "var(--green)" if upnl >= 0 else "var(--red)"
         if sig == "target_hit":
-            status = ('<span class="badge badge-green" style="font-weight:700">EXIT NOW — TARGET HIT '
-                      '&#127919;</span>')
+            status = ('<span class="badge badge-green" style="font-weight:700">EXIT NOW — TARGET HIT &#127919;</span>')
         elif sig == "stop_hit":
             status = ('<span class="badge badge-red" style="font-weight:700">EXIT NOW — STOP HIT</span>')
+        elif view == "reversed":
+            status = ('<span class="badge" style="font-weight:700;background:#2a1205;color:#e6a93a;border:1px solid #e6a93a">CONSIDER EXIT — tool flipped view</span>')
+        elif view == "dropped":
+            status = ('<span class="badge badge-gray">HOLD — tool no longer rates this setup</span>')
         else:
-            status = '<span class="badge badge-gray">HOLD</span>'
-        trailed = " <span style='color:var(--green);font-size:.6rem'>(trailed)</span>" if p.get("trailing_active") else ""
+            status = '<span class="badge badge-green">HOLD — plan on track</span>'
+        trailed = " <span style='color:var(--green);font-size:.6rem'>(trailed up)</span>" if p.get("trailing_active") else ""
         unknown = ("<div style='color:var(--amber,#e6a93a);font-size:.62rem;margin-top:2px'>"
                    "&#9888; not in the tool's universe — prices not managed live</div>"
                    if not p.get("known_stock", True) else "")
+        exit_line = ""
+        if sig or view == "reversed":
+            exit_line = ('<div style="font-size:.66rem;color:#e6a93a;margin-top:4px">'
+                         'To close: use the form above with <b>Log sell</b> (or the workflow) so the tool books your P&amp;L and learns from it.</div>')
         rows += f"""<div class="card" style="margin-bottom:9px;padding:11px 13px">
   <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px">
     <div style="font-weight:700">{p.get('action','BUY')} {p.get('qty','?')}x {p.get('ticker','').replace('.NS','')}
@@ -1747,15 +1805,14 @@ def _section_my_positions(my_positions: dict) -> str:
     {status}
   </div>
   <div style="font-size:.74rem;margin-top:6px;color:var(--text)">
-    Your entry &#8377;{p.get('entry',0):,.2f} &middot; now &#8377;{p.get('current_price',0):,.2f}
+    Your avg &#8377;{p.get('entry',0):,.2f} &middot; now &#8377;{p.get('current_price',0):,.2f}
     &middot; P&amp;L <b style="color:{pcol}">&#8377;{upnl:+,.0f}</b>
   </div>
   <div style="font-size:.72rem;margin-top:3px;color:var(--muted)">
     Stop <b style="color:var(--text)">&#8377;{p.get('stop_loss',0):,.2f}</b>{trailed}
-    &middot; Target <b style="color:var(--text)">&#8377;{p.get('target',0):,.2f}</b>
-    &middot; plan from {p.get('plan_source','')}
+    &middot; Target <b style="color:var(--text)">&#8377;{p.get('target',0):,.2f}</b> (tracks the tool's view)
   </div>
-  {unknown}
+  {exit_line}{unknown}
 </div>"""
 
     closed_html = ""
@@ -1768,17 +1825,18 @@ def _section_my_positions(my_positions: dict) -> str:
             for t in recent
         )
         w = sum(1 for t in closed if t.get("pnl", 0) > 0)
-        closed_html = (f'<div style="font-size:.68rem;color:var(--muted);margin-top:4px">'
+        closed_html = (f'<div style="font-size:.68rem;color:var(--muted);margin-top:8px">'
                        f'Your closed trades: {w}/{len(closed)} wins &middot; recent: {items}</div>')
 
     return f"""<div class="section" id="my-positions">
   <h2>My Positions <span>your real trades — managed live by the tool</span></h2>
+  {add_form}
   {rows}
   {closed_html}
-  <div style="font-size:.64rem;color:var(--muted);margin-top:7px">
-    Log a buy/sell: GitHub &#8594; Actions &#8594; <b>My Trades</b> &#8594; Run workflow.
-    The tool trails your stop every session and flags EXIT NOW — it never closes
-    your trade by itself; you confirm by logging &lsquo;sold&rsquo;.
+  <div style="font-size:.63rem;color:var(--muted);margin-top:8px">
+    The tool trails your stop up each session, keeps your target aligned with its
+    current view, and flags EXIT NOW / CONSIDER EXIT — it never closes your trade
+    itself; you confirm by logging the sell.
   </div>
 </div>"""
 

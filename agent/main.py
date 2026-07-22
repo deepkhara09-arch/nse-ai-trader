@@ -955,8 +955,15 @@ def _refresh_outputs(state: dict, market_health: dict, session: str, read_only: 
         # rules as paper trades, and flag EXIT NOW when stop/target is hit.
         # Never auto-closes (the tool can't know their real fill) — the user
         # confirms via the 'My Trades' workflow. Read-only in test mode.
-        from agent.my_trades import manage_positions
-        my_pos = manage_positions(sd, save=not read_only)
+        # Fully isolated: a My Trades problem can NEVER affect paper trading, the
+        # brain, selection, or the dashboard — worst case the panel is empty.
+        my_pos = {}
+        try:
+            from agent.my_trades import manage_positions
+            my_pos = manage_positions(sd, save=not read_only)
+        except Exception as e:
+            print(f"[my-trades] management skipped (non-fatal, isolated): {e}")
+            record_issue("my_trades", "manage_positions", str(e), session)
 
         attr_summary = aggregate_attribution(pats)
         coach_mem    = load_coach_memory()

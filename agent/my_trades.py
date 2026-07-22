@@ -190,12 +190,21 @@ def record_sold(ticker_raw: str, price: float) -> str:
 
 
 def manage_positions(stock_data: dict, save: bool = True) -> dict:
-    """Run once per session: mark-to-market, trail stops (same rules as paper
-    trades), and set exit_signal flags. NEVER closes — the user confirms exits."""
+    """Run once per session on YOUR real positions:
+      • mark-to-market at the live price
+      • TRAIL the stop up as profit grows (never down)
+      • REFRESH the target from the tool's current live recommendation (so your
+        plan tracks the tool's updated view of the stock), never pulling it in
+        below what you've already achieved
+      • read the tool's CURRENT view (still a BUY? flipped to SELL/weak?) and set
+        an advisory action: HOLD / EXIT NOW (stop or target hit) / CONSIDER EXIT
+        (the tool no longer likes it)
+    NEVER auto-closes — you confirm the exit."""
     data = load_my_positions()
     if not data["open"]:
         return data
-    # Reuse the paper trader's trailing logic on a wrapper book (same field names).
+
+    # Trail stops with the same proven rules as paper positions.
     try:
         from agent.paper_trader import _update_trailing_stops
         wrapper = {"open_positions": data["open"]}
@@ -204,25 +213,69 @@ def manage_positions(stock_data: dict, save: bool = True) -> dict:
     except Exception as e:
         print(f"[my-trades] trailing skipped (non-fatal): {e}")
 
+    # The tool's live recommendations, keyed by ticker, to refresh targets + view.
+    live_recs = {}
+    try:
+        from agent.recommendations import load_recommendations
+        live_recs = {r.get("ticker"): r for r in load_recommendations()}
+    except Exception:
+        pass
+
     for pos in data["open"]:
-        d = stock_data.get(pos["ticker"], {}).get("latest", {})
+        tk  = pos["ticker"]
+        d   = stock_data.get(tk, {}).get("latest", {})
         cur = d.get("current_price") or d.get("close")
         if not cur:
             continue
-        sgn = 1 if pos.get("action", "BUY") == "BUY" else -1
+        buy = pos.get("action", "BUY") == "BUY"
+        sgn = 1 if buy else -1
         pos["current_price"]  = round(cur, 2)
         pos["unrealized_pnl"] = round((cur - pos["entry"]) * pos["qty"] * sgn, 2)
+
+        # ── Refresh TARGET from the tool's current rec (track its updated view) ──
+        rec = live_recs.get(tk)
+        if rec and rec.get("target1"):
+            new_t = rec["target1"]
+            # Only extend the target in the trade's favour (don't cut a target you
+            # may already be near); this keeps the plan live without whipsawing.
+            if buy and new_t > pos.get("target", 0):
+                pos["target"] = round(new_t, 2)
+            elif (not buy) and new_t < pos.get("target", 1e9):
+                pos["target"] = round(new_t, 2)
+
+        # ── The tool's CURRENT view on this stock (advisory) ────────────────────
+        view = "hold"
+        if rec:
+            rsig = rec.get("direction_short") or rec.get("signal")
+            if (buy and rsig_is_sell(rsig)) or ((not buy) and rsig_is_buy(rsig)):
+                view = "reversed"     # tool now leans the OTHER way — consider exit
+        elif tk not in live_recs and pos.get("was_recommended"):
+            view = "dropped"          # tool no longer surfaces it as a setup
+
         hi = d.get("session_high") or d.get("day_high") or cur
         lo = d.get("session_low")  or d.get("day_low")  or cur
-        if pos.get("action", "BUY") == "BUY":
+        if buy:
             if lo <= pos["stop_loss"]:   pos["exit_signal"] = "stop_hit"
             elif hi >= pos["target"]:    pos["exit_signal"] = "target_hit"
+            else:                        pos["exit_signal"] = ""
         else:
             if hi >= pos["stop_loss"]:   pos["exit_signal"] = "stop_hit"
             elif lo <= pos["target"]:    pos["exit_signal"] = "target_hit"
+            else:                        pos["exit_signal"] = ""
+        pos["tool_view"] = view
+        pos["was_recommended"] = pos.get("was_recommended") or (tk in live_recs)
+
     if save:
         save_my_positions(data)
     return data
+
+
+def rsig_is_sell(s: str) -> bool:
+    return str(s or "").upper() in ("SELL", "SHORT")
+
+
+def rsig_is_buy(s: str) -> bool:
+    return str(s or "").upper() in ("BUY", "LONG")
 
 
 if __name__ == "__main__":

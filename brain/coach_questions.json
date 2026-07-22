@@ -1,45 +1,5 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of pivot_r1_breakout, pivot_point_test mean for a swing trade on PIDILITIND? Current RSI=52, MACD hist=-6.4209, Vol=2.0x average. Signal is BUY.",
-    "context": {
-      "ticker": "PIDILITIND.NS",
-      "signal": "BUY",
-      "patterns": "pivot_r1_breakout, pivot_point_test",
-      "rsi": 52.0
-    },
-    "queued_at": "2026-07-22T04:05:56.379621"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_up, full_bullish_alignment, pivot_point_test mean for a swing trade on SIEMENS? Current RSI=61, MACD hist=+21.7253, Vol=0.7x average. Signal is BUY.",
-    "context": {
-      "ticker": "SIEMENS.NS",
-      "signal": "BUY",
-      "patterns": "adx_strong_trend_up, full_bullish_alignment, pivot_point_test",
-      "rsi": 60.6
-    },
-    "queued_at": "2026-07-22T04:05:56.382725"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of full_bullish_alignment, pivot_point_test, momentum_continuation mean for a swing trade on BHEL? Current RSI=50, MACD hist=+2.3746, Vol=0.5x average. Signal is BUY.",
-    "context": {
-      "ticker": "BHEL.NS",
-      "signal": "BUY",
-      "patterns": "full_bullish_alignment, pivot_point_test, momentum_continuation",
-      "rsi": 50.3
-    },
-    "queued_at": "2026-07-22T04:05:56.383771"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of pivot_r1_breakout, full_bearish_alignment, pivot_r2_breakout mean for a swing trade on JSWSTEEL? Current RSI=60, MACD hist=+3.1535, Vol=1.7x average. Signal is BUY.",
-    "context": {
-      "ticker": "JSWSTEEL.NS",
-      "signal": "BUY",
-      "patterns": "pivot_r1_breakout, full_bearish_alignment, pivot_r2_breakout",
-      "rsi": 60.4
-    },
-    "queued_at": "2026-07-22T04:05:56.384460"
-  },
-  {
     "question": "In Indian NSE markets, what does the combination of bb_midline_support, adx_ranging_market, engulfing_bullish mean for a swing trade on GAIL? Current RSI=49, MACD hist=-0.4478, Vol=0.8x average. Signal is BUY.",
     "context": {
       "ticker": "GAIL.NS",
@@ -98,5 +58,45 @@
       "rsi": 60.6
     },
     "queued_at": "2026-07-22T06:10:47.968999"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of adx_ranging_market, engulfing_bullish, bb_midline_support mean for a swing trade on GAIL? Current RSI=49, MACD hist=-0.4478, Vol=0.8x average. Signal is BUY.",
+    "context": {
+      "ticker": "GAIL.NS",
+      "signal": "BUY",
+      "patterns": "adx_ranging_market, engulfing_bullish, bb_midline_support",
+      "rsi": 48.9
+    },
+    "queued_at": "2026-07-22T07:45:58.333281"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of pivot_r2_breakout, pivot_r1_breakout mean for a swing trade on PIDILITIND? Current RSI=52, MACD hist=-6.4209, Vol=2.0x average. Signal is BUY.",
+    "context": {
+      "ticker": "PIDILITIND.NS",
+      "signal": "BUY",
+      "patterns": "pivot_r2_breakout, pivot_r1_breakout",
+      "rsi": 52.0
+    },
+    "queued_at": "2026-07-22T07:45:58.334053"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of adx_ranging_market, engulfing_bullish, bb_midline_support mean for a swing trade on GAIL? Current RSI=49, MACD hist=-0.4478, Vol=0.8x average. Signal is BUY.",
+    "context": {
+      "ticker": "GAIL.NS",
+      "signal": "BUY",
+      "patterns": "adx_ranging_market, engulfing_bullish, bb_midline_support",
+      "rsi": 48.9
+    },
+    "queued_at": "2026-07-22T07:45:58.421318"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of pivot_r2_breakout, pivot_r1_breakout mean for a swing trade on PIDILITIND? Current RSI=52, MACD hist=-6.4209, Vol=2.0x average. Signal is BUY.",
+    "context": {
+      "ticker": "PIDILITIND.NS",
+      "signal": "BUY",
+      "patterns": "pivot_r2_breakout, pivot_r1_breakout",
+      "rsi": 52.0
+    },
+    "queued_at": "2026-07-22T07:45:58.422098"
   }
 ]

@@ -1,6 +1,6 @@
 {
   "date": "2026-07-22",
-  "session": "midday",
+  "session": "afternoon",
   "nifty": {
     "symbol": "^NSEI",
     "value": 24187.7,
@@ -61,7 +61,6 @@
   "market_mood": "bearish",
   "trade_allowed": true,
   "warnings": [
-    "Nifty in intraday downtrend \u2014 avoid new longs this session",
     "Global macro risk-off (-0.37) \u2014 Overall macro mood is risk-off (-0.37). US Dow +0.7% overnight. Crude +2.0%. USD/INR +0.0%. Notable: Geopolitical confli"
   ],
   "leading_sectors": [
@@ -71,7 +70,7 @@
   "market_regime": "normal",
   "sector_breadth": 0.5,
   "lagging_sectors": [],
-  "intraday_regime": "trending_down",
+  "intraday_regime": "mixed",
   "macro": {
     "date": "2026-07-22",
     "session": "midday",

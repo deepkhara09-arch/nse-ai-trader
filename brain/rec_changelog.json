@@ -1898,5 +1898,35 @@
     "ts": "2026-07-22T06:10:47.973142",
     "detail": "Confidence \u25bc5 (91 \u2192 86) | Stop loss moved \u20b9168.85 \u2192 \u20b9163.19",
     "confidence": 85.7
+  },
+  {
+    "type": "new",
+    "ticker": "PIDILITIND.NS",
+    "nse_code": "PIDILITIND",
+    "signal": "BUY",
+    "date": "2026-07-22",
+    "ts": "2026-07-22T07:45:58.427190",
+    "detail": "New BUY recommendation \u2014 confidence 70/100",
+    "confidence": 70.3
+  },
+  {
+    "type": "removed",
+    "ticker": "ICICIBANK.NS",
+    "nse_code": "ICICIBANK",
+    "signal": "BUY",
+    "date": "2026-07-22",
+    "ts": "2026-07-22T07:45:58.427190",
+    "detail": "Dropped \u2014 no longer meets threshold (was 68/100)",
+    "confidence": 0
+  },
+  {
+    "type": "updated",
+    "ticker": "UNIONBANK.NS",
+    "nse_code": "UNIONBANK",
+    "signal": "BUY",
+    "date": "2026-07-22",
+    "ts": "2026-07-22T07:45:58.427190",
+    "detail": "Target 1 moved \u20b9189.05 \u2192 \u20b9186.14",
+    "confidence": 85.7
   }
 ]

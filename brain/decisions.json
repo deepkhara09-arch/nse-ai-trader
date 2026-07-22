@@ -8277,5 +8277,87 @@
       "supertrend_bullish",
       "spinning_top"
     ]
+  },
+  {
+    "timestamp": "2026-07-22T07:45:58.330126",
+    "date": "2026-07-22",
+    "ticker": "MARICO.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 66.8,
+    "entry": 857.95,
+    "stop_loss": 832.69,
+    "target": 908.48,
+    "reason": "paper afternoon",
+    "patterns": [
+      "full_bullish_alignment",
+      "adx_strong_trend_up",
+      "strong_bullish_marubozu",
+      "near_52w_high",
+      "supertrend_bullish"
+    ]
+  },
+  {
+    "timestamp": "2026-07-22T07:45:58.332073",
+    "date": "2026-07-22",
+    "ticker": "UNIONBANK.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 94.6,
+    "entry": 170.56,
+    "stop_loss": 161.21,
+    "target": 189.26,
+    "reason": "paper afternoon",
+    "patterns": [
+      "pivot_r2_breakout",
+      "full_bullish_alignment",
+      "engulfing_bullish",
+      "strong_bullish_marubozu",
+      "pivot_r1_breakout",
+      "supertrend_bullish"
+    ]
+  },
+  {
+    "timestamp": "2026-07-22T07:45:58.333540",
+    "date": "2026-07-22",
+    "ticker": "GAIL.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 80.2,
+    "entry": 172.95,
+    "stop_loss": 167.9,
+    "target": 183.04,
+    "reason": "paper afternoon",
+    "patterns": [
+      "adx_ranging_market",
+      "full_bullish_alignment",
+      "engulfing_bullish",
+      "tweezer_bottom",
+      "bb_midline_support",
+      "supertrend_bullish"
+    ]
+  },
+  {
+    "timestamp": "2026-07-22T07:45:58.334288",
+    "date": "2026-07-22",
+    "ticker": "PIDILITIND.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 95,
+    "entry": 1579.2,
+    "stop_loss": 1531.97,
+    "target": 1673.66,
+    "reason": "paper afternoon",
+    "patterns": [
+      "pivot_r2_breakout",
+      "full_bullish_alignment",
+      "adx_strong_trend_up",
+      "pivot_r1_breakout",
+      "supertrend_bullish"
+    ]
   }
 ]

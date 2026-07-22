@@ -1,0 +1,31 @@
+{
+  "open": [
+    {
+      "ticker": "NESTLEIND.NS",
+      "action": "BUY",
+      "entry": 1493.6,
+      "qty": 30,
+      "invested": 44808.0,
+      "open_date": "2026-07-23",
+      "stop_loss": 1451.22,
+      "target": 1571.64,
+      "style": "swing",
+      "plan_source": "recommendation geometry",
+      "known_stock": true,
+      "exit_signal": "",
+      "current_price": 1493.6,
+      "unrealized_pnl": 0.0,
+      "patterns": [
+        "rsi_bearish_divergence",
+        "adx_ranging_market",
+        "full_bullish_alignment",
+        "stoch_rsi_oversold_reversal",
+        "three_white_soldiers",
+        "near_52w_high",
+        "supertrend_bullish",
+        "doji"
+      ]
+    }
+  ],
+  "closed": []
+}

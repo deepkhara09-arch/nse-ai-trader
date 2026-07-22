@@ -1,6 +1,6 @@
 {
   "date": "2026-07-22",
-  "session": "morning",
+  "session": "midday",
   "nifty": {
     "symbol": "^NSEI",
     "value": 24187.7,
@@ -27,11 +27,11 @@
   "sectors": {
     "IT": {
       "symbol": "ITBEES.NS",
-      "value": 32.38,
-      "day_change_pct": -0.18,
+      "value": 32.2,
+      "day_change_pct": -0.56,
       "trend_5d": "up",
       "trend_20d": "strong_up",
-      "ath_pct_60d": -6.55
+      "ath_pct_60d": -7.07
     },
     "Pharma": {
       "symbol": "PHARMABEES.NS",
@@ -43,42 +43,43 @@
     },
     "Bank": {
       "symbol": "BANKBEES.NS",
-      "value": 600.21,
-      "day_change_pct": -0.78,
-      "trend_5d": "up",
-      "trend_20d": "up",
-      "ath_pct_60d": -4.41
+      "value": 599.55,
+      "day_change_pct": -0.11,
+      "trend_5d": "sideways",
+      "trend_20d": "sideways",
+      "ath_pct_60d": -4.52
     },
     "Infra": {
       "symbol": "INFRABEES.NS",
-      "value": 974.05,
-      "day_change_pct": 0.7,
+      "value": 974.18,
+      "day_change_pct": 0.01,
       "trend_5d": "up",
       "trend_20d": "sideways",
-      "ath_pct_60d": -1.96
+      "ath_pct_60d": -1.94
     }
   },
-  "market_mood": "neutral",
+  "market_mood": "bearish",
   "trade_allowed": true,
-  "warnings": [],
+  "warnings": [
+    "Nifty choppy intraday \u2014 wait for cleaner setups",
+    "Global macro risk-off (-0.37) \u2014 Overall macro mood is risk-off (-0.37). US Dow +0.7% overnight. Crude +2.0%. USD/INR -0.0%. Notable: Geopolitical confli"
+  ],
   "leading_sectors": [
     "IT",
-    "Bank",
     "Infra"
   ],
   "market_regime": "normal",
-  "sector_breadth": 0.75,
+  "sector_breadth": 0.5,
   "lagging_sectors": [],
-  "broad_market_strength": true,
-  "intraday_regime": "mixed",
+  "intraday_regime": "choppy",
   "macro": {
     "date": "2026-07-22",
-    "session": "preopen",
-    "generated_at": "2026-07-22T03:05:47.994289",
-    "global_score": 0.262,
-    "india_score": 0.0,
-    "overall_score": 0.144,
-    "mood": "neutral",
+    "session": "midday",
+    "generated_at": "2026-07-22T06:10:39.541854",
+    "global_score": 0.152,
+    "india_score": -1.0,
+    "overall_score": -0.366,
+    "mood": "risk_off",
     "drivers": [
       "Super Micro\u2019s stock soars as its margins unexpectedly double",
       "This is the ideal retirement strategy if you want to keep your healthcare costs down",
@@ -103,23 +104,23 @@
         "chg_pct": 0.89
       },
       "nikkei": {
-        "last": 67511.12,
-        "chg_pct": 1.93
+        "last": 66179.1,
+        "chg_pct": -0.08
       },
       "crude": {
-        "last": 85.23,
-        "chg_pct": 0.38
+        "last": 84.91,
+        "chg_pct": 2.02
       },
       "usdinr": {
-        "last": 96.22,
-        "chg_pct": -0.27
+        "last": 96.46,
+        "chg_pct": -0.04
       },
       "gold": {
-        "last": 4132.7,
-        "chg_pct": 1.51
+        "last": 4071.1,
+        "chg_pct": 1.52
       }
     },
-    "summary": "Overall macro mood is neutral (+0.14). US Dow +0.7% overnight. Crude +0.4%. USD/INR -0.3%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
+    "summary": "Overall macro mood is risk-off (-0.37). US Dow +0.7% overnight. Crude +2.0%. USD/INR -0.0%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
       "Trade-war headlines spook global markets; IT & export names react most."
@@ -127,7 +128,7 @@
     "playbook_bias": "risk_off",
     "article_count": 60
   },
-  "macro_risk_factor": 1.0,
+  "macro_risk_factor": 0.7,
   "fii_dii": {
     "date": "2026-07-22",
     "fii_net_cr": 1650.16,

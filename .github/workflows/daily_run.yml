@@ -60,6 +60,14 @@ on:
 permissions:
   contents: write   # needed to commit brain + dashboard back to repo
 
+# Shared with the My Trades workflow — both commit brain/ wholesale, so they must
+# never run at the same time (an overlapping run could commit a stale copy of
+# brain/ and silently erase a trade you logged mid-session). GitHub queues the
+# second run instead. cancel-in-progress is false: never drop a queued session.
+concurrency:
+  group: nse-brain-write
+  cancel-in-progress: false
+
 jobs:
   trade:
     runs-on: ubuntu-latest

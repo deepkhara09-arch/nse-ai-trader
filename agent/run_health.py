@@ -103,12 +103,46 @@ def start_run(session: str) -> None:
         pass
 
 
+# A component with no new failure for this many days is considered RESOLVED and
+# its stale issues are dropped, so System Health reflects the CURRENT state rather
+# than accumulating history forever. (A real recurring fault re-logs immediately,
+# so nothing genuinely broken can hide behind this.)
+ISSUE_RESOLVE_DAYS = 2
+
+
+def _expire_resolved(data: dict) -> None:
+    """Drop issues from components that haven't failed again recently."""
+    now = datetime.now(IST)
+    kept, dropped = [], set()
+    for i in data.get("issues", []):
+        try:
+            ts = datetime.strptime(i.get("ts", ""), "%Y-%m-%d %H:%M IST").replace(tzinfo=IST)
+            age_days = (now - ts).total_seconds() / 86400
+        except Exception:
+            kept.append(i); continue
+        if age_days > ISSUE_RESOLVE_DAYS:
+            dropped.add(i.get("component", "?"))
+        else:
+            kept.append(i)
+    if dropped:
+        data["issues"] = kept
+        still_failing = {i.get("component") for i in kept}
+        for comp in dropped:
+            if comp not in still_failing:
+                data.get("counts", {}).pop(comp, None)
+                print(f"[health] '{comp}' clear for {ISSUE_RESOLVE_DAYS}+ days — marking resolved")
+
+
 def finish_run(session: str) -> None:
     """Finalise the run summary — how many issues occurred this run."""
     try:
         data = _load()
         start_count = data.pop("_run_start_count", len(data["issues"]))
         this_run = len(data["issues"]) - start_count
+        # Clear issues whose component has since been healthy — but only when THIS
+        # run was clean, so we never hide an active problem.
+        if this_run == 0:
+            _expire_resolved(data)
         data["last_run"] = {
             "date":         datetime.now(IST).date().isoformat(),
             "session":      session,

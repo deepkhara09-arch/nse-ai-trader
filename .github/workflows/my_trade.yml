@@ -42,6 +42,16 @@ on:
 permissions:
   contents: write
 
+# Both this and the daily session commit brain/ wholesale. Without a shared
+# concurrency group they can overlap: the session reads my_positions.json at
+# start, you log a trade mid-run, and the session then commits its STALE copy —
+# silently erasing your trade (no git conflict, newest commit just wins).
+# Sharing one group makes GitHub QUEUE the second run instead of racing.
+# cancel-in-progress stays false so a queued trade is never dropped.
+concurrency:
+  group: nse-brain-write
+  cancel-in-progress: false
+
 jobs:
   record:
     runs-on: ubuntu-latest
@@ -60,6 +70,12 @@ jobs:
 
       - name: Install dependencies
         run: pip install -r requirements.txt
+
+      - name: Sync to latest before recording
+        # Belt-and-braces with the concurrency group: pull immediately before
+        # reading/writing brain/ so we always act on the freshest state (e.g. a
+        # session that finished while this job was queued).
+        run: git pull --rebase origin main || true
 
       - name: Record the trade
         # Fields come from the manual form OR the dashboard's direct submit

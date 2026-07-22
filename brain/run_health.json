@@ -1,31 +1,10 @@
 {
-  "issues": [
-    {
-      "ts": "2026-07-20 16:55 IST",
-      "session": "",
-      "component": "options_flow",
-      "detail": "NIFTY option chain",
-      "message": "HTTPSConnectionPool(host='www.nseindia.com', port=443): Read timed out. (read timeout=12)"
-    },
-    {
-      "ts": "2026-07-20 16:55 IST",
-      "session": "preclose",
-      "component": "options_flow",
-      "detail": "NIFTY option chain",
-      "message": "HTTPSConnectionPool(host='www.nseindia.com', port=443): Read timed out. (read timeout=12)"
-    }
-  ],
-  "counts": {
-    "options_flow": {
-      "total": 2,
-      "last_seen": "2026-07-20 16:55 IST",
-      "last_session": "preclose"
-    }
-  },
+  "issues": [],
+  "counts": {},
   "last_run": {
     "date": "2026-07-23",
     "session": "test",
-    "finished_at": "2026-07-23 02:37 IST",
+    "finished_at": "2026-07-23 02:47 IST",
     "ok": true,
     "issue_count": 0
   }

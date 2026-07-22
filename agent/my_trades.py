@@ -195,21 +195,26 @@ def record_sold(ticker_raw: str, price: float) -> str:
     data["closed"] = (data["closed"] + [pos])[-100:]
     save_my_positions(data)
 
-    # ── Learn from the user's REAL outcome ─────────────────────────────────────
-    # A real, executed trade the user actually took is the highest-quality signal
-    # the tool can get — better than a paper trade. Feed it into pattern
-    # reliability (full weight) so the tool's edge improves from your real results.
+    # ── Learn from the user's REAL outcome (isolated, half weight) ─────────────
+    # A real executed trade is valuable signal, but the user may exit for reasons
+    # the tool can't see (needed the cash, personal risk limit, a typo). So this
+    # is deliberately CONSERVATIVE and cannot disturb the tool's own learning:
+    #   • half weight (0.5) — informs pattern reliability, never dominates it
+    #   • dry=True — touches ONLY pattern reliability; never the style preference
+    #     or the ATR auto-tuner, which must come from the tool's own executed exits
+    #   • fully wrapped — any failure here leaves patterns.json untouched and the
+    #     trade still books correctly (this is an add-on, never a dependency)
     try:
         from agent.brain import load_patterns, save_patterns, learn_from_trade
         pats = pos.get("patterns") or []
         if pats:
             db = load_patterns()
             db = learn_from_trade(ticker, pats, pnl > 0, pos.get("style", "swing"), db,
-                                  exit_reason="user_closed")
+                                  weight=0.5, dry=True, exit_reason="user_closed")
             save_patterns(db)
-            print(f"[my-trades] taught the brain from your real {ticker} outcome ({'win' if pnl>0 else 'loss'})")
+            print(f"[my-trades] noted your real {ticker} outcome ({'win' if pnl>0 else 'loss'}) at half weight")
     except Exception as e:
-        print(f"[my-trades] learn-from-real non-fatal: {e}")
+        print(f"[my-trades] learn-from-real skipped (non-fatal, patterns untouched): {e}")
 
     return (f"CLOSED: {ticker} @ {price:.2f} | P&L {pnl:+,.2f} ({pos['pnl_pct']:+.2f}%) "
             f"| {'WIN' if pnl > 0 else 'LOSS'}")

@@ -80,7 +80,10 @@ def fetch_delivery(tickers: List[str], lookback_days: int = 5) -> Dict:
         pcts = [e[1] for e in entries]
 
         latest_pct   = pcts[-1] if pcts else 0.0
-        avg_5d       = round(sum(pcts) / len(pcts), 1)
+        # Guarded consistently with latest_pct above — the `if not entries` check
+        # makes an empty list unreachable today, but an unguarded divide here
+        # would become a ZeroDivisionError the moment that guard is ever relaxed.
+        avg_5d       = round(sum(pcts) / len(pcts), 1) if pcts else 0.0
 
         # Trend: compare last 2 sessions
         if len(pcts) >= 2:

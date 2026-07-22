@@ -98,6 +98,22 @@ def run_context_coach(closed_trades: List[dict], memory: dict) -> int:
         for key, ls in lessons_by_key.items():
             mem_lessons.setdefault(key, []).extend(ls)
 
+        # ── Also feed the dashboard's flat feed ────────────────────────────────
+        # The Coach panel reads `recent_lessons` (written by the Gemini path).
+        # Without this the free coach's lessons would be learned but INVISIBLE —
+        # the panel would say "Coach hasn't run yet" forever with no API key.
+        from agent.trading_calendar import ist_today
+        today = ist_today().isoformat()
+        recent = [l for l in memory.get("recent_lessons", [])
+                  if l.get("source") != "context_coach"]        # drop stale ones
+        for key, ls in lessons_by_key.items():
+            tk, _, pat = key.partition("::")
+            for l in ls:
+                recent.append({**l, "date": today,
+                               "ticker": tk.replace(".NS", ""), "setup": pat})
+        memory["recent_lessons"] = sorted(
+            recent, key=lambda x: x.get("date", ""), reverse=True)[:30]
+
         if written:
             print(f"[context-coach] {written} context lesson(s) from {len(closed_trades)} trades (free, no LLM)")
         return written

@@ -119,6 +119,21 @@ def _patterns_now(ticker: str) -> list:
 
 def record_bought(ticker_raw: str, price: float, qty: int, side: str = "BUY") -> str:
     ticker = _normalize_ticker(ticker_raw)
+    # ── Input validation ───────────────────────────────────────────────────────
+    # These values are typed by hand, so a typo (blank, extra zero, minus sign)
+    # must be rejected rather than silently creating a corrupt position that would
+    # poison the P&L record AND teach the learner a false lesson.
+    try:
+        price = float(price); qty = int(float(qty))
+    except (TypeError, ValueError):
+        return "REJECTED: price and quantity must be numbers."
+    if price <= 0:
+        return f"REJECTED: price must be greater than 0 (got {price})."
+    if qty <= 0:
+        return f"REJECTED: quantity must be at least 1 (got {qty})."
+    if price > 1_000_000 or qty > 1_000_000:
+        return "REJECTED: price/quantity look unrealistic — check for a typo."
+
     data = load_my_positions()
     if any(p["ticker"] == ticker for p in data["open"]):
         return f"REJECTED: you already have an open position in {ticker} — log 'sold' first."
@@ -152,6 +167,17 @@ def record_bought(ticker_raw: str, price: float, qty: int, side: str = "BUY") ->
 
 def record_sold(ticker_raw: str, price: float) -> str:
     ticker = _normalize_ticker(ticker_raw)
+    # Same hand-typed validation as the buy side — a 0 or blank exit price would
+    # book a fake -100% loss into your record and mis-teach the pattern learner.
+    try:
+        price = float(price)
+    except (TypeError, ValueError):
+        return "REJECTED: exit price must be a number."
+    if price <= 0:
+        return f"REJECTED: exit price must be greater than 0 (got {price})."
+    if price > 1_000_000:
+        return "REJECTED: exit price looks unrealistic — check for a typo."
+
     data = load_my_positions()
     pos = next((p for p in data["open"] if p["ticker"] == ticker), None)
     if not pos:
@@ -244,13 +270,39 @@ def manage_positions(stock_data: dict, save: bool = True) -> dict:
                 pos["target"] = round(new_t, 2)
 
         # ── The tool's CURRENT view on this stock (advisory) ────────────────────
+        # YOUR position never leaves this panel until you sell it — so the guidance
+        # must never go quiet either. If the stock is no longer in the live recs
+        # (e.g. the focus competition demoted it), we analyse it DIRECTLY so you
+        # still get a fresh read every session instead of a stale plan.
         view = "hold"
         if rec:
             rsig = rec.get("direction_short") or rec.get("signal")
             if (buy and rsig_is_sell(rsig)) or ((not buy) and rsig_is_buy(rsig)):
                 view = "reversed"     # tool now leans the OTHER way — consider exit
-        elif tk not in live_recs and pos.get("was_recommended"):
-            view = "dropped"          # tool no longer surfaces it as a setup
+        else:
+            fresh_sig = None
+            try:
+                from agent.brain import analyse_stock, load_patterns
+                entry_full = stock_data.get(tk, {})
+                if entry_full.get("latest"):
+                    op = analyse_stock(tk, entry_full, load_patterns(), {}, "manage")
+                    fresh_sig = op.get("signal")
+                    # Keep the target honest to the current analysis (favourable-only,
+                    # same rule as the rec path) so the plan stays live off-focus.
+                    if op.get("target"):
+                        nt = op["target"]
+                        if buy and nt > pos.get("target", 0):
+                            pos["target"] = round(nt, 2)
+                        elif (not buy) and nt < pos.get("target", 1e9):
+                            pos["target"] = round(nt, 2)
+            except Exception as e:
+                print(f"[my-trades] direct analysis for {tk} skipped: {e}")
+            if fresh_sig and ((buy and rsig_is_sell(fresh_sig)) or
+                              ((not buy) and rsig_is_buy(fresh_sig))):
+                view = "reversed"                 # analysis now leans against you
+            elif pos.get("was_recommended"):
+                view = "dropped"                  # no longer a surfaced setup
+            pos["off_focus_view"] = fresh_sig or "no_data"
 
         hi = d.get("session_high") or d.get("day_high") or cur
         lo = d.get("session_low")  or d.get("day_low")  or cur

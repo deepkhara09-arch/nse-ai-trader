@@ -1790,6 +1790,19 @@ def _section_my_positions(my_positions: dict, focus: list = None, recs: list = N
             status = ('<span class="badge badge-gray">HOLD — tool no longer rates this setup</span>')
         else:
             status = '<span class="badge badge-green">HOLD — plan on track</span>'
+        # If the stock left the focus list, we still analyse it directly each
+        # session — show that fresh read so guidance never goes quiet on a
+        # position you still hold.
+        off = p.get("off_focus_view")
+        off_line = ""
+        if off and off != "no_data":
+            off_col = {"BUY": "var(--green)", "SELL": "var(--red)"}.get(off, "var(--muted)")
+            off_line = (f'<div style="font-size:.64rem;color:var(--muted);margin-top:3px">'
+                        f'Off-focus, still analysed each session — current read: '
+                        f'<b style="color:{off_col}">{off}</b></div>')
+        elif off == "no_data":
+            off_line = ('<div style="font-size:.64rem;color:var(--amber,#e6a93a);margin-top:3px">'
+                        'No fresh price data this session — plan held from last update.</div>')
         trailed = " <span style='color:var(--green);font-size:.6rem'>(trailed up)</span>" if p.get("trailing_active") else ""
         unknown = ("<div style='color:var(--amber,#e6a93a);font-size:.62rem;margin-top:2px'>"
                    "&#9888; not in the tool's universe — prices not managed live</div>"
@@ -1812,7 +1825,7 @@ def _section_my_positions(my_positions: dict, focus: list = None, recs: list = N
     Stop <b style="color:var(--text)">&#8377;{p.get('stop_loss',0):,.2f}</b>{trailed}
     &middot; Target <b style="color:var(--text)">&#8377;{p.get('target',0):,.2f}</b> (tracks the tool's view)
   </div>
-  {exit_line}{unknown}
+  {off_line}{exit_line}{unknown}
 </div>"""
 
     closed_html = ""

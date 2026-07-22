@@ -1,25 +1,5 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of macd_bullish_crossover, three_white_soldiers, bb_upper_rejection mean for a swing trade on SBIN? Current RSI=61, MACD hist=+0.2331, Vol=1.5x average. Signal is BUY.",
-    "context": {
-      "ticker": "SBIN.NS",
-      "signal": "BUY",
-      "patterns": "macd_bullish_crossover, three_white_soldiers, bb_upper_rejection",
-      "rsi": 61.3
-    },
-    "queued_at": "2026-07-21T10:12:54.607640"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of engulfing_bullish, morning_star mean for a swing trade on UNIONBANK? Current RSI=59, MACD hist=+0.9030, Vol=1.9x average. Signal is BUY.",
-    "context": {
-      "ticker": "UNIONBANK.NS",
-      "signal": "BUY",
-      "patterns": "engulfing_bullish, morning_star",
-      "rsi": 58.9
-    },
-    "queued_at": "2026-07-21T10:12:54.614604"
-  },
-  {
     "question": "In Indian NSE markets, what does the combination of adx_ranging_market, engulfing_bullish, bb_midline_support mean for a swing trade on GAIL? Current RSI=49, MACD hist=-0.4499, Vol=0.8x average. Signal is BUY.",
     "context": {
       "ticker": "GAIL.NS",
@@ -58,5 +38,65 @@
       "rsi": 51.6
     },
     "queued_at": "2026-07-21T10:12:54.623704"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of macd_bullish_crossover, three_white_soldiers, bb_upper_rejection mean for a swing trade on SBIN? Current RSI=61, MACD hist=+0.2331, Vol=1.5x average. Signal is BUY.",
+    "context": {
+      "ticker": "SBIN.NS",
+      "signal": "BUY",
+      "patterns": "macd_bullish_crossover, three_white_soldiers, bb_upper_rejection",
+      "rsi": 61.3
+    },
+    "queued_at": "2026-07-22T03:05:49.528715"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of morning_star, engulfing_bullish mean for a swing trade on UNIONBANK? Current RSI=59, MACD hist=+0.9030, Vol=1.9x average. Signal is BUY.",
+    "context": {
+      "ticker": "UNIONBANK.NS",
+      "signal": "BUY",
+      "patterns": "morning_star, engulfing_bullish",
+      "rsi": 58.9
+    },
+    "queued_at": "2026-07-22T03:05:49.536355"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of engulfing_bullish, bb_midline_support, adx_ranging_market mean for a swing trade on GAIL? Current RSI=49, MACD hist=-0.4499, Vol=0.8x average. Signal is BUY.",
+    "context": {
+      "ticker": "GAIL.NS",
+      "signal": "BUY",
+      "patterns": "engulfing_bullish, bb_midline_support, adx_ranging_market",
+      "rsi": 48.9
+    },
+    "queued_at": "2026-07-22T03:05:49.540487"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of full_bullish_alignment, three_white_soldiers, momentum_continuation mean for a swing trade on SIEMENS? Current RSI=57, MACD hist=+20.1637, Vol=0.4x average. Signal is BUY.",
+    "context": {
+      "ticker": "SIEMENS.NS",
+      "signal": "BUY",
+      "patterns": "full_bullish_alignment, three_white_soldiers, momentum_continuation",
+      "rsi": 57.4
+    },
+    "queued_at": "2026-07-22T03:05:49.544128"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of pivot_r1_breakout, pivot_r2_breakout, full_bearish_alignment mean for a swing trade on JSWSTEEL? Current RSI=54, MACD hist=+1.5424, Vol=1.9x average. Signal is BUY.",
+    "context": {
+      "ticker": "JSWSTEEL.NS",
+      "signal": "BUY",
+      "patterns": "pivot_r1_breakout, pivot_r2_breakout, full_bearish_alignment",
+      "rsi": 53.6
+    },
+    "queued_at": "2026-07-22T03:05:49.545615"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of full_bullish_alignment, pivot_s1_breakdown, shooting_star mean for a swing trade on LICI? Current RSI=52, MACD hist=-0.9526, Vol=1.7x average. Signal is BUY.",
+    "context": {
+      "ticker": "LICI.NS",
+      "signal": "BUY",
+      "patterns": "full_bullish_alignment, pivot_s1_breakdown, shooting_star",
+      "rsi": 51.6
+    },
+    "queued_at": "2026-07-22T03:05:49.546386"
   }
 ]

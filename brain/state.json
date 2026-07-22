@@ -1,13 +1,13 @@
 {
   "phase": "paper_trading",
   "day": 22,
-  "session": "morning",
+  "session": "preopen",
   "start_date": "2026-06-22",
   "phase_start_date": "2026-07-15",
   "last_run_date": "2026-07-21",
   "last_counted_date": "2026-07-21",
   "cohort_last_tick_date": "2026-07-21",
-  "last_updated": "2026-07-21T10:12:54.527925",
+  "last_updated": "2026-07-22T03:05:49.444302",
   "focus_stocks": [
     "MARICO.NS",
     "SBIN.NS",
@@ -83,7 +83,8 @@
     "[2026-07-20] Cohort batch #10 complete \u2014 30 candidates ready",
     "[2026-07-21] Pre-open macro: neutral (+0.10)",
     "[2026-07-21] Focus refresh \u2014 promoted: ['BHEL', 'JSWSTEEL', 'LICI'] | demoted: ['NYKAA', 'INDUSINDBK', 'SUNPHARMA']",
-    "[2026-07-21] Cohort batch #11 complete \u2014 30 candidates ready"
+    "[2026-07-21] Cohort batch #11 complete \u2014 30 candidates ready",
+    "[2026-07-22] Pre-open macro: neutral (+0.14)"
   ],
   "alert_sent": false,
   "schema_version": 11,
@@ -313,11 +314,6 @@
     "scored_date": "2026-07-21"
   },
   "sessions_done": {
-    "preopen": "2026-07-21",
-    "morning": "2026-07-21",
-    "midday": "2026-07-21",
-    "afternoon": "2026-07-21",
-    "intraday_close": "2026-07-21",
-    "preclose": "2026-07-21"
+    "preopen": "2026-07-22"
   }
 }

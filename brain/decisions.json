@@ -8359,5 +8359,116 @@
       "pivot_r1_breakout",
       "supertrend_bullish"
     ]
+  },
+  {
+    "timestamp": "2026-07-22T09:36:54.739839",
+    "date": "2026-07-22",
+    "ticker": "MARICO.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 95,
+    "entry": 860.55,
+    "stop_loss": 835.84,
+    "target": 909.96,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "three_white_soldiers",
+      "supertrend_bullish",
+      "near_52w_high",
+      "full_bullish_alignment",
+      "stoch_rsi_oversold_reversal",
+      "adx_strong_trend_up",
+      "hammer",
+      "rsi_bearish_divergence"
+    ]
+  },
+  {
+    "timestamp": "2026-07-22T09:36:54.740938",
+    "date": "2026-07-22",
+    "ticker": "HOMEFIRST.NS",
+    "session": "intraday_close",
+    "action": "SELL",
+    "signal": "SELL",
+    "confidence": 56.0,
+    "entry": 1223.0,
+    "stop_loss": 1280.93,
+    "target": 1107.14,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "bb_upper_rejection",
+      "doji",
+      "full_bullish_alignment",
+      "tweezer_top",
+      "engulfing_bearish",
+      "adx_strong_trend_up",
+      "pivot_s1_breakdown",
+      "inside_bar"
+    ]
+  },
+  {
+    "timestamp": "2026-07-22T09:36:54.741672",
+    "date": "2026-07-22",
+    "ticker": "NESTLEIND.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 69.3,
+    "entry": 1492.0,
+    "stop_loss": 1451.86,
+    "target": 1572.28,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "three_white_soldiers",
+      "supertrend_bullish",
+      "near_52w_high",
+      "doji",
+      "full_bullish_alignment",
+      "adx_ranging_market",
+      "stoch_rsi_oversold_reversal",
+      "rsi_bearish_divergence"
+    ]
+  },
+  {
+    "timestamp": "2026-07-22T09:36:54.744272",
+    "date": "2026-07-22",
+    "ticker": "PIDILITIND.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 95,
+    "entry": 1602.5,
+    "stop_loss": 1555.27,
+    "target": 1696.96,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "pivot_r1_breakout",
+      "supertrend_bullish",
+      "near_52w_high",
+      "full_bullish_alignment",
+      "adx_strong_trend_up",
+      "pivot_r2_breakout"
+    ]
+  },
+  {
+    "timestamp": "2026-07-22T09:36:54.745973",
+    "date": "2026-07-22",
+    "ticker": "JSWSTEEL.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 65.1,
+    "entry": 1269.2,
+    "stop_loss": 1230.03,
+    "target": 1347.53,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "three_white_soldiers",
+      "pivot_r1_breakout",
+      "supertrend_bullish",
+      "bb_upper_rejection",
+      "adx_ranging_market",
+      "ema_golden_cross"
+    ]
   }
 ]

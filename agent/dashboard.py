@@ -180,7 +180,7 @@ def _build_html(
   <!-- ── LOG tab ── -->
   <section class="tab-panel" id="tab-log" hidden>
     {_section_runlog(state)}
-    {_section_health(run_health)}
+    {_section_health(run_health, coach_memory)}
   </section>
 </div>
 
@@ -2443,10 +2443,32 @@ def _section_coach(coach_memory: dict) -> str:
 </div>"""
 
 
-def _section_health(run_health: dict) -> str:
+def _gemini_status_html(coach_memory: dict) -> str:
+    """Show whether the Gemini learning layer is actually working — so its status
+    is visible on the dashboard, not buried in Actions logs."""
+    gs = (coach_memory or {}).get("gemini_status")
+    if not gs:
+        return ('<div class="card" style="padding:10px 13px;margin-bottom:12px;font-size:.72rem;color:var(--muted)">'
+                '<b>Gemini coach:</b> not yet run this cycle (runs at preclose).</div>')
+    if not gs.get("key_present"):
+        return ('<div class="card" style="padding:10px 13px;margin-bottom:12px;font-size:.72rem;'
+                'border:1px solid #e6a93a55;color:#e6a93a">'
+                '<b>Gemini coach: OFF</b> — GEMINI_API_KEY not set in the workflow. '
+                'The free context-coach still learns; add the secret to enable LLM enrichment '
+                '(regime narratives + answers to the tool&rsquo;s own questions).</div>')
+    if gs.get("last_error"):
+        return ('<div class="card" style="padding:10px 13px;margin-bottom:12px;font-size:.72rem;'
+                f'border:1px solid #dc262655;color:#f87171"><b>Gemini coach: ERROR</b> — {gs.get("last_error")} '
+                f'(checked {gs.get("checked","")}). Key present but not working — check quota / model access.</div>')
+    return ('<div class="card" style="padding:10px 13px;margin-bottom:12px;font-size:.72rem;color:#4ade80">'
+            f'<b>Gemini coach: ONLINE</b> — last verified {gs.get("last_ok","")}. Enriching lessons.</div>')
+
+
+def _section_health(run_health: dict, coach_memory: dict = None) -> str:
     last_run = run_health.get("last_run", {})
     issues   = run_health.get("issues", [])
     counts   = run_health.get("counts", {})
+    gemini_html = _gemini_status_html(coach_memory)
 
     last_ok      = last_run.get("ok", True)
     last_count   = last_run.get("issue_count", 0)
@@ -2464,6 +2486,7 @@ def _section_health(run_health: dict) -> str:
 </div>"""
         return f"""<div class="section" id="health">
   <h2>System Health <span>tool self-diagnostics &mdash; failures are non-fatal</span></h2>
+  {gemini_html}
   {status_html}
 </div>"""
 
@@ -2532,6 +2555,7 @@ def _section_health(run_health: dict) -> str:
 
     return f"""<div class="section" id="health">
   <h2>System Health <span>{len(issues)} recorded issue(s) &mdash; all non-fatal</span></h2>
+  {gemini_html}
   {banner}
   {summary_table}
   {feed}

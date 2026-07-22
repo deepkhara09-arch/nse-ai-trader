@@ -49,21 +49,38 @@ def fetch_pcr() -> dict:
         return prev
     try:
         from agent.data_fetcher import _NSE_SESSION, _warm_nse_session
-        _warm_nse_session()
+
+        def _get(url):
+            """GET with a longer timeout + one retry (re-warming the session) so a
+            single transient NSE read-timeout doesn't cost us the whole reading —
+            this was the recurring System Health 'options_flow read timed out'."""
+            last = None
+            for attempt in (1, 2):
+                try:
+                    _warm_nse_session()
+                    resp = _NSE_SESSION.get(url, timeout=20)
+                    if resp.status_code == 200:
+                        return resp
+                    last = f"HTTP {resp.status_code}"
+                except Exception as e:
+                    last = str(e)[:60]
+                if attempt == 1:
+                    import time as _t; _t.sleep(1.5)   # brief backoff before retry
+            return last  # str on failure
 
         # ── Step 1: nearest expiry ──────────────────────────────────────────────
-        ci = _NSE_SESSION.get(CONTRACT_INFO_URL, timeout=12)
-        if ci.status_code != 200:
-            return _fail(prev, f"contract-info HTTP {ci.status_code}")
+        ci = _get(CONTRACT_INFO_URL)
+        if isinstance(ci, str):
+            return _fail(prev, f"contract-info {ci}")
         expiries = (ci.json() or {}).get("expiryDates", []) or []
         if not expiries:
             return _fail(prev, "no expiry dates returned")
         expiry = expiries[0]
 
         # ── Step 2: option chain for that expiry ────────────────────────────────
-        r = _NSE_SESSION.get(V3_URL.format(expiry=expiry), timeout=12)
-        if r.status_code != 200:
-            return _fail(prev, f"option-chain-v3 HTTP {r.status_code}")
+        r = _get(V3_URL.format(expiry=expiry))
+        if isinstance(r, str):
+            return _fail(prev, f"option-chain-v3 {r}")
         data = r.json()
         records = (data.get("records", {}) or {})
         rows = records.get("data", []) or []

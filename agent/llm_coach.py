@@ -64,7 +64,29 @@ def run_coach(closed_trades: List[dict], patterns: dict, market_health: dict) ->
     api_key = os.environ.get("GEMINI_API_KEY", "")
     if not api_key:
         print("[coach] No GEMINI_API_KEY — free context coach ran; skipping LLM enrichment")
-        return load_coach_memory()
+        memory = load_coach_memory()
+        memory["gemini_status"] = {"key_present": False, "last_ok": None,
+                                   "last_error": "GEMINI_API_KEY not set in the run",
+                                   "checked": today}
+        save_coach_memory(memory)
+        return memory
+
+    # Prove the key WORKS with a tiny probe, so the dashboard can honestly show
+    # whether Gemini is actually enriching the tool (not just 'a key exists').
+    probe = _call_gemini("Reply with the single word: OK", api_key, use_search=False)
+    gemini_ok = bool(probe and "ok" in probe.lower())
+    memory = load_coach_memory()
+    memory["gemini_status"] = {
+        "key_present": True,
+        "last_ok":     today if gemini_ok else memory.get("gemini_status", {}).get("last_ok"),
+        "last_error":  "" if gemini_ok else "probe call failed (key invalid, quota, or model unavailable)",
+        "checked":     today,
+    }
+    save_coach_memory(memory)
+    if not gemini_ok:
+        print("[coach] Gemini key present but probe FAILED — skipping LLM enrichment (context coach still ran)")
+        return memory
+    print("[coach] Gemini online — enriching lessons")
 
     lessons  = []
 

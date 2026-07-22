@@ -1756,7 +1756,9 @@ def _section_my_positions(my_positions: dict, focus: list = None, recs: list = N
     <button onclick="mtToggleKey()" title="Save a GitHub token once to submit directly from here" style="padding:6px 10px;border-radius:6px;background:transparent;color:var(--muted);border:1px solid var(--border);cursor:pointer;font-size:.66rem">&#9881; Setup</button>
   </div>
   <div id="mt_keybox" style="display:none;margin-top:8px;font-size:.66rem;color:var(--muted);line-height:1.6">
-    Paste a GitHub <b>fine-grained token</b> with <b>Actions: Read and write</b> on this repo.
+    Paste a GitHub <b>fine-grained token</b> for this repo with BOTH
+    <b>Contents: Read and write</b> and <b>Actions: Read and write</b>
+    (the dispatch API needs Contents — Actions alone returns 403).
     It is saved only in <b>this browser</b> (localStorage) — never in the repo, never shared.
     <div style="display:flex;gap:6px;margin-top:6px;flex-wrap:wrap">
       <input id="mt_key" type="password" placeholder="github_pat_..." style="padding:5px;border-radius:5px;flex:1;min-width:200px">
@@ -1815,7 +1817,9 @@ def _section_my_positions(my_positions: dict, focus: list = None, recs: list = N
       if(r.status===204) {{
         mtSay('&#10003; Submitted. The tool is recording it — refresh in ~1 minute to see it here.','#3ecf8e');
       }} else if(r.status===401 || r.status===403) {{
-        mtSay('Token rejected ('+r.status+'). Check it has <b>Actions: Read and write</b> on this repo, then re-save via &#9881; Setup.','#e07070');
+        mtSay('Token rejected ('+r.status+'). The dispatch API needs <b>Contents: Read and write</b> '+
+              'AND <b>Actions: Read and write</b> — Actions alone gives 403. '+
+              'Edit the token\\'s permissions on GitHub (no need to regenerate), then retry.','#e07070');
       }} else if(r.status===404) {{
         mtSay('404 — token lacks access to this repo (fine-grained tokens must select it explicitly).','#e07070');
       }} else {{

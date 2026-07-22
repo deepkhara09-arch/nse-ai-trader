@@ -220,13 +220,22 @@ def _try_open_positions(book: dict, opinions: List[dict], patterns_db: Dict, ses
             print(f"[paper] Skipping {ticker} — capital ₹{book['capital']:.0f} < entry ₹{entry:.0f}")
             continue
 
+        # ── Conviction-weighted sizing ─────────────────────────────────────────
+        # Now that confidence is quality-calibrated (proven patterns + alignment),
+        # it genuinely predicts outcome — so bet MORE on high-conviction setups and
+        # less on marginal ones, instead of flat size. Scales the regime cap by
+        # 0.6x (just-passing ~65) up to 1.0x (90+), so the best ideas get the full
+        # allocation and weak ones get a smaller, risk-appropriate stake.
+        conf = op.get("confidence", 70)
+        conv_factor = max(0.6, min(1.0, 0.6 + (conf - 65) / 62.5))  # 65->0.60, 90->1.00
+        pos_pct = vol_max_pct * conv_factor
+
         # ── Earnings guard: halve size for a swing held through results (gap risk).
         # Intraday is squared off same day so earnings gap risk doesn't apply.
-        pos_pct = vol_max_pct
         dte = op.get("days_to_earnings")
         earnings_soon = (dte is not None and 0 <= dte <= 3 and op.get("style") != "intraday")
         if earnings_soon:
-            pos_pct = vol_max_pct * 0.5
+            pos_pct *= 0.5
             print(f"[paper] {ticker}: earnings in {dte}d → size halved (overnight gap risk)")
 
         max_invest = book["capital"] * pos_pct
@@ -404,6 +413,45 @@ def _check_exits(book: dict, stock_data: Dict, session: str, patterns_db: Dict):
             (pos["action"] == "BUY"  and low_  <= stop_loss_) or
             (pos["action"] == "SELL" and high_ >= stop_loss_)
         ))
+
+        # ── Partial profit-booking at Target-1 (halfway) ───────────────────────
+        # Book HALF the position at the halfway point to the target, move the stop
+        # to breakeven, and let the rest run. This locks in gains, converts a
+        # potential round-trip into a guaranteed small win, and removes downside on
+        # the remainder — a well-established way to lift win-rate and cut give-back.
+        if (not hit_stop and not pos.get("t1_booked") and pos.get("qty", 0) >= 2
+                and target_ and stop_loss_):
+            t1 = pos["entry"] + (target_ - pos["entry"]) * 0.5   # halfway to target
+            reached_t1 = ((pos["action"] == "BUY"  and high_ >= t1) or
+                          (pos["action"] == "SELL" and low_  <= t1))
+            if reached_t1:
+                half = pos["qty"] // 2
+                sgn  = 1 if pos["action"] == "BUY" else -1
+                part_pnl_gross = (t1 - pos["entry"]) * half * sgn
+                # Proportional costs on the partial (entry+exit legs for `half`).
+                part_costs = (pos["entry"] + t1) * half * TRADE_COST_PCT_SIDE.get(pos.get("style", "swing"), 0.0015)
+                part_pnl = round(part_pnl_gross - part_costs, 2)
+                book["capital"] += (pos["invested"] * half / pos["qty"]) + part_pnl
+                book["daily_pnl_today"] = book.get("daily_pnl_today", 0) + part_pnl
+                # Shrink the remaining position and de-risk it to breakeven.
+                remaining = pos["qty"] - half
+                pos["invested"] = round(pos["invested"] * remaining / pos["qty"], 2)
+                pos["qty"]      = remaining
+                pos["t1_booked"] = True
+                pos["stop_loss"] = round(pos["entry"] * (1.001 if pos["action"] == "BUY" else 0.999), 2)
+                pos["trailing_active"] = True
+                _record_closed_trade(book, {
+                    **pos, "close_date": today, "close_session": session,
+                    "exit_price": round(t1, 2), "exit_reason": "partial_t1",
+                    "pnl": part_pnl, "pnl_gross": round(part_pnl_gross, 2),
+                    "costs": round(part_costs, 2),
+                    "pnl_pct": round(part_pnl / max(pos["entry"] * half, 1) * 100, 2),
+                    "won": part_pnl > 0, "qty": half,
+                    "open_days": _days_between(pos["open_date"], today),
+                })
+                print(f"[paper] PARTIAL {ticker} | booked {half} @ ₹{t1:.2f} (T1) | "
+                      f"PnL ₹{part_pnl:+.0f} | stop -> breakeven, {remaining} riding to target")
+                stop_loss_ = pos["stop_loss"]   # refresh for the checks below
 
         open_days = _days_between(pos["open_date"], today)
         expired   = open_days >= pos.get("max_held_days", 10)

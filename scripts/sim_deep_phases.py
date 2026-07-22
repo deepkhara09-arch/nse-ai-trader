@@ -178,7 +178,10 @@ def main():
     had_wins   = final_stats["wins"] > 0
     checks = {
         "no errors":            len(obs["errors"]) == 0,
-        "positions opened":     obs["opened"] > 0,
+        # A closed trade proves a position was opened; the peak-open snapshot can
+        # read 0 when open->partial->target all fire within one simulated day
+        # (the engineered prices trend hard), so use either as evidence of opening.
+        "positions opened":     obs["opened"] > 0 or obs["max_trades"] > 0,
         "trades closed":        obs["max_trades"] > 0,
         "reached paper_trading": "paper_trading" in obs["phases"],
         "winning trades exist":  had_wins,

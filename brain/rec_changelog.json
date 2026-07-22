@@ -1828,5 +1828,55 @@
     "ts": "2026-07-22T03:05:49.549715",
     "detail": "Rank \u25bc1 (#7 \u2192 #8)",
     "confidence": 65.3
+  },
+  {
+    "type": "removed",
+    "ticker": "SBIN.NS",
+    "nse_code": "SBIN",
+    "signal": "BUY",
+    "date": "2026-07-22",
+    "ts": "2026-07-22T04:05:56.385722",
+    "detail": "Dropped \u2014 no longer meets threshold (was 70/100)",
+    "confidence": 0
+  },
+  {
+    "type": "removed",
+    "ticker": "LICI.NS",
+    "nse_code": "LICI",
+    "signal": "BUY",
+    "date": "2026-07-22",
+    "ts": "2026-07-22T04:05:56.385722",
+    "detail": "Dropped \u2014 no longer meets threshold (was 67/100)",
+    "confidence": 0
+  },
+  {
+    "type": "updated",
+    "ticker": "UNIONBANK.NS",
+    "nse_code": "UNIONBANK",
+    "signal": "BUY",
+    "date": "2026-07-22",
+    "ts": "2026-07-22T04:05:56.385722",
+    "detail": "Rank \u25b21 (#3 \u2192 #2) | Stop loss moved \u20b9170.79 \u2192 \u20b9168.85 | Target 1 moved \u20b9191.69 \u2192 \u20b9189.17",
+    "confidence": 90.7
+  },
+  {
+    "type": "updated",
+    "ticker": "ICICIBANK.NS",
+    "nse_code": "ICICIBANK",
+    "signal": "BUY",
+    "date": "2026-07-22",
+    "ts": "2026-07-22T04:05:56.385722",
+    "detail": "Confidence \u25bc21 (89 \u2192 68) | Rank \u25bc1 (#2 \u2192 #3) | Stop loss moved \u20b91423.81 \u2192 \u20b91408.42 | Target 1 moved \u20b91541.68 \u2192 \u20b91526.26",
+    "confidence": 67.7
+  },
+  {
+    "type": "updated",
+    "ticker": "PIDILITIND.NS",
+    "nse_code": "PIDILITIND",
+    "signal": "BUY",
+    "date": "2026-07-22",
+    "ts": "2026-07-22T04:05:56.385722",
+    "detail": "Stop loss moved \u20b91553.72 \u2192 \u20b91527.97",
+    "confidence": 65.3
   }
 ]

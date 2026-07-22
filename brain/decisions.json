@@ -7950,5 +7950,190 @@
       "outside_bar",
       "full_bullish_alignment"
     ]
+  },
+  {
+    "timestamp": "2026-07-22T04:05:56.289250",
+    "date": "2026-07-22",
+    "ticker": "MARICO.NS",
+    "session": "morning",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 74.3,
+    "entry": 846.7,
+    "stop_loss": 821.44,
+    "target": 897.23,
+    "reason": "paper morning",
+    "patterns": [
+      "adx_strong_trend_up",
+      "full_bullish_alignment",
+      "pivot_point_test",
+      "strong_bullish_marubozu",
+      "supertrend_bullish"
+    ]
+  },
+  {
+    "timestamp": "2026-07-22T04:05:56.290047",
+    "date": "2026-07-22",
+    "ticker": "HOMEFIRST.NS",
+    "session": "morning",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 78.8,
+    "entry": 1268.2,
+    "stop_loss": 1205.71,
+    "target": 1393.17,
+    "reason": "paper morning",
+    "patterns": [
+      "bb_upper_rejection",
+      "adx_strong_trend_up",
+      "supertrend_bullish",
+      "full_bullish_alignment"
+    ]
+  },
+  {
+    "timestamp": "2026-07-22T04:05:56.290776",
+    "date": "2026-07-22",
+    "ticker": "ICICIBANK.NS",
+    "session": "morning",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 82.7,
+    "entry": 1447.7,
+    "stop_loss": 1408.42,
+    "target": 1526.26,
+    "reason": "paper morning",
+    "patterns": [
+      "adx_strong_trend_up",
+      "stoch_rsi_overbought_reversal",
+      "full_bullish_alignment",
+      "inside_bar",
+      "bb_upper_rejection"
+    ]
+  },
+  {
+    "timestamp": "2026-07-22T04:05:56.291464",
+    "date": "2026-07-22",
+    "ticker": "UNIONBANK.NS",
+    "session": "morning",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 95,
+    "entry": 173.59,
+    "stop_loss": 164.24,
+    "target": 192.29,
+    "reason": "paper morning",
+    "patterns": [
+      "pivot_r1_breakout",
+      "full_bullish_alignment",
+      "strong_bullish_marubozu",
+      "engulfing_bullish",
+      "pivot_r2_breakout",
+      "supertrend_bullish",
+      "morning_star"
+    ]
+  },
+  {
+    "timestamp": "2026-07-22T04:05:56.292940",
+    "date": "2026-07-22",
+    "ticker": "GAIL.NS",
+    "session": "morning",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 93.1,
+    "entry": 172.38,
+    "stop_loss": 167.33,
+    "target": 182.47,
+    "reason": "paper morning",
+    "patterns": [
+      "full_bullish_alignment",
+      "tweezer_bottom",
+      "engulfing_bullish",
+      "supertrend_bullish",
+      "adx_ranging_market",
+      "bb_midline_support"
+    ]
+  },
+  {
+    "timestamp": "2026-07-22T04:05:56.293594",
+    "date": "2026-07-22",
+    "ticker": "PIDILITIND.NS",
+    "session": "morning",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 95,
+    "entry": 1575.2,
+    "stop_loss": 1527.97,
+    "target": 1669.66,
+    "reason": "paper morning",
+    "patterns": [
+      "pivot_r1_breakout",
+      "adx_strong_trend_up",
+      "full_bullish_alignment",
+      "pivot_point_test",
+      "supertrend_bullish"
+    ]
+  },
+  {
+    "timestamp": "2026-07-22T04:05:56.294265",
+    "date": "2026-07-22",
+    "ticker": "SIEMENS.NS",
+    "session": "morning",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 95,
+    "entry": 3681.3,
+    "stop_loss": 3530.62,
+    "target": 3982.65,
+    "reason": "paper morning",
+    "patterns": [
+      "adx_strong_trend_up",
+      "full_bullish_alignment",
+      "pivot_point_test",
+      "three_white_soldiers",
+      "supertrend_bullish",
+      "spinning_top"
+    ]
+  },
+  {
+    "timestamp": "2026-07-22T04:05:56.295278",
+    "date": "2026-07-22",
+    "ticker": "BHEL.NS",
+    "session": "morning",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 95.0,
+    "entry": 418.9,
+    "stop_loss": 393.72,
+    "target": 469.25,
+    "reason": "paper morning",
+    "patterns": [
+      "full_bullish_alignment",
+      "pivot_point_test",
+      "momentum_continuation",
+      "stoch_rsi_oversold_reversal",
+      "low_volume_drift",
+      "supertrend_bullish"
+    ]
+  },
+  {
+    "timestamp": "2026-07-22T04:05:56.295974",
+    "date": "2026-07-22",
+    "ticker": "JSWSTEEL.NS",
+    "session": "morning",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 68.9,
+    "entry": 1267.3,
+    "stop_loss": 1227.94,
+    "target": 1346.02,
+    "reason": "paper morning",
+    "patterns": [
+      "pivot_r1_breakout",
+      "full_bearish_alignment",
+      "pivot_r2_breakout",
+      "supertrend_bullish",
+      "adx_ranging_market",
+      "bb_upper_rejection"
+    ]
   }
 ]

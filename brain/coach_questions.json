@@ -1,102 +1,102 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of adx_ranging_market, engulfing_bullish, bb_midline_support mean for a swing trade on GAIL? Current RSI=49, MACD hist=-0.4499, Vol=0.8x average. Signal is BUY.",
-    "context": {
-      "ticker": "GAIL.NS",
-      "signal": "BUY",
-      "patterns": "adx_ranging_market, engulfing_bullish, bb_midline_support",
-      "rsi": 48.9
-    },
-    "queued_at": "2026-07-21T10:12:54.618384"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of low_volume_drift, supertrend_bullish, full_bullish_alignment mean for a swing trade on SIEMENS? Current RSI=57, MACD hist=+20.1637, Vol=0.4x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_up, full_bullish_alignment, pivot_point_test mean for a swing trade on SIEMENS? Current RSI=61, MACD hist=+21.7253, Vol=0.7x average. Signal is BUY.",
     "context": {
       "ticker": "SIEMENS.NS",
       "signal": "BUY",
-      "patterns": "low_volume_drift, supertrend_bullish, full_bullish_alignment",
-      "rsi": 57.4
+      "patterns": "adx_strong_trend_up, full_bullish_alignment, pivot_point_test",
+      "rsi": 60.6
     },
-    "queued_at": "2026-07-21T10:12:54.621736"
+    "queued_at": "2026-07-22T04:05:56.294044"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of supertrend_bullish, adx_ranging_market, pivot_r2_breakout mean for a swing trade on JSWSTEEL? Current RSI=54, MACD hist=+1.5424, Vol=1.9x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of full_bullish_alignment, pivot_point_test, momentum_continuation mean for a swing trade on BHEL? Current RSI=50, MACD hist=+2.3746, Vol=0.5x average. Signal is BUY.",
+    "context": {
+      "ticker": "BHEL.NS",
+      "signal": "BUY",
+      "patterns": "full_bullish_alignment, pivot_point_test, momentum_continuation",
+      "rsi": 50.3
+    },
+    "queued_at": "2026-07-22T04:05:56.295056"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of pivot_r1_breakout, full_bearish_alignment, pivot_r2_breakout mean for a swing trade on JSWSTEEL? Current RSI=60, MACD hist=+3.1535, Vol=1.7x average. Signal is BUY.",
     "context": {
       "ticker": "JSWSTEEL.NS",
       "signal": "BUY",
-      "patterns": "supertrend_bullish, adx_ranging_market, pivot_r2_breakout",
-      "rsi": 53.6
+      "patterns": "pivot_r1_breakout, full_bearish_alignment, pivot_r2_breakout",
+      "rsi": 60.4
     },
-    "queued_at": "2026-07-21T10:12:54.623066"
+    "queued_at": "2026-07-22T04:05:56.295702"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of shooting_star, full_bullish_alignment, outside_bar mean for a swing trade on LICI? Current RSI=52, MACD hist=-0.9526, Vol=1.7x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of pivot_point_test, strong_bullish_marubozu mean for a swing trade on MARICO? Current RSI=58, MACD hist=-0.4016, Vol=0.7x average. Signal is BUY.",
     "context": {
-      "ticker": "LICI.NS",
+      "ticker": "MARICO.NS",
       "signal": "BUY",
-      "patterns": "shooting_star, full_bullish_alignment, outside_bar",
-      "rsi": 51.6
+      "patterns": "pivot_point_test, strong_bullish_marubozu",
+      "rsi": 58.3
     },
-    "queued_at": "2026-07-21T10:12:54.623704"
+    "queued_at": "2026-07-22T04:05:56.369817"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of macd_bullish_crossover, three_white_soldiers, bb_upper_rejection mean for a swing trade on SBIN? Current RSI=61, MACD hist=+0.2331, Vol=1.5x average. Signal is BUY.",
-    "context": {
-      "ticker": "SBIN.NS",
-      "signal": "BUY",
-      "patterns": "macd_bullish_crossover, three_white_soldiers, bb_upper_rejection",
-      "rsi": 61.3
-    },
-    "queued_at": "2026-07-22T03:05:49.528715"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of morning_star, engulfing_bullish mean for a swing trade on UNIONBANK? Current RSI=59, MACD hist=+0.9030, Vol=1.9x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of engulfing_bullish, morning_star mean for a swing trade on UNIONBANK? Current RSI=59, MACD hist=+0.9076, Vol=1.9x average. Signal is BUY.",
     "context": {
       "ticker": "UNIONBANK.NS",
       "signal": "BUY",
-      "patterns": "morning_star, engulfing_bullish",
+      "patterns": "engulfing_bullish, morning_star",
       "rsi": 58.9
     },
-    "queued_at": "2026-07-22T03:05:49.536355"
+    "queued_at": "2026-07-22T04:05:56.374926"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of engulfing_bullish, bb_midline_support, adx_ranging_market mean for a swing trade on GAIL? Current RSI=49, MACD hist=-0.4499, Vol=0.8x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of engulfing_bullish, adx_ranging_market, bb_midline_support mean for a swing trade on GAIL? Current RSI=49, MACD hist=-0.4478, Vol=0.8x average. Signal is BUY.",
     "context": {
       "ticker": "GAIL.NS",
       "signal": "BUY",
-      "patterns": "engulfing_bullish, bb_midline_support, adx_ranging_market",
+      "patterns": "engulfing_bullish, adx_ranging_market, bb_midline_support",
       "rsi": 48.9
     },
-    "queued_at": "2026-07-22T03:05:49.540487"
+    "queued_at": "2026-07-22T04:05:56.378930"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of full_bullish_alignment, three_white_soldiers, momentum_continuation mean for a swing trade on SIEMENS? Current RSI=57, MACD hist=+20.1637, Vol=0.4x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of pivot_r1_breakout, pivot_point_test mean for a swing trade on PIDILITIND? Current RSI=52, MACD hist=-6.4209, Vol=2.0x average. Signal is BUY.",
+    "context": {
+      "ticker": "PIDILITIND.NS",
+      "signal": "BUY",
+      "patterns": "pivot_r1_breakout, pivot_point_test",
+      "rsi": 52.0
+    },
+    "queued_at": "2026-07-22T04:05:56.379621"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_up, full_bullish_alignment, pivot_point_test mean for a swing trade on SIEMENS? Current RSI=61, MACD hist=+21.7253, Vol=0.7x average. Signal is BUY.",
     "context": {
       "ticker": "SIEMENS.NS",
       "signal": "BUY",
-      "patterns": "full_bullish_alignment, three_white_soldiers, momentum_continuation",
-      "rsi": 57.4
+      "patterns": "adx_strong_trend_up, full_bullish_alignment, pivot_point_test",
+      "rsi": 60.6
     },
-    "queued_at": "2026-07-22T03:05:49.544128"
+    "queued_at": "2026-07-22T04:05:56.382725"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of pivot_r1_breakout, pivot_r2_breakout, full_bearish_alignment mean for a swing trade on JSWSTEEL? Current RSI=54, MACD hist=+1.5424, Vol=1.9x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of full_bullish_alignment, pivot_point_test, momentum_continuation mean for a swing trade on BHEL? Current RSI=50, MACD hist=+2.3746, Vol=0.5x average. Signal is BUY.",
+    "context": {
+      "ticker": "BHEL.NS",
+      "signal": "BUY",
+      "patterns": "full_bullish_alignment, pivot_point_test, momentum_continuation",
+      "rsi": 50.3
+    },
+    "queued_at": "2026-07-22T04:05:56.383771"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of pivot_r1_breakout, full_bearish_alignment, pivot_r2_breakout mean for a swing trade on JSWSTEEL? Current RSI=60, MACD hist=+3.1535, Vol=1.7x average. Signal is BUY.",
     "context": {
       "ticker": "JSWSTEEL.NS",
       "signal": "BUY",
-      "patterns": "pivot_r1_breakout, pivot_r2_breakout, full_bearish_alignment",
-      "rsi": 53.6
+      "patterns": "pivot_r1_breakout, full_bearish_alignment, pivot_r2_breakout",
+      "rsi": 60.4
     },
-    "queued_at": "2026-07-22T03:05:49.545615"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of full_bullish_alignment, pivot_s1_breakdown, shooting_star mean for a swing trade on LICI? Current RSI=52, MACD hist=-0.9526, Vol=1.7x average. Signal is BUY.",
-    "context": {
-      "ticker": "LICI.NS",
-      "signal": "BUY",
-      "patterns": "full_bullish_alignment, pivot_s1_breakdown, shooting_star",
-      "rsi": 51.6
-    },
-    "queued_at": "2026-07-22T03:05:49.546386"
+    "queued_at": "2026-07-22T04:05:56.384460"
   }
 ]

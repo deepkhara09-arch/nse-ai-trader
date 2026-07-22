@@ -222,11 +222,17 @@ def evaluate_focus_refresh(
     watchlist_signals: Dict,
     n: int = FOCUS_STOCK_COUNT,
     promotion_pool: List[str] = None,
+    held_tickers: List[str] = None,
 ) -> Tuple[List[str], List[str], List[str]]:
     """
     Decide whether to promote/demote any stocks.
 
     Returns (new_focus, promoted, demoted).
+
+    held_tickers: stocks with an OPEN paper (or user) position — these are NEVER
+    demoted, because the tool must keep managing a live position (opinions, exits,
+    trailing) until it actually closes. Demoting a held stock would orphan the
+    trade from the analysis loop.
 
     Rules:
       - A focus stock is demoted if it has been ranked bottom-3 for 3+ consecutive
@@ -267,6 +273,23 @@ def evaluate_focus_refresh(
         if inc not in demoted and cand not in promoted and cand not in focus:
             demoted.append(inc)
             promoted.append(cand)
+
+    # ── Protect held positions ──────────────────────────────────────────────────
+    # Never demote a stock we're currently holding — the trade must stay in the
+    # analysis loop until it closes. Drop the corresponding promotion too (keep the
+    # swap balanced so we don't overflow the focus count).
+    held = set(held_tickers or [])
+    if held:
+        keep_demoted, keep_promoted = [], []
+        for i, dem in enumerate(demoted):
+            if dem in held:
+                print(f"[ranking] Protected held position {dem} from demotion")
+                continue
+            keep_demoted.append(dem)
+            if i < len(promoted):
+                keep_promoted.append(promoted[i])
+        # any promotions beyond the paired ones (rare) — keep as slots allow
+        demoted, promoted = keep_demoted, keep_promoted
 
     new_focus = [t for t in focus if t not in demoted] + promoted
     new_focus = list(dict.fromkeys(new_focus))[:n]   # dedup, cap at n

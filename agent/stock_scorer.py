@@ -94,7 +94,24 @@ def score_stock(ticker: str, entry: dict, sentiment: dict, fundamentals: dict = 
     if personality == "trender":            score += 2   # cleaner to trade
     elif personality == "mean_reverter":    score += 1
 
-    return round(min(score, 100), 2)
+    # ── Over-extension guard (mean-reversion counterweight) ────────────────────
+    # The scoring above is momentum-heavy (~66 of the base points reward trend/EMA/
+    # RSI/MACD/volume), which biases selection toward stocks ALREADY running hard —
+    # exactly the names that then mean-revert. The live forward-test corpus showed
+    # this (focus of banks/NBFCs at highs -> ~15% early hit-rate). Penalise the
+    # genuinely stretched: very high RSI, or price pinned at the top of its range
+    # while extended above the short EMA. This doesn't ban momentum — it stops the
+    # pool from being ALL tops, leaving room for pullback/base setups too.
+    rsi_now = d.get("rsi", 50)
+    if rsi_now >= 75:                       score -= 6   # deeply overbought
+    elif rsi_now >= 70:                     score -= 3
+    ema_s = d.get("ema_short", 0); close_p = d.get("close", 0)
+    if ema_s and close_p and (close_p / ema_s - 1) > 0.08:
+        score -= 4                                       # >8% above short EMA = stretched
+    if pos52 is not None and pos52 > 96 and rsi_now >= 68:
+        score -= 3                                       # at the 52w ceiling AND overbought
+
+    return round(max(0, min(score, 100)), 2)
 
 
 def select_focus_stocks(

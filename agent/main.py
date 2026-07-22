@@ -754,9 +754,18 @@ def _maybe_refresh_focus(state, stock_data, patterns, news_data, fund, book, mar
         print(f"[cohort] Competition pool: {len(cohort_candidates)} candidates from "
               f"{n_ready} ready batch(es) for focus refresh")
 
+    # Stocks we currently hold (paper + user real) must never be demoted mid-trade.
+    held_tickers = [p.get("ticker") for p in book.get("open_positions", [])]
+    try:
+        from agent.my_trades import load_my_positions
+        held_tickers += [p.get("ticker") for p in load_my_positions().get("open", [])]
+    except Exception:
+        pass
+
     new_focus, promoted, demoted = evaluate_focus_refresh(
         focus, ranked, stock_data, patterns, news_data, fund, wl,
         promotion_pool=cohort_candidates or None,
+        held_tickers=held_tickers,
     )
 
     if promoted or demoted:

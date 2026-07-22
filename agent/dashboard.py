@@ -1717,6 +1717,11 @@ def _section_learning_progress(decisions: list) -> str:
 
 _MY_TRADES_WORKFLOW = ("https://github.com/deepkhara09-arch/nse-ai-trader/"
                        "actions/workflows/my_trade.yml")
+# Direct-submit endpoint: the page POSTs a repository_dispatch here using a token
+# the user saves in their OWN browser (localStorage). The token never touches the
+# repo or this HTML — it only exists in your browser.
+_MY_TRADES_DISPATCH = ("https://api.github.com/repos/deepkhara09-arch/"
+                       "nse-ai-trader/dispatches")
 
 
 def _section_my_positions(my_positions: dict, focus: list = None, recs: list = None) -> str:
@@ -1747,22 +1752,83 @@ def _section_my_positions(my_positions: dict, focus: list = None, recs: list = N
       <input id="mt_price" type="number" step="0.05" placeholder="1028.50" style="padding:5px;border-radius:5px;width:110px"></label>
     <label style="font-size:.66rem;color:var(--muted)">Quantity<br>
       <input id="mt_qty" type="number" step="1" placeholder="8" style="padding:5px;border-radius:5px;width:80px"></label>
-    <button onclick="logMyTrade('bought')" style="padding:7px 14px;border-radius:6px;background:var(--green,#3ecf8e);color:#04140b;font-weight:700;border:none;cursor:pointer">Log buy</button>
+    <button onclick="mtSubmit('bought',null,null,null)" style="padding:7px 14px;border-radius:6px;background:var(--green,#3ecf8e);color:#04140b;font-weight:700;border:none;cursor:pointer">Log buy</button>
+    <button onclick="mtToggleKey()" title="Save a GitHub token once to submit directly from here" style="padding:6px 10px;border-radius:6px;background:transparent;color:var(--muted);border:1px solid var(--border);cursor:pointer;font-size:.66rem">&#9881; Setup</button>
+  </div>
+  <div id="mt_keybox" style="display:none;margin-top:8px;font-size:.66rem;color:var(--muted);line-height:1.6">
+    Paste a GitHub <b>fine-grained token</b> with <b>Actions: Read and write</b> on this repo.
+    It is saved only in <b>this browser</b> (localStorage) — never in the repo, never shared.
+    <div style="display:flex;gap:6px;margin-top:6px;flex-wrap:wrap">
+      <input id="mt_key" type="password" placeholder="github_pat_..." style="padding:5px;border-radius:5px;flex:1;min-width:200px">
+      <button onclick="mtSaveKey()" style="padding:6px 12px;border-radius:6px;background:var(--green,#3ecf8e);color:#04140b;font-weight:700;border:none;cursor:pointer">Save</button>
+      <button onclick="mtClearKey()" style="padding:6px 10px;border-radius:6px;background:transparent;color:var(--red,#e07070);border:1px solid var(--border);cursor:pointer">Remove</button>
+    </div>
   </div>
   <div id="mt_out" style="font-size:.68rem;color:var(--muted);margin-top:8px;line-height:1.5"></div>
   <script>
-  function logMyTrade(action) {{
-    var t=document.getElementById('mt_ticker').value;
-    var p=document.getElementById('mt_price').value;
-    var q=document.getElementById('mt_qty').value;
-    var out=document.getElementById('mt_out');
-    if(!t||!p||!q){{out.innerHTML='Fill stock, price and quantity first.';return;}}
-    var body='{{"action":"'+action+'","ticker":"'+t+'","price":"'+p+'","qty":"'+q+'"}}';
-    navigator.clipboard&&navigator.clipboard.writeText(body);
-    out.innerHTML='<b style="color:var(--green,#3ecf8e)">Ready:</b> '+action+' '+q+'x '+t+' @ '+p+
-      '<br>1) opening the <b>My Trades</b> workflow &#8594; click <b>Run workflow</b>, '+
-      'set the fields the same (values copied to clipboard).';
-    window.open('{_MY_TRADES_WORKFLOW}','_blank');
+  function mtKey() {{ return localStorage.getItem('nse_gh_token') || ''; }}
+  function mtToggleKey() {{
+    var b=document.getElementById('mt_keybox');
+    b.style.display = b.style.display==='none' ? 'block' : 'none';
+  }}
+  function mtSaveKey() {{
+    var k=document.getElementById('mt_key').value.trim();
+    if(!k){{ mtSay('Paste a token first.','#e6a93a'); return; }}
+    localStorage.setItem('nse_gh_token',k);
+    document.getElementById('mt_key').value='';
+    mtSay('Token saved in this browser — trades now submit directly.','#3ecf8e');
+  }}
+  function mtClearKey() {{
+    localStorage.removeItem('nse_gh_token');
+    mtSay('Token removed from this browser.','#e6a93a');
+  }}
+  function mtSay(msg,color) {{
+    document.getElementById('mt_out').innerHTML =
+      '<span style="color:'+(color||'var(--muted)')+'">'+msg+'</span>';
+  }}
+  // action: 'bought' | 'sold'. For closes, ticker/price/qty are passed in.
+  function mtSubmit(action, tk, px, qt) {{
+    var t = tk || document.getElementById('mt_ticker').value;
+    var p = px || document.getElementById('mt_price').value;
+    var q = (qt!==null && qt!==undefined) ? qt : document.getElementById('mt_qty').value;
+    if(!t||!p||(action==='bought'&&!q)) {{ mtSay('Fill stock, price and quantity first.','#e6a93a'); return; }}
+    var payload = {{ event_type:'my-trade',
+                     client_payload:{{ action:action, ticker:t, price:String(p), qty:String(q||'') }} }};
+    var key = mtKey();
+    if(!key) {{
+      // No token yet — fall back to the manual workflow, values on the clipboard.
+      var body=JSON.stringify(payload.client_payload);
+      navigator.clipboard && navigator.clipboard.writeText(body);
+      mtSay('No token saved. Opening the workflow — values copied to your clipboard. '+
+            'Tip: tap <b>&#9881; Setup</b> once to submit directly next time.','#e6a93a');
+      window.open('{_MY_TRADES_WORKFLOW}','_blank');
+      return;
+    }}
+    mtSay('Submitting '+action+' '+(q||'')+' '+t+' @ '+p+' ...');
+    fetch('{_MY_TRADES_DISPATCH}', {{
+      method:'POST',
+      headers:{{ 'Accept':'application/vnd.github+json',
+                 'Authorization':'Bearer '+key,
+                 'X-GitHub-Api-Version':'2022-11-28' }},
+      body: JSON.stringify(payload)
+    }}).then(function(r) {{
+      if(r.status===204) {{
+        mtSay('&#10003; Submitted. The tool is recording it — refresh in ~1 minute to see it here.','#3ecf8e');
+      }} else if(r.status===401 || r.status===403) {{
+        mtSay('Token rejected ('+r.status+'). Check it has <b>Actions: Read and write</b> on this repo, then re-save via &#9881; Setup.','#e07070');
+      }} else if(r.status===404) {{
+        mtSay('404 — token lacks access to this repo (fine-grained tokens must select it explicitly).','#e07070');
+      }} else {{
+        mtSay('Unexpected response '+r.status+'. Try the manual workflow.','#e07070');
+      }}
+    }}).catch(function(e) {{ mtSay('Network error: '+e+'','#e07070'); }});
+  }}
+  function mtClose(tk, qtyHeld) {{
+    var px = document.getElementById('cx_'+tk).value;
+    var qt = document.getElementById('cq_'+tk).value;
+    if(!px) {{ mtSay('Enter the price you exited at.','#e6a93a'); return; }}
+    if(qt && Number(qt) > Number(qtyHeld)) {{ mtSay('You only hold '+qtyHeld+'.','#e6a93a'); return; }}
+    mtSubmit('sold', tk, px, qt || '');   // blank qty = close everything
   }}
   </script>
 </div>"""
@@ -1810,7 +1876,22 @@ def _section_my_positions(my_positions: dict, focus: list = None, recs: list = N
         exit_line = ""
         if sig or view == "reversed":
             exit_line = ('<div style="font-size:.66rem;color:#e6a93a;margin-top:4px">'
-                         'To close: use the form above with <b>Log sell</b> (or the workflow) so the tool books your P&amp;L and learns from it.</div>')
+                         'The tool is flagging an exit — close it below whenever you actually sell.</div>')
+        # ── Close controls: exit any time, fully or partially ──────────────────
+        _tk  = p.get("ticker", "")
+        _qty = p.get("qty", 0)
+        close_box = f"""<div style="display:flex;gap:6px;align-items:end;flex-wrap:wrap;margin-top:8px;
+     padding-top:8px;border-top:1px dashed var(--border)">
+  <label style="font-size:.62rem;color:var(--muted)">Exit price<br>
+    <input id="cx_{_tk}" type="number" step="0.05" placeholder="{p.get('current_price','')}"
+           style="padding:5px;border-radius:5px;width:100px"></label>
+  <label style="font-size:.62rem;color:var(--muted)">Qty <span style="opacity:.7">(blank = all {_qty})</span><br>
+    <input id="cq_{_tk}" type="number" step="1" placeholder="{_qty}" max="{_qty}"
+           style="padding:5px;border-radius:5px;width:90px"></label>
+  <button onclick="mtClose('{_tk}',{_qty})"
+     style="padding:6px 12px;border-radius:6px;background:var(--red,#e07070);color:#fff;
+            font-weight:700;border:none;cursor:pointer;font-size:.7rem">Close position</button>
+</div>"""
         rows += f"""<div class="card" style="margin-bottom:9px;padding:11px 13px">
   <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px">
     <div style="font-weight:700">{p.get('action','BUY')} {p.get('qty','?')}x {p.get('ticker','').replace('.NS','')}
@@ -1826,6 +1907,7 @@ def _section_my_positions(my_positions: dict, focus: list = None, recs: list = N
     &middot; Target <b style="color:var(--text)">&#8377;{p.get('target',0):,.2f}</b> (tracks the tool's view)
   </div>
   {off_line}{exit_line}{unknown}
+  {close_box}
 </div>"""
 
     closed_html = ""

@@ -29,10 +29,15 @@ on:
         required: true
         type: string
       qty:
-        description: "Quantity (shares) — only used for 'bought'"
+        description: "Quantity — shares bought, or shares to sell (blank = sell all)"
         required: false
         default: "1"
         type: string
+
+  # Direct submit from the dashboard: it POSTs a repository_dispatch with the
+  # same fields, so you never have to fill this form by hand.
+  repository_dispatch:
+    types: [my-trade]
 
 permissions:
   contents: write
@@ -57,11 +62,15 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Record the trade
+        # Fields come from the manual form OR the dashboard's direct submit
+        # (repository_dispatch client_payload) — whichever triggered this run.
+        env:
+          MT_ACTION: ${{ github.event.inputs.action || github.event.client_payload.action }}
+          MT_TICKER: ${{ github.event.inputs.ticker || github.event.client_payload.ticker }}
+          MT_PRICE:  ${{ github.event.inputs.price  || github.event.client_payload.price }}
+          MT_QTY:    ${{ github.event.inputs.qty    || github.event.client_payload.qty }}
         run: |
-          python -m agent.my_trades "${{ github.event.inputs.action }}" \
-            "${{ github.event.inputs.ticker }}" \
-            "${{ github.event.inputs.price }}" \
-            "${{ github.event.inputs.qty }}"
+          python -m agent.my_trades "$MT_ACTION" "$MT_TICKER" "$MT_PRICE" "$MT_QTY"
 
       - name: Rebuild dashboard so the panel shows immediately
         env:
@@ -74,7 +83,7 @@ jobs:
           git config user.email "bot@nse-ai-trader.local"
           git add brain/ docs/
           if ! git diff --cached --quiet; then
-            git commit -m "[my-trades] ${{ github.event.inputs.action }} ${{ github.event.inputs.ticker }} @ ${{ github.event.inputs.price }}"
+            git commit -m "[my-trades] ${{ github.event.inputs.action || github.event.client_payload.action }} ${{ github.event.inputs.ticker || github.event.client_payload.ticker }} @ ${{ github.event.inputs.price || github.event.client_payload.price }}"
             for attempt in 1 2 3; do
               git pull --rebase origin main && git push && break
               echo "Push attempt $attempt failed — retrying in 10s..."

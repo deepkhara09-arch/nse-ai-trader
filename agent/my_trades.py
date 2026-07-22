@@ -165,7 +165,10 @@ def record_bought(ticker_raw: str, price: float, qty: int, side: str = "BUY") ->
             f"stop {stop:.2f}, target {target:.2f}{note}")
 
 
-def record_sold(ticker_raw: str, price: float) -> str:
+def record_sold(ticker_raw: str, price: float, qty=None) -> str:
+    """Close a position at `price`. Pass `qty` to close only PART of it (the rest
+    stays open and keeps being managed) — mirrors how the tool part-books its own
+    paper trades. Omit qty (or pass >= holding) to close the whole position."""
     ticker = _normalize_ticker(ticker_raw)
     # Same hand-typed validation as the buy side — a 0 or blank exit price would
     # book a fake -100% loss into your record and mis-teach the pattern learner.
@@ -182,18 +185,41 @@ def record_sold(ticker_raw: str, price: float) -> str:
     pos = next((p for p in data["open"] if p["ticker"] == ticker), None)
     if not pos:
         return f"REJECTED: no open position in {ticker} to close."
+
+    held = int(pos.get("qty", 0))
+    # How many shares are we closing? Blank/0/None or >= held ⇒ close everything.
+    try:
+        sell_qty = int(float(qty)) if qty not in (None, "", 0, "0") else held
+    except (TypeError, ValueError):
+        return "REJECTED: quantity must be a number."
+    if sell_qty <= 0:
+        return f"REJECTED: quantity to close must be at least 1 (got {sell_qty})."
+    sell_qty = min(sell_qty, held)
+    partial  = sell_qty < held
+
     sgn = 1 if pos.get("action", "BUY") == "BUY" else -1
-    pnl = round((price - pos["entry"]) * pos["qty"] * sgn, 2)
-    pos.update({
+    pnl = round((price - pos["entry"]) * sell_qty * sgn, 2)
+    part_invested = round(pos.get("invested", 0) * sell_qty / max(held, 1), 2)
+    leg = {
+        **pos,
+        "qty":         sell_qty,
+        "invested":    part_invested,
         "close_date":  ist_today().isoformat(),
         "exit_price":  round(price, 2),
+        "exit_reason": "user_partial" if partial else "user_closed",
         "pnl":         pnl,
-        "pnl_pct":     round(pnl / max(pos.get("invested", 1), 1) * 100, 2),
+        "pnl_pct":     round(pnl / max(part_invested, 1) * 100, 2),
         "won":         pnl > 0,
-    })
-    data["open"] = [p for p in data["open"] if p["ticker"] != ticker]
-    data["closed"] = (data["closed"] + [pos])[-100:]
+    }
+    if partial:
+        # Shrink the remaining position proportionally; it stays open and managed.
+        pos["qty"]      = held - sell_qty
+        pos["invested"] = round(pos.get("invested", 0) - part_invested, 2)
+    else:
+        data["open"] = [p for p in data["open"] if p["ticker"] != ticker]
+    data["closed"] = (data["closed"] + [leg])[-100:]
     save_my_positions(data)
+    pos = leg   # learning + the return message below describe the leg just closed
 
     # ── Learn from the user's REAL outcome (isolated, half weight) ─────────────
     # A real executed trade is valuable signal, but the user may exit for reasons
@@ -216,7 +242,11 @@ def record_sold(ticker_raw: str, price: float) -> str:
     except Exception as e:
         print(f"[my-trades] learn-from-real skipped (non-fatal, patterns untouched): {e}")
 
-    return (f"CLOSED: {ticker} @ {price:.2f} | P&L {pnl:+,.2f} ({pos['pnl_pct']:+.2f}%) "
+    if partial:
+        left = held - sell_qty
+        return (f"PART-CLOSED: {sell_qty} of {held} {ticker} @ {price:.2f} | "
+                f"P&L {pnl:+,.2f} ({leg['pnl_pct']:+.2f}%) | {left} still open and managed")
+    return (f"CLOSED: {ticker} @ {price:.2f} | P&L {pnl:+,.2f} ({leg['pnl_pct']:+.2f}%) "
             f"| {'WIN' if pnl > 0 else 'LOSS'}")
 
 
@@ -342,11 +372,13 @@ if __name__ == "__main__":
         print("usage: python -m agent.my_trades bought TICKER PRICE QTY | sold TICKER PRICE")
         sys.exit(1)
     verb, tick, price = args[0].lower(), args[1], float(args[2])
+    raw_qty = args[3] if len(args) > 3 else ""
     if verb == "bought":
-        qty = int(float(args[3])) if len(args) > 3 else 1
+        qty = int(float(raw_qty)) if raw_qty else 1
         print(record_bought(tick, price, qty))
     elif verb == "sold":
-        print(record_sold(tick, price))
+        # qty optional: blank/0 ⇒ close the whole position; a number ⇒ partial close
+        print(record_sold(tick, price, raw_qty or None))
     else:
         print(f"unknown action '{verb}' — use bought/sold")
         sys.exit(1)

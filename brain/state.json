@@ -1,13 +1,13 @@
 {
   "phase": "paper_trading",
   "day": 23,
-  "session": "preopen",
+  "session": "morning",
   "start_date": "2026-06-22",
   "phase_start_date": "2026-07-15",
   "last_run_date": "2026-07-22",
   "last_counted_date": "2026-07-22",
   "cohort_last_tick_date": "2026-07-22",
-  "last_updated": "2026-07-23T03:05:49.299112",
+  "last_updated": "2026-07-23T04:05:48.260929",
   "focus_stocks": [
     "MARICO.NS",
     "SBIN.NS",
@@ -39,14 +39,14 @@
     "ADANIENT.NS"
   ],
   "paper_trade_stats": {
-    "total": 1,
-    "wins": 1,
+    "total": 2,
+    "wins": 2,
     "losses": 0,
     "win_rate": 1.0,
-    "total_pnl": 390.29,
-    "avg_win": 390.29,
+    "total_pnl": 520.65,
+    "avg_win": 260.33,
     "avg_loss": 0.0,
-    "expectancy": 390.29
+    "expectancy": 260.33
   },
   "brain_notes": [
     "[2026-06-23] Pre-open macro: neutral (+0.07)",
@@ -319,6 +319,7 @@
     "scored_date": "2026-07-22"
   },
   "sessions_done": {
-    "preopen": "2026-07-23"
+    "preopen": "2026-07-23",
+    "morning": "2026-07-23"
   }
 }

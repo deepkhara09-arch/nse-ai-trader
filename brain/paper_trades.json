@@ -1,5 +1,5 @@
 {
-  "capital": 58181.074590000004,
+  "capital": 62605.63459,
   "open_positions": [
     {
       "ticker": "MARICO.NS",
@@ -37,8 +37,8 @@
         "\u26a0 Recent forward-tested call accuracy only 15% (last 20 scored) \u2014 raising the conviction bar",
         "RSI=63 elevated"
       ],
-      "current_price": 861.25,
-      "unrealized_pnl": 226.1,
+      "current_price": 861.0,
+      "unrealized_pnl": 222.6,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -55,8 +55,8 @@
       "open_session": "morning",
       "action": "BUY",
       "entry": 1431.4,
-      "qty": 7,
-      "invested": 10019.8,
+      "qty": 4,
+      "invested": 5725.6,
       "stop_loss": 1432.83,
       "target": 1527.04,
       "style": "swing",
@@ -80,8 +80,8 @@
         "\u26a0 Recent forward-tested call accuracy only 15% (last 20 scored) \u2014 raising the conviction bar",
         "RSI=63 elevated"
       ],
-      "current_price": 1493.6,
-      "unrealized_pnl": 435.4,
+      "current_price": 1459.0,
+      "unrealized_pnl": 110.4,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -90,7 +90,8 @@
         "mood": "neutral",
         "regime": "mixed"
       },
-      "trailing_active": true
+      "trailing_active": true,
+      "t1_booked": true
     },
     {
       "ticker": "UNIONBANK.NS",
@@ -126,8 +127,8 @@
         "\u2713 Daily setup aligned with the higher-timeframe trend",
         "\u26a0 Recent forward-tested call accuracy only 15% (last 20 scored) \u2014 raising the conviction bar"
       ],
-      "current_price": 170.64,
-      "unrealized_pnl": -32.94,
+      "current_price": 170.17,
+      "unrealized_pnl": -45.63,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -171,8 +172,8 @@
         "\u26a0 Recent forward-tested call accuracy only 15% (last 20 scored) \u2014 raising the conviction bar",
         "MACD histogram negative"
       ],
-      "current_price": 1025.0,
-      "unrealized_pnl": -28.0,
+      "current_price": 1016.7,
+      "unrealized_pnl": -94.4,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -218,8 +219,8 @@
         "\u26a0 Sector momentum -0.29 \u2014 buying into a falling sector needs extra conviction",
         "RSI=62 elevated"
       ],
-      "current_price": 1224.1,
-      "unrealized_pnl": -145.2,
+      "current_price": 1204.0,
+      "unrealized_pnl": -265.8,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -285,6 +286,61 @@
       "pnl_pct": 5.18,
       "won": true,
       "open_days": 1
+    },
+    {
+      "ticker": "NESTLEIND.NS",
+      "sector": "FMCG",
+      "open_date": "2026-07-16",
+      "open_session": "morning",
+      "action": "BUY",
+      "entry": 1431.4,
+      "qty": 3,
+      "invested": 5725.6,
+      "stop_loss": 1432.83,
+      "target": 1527.04,
+      "style": "swing",
+      "confidence": 93.0,
+      "patterns": [
+        "tweezer_bottom",
+        "full_bullish_alignment",
+        "pivot_point_test",
+        "supertrend_bullish"
+      ],
+      "buy_reasons": [
+        "All EMAs stacked bullish",
+        "MACD histogram positive",
+        "Positive news sentiment (0.51, news 0.6x reliable here)",
+        "Candlestick: tweezer bottom",
+        "Supertrend bullish \u2014 price above trend band",
+        "Testing pivot point \u2014 decision zone",
+        "In a long-term strong uptrend (2yr) \u2014 trend on our side",
+        "Clean trender aligned with its long-term uptrend",
+        "\u2713 Daily setup aligned with the higher-timeframe trend",
+        "\u26a0 Recent forward-tested call accuracy only 15% (last 20 scored) \u2014 raising the conviction bar",
+        "RSI=63 elevated"
+      ],
+      "current_price": 1459.0,
+      "unrealized_pnl": 193.2,
+      "max_held_days": 10,
+      "vol_regime_pct": 0.12,
+      "entry_market": {
+        "nifty_trend": "sideways",
+        "vix": 13.27,
+        "mood": "neutral",
+        "regime": "mixed"
+      },
+      "trailing_active": true,
+      "t1_booked": true,
+      "close_date": "2026-07-23",
+      "close_session": "morning",
+      "exit_price": 1479.22,
+      "exit_reason": "partial_t1",
+      "pnl": 130.36,
+      "pnl_gross": 143.46,
+      "costs": 13.1,
+      "pnl_pct": 3.04,
+      "won": true,
+      "open_days": 5
     }
   ],
   "daily_snapshots": [
@@ -324,12 +380,12 @@
       "daily_pnl": 0.0
     }
   ],
-  "daily_pnl_today": 0.0,
+  "daily_pnl_today": 130.36,
   "last_snapshot_date": "2026-07-22",
-  "lifetime_wins": 1,
+  "lifetime_wins": 2,
   "lifetime_losses": 0,
-  "lifetime_pnl": 390.29,
-  "last_pnl_reset_date": "2026-07-22",
+  "lifetime_pnl": 520.65,
+  "last_pnl_reset_date": "2026-07-23",
   "max_drawdown_pct": 0.36,
   "current_drawdown_pct": 0.36,
   "portfolio_peak": 101210.28,

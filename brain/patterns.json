@@ -1232,10 +1232,64 @@
     "atr_multiplier": 1.5,
     "last_updated": "2026-07-23",
     "attribution": {
-      "by_pattern": {},
-      "by_session": {},
-      "by_mood": {},
-      "by_style": {}
+      "by_pattern": {
+        "low_volume_drift": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "engulfing_bullish": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "full_bullish_alignment": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "adx_strong_trend_up": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "rsi_bullish_divergence": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "supertrend_bullish": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "inside_bar": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        }
+      },
+      "by_session": {
+        "morning": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        }
+      },
+      "by_mood": {
+        "neutral": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        }
+      },
+      "by_style": {
+        "swing": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        }
+      }
     }
   },
   "NESTLEIND.NS": {
@@ -1361,10 +1415,49 @@
     "atr_multiplier": 1.5,
     "last_updated": "2026-07-23",
     "attribution": {
-      "by_pattern": {},
-      "by_session": {},
-      "by_mood": {},
-      "by_style": {}
+      "by_pattern": {
+        "tweezer_bottom": {
+          "wins": 1,
+          "losses": 0,
+          "total": 1
+        },
+        "full_bullish_alignment": {
+          "wins": 1,
+          "losses": 0,
+          "total": 1
+        },
+        "pivot_point_test": {
+          "wins": 1,
+          "losses": 0,
+          "total": 1
+        },
+        "supertrend_bullish": {
+          "wins": 1,
+          "losses": 0,
+          "total": 1
+        }
+      },
+      "by_session": {
+        "morning": {
+          "wins": 1,
+          "losses": 0,
+          "total": 1
+        }
+      },
+      "by_mood": {
+        "neutral": {
+          "wins": 1,
+          "losses": 0,
+          "total": 1
+        }
+      },
+      "by_style": {
+        "swing": {
+          "wins": 1,
+          "losses": 0,
+          "total": 1
+        }
+      }
     }
   },
   "FEDERALBNK.NS": {

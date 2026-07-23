@@ -37,8 +37,8 @@
         "\u26a0 Recent forward-tested call accuracy only 15% (last 20 scored) \u2014 raising the conviction bar",
         "RSI=63 elevated"
       ],
-      "current_price": 852.95,
-      "unrealized_pnl": 109.9,
+      "current_price": 853.2,
+      "unrealized_pnl": 113.4,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -80,8 +80,8 @@
         "\u26a0 Recent forward-tested call accuracy only 15% (last 20 scored) \u2014 raising the conviction bar",
         "RSI=63 elevated"
       ],
-      "current_price": 1451.1,
-      "unrealized_pnl": 78.8,
+      "current_price": 1447.9,
+      "unrealized_pnl": 66.0,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -127,8 +127,8 @@
         "\u2713 Daily setup aligned with the higher-timeframe trend",
         "\u26a0 Recent forward-tested call accuracy only 15% (last 20 scored) \u2014 raising the conviction bar"
       ],
-      "current_price": 168.53,
-      "unrealized_pnl": -89.91,
+      "current_price": 168.89,
+      "unrealized_pnl": -80.19,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -172,8 +172,8 @@
         "\u26a0 Recent forward-tested call accuracy only 15% (last 20 scored) \u2014 raising the conviction bar",
         "MACD histogram negative"
       ],
-      "current_price": 1012.1,
-      "unrealized_pnl": -131.2,
+      "current_price": 1012.6,
+      "unrealized_pnl": -127.2,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -218,8 +218,8 @@
         "Broke below Pivot S1 support \u2014 bearish",
         "StochRSI overbought with bearish candle \u2014 reversal"
       ],
-      "current_price": 3688.2,
-      "unrealized_pnl": 32.2,
+      "current_price": 3680.8,
+      "unrealized_pnl": 24.8,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -434,16 +434,23 @@
       "capital": 58181.07,
       "open_positions": 5,
       "daily_pnl": 0.0
+    },
+    {
+      "date": "2026-07-23",
+      "portfolio_value": 100130.38,
+      "capital": 66052.35,
+      "open_positions": 5,
+      "daily_pnl": -256.72
     }
   ],
   "daily_pnl_today": -256.72165999999936,
-  "last_snapshot_date": "2026-07-22",
+  "last_snapshot_date": "2026-07-23",
   "lifetime_wins": 2,
   "lifetime_losses": 1,
   "lifetime_pnl": 133.57,
   "last_pnl_reset_date": "2026-07-23",
-  "max_drawdown_pct": 0.36,
-  "current_drawdown_pct": 0.36,
+  "max_drawdown_pct": 1.07,
+  "current_drawdown_pct": 1.07,
   "portfolio_peak": 101210.28,
-  "sessions_since_peak": 2
+  "sessions_since_peak": 3
 }

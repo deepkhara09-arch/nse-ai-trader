@@ -1,5 +1,5 @@
 # NSE AI Trader — Strategy Report
-> Updated: 2026-07-22 &nbsp;|&nbsp; Day 23 &nbsp;|&nbsp; Phase: paper_trading
+> Updated: 2026-07-23 &nbsp;|&nbsp; Day 24 &nbsp;|&nbsp; Phase: paper_trading
 
 ---
 
@@ -7,12 +7,12 @@
 
 | Metric | Value |
 |--------|-------|
-| Trades | 1 (1 wins / 0 losses) |
-| Win Rate | 100.0% |
-| Total P&L | ₹+390 |
-| Avg Win | ₹+390 |
-| Avg Loss | ₹+0 |
-| Expectancy / trade | ₹+390 |
+| Trades | 3 (2 wins / 1 losses) |
+| Win Rate | 66.7% |
+| Total P&L | ₹+134 |
+| Avg Win | ₹+260 |
+| Avg Loss | ₹-387 |
+| Expectancy / trade | ₹+45 |
 
 ---
 
@@ -21,75 +21,27 @@
 > **Important:** These are paper trade signals based on the agent's learned patterns.
 > Not financial advice. Always use your own judgement and consult a SEBI advisor.
 
-BUY Pidilite Industries (PIDILITIND)
-   CMP:           Rs.1,610.90
-   Entry Zone:    Rs.1,607.68 - Rs.1,618.95
-   Stop Loss:     Rs.1,563.67  (2.9% risk)
-   Target 1:      Rs.1,705.36  (R:R 1:2.0)
-   Target 2:      Rs.1,736.85  (R:R 1:2.7)
-   Hold:          5–15 trading days (swing)
-   Qty (2% risk): 7 shares -> Rs.11,276 invested
-   Max loss:      Rs.331 if SL hit
-   Confidence:    80/100  (Tech:40 Fund:13 News:20 Pat:2)
-   Reasons:
-     - All EMAs stacked bullish
-     - RSI=52 in healthy buy zone
-     - High volume confirmation (2.0x avg)
-     - Positive news sentiment (0.56)
-     - News sentiment improving across sessions
-     - Near 52-week high — potential breakout zone
-     - Sector headwind (momentum=-0.31)
-     - Supertrend bullish — price above trend band
-     - ADX strong trend — directional move confirmed
-     - Broke above Pivot R1 with volume — bullish
-     - Broke above Pivot R2 — strong momentum
-     - High delivery 65% — strong institutional accumulation
-     - In a long-term strong uptrend (2yr) — trend on our side
-     - ✓ Daily setup aligned with the higher-timeframe trend
-     - ⚠ Sector momentum -0.31 — buying into a falling sector needs extra conviction
-     - ⚠ Market mood is bearish — buying against the tape needs extra conviction
-     - Valuation: P/E 65.2x
-     - ROE: 23.5%
-     - ROCE: 27.4%
-     - Revenue growing 14.1% YoY
-     - Latest quarter NP: ₹579 Cr
-     - Latest quarter Sales: ₹3,583 Cr
-     - Market Cap: ₹159,396 Cr
-     - Analyst target: +5.5% upside
-     - Promoter holding: 69.4%
-     - Dividend yield: 73.0%
-     - Low debt: D/E 0.04
-     - Support at ₹1567.34 cushions downside
-     - Resistance at ₹1700.00 is natural target
-     - Latest news: 'Pidilite Industries Limited (NSE:PIDILITIND) Passed Our Checks, And It'
-     - Confluence: 4 independent signal families agree (trend, volume, pattern, news)
-     - History backtest: this kind of BUY setup worked 45% of the time over ~1 week on this stock (sample: 51)
-   Market warnings: Global macro risk-off (-0.37) — Overall macro mood is risk-off (-0.37). US Dow +0.7% overnight. Crude +2.0%. USD/INR +0.0%. Notable: Geopolitical confli
-
----
-
 BUY ICICI Bank Ltd (ICICIBANK)
-   CMP:           Rs.1,440.00
-   Entry Zone:    Rs.1,437.12 - Rs.1,447.20
-   Stop Loss:     Rs.1,400.72  (2.7% risk)
-   Target 1:      Rs.1,518.56  (R:R 1:2.0)
-   Target 2:      Rs.1,544.75  (R:R 1:2.7)
+   CMP:           Rs.1,434.80
+   Entry Zone:    Rs.1,431.93 - Rs.1,441.97
+   Stop Loss:     Rs.1,395.54  (2.7% risk)
+   Target 1:      Rs.1,513.32  (R:R 1:2.0)
+   Target 2:      Rs.1,539.49  (R:R 1:2.7)
    Hold:          5–15 trading days (swing)
-   Qty (2% risk): 8 shares -> Rs.11,520 invested
+   Qty (2% risk): 8 shares -> Rs.11,478 invested
    Max loss:      Rs.314 if SL hit
-   Confidence:    80/100  (Tech:28 Fund:17 News:19 Pat:6)
+   Confidence:    76/100  (Tech:26 Fund:17 News:18 Pat:5)
    Reasons:
      - All EMAs stacked bullish
      - MACD histogram positive
-     - Positive news sentiment (0.37, news 1.4x reliable here)
+     - Positive news sentiment (0.44, news 1.4x reliable here)
      - News sentiment improving across sessions
      - Learned bullish pattern: adx_strong_trend_up (rel=64%)
      - Learned bullish pattern: full_bullish_alignment (rel=64%)
      - ⚠ Earnings in 1d — position size reduced
      - ADX strong trend — directional move confirmed
-     - High delivery 71% — strong institutional accumulation
+     - High delivery 74% — strong institutional accumulation
      - In a long-term uptrend (2yr) — trend on our side
-     - Near 52-week high (99% of range) — breakout zone
      - ✓ Daily setup aligned with the higher-timeframe trend
      - ⚠ Market mood is bearish — buying against the tape needs extra conviction
      - Valuation: P/E 19.3x
@@ -104,35 +56,35 @@ BUY ICICI Bank Ltd (ICICIBANK)
      - Analyst target: +16.5% upside
      - Dividend yield: 85.0%
      - Reliable patterns on this stock: full_bullish_alignment, adx_strong_trend_up
-     - Support at ₹1387.50 cushions downside
-     - Resistance at ₹1463.10 is natural target
+     - Support at ₹1400.00 cushions downside
+     - Resistance at ₹1461.65 is natural target
      - Latest news: 'HDFC Bank vs ICICI Bank vs Yes Bank: Which stock to buy after Q1 resul'
      - Confluence: 6 independent signal families agree (trend, momentum, volume, pattern, news, regime)
-     - History backtest: this kind of BUY setup worked 44% of the time over ~1 week on this stock (sample: 50)
-   Market warnings: Global macro risk-off (-0.37) — Overall macro mood is risk-off (-0.37). US Dow +0.7% overnight. Crude +2.0%. USD/INR +0.0%. Notable: Geopolitical confli
+     - History backtest: this kind of BUY setup worked 45% of the time over ~1 week on this stock (sample: 51)
+   Market warnings: Nifty choppy intraday — wait for cleaner setups | Net institutional outflow (₹-1,237 Cr)
 
 ---
 
 BUY Marico Ltd (MARICO)
-   CMP:           Rs.861.25
-   Entry Zone:    Rs.859.53 - Rs.865.56
-   Stop Loss:     Rs.840.87  (2.4% risk)
-   Target 1:      Rs.902.43  (R:R 1:2.0)
-   Target 2:      Rs.918.90  (R:R 1:2.8)
+   CMP:           Rs.853.20
+   Entry Zone:    Rs.851.49 - Rs.857.47
+   Stop Loss:     Rs.831.71  (2.5% risk)
+   Target 1:      Rs.896.18  (R:R 1:2.0)
+   Target 2:      Rs.913.18  (R:R 1:2.8)
    Hold:          5–15 trading days (swing)
-   Qty (2% risk): 13 shares -> Rs.11,196 invested
-   Max loss:      Rs.265 if SL hit
-   Confidence:    77/100  (Tech:39 Fund:13 News:14 Pat:2)
+   Qty (2% risk): 14 shares -> Rs.11,945 invested
+   Max loss:      Rs.301 if SL hit
+   Confidence:    74/100  (Tech:34 Fund:13 News:14 Pat:2)
    Reasons:
      - All EMAs stacked bullish
-     - RSI=51 in healthy buy zone
-     - Positive news sentiment (0.21, news 1.3x reliable here)
-     - Candlestick: three white soldiers
-     - Near 52-week high — potential breakout zone
+     - RSI=53 in healthy buy zone
+     - MACD histogram positive
+     - Positive news sentiment (0.22, news 1.3x reliable here)
+     - Candlestick: tweezer bottom
      - Supertrend bullish — price above trend band
      - ADX strong trend — directional move confirmed
-     - StochRSI oversold with bullish candle — reversal
-     - High delivery 60% — strong institutional accumulation
+     - Testing pivot point — decision zone
+     - Delivery 56% above avg — institutional buying
      - In a long-term strong uptrend (2yr) — trend on our side
      - Near 52-week high (100% of range) — breakout zone
      - ✓ Daily setup aligned with the higher-timeframe trend
@@ -148,100 +100,54 @@ BUY Marico Ltd (MARICO)
      - Promoter holding: 59.0%
      - Dividend yield: 47.0%
      - Low debt: D/E 0.12
-     - Support at ₹847.65 cushions downside
-     - Resistance at ₹880.00 is natural target
+     - Support at ₹838.42 cushions downside
+     - Resistance at ₹870.00 is natural target
      - Latest news: 'Solid Earnings May Not Tell The Whole Story For Marico (NSE:MARICO) - '
-     - Confluence: 5 independent signal families agree (trend, volume, pattern, news, regime)
-     - History backtest: this kind of BUY setup worked 53% of the time over ~1 week on this stock (sample: 49)
-   Market warnings: Global macro risk-off (-0.37) — Overall macro mood is risk-off (-0.37). US Dow +0.7% overnight. Crude +2.0%. USD/INR +0.0%. Notable: Geopolitical confli
+     - Confluence: 6 independent signal families agree (trend, momentum, volume, pattern, news, regime)
+     - History backtest: this kind of BUY setup worked 52% of the time over ~1 week on this stock (sample: 50)
+   Market warnings: Nifty choppy intraday — wait for cleaner setups | Net institutional outflow (₹-1,237 Cr)
 
 ---
 
-BUY Nestle India Ltd (NESTLEIND)
-   CMP:           Rs.1,493.60
-   Entry Zone:    Rs.1,490.61 - Rs.1,501.07
-   Stop Loss:     Rs.1,453.46  (2.7% risk)
-   Target 1:      Rs.1,573.88  (R:R 1:2.0)
-   Target 2:      Rs.1,600.64  (R:R 1:2.7)
+BUY Power Grid Corporation (POWERGRID)
+   CMP:           Rs.289.80
+   Entry Zone:    Rs.289.22 - Rs.291.25
+   Stop Loss:     Rs.282.41  (2.5% risk)
+   Target 1:      Rs.304.58  (R:R 1:2.0)
+   Target 2:      Rs.309.51  (R:R 1:2.7)
    Hold:          5–15 trading days (swing)
-   Qty (2% risk): 8 shares -> Rs.11,949 invested
-   Max loss:      Rs.321 if SL hit
-   Confidence:    74/100  (Tech:24 Fund:18 News:20 Pat:2)
+   Qty (2% risk): 41 shares -> Rs.11,882 invested
+   Max loss:      Rs.303 if SL hit
+   Confidence:    67/100  (Tech:29 Fund:13 News:14 Pat:3)
    Reasons:
-     - All EMAs stacked bullish
      - RSI=52 in healthy buy zone
-     - Positive news sentiment (0.50, news 1.0x reliable here)
-     - Candlestick: three white soldiers
-     - Near 52-week high — potential breakout zone
-     - ⚠ Earnings in 5d — position size reduced
-     - Supertrend bullish — price above trend band
-     - ADX low — market ranging, signals less reliable
-     - StochRSI oversold with bullish candle — reversal
-     - Delivery 53% above avg — institutional buying
-     - In a long-term strong uptrend (2yr) — trend on our side
-     - Near 52-week high (96% of range) — breakout zone
-     - Clean trender aligned with its long-term uptrend
-     - ✓ Daily setup aligned with the higher-timeframe trend
-     - ⚠ Market mood is bearish — buying against the tape needs extra conviction
-     - Valuation: P/E 78.3x
-     - ROE: 76.3%
-     - ROCE: 94.7%
-     - Revenue growing 23.0% YoY
-     - Net profit up 54.4% QoQ
-     - Sales up 11.2% QoQ
-     - Latest quarter NP: ₹998 Cr
-     - Latest quarter Sales: ₹5,644 Cr
-     - Market Cap: ₹275,209 Cr
-     - Promoter holding: 62.8%
-     - Dividend yield: 84.0%
-     - Low debt: D/E 0.09
-     - Support at ₹1446.84 cushions downside
-     - Resistance at ₹1600.00 is natural target
-     - Latest news: 'Nestle India Q1 results 2026: Net profit rises 48% YoY to  ₹975 crore,'
-     - Confluence: 6 independent signal families agree (trend, volume, pattern, news, fundamentals, regime)
-     - History backtest: this kind of BUY setup worked 51% of the time over ~1 week on this stock (sample: 49)
-   Market warnings: Global macro risk-off (-0.37) — Overall macro mood is risk-off (-0.37). US Dow +0.7% overnight. Crude +2.0%. USD/INR +0.0%. Notable: Geopolitical confli
-
----
-
-BUY JSW Steel Ltd (JSWSTEEL)
-   CMP:           Rs.1,265.20
-   Entry Zone:    Rs.1,262.67 - Rs.1,271.53
-   Stop Loss:     Rs.1,235.19  (2.4% risk)
-   Target 1:      Rs.1,330.48  (R:R 1:2.2)
-   Target 2:      Rs.1,356.59  (R:R 1:3.0)
-   Hold:          5–15 trading days (swing)
-   Qty (2% risk): 9 shares -> Rs.11,387 invested
-   Max loss:      Rs.270 if SL hit
-   Confidence:    67/100  (Tech:28 Fund:11 News:16 Pat:1)
-   Reasons:
-     - Short EMA above long EMA
      - MACD histogram positive
-     - Positive news sentiment (0.20)
+     - Positive news sentiment (0.17)
      - News sentiment improving across sessions
-     - Candlestick: three white soldiers
+     - Candlestick: engulfing bullish
+     - Candlestick: tweezer bottom
      - Supertrend bullish — price above trend band
      - ADX low — market ranging, signals less reliable
-     - Broke above Pivot R1 with volume — bullish
-     - High delivery 66% — strong institutional accumulation
+     - High delivery 63% — strong institutional accumulation
      - In a long-term uptrend (2yr) — trend on our side
      - ✓ Daily setup aligned with the higher-timeframe trend
      - ⚠ Market mood is bearish — buying against the tape needs extra conviction
-     - Valuation: P/E 12.5x
-     - ROCE: 14.5%
-     - Revenue growing 9.8% YoY
-     - Latest quarter NP: ₹4,651 Cr
-     - Latest quarter Sales: ₹46,662 Cr
-     - Market Cap: ₹309,350 Cr
-     - Analyst target: +8.5% upside
-     - Promoter holding: 63.4%
-     - Dividend yield: 56.0%
-     - Support at ₹1245.15 cushions downside
-     - Resistance at ₹1289.84 is natural target
-     - Latest news: 'JSW Steel shares gain over 2% as Q1 earnings boost investor sentiment '
-     - Confluence: 6 independent signal families agree (trend, momentum, volume, pattern, news, regime)
-     - History backtest: this kind of BUY setup worked 49% of the time over ~1 week on this stock (sample: 61)
-   Market warnings: Global macro risk-off (-0.37) — Overall macro mood is risk-off (-0.37). US Dow +0.7% overnight. Crude +2.0%. USD/INR +0.0%. Notable: Geopolitical confli
+     - Valuation: P/E 14.5x
+     - ROE: 16.5%
+     - ROCE: 9.2%
+     - Net profit up 8.6% QoQ
+     - Latest quarter NP: ₹4,546 Cr
+     - Latest quarter Sales: ₹11,666 Cr
+     - Market Cap: ₹269,066 Cr
+     - Analyst target: +13.9% upside
+     - Promoter holding: 52.8%
+     - Dividend yield: 424.0%
+     - Support at ₹283.71 cushions downside
+     - Resistance at ₹300.10 is natural target
+     - Latest news: 'Power Grid Corporation of India shares gain 2.01% in today's session -'
+     - Confluence: 5 independent signal families agree (trend, momentum, volume, pattern, news)
+     - History backtest: this kind of BUY setup worked 37% of the time over ~1 week on this stock (sample: 43)
+   Market warnings: Nifty choppy intraday — wait for cleaner setups | Net institutional outflow (₹-1,237 Cr)
 
 ---
 
@@ -257,11 +163,11 @@ BUY JSW Steel Ltd (JSWSTEEL)
 - PFC.NS
 - PIDILITIND.NS
 - SIEMENS.NS
-- BANDHANBNK.NS
 - JSWSTEEL.NS
 - LICI.NS
 - POWERGRID.NS
 - NHPC.NS
+- FEDERALBNK.NS
 
 ---
 

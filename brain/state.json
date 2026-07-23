@@ -1,13 +1,13 @@
 {
   "phase": "paper_trading",
   "day": 23,
-  "session": "morning",
+  "session": "preopen",
   "start_date": "2026-06-22",
   "phase_start_date": "2026-07-15",
   "last_run_date": "2026-07-22",
   "last_counted_date": "2026-07-22",
   "cohort_last_tick_date": "2026-07-22",
-  "last_updated": "2026-07-22T10:12:26.257625",
+  "last_updated": "2026-07-23T03:05:49.299112",
   "focus_stocks": [
     "MARICO.NS",
     "SBIN.NS",
@@ -88,7 +88,8 @@
     "[2026-07-21] Cohort batch #11 complete \u2014 30 candidates ready",
     "[2026-07-22] Pre-open macro: neutral (+0.14)",
     "[2026-07-22] Focus refresh \u2014 promoted: ['POWERGRID', 'NHPC'] | demoted: ['GAIL', 'BHEL']",
-    "[2026-07-22] Cohort batch #12 complete \u2014 30 candidates ready"
+    "[2026-07-22] Cohort batch #12 complete \u2014 30 candidates ready",
+    "[2026-07-23] Pre-open macro: risk_on (+0.45)"
   ],
   "alert_sent": false,
   "schema_version": 11,
@@ -318,11 +319,6 @@
     "scored_date": "2026-07-22"
   },
   "sessions_done": {
-    "preopen": "2026-07-22",
-    "morning": "2026-07-22",
-    "midday": "2026-07-22",
-    "afternoon": "2026-07-22",
-    "intraday_close": "2026-07-22",
-    "preclose": "2026-07-22"
+    "preopen": "2026-07-23"
   }
 }

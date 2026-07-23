@@ -1,85 +1,5 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of momentum_continuation, tweezer_bottom, macd_bullish_crossover mean for a swing trade on MARICO? Current RSI=53, MACD hist=+0.4198, Vol=0.6x average. Signal is BUY.",
-    "context": {
-      "ticker": "MARICO.NS",
-      "signal": "BUY",
-      "patterns": "momentum_continuation, tweezer_bottom, macd_bullish_crossover",
-      "rsi": 53.2
-    },
-    "queued_at": "2026-07-23T06:16:04.669089"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of spinning_top, stoch_rsi_overbought_reversal mean for a swing trade on PIDILITIND? Current RSI=51, MACD hist=-3.6934, Vol=1.8x average. Signal is BUY.",
-    "context": {
-      "ticker": "PIDILITIND.NS",
-      "signal": "BUY",
-      "patterns": "spinning_top, stoch_rsi_overbought_reversal",
-      "rsi": 50.7
-    },
-    "queued_at": "2026-07-23T06:16:04.672010"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of full_bullish_alignment, spinning_top, supertrend_bullish mean for a swing trade on SIEMENS? Current RSI=61, MACD hist=+21.8168, Vol=0.7x average. Signal is BUY.",
-    "context": {
-      "ticker": "SIEMENS.NS",
-      "signal": "BUY",
-      "patterns": "full_bullish_alignment, spinning_top, supertrend_bullish",
-      "rsi": 60.6
-    },
-    "queued_at": "2026-07-23T06:16:04.672595"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of supertrend_bullish, tweezer_bottom, full_bearish_alignment mean for a swing trade on POWERGRID? Current RSI=52, MACD hist=+0.8846, Vol=0.5x average. Signal is BUY.",
-    "context": {
-      "ticker": "POWERGRID.NS",
-      "signal": "BUY",
-      "patterns": "supertrend_bullish, tweezer_bottom, full_bearish_alignment",
-      "rsi": 51.7
-    },
-    "queued_at": "2026-07-23T06:16:04.674112"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of supertrend_bullish, full_bullish_alignment, momentum_continuation mean for a swing trade on NHPC? Current RSI=48, MACD hist=+0.0332, Vol=0.6x average. Signal is BUY.",
-    "context": {
-      "ticker": "NHPC.NS",
-      "signal": "BUY",
-      "patterns": "supertrend_bullish, full_bullish_alignment, momentum_continuation",
-      "rsi": 47.9
-    },
-    "queued_at": "2026-07-23T06:16:04.674653"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of momentum_continuation, tweezer_bottom, macd_bullish_crossover mean for a swing trade on MARICO? Current RSI=53, MACD hist=+0.4198, Vol=0.6x average. Signal is BUY.",
-    "context": {
-      "ticker": "MARICO.NS",
-      "signal": "BUY",
-      "patterns": "momentum_continuation, tweezer_bottom, macd_bullish_crossover",
-      "rsi": 53.2
-    },
-    "queued_at": "2026-07-23T06:16:04.755166"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of spinning_top, stoch_rsi_overbought_reversal mean for a swing trade on PIDILITIND? Current RSI=51, MACD hist=-3.6934, Vol=1.8x average. Signal is BUY.",
-    "context": {
-      "ticker": "PIDILITIND.NS",
-      "signal": "BUY",
-      "patterns": "spinning_top, stoch_rsi_overbought_reversal",
-      "rsi": 50.7
-    },
-    "queued_at": "2026-07-23T06:16:04.763077"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of full_bullish_alignment, spinning_top, supertrend_bullish mean for a swing trade on SIEMENS? Current RSI=61, MACD hist=+21.8168, Vol=0.7x average. Signal is BUY.",
-    "context": {
-      "ticker": "SIEMENS.NS",
-      "signal": "BUY",
-      "patterns": "full_bullish_alignment, spinning_top, supertrend_bullish",
-      "rsi": 60.6
-    },
-    "queued_at": "2026-07-23T06:16:04.763696"
-  },
-  {
     "question": "In Indian NSE markets, what does the combination of supertrend_bullish, tweezer_bottom, full_bearish_alignment mean for a swing trade on POWERGRID? Current RSI=52, MACD hist=+0.8846, Vol=0.5x average. Signal is BUY.",
     "context": {
       "ticker": "POWERGRID.NS",
@@ -98,5 +18,85 @@
       "rsi": 47.9
     },
     "queued_at": "2026-07-23T06:16:04.765692"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of momentum_continuation, tweezer_bottom, pivot_point_test mean for a swing trade on MARICO? Current RSI=53, MACD hist=+0.4198, Vol=0.6x average. Signal is BUY.",
+    "context": {
+      "ticker": "MARICO.NS",
+      "signal": "BUY",
+      "patterns": "momentum_continuation, tweezer_bottom, pivot_point_test",
+      "rsi": 53.2
+    },
+    "queued_at": "2026-07-23T07:45:48.181743"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of pivot_s1_breakdown, full_bullish_alignment, adx_strong_trend_up mean for a swing trade on SIEMENS? Current RSI=61, MACD hist=+21.8168, Vol=0.7x average. Signal is BUY.",
+    "context": {
+      "ticker": "SIEMENS.NS",
+      "signal": "BUY",
+      "patterns": "pivot_s1_breakdown, full_bullish_alignment, adx_strong_trend_up",
+      "rsi": 60.6
+    },
+    "queued_at": "2026-07-23T07:45:48.185353"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of rsi_bearish_divergence, full_bearish_alignment, adx_ranging_market mean for a swing trade on POWERGRID? Current RSI=52, MACD hist=+0.8846, Vol=0.5x average. Signal is BUY.",
+    "context": {
+      "ticker": "POWERGRID.NS",
+      "signal": "BUY",
+      "patterns": "rsi_bearish_divergence, full_bearish_alignment, adx_ranging_market",
+      "rsi": 51.7
+    },
+    "queued_at": "2026-07-23T07:45:48.186997"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of momentum_continuation, supertrend_bullish, full_bullish_alignment mean for a swing trade on NHPC? Current RSI=48, MACD hist=+0.0332, Vol=0.6x average. Signal is BUY.",
+    "context": {
+      "ticker": "NHPC.NS",
+      "signal": "BUY",
+      "patterns": "momentum_continuation, supertrend_bullish, full_bullish_alignment",
+      "rsi": 47.9
+    },
+    "queued_at": "2026-07-23T07:45:48.187646"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of momentum_continuation, tweezer_bottom, pivot_point_test mean for a swing trade on MARICO? Current RSI=53, MACD hist=+0.4198, Vol=0.6x average. Signal is BUY.",
+    "context": {
+      "ticker": "MARICO.NS",
+      "signal": "BUY",
+      "patterns": "momentum_continuation, tweezer_bottom, pivot_point_test",
+      "rsi": 53.2
+    },
+    "queued_at": "2026-07-23T07:45:48.266464"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of pivot_s1_breakdown, full_bullish_alignment, adx_strong_trend_up mean for a swing trade on SIEMENS? Current RSI=61, MACD hist=+21.8168, Vol=0.7x average. Signal is BUY.",
+    "context": {
+      "ticker": "SIEMENS.NS",
+      "signal": "BUY",
+      "patterns": "pivot_s1_breakdown, full_bullish_alignment, adx_strong_trend_up",
+      "rsi": 60.6
+    },
+    "queued_at": "2026-07-23T07:45:48.274969"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of rsi_bearish_divergence, full_bearish_alignment, adx_ranging_market mean for a swing trade on POWERGRID? Current RSI=52, MACD hist=+0.8846, Vol=0.5x average. Signal is BUY.",
+    "context": {
+      "ticker": "POWERGRID.NS",
+      "signal": "BUY",
+      "patterns": "rsi_bearish_divergence, full_bearish_alignment, adx_ranging_market",
+      "rsi": 51.7
+    },
+    "queued_at": "2026-07-23T07:45:48.276618"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of momentum_continuation, supertrend_bullish, full_bullish_alignment mean for a swing trade on NHPC? Current RSI=48, MACD hist=+0.0332, Vol=0.6x average. Signal is BUY.",
+    "context": {
+      "ticker": "NHPC.NS",
+      "signal": "BUY",
+      "patterns": "momentum_continuation, supertrend_bullish, full_bullish_alignment",
+      "rsi": 47.9
+    },
+    "queued_at": "2026-07-23T07:45:48.277321"
   }
 ]

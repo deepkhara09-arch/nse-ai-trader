@@ -1,6 +1,6 @@
 {
   "date": "2026-07-23",
-  "session": "midday",
+  "session": "afternoon",
   "nifty": {
     "symbol": "^NSEI",
     "value": 23996.25,
@@ -58,10 +58,9 @@
       "ath_pct_60d": -2.8
     }
   },
-  "market_mood": "bearish",
+  "market_mood": "neutral",
   "trade_allowed": true,
   "warnings": [
-    "Nifty choppy intraday \u2014 wait for cleaner setups",
     "Net institutional outflow (\u20b9-1,237 Cr)"
   ],
   "leading_sectors": [],
@@ -71,7 +70,7 @@
     "Pharma",
     "Bank"
   ],
-  "intraday_regime": "choppy",
+  "intraday_regime": "mixed",
   "macro": {
     "date": "2026-07-23",
     "session": "midday",

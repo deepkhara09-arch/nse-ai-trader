@@ -1118,39 +1118,39 @@
         "last_seen": "2026-07-22"
       },
       "full_bullish_alignment": {
-        "wins": 1.935,
-        "losses": 0.5,
-        "reliability": 0.739,
-        "last_seen": "2026-07-22"
+        "wins": 1.924,
+        "losses": 1.497,
+        "reliability": 0.562,
+        "last_seen": "2026-07-23"
       },
       "adx_strong_trend_up": {
-        "wins": 1.461,
-        "losses": 0.5,
-        "reliability": 0.66,
-        "last_seen": "2026-07-22"
+        "wins": 1.453,
+        "losses": 1.497,
+        "reliability": 0.493,
+        "last_seen": "2026-07-23"
       },
       "inside_bar": {
-        "wins": 0.963,
-        "losses": 0.5,
-        "reliability": 0.577,
-        "last_seen": "2026-07-22"
+        "wins": 0.957,
+        "losses": 1.497,
+        "reliability": 0.41,
+        "last_seen": "2026-07-23"
       },
       "strong_bullish_marubozu": {
-        "wins": 0.5,
+        "wins": 0.477,
         "losses": 0.0,
-        "reliability": 0.583,
+        "reliability": 0.58,
         "last_seen": "2026-07-15"
       },
       "supertrend_bullish": {
-        "wins": 0.983,
-        "losses": 0.0,
-        "reliability": 0.664,
-        "last_seen": "2026-07-21"
+        "wins": 0.972,
+        "losses": 1.0,
+        "reliability": 0.495,
+        "last_seen": "2026-07-23"
       },
       "stoch_rsi_oversold_reversal": {
-        "wins": 0.5,
+        "wins": 0.477,
         "losses": 0.0,
-        "reliability": 0.583,
+        "reliability": 0.58,
         "last_seen": "2026-07-15"
       },
       "bearish_harami": {
@@ -1200,19 +1200,37 @@
         "losses": 0.5,
         "reliability": 0.417,
         "last_seen": "2026-07-22"
+      },
+      "low_volume_drift": {
+        "wins": 0.0,
+        "losses": 1.0,
+        "reliability": 0.333,
+        "last_seen": "2026-07-23"
+      },
+      "engulfing_bullish": {
+        "wins": 0.0,
+        "losses": 1.0,
+        "reliability": 0.333,
+        "last_seen": "2026-07-23"
+      },
+      "rsi_bullish_divergence": {
+        "wins": 0.0,
+        "losses": 1.0,
+        "reliability": 0.333,
+        "last_seen": "2026-07-23"
       }
     },
     "preferred_style": "swing",
     "swing_wins": 0,
-    "swing_losses": 0,
+    "swing_losses": 1,
     "intraday_wins": 0,
     "intraday_losses": 0,
     "long_term_wins": 0,
     "long_term_losses": 0,
-    "atr_stop_hits": 0,
+    "atr_stop_hits": 1,
     "atr_target_hits": 0,
     "atr_multiplier": 1.5,
-    "last_updated": "2026-07-22",
+    "last_updated": "2026-07-23",
     "attribution": {
       "by_pattern": {},
       "by_session": {},

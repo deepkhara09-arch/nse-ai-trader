@@ -9778,5 +9778,114 @@
       "bearish_harami",
       "adx_strong_trend_up"
     ]
+  },
+  {
+    "timestamp": "2026-07-24T09:30:35.337486",
+    "date": "2026-07-24",
+    "ticker": "MARICO.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 78.5,
+    "entry": 855.2,
+    "stop_loss": 831.83,
+    "target": 901.94,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "stoch_rsi_overbought_reversal",
+      "adx_strong_trend_up",
+      "rsi_bullish_divergence",
+      "pivot_point_test",
+      "momentum_continuation",
+      "full_bullish_alignment"
+    ]
+  },
+  {
+    "timestamp": "2026-07-24T09:30:35.338392",
+    "date": "2026-07-24",
+    "ticker": "HOMEFIRST.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 65.0,
+    "entry": 1167.4,
+    "stop_loss": 1104.65,
+    "target": 1292.91,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "adx_strong_trend_up",
+      "pivot_s1_breakdown",
+      "macd_bearish_crossover",
+      "full_bullish_alignment"
+    ]
+  },
+  {
+    "timestamp": "2026-07-24T09:30:35.339564",
+    "date": "2026-07-24",
+    "ticker": "ICICIBANK.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 95,
+    "entry": 1435.3,
+    "stop_loss": 1396.11,
+    "target": 1513.69,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "adx_strong_trend_up",
+      "doji",
+      "spinning_top",
+      "stoch_rsi_oversold_reversal",
+      "pivot_s1_bounce",
+      "momentum_continuation",
+      "supertrend_bullish",
+      "full_bullish_alignment"
+    ]
+  },
+  {
+    "timestamp": "2026-07-24T09:30:35.341872",
+    "date": "2026-07-24",
+    "ticker": "SIEMENS.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 95,
+    "entry": 3687.7,
+    "stop_loss": 3541.27,
+    "target": 3980.56,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "adx_strong_trend_up",
+      "engulfing_bullish",
+      "pivot_point_test",
+      "supertrend_bullish",
+      "full_bullish_alignment",
+      "outside_bar"
+    ]
+  },
+  {
+    "timestamp": "2026-07-24T09:30:35.344125",
+    "date": "2026-07-24",
+    "ticker": "FEDERALBNK.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 95,
+    "entry": 353.9,
+    "stop_loss": 341.73,
+    "target": 378.23,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "near_52w_high",
+      "adx_strong_trend_up",
+      "full_bullish_alignment",
+      "tweezer_bottom",
+      "rsi_bullish_divergence",
+      "inside_bar",
+      "pivot_point_test",
+      "supertrend_bullish",
+      "bb_upper_rejection",
+      "low_volume_drift"
+    ]
   }
 ]

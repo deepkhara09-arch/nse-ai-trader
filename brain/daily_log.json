@@ -2838,5 +2838,25 @@
     "open": 4,
     "recs": 0,
     "summary": "Afternoon run \u00b7 Paper-trading trading-day 7 \u00b7 4 open \u00b7 4 closed (50% WR) \u00b7 0 live rec(s)."
+  },
+  {
+    "date": "2026-07-24",
+    "triggered_at": "2026-07-24 15:00 IST",
+    "session": "intraday_close",
+    "phase": "paper_trading",
+    "day": 24,
+    "stats": {
+      "total": 4,
+      "wins": 2,
+      "losses": 2,
+      "win_rate": 0.5,
+      "total_pnl": 122.1,
+      "avg_win": 260.33,
+      "avg_loss": -199.28,
+      "expectancy": 30.53
+    },
+    "open": 4,
+    "recs": 0,
+    "summary": "Intraday square-off (3:15) \u00b7 Paper-trading trading-day 7 \u00b7 4 open \u00b7 4 closed (50% WR)."
   }
 ]

@@ -1,45 +1,5 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of momentum_continuation, rsi_bullish_divergence mean for a swing trade on MARICO? Current RSI=58, MACD hist=+0.1095, Vol=1.0x average. Signal is BUY.",
-    "context": {
-      "ticker": "MARICO.NS",
-      "signal": "BUY",
-      "patterns": "momentum_continuation, rsi_bullish_divergence",
-      "rsi": 57.5
-    },
-    "queued_at": "2026-07-24T04:05:52.506907"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of bb_upper_rejection, stoch_rsi_overbought_reversal, rsi_bearish_divergence mean for a swing trade on FEDERALBNK? Current RSI=70, MACD hist=+1.8054, Vol=0.5x average. Signal is SELL.",
-    "context": {
-      "ticker": "FEDERALBNK.NS",
-      "signal": "SELL",
-      "patterns": "bb_upper_rejection, stoch_rsi_overbought_reversal, rsi_bearish_divergence",
-      "rsi": 69.5
-    },
-    "queued_at": "2026-07-24T04:05:52.515282"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of momentum_continuation, rsi_bullish_divergence mean for a swing trade on MARICO? Current RSI=58, MACD hist=+0.1095, Vol=1.0x average. Signal is BUY.",
-    "context": {
-      "ticker": "MARICO.NS",
-      "signal": "BUY",
-      "patterns": "momentum_continuation, rsi_bullish_divergence",
-      "rsi": 57.5
-    },
-    "queued_at": "2026-07-24T06:09:57.712372"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of early_recovery, rsi_bullish_divergence, spinning_top mean for a swing trade on PFC? Current RSI=36, MACD hist=+0.6660, Vol=0.8x average. Signal is BUY.",
-    "context": {
-      "ticker": "PFC.NS",
-      "signal": "BUY",
-      "patterns": "early_recovery, rsi_bullish_divergence, spinning_top",
-      "rsi": 36.1
-    },
-    "queued_at": "2026-07-24T06:09:57.715335"
-  },
-  {
     "question": "In Indian NSE markets, what does the combination of outside_bar, supertrend_bullish, full_bullish_alignment mean for a swing trade on SIEMENS? Current RSI=65, MACD hist=+21.3286, Vol=0.9x average. Signal is BUY.",
     "context": {
       "ticker": "SIEMENS.NS",
@@ -98,5 +58,45 @@
       "rsi": 69.5
     },
     "queued_at": "2026-07-24T07:45:57.805626"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of rsi_bullish_divergence, pivot_point_test, momentum_continuation mean for a swing trade on MARICO? Current RSI=58, MACD hist=+0.1095, Vol=1.0x average. Signal is BUY.",
+    "context": {
+      "ticker": "MARICO.NS",
+      "signal": "BUY",
+      "patterns": "rsi_bullish_divergence, pivot_point_test, momentum_continuation",
+      "rsi": 57.5
+    },
+    "queued_at": "2026-07-24T09:30:35.337179"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of pivot_s1_bounce, momentum_continuation mean for a swing trade on ICICIBANK? Current RSI=57, MACD hist=+0.0062, Vol=1.0x average. Signal is BUY.",
+    "context": {
+      "ticker": "ICICIBANK.NS",
+      "signal": "BUY",
+      "patterns": "pivot_s1_bounce, momentum_continuation",
+      "rsi": 56.6
+    },
+    "queued_at": "2026-07-24T09:30:35.339282"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_up, engulfing_bullish, pivot_point_test mean for a swing trade on SIEMENS? Current RSI=65, MACD hist=+21.3286, Vol=0.9x average. Signal is BUY.",
+    "context": {
+      "ticker": "SIEMENS.NS",
+      "signal": "BUY",
+      "patterns": "adx_strong_trend_up, engulfing_bullish, pivot_point_test",
+      "rsi": 65.1
+    },
+    "queued_at": "2026-07-24T09:30:35.341621"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of tweezer_bottom, rsi_bullish_divergence, bb_upper_rejection mean for a swing trade on FEDERALBNK? Current RSI=75, MACD hist=+1.8229, Vol=0.5x average. Signal is BUY.",
+    "context": {
+      "ticker": "FEDERALBNK.NS",
+      "signal": "BUY",
+      "patterns": "tweezer_bottom, rsi_bullish_divergence, bb_upper_rejection",
+      "rsi": 74.8
+    },
+    "queued_at": "2026-07-24T09:30:35.343871"
   }
 ]

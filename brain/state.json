@@ -1,13 +1,13 @@
 {
   "phase": "paper_trading",
-  "day": 24,
-  "session": "intraday_close",
+  "day": 25,
+  "session": "morning",
   "start_date": "2026-06-22",
   "phase_start_date": "2026-07-15",
-  "last_run_date": "2026-07-23",
-  "last_counted_date": "2026-07-23",
-  "cohort_last_tick_date": "2026-07-23",
-  "last_updated": "2026-07-24T09:30:35.358113",
+  "last_run_date": "2026-07-24",
+  "last_counted_date": "2026-07-24",
+  "cohort_last_tick_date": "2026-07-24",
+  "last_updated": "2026-07-24T10:12:36.148501",
   "focus_stocks": [
     "MARICO.NS",
     "SBIN.NS",
@@ -98,45 +98,6 @@
   "alert_sent": false,
   "schema_version": 11,
   "background_batches": [
-    {
-      "id": 10,
-      "day": 7,
-      "start_date": "2026-07-10",
-      "ready": true,
-      "candidates": [
-        "PIDILITIND.NS",
-        "SUNPHARMA.NS",
-        "MARICO.NS",
-        "HOMEFIRST.NS",
-        "GAIL.NS",
-        "ICICIBANK.NS",
-        "ABCAPITAL.NS",
-        "INDUSINDBK.NS",
-        "NYKAA.NS",
-        "UNIONBANK.NS",
-        "TECHM.NS",
-        "SIEMENS.NS",
-        "BHEL.NS",
-        "BAJFINANCE.NS",
-        "BANDHANBNK.NS",
-        "JSWSTEEL.NS",
-        "ANANTRAJ.NS",
-        "JIOFIN.NS",
-        "SBIN.NS",
-        "NESTLEIND.NS",
-        "SBILIFE.NS",
-        "LICI.NS",
-        "ADANIGREEN.NS",
-        "ETERNAL.NS",
-        "SWIGGY.NS",
-        "PFC.NS",
-        "RELIANCE.NS",
-        "TCS.NS",
-        "HCLTECH.NS",
-        "IRCTC.NS"
-      ],
-      "scored_date": "2026-07-20"
-    },
     {
       "id": 11,
       "day": 7,
@@ -256,29 +217,36 @@
     },
     {
       "id": 14,
-      "day": 4,
+      "day": 5,
       "start_date": "2026-07-20",
       "ready": false,
       "candidates": []
     },
     {
       "id": 15,
-      "day": 3,
+      "day": 4,
       "start_date": "2026-07-21",
       "ready": false,
       "candidates": []
     },
     {
       "id": 16,
-      "day": 2,
+      "day": 3,
       "start_date": "2026-07-22",
       "ready": false,
       "candidates": []
     },
     {
       "id": 17,
-      "day": 1,
+      "day": 2,
       "start_date": "2026-07-23",
+      "ready": false,
+      "candidates": []
+    },
+    {
+      "id": 18,
+      "day": 1,
+      "start_date": "2026-07-24",
       "ready": false,
       "candidates": []
     }
@@ -327,6 +295,7 @@
     "morning": "2026-07-24",
     "midday": "2026-07-24",
     "afternoon": "2026-07-24",
-    "intraday_close": "2026-07-24"
+    "intraday_close": "2026-07-24",
+    "preclose": "2026-07-24"
   }
 }

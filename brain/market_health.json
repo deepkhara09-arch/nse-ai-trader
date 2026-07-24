@@ -1,6 +1,6 @@
 {
   "date": "2026-07-24",
-  "session": "morning",
+  "session": "midday",
   "nifty": {
     "symbol": "^NSEI",
     "value": 23869.6,
@@ -27,11 +27,11 @@
   "sectors": {
     "IT": {
       "symbol": "ITBEES.NS",
-      "value": 31.71,
-      "day_change_pct": -1.52,
-      "trend_5d": "sideways",
+      "value": 31.74,
+      "day_change_pct": 0.09,
+      "trend_5d": "down",
       "trend_20d": "strong_up",
-      "ath_pct_60d": -8.48
+      "ath_pct_60d": -8.4
     },
     "Pharma": {
       "symbol": "PHARMABEES.NS",
@@ -43,42 +43,46 @@
     },
     "Bank": {
       "symbol": "BANKBEES.NS",
-      "value": 592.24,
-      "day_change_pct": -1.22,
-      "trend_5d": "down",
+      "value": 586.72,
+      "day_change_pct": -0.93,
+      "trend_5d": "strong_down",
       "trend_20d": "down",
-      "ath_pct_60d": -5.68
+      "ath_pct_60d": -6.56
     },
     "Infra": {
       "symbol": "INFRABEES.NS",
-      "value": 965.67,
-      "day_change_pct": -0.87,
-      "trend_5d": "sideways",
+      "value": 958.3,
+      "day_change_pct": -0.76,
+      "trend_5d": "down",
       "trend_20d": "down",
-      "ath_pct_60d": -2.8
+      "ath_pct_60d": -3.54
     }
   },
   "market_mood": "bearish",
-  "trade_allowed": true,
+  "trade_allowed": false,
   "warnings": [
     "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
+    "Global macro risk-off (-0.62) \u2014 Overall macro mood is risk-off (-0.62). US Dow -1.0% overnight. Crude +6.2%. USD/INR -0.0%. Notable: US Fed rate hike / ",
+    "Severe global risk-off \u2014 blocking new trades this session",
     "Net institutional outflow (\u20b9-52 Cr)"
   ],
   "leading_sectors": [],
   "market_regime": "normal",
   "sector_breadth": 0.0,
   "lagging_sectors": [
-    "Bank"
+    "IT",
+    "Bank",
+    "Infra"
   ],
   "intraday_regime": "mixed",
   "macro": {
     "date": "2026-07-24",
-    "session": "preopen",
-    "generated_at": "2026-07-24T03:05:47.353147",
-    "global_score": -0.25,
-    "india_score": 0.0,
-    "overall_score": -0.138,
-    "mood": "neutral",
+    "session": "midday",
+    "generated_at": "2026-07-24T06:09:49.793993",
+    "global_score": -0.309,
+    "india_score": -1.0,
+    "overall_score": -0.62,
+    "mood": "risk_off",
     "drivers": [
       "Most FDA advisers say peptides like BPC-157 and TB-500 should be made available in the U.S. Here\u2019s what happens next.",
       "The August stock-market slump is a myth \u2014 so why does Wall Street keep repeating it?",
@@ -103,23 +107,23 @@
         "chg_pct": -1.21
       },
       "nikkei": {
-        "last": 64568.75,
-        "chg_pct": -2.79
+        "last": 64456.57,
+        "chg_pct": -2.96
       },
       "crude": {
-        "last": 91.78,
-        "chg_pct": -0.44
+        "last": 92.19,
+        "chg_pct": 6.17
       },
       "usdinr": {
-        "last": 96.57,
-        "chg_pct": 0.01
+        "last": 96.54,
+        "chg_pct": -0.02
       },
       "gold": {
-        "last": 4027.0,
-        "chg_pct": -0.48
+        "last": 4046.6,
+        "chg_pct": -2.42
       }
     },
-    "summary": "Overall macro mood is neutral (-0.14). US Dow -1.0% overnight. Crude -0.4%. USD/INR +0.0%. Notable: US Fed rate hike / hawkish; Geopolitical conflict / war; Tariffs / trade war.",
+    "summary": "Overall macro mood is risk-off (-0.62). US Dow -1.0% overnight. Crude +6.2%. USD/INR -0.0%. Notable: US Fed rate hike / hawkish; Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
       "Hawkish Fed pressures Nifty via FII outflows and stronger USD.",
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
@@ -128,7 +132,7 @@
     "playbook_bias": "risk_off",
     "article_count": 60
   },
-  "macro_risk_factor": 1.0,
+  "macro_risk_factor": 0.7,
   "fii_dii": {
     "date": "2026-07-24",
     "fii_net_cr": -2999.23,

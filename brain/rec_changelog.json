@@ -2168,5 +2168,15 @@
     "ts": "2026-07-24T04:05:52.516079",
     "detail": "Confidence \u25bc10 (76 \u2192 66) | Target 1 moved \u20b91513.32 \u2192 \u20b91501.30",
     "confidence": 65.6
+  },
+  {
+    "type": "removed",
+    "ticker": "ICICIBANK.NS",
+    "nse_code": "ICICIBANK",
+    "signal": "BUY",
+    "date": "2026-07-24",
+    "ts": "2026-07-24T06:09:57.789365",
+    "detail": "Dropped \u2014 no longer meets threshold (was 66/100)",
+    "confidence": 0
   }
 ]

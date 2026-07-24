@@ -1,55 +1,56 @@
 {
-  "date": "2026-07-23",
-  "session": "midday",
-  "generated_at": "2026-07-23T07:05:38.953066",
-  "global_score": 0.042,
-  "india_score": 1.0,
-  "overall_score": 0.473,
-  "mood": "risk_on",
+  "date": "2026-07-24",
+  "session": "preopen",
+  "generated_at": "2026-07-24T03:05:47.353147",
+  "global_score": -0.25,
+  "india_score": 0.0,
+  "overall_score": -0.138,
+  "mood": "neutral",
   "drivers": [
-    "The bull market faces higher likelihood of a Fed rate hike as Iran crisis intensifies",
-    "ServiceNow\u2019s stock rises as earnings show momentum in cybersecurity",
-    "IBM just cut its outlook, but not by as much as investors feared",
-    "\u2018I have a $2,000 deductible\u2019: I reported a cracked windshield on my Hertz rental car. Can they charge me?",
-    "I want to transfer $17,000 in credit-card debt. Why did Wells Fargo offer me only a $4,000 credit limit?",
-    "My second husband and I have kids from previous relationships. Should my house go to him or my children if I die first?",
+    "Most FDA advisers say peptides like BPC-157 and TB-500 should be made available in the U.S. Here\u2019s what happens next.",
+    "The August stock-market slump is a myth \u2014 so why does Wall Street keep repeating it?",
+    "S&P 500 flashes sell signals \u2014 options traders are bracing for wild swings in Apple, Meta and Microsoft",
     "Yes, the AI stock selloff looks terrifying. But it might actually save the bull market.",
-    "The Treasury market touches a worrying milestone not seen since 2007"
+    "AMD\u2019s rivalry with Nvidia is increasingly moving into a new realm",
+    "The stock market\u2019s calm is cracking. Here\u2019s how to prepare for an August shock.",
+    "Trump rolls out a new wave of global tariffs. Here are the latest rates.",
+    "ServiceNow\u2019s stock falls as a new AI threat overshadows earnings beat"
   ],
   "global_cues": {
     "dow": {
-      "last": 52218.58,
-      "chg_pct": -0.01
+      "last": 51711.65,
+      "chg_pct": -0.97
     },
     "nasdaq": {
-      "last": 25690.9,
-      "chg_pct": -0.57
+      "last": 25137.69,
+      "chg_pct": -2.15
     },
     "sp500": {
-      "last": 7498.96,
-      "chg_pct": -0.14
+      "last": 7408.3,
+      "chg_pct": -1.21
     },
     "nikkei": {
-      "last": 66422.6,
-      "chg_pct": 0.46
+      "last": 64568.75,
+      "chg_pct": -2.79
     },
     "crude": {
-      "last": 86.83,
-      "chg_pct": 2.26
+      "last": 91.78,
+      "chg_pct": -0.44
     },
     "usdinr": {
-      "last": 96.54,
-      "chg_pct": 0.21
+      "last": 96.57,
+      "chg_pct": 0.01
     },
     "gold": {
-      "last": 4146.9,
-      "chg_pct": 1.86
+      "last": 4027.0,
+      "chg_pct": -0.48
     }
   },
-  "summary": "Overall macro mood is risk-on (+0.47). US Dow -0.0% overnight. Crude +2.3%. USD/INR +0.2%. Notable: US Fed rate hike / hawkish; Geopolitical conflict / war.",
+  "summary": "Overall macro mood is neutral (-0.14). US Dow -1.0% overnight. Crude -0.4%. USD/INR +0.0%. Notable: US Fed rate hike / hawkish; Geopolitical conflict / war; Tariffs / trade war.",
   "playbook": [
     "Hawkish Fed pressures Nifty via FII outflows and stronger USD.",
-    "Geopolitical shocks trigger global risk-off; gold up, equities down initially."
+    "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
+    "Trade-war headlines spook global markets; IT & export names react most."
   ],
   "playbook_bias": "risk_off",
   "article_count": 60

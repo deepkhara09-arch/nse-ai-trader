@@ -3,10 +3,10 @@
     "ticker": "ICICIBANK.NS",
     "nse_code": "ICICIBANK",
     "company_name": "ICICI Bank Ltd",
-    "date": "2026-07-23",
-    "generated_at": "2026-07-23 10:12 UTC",
+    "date": "2026-07-24",
+    "generated_at": "2026-07-24 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -40,7 +40,7 @@
     "pattern_score": 5.0,
     "confluence_bonus": 10,
     "paper_bonus": 0.0,
-    "success_probability": 0.608,
+    "success_probability": 0.605,
     "base_success_prob": 0.675,
     "profit_probability": 1.025,
     "composite_score": 74.51,
@@ -57,9 +57,9 @@
       "regime"
     ],
     "backtest_tested": true,
-    "backtest_hit_5d": 0.451,
-    "backtest_hit_10d": 0.451,
-    "backtest_sample": 51,
+    "backtest_hit_5d": 0.442,
+    "backtest_hit_10d": 0.442,
+    "backtest_sample": 52,
     "hist_long_trend": "uptrend",
     "hist_52w_position": 91.9,
     "hist_personality": "choppy",
@@ -99,12 +99,12 @@
       "Resistance at \u20b91461.65 is natural target",
       "Latest news: 'HDFC Bank vs ICICI Bank vs Yes Bank: Which stock to buy after Q1 resul'",
       "Confluence: 6 independent signal families agree (trend, momentum, volume, pattern, news, regime)",
-      "History backtest: this kind of BUY setup worked 45% of the time over ~1 week on this stock (sample: 51)"
+      "History backtest: this kind of BUY setup worked 44% of the time over ~1 week on this stock (sample: 52)"
     ],
     "patterns_seen": [
-      "adx_strong_trend_up",
-      "strong_bearish_marubozu",
       "pivot_s1_breakdown",
+      "strong_bearish_marubozu",
+      "adx_strong_trend_up",
       "full_bullish_alignment"
     ],
     "reliable_patterns": [
@@ -136,18 +136,19 @@
     "paper_expectancy": 0,
     "market_mood": "bearish",
     "market_warning": [
+      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
       "Nifty choppy intraday \u2014 wait for cleaner setups",
-      "Net institutional outflow (\u20b9-1,237 Cr)"
+      "Net institutional outflow (\u20b9-52 Cr)"
     ]
   },
   {
     "ticker": "MARICO.NS",
     "nse_code": "MARICO",
     "company_name": "Marico Ltd",
-    "date": "2026-07-23",
-    "generated_at": "2026-07-23 10:12 UTC",
+    "date": "2026-07-24",
+    "generated_at": "2026-07-24 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -181,7 +182,7 @@
     "pattern_score": 2.0,
     "confluence_bonus": 10,
     "paper_bonus": 0.0,
-    "success_probability": 0.546,
+    "success_probability": 0.549,
     "base_success_prob": 0.557,
     "profit_probability": 0.671,
     "composite_score": 61.44,
@@ -198,9 +199,9 @@
       "regime"
     ],
     "backtest_tested": true,
-    "backtest_hit_5d": 0.52,
-    "backtest_hit_10d": 0.5,
-    "backtest_sample": 50,
+    "backtest_hit_5d": 0.529,
+    "backtest_hit_10d": 0.49,
+    "backtest_sample": 51,
     "hist_long_trend": "strong_uptrend",
     "hist_52w_position": 100.0,
     "hist_personality": "mean_reverter",
@@ -240,19 +241,19 @@
       "Resistance at \u20b9870.00 is natural target",
       "Latest news: 'Solid Earnings May Not Tell The Whole Story For Marico (NSE:MARICO) - '",
       "Confluence: 6 independent signal families agree (trend, momentum, volume, pattern, news, regime)",
-      "History backtest: this kind of BUY setup worked 52% of the time over ~1 week on this stock (sample: 50)"
+      "History backtest: this kind of BUY setup worked 53% of the time over ~1 week on this stock (sample: 51)"
     ],
     "patterns_seen": [
-      "outside_bar",
       "momentum_continuation",
-      "supertrend_bullish",
       "adx_strong_trend_up",
+      "outside_bar",
       "macd_bullish_crossover",
-      "pivot_point_test",
-      "full_bullish_alignment",
       "bb_upper_rejection",
-      "rsi_bearish_divergence",
-      "tweezer_bottom"
+      "supertrend_bullish",
+      "tweezer_bottom",
+      "full_bullish_alignment",
+      "pivot_point_test",
+      "rsi_bearish_divergence"
     ],
     "reliable_patterns": [],
     "nearest_support": 838.42,
@@ -280,18 +281,19 @@
     "paper_expectancy": 0,
     "market_mood": "bearish",
     "market_warning": [
+      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
       "Nifty choppy intraday \u2014 wait for cleaner setups",
-      "Net institutional outflow (\u20b9-1,237 Cr)"
+      "Net institutional outflow (\u20b9-52 Cr)"
     ]
   },
   {
     "ticker": "POWERGRID.NS",
     "nse_code": "POWERGRID",
     "company_name": "Power Grid Corporation",
-    "date": "2026-07-23",
-    "generated_at": "2026-07-23 10:12 UTC",
+    "date": "2026-07-24",
+    "generated_at": "2026-07-24 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -325,7 +327,7 @@
     "pattern_score": 3.0,
     "confluence_bonus": 7.5,
     "paper_bonus": 0.0,
-    "success_probability": 0.507,
+    "success_probability": 0.505,
     "base_success_prob": 0.565,
     "profit_probability": 0.695,
     "composite_score": 62.55,
@@ -341,9 +343,9 @@
       "news"
     ],
     "backtest_tested": true,
-    "backtest_hit_5d": 0.372,
-    "backtest_hit_10d": 0.465,
-    "backtest_sample": 43,
+    "backtest_hit_5d": 0.364,
+    "backtest_hit_10d": 0.477,
+    "backtest_sample": 44,
     "hist_long_trend": "uptrend",
     "hist_52w_position": 48.8,
     "hist_personality": "choppy",
@@ -359,8 +361,8 @@
       "MACD histogram positive",
       "Positive news sentiment (0.17)",
       "News sentiment improving across sessions",
-      "Candlestick: engulfing bullish",
       "Candlestick: tweezer bottom",
+      "Candlestick: engulfing bullish",
       "Supertrend bullish \u2014 price above trend band",
       "ADX low \u2014 market ranging, signals less reliable",
       "High delivery 63% \u2014 strong institutional accumulation",
@@ -381,15 +383,15 @@
       "Resistance at \u20b9300.10 is natural target",
       "Latest news: 'Power Grid Corporation of India shares gain 2.01% in today's session -'",
       "Confluence: 5 independent signal families agree (trend, momentum, volume, pattern, news)",
-      "History backtest: this kind of BUY setup worked 37% of the time over ~1 week on this stock (sample: 43)"
+      "History backtest: this kind of BUY setup worked 36% of the time over ~1 week on this stock (sample: 44)"
     ],
     "patterns_seen": [
-      "full_bearish_alignment",
       "supertrend_bullish",
-      "engulfing_bullish",
+      "tweezer_bottom",
       "adx_ranging_market",
-      "rsi_bearish_divergence",
-      "tweezer_bottom"
+      "engulfing_bullish",
+      "full_bearish_alignment",
+      "rsi_bearish_divergence"
     ],
     "reliable_patterns": [],
     "nearest_support": 283.71,
@@ -417,8 +419,9 @@
     "paper_expectancy": 0,
     "market_mood": "bearish",
     "market_warning": [
+      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
       "Nifty choppy intraday \u2014 wait for cleaner setups",
-      "Net institutional outflow (\u20b9-1,237 Cr)"
+      "Net institutional outflow (\u20b9-52 Cr)"
     ]
   }
 ]

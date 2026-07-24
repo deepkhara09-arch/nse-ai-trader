@@ -62,7 +62,7 @@
   "trade_allowed": false,
   "warnings": [
     "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
-    "Global macro risk-off (-0.62) \u2014 Overall macro mood is risk-off (-0.62). US Dow -1.0% overnight. Crude +6.2%. USD/INR -0.0%. Notable: US Fed rate hike / ",
+    "Global macro risk-off (-0.63) \u2014 Overall macro mood is risk-off (-0.63). US Dow -1.0% overnight. Crude +6.2%. USD/INR -0.0%. Notable: US Fed rate hike / ",
     "Severe global risk-off \u2014 blocking new trades this session",
     "Net institutional outflow (\u20b9-52 Cr)"
   ],
@@ -78,10 +78,10 @@
   "macro": {
     "date": "2026-07-24",
     "session": "midday",
-    "generated_at": "2026-07-24T06:09:49.793993",
-    "global_score": -0.309,
+    "generated_at": "2026-07-24T06:15:44.322467",
+    "global_score": -0.334,
     "india_score": -1.0,
-    "overall_score": -0.62,
+    "overall_score": -0.634,
     "mood": "risk_off",
     "drivers": [
       "Most FDA advisers say peptides like BPC-157 and TB-500 should be made available in the U.S. Here\u2019s what happens next.",
@@ -107,8 +107,8 @@
         "chg_pct": -1.21
       },
       "nikkei": {
-        "last": 64456.57,
-        "chg_pct": -2.96
+        "last": 64441.15,
+        "chg_pct": -2.98
       },
       "crude": {
         "last": 92.19,
@@ -123,7 +123,7 @@
         "chg_pct": -2.42
       }
     },
-    "summary": "Overall macro mood is risk-off (-0.62). US Dow -1.0% overnight. Crude +6.2%. USD/INR -0.0%. Notable: US Fed rate hike / hawkish; Geopolitical conflict / war; Tariffs / trade war.",
+    "summary": "Overall macro mood is risk-off (-0.63). US Dow -1.0% overnight. Crude +6.2%. USD/INR -0.0%. Notable: US Fed rate hike / hawkish; Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
       "Hawkish Fed pressures Nifty via FII outflows and stronger USD.",
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",

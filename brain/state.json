@@ -1,13 +1,13 @@
 {
   "phase": "paper_trading",
   "day": 24,
-  "session": "preopen",
+  "session": "morning",
   "start_date": "2026-06-22",
   "phase_start_date": "2026-07-15",
   "last_run_date": "2026-07-23",
   "last_counted_date": "2026-07-23",
   "cohort_last_tick_date": "2026-07-23",
-  "last_updated": "2026-07-24T03:05:50.114067",
+  "last_updated": "2026-07-24T04:05:52.430384",
   "focus_stocks": [
     "MARICO.NS",
     "SBIN.NS",
@@ -40,14 +40,14 @@
     "BAJFINANCE.NS"
   ],
   "paper_trade_stats": {
-    "total": 3,
+    "total": 4,
     "wins": 2,
-    "losses": 1,
-    "win_rate": 0.667,
-    "total_pnl": 133.57,
+    "losses": 2,
+    "win_rate": 0.5,
+    "total_pnl": 122.1,
     "avg_win": 260.33,
-    "avg_loss": -387.08,
-    "expectancy": 44.52
+    "avg_loss": -199.28,
+    "expectancy": 30.53
   },
   "brain_notes": [
     "[2026-06-23] Pre-open macro: neutral (+0.07)",
@@ -323,6 +323,7 @@
     "scored_date": "2026-07-23"
   },
   "sessions_done": {
-    "preopen": "2026-07-24"
+    "preopen": "2026-07-24",
+    "morning": "2026-07-24"
   }
 }

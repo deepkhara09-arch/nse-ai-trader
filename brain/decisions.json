@@ -9499,5 +9499,69 @@
       "rsi_bearish_divergence",
       "tweezer_bottom"
     ]
+  },
+  {
+    "timestamp": "2026-07-24T04:05:52.410880",
+    "date": "2026-07-24",
+    "ticker": "MARICO.NS",
+    "session": "morning",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 73.8,
+    "entry": 849.05,
+    "stop_loss": 825.68,
+    "target": 895.79,
+    "reason": "paper morning",
+    "patterns": [
+      "stoch_rsi_overbought_reversal",
+      "adx_strong_trend_up",
+      "momentum_continuation",
+      "pivot_s1_breakdown",
+      "full_bullish_alignment",
+      "rsi_bullish_divergence"
+    ]
+  },
+  {
+    "timestamp": "2026-07-24T04:05:52.412447",
+    "date": "2026-07-24",
+    "ticker": "ICICIBANK.NS",
+    "session": "morning",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 67.6,
+    "entry": 1426.3,
+    "stop_loss": 1387.04,
+    "target": 1504.81,
+    "reason": "paper morning",
+    "patterns": [
+      "pivot_s1_breakdown",
+      "strong_bearish_marubozu",
+      "full_bullish_alignment",
+      "adx_strong_trend_up"
+    ]
+  },
+  {
+    "timestamp": "2026-07-24T04:05:52.416097",
+    "date": "2026-07-24",
+    "ticker": "FEDERALBNK.NS",
+    "session": "morning",
+    "action": "SELL",
+    "signal": "SELL",
+    "confidence": 72.2,
+    "entry": 351.6,
+    "stop_loss": 364.19,
+    "target": 326.41,
+    "reason": "paper morning",
+    "patterns": [
+      "bb_upper_rejection",
+      "stoch_rsi_overbought_reversal",
+      "adx_strong_trend_up",
+      "rsi_bearish_divergence",
+      "spinning_top",
+      "pivot_s1_breakdown",
+      "full_bullish_alignment",
+      "tweezer_top",
+      "near_52w_high"
+    ]
   }
 ]

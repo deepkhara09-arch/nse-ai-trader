@@ -1,45 +1,5 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of full_bearish_alignment, supertrend_bullish, engulfing_bullish mean for a swing trade on POWERGRID? Current RSI=52, MACD hist=+0.8846, Vol=0.5x average. Signal is BUY.",
-    "context": {
-      "ticker": "POWERGRID.NS",
-      "signal": "BUY",
-      "patterns": "full_bearish_alignment, supertrend_bullish, engulfing_bullish",
-      "rsi": 51.7
-    },
-    "queued_at": "2026-07-23T10:12:43.283415"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of momentum_continuation, supertrend_bullish, full_bullish_alignment mean for a swing trade on NHPC? Current RSI=48, MACD hist=+0.0332, Vol=0.6x average. Signal is BUY.",
-    "context": {
-      "ticker": "NHPC.NS",
-      "signal": "BUY",
-      "patterns": "momentum_continuation, supertrend_bullish, full_bullish_alignment",
-      "rsi": 47.9
-    },
-    "queued_at": "2026-07-23T10:12:43.286367"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of three_white_soldiers, strong_bullish_marubozu, bb_upper_rejection mean for a swing trade on FEDERALBNK? Current RSI=73, MACD hist=+1.6285, Vol=0.8x average. Signal is BUY.",
-    "context": {
-      "ticker": "FEDERALBNK.NS",
-      "signal": "BUY",
-      "patterns": "three_white_soldiers, strong_bullish_marubozu, bb_upper_rejection",
-      "rsi": 72.6
-    },
-    "queued_at": "2026-07-23T10:12:43.287167"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of momentum_continuation, macd_bullish_crossover, tweezer_bottom mean for a swing trade on MARICO? Current RSI=53, MACD hist=+0.4198, Vol=0.6x average. Signal is BUY.",
-    "context": {
-      "ticker": "MARICO.NS",
-      "signal": "BUY",
-      "patterns": "momentum_continuation, macd_bullish_crossover, tweezer_bottom",
-      "rsi": 53.2
-    },
-    "queued_at": "2026-07-24T03:05:50.198608"
-  },
-  {
     "question": "In Indian NSE markets, what does the combination of momentum_continuation, outside_bar, tweezer_top mean for a swing trade on HOMEFIRST? Current RSI=54, MACD hist=+0.2546, Vol=0.6x average. Signal is BUY.",
     "context": {
       "ticker": "HOMEFIRST.NS",
@@ -98,5 +58,45 @@
       "rsi": 72.6
     },
     "queued_at": "2026-07-24T03:05:50.215819"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of momentum_continuation, rsi_bullish_divergence mean for a swing trade on MARICO? Current RSI=58, MACD hist=+0.1095, Vol=1.0x average. Signal is BUY.",
+    "context": {
+      "ticker": "MARICO.NS",
+      "signal": "BUY",
+      "patterns": "momentum_continuation, rsi_bullish_divergence",
+      "rsi": 57.5
+    },
+    "queued_at": "2026-07-24T04:05:52.410578"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of bb_upper_rejection, stoch_rsi_overbought_reversal, rsi_bearish_divergence mean for a swing trade on FEDERALBNK? Current RSI=70, MACD hist=+1.8054, Vol=0.5x average. Signal is SELL.",
+    "context": {
+      "ticker": "FEDERALBNK.NS",
+      "signal": "SELL",
+      "patterns": "bb_upper_rejection, stoch_rsi_overbought_reversal, rsi_bearish_divergence",
+      "rsi": 69.5
+    },
+    "queued_at": "2026-07-24T04:05:52.415830"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of momentum_continuation, rsi_bullish_divergence mean for a swing trade on MARICO? Current RSI=58, MACD hist=+0.1095, Vol=1.0x average. Signal is BUY.",
+    "context": {
+      "ticker": "MARICO.NS",
+      "signal": "BUY",
+      "patterns": "momentum_continuation, rsi_bullish_divergence",
+      "rsi": 57.5
+    },
+    "queued_at": "2026-07-24T04:05:52.506907"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of bb_upper_rejection, stoch_rsi_overbought_reversal, rsi_bearish_divergence mean for a swing trade on FEDERALBNK? Current RSI=70, MACD hist=+1.8054, Vol=0.5x average. Signal is SELL.",
+    "context": {
+      "ticker": "FEDERALBNK.NS",
+      "signal": "SELL",
+      "patterns": "bb_upper_rejection, stoch_rsi_overbought_reversal, rsi_bearish_divergence",
+      "rsi": 69.5
+    },
+    "queued_at": "2026-07-24T04:05:52.515282"
   }
 ]

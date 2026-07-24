@@ -1296,15 +1296,15 @@
     "reliable_patterns": {
       "outside_bar": {
         "wins": 0.0,
-        "losses": 0.5,
-        "reliability": 0.417,
+        "losses": 0.469,
+        "reliability": 0.422,
         "last_seen": "2026-07-13"
       },
       "tweezer_bottom": {
-        "wins": 0.5,
-        "losses": 0.475,
-        "reliability": 0.504,
-        "last_seen": "2026-07-22"
+        "wins": 0.494,
+        "losses": 1.47,
+        "reliability": 0.337,
+        "last_seen": "2026-07-24"
       },
       "near_52w_high": {
         "wins": 0.0,
@@ -1314,21 +1314,21 @@
       },
       "bb_upper_rejection": {
         "wins": 0.0,
-        "losses": 1.491,
-        "reliability": 0.252,
+        "losses": 1.415,
+        "reliability": 0.264,
         "last_seen": "2026-07-15"
       },
       "supertrend_bullish": {
-        "wins": 0.497,
-        "losses": 2.41,
-        "reliability": 0.181,
-        "last_seen": "2026-07-23"
+        "wins": 0.494,
+        "losses": 3.396,
+        "reliability": 0.127,
+        "last_seen": "2026-07-24"
       },
       "full_bullish_alignment": {
-        "wins": 1.482,
-        "losses": 2.887,
-        "reliability": 0.339,
-        "last_seen": "2026-07-23"
+        "wins": 1.473,
+        "losses": 3.87,
+        "reliability": 0.276,
+        "last_seen": "2026-07-24"
       },
       "rsi_bearish_divergence": {
         "wins": 0.0,
@@ -1350,8 +1350,8 @@
       },
       "pivot_s1_bounce": {
         "wins": 0.0,
-        "losses": 0.5,
-        "reliability": 0.417,
+        "losses": 0.477,
+        "reliability": 0.421,
         "last_seen": "2026-07-16"
       },
       "bullish_harami": {
@@ -1367,10 +1367,10 @@
         "last_seen": "2026-07-17"
       },
       "pivot_point_test": {
-        "wins": 0.5,
-        "losses": 0.486,
-        "reliability": 0.502,
-        "last_seen": "2026-07-22"
+        "wins": 0.494,
+        "losses": 1.48,
+        "reliability": 0.336,
+        "last_seen": "2026-07-24"
       },
       "engulfing_bearish": {
         "wins": 0.5,
@@ -1405,15 +1405,15 @@
     },
     "preferred_style": "swing",
     "swing_wins": 0,
-    "swing_losses": 0,
+    "swing_losses": 1,
     "intraday_wins": 0,
     "intraday_losses": 0,
     "long_term_wins": 0,
     "long_term_losses": 0,
-    "atr_stop_hits": 0,
+    "atr_stop_hits": 1,
     "atr_target_hits": 0,
     "atr_multiplier": 1.5,
-    "last_updated": "2026-07-23",
+    "last_updated": "2026-07-24",
     "attribution": {
       "by_pattern": {
         "tweezer_bottom": {

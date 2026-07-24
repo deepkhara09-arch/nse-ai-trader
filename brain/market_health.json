@@ -1,6 +1,6 @@
 {
   "date": "2026-07-24",
-  "session": "preopen",
+  "session": "morning",
   "nifty": {
     "symbol": "^NSEI",
     "value": 23869.6,
@@ -62,7 +62,6 @@
   "trade_allowed": true,
   "warnings": [
     "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
-    "Nifty choppy intraday \u2014 wait for cleaner setups",
     "Net institutional outflow (\u20b9-52 Cr)"
   ],
   "leading_sectors": [],
@@ -71,7 +70,7 @@
   "lagging_sectors": [
     "Bank"
   ],
-  "intraday_regime": "choppy",
+  "intraday_regime": "mixed",
   "macro": {
     "date": "2026-07-24",
     "session": "preopen",

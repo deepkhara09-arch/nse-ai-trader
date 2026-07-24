@@ -1,5 +1,5 @@
 {
-  "capital": 66052.35293000001,
+  "capital": 71766.48755,
   "open_positions": [
     {
       "ticker": "MARICO.NS",
@@ -37,8 +37,8 @@
         "\u26a0 Recent forward-tested call accuracy only 15% (last 20 scored) \u2014 raising the conviction bar",
         "RSI=63 elevated"
       ],
-      "current_price": 853.2,
-      "unrealized_pnl": 113.4,
+      "current_price": 849.05,
+      "unrealized_pnl": 55.3,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -47,51 +47,6 @@
         "mood": "neutral",
         "regime": "mixed"
       }
-    },
-    {
-      "ticker": "NESTLEIND.NS",
-      "sector": "FMCG",
-      "open_date": "2026-07-16",
-      "open_session": "morning",
-      "action": "BUY",
-      "entry": 1431.4,
-      "qty": 4,
-      "invested": 5725.6,
-      "stop_loss": 1432.83,
-      "target": 1527.04,
-      "style": "swing",
-      "confidence": 93.0,
-      "patterns": [
-        "tweezer_bottom",
-        "full_bullish_alignment",
-        "pivot_point_test",
-        "supertrend_bullish"
-      ],
-      "buy_reasons": [
-        "All EMAs stacked bullish",
-        "MACD histogram positive",
-        "Positive news sentiment (0.51, news 0.6x reliable here)",
-        "Candlestick: tweezer bottom",
-        "Supertrend bullish \u2014 price above trend band",
-        "Testing pivot point \u2014 decision zone",
-        "In a long-term strong uptrend (2yr) \u2014 trend on our side",
-        "Clean trender aligned with its long-term uptrend",
-        "\u2713 Daily setup aligned with the higher-timeframe trend",
-        "\u26a0 Recent forward-tested call accuracy only 15% (last 20 scored) \u2014 raising the conviction bar",
-        "RSI=63 elevated"
-      ],
-      "current_price": 1447.9,
-      "unrealized_pnl": 66.0,
-      "max_held_days": 10,
-      "vol_regime_pct": 0.12,
-      "entry_market": {
-        "nifty_trend": "sideways",
-        "vix": 13.27,
-        "mood": "neutral",
-        "regime": "mixed"
-      },
-      "trailing_active": true,
-      "t1_booked": true
     },
     {
       "ticker": "UNIONBANK.NS",
@@ -127,8 +82,8 @@
         "\u2713 Daily setup aligned with the higher-timeframe trend",
         "\u26a0 Recent forward-tested call accuracy only 15% (last 20 scored) \u2014 raising the conviction bar"
       ],
-      "current_price": 168.89,
-      "unrealized_pnl": -80.19,
+      "current_price": 167.86,
+      "unrealized_pnl": -108.0,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -172,8 +127,8 @@
         "\u26a0 Recent forward-tested call accuracy only 15% (last 20 scored) \u2014 raising the conviction bar",
         "MACD histogram negative"
       ],
-      "current_price": 1012.6,
-      "unrealized_pnl": -127.2,
+      "current_price": 1006.4,
+      "unrealized_pnl": -176.8,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -218,8 +173,8 @@
         "Broke below Pivot S1 support \u2014 bearish",
         "StochRSI overbought with bearish candle \u2014 reversal"
       ],
-      "current_price": 3680.8,
-      "unrealized_pnl": 24.8,
+      "current_price": 3637.9,
+      "unrealized_pnl": -18.1,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -397,6 +352,61 @@
       "pnl_pct": -5.17,
       "won": false,
       "open_days": 3
+    },
+    {
+      "ticker": "NESTLEIND.NS",
+      "sector": "FMCG",
+      "open_date": "2026-07-16",
+      "open_session": "morning",
+      "action": "BUY",
+      "entry": 1431.4,
+      "qty": 4,
+      "invested": 5725.6,
+      "stop_loss": 1432.83,
+      "target": 1527.04,
+      "style": "swing",
+      "confidence": 93.0,
+      "patterns": [
+        "tweezer_bottom",
+        "full_bullish_alignment",
+        "pivot_point_test",
+        "supertrend_bullish"
+      ],
+      "buy_reasons": [
+        "All EMAs stacked bullish",
+        "MACD histogram positive",
+        "Positive news sentiment (0.51, news 0.6x reliable here)",
+        "Candlestick: tweezer bottom",
+        "Supertrend bullish \u2014 price above trend band",
+        "Testing pivot point \u2014 decision zone",
+        "In a long-term strong uptrend (2yr) \u2014 trend on our side",
+        "Clean trender aligned with its long-term uptrend",
+        "\u2713 Daily setup aligned with the higher-timeframe trend",
+        "\u26a0 Recent forward-tested call accuracy only 15% (last 20 scored) \u2014 raising the conviction bar",
+        "RSI=63 elevated"
+      ],
+      "current_price": 1459.6,
+      "unrealized_pnl": 112.8,
+      "max_held_days": 10,
+      "vol_regime_pct": 0.12,
+      "entry_market": {
+        "nifty_trend": "sideways",
+        "vix": 13.27,
+        "mood": "neutral",
+        "regime": "mixed"
+      },
+      "trailing_active": true,
+      "t1_booked": true,
+      "close_date": "2026-07-24",
+      "close_session": "morning",
+      "exit_price": 1432.83,
+      "exit_reason": "stop_hit",
+      "pnl": -11.47,
+      "pnl_gross": 5.72,
+      "costs": 17.19,
+      "pnl_pct": -0.2,
+      "won": false,
+      "open_days": 6
     }
   ],
   "daily_snapshots": [
@@ -443,12 +453,12 @@
       "daily_pnl": -256.72
     }
   ],
-  "daily_pnl_today": -256.72165999999936,
+  "daily_pnl_today": -11.465380000000657,
   "last_snapshot_date": "2026-07-23",
   "lifetime_wins": 2,
-  "lifetime_losses": 1,
-  "lifetime_pnl": 133.57,
-  "last_pnl_reset_date": "2026-07-23",
+  "lifetime_losses": 2,
+  "lifetime_pnl": 122.1,
+  "last_pnl_reset_date": "2026-07-24",
   "max_drawdown_pct": 1.07,
   "current_drawdown_pct": 1.07,
   "portfolio_peak": 101210.28,

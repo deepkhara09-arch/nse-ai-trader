@@ -2138,5 +2138,35 @@
     "ts": "2026-07-23T10:12:43.288070",
     "detail": "Confidence \u25b26 (68 \u2192 74) | Rank \u25b21 (#7 \u2192 #6)",
     "confidence": 74.4
+  },
+  {
+    "type": "removed",
+    "ticker": "MARICO.NS",
+    "nse_code": "MARICO",
+    "signal": "BUY",
+    "date": "2026-07-24",
+    "ts": "2026-07-24T04:05:52.516079",
+    "detail": "Dropped \u2014 no longer meets threshold (was 74/100)",
+    "confidence": 0
+  },
+  {
+    "type": "removed",
+    "ticker": "POWERGRID.NS",
+    "nse_code": "POWERGRID",
+    "signal": "BUY",
+    "date": "2026-07-24",
+    "ts": "2026-07-24T04:05:52.516079",
+    "detail": "Dropped \u2014 no longer meets threshold (was 67/100)",
+    "confidence": 0
+  },
+  {
+    "type": "updated",
+    "ticker": "ICICIBANK.NS",
+    "nse_code": "ICICIBANK",
+    "signal": "BUY",
+    "date": "2026-07-24",
+    "ts": "2026-07-24T04:05:52.516079",
+    "detail": "Confidence \u25bc10 (76 \u2192 66) | Target 1 moved \u20b91513.32 \u2192 \u20b91501.30",
+    "confidence": 65.6
   }
 ]

@@ -2318,5 +2318,35 @@
     "ts": "2026-07-27T06:15:58.412843",
     "detail": "Stop loss moved \u20b91404.14 \u2192 \u20b91391.54 | Target 1 moved \u20b91551.92 \u2192 \u20b91539.32",
     "confidence": 67.3
+  },
+  {
+    "type": "new",
+    "ticker": "UNIONBANK.NS",
+    "nse_code": "UNIONBANK",
+    "signal": "BUY",
+    "date": "2026-07-27",
+    "ts": "2026-07-27T07:45:50.189440",
+    "detail": "New BUY recommendation \u2014 confidence 68/100",
+    "confidence": 68.4
+  },
+  {
+    "type": "removed",
+    "ticker": "NESTLEIND.NS",
+    "nse_code": "NESTLEIND",
+    "signal": "BUY",
+    "date": "2026-07-27",
+    "ts": "2026-07-27T07:45:50.189440",
+    "detail": "Dropped \u2014 no longer meets threshold (was 67/100)",
+    "confidence": 0
+  },
+  {
+    "type": "updated",
+    "ticker": "PIDILITIND.NS",
+    "nse_code": "PIDILITIND",
+    "signal": "BUY",
+    "date": "2026-07-27",
+    "ts": "2026-07-27T07:45:50.189440",
+    "detail": "Stop loss moved \u20b91567.28 \u2192 \u20b91575.45",
+    "confidence": 79.0
   }
 ]

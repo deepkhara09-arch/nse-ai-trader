@@ -47,6 +47,8 @@ def run_coach(closed_trades: List[dict], patterns: dict, market_health: dict) ->
     """
     memory   = load_coach_memory()
     today    = ist_today().isoformat()
+    _GEMINI_RUN["calls"] = 0          # reset per-run Gemini budget
+    _GEMINI_RUN["quota_hit"] = False
 
     # ── FREE context coach (always runs) ─────────────────────────────────────
     # Deterministic contextual learning from closed trades — needs no API key, so
@@ -71,20 +73,27 @@ def run_coach(closed_trades: List[dict], patterns: dict, market_health: dict) ->
         save_coach_memory(memory)
         return memory
 
-    # Prove the key WORKS with a tiny probe, so the dashboard can honestly show
-    # whether Gemini is actually enriching the tool (not just 'a key exists').
+    # Prove the key WORKS with a tiny probe (no search grounding = cheapest call),
+    # so the dashboard can honestly show Gemini's real state.
     probe = _call_gemini("Reply with the single word: OK", api_key, use_search=False)
     gemini_ok = bool(probe and "ok" in probe.lower())
+    quota_limited = _GEMINI_RUN["quota_hit"]
     memory = load_coach_memory()
+    prev_ok = memory.get("gemini_status", {}).get("last_ok")
     memory["gemini_status"] = {
-        "key_present": True,
-        "last_ok":     today if gemini_ok else memory.get("gemini_status", {}).get("last_ok"),
-        "last_error":  "" if gemini_ok else (last_gemini_error() or "probe call failed — no detail returned"),
-        "checked":     today,
+        "key_present":   True,
+        "quota_limited": quota_limited,
+        # A quota block means the key is VALID (it authenticated) — keep last_ok.
+        "last_ok":       today if gemini_ok else prev_ok,
+        "last_error":    "" if gemini_ok else (last_gemini_error() or "probe failed — no detail"),
+        "checked":       today,
     }
     save_coach_memory(memory)
+    if quota_limited:
+        print("[coach] Gemini valid but quota-limited today — context coach still learning; retries tomorrow")
+        return memory
     if not gemini_ok:
-        print("[coach] Gemini key present but probe FAILED — skipping LLM enrichment (context coach still ran)")
+        print("[coach] Gemini key present but probe FAILED — LLM enrichment skipped (context coach still ran)")
         return memory
     print("[coach] Gemini online — enriching lessons")
 
@@ -258,7 +267,7 @@ Format your response as JSON array like this:
 ]
 Only return valid JSON. No markdown, no explanation outside the JSON."""
 
-    response = _call_gemini(prompt, api_key, use_search=True)
+    response = _call_gemini(prompt, api_key, use_search=False)
     if not response:
         return []
 
@@ -325,7 +334,7 @@ Return as JSON:
 }}
 Only return valid JSON."""
 
-        response = _call_gemini(prompt, api_key, use_search=True)
+        response = _call_gemini(prompt, api_key, use_search=False)
         if not response:
             continue
 
@@ -399,7 +408,7 @@ Return as JSON array of strings, each a concrete suggestion:
 ["suggestion 1", "suggestion 2", ...]
 Only return valid JSON. Be specific, not generic."""
 
-    response = _call_gemini(prompt, api_key, use_search=True)
+    response = _call_gemini(prompt, api_key, use_search=False)
     if not response:
         return []
 
@@ -414,7 +423,22 @@ Only return valid JSON. Be specific, not generic."""
 
 # ── Gemini API call ────────────────────────────────────────────────────────────
 
-def _call_gemini(prompt: str, api_key: str, use_search: bool = True) -> Optional[str]:
+# Per-run Gemini budget — free tier is tiny, so cap calls and stop entirely once
+# a 429 is seen. Reset at the start of each run_coach.
+_GEMINI_RUN = {"calls": 0, "quota_hit": False}
+_GEMINI_MAX_CALLS_PER_RUN = 4
+
+
+def _call_gemini(prompt: str, api_key: str, use_search: bool = False) -> Optional[str]:
+    # Respect the per-run budget: once quota is hit or the cap is reached, stop —
+    # further calls would just pile up 429s and waste the daily allowance.
+    if _GEMINI_RUN["quota_hit"] or _GEMINI_RUN["calls"] >= _GEMINI_MAX_CALLS_PER_RUN:
+        return None
+    _GEMINI_RUN["calls"] += 1
+    return _call_gemini_inner(prompt, api_key, use_search)
+
+
+def _call_gemini_inner(prompt: str, api_key: str, use_search: bool = False) -> Optional[str]:
     """
     Call Gemini Flash 2.0. Returns the text content or None on failure.
     Uses Google Search grounding so Gemini can pull current market info.
@@ -459,14 +483,22 @@ def _call_gemini(prompt: str, api_key: str, use_search: bool = True) -> Optional
         _set_last_gemini_error("")   # clear on success
         return text.strip()
     except HTTPError as e:
-        # Capture GitHub/Google's ACTUAL error message, not a generic label.
+        # Capture Google's ACTUAL error message, not a generic label.
         try:
             body = e.read().decode("utf-8", "replace")
             msg  = json.loads(body).get("error", {}).get("message", body)[:180]
         except Exception:
             msg = str(e)
-        _set_last_gemini_error(f"HTTP {e.code}: {msg}")
-        print(f"[coach] Gemini HTTP {e.code}: {msg}")
+        if e.code == 429:
+            # Free-tier daily/'per-minute quota hit — NOT a real fault. Flag it so
+            # the coach stops calling for the rest of this run and the dashboard
+            # shows a benign 'quota-limited' state instead of an error.
+            _GEMINI_RUN["quota_hit"] = True
+            _set_last_gemini_error("QUOTA: free-tier limit reached — resets daily")
+            print("[coach] Gemini free-tier quota hit (429) — pausing LLM calls this run")
+        else:
+            _set_last_gemini_error(f"HTTP {e.code}: {msg}")
+            print(f"[coach] Gemini HTTP {e.code}: {msg}")
     except URLError as e:
         _set_last_gemini_error(f"network: {e}")
         print(f"[coach] Gemini network error: {e}")

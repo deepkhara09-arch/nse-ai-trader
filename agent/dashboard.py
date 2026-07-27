@@ -2613,6 +2613,13 @@ def _gemini_status_html(coach_memory: dict) -> str:
                 '<b>Gemini coach: OFF</b> — GEMINI_API_KEY not set in the workflow. '
                 'The free context-coach still learns; add the secret to enable LLM enrichment '
                 '(regime narratives + answers to the tool&rsquo;s own questions).</div>')
+    if gs.get("quota_limited"):
+        # Valid key, just throttled by the free tier — a benign daily state.
+        return ('<div class="card" style="padding:10px 13px;margin-bottom:12px;font-size:.72rem;'
+                'border:1px solid #e6a93a55;color:#e6a93a">'
+                '<b>Gemini coach: quota-limited today</b> — the free tier&rsquo;s daily limit was '
+                'reached (key is valid; resets tomorrow). The free context-coach keeps learning '
+                'regardless, so nothing is lost.</div>')
     if gs.get("last_error"):
         return ('<div class="card" style="padding:10px 13px;margin-bottom:12px;font-size:.72rem;'
                 f'border:1px solid #dc262655;color:#f87171"><b>Gemini coach: ERROR</b> — {gs.get("last_error")} '

@@ -1,145 +1,141 @@
 {
-  "date": "2026-07-24",
-  "session": "preclose",
+  "date": "2026-07-27",
+  "session": "preopen",
   "nifty": {
     "symbol": "^NSEI",
-    "value": 23869.6,
-    "day_change_pct": -0.53,
+    "value": 23767.45,
+    "day_change_pct": -0.43,
     "trend_5d": "down",
     "trend_20d": "sideways",
-    "ath_pct_60d": -2.7
+    "ath_pct_60d": -3.11
   },
   "vix": {
-    "value": 13.48,
+    "value": 14.03,
     "level": "normal",
-    "percentile_30d": 70.0,
-    "avg_30d": 13.24
+    "percentile_30d": 87.0,
+    "avg_30d": 13.18
   },
   "bank_nifty": {
     "symbol": "^NSEBANK",
-    "value": 56592.0,
-    "day_change_pct": -0.94,
-    "trend_5d": "strong_down",
+    "value": 56693.5,
+    "day_change_pct": 0.18,
+    "trend_5d": "down",
     "trend_20d": "down",
-    "ath_pct_60d": -3.6,
+    "ath_pct_60d": -3.43,
     "diverging": false
   },
   "sectors": {
     "IT": {
       "symbol": "ITBEES.NS",
-      "value": 31.74,
-      "day_change_pct": 0.09,
+      "value": 32.0,
+      "day_change_pct": 0.82,
       "trend_5d": "down",
       "trend_20d": "strong_up",
-      "ath_pct_60d": -8.4
+      "ath_pct_60d": -7.65
     },
     "Pharma": {
       "symbol": "PHARMABEES.NS",
-      "value": 26.32,
-      "day_change_pct": -0.72,
-      "trend_5d": "sideways",
+      "value": 26.28,
+      "day_change_pct": -0.15,
+      "trend_5d": "down",
       "trend_20d": "up",
-      "ath_pct_60d": -3.41
+      "ath_pct_60d": -3.56
     },
     "Bank": {
       "symbol": "BANKBEES.NS",
-      "value": 586.72,
-      "day_change_pct": -0.93,
-      "trend_5d": "strong_down",
+      "value": 587.76,
+      "day_change_pct": 0.18,
+      "trend_5d": "down",
       "trend_20d": "down",
-      "ath_pct_60d": -6.56
+      "ath_pct_60d": -6.39
     },
     "Infra": {
       "symbol": "INFRABEES.NS",
-      "value": 958.3,
-      "day_change_pct": -0.76,
+      "value": 957.26,
+      "day_change_pct": -0.11,
       "trend_5d": "down",
       "trend_20d": "down",
-      "ath_pct_60d": -3.54
+      "ath_pct_60d": -3.65
     }
   },
   "market_mood": "bearish",
-  "trade_allowed": false,
+  "trade_allowed": true,
   "warnings": [
-    "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
-    "Nifty choppy intraday \u2014 wait for cleaner setups",
-    "Global macro risk-off (-0.63) \u2014 Overall macro mood is risk-off (-0.63). US Dow -1.0% overnight. Crude +6.2%. USD/INR -0.1%. Notable: US Fed rate hike / ",
-    "Severe global risk-off \u2014 blocking new trades this session",
-    "Net institutional outflow (\u20b9-52 Cr)"
+    "VIX=14.0 at 87th percentile vs last 30d \u2014 unusually high stress",
+    "Nifty in downtrend (down) \u2014 only high-confidence BUY signals"
   ],
   "leading_sectors": [],
   "market_regime": "normal",
   "sector_breadth": 0.0,
   "lagging_sectors": [
     "IT",
+    "Pharma",
     "Bank",
     "Infra"
   ],
-  "intraday_regime": "choppy",
   "macro": {
-    "date": "2026-07-24",
-    "session": "midday",
-    "generated_at": "2026-07-24T07:06:43.912620",
-    "global_score": -0.325,
-    "india_score": -1.0,
-    "overall_score": -0.629,
-    "mood": "risk_off",
+    "date": "2026-07-27",
+    "session": "preopen",
+    "generated_at": "2026-07-27T03:05:41.246490",
+    "global_score": 0.202,
+    "india_score": 0.0,
+    "overall_score": 0.111,
+    "mood": "neutral",
     "drivers": [
-      "Most FDA advisers say peptides like BPC-157 and TB-500 should be made available in the U.S. Here\u2019s what happens next.",
-      "The August stock-market slump is a myth \u2014 so why does Wall Street keep repeating it?",
-      "S&P 500 flashes sell signals \u2014 options traders are bracing for wild swings in Apple, Meta and Microsoft",
-      "Yes, the AI stock selloff looks terrifying. But it might actually save the bull market.",
-      "AMD\u2019s rivalry with Nvidia is increasingly moving into a new realm",
-      "The stock market\u2019s calm is cracking. Here\u2019s how to prepare for an August shock.",
-      "Trump rolls out a new wave of global tariffs. Here are the latest rates.",
-      "ServiceNow\u2019s stock falls as a new AI threat overshadows earnings beat"
+      "Oil prices sink, stock futures rally as U.S. and Iran pause attacks, Wall Street awaits busy week",
+      "I will definitely claim Social Security early. Why do so few people talk about the elephant in the room?",
+      "\u2018It\u2019s nothing personal\u2019: Should I tell my 96-year-old stepmother that I don\u2019t want her inheritance?",
+      "There\u2019s a technical \u2018triple threat\u2019 for stocks, but also places investors can hide",
+      "\u2018Time will tell whether that was a good bet\u2019: My adviser got me a full SpaceX IPO allocation. Was I lucky?",
+      "I am a 63-year-old semiretired physician. If I saved $2 million for retirement, should my Social Security become optional?",
+      "We have $8 million in traditional IRAs. Should we tap them to buy a house \u2014 and take the tax hit?",
+      "The S&P 500\u2019s earnings growth has gone bonkers thanks to one company"
     ],
     "global_cues": {
       "dow": {
-        "last": 51711.65,
-        "chg_pct": -0.97
+        "last": 51947.25,
+        "chg_pct": 0.46
       },
       "nasdaq": {
-        "last": 25137.69,
-        "chg_pct": -2.15
+        "last": 24975.82,
+        "chg_pct": -0.64
       },
       "sp500": {
-        "last": 7408.3,
-        "chg_pct": -1.21
+        "last": 7411.98,
+        "chg_pct": 0.05
       },
       "nikkei": {
-        "last": 64611.15,
-        "chg_pct": -2.73
+        "last": 64764.01,
+        "chg_pct": 0.24
       },
       "crude": {
-        "last": 92.19,
-        "chg_pct": 6.17
+        "last": 85.64,
+        "chg_pct": -4.11
       },
       "usdinr": {
-        "last": 96.5,
-        "chg_pct": -0.06
+        "last": 96.55,
+        "chg_pct": -0.34
       },
       "gold": {
-        "last": 4046.6,
-        "chg_pct": -2.42
+        "last": 4097.6,
+        "chg_pct": 0.74
       }
     },
-    "summary": "Overall macro mood is risk-off (-0.63). US Dow -1.0% overnight. Crude +6.2%. USD/INR -0.1%. Notable: US Fed rate hike / hawkish; Geopolitical conflict / war; Tariffs / trade war.",
+    "summary": "Overall macro mood is neutral (+0.11). US Dow +0.5% overnight. Crude -4.1%. USD/INR -0.3%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
-      "Hawkish Fed pressures Nifty via FII outflows and stronger USD.",
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
       "Trade-war headlines spook global markets; IT & export names react most."
     ],
     "playbook_bias": "risk_off",
     "article_count": 60
   },
-  "macro_risk_factor": 0.7,
+  "macro_risk_factor": 1.0,
   "fii_dii": {
-    "date": "2026-07-24",
-    "fii_net_cr": -2999.23,
-    "dii_net_cr": 2947.14,
-    "combined_net_cr": -52.09,
-    "signal": "outflow",
+    "date": "2026-07-27",
+    "fii_net_cr": -3892.77,
+    "dii_net_cr": 5453.55,
+    "combined_net_cr": 1560.78,
+    "signal": "neutral",
     "ok": true,
     "error": "",
     "history": [
@@ -286,15 +282,21 @@
         "fii": -2999.23,
         "dii": 2947.14,
         "combined": -52.09
+      },
+      {
+        "date": "2026-07-27",
+        "fii": -3892.77,
+        "dii": 5453.55,
+        "combined": 1560.78
       }
     ]
   },
   "pcr": {
-    "date": "2026-07-24",
-    "pcr": 0.833,
+    "date": "2026-07-27",
+    "pcr": 0.825,
     "reading": "neutral",
-    "total_pe_oi": 2639073,
-    "total_ce_oi": 3166683,
+    "total_pe_oi": 2558638,
+    "total_ce_oi": 3101044,
     "spot": 23767.45,
     "max_pain": 23900.0,
     "max_pain_dist_pct": -0.56,

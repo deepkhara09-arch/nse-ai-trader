@@ -3,25 +3,25 @@
   "session": "preclose",
   "nifty": {
     "symbol": "^NSEI",
-    "value": 23869.6,
-    "day_change_pct": -0.53,
+    "value": 23767.45,
+    "day_change_pct": -0.43,
     "trend_5d": "down",
     "trend_20d": "sideways",
-    "ath_pct_60d": -2.7
+    "ath_pct_60d": -3.11
   },
   "vix": {
-    "value": 13.48,
+    "value": 14.03,
     "level": "normal",
-    "percentile_30d": 72.0,
-    "avg_30d": 13.15
+    "percentile_30d": 87.0,
+    "avg_30d": 13.18
   },
   "bank_nifty": {
     "symbol": "^NSEBANK",
-    "value": 56592.0,
-    "day_change_pct": -0.94,
-    "trend_5d": "strong_down",
+    "value": 56693.5,
+    "day_change_pct": 0.18,
+    "trend_5d": "down",
     "trend_20d": "down",
-    "ath_pct_60d": -3.6,
+    "ath_pct_60d": -3.43,
     "diverging": false
   },
   "sectors": {
@@ -58,9 +58,10 @@
       "ath_pct_60d": -3.65
     }
   },
-  "market_mood": "bullish",
+  "market_mood": "bearish",
   "trade_allowed": true,
   "warnings": [
+    "VIX=14.0 at 87th percentile vs last 30d \u2014 unusually high stress",
     "Nifty in downtrend (down) \u2014 only high-confidence BUY signals"
   ],
   "leading_sectors": [],
@@ -132,9 +133,9 @@
   "macro_risk_factor": 1.0,
   "fii_dii": {
     "date": "2026-07-27",
-    "fii_net_cr": -3892.77,
-    "dii_net_cr": 5453.55,
-    "combined_net_cr": 1560.78,
+    "fii_net_cr": -1688.23,
+    "dii_net_cr": 2329.14,
+    "combined_net_cr": 640.91,
     "signal": "neutral",
     "ok": true,
     "error": "",
@@ -285,9 +286,9 @@
       },
       {
         "date": "2026-07-27",
-        "fii": -3892.77,
-        "dii": 5453.55,
-        "combined": 1560.78
+        "fii": -1688.23,
+        "dii": 2329.14,
+        "combined": 640.91
       }
     ]
   },

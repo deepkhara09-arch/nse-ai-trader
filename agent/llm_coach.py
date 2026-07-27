@@ -19,7 +19,7 @@ import time
 from datetime import date, datetime
 from typing import Dict, List, Optional
 from urllib.request import urlopen, Request
-from urllib.error import URLError
+from urllib.error import URLError, HTTPError
 
 from agent.config import BRAIN_DIR
 from agent.trading_calendar import ist_today
@@ -79,7 +79,7 @@ def run_coach(closed_trades: List[dict], patterns: dict, market_health: dict) ->
     memory["gemini_status"] = {
         "key_present": True,
         "last_ok":     today if gemini_ok else memory.get("gemini_status", {}).get("last_ok"),
-        "last_error":  "" if gemini_ok else "probe call failed (key invalid, quota, or model unavailable)",
+        "last_error":  "" if gemini_ok else (last_gemini_error() or "probe call failed — no detail returned"),
         "checked":     today,
     }
     save_coach_memory(memory)
@@ -445,21 +445,42 @@ def _call_gemini(prompt: str, api_key: str, use_search: bool = True) -> Optional
             data = json.loads(resp.read().decode("utf-8"))
         candidates = data.get("candidates", [])
         if not candidates:
-            print("[coach] Gemini returned no candidates")
+            # Could be a safety block or an empty finish — surface the reason.
+            fb = data.get("promptFeedback", {}).get("blockReason", "")
+            _set_last_gemini_error(f"no candidates{' — ' + fb if fb else ''}")
+            print(f"[coach] Gemini returned no candidates {fb}")
             return None
         parts = candidates[0].get("content", {}).get("parts", [])
         text  = "".join(p.get("text", "") for p in parts).strip()
-        # Strip markdown code fences if present
         if text.startswith("```"):
             text = text.split("```")[1]
             if text.startswith("json"):
                 text = text[4:]
+        _set_last_gemini_error("")   # clear on success
         return text.strip()
+    except HTTPError as e:
+        # Capture GitHub/Google's ACTUAL error message, not a generic label.
+        try:
+            body = e.read().decode("utf-8", "replace")
+            msg  = json.loads(body).get("error", {}).get("message", body)[:180]
+        except Exception:
+            msg = str(e)
+        _set_last_gemini_error(f"HTTP {e.code}: {msg}")
+        print(f"[coach] Gemini HTTP {e.code}: {msg}")
     except URLError as e:
+        _set_last_gemini_error(f"network: {e}")
         print(f"[coach] Gemini network error: {e}")
     except Exception as e:
+        _set_last_gemini_error(str(e)[:180])
         print(f"[coach] Gemini call error: {e}")
     return None
+
+
+_LAST_GEMINI_ERROR = {"msg": ""}
+def _set_last_gemini_error(msg):
+    _LAST_GEMINI_ERROR["msg"] = msg
+def last_gemini_error():
+    return _LAST_GEMINI_ERROR["msg"]
 
 
 # ── Lesson storage ─────────────────────────────────────────────────────────────

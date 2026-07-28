@@ -156,6 +156,21 @@ def _try_open_positions(book: dict, opinions: List[dict], patterns_db: Dict, ses
         print(f"[paper] Daily loss limit hit (₹{daily_loss:.0f}). No new trades today.")
         return book, patterns_db
 
+    # ── Portfolio drawdown circuit breaker ─────────────────────────────────────
+    # A per-day limit can't catch a slow bleed. If the book is deep below its
+    # equity peak, stop adding risk: HARD → open nothing new; SOFT → half size.
+    # Existing positions keep being managed regardless.
+    from agent.config import DRAWDOWN_SOFT_PCT, DRAWDOWN_HARD_PCT
+    dd = book.get("current_drawdown_pct", 0.0) / 100.0
+    drawdown_factor = 1.0
+    if dd >= DRAWDOWN_HARD_PCT:
+        print(f"[paper] Circuit breaker: {dd*100:.1f}% drawdown ≥ {DRAWDOWN_HARD_PCT*100:.0f}% "
+              f"— no new trades until the book recovers (open positions still managed).")
+        return book, patterns_db
+    elif dd >= DRAWDOWN_SOFT_PCT:
+        drawdown_factor = 0.5
+        print(f"[paper] Defensive: {dd*100:.1f}% drawdown ≥ {DRAWDOWN_SOFT_PCT*100:.0f}% — new sizes halved.")
+
     # ── Volatility regime: scale position size and ATR multiplier with VIX ────
     vix_val = (market_health or {}).get("vix", {}).get("value", 15.0)
     if vix_val >= 20.0:
@@ -228,7 +243,7 @@ def _try_open_positions(book: dict, opinions: List[dict], patterns_db: Dict, ses
         # allocation and weak ones get a smaller, risk-appropriate stake.
         conf = op.get("confidence", 70)
         conv_factor = max(0.6, min(1.0, 0.6 + (conf - 65) / 62.5))  # 65->0.60, 90->1.00
-        pos_pct = vol_max_pct * conv_factor
+        pos_pct = vol_max_pct * conv_factor * drawdown_factor       # drawdown brake
 
         # ── Earnings guard: halve size for a swing held through results (gap risk).
         # Intraday is squared off same day so earnings gap risk doesn't apply.
@@ -454,7 +469,26 @@ def _check_exits(book: dict, stock_data: Dict, session: str, patterns_db: Dict):
                 stop_loss_ = pos["stop_loss"]   # refresh for the checks below
 
         open_days = _days_between(pos["open_date"], today)
-        expired   = open_days >= pos.get("max_held_days", 10)
+        max_held  = pos.get("max_held_days", 10)
+        expired   = open_days >= max_held
+
+        # ── Time-exit grace: don't dump a winner that's about to reach target ──
+        # A blunt day-N force-close can exit a position at, say, +2.5% when it's
+        # 90% of the way to its target and still climbing. If it's expiring but
+        # close to target AND the move is still in our favour, grant a short,
+        # bounded extension (once) so momentum can finish the job. If it stalls or
+        # turns, it exits next time.
+        if expired and not hit_target and not hit_stop and target_ and stop_loss_ \
+                and not pos.get("grace_used"):
+            entry_p = pos["entry"]
+            prog = ((current - entry_p) / (target_ - entry_p)) if target_ != entry_p else 0
+            in_favour = (current > entry_p) if pos["action"] == "BUY" else (current < entry_p)
+            if prog >= 0.75 and in_favour:
+                pos["max_held_days"] = max_held + 3   # one bounded extension
+                pos["grace_used"] = True
+                print(f"[paper] {ticker} at {prog*100:.0f}% to target on day {open_days} — "
+                      f"granting 3-day grace instead of time-exit")
+                expired = False
 
         if hit_target or hit_stop or expired:
             if hit_target and hit_stop:

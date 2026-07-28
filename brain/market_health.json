@@ -1,26 +1,26 @@
 {
   "date": "2026-07-28",
-  "session": "preopen",
+  "session": "morning",
   "nifty": {
     "symbol": "^NSEI",
     "value": 23995.95,
-    "day_change_pct": 0.96,
-    "trend_5d": "sideways",
+    "day_change_pct": 0.53,
+    "trend_5d": "down",
     "trend_20d": "sideways",
     "ath_pct_60d": -2.18
   },
   "vix": {
     "value": 12.66,
     "level": "normal",
-    "percentile_30d": 20.0,
-    "avg_30d": 13.11
+    "percentile_30d": 21.0,
+    "avg_30d": 13.08
   },
   "bank_nifty": {
     "symbol": "^NSEBANK",
     "value": 57087.2,
-    "day_change_pct": 0.69,
+    "day_change_pct": 0.88,
     "trend_5d": "down",
-    "trend_20d": "sideways",
+    "trend_20d": "down",
     "ath_pct_60d": -2.76,
     "diverging": false
   },
@@ -58,9 +58,11 @@
       "ath_pct_60d": -3.65
     }
   },
-  "market_mood": "bullish",
+  "market_mood": "neutral",
   "trade_allowed": true,
-  "warnings": [],
+  "warnings": [
+    "Nifty in downtrend (down) \u2014 only high-confidence BUY signals"
+  ],
   "leading_sectors": [],
   "market_regime": "normal",
   "sector_breadth": 0.0,
@@ -69,7 +71,7 @@
     "Bank",
     "Infra"
   ],
-  "intraday_regime": "trending_up",
+  "intraday_regime": "mixed",
   "macro": {
     "date": "2026-07-28",
     "session": "preopen",

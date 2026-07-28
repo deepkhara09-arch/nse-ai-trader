@@ -1,6 +1,6 @@
 {
   "date": "2026-07-28",
-  "session": "morning",
+  "session": "midday",
   "nifty": {
     "symbol": "^NSEI",
     "value": 23995.95,
@@ -27,11 +27,11 @@
   "sectors": {
     "IT": {
       "symbol": "ITBEES.NS",
-      "value": 32.0,
-      "day_change_pct": 0.82,
-      "trend_5d": "down",
+      "value": 32.7,
+      "day_change_pct": 2.19,
+      "trend_5d": "up",
       "trend_20d": "strong_up",
-      "ath_pct_60d": -7.65
+      "ath_pct_60d": -5.63
     },
     "Pharma": {
       "symbol": "PHARMABEES.NS",
@@ -43,42 +43,44 @@
     },
     "Bank": {
       "symbol": "BANKBEES.NS",
-      "value": 587.76,
-      "day_change_pct": 0.18,
+      "value": 591.44,
+      "day_change_pct": 0.63,
       "trend_5d": "down",
       "trend_20d": "down",
-      "ath_pct_60d": -6.39
+      "ath_pct_60d": -5.81
     },
     "Infra": {
       "symbol": "INFRABEES.NS",
-      "value": 957.26,
-      "day_change_pct": -0.11,
+      "value": 963.34,
+      "day_change_pct": 0.64,
       "trend_5d": "down",
-      "trend_20d": "down",
-      "ath_pct_60d": -3.65
+      "trend_20d": "sideways",
+      "ath_pct_60d": -3.04
     }
   },
-  "market_mood": "neutral",
+  "market_mood": "bearish",
   "trade_allowed": true,
   "warnings": [
-    "Nifty in downtrend (down) \u2014 only high-confidence BUY signals"
+    "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
+    "Nifty choppy intraday \u2014 wait for cleaner setups"
   ],
-  "leading_sectors": [],
+  "leading_sectors": [
+    "IT"
+  ],
   "market_regime": "normal",
-  "sector_breadth": 0.0,
+  "sector_breadth": 0.25,
   "lagging_sectors": [
-    "IT",
     "Bank",
     "Infra"
   ],
-  "intraday_regime": "mixed",
+  "intraday_regime": "choppy",
   "macro": {
     "date": "2026-07-28",
-    "session": "preopen",
-    "generated_at": "2026-07-28T03:05:47.827420",
-    "global_score": -0.129,
+    "session": "midday",
+    "generated_at": "2026-07-28T06:09:14.596299",
+    "global_score": -0.128,
     "india_score": 0.0,
-    "overall_score": -0.071,
+    "overall_score": -0.07,
     "mood": "neutral",
     "drivers": [
       "Nvidia\u2019s potential new deal with OpenAI would revive a spooky tech-bubble habit, analyst warns",
@@ -93,34 +95,34 @@
     "global_cues": {
       "dow": {
         "last": 52210.08,
-        "chg_pct": 0.51
+        "chg_pct": 0.96
       },
       "nasdaq": {
         "last": 24932.08,
-        "chg_pct": -0.18
+        "chg_pct": -0.82
       },
       "sp500": {
         "last": 7413.18,
-        "chg_pct": 0.02
+        "chg_pct": 0.07
       },
       "nikkei": {
-        "last": 62046.46,
-        "chg_pct": -4.44
+        "last": 62183.13,
+        "chg_pct": -4.23
       },
       "crude": {
-        "last": 80.72,
-        "chg_pct": -2.29
+        "last": 82.61,
+        "chg_pct": -7.5
       },
       "usdinr": {
-        "last": 95.9,
-        "chg_pct": -0.69
+        "last": 95.8,
+        "chg_pct": -0.79
       },
       "gold": {
-        "last": 4043.1,
-        "chg_pct": -0.77
+        "last": 4074.5,
+        "chg_pct": 0.17
       }
     },
-    "summary": "Overall macro mood is neutral (-0.07). US Dow +0.5% overnight. Crude -2.3%. USD/INR -0.7%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
+    "summary": "Overall macro mood is neutral (-0.07). US Dow +1.0% overnight. Crude -7.5%. USD/INR -0.8%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
       "Trade-war headlines spook global markets; IT & export names react most."

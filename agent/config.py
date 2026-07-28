@@ -88,13 +88,16 @@ INITIAL_CAPITAL        = 100_000   # virtual INR
 MAX_POSITION_SIZE_PCT  = 0.12      # max 12% per trade (normal market)
 MAX_OPEN_POSITIONS     = 5         # never hold more than 5 at once
 MAX_DAILY_LOSS_PCT     = 0.03      # stop all trading if day loss > 3%
-# Portfolio drawdown circuit breaker (from the equity peak, not just today):
-#   soft — beyond this, HALVE new position sizes (defensive, keep participating)
-#   hard — beyond this, OPEN NOTHING NEW until the book recovers (existing
-#          positions are still managed/exited normally). Protects capital from a
-#          losing regime that a per-day limit alone can't catch.
+# Drawdown-scaled sizing (from the equity peak, not just today). Deliberately
+# NEVER halts trading — a hard "stop all new trades" wall can DEADLOCK the tool
+# in a losing regime: if it's gone to cash, drawdown can only recover by making
+# new trades, which a halt forbids. So instead we only SHRINK size the deeper the
+# drawdown, staying defensive while always able to trade back to the peak:
+#   >= soft  → half size      >= deep → quarter size (small, but never zero)
+# This is regime caution (risk less when the market is beating us), not a
+# sunk-cost stop — old losses never block a new trade, they only size it down.
 DRAWDOWN_SOFT_PCT      = 0.08      # 8% below peak → half size
-DRAWDOWN_HARD_PCT      = 0.15      # 15% below peak → no new trades
+DRAWDOWN_DEEP_PCT      = 0.15      # 15% below peak → quarter size (still trading)
 MAX_SECTOR_POSITIONS   = 2         # max open positions from the same sector simultaneously
 
 # Max holding period (trading days) per style before a time-based exit. Intraday

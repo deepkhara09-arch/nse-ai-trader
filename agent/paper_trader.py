@@ -156,20 +156,22 @@ def _try_open_positions(book: dict, opinions: List[dict], patterns_db: Dict, ses
         print(f"[paper] Daily loss limit hit (₹{daily_loss:.0f}). No new trades today.")
         return book, patterns_db
 
-    # ── Portfolio drawdown circuit breaker ─────────────────────────────────────
-    # A per-day limit can't catch a slow bleed. If the book is deep below its
-    # equity peak, stop adding risk: HARD → open nothing new; SOFT → half size.
-    # Existing positions keep being managed regardless.
-    from agent.config import DRAWDOWN_SOFT_PCT, DRAWDOWN_HARD_PCT
+    # ── Drawdown-scaled sizing (NOT a halt) ────────────────────────────────────
+    # The deeper below the equity peak, the smaller new positions — but never
+    # zero. This is regime caution: risk less when the market is beating us, while
+    # ALWAYS keeping the tool able to trade its way back to the peak. Deliberately
+    # not a hard stop, which could deadlock the book in cash (drawdown can only
+    # recover by trading, so a "stop all trades" wall would trap it). Old losses
+    # size a new trade down; they never block it.
+    from agent.config import DRAWDOWN_SOFT_PCT, DRAWDOWN_DEEP_PCT
     dd = book.get("current_drawdown_pct", 0.0) / 100.0
     drawdown_factor = 1.0
-    if dd >= DRAWDOWN_HARD_PCT:
-        print(f"[paper] Circuit breaker: {dd*100:.1f}% drawdown ≥ {DRAWDOWN_HARD_PCT*100:.0f}% "
-              f"— no new trades until the book recovers (open positions still managed).")
-        return book, patterns_db
+    if dd >= DRAWDOWN_DEEP_PCT:
+        drawdown_factor = 0.25
+        print(f"[paper] Deep drawdown {dd*100:.1f}% ≥ {DRAWDOWN_DEEP_PCT*100:.0f}% — new sizes at quarter (still trading to recover).")
     elif dd >= DRAWDOWN_SOFT_PCT:
         drawdown_factor = 0.5
-        print(f"[paper] Defensive: {dd*100:.1f}% drawdown ≥ {DRAWDOWN_SOFT_PCT*100:.0f}% — new sizes halved.")
+        print(f"[paper] Drawdown {dd*100:.1f}% ≥ {DRAWDOWN_SOFT_PCT*100:.0f}% — new sizes halved.")
 
     # ── Volatility regime: scale position size and ATR multiplier with VIX ────
     vix_val = (market_health or {}).get("vix", {}).get("value", 15.0)

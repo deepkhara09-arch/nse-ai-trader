@@ -1,102 +1,102 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of macd_bearish_crossover, rsi_bullish_divergence, engulfing_bullish mean for a swing trade on MARICO? Current RSI=59, MACD hist=-0.0084, Vol=0.9x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of pivot_s1_bounce, pivot_point_test mean for a swing trade on ABCAPITAL? Current RSI=42, MACD hist=-2.3966, Vol=0.8x average. Signal is BUY.",
     "context": {
-      "ticker": "MARICO.NS",
+      "ticker": "ABCAPITAL.NS",
       "signal": "BUY",
-      "patterns": "macd_bearish_crossover, rsi_bullish_divergence, engulfing_bullish",
-      "rsi": 58.8
+      "patterns": "pivot_s1_bounce, pivot_point_test",
+      "rsi": 41.5
     },
-    "queued_at": "2026-07-28T06:09:23.813651"
+    "queued_at": "2026-07-28T07:45:53.502624"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of piercing_line, pivot_r1_breakout, momentum_continuation mean for a swing trade on NESTLEIND? Current RSI=44, MACD hist=+0.3878, Vol=1.4x average. Signal is BUY.",
-    "context": {
-      "ticker": "NESTLEIND.NS",
-      "signal": "BUY",
-      "patterns": "piercing_line, pivot_r1_breakout, momentum_continuation",
-      "rsi": 43.9
-    },
-    "queued_at": "2026-07-28T06:09:23.815411"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of volume_breakout_bullish, pivot_r2_breakout, engulfing_bullish mean for a swing trade on PIDILITIND? Current RSI=43, MACD hist=-3.8699, Vol=2.3x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of pivot_r2_breakout, pivot_r1_breakout, engulfing_bullish mean for a swing trade on PIDILITIND? Current RSI=43, MACD hist=-3.8699, Vol=2.3x average. Signal is BUY.",
     "context": {
       "ticker": "PIDILITIND.NS",
       "signal": "BUY",
-      "patterns": "volume_breakout_bullish, pivot_r2_breakout, engulfing_bullish",
+      "patterns": "pivot_r2_breakout, pivot_r1_breakout, engulfing_bullish",
       "rsi": 42.8
     },
-    "queued_at": "2026-07-28T06:09:23.817933"
+    "queued_at": "2026-07-28T07:45:53.503500"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of full_bullish_alignment, supertrend_bullish, adx_strong_trend_up mean for a swing trade on SIEMENS? Current RSI=63, MACD hist=+20.8865, Vol=0.7x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of pivot_s1_bounce, pivot_point_test, gap_down_reversal mean for a swing trade on SIEMENS? Current RSI=63, MACD hist=+20.8865, Vol=0.7x average. Signal is BUY.",
     "context": {
       "ticker": "SIEMENS.NS",
       "signal": "BUY",
-      "patterns": "full_bullish_alignment, supertrend_bullish, adx_strong_trend_up",
+      "patterns": "pivot_s1_bounce, pivot_point_test, gap_down_reversal",
       "rsi": 62.7
     },
-    "queued_at": "2026-07-28T06:09:23.818686"
+    "queued_at": "2026-07-28T07:45:53.517949"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of tweezer_top, stoch_rsi_overbought_reversal, full_bullish_alignment mean for a swing trade on NHPC? Current RSI=56, MACD hist=-0.0609, Vol=0.5x average. Signal is SELL.",
+    "question": "In Indian NSE markets, what does the combination of tweezer_top, stoch_rsi_overbought_reversal, pivot_s1_breakdown mean for a swing trade on NHPC? Current RSI=56, MACD hist=-0.0609, Vol=0.5x average. Signal is SELL.",
     "context": {
       "ticker": "NHPC.NS",
       "signal": "SELL",
-      "patterns": "tweezer_top, stoch_rsi_overbought_reversal, full_bullish_alignment",
+      "patterns": "tweezer_top, stoch_rsi_overbought_reversal, pivot_s1_breakdown",
       "rsi": 55.9
     },
-    "queued_at": "2026-07-28T06:09:23.820641"
+    "queued_at": "2026-07-28T07:45:53.519388"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of macd_bearish_crossover, rsi_bullish_divergence, engulfing_bullish mean for a swing trade on MARICO? Current RSI=59, MACD hist=-0.0084, Vol=0.9x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of rsi_bullish_divergence, engulfing_bullish, hammer mean for a swing trade on MARICO? Current RSI=59, MACD hist=-0.0084, Vol=0.9x average. Signal is BUY.",
     "context": {
       "ticker": "MARICO.NS",
       "signal": "BUY",
-      "patterns": "macd_bearish_crossover, rsi_bullish_divergence, engulfing_bullish",
+      "patterns": "rsi_bullish_divergence, engulfing_bullish, hammer",
       "rsi": 58.8
     },
-    "queued_at": "2026-07-28T06:09:23.908884"
+    "queued_at": "2026-07-28T07:45:53.587752"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of piercing_line, pivot_r1_breakout, momentum_continuation mean for a swing trade on NESTLEIND? Current RSI=44, MACD hist=+0.3878, Vol=1.4x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of pivot_r1_breakout, piercing_line, momentum_continuation mean for a swing trade on NESTLEIND? Current RSI=44, MACD hist=+0.3878, Vol=1.4x average. Signal is BUY.",
     "context": {
       "ticker": "NESTLEIND.NS",
       "signal": "BUY",
-      "patterns": "piercing_line, pivot_r1_breakout, momentum_continuation",
+      "patterns": "pivot_r1_breakout, piercing_line, momentum_continuation",
       "rsi": 43.9
     },
-    "queued_at": "2026-07-28T06:09:23.913751"
+    "queued_at": "2026-07-28T07:45:53.591331"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of volume_breakout_bullish, pivot_r2_breakout, engulfing_bullish mean for a swing trade on PIDILITIND? Current RSI=43, MACD hist=-3.8699, Vol=2.3x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of pivot_s1_bounce, pivot_point_test mean for a swing trade on ABCAPITAL? Current RSI=42, MACD hist=-2.3966, Vol=0.8x average. Signal is BUY.",
+    "context": {
+      "ticker": "ABCAPITAL.NS",
+      "signal": "BUY",
+      "patterns": "pivot_s1_bounce, pivot_point_test",
+      "rsi": 41.5
+    },
+    "queued_at": "2026-07-28T07:45:53.594456"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of pivot_r2_breakout, pivot_r1_breakout, engulfing_bullish mean for a swing trade on PIDILITIND? Current RSI=43, MACD hist=-3.8699, Vol=2.3x average. Signal is BUY.",
     "context": {
       "ticker": "PIDILITIND.NS",
       "signal": "BUY",
-      "patterns": "volume_breakout_bullish, pivot_r2_breakout, engulfing_bullish",
+      "patterns": "pivot_r2_breakout, pivot_r1_breakout, engulfing_bullish",
       "rsi": 42.8
     },
-    "queued_at": "2026-07-28T06:09:23.919013"
+    "queued_at": "2026-07-28T07:45:53.595345"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of full_bullish_alignment, supertrend_bullish, adx_strong_trend_up mean for a swing trade on SIEMENS? Current RSI=63, MACD hist=+20.8865, Vol=0.7x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of pivot_s1_bounce, pivot_point_test, gap_down_reversal mean for a swing trade on SIEMENS? Current RSI=63, MACD hist=+20.8865, Vol=0.7x average. Signal is BUY.",
     "context": {
       "ticker": "SIEMENS.NS",
       "signal": "BUY",
-      "patterns": "full_bullish_alignment, supertrend_bullish, adx_strong_trend_up",
+      "patterns": "pivot_s1_bounce, pivot_point_test, gap_down_reversal",
       "rsi": 62.7
     },
-    "queued_at": "2026-07-28T06:09:23.922354"
+    "queued_at": "2026-07-28T07:45:53.597732"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of tweezer_top, stoch_rsi_overbought_reversal, full_bullish_alignment mean for a swing trade on NHPC? Current RSI=56, MACD hist=-0.0609, Vol=0.5x average. Signal is SELL.",
+    "question": "In Indian NSE markets, what does the combination of tweezer_top, stoch_rsi_overbought_reversal, pivot_s1_breakdown mean for a swing trade on NHPC? Current RSI=56, MACD hist=-0.0609, Vol=0.5x average. Signal is SELL.",
     "context": {
       "ticker": "NHPC.NS",
       "signal": "SELL",
-      "patterns": "tweezer_top, stoch_rsi_overbought_reversal, full_bullish_alignment",
+      "patterns": "tweezer_top, stoch_rsi_overbought_reversal, pivot_s1_breakdown",
       "rsi": 55.9
     },
-    "queued_at": "2026-07-28T06:09:23.924422"
+    "queued_at": "2026-07-28T07:45:53.599134"
   }
 ]

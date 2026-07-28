@@ -1,6 +1,6 @@
 {
   "date": "2026-07-28",
-  "session": "midday",
+  "session": "afternoon",
   "nifty": {
     "symbol": "^NSEI",
     "value": 23995.95,
@@ -62,7 +62,7 @@
   "trade_allowed": true,
   "warnings": [
     "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
-    "Nifty choppy intraday \u2014 wait for cleaner setups"
+    "Nifty in intraday downtrend \u2014 avoid new longs this session"
   ],
   "leading_sectors": [
     "IT"
@@ -73,7 +73,7 @@
     "Bank",
     "Infra"
   ],
-  "intraday_regime": "choppy",
+  "intraday_regime": "trending_down",
   "macro": {
     "date": "2026-07-28",
     "session": "midday",

@@ -1,63 +1,53 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of stoch_rsi_oversold_reversal, morning_star, supertrend_bullish mean for a swing trade on JSWSTEEL? Current RSI=49, MACD hist=+2.5361, Vol=0.7x average. Signal is BUY.",
-    "context": {
-      "ticker": "JSWSTEEL.NS",
-      "signal": "BUY",
-      "patterns": "stoch_rsi_oversold_reversal, morning_star, supertrend_bullish",
-      "rsi": 49.5
-    },
-    "queued_at": "2026-07-29T06:14:33.241166"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of hammer, three_white_soldiers mean for a swing trade on FEDERALBNK? Current RSI=82, MACD hist=+1.3429, Vol=0.9x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of three_white_soldiers, hammer mean for a swing trade on FEDERALBNK? Current RSI=82, MACD hist=+1.3429, Vol=0.9x average. Signal is BUY.",
     "context": {
       "ticker": "FEDERALBNK.NS",
       "signal": "BUY",
-      "patterns": "hammer, three_white_soldiers",
+      "patterns": "three_white_soldiers, hammer",
       "rsi": 81.7
     },
-    "queued_at": "2026-07-29T06:14:33.242790"
+    "queued_at": "2026-07-29T07:45:47.896652"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of pivot_r1_breakout, strong_bullish_marubozu mean for a swing trade on MARICO? Current RSI=70, MACD hist=+1.5799, Vol=1.3x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of strong_bullish_marubozu, pivot_r1_breakout mean for a swing trade on MARICO? Current RSI=70, MACD hist=+1.5799, Vol=1.3x average. Signal is BUY.",
     "context": {
       "ticker": "MARICO.NS",
       "signal": "BUY",
-      "patterns": "pivot_r1_breakout, strong_bullish_marubozu",
+      "patterns": "strong_bullish_marubozu, pivot_r1_breakout",
       "rsi": 69.6
     },
-    "queued_at": "2026-07-29T06:14:33.327397"
+    "queued_at": "2026-07-29T07:45:47.980702"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of pivot_r2_breakout, pivot_r1_breakout, volume_breakout_bullish mean for a swing trade on NESTLEIND? Current RSI=61, MACD hist=+2.0809, Vol=2.5x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of macd_bullish_crossover, volume_breakout_bullish, pivot_r1_breakout mean for a swing trade on NESTLEIND? Current RSI=61, MACD hist=+2.0809, Vol=2.5x average. Signal is BUY.",
     "context": {
       "ticker": "NESTLEIND.NS",
       "signal": "BUY",
-      "patterns": "pivot_r2_breakout, pivot_r1_breakout, volume_breakout_bullish",
+      "patterns": "macd_bullish_crossover, volume_breakout_bullish, pivot_r1_breakout",
       "rsi": 61.3
     },
-    "queued_at": "2026-07-29T06:14:33.331620"
+    "queued_at": "2026-07-29T07:45:47.985278"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of bearish_harami, stoch_rsi_overbought_reversal, rsi_bullish_divergence mean for a swing trade on ICICIBANK? Current RSI=67, MACD hist=-2.8035, Vol=1.5x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of bearish_harami, rsi_bullish_divergence, stoch_rsi_overbought_reversal mean for a swing trade on ICICIBANK? Current RSI=67, MACD hist=-2.8035, Vol=1.5x average. Signal is BUY.",
     "context": {
       "ticker": "ICICIBANK.NS",
       "signal": "BUY",
-      "patterns": "bearish_harami, stoch_rsi_overbought_reversal, rsi_bullish_divergence",
+      "patterns": "bearish_harami, rsi_bullish_divergence, stoch_rsi_overbought_reversal",
       "rsi": 67.4
     },
-    "queued_at": "2026-07-29T06:14:33.334647"
+    "queued_at": "2026-07-29T07:45:47.988567"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of macd_bearish_crossover, pivot_point_test, rsi_bullish_divergence mean for a swing trade on UNIONBANK? Current RSI=67, MACD hist=-0.0236, Vol=0.5x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of rsi_bullish_divergence, pivot_point_test, macd_bearish_crossover mean for a swing trade on UNIONBANK? Current RSI=67, MACD hist=-0.0236, Vol=0.5x average. Signal is BUY.",
     "context": {
       "ticker": "UNIONBANK.NS",
       "signal": "BUY",
-      "patterns": "macd_bearish_crossover, pivot_point_test, rsi_bullish_divergence",
+      "patterns": "rsi_bullish_divergence, pivot_point_test, macd_bearish_crossover",
       "rsi": 66.6
     },
-    "queued_at": "2026-07-29T06:14:33.337581"
+    "queued_at": "2026-07-29T07:45:47.991900"
   },
   {
     "question": "In Indian NSE markets, what does the combination of three_white_soldiers, strong_bullish_marubozu mean for a swing trade on PFC? Current RSI=56, MACD hist=+1.5055, Vol=0.8x average. Signal is BUY.",
@@ -67,36 +57,46 @@
       "patterns": "three_white_soldiers, strong_bullish_marubozu",
       "rsi": 56.4
     },
-    "queued_at": "2026-07-29T06:14:33.338611"
+    "queued_at": "2026-07-29T07:45:47.993143"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of stoch_rsi_overbought_reversal, spinning_top, bb_upper_rejection mean for a swing trade on PIDILITIND? Current RSI=63, MACD hist=+1.2113, Vol=1.1x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of bb_upper_rejection, macd_bullish_crossover, spinning_top mean for a swing trade on PIDILITIND? Current RSI=63, MACD hist=+1.2113, Vol=1.1x average. Signal is BUY.",
     "context": {
       "ticker": "PIDILITIND.NS",
       "signal": "BUY",
-      "patterns": "stoch_rsi_overbought_reversal, spinning_top, bb_upper_rejection",
+      "patterns": "bb_upper_rejection, macd_bullish_crossover, spinning_top",
       "rsi": 63.1
     },
-    "queued_at": "2026-07-29T06:14:33.339266"
+    "queued_at": "2026-07-29T07:45:47.993904"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of stoch_rsi_oversold_reversal, morning_star, supertrend_bullish mean for a swing trade on JSWSTEEL? Current RSI=49, MACD hist=+2.5361, Vol=0.7x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_up, pivot_point_test, full_bullish_alignment mean for a swing trade on SIEMENS? Current RSI=77, MACD hist=+21.5040, Vol=0.8x average. Signal is BUY.",
+    "context": {
+      "ticker": "SIEMENS.NS",
+      "signal": "BUY",
+      "patterns": "adx_strong_trend_up, pivot_point_test, full_bullish_alignment",
+      "rsi": 76.8
+    },
+    "queued_at": "2026-07-29T07:45:47.994652"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of stoch_rsi_oversold_reversal, momentum_continuation, morning_star mean for a swing trade on JSWSTEEL? Current RSI=49, MACD hist=+2.5361, Vol=0.7x average. Signal is BUY.",
     "context": {
       "ticker": "JSWSTEEL.NS",
       "signal": "BUY",
-      "patterns": "stoch_rsi_oversold_reversal, morning_star, supertrend_bullish",
+      "patterns": "stoch_rsi_oversold_reversal, momentum_continuation, morning_star",
       "rsi": 49.5
     },
-    "queued_at": "2026-07-29T06:14:33.340232"
+    "queued_at": "2026-07-29T07:45:47.995381"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of hammer, three_white_soldiers mean for a swing trade on FEDERALBNK? Current RSI=82, MACD hist=+1.3429, Vol=0.9x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of three_white_soldiers, hammer mean for a swing trade on FEDERALBNK? Current RSI=82, MACD hist=+1.3429, Vol=0.9x average. Signal is BUY.",
     "context": {
       "ticker": "FEDERALBNK.NS",
       "signal": "BUY",
-      "patterns": "hammer, three_white_soldiers",
+      "patterns": "three_white_soldiers, hammer",
       "rsi": 81.7
     },
-    "queued_at": "2026-07-29T06:14:33.341834"
+    "queued_at": "2026-07-29T07:45:47.998068"
   }
 ]

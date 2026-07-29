@@ -3,25 +3,25 @@
   "session": "preclose",
   "nifty": {
     "symbol": "^NSEI",
-    "value": 23985.35,
-    "day_change_pct": -0.04,
-    "trend_5d": "sideways",
+    "value": 23995.95,
+    "day_change_pct": 0.53,
+    "trend_5d": "down",
     "trend_20d": "sideways",
-    "ath_pct_60d": -2.22
+    "ath_pct_60d": -2.18
   },
   "vix": {
-    "value": 12.56,
+    "value": 12.66,
     "level": "normal",
-    "percentile_30d": 17.0,
-    "avg_30d": 13.05
+    "percentile_30d": 21.0,
+    "avg_30d": 13.08
   },
   "bank_nifty": {
     "symbol": "^NSEBANK",
-    "value": 56755.6,
-    "day_change_pct": -0.58,
-    "trend_5d": "sideways",
+    "value": 57087.2,
+    "day_change_pct": 0.88,
+    "trend_5d": "down",
     "trend_20d": "down",
-    "ath_pct_60d": -3.32,
+    "ath_pct_60d": -2.76,
     "diverging": false
   },
   "sectors": {
@@ -60,7 +60,9 @@
   },
   "market_mood": "neutral",
   "trade_allowed": true,
-  "warnings": [],
+  "warnings": [
+    "Nifty in downtrend (down) \u2014 only high-confidence BUY signals"
+  ],
   "leading_sectors": [
     "IT",
     "Pharma"
@@ -130,10 +132,10 @@
   "macro_risk_factor": 1.0,
   "fii_dii": {
     "date": "2026-07-29",
-    "fii_net_cr": 755.33,
-    "dii_net_cr": 1664.16,
-    "combined_net_cr": 2419.49,
-    "signal": "inflow",
+    "fii_net_cr": 2981.87,
+    "dii_net_cr": 998.02,
+    "combined_net_cr": 3979.89,
+    "signal": "strong_inflow",
     "ok": true,
     "error": "",
     "history": [
@@ -295,12 +297,13 @@
       },
       {
         "date": "2026-07-29",
-        "fii": 755.33,
-        "dii": 1664.16,
-        "combined": 2419.49
+        "fii": 2981.87,
+        "dii": 998.02,
+        "combined": 3979.89
       }
     ]
   },
+  "flow_tailwind": true,
   "pcr": {
     "date": "2026-07-29",
     "pcr": 1.171,

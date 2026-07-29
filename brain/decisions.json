@@ -12997,5 +12997,180 @@
       "near_52w_high",
       "doji"
     ]
+  },
+  {
+    "timestamp": "2026-07-29T06:14:33.235125",
+    "date": "2026-07-29",
+    "ticker": "MARICO.NS",
+    "session": "midday",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 95,
+    "entry": 878.8,
+    "stop_loss": 853.44,
+    "target": 929.51,
+    "reason": "paper midday",
+    "patterns": [
+      "full_bullish_alignment",
+      "adx_strong_trend_up",
+      "pivot_r1_breakout",
+      "supertrend_bullish",
+      "near_52w_high",
+      "bb_upper_rejection",
+      "strong_bullish_marubozu"
+    ]
+  },
+  {
+    "timestamp": "2026-07-29T06:14:33.236962",
+    "date": "2026-07-29",
+    "ticker": "NESTLEIND.NS",
+    "session": "midday",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 95,
+    "entry": 1503.8,
+    "stop_loss": 1451.45,
+    "target": 1608.51,
+    "reason": "paper midday",
+    "patterns": [
+      "full_bullish_alignment",
+      "pivot_r2_breakout",
+      "pivot_r1_breakout",
+      "supertrend_bullish",
+      "near_52w_high",
+      "bb_upper_rejection",
+      "volume_breakout_bullish",
+      "macd_bullish_crossover"
+    ]
+  },
+  {
+    "timestamp": "2026-07-29T06:14:33.237993",
+    "date": "2026-07-29",
+    "ticker": "ICICIBANK.NS",
+    "session": "midday",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 95,
+    "entry": 1439.5,
+    "stop_loss": 1401.65,
+    "target": 1515.21,
+    "reason": "paper midday",
+    "patterns": [
+      "full_bullish_alignment",
+      "bearish_harami",
+      "pivot_s1_breakdown",
+      "adx_strong_trend_up",
+      "stoch_rsi_overbought_reversal",
+      "pivot_point_test",
+      "rsi_bullish_divergence"
+    ]
+  },
+  {
+    "timestamp": "2026-07-29T06:14:33.238709",
+    "date": "2026-07-29",
+    "ticker": "UNIONBANK.NS",
+    "session": "midday",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 85.1,
+    "entry": 170.75,
+    "stop_loss": 161.95,
+    "target": 188.36,
+    "reason": "paper midday",
+    "patterns": [
+      "macd_bearish_crossover",
+      "full_bullish_alignment",
+      "supertrend_bullish",
+      "pivot_point_test",
+      "adx_ranging_market",
+      "rsi_bullish_divergence",
+      "bullish_harami"
+    ]
+  },
+  {
+    "timestamp": "2026-07-29T06:14:33.239745",
+    "date": "2026-07-29",
+    "ticker": "PFC.NS",
+    "session": "midday",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 60.1,
+    "entry": 425.05,
+    "stop_loss": 412.21,
+    "target": 450.72,
+    "reason": "paper midday",
+    "patterns": [
+      "full_bearish_alignment",
+      "supertrend_bullish",
+      "adx_ranging_market",
+      "three_white_soldiers",
+      "strong_bullish_marubozu"
+    ]
+  },
+  {
+    "timestamp": "2026-07-29T06:14:33.240370",
+    "date": "2026-07-29",
+    "ticker": "PIDILITIND.NS",
+    "session": "midday",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 76.7,
+    "entry": 1609.1,
+    "stop_loss": 1554.09,
+    "target": 1719.12,
+    "reason": "paper midday",
+    "patterns": [
+      "full_bullish_alignment",
+      "adx_strong_trend_up",
+      "stoch_rsi_overbought_reversal",
+      "spinning_top",
+      "near_52w_high",
+      "pivot_point_test",
+      "bb_upper_rejection",
+      "macd_bullish_crossover"
+    ]
+  },
+  {
+    "timestamp": "2026-07-29T06:14:33.241341",
+    "date": "2026-07-29",
+    "ticker": "JSWSTEEL.NS",
+    "session": "midday",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 68.8,
+    "entry": 1275.9,
+    "stop_loss": 1238.56,
+    "target": 1350.58,
+    "reason": "paper midday",
+    "patterns": [
+      "stoch_rsi_oversold_reversal",
+      "morning_star",
+      "supertrend_bullish",
+      "adx_ranging_market",
+      "momentum_continuation"
+    ]
+  },
+  {
+    "timestamp": "2026-07-29T06:14:33.242971",
+    "date": "2026-07-29",
+    "ticker": "FEDERALBNK.NS",
+    "session": "midday",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 95,
+    "entry": 359.25,
+    "stop_loss": 348.07,
+    "target": 381.61,
+    "reason": "paper midday",
+    "patterns": [
+      "full_bullish_alignment",
+      "doji",
+      "adx_strong_trend_up",
+      "spinning_top",
+      "supertrend_bullish",
+      "near_52w_high",
+      "hammer",
+      "three_white_soldiers"
+    ]
   }
 ]

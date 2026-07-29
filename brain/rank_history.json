@@ -5513,22 +5513,22 @@
     "date": "2026-07-29",
     "ranked": [
       {
-        "ticker": "PFC.NS",
-        "rank": 1,
-        "composite_score": 66.41,
-        "success_probability": 0.588
-      },
-      {
         "ticker": "LICI.NS",
-        "rank": 2,
+        "rank": 1,
         "composite_score": 65.62,
         "success_probability": 0.572
       },
       {
         "ticker": "POWERGRID.NS",
-        "rank": 3,
+        "rank": 2,
         "composite_score": 62.83,
         "success_probability": 0.568
+      },
+      {
+        "ticker": "PFC.NS",
+        "rank": 3,
+        "composite_score": 59.29,
+        "success_probability": 0.538
       },
       {
         "ticker": "JSWSTEEL.NS",

@@ -2658,5 +2658,65 @@
     "ts": "2026-07-29T03:05:49.564665",
     "detail": "Rank \u25b21 (#4 \u2192 #3)",
     "confidence": 65.4
+  },
+  {
+    "type": "removed",
+    "ticker": "PIDILITIND.NS",
+    "nse_code": "PIDILITIND",
+    "signal": "BUY",
+    "date": "2026-07-29",
+    "ts": "2026-07-29T04:05:58.417207",
+    "detail": "Dropped \u2014 no longer meets threshold (was 75/100)",
+    "confidence": 0
+  },
+  {
+    "type": "removed",
+    "ticker": "LICI.NS",
+    "nse_code": "LICI",
+    "signal": "BUY",
+    "date": "2026-07-29",
+    "ts": "2026-07-29T04:05:58.417207",
+    "detail": "Dropped \u2014 no longer meets threshold (was 65/100)",
+    "confidence": 0
+  },
+  {
+    "type": "updated",
+    "ticker": "NESTLEIND.NS",
+    "nse_code": "NESTLEIND",
+    "signal": "BUY",
+    "date": "2026-07-29",
+    "ts": "2026-07-29T04:05:58.417207",
+    "detail": "Rank \u25b24 (#15 \u2192 #11) | Stop loss moved \u20b91441.90 \u2192 \u20b91455.95 | Target 1 moved \u20b91591.60 \u2192 \u20b91613.00",
+    "confidence": 78.6
+  },
+  {
+    "type": "updated",
+    "ticker": "FEDERALBNK.NS",
+    "nse_code": "FEDERALBNK",
+    "signal": "BUY",
+    "date": "2026-07-29",
+    "ts": "2026-07-29T04:05:58.417207",
+    "detail": "Rank \u25bc1 (#14 \u2192 #15)",
+    "confidence": 70.6
+  },
+  {
+    "type": "updated",
+    "ticker": "MARICO.NS",
+    "nse_code": "MARICO",
+    "signal": "BUY",
+    "date": "2026-07-29",
+    "ts": "2026-07-29T04:05:58.417207",
+    "detail": "Rank \u25bc4 (#10 \u2192 #14) | Stop loss moved \u20b9859.35 \u2192 \u20b9853.16",
+    "confidence": 68.3
+  },
+  {
+    "type": "updated",
+    "ticker": "ICICIBANK.NS",
+    "nse_code": "ICICIBANK",
+    "signal": "BUY",
+    "date": "2026-07-29",
+    "ts": "2026-07-29T04:05:58.417207",
+    "detail": "Rank \u25bc5 (#5 \u2192 #10)",
+    "confidence": 67.1
   }
 ]

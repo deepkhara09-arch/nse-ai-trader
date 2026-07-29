@@ -2768,5 +2768,55 @@
     "ts": "2026-07-29T09:45:47.968939",
     "detail": "Target 1 moved \u20b9378.77 \u2192 \u20b9381.91",
     "confidence": 69.2
+  },
+  {
+    "type": "removed",
+    "ticker": "FEDERALBNK.NS",
+    "nse_code": "FEDERALBNK",
+    "signal": "BUY",
+    "date": "2026-07-29",
+    "ts": "2026-07-29T10:12:14.923373",
+    "detail": "Dropped \u2014 no longer meets threshold (was 69/100)",
+    "confidence": 0
+  },
+  {
+    "type": "updated",
+    "ticker": "NESTLEIND.NS",
+    "nse_code": "NESTLEIND",
+    "signal": "BUY",
+    "date": "2026-07-29",
+    "ts": "2026-07-29T10:12:14.923373",
+    "detail": "Confidence \u25b24 (79 \u2192 83)",
+    "confidence": 82.7
+  },
+  {
+    "type": "updated",
+    "ticker": "MARICO.NS",
+    "nse_code": "MARICO",
+    "signal": "BUY",
+    "date": "2026-07-29",
+    "ts": "2026-07-29T10:12:14.923373",
+    "detail": "Confidence \u25b27 (68 \u2192 76) | Rank \u25bc1 (#14 \u2192 #15)",
+    "confidence": 75.7
+  },
+  {
+    "type": "updated",
+    "ticker": "PIDILITIND.NS",
+    "nse_code": "PIDILITIND",
+    "signal": "BUY",
+    "date": "2026-07-29",
+    "ts": "2026-07-29T10:12:14.923373",
+    "detail": "Confidence \u25b26 (66 \u2192 72) | Rank \u25b24 (#9 \u2192 #5)",
+    "confidence": 71.7
+  },
+  {
+    "type": "updated",
+    "ticker": "ICICIBANK.NS",
+    "nse_code": "ICICIBANK",
+    "signal": "BUY",
+    "date": "2026-07-29",
+    "ts": "2026-07-29T10:12:14.923373",
+    "detail": "Rank \u25b22 (#10 \u2192 #8)",
+    "confidence": 69.6
   }
 ]

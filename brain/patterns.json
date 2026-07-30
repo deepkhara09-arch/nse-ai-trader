@@ -98,10 +98,59 @@
     "atr_multiplier": 1.5,
     "last_updated": "2026-07-30",
     "attribution": {
-      "by_pattern": {},
-      "by_session": {},
-      "by_mood": {},
-      "by_style": {}
+      "by_pattern": {
+        "supertrend_bullish": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "full_bullish_alignment": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "pivot_r1_breakout": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "volume_breakout_bullish": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "three_white_soldiers": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "momentum_continuation": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        }
+      },
+      "by_session": {
+        "morning": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        }
+      },
+      "by_mood": {
+        "neutral": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        }
+      },
+      "by_style": {
+        "swing": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        }
+      }
     }
   },
   "KOTAKBANK.NS": {
@@ -356,10 +405,54 @@
     "atr_multiplier": 1.5,
     "last_updated": "2026-07-30",
     "attribution": {
-      "by_pattern": {},
-      "by_session": {},
-      "by_mood": {},
-      "by_style": {}
+      "by_pattern": {
+        "adx_ranging_market": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "full_bullish_alignment": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "supertrend_bullish": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "pivot_r1_breakout": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "stoch_rsi_oversold_reversal": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        }
+      },
+      "by_session": {
+        "morning": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        }
+      },
+      "by_mood": {
+        "neutral": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        }
+      },
+      "by_style": {
+        "swing": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        }
+      }
     }
   },
   "GAIL.NS": {

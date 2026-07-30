@@ -3338,5 +3338,25 @@
     "open": 5,
     "recs": 3,
     "summary": "Intraday square-off (3:15) \u00b7 Paper-trading trading-day 11 \u00b7 5 open \u00b7 7 closed (43% WR)."
+  },
+  {
+    "date": "2026-07-30",
+    "triggered_at": "2026-07-30 15:42 IST",
+    "session": "preclose",
+    "phase": "paper_trading",
+    "day": 29,
+    "stats": {
+      "total": 7,
+      "wins": 3,
+      "losses": 4,
+      "win_rate": 0.429,
+      "total_pnl": 49.04,
+      "avg_win": 222.01,
+      "avg_loss": -154.25,
+      "expectancy": 7.01
+    },
+    "open": 5,
+    "recs": 3,
+    "summary": "Preclose run \u00b7 Paper-trading trading-day 12 \u00b7 5 open \u00b7 7 closed (43% WR) \u00b7 3 live rec(s)."
   }
 ]

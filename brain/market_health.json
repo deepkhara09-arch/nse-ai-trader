@@ -1,6 +1,6 @@
 {
   "date": "2026-07-30",
-  "session": "intraday_close",
+  "session": "preclose",
   "nifty": {
     "symbol": "^NSEI",
     "value": 24250.2,
@@ -310,13 +310,13 @@
   "flow_tailwind": true,
   "pcr": {
     "date": "2026-07-30",
-    "pcr": 1.167,
+    "pcr": 1.294,
     "reading": "bullish_bias",
-    "total_pe_oi": 1796644,
-    "total_ce_oi": 1539534,
-    "spot": 24250.2,
-    "max_pain": 24200.0,
-    "max_pain_dist_pct": 0.21,
+    "total_pe_oi": 2249116,
+    "total_ce_oi": 1737933,
+    "spot": 24317.15,
+    "max_pain": 24250.0,
+    "max_pain_dist_pct": 0.28,
     "oi_bias": "put_heavy_support",
     "ok": true,
     "error": ""

@@ -407,13 +407,38 @@ def _resolve_hit_order(pos: dict, target: float, stop_loss: float, data: dict):
     return target, "target_hit"
 
 
+def _reanalysis_reversal(pos: dict, entry_full: dict, patterns_db: Dict) -> bool:
+    """Re-analyse an open position and return True only if the tool's CURRENT view
+    has genuinely FLIPPED against it with conviction — the signal that a trade's
+    thesis is broken even though price hasn't reached the stop yet.
+
+    Deliberately conservative: a mild wobble must NOT dump a swing trade (that
+    over-trades and hurts win-rate). We require the opposite signal AND a clear
+    confidence, so a position at a small loss whose view still supports it is HELD.
+    """
+    try:
+        from agent.brain import analyse_stock, load_patterns
+        if not entry_full or "latest" not in entry_full:
+            return False
+        op = analyse_stock(pos["ticker"], entry_full, patterns_db or load_patterns(), {}, "manage")
+        sig  = op.get("signal")
+        conf = op.get("confidence", 0)
+        if pos["action"] == "BUY":
+            return sig == "SELL" and conf >= 65      # was long, now a confident SELL
+        else:
+            return sig == "BUY" and conf >= 65       # was short, now a confident BUY
+    except Exception:
+        return False
+
+
 def _check_exits(book: dict, stock_data: Dict, session: str, patterns_db: Dict):
     still_open = []
     today = ist_today().isoformat()
 
     for pos in book["open_positions"]:
         ticker  = pos["ticker"]
-        data    = stock_data.get(ticker, {}).get("latest", {})
+        entry_full = stock_data.get(ticker, {})
+        data    = entry_full.get("latest", {})
         current = data.get("current_price") or data.get("close", pos["entry"])
         # Prefer live intraday day_high/day_low (populated by NSE quote API).
         # Fall back to daily bar high/low (yesterday's completed bar) if market closed.
@@ -474,6 +499,21 @@ def _check_exits(book: dict, stock_data: Dict, session: str, patterns_db: Dict):
         max_held  = pos.get("max_held_days", 10)
         expired   = open_days >= max_held
 
+        # ── Re-analysis early exit: the thesis broke before the stop ───────────
+        # Each session, re-check the tool's CURRENT view. If it has flipped
+        # against the position with conviction, exit now rather than riding it all
+        # the way down to the stop. This is the "should I still be in this trade?"
+        # decision a good trader makes daily. Conservative by design (needs the
+        # opposite signal + confidence), so a small loss whose view still holds is
+        # HELD — only a genuinely broken setup is cut. Not applied on day 1 (give
+        # the entry room) or once T1 is booked (the runner is already de-risked).
+        reversed_out = False
+        if not hit_target and not hit_stop and open_days >= 1 and not pos.get("t1_booked"):
+            if _reanalysis_reversal(pos, entry_full, patterns_db):
+                reversed_out = True
+                print(f"[paper] {ticker}: view flipped against the trade on day {open_days} "
+                      f"(no stop/target hit) — exiting early on reversal")
+
         # ── Time-exit grace: don't dump a winner that's about to reach target ──
         # A blunt day-N force-close can exit a position at, say, +2.5% when it's
         # 90% of the way to its target and still climbing. If it's expiring but
@@ -492,7 +532,7 @@ def _check_exits(book: dict, stock_data: Dict, session: str, patterns_db: Dict):
                       f"granting 3-day grace instead of time-exit")
                 expired = False
 
-        if hit_target or hit_stop or expired:
+        if hit_target or hit_stop or expired or reversed_out:
             if hit_target and hit_stop:
                 # Both levels touched in the same session.
                 # Use the 5-min candle sequence to find which bar first breached each level.
@@ -505,6 +545,9 @@ def _check_exits(book: dict, stock_data: Dict, session: str, patterns_db: Dict):
             elif hit_stop:
                 exit_price = stop_loss_
                 exit_reason = "stop_hit"
+            elif reversed_out:
+                exit_price = current
+                exit_reason = "reversal_exit"
             else:
                 exit_price = current
                 exit_reason = "time_exit"

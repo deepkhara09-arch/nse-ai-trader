@@ -1,27 +1,27 @@
 {
-  "date": "2026-07-29",
-  "session": "preclose",
+  "date": "2026-07-30",
+  "session": "preopen",
   "nifty": {
     "symbol": "^NSEI",
-    "value": 23995.95,
-    "day_change_pct": 0.53,
-    "trend_5d": "down",
+    "value": 24250.2,
+    "day_change_pct": 1.1,
+    "trend_5d": "up",
     "trend_20d": "sideways",
-    "ath_pct_60d": -2.18
+    "ath_pct_60d": -1.14
   },
   "vix": {
-    "value": 12.66,
+    "value": 12.01,
     "level": "normal",
-    "percentile_30d": 21.0,
-    "avg_30d": 13.08
+    "percentile_30d": 10.0,
+    "avg_30d": 13.01
   },
   "bank_nifty": {
     "symbol": "^NSEBANK",
-    "value": 57087.2,
-    "day_change_pct": 0.88,
-    "trend_5d": "down",
+    "value": 57205.9,
+    "day_change_pct": 0.79,
+    "trend_5d": "up",
     "trend_20d": "down",
-    "ath_pct_60d": -2.76,
+    "ath_pct_60d": -2.56,
     "diverging": false
   },
   "sectors": {
@@ -35,11 +35,11 @@
     },
     "Pharma": {
       "symbol": "PHARMABEES.NS",
-      "value": 26.73,
-      "day_change_pct": 0.04,
+      "value": 27.08,
+      "day_change_pct": 1.31,
       "trend_5d": "up",
       "trend_20d": "strong_up",
-      "ath_pct_60d": -1.91
+      "ath_pct_60d": -0.62
     },
     "Bank": {
       "symbol": "BANKBEES.NS",
@@ -58,11 +58,9 @@
       "ath_pct_60d": -3.37
     }
   },
-  "market_mood": "neutral",
+  "market_mood": "bullish",
   "trade_allowed": true,
-  "warnings": [
-    "Nifty in downtrend (down) \u2014 only high-confidence BUY signals"
-  ],
+  "warnings": [],
   "leading_sectors": [
     "IT",
     "Pharma"
@@ -72,66 +70,64 @@
   "lagging_sectors": [],
   "intraday_regime": "mixed",
   "macro": {
-    "date": "2026-07-29",
-    "session": "midday",
-    "generated_at": "2026-07-29T07:18:43.098806",
-    "global_score": -0.058,
-    "india_score": 0.0,
-    "overall_score": -0.032,
+    "date": "2026-07-30",
+    "session": "preopen",
+    "generated_at": "2026-07-30T03:05:54.330272",
+    "global_score": -0.065,
+    "india_score": 0.5,
+    "overall_score": 0.189,
     "mood": "neutral",
     "drivers": [
-      "Saudi Arabia has a new, and pricier, workaround to export its oil",
-      "Seagate\u2019s earnings are welcome news for the battered AI trade",
-      "Ford matches GM in one crucial way, and the stock jumps",
-      "Bloom Energy sees sales top $1 billion as AI proves a validation moment for fuel-cell technology",
-      "Medicare is about to change a drug program that held down the cost of premiums. Here\u2019s what to know.",
-      "Micron\u2019s stock sinks toward worst monthly drop in 11 years as China fears escalate",
-      "Leveraged ETFs tied to SK Hynix are getting hammered as chip wreck deepens",
-      "The Fed isn\u2019t your biggest worry. The central-bank decision that actually impacts your 401(k) lands in Tokyo."
+      "Ford\u2019s big-truck bet is paying off \u2014 and Wall Street is taking notice",
+      "Why SoFi\u2019s stock drops, even after its earnings beat expectations",
+      "Qualcomm\u2019s stock falls as memory woes weigh on earnings",
+      "Starbucks is becoming cool again. Here\u2019s how it pulled off its turnaround.",
+      "Robinhood puts up record revenue as volatility drives a trading bonanza",
+      "Chipotle lifts its sales forecast even as a lettuce-linked outbreak slows foot traffic",
+      "\u2018I\u2019m in my peak earning years\u2019: I\u2019m working beyond 70. Will that help increase my Social Security?",
+      "Why the USO oil ETF is a better buy than crude futures as the Iran war rages"
     ],
     "global_cues": {
       "dow": {
-        "last": 52747.32,
-        "chg_pct": 1.03
+        "last": 51594.14,
+        "chg_pct": -2.19
       },
       "nasdaq": {
-        "last": 24876.91,
-        "chg_pct": -0.22
+        "last": 24442.94,
+        "chg_pct": -1.74
       },
       "sp500": {
-        "last": 7428.78,
-        "chg_pct": 0.21
+        "last": 7316.15,
+        "chg_pct": -1.52
       },
       "nikkei": {
-        "last": 61434.19,
-        "chg_pct": -1.49
+        "last": 62218.41,
+        "chg_pct": 1.28
       },
       "crude": {
-        "last": 79.26,
-        "chg_pct": -4.06
+        "last": 83.31,
+        "chg_pct": -1.36
       },
       "usdinr": {
-        "last": 95.63,
-        "chg_pct": -0.15
+        "last": 95.64,
+        "chg_pct": 0.04
       },
       "gold": {
-        "last": 4036.3,
-        "chg_pct": -0.94
+        "last": 4128.4,
+        "chg_pct": 2.32
       }
     },
-    "summary": "Overall macro mood is neutral (-0.03). US Dow +1.0% overnight. Crude -4.1%. USD/INR -0.1%. Notable: Crude oil spike; Geopolitical conflict / war; Strong US markets overnight; Tariffs / trade war.",
+    "summary": "Overall macro mood is neutral (+0.19). US Dow -2.2% overnight. Crude -1.4%. USD/INR +0.0%. Notable: Crude oil spike; Geopolitical conflict / war.",
     "playbook": [
       "India imports most of its oil \u2014 crude spikes hurt rupee, inflation, OMCs.",
-      "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
-      "Strong US close usually gives Nifty a positive opening cue via SGX/GIFT.",
-      "Trade-war headlines spook global markets; IT & export names react most."
+      "Geopolitical shocks trigger global risk-off; gold up, equities down initially."
     ],
     "playbook_bias": "risk_off",
     "article_count": 60
   },
   "macro_risk_factor": 1.0,
   "fii_dii": {
-    "date": "2026-07-29",
+    "date": "2026-07-30",
     "fii_net_cr": 2981.87,
     "dii_net_cr": 998.02,
     "combined_net_cr": 3979.89,
@@ -300,16 +296,22 @@
         "fii": 2981.87,
         "dii": 998.02,
         "combined": 3979.89
+      },
+      {
+        "date": "2026-07-30",
+        "fii": 2981.87,
+        "dii": 998.02,
+        "combined": 3979.89
       }
     ]
   },
   "flow_tailwind": true,
   "pcr": {
-    "date": "2026-07-29",
-    "pcr": 1.171,
+    "date": "2026-07-30",
+    "pcr": 1.167,
     "reading": "bullish_bias",
-    "total_pe_oi": 1821281,
-    "total_ce_oi": 1554742,
+    "total_pe_oi": 1796644,
+    "total_ce_oi": 1539534,
     "spot": 24250.2,
     "max_pain": 24200.0,
     "max_pain_dist_pct": 0.21,

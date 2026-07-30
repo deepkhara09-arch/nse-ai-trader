@@ -1,6 +1,6 @@
 {
   "date": "2026-07-30",
-  "session": "morning",
+  "session": "midday",
   "nifty": {
     "symbol": "^NSEI",
     "value": 24250.2,
@@ -27,11 +27,11 @@
   "sectors": {
     "IT": {
       "symbol": "ITBEES.NS",
-      "value": 33.77,
-      "day_change_pct": 3.27,
+      "value": 34.54,
+      "day_change_pct": 2.28,
       "trend_5d": "strong_up",
       "trend_20d": "strong_up",
-      "ath_pct_60d": -2.54
+      "ath_pct_60d": -0.75
     },
     "Pharma": {
       "symbol": "PHARMABEES.NS",
@@ -43,19 +43,19 @@
     },
     "Bank": {
       "symbol": "BANKBEES.NS",
-      "value": 587.54,
-      "day_change_pct": -0.66,
-      "trend_5d": "sideways",
+      "value": 591.74,
+      "day_change_pct": 0.71,
+      "trend_5d": "up",
       "trend_20d": "down",
-      "ath_pct_60d": -6.43
+      "ath_pct_60d": -5.76
     },
     "Infra": {
       "symbol": "INFRABEES.NS",
-      "value": 960.01,
-      "day_change_pct": -0.35,
+      "value": 964.86,
+      "day_change_pct": 0.51,
       "trend_5d": "sideways",
       "trend_20d": "down",
-      "ath_pct_60d": -3.37
+      "ath_pct_60d": -2.88
     }
   },
   "market_mood": "neutral",
@@ -65,19 +65,21 @@
   ],
   "leading_sectors": [
     "IT",
-    "Pharma"
+    "Pharma",
+    "Bank"
   ],
   "market_regime": "normal",
-  "sector_breadth": 0.5,
+  "sector_breadth": 0.75,
   "lagging_sectors": [],
+  "broad_market_strength": true,
   "intraday_regime": "choppy",
   "macro": {
     "date": "2026-07-30",
-    "session": "preopen",
-    "generated_at": "2026-07-30T03:05:54.330272",
-    "global_score": -0.065,
+    "session": "midday",
+    "generated_at": "2026-07-30T06:07:15.432821",
+    "global_score": -0.158,
     "india_score": 0.5,
-    "overall_score": 0.189,
+    "overall_score": 0.138,
     "mood": "neutral",
     "drivers": [
       "Ford\u2019s big-truck bet is paying off \u2014 and Wall Street is taking notice",
@@ -103,23 +105,23 @@
         "chg_pct": -1.52
       },
       "nikkei": {
-        "last": 62218.41,
-        "chg_pct": 1.28
+        "last": 62056.78,
+        "chg_pct": 1.01
       },
       "crude": {
-        "last": 83.31,
-        "chg_pct": -1.36
+        "last": 84.46,
+        "chg_pct": 6.56
       },
       "usdinr": {
-        "last": 95.64,
-        "chg_pct": 0.04
+        "last": 95.74,
+        "chg_pct": 0.15
       },
       "gold": {
-        "last": 4128.4,
-        "chg_pct": 2.32
+        "last": 4034.7,
+        "chg_pct": -0.04
       }
     },
-    "summary": "Overall macro mood is neutral (+0.19). US Dow -2.2% overnight. Crude -1.4%. USD/INR +0.0%. Notable: Crude oil spike; Geopolitical conflict / war.",
+    "summary": "Overall macro mood is neutral (+0.14). US Dow -2.2% overnight. Crude +6.6%. USD/INR +0.1%. Notable: Crude oil spike; Geopolitical conflict / war.",
     "playbook": [
       "India imports most of its oil \u2014 crude spikes hurt rupee, inflation, OMCs.",
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially."

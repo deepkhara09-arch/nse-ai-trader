@@ -197,6 +197,15 @@ BUY_SIGNAL_MIN_SCORE   = 5         # out of ~10 possible points
 SELL_SIGNAL_MIN_SCORE  = 5
 SIGNAL_SCORE_GAP       = 2         # buy and sell scores must differ by at least this
 
+# ── Re-analysis early-exit (thesis-break) — HIGH-STAKES, so CONFIRMED not hasty ─
+# An open position is cut early ONLY when the tool has leaned against it across
+# MULTIPLE sessions, not on a single flip (which is usually noise/whipsaw). This
+# mirrors a disciplined trader waiting for confirmation before abandoning a plan.
+REVERSAL_CONF_MIN       = 70   # the opposite signal must be this confident to count
+REVERSAL_CONFIRM_COUNT  = 3    # need this many opposing sessions in the window…
+REVERSAL_WINDOW         = 4    # …out of the last this-many re-analyses
+REVERSAL_MIN_HELD_DAYS  = 2    # never reverse-exit in the first N days (entry room)
+
 # ── News RSS feeds ────────────────────────────────────────────────────────────
 NEWS_FEEDS = [
     "https://www.moneycontrol.com/rss/latestnews.xml",

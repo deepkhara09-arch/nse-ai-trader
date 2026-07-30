@@ -408,25 +408,71 @@ def _resolve_hit_order(pos: dict, target: float, stop_loss: float, data: dict):
 
 
 def _reanalysis_reversal(pos: dict, entry_full: dict, patterns_db: Dict) -> bool:
-    """Re-analyse an open position and return True only if the tool's CURRENT view
-    has genuinely FLIPPED against it with conviction — the signal that a trade's
-    thesis is broken even though price hasn't reached the stop yet.
+    """Decide whether to cut an open position EARLY because its thesis has broken.
 
-    Deliberately conservative: a mild wobble must NOT dump a swing trade (that
-    over-trades and hurts win-rate). We require the opposite signal AND a clear
-    confidence, so a position at a small loss whose view still supports it is HELD.
+    This is high-stakes — a wrong call here sells a winner or holds a loser — so
+    it is CONFIRMATION-BASED, never a single-session reaction:
+
+      • Each re-analysis records the current view against the position in a small
+        rolling history on the position (opposing / neutral / supporting).
+      • We only exit when the tool has produced a CONFIDENT opposing signal in at
+        least REVERSAL_CONFIRM_COUNT of the last REVERSAL_WINDOW sessions — i.e.
+        the reversal is SUSTAINED, not a one-bar wobble or a data glitch.
+      • A single strong-favourable reading RESETS the counter (the thesis
+        re-confirmed), so we never cut a trade the tool still believes in.
+      • Requires REVERSAL_CONF_MIN (higher than the entry bar) and the position to
+        be past its first REVERSAL_MIN_HELD_DAYS.
+
+    Stores 'view_hist' (last REVERSAL_WINDOW of -1 oppose / 0 neutral / +1 favour)
+    on the position so the decision is transparent and auditable.
     """
     try:
+        from agent.config import (REVERSAL_CONF_MIN, REVERSAL_CONFIRM_COUNT,
+                                   REVERSAL_WINDOW, REVERSAL_MIN_HELD_DAYS)
         from agent.brain import analyse_stock, load_patterns
+        from datetime import date as _date
+
         if not entry_full or "latest" not in entry_full:
             return False
-        op = analyse_stock(pos["ticker"], entry_full, patterns_db or load_patterns(), {}, "manage")
+        # Only score a live, sane bar — a stale/None price must not create a fake
+        # reversal (a data gap would otherwise look bearish).
+        lat = entry_full["latest"]
+        if not lat.get("price_is_live", True) or not (lat.get("close") or lat.get("current_price")):
+            return False
+
+        op   = analyse_stock(pos["ticker"], entry_full, patterns_db or load_patterns(), {}, "manage")
         sig  = op.get("signal")
         conf = op.get("confidence", 0)
-        if pos["action"] == "BUY":
-            return sig == "SELL" and conf >= 65      # was long, now a confident SELL
+        is_buy = pos["action"] == "BUY"
+        opp_sig = "SELL" if is_buy else "BUY"
+        fav_sig = "BUY"  if is_buy else "SELL"
+
+        # Classify this session's read vs the position.
+        if sig == opp_sig and conf >= REVERSAL_CONF_MIN:
+            vote = -1   # confident opposing
+        elif sig == fav_sig and conf >= REVERSAL_CONF_MIN:
+            vote = +1   # confident supporting — thesis re-confirmed
         else:
-            return sig == "BUY" and conf >= 65       # was short, now a confident BUY
+            vote = 0    # WATCH / weak / low-confidence — no evidence either way
+
+        hist = list(pos.get("view_hist", []))[-(REVERSAL_WINDOW - 1):] + [vote]
+        pos["view_hist"] = hist
+
+        # A recent confident RE-CONFIRMATION cancels any reversal case.
+        if vote == +1:
+            return False
+
+        # Confirmed reversal: enough opposing sessions in the window, past the
+        # grace days, and today's read isn't supportive.
+        try:
+            held = _days_between(pos.get("open_date", ""),
+                                 _date.today().isoformat())
+        except Exception:
+            held = REVERSAL_MIN_HELD_DAYS
+        opposing = sum(1 for v in hist if v == -1)
+        return (held >= REVERSAL_MIN_HELD_DAYS
+                and opposing >= REVERSAL_CONFIRM_COUNT
+                and vote != +1)
     except Exception:
         return False
 
@@ -500,19 +546,19 @@ def _check_exits(book: dict, stock_data: Dict, session: str, patterns_db: Dict):
         expired   = open_days >= max_held
 
         # ── Re-analysis early exit: the thesis broke before the stop ───────────
-        # Each session, re-check the tool's CURRENT view. If it has flipped
-        # against the position with conviction, exit now rather than riding it all
-        # the way down to the stop. This is the "should I still be in this trade?"
-        # decision a good trader makes daily. Conservative by design (needs the
-        # opposite signal + confidence), so a small loss whose view still holds is
-        # HELD — only a genuinely broken setup is cut. Not applied on day 1 (give
-        # the entry room) or once T1 is booked (the runner is already de-risked).
+        # Runs EVERY session to build the rolling view-history, but only EXITS on a
+        # CONFIRMED, sustained reversal (see _reanalysis_reversal) — never a single
+        # session's flip. Skipped once T1 is booked (runner already de-risked).
+        # This is the "should I still be in this trade?" call a good trader makes,
+        # done with confirmation so it can't whipsaw the book.
         reversed_out = False
-        if not hit_target and not hit_stop and open_days >= 1 and not pos.get("t1_booked"):
+        if not hit_target and not hit_stop and not pos.get("t1_booked"):
             if _reanalysis_reversal(pos, entry_full, patterns_db):
                 reversed_out = True
-                print(f"[paper] {ticker}: view flipped against the trade on day {open_days} "
-                      f"(no stop/target hit) — exiting early on reversal")
+                n_opp = sum(1 for v in pos.get("view_hist", []) if v == -1)
+                print(f"[paper] {ticker}: CONFIRMED reversal — tool leaned against this trade "
+                      f"{n_opp} of last {len(pos.get('view_hist', []))} sessions (no stop/target hit) "
+                      f"— exiting early on day {open_days}")
 
         # ── Time-exit grace: don't dump a winner that's about to reach target ──
         # A blunt day-N force-close can exit a position at, say, +2.5% when it's

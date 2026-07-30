@@ -37,8 +37,8 @@
         "\u26a0 Recent forward-tested call accuracy only 15% (last 20 scored) \u2014 raising the conviction bar",
         "RSI=63 elevated"
       ],
-      "current_price": 885.75,
-      "unrealized_pnl": 284.55,
+      "current_price": 886.1,
+      "unrealized_pnl": 287.0,
       "max_held_days": 13,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -86,8 +86,8 @@
         "Broke below Pivot S1 support \u2014 bearish",
         "StochRSI overbought with bearish candle \u2014 reversal"
       ],
-      "current_price": 3626.3,
-      "unrealized_pnl": -29.7,
+      "current_price": 3653.2,
+      "unrealized_pnl": -2.8,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -95,7 +95,10 @@
         "vix": 13.29,
         "mood": "neutral",
         "regime": "mixed"
-      }
+      },
+      "view_hist": [
+        0
+      ]
     },
     {
       "ticker": "PIDILITIND.NS",
@@ -132,8 +135,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "MACD histogram negative"
       ],
-      "current_price": 1625.6,
-      "unrealized_pnl": 158.0,
+      "current_price": 1631.0,
+      "unrealized_pnl": 185.0,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -141,7 +144,10 @@
         "vix": 14.03,
         "mood": "bearish",
         "regime": "mixed"
-      }
+      },
+      "view_hist": [
+        1
+      ]
     },
     {
       "ticker": "NESTLEIND.NS",
@@ -178,8 +184,8 @@
         "\u2713 Daily setup aligned with the higher-timeframe trend",
         "Near upper Bollinger Band"
       ],
-      "current_price": 1519.6,
-      "unrealized_pnl": -28.8,
+      "current_price": 1521.5,
+      "unrealized_pnl": -17.4,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -187,7 +193,10 @@
         "vix": 12.01,
         "mood": "neutral",
         "regime": "choppy"
-      }
+      },
+      "view_hist": [
+        1
+      ]
     },
     {
       "ticker": "ICICIBANK.NS",
@@ -223,8 +232,8 @@
         "MACD histogram negative",
         "StochRSI overbought with bearish candle \u2014 reversal"
       ],
-      "current_price": 1428.5,
-      "unrealized_pnl": -10.8,
+      "current_price": 1435.9,
+      "unrealized_pnl": 33.6,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -232,7 +241,10 @@
         "vix": 12.01,
         "mood": "neutral",
         "regime": "choppy"
-      }
+      },
+      "view_hist": [
+        1
+      ]
     }
   ],
   "closed_trades": [

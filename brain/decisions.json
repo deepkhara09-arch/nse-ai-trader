@@ -14557,5 +14557,214 @@
       "bb_upper_rejection",
       "pivot_s1_breakdown"
     ]
+  },
+  {
+    "timestamp": "2026-07-30T09:38:41.852275",
+    "date": "2026-07-30",
+    "ticker": "MARICO.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 95,
+    "entry": 886.1,
+    "stop_loss": 861.39,
+    "target": 935.53,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "strong_bullish_marubozu",
+      "near_52w_high",
+      "adx_strong_trend_up",
+      "inside_bar",
+      "full_bullish_alignment",
+      "52w_breakout",
+      "supertrend_bullish",
+      "bb_upper_rejection"
+    ]
+  },
+  {
+    "timestamp": "2026-07-30T09:38:41.854027",
+    "date": "2026-07-30",
+    "ticker": "NESTLEIND.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 95,
+    "entry": 1521.5,
+    "stop_loss": 1470.14,
+    "target": 1624.23,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "near_52w_high",
+      "full_bullish_alignment",
+      "pivot_r1_breakout",
+      "spinning_top",
+      "supertrend_bullish",
+      "bb_upper_rejection"
+    ]
+  },
+  {
+    "timestamp": "2026-07-30T09:38:41.854850",
+    "date": "2026-07-30",
+    "ticker": "ICICIBANK.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 95,
+    "entry": 1435.9,
+    "stop_loss": 1398.72,
+    "target": 1510.26,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "adx_strong_trend_up",
+      "rsi_bullish_divergence",
+      "stoch_rsi_overbought_reversal",
+      "full_bullish_alignment",
+      "overbought_macd_divergence",
+      "pivot_point_test"
+    ]
+  },
+  {
+    "timestamp": "2026-07-30T09:38:41.855654",
+    "date": "2026-07-30",
+    "ticker": "UNIONBANK.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 56.7,
+    "entry": 170.46,
+    "stop_loss": 161.65,
+    "target": 188.09,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "adx_ranging_market",
+      "full_bullish_alignment",
+      "pivot_point_test",
+      "macd_bullish_crossover",
+      "supertrend_bullish"
+    ]
+  },
+  {
+    "timestamp": "2026-07-30T09:38:41.856459",
+    "date": "2026-07-30",
+    "ticker": "ABCAPITAL.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 87.8,
+    "entry": 394.65,
+    "stop_loss": 379.7,
+    "target": 424.54,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "adx_ranging_market",
+      "rsi_bullish_divergence",
+      "bullish_harami",
+      "inside_bar",
+      "full_bullish_alignment",
+      "pivot_point_test",
+      "supertrend_bullish"
+    ]
+  },
+  {
+    "timestamp": "2026-07-30T09:38:41.857281",
+    "date": "2026-07-30",
+    "ticker": "PFC.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 66.4,
+    "entry": 426.45,
+    "stop_loss": 413.9,
+    "target": 451.55,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "adx_ranging_market",
+      "pivot_r1_breakout",
+      "ema_golden_cross",
+      "supertrend_bullish"
+    ]
+  },
+  {
+    "timestamp": "2026-07-30T09:38:41.858061",
+    "date": "2026-07-30",
+    "ticker": "PIDILITIND.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 95,
+    "entry": 1631.0,
+    "stop_loss": 1577.24,
+    "target": 1738.53,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "near_52w_high",
+      "adx_strong_trend_up",
+      "full_bullish_alignment",
+      "tweezer_bottom",
+      "pivot_point_test",
+      "supertrend_bullish",
+      "outside_bar",
+      "bb_upper_rejection"
+    ]
+  },
+  {
+    "timestamp": "2026-07-30T09:38:41.860096",
+    "date": "2026-07-30",
+    "ticker": "POWERGRID.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 60.0,
+    "entry": 286.1,
+    "stop_loss": 278.81,
+    "target": 300.67,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "adx_ranging_market",
+      "stoch_rsi_oversold_reversal",
+      "pivot_point_test",
+      "supertrend_bullish",
+      "ema_death_cross",
+      "full_bearish_alignment"
+    ]
+  },
+  {
+    "timestamp": "2026-07-30T09:38:41.860859",
+    "date": "2026-07-30",
+    "ticker": "NHPC.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 54.0,
+    "entry": 77.84,
+    "stop_loss": 75.45,
+    "target": 82.62,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "shooting_star",
+      "full_bullish_alignment",
+      "pivot_s1_breakdown",
+      "bb_lower_bounce"
+    ]
+  },
+  {
+    "timestamp": "2026-07-30T09:38:41.861620",
+    "date": "2026-07-30",
+    "ticker": "IDFCFIRSTB.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 57.2,
+    "entry": 84.87,
+    "stop_loss": 81.73,
+    "target": 91.16,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "adx_strong_trend_up",
+      "inside_bar",
+      "full_bullish_alignment",
+      "bb_upper_rejection",
+      "pivot_s1_breakdown"
+    ]
   }
 ]

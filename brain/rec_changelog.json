@@ -2848,5 +2848,45 @@
     "ts": "2026-07-30T03:05:55.574283",
     "detail": "Rank \u25bc1 (#8 \u2192 #9)",
     "confidence": 69.6
+  },
+  {
+    "type": "removed",
+    "ticker": "ICICIBANK.NS",
+    "nse_code": "ICICIBANK",
+    "signal": "BUY",
+    "date": "2026-07-30",
+    "ts": "2026-07-30T04:05:45.951678",
+    "detail": "Dropped \u2014 no longer meets threshold (was 70/100)",
+    "confidence": 0
+  },
+  {
+    "type": "updated",
+    "ticker": "MARICO.NS",
+    "nse_code": "MARICO",
+    "signal": "BUY",
+    "date": "2026-07-30",
+    "ts": "2026-07-30T04:05:45.951678",
+    "detail": "Stop loss moved \u20b9853.34 \u2192 \u20b9860.34 | Target 1 moved \u20b9929.42 \u2192 \u20b9936.42",
+    "confidence": 73.0
+  },
+  {
+    "type": "updated",
+    "ticker": "NESTLEIND.NS",
+    "nse_code": "NESTLEIND",
+    "signal": "BUY",
+    "date": "2026-07-30",
+    "ts": "2026-07-30T04:05:45.951678",
+    "detail": "Confidence \u25bc14 (83 \u2192 69) | Stop loss moved \u20b91450.95 \u2192 \u20b91481.79",
+    "confidence": 68.8
+  },
+  {
+    "type": "updated",
+    "ticker": "PIDILITIND.NS",
+    "nse_code": "PIDILITIND",
+    "signal": "BUY",
+    "date": "2026-07-30",
+    "ts": "2026-07-30T04:05:45.951678",
+    "detail": "Confidence \u25bc5 (72 \u2192 66) | Rank \u25bc1 (#7 \u2192 #8)",
+    "confidence": 66.5
   }
 ]

@@ -1,5 +1,5 @@
 {
-  "capital": 69857.57755,
+  "capital": 64779.143070000006,
   "open_positions": [
     {
       "ticker": "MARICO.NS",
@@ -37,9 +37,9 @@
         "\u26a0 Recent forward-tested call accuracy only 15% (last 20 scored) \u2014 raising the conviction bar",
         "RSI=63 elevated"
       ],
-      "current_price": 878.7,
-      "unrealized_pnl": 235.2,
-      "max_held_days": 10,
+      "current_price": 885.7,
+      "unrealized_pnl": 284.2,
+      "max_held_days": 13,
       "vol_regime_pct": 0.12,
       "entry_market": {
         "nifty_trend": "sideways",
@@ -48,97 +48,8 @@
         "regime": "mixed"
       },
       "t1_booked": true,
-      "trailing_active": true
-    },
-    {
-      "ticker": "UNIONBANK.NS",
-      "sector": "Banking",
-      "open_date": "2026-07-16",
-      "open_session": "morning",
-      "action": "BUY",
-      "entry": 171.86,
-      "qty": 27,
-      "invested": 4640.22,
-      "stop_loss": 162.76,
-      "target": 190.07,
-      "style": "swing",
-      "confidence": 85.0,
-      "patterns": [
-        "supertrend_bullish",
-        "full_bullish_alignment",
-        "pivot_r1_breakout",
-        "volume_breakout_bullish",
-        "three_white_soldiers",
-        "momentum_continuation"
-      ],
-      "buy_reasons": [
-        "All EMAs stacked bullish",
-        "RSI=54 in healthy buy zone",
-        "MACD histogram positive",
-        "High volume confirmation (3.4x avg)",
-        "Candlestick: three white soldiers",
-        "\u26a0 Earnings in 2d \u2014 position size reduced",
-        "Supertrend bullish \u2014 price above trend band",
-        "Broke above Pivot R1 with volume \u2014 bullish",
-        "In a long-term strong uptrend (2yr) \u2014 trend on our side",
-        "\u2713 Daily setup aligned with the higher-timeframe trend",
-        "\u26a0 Recent forward-tested call accuracy only 15% (last 20 scored) \u2014 raising the conviction bar"
-      ],
-      "current_price": 171.08,
-      "unrealized_pnl": -21.06,
-      "max_held_days": 10,
-      "vol_regime_pct": 0.12,
-      "entry_market": {
-        "nifty_trend": "sideways",
-        "vix": 13.27,
-        "mood": "neutral",
-        "regime": "mixed"
-      }
-    },
-    {
-      "ticker": "SBIN.NS",
-      "sector": "Banking",
-      "open_date": "2026-07-16",
-      "open_session": "morning",
-      "action": "BUY",
-      "entry": 1028.5,
-      "qty": 8,
-      "invested": 8228.0,
-      "stop_loss": 1000.86,
-      "target": 1083.79,
-      "style": "swing",
-      "confidence": 74.7,
-      "patterns": [
-        "adx_ranging_market",
-        "full_bullish_alignment",
-        "supertrend_bullish",
-        "pivot_r1_breakout",
-        "stoch_rsi_oversold_reversal"
-      ],
-      "buy_reasons": [
-        "All EMAs stacked bullish",
-        "RSI=44 in healthy buy zone",
-        "Positive news sentiment (0.39)",
-        "News sentiment improving across sessions",
-        "Supertrend bullish \u2014 price above trend band",
-        "ADX low \u2014 market ranging, signals less reliable",
-        "Broke above Pivot R1 with volume \u2014 bullish",
-        "StochRSI oversold with bullish candle \u2014 reversal",
-        "In a long-term strong uptrend (2yr) \u2014 trend on our side",
-        "\u2713 Daily setup aligned with the higher-timeframe trend",
-        "\u26a0 Recent forward-tested call accuracy only 15% (last 20 scored) \u2014 raising the conviction bar",
-        "MACD histogram negative"
-      ],
-      "current_price": 1013.7,
-      "unrealized_pnl": -118.4,
-      "max_held_days": 10,
-      "vol_regime_pct": 0.12,
-      "entry_market": {
-        "nifty_trend": "sideways",
-        "vix": 13.27,
-        "mood": "neutral",
-        "regime": "mixed"
-      }
+      "trailing_active": true,
+      "grace_used": true
     },
     {
       "ticker": "SIEMENS.NS",
@@ -175,8 +86,8 @@
         "Broke below Pivot S1 support \u2014 bearish",
         "StochRSI overbought with bearish candle \u2014 reversal"
       ],
-      "current_price": 3650.8,
-      "unrealized_pnl": -5.2,
+      "current_price": 3617.0,
+      "unrealized_pnl": -39.0,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -221,8 +132,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "MACD histogram negative"
       ],
-      "current_price": 1630.3,
-      "unrealized_pnl": 181.5,
+      "current_price": 1630.9,
+      "unrealized_pnl": 184.5,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -230,6 +141,97 @@
         "vix": 14.03,
         "mood": "bearish",
         "regime": "mixed"
+      }
+    },
+    {
+      "ticker": "NESTLEIND.NS",
+      "sector": "FMCG",
+      "open_date": "2026-07-30",
+      "open_session": "morning",
+      "action": "BUY",
+      "entry": 1524.4,
+      "qty": 6,
+      "invested": 9146.4,
+      "stop_loss": 1473.04,
+      "target": 1627.13,
+      "style": "swing",
+      "confidence": 95,
+      "patterns": [
+        "full_bullish_alignment",
+        "pivot_r1_breakout",
+        "spinning_top",
+        "bb_upper_rejection",
+        "near_52w_high",
+        "supertrend_bullish"
+      ],
+      "buy_reasons": [
+        "All EMAs stacked bullish",
+        "MACD histogram positive",
+        "Positive news sentiment (0.44, news 1.1x reliable here)",
+        "Near 52-week high \u2014 potential breakout zone",
+        "Sector tailwind (momentum=0.32)",
+        "Supertrend bullish \u2014 price above trend band",
+        "Broke above Pivot R1 with volume \u2014 bullish",
+        "In a long-term strong uptrend (2yr) \u2014 trend on our side",
+        "Near 52-week high (100% of range) \u2014 breakout zone",
+        "Clean trender aligned with its long-term uptrend",
+        "\u2713 Daily setup aligned with the higher-timeframe trend",
+        "Near upper Bollinger Band"
+      ],
+      "current_price": 1524.4,
+      "unrealized_pnl": 0.0,
+      "max_held_days": 10,
+      "vol_regime_pct": 0.12,
+      "entry_market": {
+        "nifty_trend": "up",
+        "vix": 12.01,
+        "mood": "neutral",
+        "regime": "choppy"
+      }
+    },
+    {
+      "ticker": "ICICIBANK.NS",
+      "sector": "Banking",
+      "open_date": "2026-07-30",
+      "open_session": "morning",
+      "action": "BUY",
+      "entry": 1430.3,
+      "qty": 6,
+      "invested": 8581.8,
+      "stop_loss": 1393.12,
+      "target": 1504.66,
+      "style": "swing",
+      "confidence": 95,
+      "patterns": [
+        "full_bullish_alignment",
+        "adx_strong_trend_up",
+        "pivot_point_test",
+        "stoch_rsi_overbought_reversal",
+        "overbought_macd_divergence",
+        "rsi_bullish_divergence"
+      ],
+      "buy_reasons": [
+        "All EMAs stacked bullish",
+        "Learned bullish pattern: full_bullish_alignment (rel=64%)",
+        "Learned bullish pattern: adx_strong_trend_up (rel=64%)",
+        "RSI bullish divergence \u2014 price lower but RSI higher",
+        "ADX strong trend \u2014 directional move confirmed",
+        "Testing pivot point \u2014 decision zone",
+        "In a long-term uptrend (2yr) \u2014 trend on our side",
+        "\u2713 Daily setup aligned with the higher-timeframe trend",
+        "RSI=69 elevated",
+        "MACD histogram negative",
+        "StochRSI overbought with bearish candle \u2014 reversal"
+      ],
+      "current_price": 1430.3,
+      "unrealized_pnl": 0.0,
+      "max_held_days": 10,
+      "vol_regime_pct": 0.12,
+      "entry_market": {
+        "nifty_trend": "up",
+        "vix": 12.01,
+        "mood": "neutral",
+        "regime": "choppy"
       }
     }
   ],
@@ -514,6 +516,116 @@
       "pnl_pct": 2.46,
       "won": true,
       "open_days": 8
+    },
+    {
+      "ticker": "UNIONBANK.NS",
+      "sector": "Banking",
+      "open_date": "2026-07-16",
+      "open_session": "morning",
+      "action": "BUY",
+      "entry": 171.86,
+      "qty": 27,
+      "invested": 4640.22,
+      "stop_loss": 162.76,
+      "target": 190.07,
+      "style": "swing",
+      "confidence": 85.0,
+      "patterns": [
+        "supertrend_bullish",
+        "full_bullish_alignment",
+        "pivot_r1_breakout",
+        "volume_breakout_bullish",
+        "three_white_soldiers",
+        "momentum_continuation"
+      ],
+      "buy_reasons": [
+        "All EMAs stacked bullish",
+        "RSI=54 in healthy buy zone",
+        "MACD histogram positive",
+        "High volume confirmation (3.4x avg)",
+        "Candlestick: three white soldiers",
+        "\u26a0 Earnings in 2d \u2014 position size reduced",
+        "Supertrend bullish \u2014 price above trend band",
+        "Broke above Pivot R1 with volume \u2014 bullish",
+        "In a long-term strong uptrend (2yr) \u2014 trend on our side",
+        "\u2713 Daily setup aligned with the higher-timeframe trend",
+        "\u26a0 Recent forward-tested call accuracy only 15% (last 20 scored) \u2014 raising the conviction bar"
+      ],
+      "current_price": 169.9,
+      "unrealized_pnl": -52.92,
+      "max_held_days": 10,
+      "vol_regime_pct": 0.12,
+      "entry_market": {
+        "nifty_trend": "sideways",
+        "vix": 13.27,
+        "mood": "neutral",
+        "regime": "mixed"
+      },
+      "close_date": "2026-07-30",
+      "close_session": "morning",
+      "exit_price": 169.9,
+      "exit_reason": "time_exit",
+      "pnl": -66.76,
+      "pnl_gross": -52.92,
+      "costs": 13.84,
+      "pnl_pct": -1.44,
+      "won": false,
+      "open_days": 10
+    },
+    {
+      "ticker": "SBIN.NS",
+      "sector": "Banking",
+      "open_date": "2026-07-16",
+      "open_session": "morning",
+      "action": "BUY",
+      "entry": 1028.5,
+      "qty": 8,
+      "invested": 8228.0,
+      "stop_loss": 1000.86,
+      "target": 1083.79,
+      "style": "swing",
+      "confidence": 74.7,
+      "patterns": [
+        "adx_ranging_market",
+        "full_bullish_alignment",
+        "supertrend_bullish",
+        "pivot_r1_breakout",
+        "stoch_rsi_oversold_reversal"
+      ],
+      "buy_reasons": [
+        "All EMAs stacked bullish",
+        "RSI=44 in healthy buy zone",
+        "Positive news sentiment (0.39)",
+        "News sentiment improving across sessions",
+        "Supertrend bullish \u2014 price above trend band",
+        "ADX low \u2014 market ranging, signals less reliable",
+        "Broke above Pivot R1 with volume \u2014 bullish",
+        "StochRSI oversold with bullish candle \u2014 reversal",
+        "In a long-term strong uptrend (2yr) \u2014 trend on our side",
+        "\u2713 Daily setup aligned with the higher-timeframe trend",
+        "\u26a0 Recent forward-tested call accuracy only 15% (last 20 scored) \u2014 raising the conviction bar",
+        "MACD histogram negative"
+      ],
+      "current_price": 1012.6,
+      "unrealized_pnl": -127.2,
+      "max_held_days": 10,
+      "vol_regime_pct": 0.12,
+      "entry_market": {
+        "nifty_trend": "sideways",
+        "vix": 13.27,
+        "mood": "neutral",
+        "regime": "mixed"
+      },
+      "close_date": "2026-07-30",
+      "close_session": "morning",
+      "exit_price": 1012.6,
+      "exit_reason": "time_exit",
+      "pnl": -151.69,
+      "pnl_gross": -127.2,
+      "costs": 24.49,
+      "pnl_pct": -1.84,
+      "won": false,
+      "open_days": 10
     }
   ],
   "daily_snapshots": [
@@ -588,12 +700,12 @@
       "daily_pnl": 0.0
     }
   ],
-  "daily_pnl_today": 0.0,
+  "daily_pnl_today": -218.45448000000005,
   "last_snapshot_date": "2026-07-29",
   "lifetime_wins": 3,
-  "lifetime_losses": 2,
-  "lifetime_pnl": 267.49,
-  "last_pnl_reset_date": "2026-07-29",
+  "lifetime_losses": 4,
+  "lifetime_pnl": 49.04,
+  "last_pnl_reset_date": "2026-07-30",
   "max_drawdown_pct": 1.07,
   "current_drawdown_pct": 0.66,
   "portfolio_peak": 101210.28,

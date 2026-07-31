@@ -58,11 +58,9 @@
       "ath_pct_60d": -2.5
     }
   },
-  "market_mood": "neutral",
+  "market_mood": "bullish",
   "trade_allowed": true,
-  "warnings": [
-    "Nifty choppy intraday \u2014 wait for cleaner setups"
-  ],
+  "warnings": [],
   "leading_sectors": [
     "IT",
     "Pharma",
@@ -72,14 +70,14 @@
   "sector_breadth": 0.75,
   "lagging_sectors": [],
   "broad_market_strength": true,
-  "intraday_regime": "choppy",
+  "intraday_regime": "mixed",
   "macro": {
     "date": "2026-07-31",
     "session": "midday",
-    "generated_at": "2026-07-31T06:30:13.958764",
-    "global_score": 0.249,
+    "generated_at": "2026-07-31T07:21:53.360254",
+    "global_score": 0.265,
     "india_score": 0.5,
-    "overall_score": 0.362,
+    "overall_score": 0.371,
     "mood": "risk_on",
     "drivers": [
       "Corporate insiders are sending warning signals about the stock market",
@@ -105,23 +103,23 @@
         "chg_pct": 1.66
       },
       "nikkei": {
-        "last": 64308.84,
-        "chg_pct": 3.95
+        "last": 64362.02,
+        "chg_pct": 4.03
       },
       "crude": {
         "last": 83.59,
         "chg_pct": -1.03
       },
       "usdinr": {
-        "last": 95.34,
-        "chg_pct": -0.41
+        "last": 95.42,
+        "chg_pct": -0.32
       },
       "gold": {
         "last": 4100.1,
         "chg_pct": 1.62
       }
     },
-    "summary": "Overall macro mood is risk-on (+0.36). US Dow +1.2% overnight. Crude -1.0%. USD/INR -0.4%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
+    "summary": "Overall macro mood is risk-on (+0.37). US Dow +1.2% overnight. Crude -1.0%. USD/INR -0.3%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
       "Trade-war headlines spook global markets; IT & export names react most."

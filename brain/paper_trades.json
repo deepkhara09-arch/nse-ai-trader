@@ -37,8 +37,8 @@
         "\u26a0 Recent forward-tested call accuracy only 15% (last 20 scored) \u2014 raising the conviction bar",
         "RSI=63 elevated"
       ],
-      "current_price": 877.15,
-      "unrealized_pnl": 224.35,
+      "current_price": 873.65,
+      "unrealized_pnl": 199.85,
       "max_held_days": 13,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -60,7 +60,7 @@
       "entry": 3656.0,
       "qty": 1,
       "invested": 3656.0,
-      "stop_loss": 3505.32,
+      "stop_loss": 3659.66,
       "target": 3957.35,
       "style": "swing",
       "confidence": 73.4,
@@ -86,8 +86,8 @@
         "Broke below Pivot S1 support \u2014 bearish",
         "StochRSI overbought with bearish candle \u2014 reversal"
       ],
-      "current_price": 3788.3,
-      "unrealized_pnl": 132.3,
+      "current_price": 3804.0,
+      "unrealized_pnl": 148.0,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -98,10 +98,11 @@
       },
       "view_hist": [
         0,
-        0,
+        1,
         1,
         1
-      ]
+      ],
+      "trailing_active": true
     },
     {
       "ticker": "PIDILITIND.NS",
@@ -138,8 +139,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "MACD histogram negative"
       ],
-      "current_price": 1618.0,
-      "unrealized_pnl": 120.0,
+      "current_price": 1614.5,
+      "unrealized_pnl": 102.5,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -150,8 +151,8 @@
       },
       "view_hist": [
         1,
-        1,
         0,
+        -1,
         -1
       ]
     },
@@ -190,8 +191,8 @@
         "\u2713 Daily setup aligned with the higher-timeframe trend",
         "Near upper Bollinger Band"
       ],
-      "current_price": 1508.9,
-      "unrealized_pnl": -93.0,
+      "current_price": 1507.8,
+      "unrealized_pnl": -99.6,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -241,8 +242,8 @@
         "MACD histogram negative",
         "StochRSI overbought with bearish candle \u2014 reversal"
       ],
-      "current_price": 1435.0,
-      "unrealized_pnl": 28.2,
+      "current_price": 1433.6,
+      "unrealized_pnl": 19.8,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {

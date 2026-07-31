@@ -1,6 +1,6 @@
 {
   "date": "2026-07-31",
-  "session": "morning",
+  "session": "midday",
   "nifty": {
     "symbol": "^NSEI",
     "value": 24317.15,
@@ -27,11 +27,11 @@
   "sectors": {
     "IT": {
       "symbol": "ITBEES.NS",
-      "value": 34.54,
-      "day_change_pct": 2.28,
+      "value": 34.62,
+      "day_change_pct": 0.23,
       "trend_5d": "strong_up",
       "trend_20d": "strong_up",
-      "ath_pct_60d": -0.75
+      "ath_pct_60d": -2.07
     },
     "Pharma": {
       "symbol": "PHARMABEES.NS",
@@ -43,42 +43,44 @@
     },
     "Bank": {
       "symbol": "BANKBEES.NS",
-      "value": 591.74,
-      "day_change_pct": 0.71,
-      "trend_5d": "up",
+      "value": 591.08,
+      "day_change_pct": -0.11,
+      "trend_5d": "sideways",
       "trend_20d": "down",
-      "ath_pct_60d": -5.76
+      "ath_pct_60d": -5.86
     },
     "Infra": {
       "symbol": "INFRABEES.NS",
-      "value": 964.86,
-      "day_change_pct": 0.51,
-      "trend_5d": "sideways",
+      "value": 968.71,
+      "day_change_pct": 0.4,
+      "trend_5d": "up",
       "trend_20d": "down",
-      "ath_pct_60d": -2.88
+      "ath_pct_60d": -2.5
     }
   },
-  "market_mood": "bullish",
+  "market_mood": "neutral",
   "trade_allowed": true,
-  "warnings": [],
+  "warnings": [
+    "Nifty choppy intraday \u2014 wait for cleaner setups"
+  ],
   "leading_sectors": [
     "IT",
     "Pharma",
-    "Bank"
+    "Infra"
   ],
   "market_regime": "normal",
   "sector_breadth": 0.75,
   "lagging_sectors": [],
   "broad_market_strength": true,
-  "intraday_regime": "mixed",
+  "intraday_regime": "choppy",
   "macro": {
     "date": "2026-07-31",
-    "session": "preopen",
-    "generated_at": "2026-07-31T03:05:52.649471",
-    "global_score": 0.252,
-    "india_score": 0.0,
-    "overall_score": 0.139,
-    "mood": "neutral",
+    "session": "midday",
+    "generated_at": "2026-07-31T06:15:58.892912",
+    "global_score": 0.247,
+    "india_score": 0.5,
+    "overall_score": 0.361,
+    "mood": "risk_on",
     "drivers": [
       "Corporate insiders are sending warning signals about the stock market",
       "\u2018Don\u2019t get suckered like I did\u2019: I paid $185 to the wrong passport website. Can I get my money back?",
@@ -103,23 +105,23 @@
         "chg_pct": 1.66
       },
       "nikkei": {
-        "last": 64572.25,
-        "chg_pct": 4.37
+        "last": 64373.44,
+        "chg_pct": 4.05
       },
       "crude": {
-        "last": 82.28,
-        "chg_pct": -1.57
+        "last": 83.59,
+        "chg_pct": -1.03
       },
       "usdinr": {
-        "last": 95.67,
-        "chg_pct": -0.06
+        "last": 95.37,
+        "chg_pct": -0.37
       },
       "gold": {
-        "last": 4135.8,
-        "chg_pct": 0.87
+        "last": 4100.1,
+        "chg_pct": 1.62
       }
     },
-    "summary": "Overall macro mood is neutral (+0.14). US Dow +1.2% overnight. Crude -1.6%. USD/INR -0.1%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
+    "summary": "Overall macro mood is risk-on (+0.36). US Dow +1.2% overnight. Crude -1.0%. USD/INR -0.4%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
       "Trade-war headlines spook global markets; IT & export names react most."
@@ -127,6 +129,7 @@
     "playbook_bias": "risk_off",
     "article_count": 60
   },
+  "macro_tailwind": true,
   "macro_risk_factor": 1.0,
   "fii_dii": {
     "date": "2026-07-31",

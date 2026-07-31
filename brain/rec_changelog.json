@@ -3058,5 +3058,25 @@
     "ts": "2026-07-31T07:45:49.305458",
     "detail": "Confidence \u25bc8 (73 \u2192 66) | Target 1 moved \u20b9926.57 \u2192 \u20b9920.87",
     "confidence": 65.5
+  },
+  {
+    "type": "new",
+    "ticker": "SIEMENS.NS",
+    "nse_code": "SIEMENS",
+    "signal": "BUY",
+    "date": "2026-07-31",
+    "ts": "2026-07-31T09:45:50.089640",
+    "detail": "New BUY recommendation \u2014 confidence 77/100",
+    "confidence": 76.7
+  },
+  {
+    "type": "removed",
+    "ticker": "MARICO.NS",
+    "nse_code": "MARICO",
+    "signal": "BUY",
+    "date": "2026-07-31",
+    "ts": "2026-07-31T09:45:50.089640",
+    "detail": "Dropped \u2014 no longer meets threshold (was 66/100)",
+    "confidence": 0
   }
 ]

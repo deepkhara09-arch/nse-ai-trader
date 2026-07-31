@@ -1,13 +1,13 @@
 {
   "phase": "paper_trading",
   "day": 29,
-  "session": "afternoon",
+  "session": "intraday_close",
   "start_date": "2026-06-22",
   "phase_start_date": "2026-07-15",
   "last_run_date": "2026-07-30",
   "last_counted_date": "2026-07-30",
   "cohort_last_tick_date": "2026-07-30",
-  "last_updated": "2026-07-31T07:45:49.222173",
+  "last_updated": "2026-07-31T09:45:50.000800",
   "focus_stocks": [
     "MARICO.NS",
     "SBIN.NS",
@@ -40,14 +40,14 @@
     "NYKAA.NS"
   ],
   "paper_trade_stats": {
-    "total": 7,
-    "wins": 3,
+    "total": 8,
+    "wins": 4,
     "losses": 4,
-    "win_rate": 0.429,
-    "total_pnl": 49.04,
-    "avg_win": 222.01,
+    "win_rate": 0.5,
+    "total_pnl": 117.99,
+    "avg_win": 183.75,
     "avg_loss": -154.25,
-    "expectancy": 7.01
+    "expectancy": 14.75
   },
   "brain_notes": [
     "[2026-06-23] Pre-open macro: neutral (+0.07)",
@@ -335,6 +335,7 @@
     "preopen": "2026-07-31",
     "morning": "2026-07-31",
     "midday": "2026-07-31",
-    "afternoon": "2026-07-31"
+    "afternoon": "2026-07-31",
+    "intraday_close": "2026-07-31"
   }
 }

@@ -1,102 +1,102 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of rsi_bullish_divergence, low_volume_drift, inside_bar mean for a swing trade on SBIN? Current RSI=47, MACD hist=-3.8053, Vol=0.5x average. Signal is BUY.",
-    "context": {
-      "ticker": "SBIN.NS",
-      "signal": "BUY",
-      "patterns": "rsi_bullish_divergence, low_volume_drift, inside_bar",
-      "rsi": 47.1
-    },
-    "queued_at": "2026-07-31T03:05:54.927206"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of pivot_r1_breakout, spinning_top mean for a swing trade on NESTLEIND? Current RSI=61, MACD hist=+4.0987, Vol=1.4x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of pivot_r1_breakout, 52w_breakout mean for a swing trade on NESTLEIND? Current RSI=64, MACD hist=+6.1516, Vol=1.6x average. Signal is BUY.",
     "context": {
       "ticker": "NESTLEIND.NS",
       "signal": "BUY",
-      "patterns": "pivot_r1_breakout, spinning_top",
-      "rsi": 61.1
+      "patterns": "pivot_r1_breakout, 52w_breakout",
+      "rsi": 64.3
     },
-    "queued_at": "2026-07-31T03:05:54.928299"
+    "queued_at": "2026-07-31T04:05:49.210047"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of rsi_bullish_divergence, stoch_rsi_overbought_reversal mean for a swing trade on ICICIBANK? Current RSI=69, MACD hist=-3.2436, Vol=0.8x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of stoch_rsi_overbought_reversal, rsi_bullish_divergence mean for a swing trade on ICICIBANK? Current RSI=69, MACD hist=-3.2412, Vol=0.8x average. Signal is BUY.",
     "context": {
       "ticker": "ICICIBANK.NS",
       "signal": "BUY",
-      "patterns": "rsi_bullish_divergence, stoch_rsi_overbought_reversal",
+      "patterns": "stoch_rsi_overbought_reversal, rsi_bullish_divergence",
       "rsi": 68.9
     },
-    "queued_at": "2026-07-31T03:05:54.931557"
+    "queued_at": "2026-07-31T04:05:49.210861"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of macd_bullish_crossover, pivot_point_test mean for a swing trade on UNIONBANK? Current RSI=67, MACD hist=+0.0030, Vol=0.6x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of inside_bar, strong_bearish_marubozu, tweezer_top mean for a swing trade on MARICO? Current RSI=60, MACD hist=+2.0927, Vol=1.5x average. Signal is BUY.",
     "context": {
-      "ticker": "UNIONBANK.NS",
+      "ticker": "MARICO.NS",
       "signal": "BUY",
-      "patterns": "macd_bullish_crossover, pivot_point_test",
-      "rsi": 66.6
+      "patterns": "inside_bar, strong_bearish_marubozu, tweezer_top",
+      "rsi": 59.9
     },
-    "queued_at": "2026-07-31T03:05:54.934705"
+    "queued_at": "2026-07-31T04:05:49.294959"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of rsi_bullish_divergence, bullish_harami, adx_ranging_market mean for a swing trade on ABCAPITAL? Current RSI=50, MACD hist=-2.2989, Vol=0.9x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of outside_bar, engulfing_bullish, rsi_bearish_divergence mean for a swing trade on SBIN? Current RSI=46, MACD hist=-2.8937, Vol=0.7x average. Signal is BUY.",
+    "context": {
+      "ticker": "SBIN.NS",
+      "signal": "BUY",
+      "patterns": "outside_bar, engulfing_bullish, rsi_bearish_divergence",
+      "rsi": 46.2
+    },
+    "queued_at": "2026-07-31T04:05:49.298825"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of pivot_r1_breakout, 52w_breakout mean for a swing trade on NESTLEIND? Current RSI=64, MACD hist=+6.1516, Vol=1.6x average. Signal is BUY.",
+    "context": {
+      "ticker": "NESTLEIND.NS",
+      "signal": "BUY",
+      "patterns": "pivot_r1_breakout, 52w_breakout",
+      "rsi": 64.3
+    },
+    "queued_at": "2026-07-31T04:05:49.300102"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of stoch_rsi_overbought_reversal, rsi_bullish_divergence mean for a swing trade on ICICIBANK? Current RSI=69, MACD hist=-3.2412, Vol=0.8x average. Signal is BUY.",
+    "context": {
+      "ticker": "ICICIBANK.NS",
+      "signal": "BUY",
+      "patterns": "stoch_rsi_overbought_reversal, rsi_bullish_divergence",
+      "rsi": 68.9
+    },
+    "queued_at": "2026-07-31T04:05:49.303372"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of adx_ranging_market, low_volume_drift mean for a swing trade on ABCAPITAL? Current RSI=40, MACD hist=-2.3259, Vol=0.3x average. Signal is BUY.",
     "context": {
       "ticker": "ABCAPITAL.NS",
       "signal": "BUY",
-      "patterns": "rsi_bullish_divergence, bullish_harami, adx_ranging_market",
-      "rsi": 50.2
+      "patterns": "adx_ranging_market, low_volume_drift",
+      "rsi": 40.2
     },
-    "queued_at": "2026-07-31T03:05:54.937750"
+    "queued_at": "2026-07-31T04:05:49.304659"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of pivot_r1_breakout, ema_golden_cross mean for a swing trade on PFC? Current RSI=72, MACD hist=+2.4927, Vol=1.3x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of hammer, engulfing_bullish, supertrend_bullish mean for a swing trade on SIEMENS? Current RSI=75, MACD hist=+14.5506, Vol=0.7x average. Signal is BUY.",
     "context": {
-      "ticker": "PFC.NS",
+      "ticker": "SIEMENS.NS",
       "signal": "BUY",
-      "patterns": "pivot_r1_breakout, ema_golden_cross",
-      "rsi": 72.4
+      "patterns": "hammer, engulfing_bullish, supertrend_bullish",
+      "rsi": 74.9
     },
-    "queued_at": "2026-07-31T03:05:54.940911"
+    "queued_at": "2026-07-31T04:05:49.306317"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of outside_bar, bb_upper_rejection mean for a swing trade on PIDILITIND? Current RSI=62, MACD hist=+3.0809, Vol=1.1x average. Signal is BUY.",
-    "context": {
-      "ticker": "PIDILITIND.NS",
-      "signal": "BUY",
-      "patterns": "outside_bar, bb_upper_rejection",
-      "rsi": 61.5
-    },
-    "queued_at": "2026-07-31T03:05:54.941610"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of full_bearish_alignment, ema_death_cross, stoch_rsi_oversold_reversal mean for a swing trade on POWERGRID? Current RSI=52, MACD hist=+0.3027, Vol=1.5x average. Signal is BUY.",
-    "context": {
-      "ticker": "POWERGRID.NS",
-      "signal": "BUY",
-      "patterns": "full_bearish_alignment, ema_death_cross, stoch_rsi_oversold_reversal",
-      "rsi": 52.4
-    },
-    "queued_at": "2026-07-31T03:05:54.945720"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of bb_lower_bounce, shooting_star, full_bullish_alignment mean for a swing trade on NHPC? Current RSI=46, MACD hist=-0.2550, Vol=0.8x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of ema_death_cross, stoch_rsi_oversold_reversal, hammer mean for a swing trade on NHPC? Current RSI=38, MACD hist=-0.2898, Vol=0.5x average. Signal is BUY.",
     "context": {
       "ticker": "NHPC.NS",
       "signal": "BUY",
-      "patterns": "bb_lower_bounce, shooting_star, full_bullish_alignment",
-      "rsi": 45.9
+      "patterns": "ema_death_cross, stoch_rsi_oversold_reversal, hammer",
+      "rsi": 38.4
     },
-    "queued_at": "2026-07-31T03:05:54.946366"
+    "queued_at": "2026-07-31T04:05:49.308408"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of inside_bar, pivot_s1_breakdown, full_bullish_alignment mean for a swing trade on IDFCFIRSTB? Current RSI=69, MACD hist=+0.3081, Vol=0.7x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_up, hammer, supertrend_bullish mean for a swing trade on IDFCFIRSTB? Current RSI=65, MACD hist=+0.2968, Vol=0.7x average. Signal is BUY.",
     "context": {
       "ticker": "IDFCFIRSTB.NS",
       "signal": "BUY",
-      "patterns": "inside_bar, pivot_s1_breakdown, full_bullish_alignment",
-      "rsi": 69.5
+      "patterns": "adx_strong_trend_up, hammer, supertrend_bullish",
+      "rsi": 64.9
     },
-    "queued_at": "2026-07-31T03:05:54.946973"
+    "queued_at": "2026-07-31T04:05:49.309177"
   }
 ]

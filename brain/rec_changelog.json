@@ -2978,5 +2978,65 @@
     "ts": "2026-07-30T10:12:15.742297",
     "detail": "Confidence \u25b28 (69 \u2192 77) | Rank \u25b21 (#14 \u2192 #13)",
     "confidence": 76.8
+  },
+  {
+    "type": "removed",
+    "ticker": "PIDILITIND.NS",
+    "nse_code": "PIDILITIND",
+    "signal": "BUY",
+    "date": "2026-07-31",
+    "ts": "2026-07-31T04:05:49.309947",
+    "detail": "Dropped \u2014 no longer meets threshold (was 78/100)",
+    "confidence": 0
+  },
+  {
+    "type": "removed",
+    "ticker": "ICICIBANK.NS",
+    "nse_code": "ICICIBANK",
+    "signal": "BUY",
+    "date": "2026-07-31",
+    "ts": "2026-07-31T04:05:49.309947",
+    "detail": "Dropped \u2014 no longer meets threshold (was 75/100)",
+    "confidence": 0
+  },
+  {
+    "type": "removed",
+    "ticker": "UNIONBANK.NS",
+    "nse_code": "UNIONBANK",
+    "signal": "BUY",
+    "date": "2026-07-31",
+    "ts": "2026-07-31T04:05:49.309947",
+    "detail": "Dropped \u2014 no longer meets threshold (was 68/100)",
+    "confidence": 0
+  },
+  {
+    "type": "removed",
+    "ticker": "ABCAPITAL.NS",
+    "nse_code": "ABCAPITAL",
+    "signal": "BUY",
+    "date": "2026-07-31",
+    "ts": "2026-07-31T04:05:49.309947",
+    "detail": "Dropped \u2014 no longer meets threshold (was 68/100)",
+    "confidence": 0
+  },
+  {
+    "type": "updated",
+    "ticker": "NESTLEIND.NS",
+    "nse_code": "NESTLEIND",
+    "signal": "BUY",
+    "date": "2026-07-31",
+    "ts": "2026-07-31T04:05:49.309947",
+    "detail": "Confidence \u25b26 (77 \u2192 83) | Rank \u25bc2 (#13 \u2192 #15) | Stop loss moved \u20b91480.76 \u2192 \u20b91460.09 | Target 1 moved \u20b91605.61 \u2192 \u20b91618.22",
+    "confidence": 82.6
+  },
+  {
+    "type": "updated",
+    "ticker": "MARICO.NS",
+    "nse_code": "MARICO",
+    "signal": "BUY",
+    "date": "2026-07-31",
+    "ts": "2026-07-31T04:05:49.309947",
+    "detail": "Confidence \u25bc6 (79 \u2192 73) | Rank \u25b21 (#11 \u2192 #10) | Stop loss moved \u20b9860.94 \u2192 \u20b9850.04 | Target 1 moved \u20b9935.07 \u2192 \u20b9923.42",
+    "confidence": 73.2
   }
 ]

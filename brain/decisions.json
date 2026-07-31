@@ -15131,5 +15131,176 @@
       "pivot_point_test",
       "rsi_bullish_divergence"
     ]
+  },
+  {
+    "timestamp": "2026-07-31T04:05:49.199588",
+    "date": "2026-07-31",
+    "ticker": "MARICO.NS",
+    "session": "morning",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 95,
+    "entry": 874.5,
+    "stop_loss": 849.79,
+    "target": 923.93,
+    "reason": "paper morning",
+    "patterns": [
+      "bb_upper_rejection",
+      "adx_strong_trend_up",
+      "inside_bar",
+      "strong_bearish_marubozu",
+      "tweezer_top",
+      "full_bullish_alignment",
+      "near_52w_high",
+      "pivot_point_test",
+      "52w_breakout"
+    ]
+  },
+  {
+    "timestamp": "2026-07-31T04:05:49.200366",
+    "date": "2026-07-31",
+    "ticker": "SBIN.NS",
+    "session": "morning",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 55.9,
+    "entry": 1029.9,
+    "stop_loss": 1002.04,
+    "target": 1085.61,
+    "reason": "paper morning",
+    "patterns": [
+      "outside_bar",
+      "engulfing_bullish",
+      "rsi_bearish_divergence",
+      "supertrend_bullish",
+      "adx_ranging_market"
+    ]
+  },
+  {
+    "timestamp": "2026-07-31T04:05:49.201623",
+    "date": "2026-07-31",
+    "ticker": "NESTLEIND.NS",
+    "session": "morning",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 95,
+    "entry": 1512.8,
+    "stop_loss": 1460.09,
+    "target": 1618.23,
+    "reason": "paper morning",
+    "patterns": [
+      "bb_upper_rejection",
+      "three_white_soldiers",
+      "supertrend_bullish",
+      "full_bullish_alignment",
+      "near_52w_high",
+      "pivot_r1_breakout",
+      "52w_breakout"
+    ]
+  },
+  {
+    "timestamp": "2026-07-31T04:05:49.202391",
+    "date": "2026-07-31",
+    "ticker": "ICICIBANK.NS",
+    "session": "morning",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 95,
+    "entry": 1437.6,
+    "stop_loss": 1400.42,
+    "target": 1511.96,
+    "reason": "paper morning",
+    "patterns": [
+      "stoch_rsi_overbought_reversal",
+      "adx_strong_trend_up",
+      "rsi_bullish_divergence",
+      "overbought_macd_divergence",
+      "full_bullish_alignment",
+      "pivot_point_test"
+    ]
+  },
+  {
+    "timestamp": "2026-07-31T04:05:49.203646",
+    "date": "2026-07-31",
+    "ticker": "ABCAPITAL.NS",
+    "session": "morning",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 65.0,
+    "entry": 409.5,
+    "stop_loss": 395.07,
+    "target": 438.35,
+    "reason": "paper morning",
+    "patterns": [
+      "stoch_rsi_oversold_reversal",
+      "inside_bar",
+      "adx_ranging_market",
+      "supertrend_bullish",
+      "full_bullish_alignment",
+      "near_52w_high",
+      "low_volume_drift",
+      "rsi_bearish_divergence"
+    ]
+  },
+  {
+    "timestamp": "2026-07-31T04:05:49.205314",
+    "date": "2026-07-31",
+    "ticker": "SIEMENS.NS",
+    "session": "morning",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 95,
+    "entry": 3746.9,
+    "stop_loss": 3596.96,
+    "target": 4046.79,
+    "reason": "paper morning",
+    "patterns": [
+      "hammer",
+      "engulfing_bullish",
+      "supertrend_bullish",
+      "full_bullish_alignment",
+      "doji"
+    ]
+  },
+  {
+    "timestamp": "2026-07-31T04:05:49.207369",
+    "date": "2026-07-31",
+    "ticker": "NHPC.NS",
+    "session": "morning",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 60.0,
+    "entry": 78.2,
+    "stop_loss": 75.84,
+    "target": 82.92,
+    "reason": "paper morning",
+    "patterns": [
+      "ema_death_cross",
+      "stoch_rsi_oversold_reversal",
+      "hammer",
+      "supertrend_bullish",
+      "low_volume_drift",
+      "pivot_point_test"
+    ]
+  },
+  {
+    "timestamp": "2026-07-31T04:05:49.208143",
+    "date": "2026-07-31",
+    "ticker": "IDFCFIRSTB.NS",
+    "session": "morning",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 87.5,
+    "entry": 85.45,
+    "stop_loss": 82.37,
+    "target": 91.61,
+    "reason": "paper morning",
+    "patterns": [
+      "adx_strong_trend_up",
+      "hammer",
+      "supertrend_bullish",
+      "full_bullish_alignment",
+      "pivot_point_test"
+    ]
   }
 ]

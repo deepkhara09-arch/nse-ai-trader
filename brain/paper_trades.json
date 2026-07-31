@@ -37,8 +37,8 @@
         "\u26a0 Recent forward-tested call accuracy only 15% (last 20 scored) \u2014 raising the conviction bar",
         "RSI=63 elevated"
       ],
-      "current_price": 870.6,
-      "unrealized_pnl": 178.5,
+      "current_price": 870.65,
+      "unrealized_pnl": 178.85,
       "max_held_days": 13,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -86,8 +86,8 @@
         "Broke below Pivot S1 support \u2014 bearish",
         "StochRSI overbought with bearish candle \u2014 reversal"
       ],
-      "current_price": 3755.4,
-      "unrealized_pnl": 99.4,
+      "current_price": 3742.6,
+      "unrealized_pnl": 86.6,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -139,8 +139,8 @@
         "\u2713 Daily setup aligned with the higher-timeframe trend",
         "Near upper Bollinger Band"
       ],
-      "current_price": 1510.3,
-      "unrealized_pnl": -84.6,
+      "current_price": 1507.4,
+      "unrealized_pnl": -102.0,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -190,8 +190,8 @@
         "MACD histogram negative",
         "StochRSI overbought with bearish candle \u2014 reversal"
       ],
-      "current_price": 1437.1,
-      "unrealized_pnl": 40.8,
+      "current_price": 1435.4,
+      "unrealized_pnl": 30.6,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -740,16 +740,23 @@
       "capital": 64779.14,
       "open_positions": 5,
       "daily_pnl": -218.45
+    },
+    {
+      "date": "2026-07-31",
+      "portfolio_value": 100312.04,
+      "capital": 72818.09,
+      "open_positions": 4,
+      "daily_pnl": 68.95
     }
   ],
   "daily_pnl_today": 68.95049999999955,
-  "last_snapshot_date": "2026-07-30",
+  "last_snapshot_date": "2026-07-31",
   "lifetime_wins": 4,
   "lifetime_losses": 4,
   "lifetime_pnl": 117.99,
   "last_pnl_reset_date": "2026-07-31",
   "max_drawdown_pct": 1.07,
-  "current_drawdown_pct": 0.69,
+  "current_drawdown_pct": 0.89,
   "portfolio_peak": 101210.28,
-  "sessions_since_peak": 8
+  "sessions_since_peak": 9
 }

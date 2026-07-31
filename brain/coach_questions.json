@@ -1,102 +1,102 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_up, pivot_s1_breakdown, full_bullish_alignment mean for a swing trade on IDFCFIRSTB? Current RSI=65, MACD hist=+0.2968, Vol=0.7x average. Signal is BUY.",
-    "context": {
-      "ticker": "IDFCFIRSTB.NS",
-      "signal": "BUY",
-      "patterns": "adx_strong_trend_up, pivot_s1_breakdown, full_bullish_alignment",
-      "rsi": 64.9
-    },
-    "queued_at": "2026-07-31T09:45:49.979812"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of tweezer_bottom, supertrend_bullish, doji mean for a swing trade on SIEMENS? Current RSI=74, MACD hist=+11.8930, Vol=0.6x average. Signal is BUY.",
-    "context": {
-      "ticker": "SIEMENS.NS",
-      "signal": "BUY",
-      "patterns": "tweezer_bottom, supertrend_bullish, doji",
-      "rsi": 74.1
-    },
-    "queued_at": "2026-07-31T09:45:49.980620"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of stoch_rsi_overbought_reversal, tweezer_top, engulfing_bearish mean for a swing trade on PIDILITIND? Current RSI=60, MACD hist=+3.9356, Vol=1.1x average. Signal is SELL.",
-    "context": {
-      "ticker": "PIDILITIND.NS",
-      "signal": "SELL",
-      "patterns": "stoch_rsi_overbought_reversal, tweezer_top, engulfing_bearish",
-      "rsi": 60.0
-    },
-    "queued_at": "2026-07-31T09:45:49.981403"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of rsi_bearish_divergence, outside_bar, engulfing_bullish mean for a swing trade on SBIN? Current RSI=46, MACD hist=-2.8937, Vol=0.7x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of outside_bar, engulfing_bullish, rsi_bearish_divergence mean for a swing trade on SBIN? Current RSI=46, MACD hist=-2.8937, Vol=0.7x average. Signal is BUY.",
     "context": {
       "ticker": "SBIN.NS",
       "signal": "BUY",
-      "patterns": "rsi_bearish_divergence, outside_bar, engulfing_bullish",
+      "patterns": "outside_bar, engulfing_bullish, rsi_bearish_divergence",
       "rsi": 46.2
     },
-    "queued_at": "2026-07-31T09:45:50.075481"
+    "queued_at": "2026-07-31T10:13:05.692337"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of low_volume_drift, rsi_bearish_divergence, macd_bearish_crossover mean for a swing trade on UNIONBANK? Current RSI=58, MACD hist=-0.0357, Vol=0.5x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of stoch_rsi_oversold_reversal, rsi_bearish_divergence, pivot_point_test mean for a swing trade on UNIONBANK? Current RSI=58, MACD hist=-0.0357, Vol=0.5x average. Signal is BUY.",
     "context": {
       "ticker": "UNIONBANK.NS",
       "signal": "BUY",
-      "patterns": "low_volume_drift, rsi_bearish_divergence, macd_bearish_crossover",
+      "patterns": "stoch_rsi_oversold_reversal, rsi_bearish_divergence, pivot_point_test",
       "rsi": 58.4
     },
-    "queued_at": "2026-07-31T09:45:50.080748"
+    "queued_at": "2026-07-31T10:13:05.699140"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of low_volume_drift, adx_ranging_market mean for a swing trade on ABCAPITAL? Current RSI=40, MACD hist=-2.3259, Vol=0.3x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of adx_ranging_market, low_volume_drift mean for a swing trade on ABCAPITAL? Current RSI=40, MACD hist=-2.3259, Vol=0.3x average. Signal is BUY.",
     "context": {
       "ticker": "ABCAPITAL.NS",
       "signal": "BUY",
-      "patterns": "low_volume_drift, adx_ranging_market",
+      "patterns": "adx_ranging_market, low_volume_drift",
       "rsi": 40.2
     },
-    "queued_at": "2026-07-31T09:45:50.081539"
+    "queued_at": "2026-07-31T10:13:05.699928"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of stoch_rsi_overbought_reversal, tweezer_top, engulfing_bearish mean for a swing trade on PIDILITIND? Current RSI=60, MACD hist=+3.9356, Vol=1.1x average. Signal is SELL.",
+    "question": "In Indian NSE markets, what does the combination of stoch_rsi_overbought_reversal, strong_bearish_marubozu, inside_bar mean for a swing trade on PFC? Current RSI=70, MACD hist=+2.7151, Vol=1.4x average. Signal is BUY.",
+    "context": {
+      "ticker": "PFC.NS",
+      "signal": "BUY",
+      "patterns": "stoch_rsi_overbought_reversal, strong_bearish_marubozu, inside_bar",
+      "rsi": 69.8
+    },
+    "queued_at": "2026-07-31T10:13:05.700698"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of stoch_rsi_overbought_reversal, tweezer_top, bb_upper_rejection mean for a swing trade on PIDILITIND? Current RSI=60, MACD hist=+3.9356, Vol=1.1x average. Signal is SELL.",
     "context": {
       "ticker": "PIDILITIND.NS",
       "signal": "SELL",
-      "patterns": "stoch_rsi_overbought_reversal, tweezer_top, engulfing_bearish",
+      "patterns": "stoch_rsi_overbought_reversal, tweezer_top, bb_upper_rejection",
       "rsi": 60.0
     },
-    "queued_at": "2026-07-31T09:45:50.082785"
+    "queued_at": "2026-07-31T10:13:05.701418"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of tweezer_bottom, supertrend_bullish, doji mean for a swing trade on SIEMENS? Current RSI=74, MACD hist=+11.8930, Vol=0.6x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of morning_star, doji, tweezer_bottom mean for a swing trade on SIEMENS? Current RSI=74, MACD hist=+11.8930, Vol=0.6x average. Signal is BUY.",
     "context": {
       "ticker": "SIEMENS.NS",
       "signal": "BUY",
-      "patterns": "tweezer_bottom, supertrend_bullish, doji",
+      "patterns": "morning_star, doji, tweezer_bottom",
       "rsi": 74.1
     },
-    "queued_at": "2026-07-31T09:45:50.083531"
+    "queued_at": "2026-07-31T10:13:05.702153"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of low_volume_drift, ema_death_cross, supertrend_bullish mean for a swing trade on NHPC? Current RSI=38, MACD hist=-0.2898, Vol=0.5x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of adx_ranging_market, shooting_star, rsi_bearish_divergence mean for a swing trade on JSWSTEEL? Current RSI=58, MACD hist=+4.1444, Vol=0.6x average. Signal is BUY.",
     "context": {
-      "ticker": "NHPC.NS",
+      "ticker": "JSWSTEEL.NS",
       "signal": "BUY",
-      "patterns": "low_volume_drift, ema_death_cross, supertrend_bullish",
-      "rsi": 38.4
+      "patterns": "adx_ranging_market, shooting_star, rsi_bearish_divergence",
+      "rsi": 58.0
     },
-    "queued_at": "2026-07-31T09:45:50.088094"
+    "queued_at": "2026-07-31T10:13:05.705078"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_up, pivot_s1_breakdown, full_bullish_alignment mean for a swing trade on IDFCFIRSTB? Current RSI=65, MACD hist=+0.2968, Vol=0.7x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of pivot_point_test, spinning_top, stoch_rsi_oversold_reversal mean for a long_term trade on LICI? Current RSI=25, MACD hist=-2.3307, Vol=0.7x average. Signal is BUY.",
+    "context": {
+      "ticker": "LICI.NS",
+      "signal": "BUY",
+      "patterns": "pivot_point_test, spinning_top, stoch_rsi_oversold_reversal",
+      "rsi": 25.1
+    },
+    "queued_at": "2026-07-31T10:13:05.705829"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of adx_ranging_market, pivot_point_test, full_bearish_alignment mean for a swing trade on POWERGRID? Current RSI=54, MACD hist=+0.2472, Vol=0.9x average. Signal is BUY.",
+    "context": {
+      "ticker": "POWERGRID.NS",
+      "signal": "BUY",
+      "patterns": "adx_ranging_market, pivot_point_test, full_bearish_alignment",
+      "rsi": 54.0
+    },
+    "queued_at": "2026-07-31T10:13:05.706535"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of pivot_point_test, adx_strong_trend_up, full_bullish_alignment mean for a swing trade on IDFCFIRSTB? Current RSI=65, MACD hist=+0.2968, Vol=0.7x average. Signal is BUY.",
     "context": {
       "ticker": "IDFCFIRSTB.NS",
       "signal": "BUY",
-      "patterns": "adx_strong_trend_up, pivot_s1_breakdown, full_bullish_alignment",
+      "patterns": "pivot_point_test, adx_strong_trend_up, full_bullish_alignment",
       "rsi": 64.9
     },
-    "queued_at": "2026-07-31T09:45:50.088867"
+    "queued_at": "2026-07-31T10:13:05.707635"
   }
 ]

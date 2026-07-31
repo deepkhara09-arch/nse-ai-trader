@@ -3078,5 +3078,35 @@
     "ts": "2026-07-31T09:45:50.089640",
     "detail": "Dropped \u2014 no longer meets threshold (was 66/100)",
     "confidence": 0
+  },
+  {
+    "type": "new",
+    "ticker": "ICICIBANK.NS",
+    "nse_code": "ICICIBANK",
+    "signal": "BUY",
+    "date": "2026-07-31",
+    "ts": "2026-07-31T10:13:05.708635",
+    "detail": "New BUY recommendation \u2014 confidence 72/100",
+    "confidence": 72.5
+  },
+  {
+    "type": "new",
+    "ticker": "MARICO.NS",
+    "nse_code": "MARICO",
+    "signal": "BUY",
+    "date": "2026-07-31",
+    "ts": "2026-07-31T10:13:05.708635",
+    "detail": "New BUY recommendation \u2014 confidence 71/100",
+    "confidence": 71.1
+  },
+  {
+    "type": "updated",
+    "ticker": "SIEMENS.NS",
+    "nse_code": "SIEMENS",
+    "signal": "BUY",
+    "date": "2026-07-31",
+    "ts": "2026-07-31T10:13:05.708635",
+    "detail": "Confidence \u25bc4 (77 \u2192 73) | Rank \u25bc1 (#4 \u2192 #5) | Target 1 moved \u20b94045.02 \u2192 \u20b94006.62",
+    "confidence": 72.9
   }
 ]

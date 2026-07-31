@@ -1,27 +1,27 @@
 {
-  "date": "2026-07-30",
-  "session": "preclose",
+  "date": "2026-07-31",
+  "session": "preopen",
   "nifty": {
     "symbol": "^NSEI",
-    "value": 24250.2,
-    "day_change_pct": 1.1,
+    "value": 24317.15,
+    "day_change_pct": 0.28,
     "trend_5d": "up",
     "trend_20d": "sideways",
-    "ath_pct_60d": -1.14
+    "ath_pct_60d": -0.87
   },
   "vix": {
-    "value": 12.01,
+    "value": 12.16,
     "level": "normal",
-    "percentile_30d": 10.0,
-    "avg_30d": 13.01
+    "percentile_30d": 13.0,
+    "avg_30d": 12.98
   },
   "bank_nifty": {
     "symbol": "^NSEBANK",
-    "value": 57205.9,
-    "day_change_pct": 0.79,
+    "value": 57147.5,
+    "day_change_pct": -0.1,
     "trend_5d": "up",
     "trend_20d": "down",
-    "ath_pct_60d": -2.56,
+    "ath_pct_60d": -2.65,
     "diverging": false
   },
   "sectors": {
@@ -35,10 +35,10 @@
     },
     "Pharma": {
       "symbol": "PHARMABEES.NS",
-      "value": 27.08,
-      "day_change_pct": 1.31,
-      "trend_5d": "up",
-      "trend_20d": "strong_up",
+      "value": 27.09,
+      "day_change_pct": 0.04,
+      "trend_5d": "strong_up",
+      "trend_20d": "up",
       "ath_pct_60d": -0.62
     },
     "Bank": {
@@ -72,67 +72,67 @@
   "broad_market_strength": true,
   "intraday_regime": "mixed",
   "macro": {
-    "date": "2026-07-30",
-    "session": "midday",
-    "generated_at": "2026-07-30T07:12:19.499419",
-    "global_score": -0.128,
-    "india_score": 0.5,
-    "overall_score": 0.155,
+    "date": "2026-07-31",
+    "session": "preopen",
+    "generated_at": "2026-07-31T03:05:52.649471",
+    "global_score": 0.252,
+    "india_score": 0.0,
+    "overall_score": 0.139,
     "mood": "neutral",
     "drivers": [
-      "Ford\u2019s big-truck bet is paying off \u2014 and Wall Street is taking notice",
-      "Why SoFi\u2019s stock drops, even after its earnings beat expectations",
-      "Qualcomm\u2019s stock falls as memory woes weigh on earnings",
-      "Starbucks is becoming cool again. Here\u2019s how it pulled off its turnaround.",
-      "Robinhood puts up record revenue as volatility drives a trading bonanza",
-      "Chipotle lifts its sales forecast even as a lettuce-linked outbreak slows foot traffic",
-      "\u2018I\u2019m in my peak earning years\u2019: I\u2019m working beyond 70. Will that help increase my Social Security?",
-      "Why the USO oil ETF is a better buy than crude futures as the Iran war rages"
+      "Corporate insiders are sending warning signals about the stock market",
+      "\u2018Don\u2019t get suckered like I did\u2019: I paid $185 to the wrong passport website. Can I get my money back?",
+      "My friend and her husband own real estate. How can her children from a previous marriage get their fair share?",
+      "Empty seats? Concert giant Live Nation says ticket sales are actually at record levels.",
+      "Jersey Mike\u2019s spent almost \u2018zero dollars\u2019 on digital marketing. That\u2019s now changing.",
+      "Implosion of Situational Awareness hedge fund has Wall Street betting the bottom is in for the AI trade",
+      "Get ready to buy the dip in tech stocks. Why the recent selling won\u2019t break the bull market.",
+      "Can credit cards survive AI shopping? Why Mastercard\u2019s CEO says they\u2019ll \u2018prevail\u2019 in this new era."
     ],
     "global_cues": {
       "dow": {
-        "last": 51594.14,
-        "chg_pct": -2.19
+        "last": 52208.06,
+        "chg_pct": 1.19
       },
       "nasdaq": {
-        "last": 24442.94,
-        "chg_pct": -1.74
+        "last": 25122.18,
+        "chg_pct": 2.78
       },
       "sp500": {
-        "last": 7316.15,
-        "chg_pct": -1.52
+        "last": 7437.63,
+        "chg_pct": 1.66
       },
       "nikkei": {
-        "last": 61867.43,
-        "chg_pct": 0.71
+        "last": 64572.25,
+        "chg_pct": 4.37
       },
       "crude": {
-        "last": 84.46,
-        "chg_pct": 6.56
+        "last": 82.28,
+        "chg_pct": -1.57
       },
       "usdinr": {
-        "last": 95.69,
-        "chg_pct": 0.09
+        "last": 95.67,
+        "chg_pct": -0.06
       },
       "gold": {
-        "last": 4034.7,
-        "chg_pct": -0.04
+        "last": 4135.8,
+        "chg_pct": 0.87
       }
     },
-    "summary": "Overall macro mood is neutral (+0.15). US Dow -2.2% overnight. Crude +6.6%. USD/INR +0.1%. Notable: Crude oil spike; Geopolitical conflict / war.",
+    "summary": "Overall macro mood is neutral (+0.14). US Dow +1.2% overnight. Crude -1.6%. USD/INR -0.1%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
-      "India imports most of its oil \u2014 crude spikes hurt rupee, inflation, OMCs.",
-      "Geopolitical shocks trigger global risk-off; gold up, equities down initially."
+      "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
+      "Trade-war headlines spook global markets; IT & export names react most."
     ],
     "playbook_bias": "risk_off",
     "article_count": 60
   },
   "macro_risk_factor": 1.0,
   "fii_dii": {
-    "date": "2026-07-30",
-    "fii_net_cr": 2981.87,
-    "dii_net_cr": 998.02,
-    "combined_net_cr": 3979.89,
+    "date": "2026-07-31",
+    "fii_net_cr": 3623.51,
+    "dii_net_cr": -1864.03,
+    "combined_net_cr": 1759.48,
     "signal": "strong_inflow",
     "ok": true,
     "error": "",
@@ -304,16 +304,22 @@
         "fii": 2981.87,
         "dii": 998.02,
         "combined": 3979.89
+      },
+      {
+        "date": "2026-07-31",
+        "fii": 3623.51,
+        "dii": -1864.03,
+        "combined": 1759.48
       }
     ]
   },
   "flow_tailwind": true,
   "pcr": {
-    "date": "2026-07-30",
+    "date": "2026-07-31",
     "pcr": 1.294,
     "reading": "bullish_bias",
-    "total_pe_oi": 2249116,
-    "total_ce_oi": 1737933,
+    "total_pe_oi": 2226419,
+    "total_ce_oi": 1721038,
     "spot": 24317.15,
     "max_pain": 24250.0,
     "max_pain_dist_pct": 0.28,

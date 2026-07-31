@@ -1,13 +1,13 @@
 {
   "phase": "paper_trading",
   "day": 29,
-  "session": "morning",
+  "session": "preopen",
   "start_date": "2026-06-22",
   "phase_start_date": "2026-07-15",
   "last_run_date": "2026-07-30",
   "last_counted_date": "2026-07-30",
   "cohort_last_tick_date": "2026-07-30",
-  "last_updated": "2026-07-30T10:12:15.665659",
+  "last_updated": "2026-07-31T03:05:54.834772",
   "focus_stocks": [
     "MARICO.NS",
     "SBIN.NS",
@@ -101,7 +101,8 @@
     "[2026-07-29] Focus refresh \u2014 promoted: ['IDFCFIRSTB'] | demoted: ['FEDERALBNK']",
     "[2026-07-29] Cohort batch #15 complete \u2014 30 candidates ready",
     "[2026-07-30] Pre-open macro: neutral (+0.19)",
-    "[2026-07-30] Cohort batch #16 complete \u2014 30 candidates ready"
+    "[2026-07-30] Cohort batch #16 complete \u2014 30 candidates ready",
+    "[2026-07-31] Pre-open macro: neutral (+0.14)"
   ],
   "alert_sent": false,
   "schema_version": 11,
@@ -331,11 +332,6 @@
     "scored_date": "2026-07-30"
   },
   "sessions_done": {
-    "preopen": "2026-07-30",
-    "morning": "2026-07-30",
-    "midday": "2026-07-30",
-    "afternoon": "2026-07-30",
-    "intraday_close": "2026-07-30",
-    "preclose": "2026-07-30"
+    "preopen": "2026-07-31"
   }
 }

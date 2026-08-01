@@ -521,12 +521,18 @@ def _check_exits(book: dict, stock_data: Dict, session: str, patterns_db: Dict):
                 part_pnl = round(part_pnl_gross - part_costs, 2)
                 book["capital"] += (pos["invested"] * half / pos["qty"]) + part_pnl
                 book["daily_pnl_today"] = book.get("daily_pnl_today", 0) + part_pnl
-                # Shrink the remaining position and de-risk it to breakeven.
+                # Shrink the remaining position and lock in a small PROFIT on the
+                # runner — not dead breakeven. Live data (NESTLEIND) showed a
+                # breakeven stop gets clipped by a normal post-T1 pullback at
+                # ~-0.2%, killing the runner before it can reach target. Instead we
+                # protect ~1/3 of the gain to T1: enough room to breathe, but the
+                # remainder can no longer become a loss.
                 remaining = pos["qty"] - half
                 pos["invested"] = round(pos["invested"] * remaining / pos["qty"], 2)
                 pos["qty"]      = remaining
                 pos["t1_booked"] = True
-                pos["stop_loss"] = round(pos["entry"] * (1.001 if pos["action"] == "BUY" else 0.999), 2)
+                lock = pos["entry"] + (t1 - pos["entry"]) * 0.33   # keep 1/3 of the T1 move
+                pos["stop_loss"] = round(lock, 2)
                 pos["trailing_active"] = True
                 _record_closed_trade(book, {
                     **pos, "close_date": today, "close_session": session,

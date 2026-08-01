@@ -86,7 +86,12 @@ CONCURRENT_BATCH_CAP = 5
 # ── Capital & risk ────────────────────────────────────────────────────────────
 INITIAL_CAPITAL        = 100_000   # virtual INR
 MAX_POSITION_SIZE_PCT  = 0.12      # max 12% per trade (normal market)
-MAX_OPEN_POSITIONS     = 5         # never hold more than 5 at once
+MAX_OPEN_POSITIONS     = 6         # 5→6: live data showed abundant signals (46 of
+                                   # 60 recent reads were BUY) but capital only ~63%
+                                   # deployed — the 5-cap, not selectivity, was the
+                                   # bottleneck to reaching 25 validation trades.
+                                   # 6×12% = 72% max, still a cash buffer, and the
+                                   # drawdown/conviction sizing scales risk down.
 MAX_DAILY_LOSS_PCT     = 0.03      # stop all trading if day loss > 3%
 # Drawdown-scaled sizing (from the equity peak, not just today). Deliberately
 # NEVER halts trading — a hard "stop all new trades" wall can DEADLOCK the tool

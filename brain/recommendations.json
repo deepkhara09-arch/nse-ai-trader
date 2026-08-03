@@ -3,10 +3,10 @@
     "ticker": "NESTLEIND.NS",
     "nse_code": "NESTLEIND",
     "company_name": "Nestle India Ltd",
-    "date": "2026-07-31",
-    "generated_at": "2026-07-31 10:13 UTC",
+    "date": "2026-08-03",
+    "generated_at": "2026-08-03 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -40,7 +40,7 @@
     "pattern_score": 1.0,
     "confluence_bonus": 10,
     "paper_bonus": 0.0,
-    "success_probability": 0.523,
+    "success_probability": 0.526,
     "base_success_prob": 0.529,
     "profit_probability": 0.01,
     "composite_score": 46.97,
@@ -57,9 +57,9 @@
       "regime"
     ],
     "backtest_tested": true,
-    "backtest_hit_5d": 0.51,
-    "backtest_hit_10d": 0.51,
-    "backtest_sample": 51,
+    "backtest_hit_5d": 0.519,
+    "backtest_hit_10d": 0.519,
+    "backtest_sample": 52,
     "hist_long_trend": "strong_uptrend",
     "hist_52w_position": 100.0,
     "hist_personality": "trender",
@@ -86,6 +86,7 @@
       "Near 52-week high (100% of range) \u2014 breakout zone",
       "Clean trender aligned with its long-term uptrend",
       "\u2713 Daily setup aligned with the higher-timeframe trend",
+      "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
       "Valuation: P/E 75.2x",
       "ROCE: 92.2%",
       "Revenue growing 25.2% YoY",
@@ -101,16 +102,16 @@
       "Resistance at \u20b91600.00 is natural target",
       "Latest news: 'Nestle India Ltd soars 1.19%, up for third straight session - Business'",
       "Confluence: 6 independent signal families agree (trend, momentum, volume, pattern, news, regime)",
-      "History backtest: this kind of BUY setup worked 51% of the time over ~1 week on this stock (sample: 51)"
+      "History backtest: this kind of BUY setup worked 52% of the time over ~1 week on this stock (sample: 52)"
     ],
     "patterns_seen": [
       "near_52w_high",
-      "pivot_point_test",
-      "pivot_r1_breakout",
-      "three_white_soldiers",
+      "supertrend_bullish",
       "bb_upper_rejection",
+      "pivot_point_test",
       "full_bullish_alignment",
-      "supertrend_bullish"
+      "three_white_soldiers",
+      "pivot_r1_breakout"
     ],
     "reliable_patterns": [],
     "nearest_support": 1443.5,
@@ -136,19 +137,19 @@
     "paper_win_rate": 0.5,
     "paper_pnl": 118.89,
     "paper_expectancy": 59.45,
-    "market_mood": "neutral",
+    "market_mood": "bearish",
     "market_warning": [
-      "Nifty choppy intraday \u2014 wait for cleaner setups"
+      "Global macro risk-off (-0.31) \u2014 Overall macro mood is risk-off (-0.31). US Dow +0.5% overnight. Crude -5.8%. USD/INR -0.3%. Notable: Geopolitical confli"
     ]
   },
   {
     "ticker": "SIEMENS.NS",
     "nse_code": "SIEMENS",
     "company_name": "SIEMENS.NS",
-    "date": "2026-07-31",
-    "generated_at": "2026-07-31 10:13 UTC",
+    "date": "2026-08-03",
+    "generated_at": "2026-08-03 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -183,9 +184,9 @@
     "confluence_bonus": 5.0,
     "paper_bonus": 0.0,
     "success_probability": 0.496,
-    "base_success_prob": 0.531,
-    "profit_probability": 0.593,
-    "composite_score": 57.57,
+    "base_success_prob": 0.526,
+    "profit_probability": 0.578,
+    "composite_score": 56.87,
     "focus_rank": 5,
     "rank_delta": 0,
     "intention": "BUY SIEMENS for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
@@ -197,9 +198,9 @@
       "news"
     ],
     "backtest_tested": true,
-    "backtest_hit_5d": 0.413,
-    "backtest_hit_10d": 0.391,
-    "backtest_sample": 46,
+    "backtest_hit_5d": 0.426,
+    "backtest_hit_10d": 0.404,
+    "backtest_sample": 47,
     "hist_long_trend": "strong_uptrend",
     "hist_52w_position": 46.2,
     "hist_personality": "trender",
@@ -207,7 +208,7 @@
     "data_confidence": "Estimated",
     "data_confidence_key": "estimated",
     "data_confidence_note": "Only 0 paper trade(s) \u2014 probability is an indicator-based estimate, not yet proven",
-    "expected_edge_r": 0.593,
+    "expected_edge_r": 0.578,
     "buy_score": 13.8,
     "sell_score": 1.5,
     "reasons": [
@@ -215,8 +216,8 @@
       "MACD histogram positive",
       "Positive news sentiment (0.30)",
       "News sentiment improving across sessions",
-      "Candlestick: morning star",
       "Candlestick: tweezer bottom",
+      "Candlestick: morning star",
       "Candlestick: dragonfly doji",
       "Supertrend bullish \u2014 price above trend band",
       "Delivery 33% weak \u2014 move may be intraday driven",
@@ -224,6 +225,7 @@
       "Volatility compressed vs its norm \u2014 primed for an expansion move",
       "Clean trender aligned with its long-term uptrend",
       "\u2713 Daily setup aligned with the higher-timeframe trend",
+      "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
       "Valuation: P/E 79.2x",
       "ROCE: 9.5%",
       "Revenue growing 14.6% YoY",
@@ -239,17 +241,17 @@
       "Resistance at \u20b93859.73 is natural target",
       "Latest news: 'Siemens Energy India shares fall 2.26% in early trade - Moneycontrol.c'",
       "Confluence: 4 independent signal families agree (trend, momentum, pattern, news)",
-      "History backtest: this kind of BUY setup worked 41% of the time over ~1 week on this stock (sample: 46)"
+      "History backtest: this kind of BUY setup worked 43% of the time over ~1 week on this stock (sample: 47)"
     ],
     "patterns_seen": [
+      "supertrend_bullish",
+      "inside_bar",
+      "hammer",
+      "tweezer_bottom",
+      "full_bullish_alignment",
       "morning_star",
       "doji",
-      "tweezer_bottom",
-      "dragonfly_doji",
-      "hammer",
-      "inside_bar",
-      "full_bullish_alignment",
-      "supertrend_bullish"
+      "dragonfly_doji"
     ],
     "reliable_patterns": [],
     "nearest_support": 3639.71,
@@ -275,19 +277,19 @@
     "paper_win_rate": 0,
     "paper_pnl": 0,
     "paper_expectancy": 0,
-    "market_mood": "neutral",
+    "market_mood": "bearish",
     "market_warning": [
-      "Nifty choppy intraday \u2014 wait for cleaner setups"
+      "Global macro risk-off (-0.31) \u2014 Overall macro mood is risk-off (-0.31). US Dow +0.5% overnight. Crude -5.8%. USD/INR -0.3%. Notable: Geopolitical confli"
     ]
   },
   {
     "ticker": "ICICIBANK.NS",
     "nse_code": "ICICIBANK",
     "company_name": "ICICI Bank Ltd",
-    "date": "2026-07-31",
-    "generated_at": "2026-07-31 10:13 UTC",
+    "date": "2026-08-03",
+    "generated_at": "2026-08-03 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -321,12 +323,12 @@
     "pattern_score": 7.0,
     "confluence_bonus": 7.5,
     "paper_bonus": 0.0,
-    "success_probability": 0.526,
-    "base_success_prob": 0.549,
-    "profit_probability": 0.647,
-    "composite_score": 55.92,
+    "success_probability": 0.52,
+    "base_success_prob": 0.544,
+    "profit_probability": 0.632,
+    "composite_score": 55.22,
     "focus_rank": 9,
-    "rank_delta": -3,
+    "rank_delta": 0,
     "intention": "BUY ICICIBANK for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
     "confluence_count": 5,
     "confluence_families": [
@@ -337,9 +339,9 @@
       "regime"
     ],
     "backtest_tested": true,
-    "backtest_hit_5d": 0.473,
-    "backtest_hit_10d": 0.509,
-    "backtest_sample": 55,
+    "backtest_hit_5d": 0.464,
+    "backtest_hit_10d": 0.5,
+    "backtest_sample": 56,
     "hist_long_trend": "uptrend",
     "hist_52w_position": 88.1,
     "hist_personality": "choppy",
@@ -347,7 +349,7 @@
     "data_confidence": "Estimated",
     "data_confidence_key": "estimated",
     "data_confidence_note": "Only 0 paper trade(s) \u2014 probability is an indicator-based estimate, not yet proven",
-    "expected_edge_r": 0.647,
+    "expected_edge_r": 0.632,
     "buy_score": 11.62,
     "sell_score": 3.5,
     "reasons": [
@@ -361,6 +363,7 @@
       "Delivery 45% above avg \u2014 institutional buying",
       "In a long-term uptrend (2yr) \u2014 trend on our side",
       "\u2713 Daily setup aligned with the higher-timeframe trend",
+      "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
       "Valuation: P/E 18.6x",
       "ROE: 16.1%",
       "ROCE: 12.9%",
@@ -377,15 +380,15 @@
       "Resistance at \u20b91461.86 is natural target",
       "Latest news: 'ICICI Bank Share Price Today, ICICI Bank Stock Price Live NSE/BSE Upda'",
       "Confluence: 5 independent signal families agree (trend, volume, pattern, news, regime)",
-      "History backtest: this kind of BUY setup worked 47% of the time over ~1 week on this stock (sample: 55)"
+      "History backtest: this kind of BUY setup worked 46% of the time over ~1 week on this stock (sample: 56)"
     ],
     "patterns_seen": [
-      "pivot_point_test",
+      "supertrend_bullish",
       "adx_strong_trend_up",
+      "pivot_point_test",
       "rsi_bearish_divergence",
-      "spinning_top",
       "full_bullish_alignment",
-      "supertrend_bullish"
+      "spinning_top"
     ],
     "reliable_patterns": [
       "full_bullish_alignment",
@@ -414,19 +417,19 @@
     "paper_win_rate": 0,
     "paper_pnl": 0,
     "paper_expectancy": 0,
-    "market_mood": "neutral",
+    "market_mood": "bearish",
     "market_warning": [
-      "Nifty choppy intraday \u2014 wait for cleaner setups"
+      "Global macro risk-off (-0.31) \u2014 Overall macro mood is risk-off (-0.31). US Dow +0.5% overnight. Crude -5.8%. USD/INR -0.3%. Notable: Geopolitical confli"
     ]
   },
   {
     "ticker": "MARICO.NS",
     "nse_code": "MARICO",
     "company_name": "Marico Ltd",
-    "date": "2026-07-31",
-    "generated_at": "2026-07-31 10:13 UTC",
+    "date": "2026-08-03",
+    "generated_at": "2026-08-03 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -460,7 +463,7 @@
     "pattern_score": 1.0,
     "confluence_bonus": 10,
     "paper_bonus": 0.0,
-    "success_probability": 0.551,
+    "success_probability": 0.554,
     "base_success_prob": 0.562,
     "profit_probability": 0.062,
     "composite_score": 49.49,
@@ -477,9 +480,9 @@
       "regime"
     ],
     "backtest_tested": true,
-    "backtest_hit_5d": 0.526,
-    "backtest_hit_10d": 0.579,
-    "backtest_sample": 57,
+    "backtest_hit_5d": 0.534,
+    "backtest_hit_10d": 0.586,
+    "backtest_sample": 58,
     "hist_long_trend": "strong_uptrend",
     "hist_52w_position": 100.0,
     "hist_personality": "mean_reverter",
@@ -502,6 +505,7 @@
       "In a long-term strong uptrend (2yr) \u2014 trend on our side",
       "Near 52-week high (100% of range) \u2014 breakout zone",
       "\u2713 Daily setup aligned with the higher-timeframe trend",
+      "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
       "Valuation: P/E 63.9x",
       "ROE: 41.4%",
       "ROCE: 40.0%",
@@ -517,16 +521,16 @@
       "Resistance at \u20b9890.00 is natural target",
       "Latest news: 'Marico Limited (NSE:MARICO) Looks Interesting, And It's About To Pay A'",
       "Confluence: 6 independent signal families agree (trend, momentum, volume, pattern, news, regime)",
-      "History backtest: this kind of BUY setup worked 53% of the time over ~1 week on this stock (sample: 57)"
+      "History backtest: this kind of BUY setup worked 53% of the time over ~1 week on this stock (sample: 58)"
     ],
     "patterns_seen": [
-      "stoch_rsi_overbought_reversal",
-      "rsi_bearish_divergence",
-      "near_52w_high",
       "pivot_s1_breakdown",
+      "near_52w_high",
       "bb_upper_rejection",
+      "adx_strong_trend_up",
+      "rsi_bearish_divergence",
       "full_bullish_alignment",
-      "adx_strong_trend_up"
+      "stoch_rsi_overbought_reversal"
     ],
     "reliable_patterns": [],
     "nearest_support": 856.13,
@@ -552,9 +556,9 @@
     "paper_win_rate": 1.0,
     "paper_pnl": 145.39,
     "paper_expectancy": 145.39,
-    "market_mood": "neutral",
+    "market_mood": "bearish",
     "market_warning": [
-      "Nifty choppy intraday \u2014 wait for cleaner setups"
+      "Global macro risk-off (-0.31) \u2014 Overall macro mood is risk-off (-0.31). US Dow +0.5% overnight. Crude -5.8%. USD/INR -0.3%. Notable: Geopolitical confli"
     ]
   }
 ]

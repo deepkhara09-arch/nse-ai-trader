@@ -61,7 +61,7 @@
   "market_mood": "bearish",
   "trade_allowed": true,
   "warnings": [
-    "Global macro risk-off (-0.38) \u2014 Overall macro mood is risk-off (-0.38). US Dow +0.5% overnight. Crude +1.3%. USD/INR -0.5%. Notable: Geopolitical confli"
+    "Global macro risk-off (-0.38) \u2014 Overall macro mood is risk-off (-0.38). US Dow +0.5% overnight. Crude +1.3%. USD/INR -0.4%. Notable: Geopolitical confli"
   ],
   "leading_sectors": [
     "IT",
@@ -76,7 +76,7 @@
   "macro": {
     "date": "2026-08-03",
     "session": "midday",
-    "generated_at": "2026-08-03T06:15:50.290441",
+    "generated_at": "2026-08-03T06:44:41.587701",
     "global_score": 0.128,
     "india_score": -1.0,
     "overall_score": -0.38,
@@ -105,23 +105,23 @@
         "chg_pct": 0.7
       },
       "nikkei": {
-        "last": 63606.56,
-        "chg_pct": -1.17
+        "last": 63709.31,
+        "chg_pct": -1.01
       },
       "crude": {
         "last": 84.67,
         "chg_pct": 1.29
       },
       "usdinr": {
-        "last": 95.21,
-        "chg_pct": -0.49
+        "last": 95.26,
+        "chg_pct": -0.44
       },
       "gold": {
         "last": 4049.1,
         "chg_pct": -1.24
       }
     },
-    "summary": "Overall macro mood is risk-off (-0.38). US Dow +0.5% overnight. Crude +1.3%. USD/INR -0.5%. Notable: Geopolitical conflict / war.",
+    "summary": "Overall macro mood is risk-off (-0.38). US Dow +0.5% overnight. Crude +1.3%. USD/INR -0.4%. Notable: Geopolitical conflict / war.",
     "playbook": [
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially."
     ],

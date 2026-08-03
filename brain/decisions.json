@@ -16582,5 +16582,155 @@
       "doji",
       "adx_strong_trend_up"
     ]
+  },
+  {
+    "timestamp": "2026-08-03T07:46:19.264322",
+    "date": "2026-08-03",
+    "ticker": "MARICO.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 65.2,
+    "entry": 875.55,
+    "stop_loss": 849.79,
+    "target": 927.07,
+    "reason": "paper afternoon",
+    "patterns": [
+      "full_bullish_alignment",
+      "rsi_bullish_divergence",
+      "near_52w_high",
+      "tweezer_top",
+      "adx_strong_trend_up",
+      "pivot_s1_breakdown",
+      "strong_bearish_marubozu"
+    ]
+  },
+  {
+    "timestamp": "2026-08-03T07:46:19.266038",
+    "date": "2026-08-03",
+    "ticker": "NESTLEIND.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 67.1,
+    "entry": 1515.0,
+    "stop_loss": 1462.67,
+    "target": 1619.66,
+    "reason": "paper afternoon",
+    "patterns": [
+      "stoch_rsi_overbought_reversal",
+      "full_bullish_alignment",
+      "bb_upper_rejection",
+      "near_52w_high",
+      "pivot_point_test",
+      "inside_bar"
+    ]
+  },
+  {
+    "timestamp": "2026-08-03T07:46:19.266537",
+    "date": "2026-08-03",
+    "ticker": "ICICIBANK.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 95,
+    "entry": 1445.0,
+    "stop_loss": 1403.08,
+    "target": 1528.84,
+    "reason": "paper afternoon",
+    "patterns": [
+      "stoch_rsi_oversold_reversal",
+      "full_bullish_alignment",
+      "adx_strong_trend_up",
+      "inside_bar",
+      "supertrend_bullish",
+      "strong_bullish_marubozu"
+    ]
+  },
+  {
+    "timestamp": "2026-08-03T07:46:19.267664",
+    "date": "2026-08-03",
+    "ticker": "ABCAPITAL.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 89.0,
+    "entry": 424.15,
+    "stop_loss": 408.69,
+    "target": 455.07,
+    "reason": "paper afternoon",
+    "patterns": [
+      "adx_ranging_market",
+      "full_bullish_alignment",
+      "near_52w_high",
+      "volume_breakout_bullish",
+      "pivot_r2_breakout",
+      "pivot_r1_breakout",
+      "52w_breakout",
+      "supertrend_bullish",
+      "rsi_bearish_divergence"
+    ]
+  },
+  {
+    "timestamp": "2026-08-03T07:46:19.269223",
+    "date": "2026-08-03",
+    "ticker": "SIEMENS.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 95,
+    "entry": 3880.0,
+    "stop_loss": 3720.21,
+    "target": 4199.58,
+    "reason": "paper afternoon",
+    "patterns": [
+      "full_bullish_alignment",
+      "bb_upper_rejection",
+      "near_52w_high",
+      "pivot_r2_breakout",
+      "pivot_r1_breakout",
+      "supertrend_bullish"
+    ]
+  },
+  {
+    "timestamp": "2026-08-03T07:46:19.269961",
+    "date": "2026-08-03",
+    "ticker": "JSWSTEEL.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 83.0,
+    "entry": 1278.5,
+    "stop_loss": 1240.7,
+    "target": 1354.1,
+    "reason": "paper afternoon",
+    "patterns": [
+      "adx_ranging_market",
+      "full_bullish_alignment",
+      "pivot_point_test",
+      "tweezer_bottom",
+      "bullish_harami",
+      "supertrend_bullish",
+      "inside_bar"
+    ]
+  },
+  {
+    "timestamp": "2026-08-03T07:46:19.271831",
+    "date": "2026-08-03",
+    "ticker": "IDFCFIRSTB.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 70.7,
+    "entry": 85.33,
+    "stop_loss": 82.22,
+    "target": 91.55,
+    "reason": "paper afternoon",
+    "patterns": [
+      "supertrend_bullish",
+      "full_bullish_alignment",
+      "doji",
+      "adx_strong_trend_up"
+    ]
   }
 ]

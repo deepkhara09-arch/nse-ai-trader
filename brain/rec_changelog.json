@@ -3188,5 +3188,35 @@
     "ts": "2026-08-03T06:15:58.418702",
     "detail": "Target 1 moved \u20b91527.22 \u2192 \u20b91517.02",
     "confidence": 66.3
+  },
+  {
+    "type": "removed",
+    "ticker": "IDFCFIRSTB.NS",
+    "nse_code": "IDFCFIRSTB",
+    "signal": "BUY",
+    "date": "2026-08-03",
+    "ts": "2026-08-03T07:46:19.387482",
+    "detail": "Dropped \u2014 no longer meets threshold (was 69/100)",
+    "confidence": 0
+  },
+  {
+    "type": "updated",
+    "ticker": "SIEMENS.NS",
+    "nse_code": "SIEMENS",
+    "signal": "BUY",
+    "date": "2026-08-03",
+    "ts": "2026-08-03T07:46:19.387482",
+    "detail": "Target 1 moved \u20b94151.22 \u2192 \u20b94185.42",
+    "confidence": 72.2
+  },
+  {
+    "type": "updated",
+    "ticker": "ABCAPITAL.NS",
+    "nse_code": "ABCAPITAL",
+    "signal": "BUY",
+    "date": "2026-08-03",
+    "ts": "2026-08-03T07:46:19.387482",
+    "detail": "Stop loss moved \u20b9412.39 \u2192 \u20b9408.69 | Target 1 moved \u20b9458.77 \u2192 \u20b9455.07",
+    "confidence": 68.1
   }
 ]

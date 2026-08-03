@@ -37,8 +37,8 @@
         "\u26a0 Recent forward-tested call accuracy only 15% (last 20 scored) \u2014 raising the conviction bar",
         "RSI=63 elevated"
       ],
-      "current_price": 873.45,
-      "unrealized_pnl": 198.45,
+      "current_price": 876.4,
+      "unrealized_pnl": 219.1,
       "max_held_days": 13,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -86,8 +86,8 @@
         "Broke below Pivot S1 support \u2014 bearish",
         "StochRSI overbought with bearish candle \u2014 reversal"
       ],
-      "current_price": 3800.0,
-      "unrealized_pnl": 144.0,
+      "current_price": 3868.6,
+      "unrealized_pnl": 212.6,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -139,8 +139,8 @@
         "\u2713 Daily setup aligned with the higher-timeframe trend",
         "Near upper Bollinger Band"
       ],
-      "current_price": 1519.3,
-      "unrealized_pnl": -30.6,
+      "current_price": 1514.0,
+      "unrealized_pnl": -62.4,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -152,7 +152,7 @@
       "view_hist": [
         1,
         1,
-        1,
+        0,
         0
       ]
     },
@@ -190,8 +190,8 @@
         "MACD histogram negative",
         "StochRSI overbought with bearish candle \u2014 reversal"
       ],
-      "current_price": 1447.9,
-      "unrealized_pnl": 105.6,
+      "current_price": 1444.5,
+      "unrealized_pnl": 85.2,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -241,8 +241,8 @@
         "RSI=66 elevated",
         "Near upper Bollinger Band"
       ],
-      "current_price": 85.24,
-      "unrealized_pnl": 0.0,
+      "current_price": 85.63,
+      "unrealized_pnl": 19.11,
       "max_held_days": 10,
       "vol_regime_pct": 0.08399999999999999,
       "entry_market": {
@@ -250,7 +250,10 @@
         "vix": 11.76,
         "mood": "bearish",
         "regime": "mixed"
-      }
+      },
+      "view_hist": [
+        1
+      ]
     },
     {
       "ticker": "JSWSTEEL.NS",
@@ -285,8 +288,8 @@
         "\u2713 Daily setup aligned with the higher-timeframe trend",
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction"
       ],
-      "current_price": 1282.6,
-      "unrealized_pnl": 0.0,
+      "current_price": 1273.0,
+      "unrealized_pnl": -19.2,
       "max_held_days": 10,
       "vol_regime_pct": 0.08399999999999999,
       "entry_market": {
@@ -294,7 +297,10 @@
         "vix": 11.76,
         "mood": "bearish",
         "regime": "mixed"
-      }
+      },
+      "view_hist": [
+        0
+      ]
     }
   ],
   "closed_trades": [

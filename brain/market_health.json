@@ -1,6 +1,6 @@
 {
   "date": "2026-08-03",
-  "session": "morning",
+  "session": "midday",
   "nifty": {
     "symbol": "^NSEI",
     "value": 24383.6,
@@ -61,7 +61,7 @@
   "market_mood": "bearish",
   "trade_allowed": true,
   "warnings": [
-    "Global macro risk-off (-0.31) \u2014 Overall macro mood is risk-off (-0.31). US Dow +0.5% overnight. Crude -5.8%. USD/INR -0.3%. Notable: Geopolitical confli"
+    "Global macro risk-off (-0.38) \u2014 Overall macro mood is risk-off (-0.38). US Dow +0.5% overnight. Crude +1.3%. USD/INR -0.5%. Notable: Geopolitical confli"
   ],
   "leading_sectors": [
     "IT",
@@ -75,11 +75,11 @@
   "intraday_regime": "mixed",
   "macro": {
     "date": "2026-08-03",
-    "session": "preopen",
-    "generated_at": "2026-08-03T03:05:43.847460",
-    "global_score": 0.259,
+    "session": "midday",
+    "generated_at": "2026-08-03T06:15:50.290441",
+    "global_score": 0.128,
     "india_score": -1.0,
-    "overall_score": -0.308,
+    "overall_score": -0.38,
     "mood": "risk_off",
     "drivers": [
       "We\u2019re in our 60s with $1.5 million. Would a trust be more effective than a will to prevent conflict among our heirs?",
@@ -105,23 +105,23 @@
         "chg_pct": 0.7
       },
       "nikkei": {
-        "last": 63240.51,
-        "chg_pct": -1.74
+        "last": 63606.56,
+        "chg_pct": -1.17
       },
       "crude": {
-        "last": 79.75,
-        "chg_pct": -5.81
+        "last": 84.67,
+        "chg_pct": 1.29
       },
       "usdinr": {
-        "last": 95.37,
-        "chg_pct": -0.33
+        "last": 95.21,
+        "chg_pct": -0.49
       },
       "gold": {
-        "last": 4117.5,
-        "chg_pct": 1.69
+        "last": 4049.1,
+        "chg_pct": -1.24
       }
     },
-    "summary": "Overall macro mood is risk-off (-0.31). US Dow +0.5% overnight. Crude -5.8%. USD/INR -0.3%. Notable: Geopolitical conflict / war.",
+    "summary": "Overall macro mood is risk-off (-0.38). US Dow +0.5% overnight. Crude +1.3%. USD/INR -0.5%. Notable: Geopolitical conflict / war.",
     "playbook": [
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially."
     ],

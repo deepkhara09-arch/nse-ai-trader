@@ -1,102 +1,102 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of doji, tweezer_bottom, dragonfly_doji mean for a swing trade on SIEMENS? Current RSI=74, MACD hist=+11.9098, Vol=0.6x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of supertrend_bullish, tweezer_bottom, full_bullish_alignment mean for a swing trade on SIEMENS? Current RSI=74, MACD hist=+11.9098, Vol=0.6x average. Signal is BUY.",
     "context": {
       "ticker": "SIEMENS.NS",
       "signal": "BUY",
-      "patterns": "doji, tweezer_bottom, dragonfly_doji",
+      "patterns": "supertrend_bullish, tweezer_bottom, full_bullish_alignment",
       "rsi": 74.1
     },
-    "queued_at": "2026-08-03T09:45:48.323426"
+    "queued_at": "2026-08-03T10:11:22.352763"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of adx_ranging_market, tweezer_bottom, inside_bar mean for a swing trade on JSWSTEEL? Current RSI=61, MACD hist=+4.1387, Vol=0.9x average. Signal is BUY.",
-    "context": {
-      "ticker": "JSWSTEEL.NS",
-      "signal": "BUY",
-      "patterns": "adx_ranging_market, tweezer_bottom, inside_bar",
-      "rsi": 60.7
-    },
-    "queued_at": "2026-08-03T09:45:48.324180"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of doji, tweezer_bottom, dragonfly_doji mean for a swing trade on SIEMENS? Current RSI=74, MACD hist=+11.9098, Vol=0.6x average. Signal is BUY.",
-    "context": {
-      "ticker": "SIEMENS.NS",
-      "signal": "BUY",
-      "patterns": "doji, tweezer_bottom, dragonfly_doji",
-      "rsi": 74.1
-    },
-    "queued_at": "2026-08-03T09:45:48.326544"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of inside_bar, stoch_rsi_overbought_reversal mean for a swing trade on NESTLEIND? Current RSI=69, MACD hist=+6.2915, Vol=1.0x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of stoch_rsi_overbought_reversal, inside_bar mean for a swing trade on NESTLEIND? Current RSI=69, MACD hist=+6.2915, Vol=1.0x average. Signal is BUY.",
     "context": {
       "ticker": "NESTLEIND.NS",
       "signal": "BUY",
-      "patterns": "inside_bar, stoch_rsi_overbought_reversal",
+      "patterns": "stoch_rsi_overbought_reversal, inside_bar",
       "rsi": 69.5
     },
-    "queued_at": "2026-08-03T09:45:48.327284"
+    "queued_at": "2026-08-03T10:11:22.353532"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of adx_ranging_market, tweezer_bottom, inside_bar mean for a swing trade on JSWSTEEL? Current RSI=61, MACD hist=+4.1387, Vol=0.9x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of supertrend_bullish, tweezer_bottom, full_bullish_alignment mean for a swing trade on JSWSTEEL? Current RSI=61, MACD hist=+4.1387, Vol=0.9x average. Signal is BUY.",
     "context": {
       "ticker": "JSWSTEEL.NS",
       "signal": "BUY",
-      "patterns": "adx_ranging_market, tweezer_bottom, inside_bar",
+      "patterns": "supertrend_bullish, tweezer_bottom, full_bullish_alignment",
       "rsi": 60.7
     },
-    "queued_at": "2026-08-03T09:45:48.328936"
+    "queued_at": "2026-08-03T10:11:22.355276"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of rsi_bullish_divergence, tweezer_top, strong_bearish_marubozu mean for a swing trade on MARICO? Current RSI=63, MACD hist=+2.2220, Vol=1.4x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of pivot_point_test, tweezer_bottom mean for a swing trade on MARICO? Current RSI=69, MACD hist=+2.8916, Vol=1.0x average. Signal is BUY.",
     "context": {
       "ticker": "MARICO.NS",
       "signal": "BUY",
-      "patterns": "rsi_bullish_divergence, tweezer_top, strong_bearish_marubozu",
-      "rsi": 63.1
+      "patterns": "pivot_point_test, tweezer_bottom",
+      "rsi": 68.9
     },
-    "queued_at": "2026-08-03T09:45:48.423420"
+    "queued_at": "2026-08-03T10:12:27.567177"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of shooting_star, engulfing_bearish mean for a swing trade on HOMEFIRST? Current RSI=37, MACD hist=-9.8867, Vol=1.3x average. Signal is SELL.",
+    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_down, three_black_crows mean for a swing trade on HOMEFIRST? Current RSI=45, MACD hist=-10.8817, Vol=0.8x average. Signal is SELL.",
     "context": {
       "ticker": "HOMEFIRST.NS",
       "signal": "SELL",
-      "patterns": "shooting_star, engulfing_bearish",
-      "rsi": 37.0
+      "patterns": "adx_strong_trend_down, three_black_crows",
+      "rsi": 44.5
     },
-    "queued_at": "2026-08-03T09:45:48.424692"
+    "queued_at": "2026-08-03T10:12:27.571342"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of inside_bar, stoch_rsi_overbought_reversal mean for a swing trade on NESTLEIND? Current RSI=69, MACD hist=+6.2915, Vol=1.0x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of stoch_rsi_overbought_reversal, inside_bar mean for a swing trade on NESTLEIND? Current RSI=69, MACD hist=+6.2915, Vol=1.0x average. Signal is BUY.",
     "context": {
       "ticker": "NESTLEIND.NS",
       "signal": "BUY",
-      "patterns": "inside_bar, stoch_rsi_overbought_reversal",
+      "patterns": "stoch_rsi_overbought_reversal, inside_bar",
       "rsi": 69.5
     },
-    "queued_at": "2026-08-03T09:45:48.425417"
+    "queued_at": "2026-08-03T10:12:27.572209"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of doji, tweezer_bottom, dragonfly_doji mean for a swing trade on SIEMENS? Current RSI=74, MACD hist=+11.9098, Vol=0.6x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of stoch_rsi_overbought_reversal, tweezer_top, bb_upper_rejection mean for a swing trade on PIDILITIND? Current RSI=60, MACD hist=+3.9494, Vol=1.1x average. Signal is BUY.",
+    "context": {
+      "ticker": "PIDILITIND.NS",
+      "signal": "BUY",
+      "patterns": "stoch_rsi_overbought_reversal, tweezer_top, bb_upper_rejection",
+      "rsi": 60.0
+    },
+    "queued_at": "2026-08-03T10:12:27.579857"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of supertrend_bullish, tweezer_bottom, full_bullish_alignment mean for a swing trade on SIEMENS? Current RSI=74, MACD hist=+11.9098, Vol=0.6x average. Signal is BUY.",
     "context": {
       "ticker": "SIEMENS.NS",
       "signal": "BUY",
-      "patterns": "doji, tweezer_bottom, dragonfly_doji",
+      "patterns": "supertrend_bullish, tweezer_bottom, full_bullish_alignment",
       "rsi": 74.1
     },
-    "queued_at": "2026-08-03T09:45:48.431278"
+    "queued_at": "2026-08-03T10:12:27.580734"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of adx_ranging_market, tweezer_bottom, inside_bar mean for a swing trade on JSWSTEEL? Current RSI=61, MACD hist=+4.1387, Vol=0.9x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of supertrend_bullish, tweezer_bottom, full_bullish_alignment mean for a swing trade on JSWSTEEL? Current RSI=61, MACD hist=+4.1387, Vol=0.9x average. Signal is BUY.",
     "context": {
       "ticker": "JSWSTEEL.NS",
       "signal": "BUY",
-      "patterns": "adx_ranging_market, tweezer_bottom, inside_bar",
+      "patterns": "supertrend_bullish, tweezer_bottom, full_bullish_alignment",
       "rsi": 60.7
     },
-    "queued_at": "2026-08-03T09:45:48.434345"
+    "queued_at": "2026-08-03T10:12:27.583855"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of supertrend_bullish, full_bullish_alignment, adx_strong_trend_up mean for a swing trade on IDFCFIRSTB? Current RSI=66, MACD hist=+0.2549, Vol=0.5x average. Signal is BUY.",
+    "context": {
+      "ticker": "IDFCFIRSTB.NS",
+      "signal": "BUY",
+      "patterns": "supertrend_bullish, full_bullish_alignment, adx_strong_trend_up",
+      "rsi": 65.8
+    },
+    "queued_at": "2026-08-03T10:12:27.585612"
   }
 ]

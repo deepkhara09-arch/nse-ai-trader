@@ -37,8 +37,8 @@
         "\u26a0 Recent forward-tested call accuracy only 15% (last 20 scored) \u2014 raising the conviction bar",
         "RSI=63 elevated"
       ],
-      "current_price": 875.0,
-      "unrealized_pnl": 209.3,
+      "current_price": 874.75,
+      "unrealized_pnl": 207.55,
       "max_held_days": 13,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -86,8 +86,8 @@
         "Broke below Pivot S1 support \u2014 bearish",
         "StochRSI overbought with bearish candle \u2014 reversal"
       ],
-      "current_price": 3905.0,
-      "unrealized_pnl": 249.0,
+      "current_price": 3897.6,
+      "unrealized_pnl": 241.6,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -139,8 +139,8 @@
         "\u2713 Daily setup aligned with the higher-timeframe trend",
         "Near upper Bollinger Band"
       ],
-      "current_price": 1513.0,
-      "unrealized_pnl": -68.4,
+      "current_price": 1517.5,
+      "unrealized_pnl": -41.4,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -153,7 +153,7 @@
         0,
         0,
         0,
-        0
+        1
       ]
     },
     {
@@ -190,8 +190,8 @@
         "MACD histogram negative",
         "StochRSI overbought with bearish candle \u2014 reversal"
       ],
-      "current_price": 1446.3,
-      "unrealized_pnl": 96.0,
+      "current_price": 1444.3,
+      "unrealized_pnl": 84.0,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -241,8 +241,8 @@
         "RSI=66 elevated",
         "Near upper Bollinger Band"
       ],
-      "current_price": 84.72,
-      "unrealized_pnl": -25.48,
+      "current_price": 84.82,
+      "unrealized_pnl": -20.58,
       "max_held_days": 10,
       "vol_regime_pct": 0.08399999999999999,
       "entry_market": {
@@ -253,6 +253,7 @@
       },
       "view_hist": [
         1,
+        0,
         0,
         0
       ]
@@ -290,8 +291,8 @@
         "\u2713 Daily setup aligned with the higher-timeframe trend",
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction"
       ],
-      "current_price": 1280.1,
-      "unrealized_pnl": -5.0,
+      "current_price": 1282.7,
+      "unrealized_pnl": 0.2,
       "max_held_days": 10,
       "vol_regime_pct": 0.08399999999999999,
       "entry_market": {
@@ -303,7 +304,8 @@
       "view_hist": [
         0,
         1,
-        0
+        0,
+        1
       ]
     }
   ],
@@ -846,16 +848,23 @@
       "capital": 72818.09,
       "open_positions": 4,
       "daily_pnl": 68.95
+    },
+    {
+      "date": "2026-08-03",
+      "portfolio_value": 100589.36,
+      "capital": 66076.13,
+      "open_positions": 6,
+      "daily_pnl": 0.0
     }
   ],
   "daily_pnl_today": 0.0,
-  "last_snapshot_date": "2026-07-31",
+  "last_snapshot_date": "2026-08-03",
   "lifetime_wins": 4,
   "lifetime_losses": 4,
   "lifetime_pnl": 117.99,
   "last_pnl_reset_date": "2026-08-03",
   "max_drawdown_pct": 1.07,
-  "current_drawdown_pct": 0.89,
+  "current_drawdown_pct": 0.61,
   "portfolio_peak": 101210.28,
-  "sessions_since_peak": 9
+  "sessions_since_peak": 10
 }

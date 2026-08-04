@@ -1,13 +1,13 @@
 {
   "phase": "paper_trading",
   "day": 31,
-  "session": "afternoon",
+  "session": "intraday_close",
   "start_date": "2026-06-22",
   "phase_start_date": "2026-07-15",
   "last_run_date": "2026-08-03",
   "last_counted_date": "2026-08-03",
   "cohort_last_tick_date": "2026-08-03",
-  "last_updated": "2026-08-04T07:45:55.264987",
+  "last_updated": "2026-08-04T09:45:49.018878",
   "focus_stocks": [
     "MARICO.NS",
     "SBIN.NS",
@@ -41,14 +41,14 @@
     "RECLTD.NS"
   ],
   "paper_trade_stats": {
-    "total": 10,
+    "total": 11,
     "wins": 6,
-    "losses": 4,
-    "win_rate": 0.6,
-    "total_pnl": 579.24,
+    "losses": 5,
+    "win_rate": 0.545,
+    "total_pnl": 244.1,
     "avg_win": 199.37,
-    "avg_loss": -154.25,
-    "expectancy": 57.92
+    "avg_loss": -190.43,
+    "expectancy": 22.19
   },
   "brain_notes": [
     "[2026-06-23] Pre-open macro: neutral (+0.07)",
@@ -341,6 +341,7 @@
     "preopen": "2026-08-04",
     "morning": "2026-08-04",
     "midday": "2026-08-04",
-    "afternoon": "2026-08-04"
+    "afternoon": "2026-08-04",
+    "intraday_close": "2026-08-04"
   }
 }

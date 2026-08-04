@@ -1,58 +1,6 @@
 {
-  "capital": 66552.38242000001,
+  "capital": 75363.64546,
   "open_positions": [
-    {
-      "ticker": "NESTLEIND.NS",
-      "sector": "FMCG",
-      "open_date": "2026-07-30",
-      "open_session": "morning",
-      "action": "BUY",
-      "entry": 1524.4,
-      "qty": 6,
-      "invested": 9146.4,
-      "stop_loss": 1473.04,
-      "target": 1627.13,
-      "style": "swing",
-      "confidence": 95,
-      "patterns": [
-        "full_bullish_alignment",
-        "pivot_r1_breakout",
-        "spinning_top",
-        "bb_upper_rejection",
-        "near_52w_high",
-        "supertrend_bullish"
-      ],
-      "buy_reasons": [
-        "All EMAs stacked bullish",
-        "MACD histogram positive",
-        "Positive news sentiment (0.44, news 1.1x reliable here)",
-        "Near 52-week high \u2014 potential breakout zone",
-        "Sector tailwind (momentum=0.32)",
-        "Supertrend bullish \u2014 price above trend band",
-        "Broke above Pivot R1 with volume \u2014 bullish",
-        "In a long-term strong uptrend (2yr) \u2014 trend on our side",
-        "Near 52-week high (100% of range) \u2014 breakout zone",
-        "Clean trender aligned with its long-term uptrend",
-        "\u2713 Daily setup aligned with the higher-timeframe trend",
-        "Near upper Bollinger Band"
-      ],
-      "current_price": 1531.7,
-      "unrealized_pnl": 43.8,
-      "max_held_days": 10,
-      "vol_regime_pct": 0.12,
-      "entry_market": {
-        "nifty_trend": "up",
-        "vix": 12.01,
-        "mood": "neutral",
-        "regime": "choppy"
-      },
-      "view_hist": [
-        1,
-        0,
-        0,
-        1
-      ]
-    },
     {
       "ticker": "ICICIBANK.NS",
       "sector": "Banking",
@@ -87,8 +35,8 @@
         "MACD histogram negative",
         "StochRSI overbought with bearish candle \u2014 reversal"
       ],
-      "current_price": 1437.0,
-      "unrealized_pnl": 40.2,
+      "current_price": 1440.0,
+      "unrealized_pnl": 58.2,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -138,8 +86,8 @@
         "RSI=66 elevated",
         "Near upper Bollinger Band"
       ],
-      "current_price": 85.55,
-      "unrealized_pnl": 15.19,
+      "current_price": 85.53,
+      "unrealized_pnl": 14.21,
       "max_held_days": 10,
       "vol_regime_pct": 0.08399999999999999,
       "entry_market": {
@@ -149,10 +97,10 @@
         "regime": "mixed"
       },
       "view_hist": [
-        0,
         1,
         1,
-        1
+        1,
+        0
       ]
     },
     {
@@ -188,8 +136,8 @@
         "\u2713 Daily setup aligned with the higher-timeframe trend",
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction"
       ],
-      "current_price": 1285.0,
-      "unrealized_pnl": 4.8,
+      "current_price": 1290.5,
+      "unrealized_pnl": 15.8,
       "max_held_days": 10,
       "vol_regime_pct": 0.08399999999999999,
       "entry_market": {
@@ -199,10 +147,10 @@
         "regime": "mixed"
       },
       "view_hist": [
-        1,
         0,
         0,
-        0
+        0,
+        1
       ]
     },
     {
@@ -246,8 +194,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "RSI=74 overbought"
       ],
-      "current_price": 4007.2,
-      "unrealized_pnl": 48.1,
+      "current_price": 4000.5,
+      "unrealized_pnl": 41.4,
       "max_held_days": 10,
       "vol_regime_pct": 0.08399999999999999,
       "entry_market": {
@@ -257,6 +205,7 @@
         "regime": "choppy"
       },
       "view_hist": [
+        1,
         1,
         1
       ]
@@ -299,8 +248,8 @@
         "RSI=62 elevated",
         "RSI bearish divergence \u2014 price higher but RSI lower"
       ],
-      "current_price": 2765.5,
-      "unrealized_pnl": -66.6,
+      "current_price": 2747.0,
+      "unrealized_pnl": -103.6,
       "max_held_days": 10,
       "vol_regime_pct": 0.08399999999999999,
       "entry_market": {
@@ -311,6 +260,7 @@
       },
       "view_hist": [
         1,
+        0,
         0
       ]
     }
@@ -891,6 +841,68 @@
       "pnl_pct": 7.93,
       "won": true,
       "open_days": 8
+    },
+    {
+      "ticker": "NESTLEIND.NS",
+      "sector": "FMCG",
+      "open_date": "2026-07-30",
+      "open_session": "morning",
+      "action": "BUY",
+      "entry": 1524.4,
+      "qty": 6,
+      "invested": 9146.4,
+      "stop_loss": 1473.04,
+      "target": 1627.13,
+      "style": "swing",
+      "confidence": 95,
+      "patterns": [
+        "full_bullish_alignment",
+        "pivot_r1_breakout",
+        "spinning_top",
+        "bb_upper_rejection",
+        "near_52w_high",
+        "supertrend_bullish"
+      ],
+      "buy_reasons": [
+        "All EMAs stacked bullish",
+        "MACD histogram positive",
+        "Positive news sentiment (0.44, news 1.1x reliable here)",
+        "Near 52-week high \u2014 potential breakout zone",
+        "Sector tailwind (momentum=0.32)",
+        "Supertrend bullish \u2014 price above trend band",
+        "Broke above Pivot R1 with volume \u2014 bullish",
+        "In a long-term strong uptrend (2yr) \u2014 trend on our side",
+        "Near 52-week high (100% of range) \u2014 breakout zone",
+        "Clean trender aligned with its long-term uptrend",
+        "\u2713 Daily setup aligned with the higher-timeframe trend",
+        "Near upper Bollinger Band"
+      ],
+      "current_price": 1490.1,
+      "unrealized_pnl": -205.8,
+      "max_held_days": 10,
+      "vol_regime_pct": 0.12,
+      "entry_market": {
+        "nifty_trend": "up",
+        "vix": 12.01,
+        "mood": "neutral",
+        "regime": "choppy"
+      },
+      "view_hist": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "close_date": "2026-08-04",
+      "close_session": "intraday_close",
+      "exit_price": 1473.04,
+      "exit_reason": "stop_hit",
+      "pnl": -335.14,
+      "pnl_gross": -308.16,
+      "costs": 26.98,
+      "pnl_pct": -3.66,
+      "won": false,
+      "open_days": 3
     }
   ],
   "daily_snapshots": [
@@ -986,11 +998,11 @@
       "daily_pnl": 0.0
     }
   ],
-  "daily_pnl_today": 461.2488499999996,
+  "daily_pnl_today": 126.11188999999882,
   "last_snapshot_date": "2026-08-03",
   "lifetime_wins": 6,
-  "lifetime_losses": 4,
-  "lifetime_pnl": 579.24,
+  "lifetime_losses": 5,
+  "lifetime_pnl": 244.1,
   "last_pnl_reset_date": "2026-08-04",
   "max_drawdown_pct": 1.07,
   "current_drawdown_pct": 0.61,

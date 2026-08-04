@@ -1,109 +1,6 @@
 {
-  "capital": 66076.13357000002,
+  "capital": 66552.38242000001,
   "open_positions": [
-    {
-      "ticker": "MARICO.NS",
-      "sector": "FMCG",
-      "open_date": "2026-07-16",
-      "open_session": "morning",
-      "action": "BUY",
-      "entry": 845.1,
-      "qty": 7,
-      "invested": 5915.7,
-      "stop_loss": 845.95,
-      "target": 891.78,
-      "style": "swing",
-      "confidence": 95,
-      "patterns": [
-        "full_bullish_alignment",
-        "pivot_s1_bounce",
-        "supertrend_bullish",
-        "tweezer_bottom",
-        "pivot_point_test",
-        "adx_strong_trend_up"
-      ],
-      "buy_reasons": [
-        "All EMAs stacked bullish",
-        "MACD histogram positive",
-        "Positive news sentiment (0.35, news 0.7x reliable here)",
-        "Candlestick: tweezer bottom",
-        "Supertrend bullish \u2014 price above trend band",
-        "ADX strong trend \u2014 directional move confirmed",
-        "Bounced off Pivot S1 support",
-        "Testing pivot point \u2014 decision zone",
-        "In a long-term strong uptrend (2yr) \u2014 trend on our side",
-        "Near 52-week high (96% of range) \u2014 breakout zone",
-        "\u2713 Daily setup aligned with the higher-timeframe trend",
-        "\u26a0 Recent forward-tested call accuracy only 15% (last 20 scored) \u2014 raising the conviction bar",
-        "RSI=63 elevated"
-      ],
-      "current_price": 874.75,
-      "unrealized_pnl": 207.55,
-      "max_held_days": 13,
-      "vol_regime_pct": 0.12,
-      "entry_market": {
-        "nifty_trend": "sideways",
-        "vix": 13.27,
-        "mood": "neutral",
-        "regime": "mixed"
-      },
-      "t1_booked": true,
-      "trailing_active": true,
-      "grace_used": true
-    },
-    {
-      "ticker": "SIEMENS.NS",
-      "sector": "Infra",
-      "open_date": "2026-07-23",
-      "open_session": "midday",
-      "action": "BUY",
-      "entry": 3656.0,
-      "qty": 1,
-      "invested": 3656.0,
-      "stop_loss": 3706.29,
-      "target": 3957.35,
-      "style": "swing",
-      "confidence": 73.4,
-      "patterns": [
-        "pivot_s1_breakdown",
-        "full_bullish_alignment",
-        "adx_strong_trend_up",
-        "stoch_rsi_overbought_reversal",
-        "pivot_point_test",
-        "spinning_top"
-      ],
-      "buy_reasons": [
-        "All EMAs stacked bullish",
-        "MACD histogram positive",
-        "Positive news sentiment (0.17)",
-        "News sentiment improving across sessions",
-        "ADX strong trend \u2014 directional move confirmed",
-        "Testing pivot point \u2014 decision zone",
-        "In a long-term strong uptrend (2yr) \u2014 trend on our side",
-        "Clean trender aligned with its long-term uptrend",
-        "\u2713 Daily setup aligned with the higher-timeframe trend",
-        "Near upper Bollinger Band",
-        "Broke below Pivot S1 support \u2014 bearish",
-        "StochRSI overbought with bearish candle \u2014 reversal"
-      ],
-      "current_price": 3897.6,
-      "unrealized_pnl": 241.6,
-      "max_held_days": 10,
-      "vol_regime_pct": 0.12,
-      "entry_market": {
-        "nifty_trend": "sideways",
-        "vix": 13.29,
-        "mood": "neutral",
-        "regime": "mixed"
-      },
-      "view_hist": [
-        1,
-        1,
-        1,
-        1
-      ],
-      "trailing_active": true
-    },
     {
       "ticker": "NESTLEIND.NS",
       "sector": "FMCG",
@@ -139,8 +36,8 @@
         "\u2713 Daily setup aligned with the higher-timeframe trend",
         "Near upper Bollinger Band"
       ],
-      "current_price": 1517.5,
-      "unrealized_pnl": -41.4,
+      "current_price": 1526.0,
+      "unrealized_pnl": 9.6,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -152,8 +49,8 @@
       "view_hist": [
         0,
         0,
-        0,
-        1
+        1,
+        0
       ]
     },
     {
@@ -190,8 +87,8 @@
         "MACD histogram negative",
         "StochRSI overbought with bearish candle \u2014 reversal"
       ],
-      "current_price": 1444.3,
-      "unrealized_pnl": 84.0,
+      "current_price": 1445.3,
+      "unrealized_pnl": 90.0,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -241,8 +138,8 @@
         "RSI=66 elevated",
         "Near upper Bollinger Band"
       ],
-      "current_price": 84.82,
-      "unrealized_pnl": -20.58,
+      "current_price": 85.75,
+      "unrealized_pnl": 24.99,
       "max_held_days": 10,
       "vol_regime_pct": 0.08399999999999999,
       "entry_market": {
@@ -252,10 +149,10 @@
         "regime": "mixed"
       },
       "view_hist": [
-        1,
         0,
         0,
-        0
+        0,
+        1
       ]
     },
     {
@@ -291,8 +188,8 @@
         "\u2713 Daily setup aligned with the higher-timeframe trend",
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction"
       ],
-      "current_price": 1282.7,
-      "unrealized_pnl": 0.2,
+      "current_price": 1287.0,
+      "unrealized_pnl": 8.8,
       "max_held_days": 10,
       "vol_regime_pct": 0.08399999999999999,
       "entry_market": {
@@ -302,11 +199,112 @@
         "regime": "mixed"
       },
       "view_hist": [
-        0,
         1,
         0,
-        1
+        1,
+        0
       ]
+    },
+    {
+      "ticker": "SIEMENS.NS",
+      "sector": "Infra",
+      "open_date": "2026-08-04",
+      "open_session": "morning",
+      "action": "BUY",
+      "entry": 3959.1,
+      "qty": 1,
+      "invested": 3959.1,
+      "stop_loss": 3809.18,
+      "target": 4258.94,
+      "style": "swing",
+      "confidence": 95,
+      "patterns": [
+        "near_52w_high",
+        "hammer",
+        "tweezer_bottom",
+        "supertrend_bullish",
+        "morning_star",
+        "inside_bar",
+        "doji",
+        "full_bullish_alignment",
+        "dragonfly_doji"
+      ],
+      "buy_reasons": [
+        "All EMAs stacked bullish",
+        "MACD histogram positive",
+        "Positive news sentiment (0.30, news 1.3x reliable here)",
+        "News sentiment improving across sessions",
+        "Candlestick: tweezer bottom",
+        "Candlestick: morning star",
+        "Candlestick: dragonfly doji",
+        "Near 52-week high \u2014 potential breakout zone",
+        "Supertrend bullish \u2014 price above trend band",
+        "In a long-term strong uptrend (2yr) \u2014 trend on our side",
+        "Volatility compressed vs its norm \u2014 primed for an expansion move",
+        "Clean trender aligned with its long-term uptrend",
+        "\u2713 Daily setup aligned with the higher-timeframe trend",
+        "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
+        "RSI=74 overbought"
+      ],
+      "current_price": 3959.1,
+      "unrealized_pnl": 0.0,
+      "max_held_days": 10,
+      "vol_regime_pct": 0.08399999999999999,
+      "entry_market": {
+        "nifty_trend": "up",
+        "vix": 11.76,
+        "mood": "bearish",
+        "regime": "choppy"
+      }
+    },
+    {
+      "ticker": "ASIANPAINT.NS",
+      "sector": "Consumer",
+      "open_date": "2026-08-04",
+      "open_session": "morning",
+      "action": "BUY",
+      "entry": 2798.8,
+      "qty": 2,
+      "invested": 5597.6,
+      "stop_loss": 2711.67,
+      "target": 2973.06,
+      "style": "swing",
+      "confidence": 95,
+      "patterns": [
+        "hammer",
+        "rsi_bearish_divergence",
+        "supertrend_bullish",
+        "doji",
+        "volume_breakout_bullish",
+        "full_bullish_alignment",
+        "three_white_soldiers"
+      ],
+      "buy_reasons": [
+        "All EMAs stacked bullish",
+        "MACD histogram positive",
+        "High volume confirmation (2.4x avg)",
+        "Positive news sentiment (0.36)",
+        "News sentiment improving across sessions",
+        "Candlestick: three white soldiers",
+        "Sector tailwind (momentum=0.37)",
+        "Supertrend bullish \u2014 price above trend band",
+        "In a long-term strong uptrend (2yr) \u2014 trend on our side",
+        "Clean trender aligned with its long-term uptrend",
+        "\u2713 Daily setup aligned with the higher-timeframe trend",
+        "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
+        "RSI=62 elevated",
+        "RSI bearish divergence \u2014 price higher but RSI lower"
+      ],
+      "current_price": 2798.8,
+      "unrealized_pnl": 0.0,
+      "max_held_days": 10,
+      "vol_regime_pct": 0.08399999999999999,
+      "entry_market": {
+        "nifty_trend": "up",
+        "vix": 11.76,
+        "mood": "bearish",
+        "regime": "choppy"
+      }
     }
   ],
   "closed_trades": [
@@ -762,6 +760,129 @@
       "pnl_pct": 0.87,
       "won": true,
       "open_days": 4
+    },
+    {
+      "ticker": "MARICO.NS",
+      "sector": "FMCG",
+      "open_date": "2026-07-16",
+      "open_session": "morning",
+      "action": "BUY",
+      "entry": 845.1,
+      "qty": 7,
+      "invested": 5915.7,
+      "stop_loss": 845.95,
+      "target": 891.78,
+      "style": "swing",
+      "confidence": 95,
+      "patterns": [
+        "full_bullish_alignment",
+        "pivot_s1_bounce",
+        "supertrend_bullish",
+        "tweezer_bottom",
+        "pivot_point_test",
+        "adx_strong_trend_up"
+      ],
+      "buy_reasons": [
+        "All EMAs stacked bullish",
+        "MACD histogram positive",
+        "Positive news sentiment (0.35, news 0.7x reliable here)",
+        "Candlestick: tweezer bottom",
+        "Supertrend bullish \u2014 price above trend band",
+        "ADX strong trend \u2014 directional move confirmed",
+        "Bounced off Pivot S1 support",
+        "Testing pivot point \u2014 decision zone",
+        "In a long-term strong uptrend (2yr) \u2014 trend on our side",
+        "Near 52-week high (96% of range) \u2014 breakout zone",
+        "\u2713 Daily setup aligned with the higher-timeframe trend",
+        "\u26a0 Recent forward-tested call accuracy only 15% (last 20 scored) \u2014 raising the conviction bar",
+        "RSI=63 elevated"
+      ],
+      "current_price": 872.15,
+      "unrealized_pnl": 189.35,
+      "max_held_days": 13,
+      "vol_regime_pct": 0.12,
+      "entry_market": {
+        "nifty_trend": "sideways",
+        "vix": 13.27,
+        "mood": "neutral",
+        "regime": "mixed"
+      },
+      "t1_booked": true,
+      "trailing_active": true,
+      "grace_used": true,
+      "close_date": "2026-08-04",
+      "close_session": "morning",
+      "exit_price": 872.15,
+      "exit_reason": "time_exit",
+      "pnl": 171.32,
+      "pnl_gross": 189.35,
+      "costs": 18.03,
+      "pnl_pct": 2.9,
+      "won": true,
+      "open_days": 13
+    },
+    {
+      "ticker": "SIEMENS.NS",
+      "sector": "Infra",
+      "open_date": "2026-07-23",
+      "open_session": "midday",
+      "action": "BUY",
+      "entry": 3656.0,
+      "qty": 1,
+      "invested": 3656.0,
+      "stop_loss": 3807.55,
+      "target": 3957.35,
+      "style": "swing",
+      "confidence": 73.4,
+      "patterns": [
+        "pivot_s1_breakdown",
+        "full_bullish_alignment",
+        "adx_strong_trend_up",
+        "stoch_rsi_overbought_reversal",
+        "pivot_point_test",
+        "spinning_top"
+      ],
+      "buy_reasons": [
+        "All EMAs stacked bullish",
+        "MACD histogram positive",
+        "Positive news sentiment (0.17)",
+        "News sentiment improving across sessions",
+        "ADX strong trend \u2014 directional move confirmed",
+        "Testing pivot point \u2014 decision zone",
+        "In a long-term strong uptrend (2yr) \u2014 trend on our side",
+        "Clean trender aligned with its long-term uptrend",
+        "\u2713 Daily setup aligned with the higher-timeframe trend",
+        "Near upper Bollinger Band",
+        "Broke below Pivot S1 support \u2014 bearish",
+        "StochRSI overbought with bearish candle \u2014 reversal"
+      ],
+      "current_price": 3959.1,
+      "unrealized_pnl": 303.1,
+      "max_held_days": 10,
+      "vol_regime_pct": 0.12,
+      "entry_market": {
+        "nifty_trend": "sideways",
+        "vix": 13.29,
+        "mood": "neutral",
+        "regime": "mixed"
+      },
+      "view_hist": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "trailing_active": true,
+      "close_date": "2026-08-04",
+      "close_session": "morning",
+      "exit_price": 3957.35,
+      "exit_reason": "target_hit",
+      "pnl": 289.93,
+      "pnl_gross": 301.35,
+      "costs": 11.42,
+      "pnl_pct": 7.93,
+      "won": true,
+      "open_days": 8
     }
   ],
   "daily_snapshots": [
@@ -857,12 +978,12 @@
       "daily_pnl": 0.0
     }
   ],
-  "daily_pnl_today": 0.0,
+  "daily_pnl_today": 461.2488499999996,
   "last_snapshot_date": "2026-08-03",
-  "lifetime_wins": 4,
+  "lifetime_wins": 6,
   "lifetime_losses": 4,
-  "lifetime_pnl": 117.99,
-  "last_pnl_reset_date": "2026-08-03",
+  "lifetime_pnl": 579.24,
+  "last_pnl_reset_date": "2026-08-04",
   "max_drawdown_pct": 1.07,
   "current_drawdown_pct": 0.61,
   "portfolio_peak": 101210.28,

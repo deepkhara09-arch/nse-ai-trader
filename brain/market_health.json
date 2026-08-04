@@ -1,6 +1,6 @@
 {
   "date": "2026-08-04",
-  "session": "preopen",
+  "session": "morning",
   "nifty": {
     "symbol": "^NSEI",
     "value": 24383.6,
@@ -61,6 +61,7 @@
   "market_mood": "bearish",
   "trade_allowed": true,
   "warnings": [
+    "Nifty choppy intraday \u2014 wait for cleaner setups",
     "Global macro risk-off (-0.35) \u2014 Overall macro mood is risk-off (-0.35). US Dow +1.3% overnight. Crude -4.2%. USD/INR -0.1%. Notable: Geopolitical confli"
   ],
   "leading_sectors": [
@@ -72,7 +73,7 @@
   "sector_breadth": 0.75,
   "lagging_sectors": [],
   "broad_market_strength": true,
-  "intraday_regime": "mixed",
+  "intraday_regime": "choppy",
   "macro": {
     "date": "2026-08-04",
     "session": "preopen",

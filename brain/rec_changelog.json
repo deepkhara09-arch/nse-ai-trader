@@ -3328,5 +3328,35 @@
     "ts": "2026-08-04T04:05:50.104995",
     "detail": "Confidence \u25bc10 (82 \u2192 71) | Rank \u25bc2 (#1 \u2192 #3)",
     "confidence": 71.1
+  },
+  {
+    "type": "new",
+    "ticker": "MARICO.NS",
+    "nse_code": "MARICO",
+    "signal": "BUY",
+    "date": "2026-08-04",
+    "ts": "2026-08-04T06:11:04.148796",
+    "detail": "New BUY recommendation \u2014 confidence 66/100",
+    "confidence": 65.5
+  },
+  {
+    "type": "updated",
+    "ticker": "SIEMENS.NS",
+    "nse_code": "SIEMENS",
+    "signal": "BUY",
+    "date": "2026-08-04",
+    "ts": "2026-08-04T06:11:04.148796",
+    "detail": "Stop loss moved \u20b93828.85 \u2192 \u20b93896.08 | Target 1 moved \u20b94219.60 \u2192 \u20b94345.84",
+    "confidence": 76.3
+  },
+  {
+    "type": "updated",
+    "ticker": "ASIANPAINT.NS",
+    "nse_code": "ASIANPAINT",
+    "signal": "BUY",
+    "date": "2026-08-04",
+    "ts": "2026-08-04T06:11:04.148796",
+    "detail": "Target 1 moved \u20b92960.68 \u2192 \u20b92939.98",
+    "confidence": 72.6
   }
 ]

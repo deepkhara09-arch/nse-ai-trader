@@ -3358,5 +3358,65 @@
     "ts": "2026-08-04T06:11:04.148796",
     "detail": "Target 1 moved \u20b92960.68 \u2192 \u20b92939.98",
     "confidence": 72.6
+  },
+  {
+    "type": "new",
+    "ticker": "NESTLEIND.NS",
+    "nse_code": "NESTLEIND",
+    "signal": "BUY",
+    "date": "2026-08-04",
+    "ts": "2026-08-04T07:45:55.351311",
+    "detail": "New BUY recommendation \u2014 confidence 68/100",
+    "confidence": 67.6
+  },
+  {
+    "type": "new",
+    "ticker": "ABCAPITAL.NS",
+    "nse_code": "ABCAPITAL",
+    "signal": "BUY",
+    "date": "2026-08-04",
+    "ts": "2026-08-04T07:45:55.351311",
+    "detail": "New BUY recommendation \u2014 confidence 67/100",
+    "confidence": 66.9
+  },
+  {
+    "type": "removed",
+    "ticker": "ASIANPAINT.NS",
+    "nse_code": "ASIANPAINT",
+    "signal": "BUY",
+    "date": "2026-08-04",
+    "ts": "2026-08-04T07:45:55.351311",
+    "detail": "Dropped \u2014 no longer meets threshold (was 73/100)",
+    "confidence": 0
+  },
+  {
+    "type": "removed",
+    "ticker": "MARICO.NS",
+    "nse_code": "MARICO",
+    "signal": "BUY",
+    "date": "2026-08-04",
+    "ts": "2026-08-04T07:45:55.351311",
+    "detail": "Dropped \u2014 no longer meets threshold (was 66/100)",
+    "confidence": 0
+  },
+  {
+    "type": "updated",
+    "ticker": "SIEMENS.NS",
+    "nse_code": "SIEMENS",
+    "signal": "BUY",
+    "date": "2026-08-04",
+    "ts": "2026-08-04T07:45:55.351311",
+    "detail": "Confidence \u25b24 (76 \u2192 80) | Rank \u25b21 (#14 \u2192 #13) | Stop loss moved \u20b93896.08 \u2192 \u20b93847.41",
+    "confidence": 79.8
+  },
+  {
+    "type": "updated",
+    "ticker": "ICICIBANK.NS",
+    "nse_code": "ICICIBANK",
+    "signal": "BUY",
+    "date": "2026-08-04",
+    "ts": "2026-08-04T07:45:55.351311",
+    "detail": "Stop loss moved \u20b91408.24 \u2192 \u20b91395.08",
+    "confidence": 72.5
   }
 ]

@@ -3,25 +3,26 @@
   "session": "preclose",
   "nifty": {
     "symbol": "^NSEI",
-    "value": 24383.6,
-    "day_change_pct": 0.27,
-    "trend_5d": "up",
-    "trend_20d": "sideways",
-    "ath_pct_60d": -0.6
+    "value": 24774.3,
+    "day_change_pct": 1.6,
+    "trend_5d": "strong_up",
+    "trend_20d": "up",
+    "ath_pct_60d": 0.0,
+    "intraday_surge": true
   },
   "vix": {
-    "value": 11.76,
+    "value": 11.93,
     "level": "normal",
-    "percentile_30d": 3.0,
-    "avg_30d": 12.94
+    "percentile_30d": 13.0,
+    "avg_30d": 12.91
   },
   "bank_nifty": {
     "symbol": "^NSEBANK",
-    "value": 57264.85,
-    "day_change_pct": 0.21,
-    "trend_5d": "sideways",
-    "trend_20d": "down",
-    "ath_pct_60d": -2.45,
+    "value": 58247.95,
+    "day_change_pct": 1.72,
+    "trend_5d": "up",
+    "trend_20d": "sideways",
+    "ath_pct_60d": -0.78,
     "diverging": false
   },
   "sectors": {

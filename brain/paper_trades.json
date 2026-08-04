@@ -86,8 +86,8 @@
         "RSI=66 elevated",
         "Near upper Bollinger Band"
       ],
-      "current_price": 85.53,
-      "unrealized_pnl": 14.21,
+      "current_price": 85.61,
+      "unrealized_pnl": 18.13,
       "max_held_days": 10,
       "vol_regime_pct": 0.08399999999999999,
       "entry_market": {
@@ -99,7 +99,7 @@
       "view_hist": [
         1,
         1,
-        1,
+        0,
         0
       ]
     },
@@ -136,8 +136,8 @@
         "\u2713 Daily setup aligned with the higher-timeframe trend",
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction"
       ],
-      "current_price": 1290.5,
-      "unrealized_pnl": 15.8,
+      "current_price": 1290.6,
+      "unrealized_pnl": 16.0,
       "max_held_days": 10,
       "vol_regime_pct": 0.08399999999999999,
       "entry_market": {
@@ -149,7 +149,7 @@
       "view_hist": [
         0,
         0,
-        0,
+        1,
         1
       ]
     },
@@ -194,8 +194,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "RSI=74 overbought"
       ],
-      "current_price": 4000.5,
-      "unrealized_pnl": 41.4,
+      "current_price": 4004.0,
+      "unrealized_pnl": 44.9,
       "max_held_days": 10,
       "vol_regime_pct": 0.08399999999999999,
       "entry_market": {
@@ -205,6 +205,7 @@
         "regime": "choppy"
       },
       "view_hist": [
+        1,
         1,
         1,
         1
@@ -248,8 +249,8 @@
         "RSI=62 elevated",
         "RSI bearish divergence \u2014 price higher but RSI lower"
       ],
-      "current_price": 2747.0,
-      "unrealized_pnl": -103.6,
+      "current_price": 2738.1,
+      "unrealized_pnl": -121.4,
       "max_held_days": 10,
       "vol_regime_pct": 0.08399999999999999,
       "entry_market": {
@@ -260,6 +261,7 @@
       },
       "view_hist": [
         1,
+        0,
         0,
         0
       ]
@@ -996,16 +998,23 @@
       "capital": 66076.13,
       "open_positions": 6,
       "daily_pnl": 0.0
+    },
+    {
+      "date": "2026-08-04",
+      "portfolio_value": 100259.94,
+      "capital": 75363.65,
+      "open_positions": 5,
+      "daily_pnl": 126.11
     }
   ],
   "daily_pnl_today": 126.11188999999882,
-  "last_snapshot_date": "2026-08-03",
+  "last_snapshot_date": "2026-08-04",
   "lifetime_wins": 6,
   "lifetime_losses": 5,
   "lifetime_pnl": 244.1,
   "last_pnl_reset_date": "2026-08-04",
   "max_drawdown_pct": 1.07,
-  "current_drawdown_pct": 0.61,
+  "current_drawdown_pct": 0.94,
   "portfolio_peak": 101210.28,
-  "sessions_since_peak": 10
+  "sessions_since_peak": 11
 }

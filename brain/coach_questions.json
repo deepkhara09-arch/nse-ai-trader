@@ -1,43 +1,33 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of gap_up_reversal, stoch_rsi_overbought_reversal mean for a swing trade on ICICIBANK? Current RSI=70, MACD hist=-1.9899, Vol=0.6x average. Signal is BUY.",
-    "context": {
-      "ticker": "ICICIBANK.NS",
-      "signal": "BUY",
-      "patterns": "gap_up_reversal, stoch_rsi_overbought_reversal",
-      "rsi": 69.8
-    },
-    "queued_at": "2026-08-04T09:45:48.995583"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of pivot_point_test, full_bullish_alignment, bb_upper_rejection mean for a swing trade on IDFCFIRSTB? Current RSI=76, MACD hist=+0.2838, Vol=0.5x average. Signal is BUY.",
-    "context": {
-      "ticker": "IDFCFIRSTB.NS",
-      "signal": "BUY",
-      "patterns": "pivot_point_test, full_bullish_alignment, bb_upper_rejection",
-      "rsi": 75.9
-    },
-    "queued_at": "2026-08-04T09:45:48.996379"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of pivot_r1_breakout, supertrend_bullish, full_bullish_alignment mean for a swing trade on JSWSTEEL? Current RSI=64, MACD hist=+5.3370, Vol=1.5x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of bb_upper_rejection, pivot_r1_breakout, supertrend_bullish mean for a swing trade on JSWSTEEL? Current RSI=64, MACD hist=+5.3370, Vol=1.5x average. Signal is BUY.",
     "context": {
       "ticker": "JSWSTEEL.NS",
       "signal": "BUY",
-      "patterns": "pivot_r1_breakout, supertrend_bullish, full_bullish_alignment",
+      "patterns": "bb_upper_rejection, pivot_r1_breakout, supertrend_bullish",
       "rsi": 63.6
     },
-    "queued_at": "2026-08-04T09:45:48.997151"
+    "queued_at": "2026-08-04T10:11:25.330744"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of bb_upper_rejection, pivot_r1_breakout, 52w_breakout mean for a swing trade on SIEMENS? Current RSI=86, MACD hist=+26.5033, Vol=1.7x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of 52w_breakout, pivot_r1_breakout, near_52w_high mean for a swing trade on SIEMENS? Current RSI=87, MACD hist=+24.9180, Vol=1.7x average. Signal is BUY.",
     "context": {
       "ticker": "SIEMENS.NS",
       "signal": "BUY",
-      "patterns": "bb_upper_rejection, pivot_r1_breakout, 52w_breakout",
-      "rsi": 86.2
+      "patterns": "52w_breakout, pivot_r1_breakout, near_52w_high",
+      "rsi": 86.9
     },
-    "queued_at": "2026-08-04T09:45:48.997899"
+    "queued_at": "2026-08-04T10:11:25.331540"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of strong_bearish_marubozu, full_bullish_alignment, pivot_point_test mean for a swing trade on ASIANPAINT? Current RSI=75, MACD hist=+10.3990, Vol=1.0x average. Signal is BUY.",
+    "context": {
+      "ticker": "ASIANPAINT.NS",
+      "signal": "BUY",
+      "patterns": "strong_bearish_marubozu, full_bullish_alignment, pivot_point_test",
+      "rsi": 75.1
+    },
+    "queued_at": "2026-08-04T10:11:25.332321"
   },
   {
     "question": "In Indian NSE markets, what does the combination of gap_up_reversal, stoch_rsi_overbought_reversal mean for a swing trade on ICICIBANK? Current RSI=70, MACD hist=-1.9899, Vol=0.6x average. Signal is BUY.",
@@ -47,56 +37,66 @@
       "patterns": "gap_up_reversal, stoch_rsi_overbought_reversal",
       "rsi": 69.8
     },
-    "queued_at": "2026-08-04T09:45:49.104347"
+    "queued_at": "2026-08-04T10:12:37.865892"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of rsi_bearish_divergence, macd_bullish_crossover, low_volume_drift mean for a swing trade on UNIONBANK? Current RSI=55, MACD hist=+0.1616, Vol=0.5x average. Signal is BUY.",
-    "context": {
-      "ticker": "UNIONBANK.NS",
-      "signal": "BUY",
-      "patterns": "rsi_bearish_divergence, macd_bullish_crossover, low_volume_drift",
-      "rsi": 55.1
-    },
-    "queued_at": "2026-08-04T09:45:49.105215"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of bb_upper_rejection, adx_ranging_market, volume_breakout_bullish mean for a swing trade on ABCAPITAL? Current RSI=63, MACD hist=+0.1481, Vol=3.4x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of volume_breakout_bullish, bb_upper_rejection, gap_up_continuation mean for a swing trade on ABCAPITAL? Current RSI=58, MACD hist=-0.3292, Vol=3.8x average. Signal is BUY.",
     "context": {
       "ticker": "ABCAPITAL.NS",
       "signal": "BUY",
-      "patterns": "bb_upper_rejection, adx_ranging_market, volume_breakout_bullish",
-      "rsi": 63.4
+      "patterns": "volume_breakout_bullish, bb_upper_rejection, gap_up_continuation",
+      "rsi": 58.3
     },
-    "queued_at": "2026-08-04T09:45:49.108874"
+    "queued_at": "2026-08-04T10:12:37.869853"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of bb_upper_rejection, pivot_r1_breakout, 52w_breakout mean for a swing trade on SIEMENS? Current RSI=86, MACD hist=+26.5033, Vol=1.7x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of bb_upper_rejection, stoch_rsi_overbought_reversal mean for a swing trade on PIDILITIND? Current RSI=68, MACD hist=+4.9573, Vol=0.6x average. Signal is BUY.",
+    "context": {
+      "ticker": "PIDILITIND.NS",
+      "signal": "BUY",
+      "patterns": "bb_upper_rejection, stoch_rsi_overbought_reversal",
+      "rsi": 67.6
+    },
+    "queued_at": "2026-08-04T10:12:37.873770"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of 52w_breakout, pivot_r1_breakout, near_52w_high mean for a swing trade on SIEMENS? Current RSI=87, MACD hist=+24.9180, Vol=1.7x average. Signal is BUY.",
     "context": {
       "ticker": "SIEMENS.NS",
       "signal": "BUY",
-      "patterns": "bb_upper_rejection, pivot_r1_breakout, 52w_breakout",
-      "rsi": 86.2
+      "patterns": "52w_breakout, pivot_r1_breakout, near_52w_high",
+      "rsi": 86.9
     },
-    "queued_at": "2026-08-04T09:45:49.110550"
+    "queued_at": "2026-08-04T10:12:37.877096"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of pivot_r1_breakout, supertrend_bullish, full_bullish_alignment mean for a swing trade on JSWSTEEL? Current RSI=64, MACD hist=+5.3370, Vol=1.5x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of bb_upper_rejection, pivot_r1_breakout, supertrend_bullish mean for a swing trade on JSWSTEEL? Current RSI=64, MACD hist=+5.3370, Vol=1.5x average. Signal is BUY.",
     "context": {
       "ticker": "JSWSTEEL.NS",
       "signal": "BUY",
-      "patterns": "pivot_r1_breakout, supertrend_bullish, full_bullish_alignment",
+      "patterns": "bb_upper_rejection, pivot_r1_breakout, supertrend_bullish",
       "rsi": 63.6
     },
-    "queued_at": "2026-08-04T09:45:49.113741"
+    "queued_at": "2026-08-04T10:12:37.880268"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of pivot_point_test, full_bullish_alignment, bb_upper_rejection mean for a swing trade on IDFCFIRSTB? Current RSI=76, MACD hist=+0.2838, Vol=0.5x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of bb_upper_rejection, adx_strong_trend_up, supertrend_bullish mean for a swing trade on IDFCFIRSTB? Current RSI=76, MACD hist=+0.2838, Vol=0.5x average. Signal is BUY.",
     "context": {
       "ticker": "IDFCFIRSTB.NS",
       "signal": "BUY",
-      "patterns": "pivot_point_test, full_bullish_alignment, bb_upper_rejection",
+      "patterns": "bb_upper_rejection, adx_strong_trend_up, supertrend_bullish",
       "rsi": 75.9
     },
-    "queued_at": "2026-08-04T09:45:49.115373"
+    "queued_at": "2026-08-04T10:12:37.882092"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of strong_bearish_marubozu, full_bullish_alignment, pivot_point_test mean for a swing trade on ASIANPAINT? Current RSI=75, MACD hist=+10.3990, Vol=1.0x average. Signal is BUY.",
+    "context": {
+      "ticker": "ASIANPAINT.NS",
+      "signal": "BUY",
+      "patterns": "strong_bearish_marubozu, full_bullish_alignment, pivot_point_test",
+      "rsi": 75.1
+    },
+    "queued_at": "2026-08-04T10:12:37.882905"
   }
 ]

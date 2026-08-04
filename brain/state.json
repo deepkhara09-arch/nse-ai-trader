@@ -1,18 +1,16 @@
 {
   "phase": "paper_trading",
-  "day": 31,
-  "session": "intraday_close",
+  "day": 32,
+  "session": "morning",
   "start_date": "2026-06-22",
   "phase_start_date": "2026-07-15",
-  "last_run_date": "2026-08-03",
-  "last_counted_date": "2026-08-03",
-  "cohort_last_tick_date": "2026-08-03",
-  "last_updated": "2026-08-04T09:45:49.018878",
+  "last_run_date": "2026-08-04",
+  "last_counted_date": "2026-08-04",
+  "cohort_last_tick_date": "2026-08-04",
+  "last_updated": "2026-08-04T10:12:37.767620",
   "focus_stocks": [
     "MARICO.NS",
     "SBIN.NS",
-    "HOMEFIRST.NS",
-    "NESTLEIND.NS",
     "ICICIBANK.NS",
     "UNIONBANK.NS",
     "ABCAPITAL.NS",
@@ -23,22 +21,26 @@
     "LICI.NS",
     "POWERGRID.NS",
     "IDFCFIRSTB.NS",
-    "ASIANPAINT.NS"
+    "ASIANPAINT.NS",
+    "CIPLA.NS",
+    "NTPC.NS"
   ],
   "dropped_stocks": [
-    "NHPC.NS",
-    "BHEL.NS",
-    "ADANIENT.NS",
-    "GAIL.NS",
-    "BANDHANBNK.NS",
-    "NYKAA.NS",
     "FEDERALBNK.NS",
     "SUNPHARMA.NS",
+    "BHEL.NS",
+    "NHPC.NS",
     "KOTAKBANK.NS",
-    "BAJFINANCE.NS",
+    "GAIL.NS",
+    "ADANIENT.NS",
     "AXISBANK.NS",
-    "INDUSINDBK.NS",
-    "RECLTD.NS"
+    "NYKAA.NS",
+    "RECLTD.NS",
+    "NESTLEIND.NS",
+    "BAJFINANCE.NS",
+    "BANDHANBNK.NS",
+    "HOMEFIRST.NS",
+    "INDUSINDBK.NS"
   ],
   "paper_trade_stats": {
     "total": 11,
@@ -108,50 +110,12 @@
     "[2026-08-03] Pre-open macro: risk_off (-0.31)",
     "[2026-08-03] Focus refresh \u2014 promoted: ['ASIANPAINT'] | demoted: ['NHPC']",
     "[2026-08-03] Cohort batch #18 complete \u2014 30 candidates ready",
-    "[2026-08-04] Pre-open macro: risk_off (-0.35)"
+    "[2026-08-04] Pre-open macro: risk_off (-0.35)",
+    "[2026-08-04] Focus refresh \u2014 promoted: ['CIPLA', 'NTPC'] | demoted: ['NESTLEIND', 'HOMEFIRST']"
   ],
   "alert_sent": false,
   "schema_version": 11,
   "background_batches": [
-    {
-      "id": 15,
-      "day": 7,
-      "start_date": "2026-07-21",
-      "ready": true,
-      "candidates": [
-        "NESTLEIND.NS",
-        "PIDILITIND.NS",
-        "MARICO.NS",
-        "POWERGRID.NS",
-        "IDFCFIRSTB.NS",
-        "ETERNAL.NS",
-        "SUNPHARMA.NS",
-        "JSWSTEEL.NS",
-        "ICICIBANK.NS",
-        "LICI.NS",
-        "PFC.NS",
-        "INFY.NS",
-        "HOMEFIRST.NS",
-        "NYKAA.NS",
-        "HAVELLS.NS",
-        "ANANTRAJ.NS",
-        "ABCAPITAL.NS",
-        "ITC.NS",
-        "BAJAJFINSV.NS",
-        "UNIONBANK.NS",
-        "COLPAL.NS",
-        "TATAPOWER.NS",
-        "BHARTIARTL.NS",
-        "ASIANPAINT.NS",
-        "TECHM.NS",
-        "SHRIRAMFIN.NS",
-        "SWIGGY.NS",
-        "SBIN.NS",
-        "BAJFINANCE.NS",
-        "NTPC.NS"
-      ],
-      "scored_date": "2026-07-29"
-    },
     {
       "id": 16,
       "day": 7,
@@ -271,29 +235,36 @@
     },
     {
       "id": 19,
-      "day": 4,
+      "day": 5,
       "start_date": "2026-07-29",
       "ready": false,
       "candidates": []
     },
     {
       "id": 20,
-      "day": 3,
+      "day": 4,
       "start_date": "2026-07-30",
       "ready": false,
       "candidates": []
     },
     {
       "id": 21,
-      "day": 2,
+      "day": 3,
       "start_date": "2026-07-31",
       "ready": false,
       "candidates": []
     },
     {
       "id": 22,
-      "day": 1,
+      "day": 2,
       "start_date": "2026-08-03",
+      "ready": false,
+      "candidates": []
+    },
+    {
+      "id": 23,
+      "day": 1,
+      "start_date": "2026-08-04",
       "ready": false,
       "candidates": []
     }
@@ -342,6 +313,7 @@
     "morning": "2026-08-04",
     "midday": "2026-08-04",
     "afternoon": "2026-08-04",
-    "intraday_close": "2026-08-04"
+    "intraday_close": "2026-08-04",
+    "preclose": "2026-08-04"
   }
 }

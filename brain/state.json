@@ -1,13 +1,13 @@
 {
   "phase": "paper_trading",
   "day": 32,
-  "session": "morning",
+  "session": "midday",
   "start_date": "2026-06-22",
   "phase_start_date": "2026-07-15",
   "last_run_date": "2026-08-04",
   "last_counted_date": "2026-08-04",
   "cohort_last_tick_date": "2026-08-04",
-  "last_updated": "2026-08-05T04:05:47.664672",
+  "last_updated": "2026-08-05T06:07:07.140117",
   "focus_stocks": [
     "MARICO.NS",
     "SBIN.NS",
@@ -311,6 +311,7 @@
   },
   "sessions_done": {
     "preopen": "2026-08-05",
-    "morning": "2026-08-05"
+    "morning": "2026-08-05",
+    "midday": "2026-08-05"
   }
 }

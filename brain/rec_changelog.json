@@ -3618,5 +3618,45 @@
     "ts": "2026-08-05T04:05:47.765656",
     "detail": "Confidence \u25b29 (66 \u2192 75) | Rank \u25bc1 (#14 \u2192 #15) | Stop loss moved \u20b91567.28 \u2192 \u20b91589.51 | Target 1 moved \u20b91707.14 \u2192 \u20b91751.18",
     "confidence": 75.2
+  },
+  {
+    "type": "removed",
+    "ticker": "PIDILITIND.NS",
+    "nse_code": "PIDILITIND",
+    "signal": "BUY",
+    "date": "2026-08-05",
+    "ts": "2026-08-05T06:07:07.221357",
+    "detail": "Dropped \u2014 no longer meets threshold (was 75/100)",
+    "confidence": 0
+  },
+  {
+    "type": "removed",
+    "ticker": "LICI.NS",
+    "nse_code": "LICI",
+    "signal": "BUY",
+    "date": "2026-08-05",
+    "ts": "2026-08-05T06:07:07.221357",
+    "detail": "Dropped \u2014 no longer meets threshold (was 66/100)",
+    "confidence": 0
+  },
+  {
+    "type": "removed",
+    "ticker": "IDFCFIRSTB.NS",
+    "nse_code": "IDFCFIRSTB",
+    "signal": "BUY",
+    "date": "2026-08-05",
+    "ts": "2026-08-05T06:07:07.221357",
+    "detail": "Dropped \u2014 no longer meets threshold (was 66/100)",
+    "confidence": 0
+  },
+  {
+    "type": "updated",
+    "ticker": "SIEMENS.NS",
+    "nse_code": "SIEMENS",
+    "signal": "BUY",
+    "date": "2026-08-05",
+    "ts": "2026-08-05T06:07:07.221357",
+    "detail": "Target 1 moved \u20b94413.92 \u2192 \u20b94306.19",
+    "confidence": 80.5
   }
 ]

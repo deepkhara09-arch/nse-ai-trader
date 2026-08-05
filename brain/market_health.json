@@ -1,6 +1,6 @@
 {
   "date": "2026-08-05",
-  "session": "intraday_close",
+  "session": "preclose",
   "nifty": {
     "symbol": "^NSEI",
     "value": 24614.9,
@@ -61,6 +61,7 @@
   "market_mood": "bearish",
   "trade_allowed": true,
   "warnings": [
+    "Nifty choppy intraday \u2014 wait for cleaner setups",
     "Global macro risk-off (-0.29) \u2014 Overall macro mood is risk-off (-0.29). US Dow +1.7% overnight. Crude -5.7%. USD/INR -0.2%. Notable: Geopolitical confli"
   ],
   "leading_sectors": [
@@ -72,7 +73,7 @@
   "sector_breadth": 0.75,
   "lagging_sectors": [],
   "broad_market_strength": true,
-  "intraday_regime": "mixed",
+  "intraday_regime": "choppy",
   "macro": {
     "date": "2026-08-05",
     "session": "midday",
@@ -322,16 +323,15 @@
   },
   "pcr": {
     "date": "2026-08-05",
-    "pcr": 1.006,
-    "reading": "neutral",
-    "total_pe_oi": 2076347,
-    "total_ce_oi": 2063417,
-    "spot": 24614.9,
+    "pcr": 0.723,
+    "reading": "bearish_bias",
+    "total_pe_oi": 1489512,
+    "total_ce_oi": 2058899,
+    "spot": 24624.65,
     "max_pain": 24550.0,
-    "max_pain_dist_pct": 0.26,
-    "oi_bias": "put_heavy_support",
+    "max_pain_dist_pct": 0.3,
+    "oi_bias": "balanced",
     "ok": true,
     "error": ""
-  },
-  "oi_note": "Heavy put OI below spot \u2014 option writers see a floor (bullish lean)"
+  }
 }

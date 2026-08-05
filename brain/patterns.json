@@ -1984,5 +1984,111 @@
         }
       }
     }
+  },
+  "JSWSTEEL.NS": {
+    "reliable_patterns": {
+      "full_bullish_alignment": {
+        "wins": 1.0,
+        "losses": 0.0,
+        "reliability": 0.667,
+        "last_seen": "2026-08-05"
+      },
+      "tweezer_bottom": {
+        "wins": 1.0,
+        "losses": 0.0,
+        "reliability": 0.667,
+        "last_seen": "2026-08-05"
+      },
+      "inside_bar": {
+        "wins": 1.0,
+        "losses": 0.0,
+        "reliability": 0.667,
+        "last_seen": "2026-08-05"
+      },
+      "pivot_point_test": {
+        "wins": 1.0,
+        "losses": 0.0,
+        "reliability": 0.667,
+        "last_seen": "2026-08-05"
+      },
+      "supertrend_bullish": {
+        "wins": 1.0,
+        "losses": 0.0,
+        "reliability": 0.667,
+        "last_seen": "2026-08-05"
+      },
+      "adx_ranging_market": {
+        "wins": 1.0,
+        "losses": 0.0,
+        "reliability": 0.667,
+        "last_seen": "2026-08-05"
+      }
+    },
+    "preferred_style": "swing",
+    "swing_wins": 1,
+    "swing_losses": 0,
+    "intraday_wins": 0,
+    "intraday_losses": 0,
+    "long_term_wins": 0,
+    "long_term_losses": 0,
+    "atr_stop_hits": 1,
+    "atr_target_hits": 0,
+    "atr_multiplier": 1.5,
+    "last_updated": "2026-08-05",
+    "attribution": {
+      "by_pattern": {
+        "full_bullish_alignment": {
+          "wins": 2,
+          "losses": 0,
+          "total": 2
+        },
+        "tweezer_bottom": {
+          "wins": 2,
+          "losses": 0,
+          "total": 2
+        },
+        "inside_bar": {
+          "wins": 2,
+          "losses": 0,
+          "total": 2
+        },
+        "pivot_point_test": {
+          "wins": 2,
+          "losses": 0,
+          "total": 2
+        },
+        "supertrend_bullish": {
+          "wins": 2,
+          "losses": 0,
+          "total": 2
+        },
+        "adx_ranging_market": {
+          "wins": 2,
+          "losses": 0,
+          "total": 2
+        }
+      },
+      "by_session": {
+        "morning": {
+          "wins": 2,
+          "losses": 0,
+          "total": 2
+        }
+      },
+      "by_mood": {
+        "neutral": {
+          "wins": 2,
+          "losses": 0,
+          "total": 2
+        }
+      },
+      "by_style": {
+        "swing": {
+          "wins": 2,
+          "losses": 0,
+          "total": 2
+        }
+      }
+    }
   }
 }

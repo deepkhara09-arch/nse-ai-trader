@@ -3718,5 +3718,45 @@
     "ts": "2026-08-05T09:45:46.040237",
     "detail": "Rank \u25b21 (#14 \u2192 #13)",
     "confidence": 80.5
+  },
+  {
+    "type": "new",
+    "ticker": "ICICIBANK.NS",
+    "nse_code": "ICICIBANK",
+    "signal": "BUY",
+    "date": "2026-08-05",
+    "ts": "2026-08-05T10:12:39.438191",
+    "detail": "New BUY recommendation \u2014 confidence 71/100",
+    "confidence": 70.7
+  },
+  {
+    "type": "removed",
+    "ticker": "UNIONBANK.NS",
+    "nse_code": "UNIONBANK",
+    "signal": "BUY",
+    "date": "2026-08-05",
+    "ts": "2026-08-05T10:12:39.438191",
+    "detail": "Dropped \u2014 no longer meets threshold (was 65/100)",
+    "confidence": 0
+  },
+  {
+    "type": "updated",
+    "ticker": "SIEMENS.NS",
+    "nse_code": "SIEMENS",
+    "signal": "BUY",
+    "date": "2026-08-05",
+    "ts": "2026-08-05T10:12:39.438191",
+    "detail": "Rank \u25bc2 (#13 \u2192 #15)",
+    "confidence": 78.3
+  },
+  {
+    "type": "updated",
+    "ticker": "LICI.NS",
+    "nse_code": "LICI",
+    "signal": "BUY",
+    "date": "2026-08-05",
+    "ts": "2026-08-05T10:12:39.438191",
+    "detail": "Rank \u25bc1 (#8 \u2192 #9)",
+    "confidence": 66.5
   }
 ]

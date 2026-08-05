@@ -1,13 +1,13 @@
 {
   "phase": "paper_trading",
-  "day": 32,
-  "session": "intraday_close",
+  "day": 33,
+  "session": "morning",
   "start_date": "2026-06-22",
   "phase_start_date": "2026-07-15",
-  "last_run_date": "2026-08-04",
-  "last_counted_date": "2026-08-04",
-  "cohort_last_tick_date": "2026-08-04",
-  "last_updated": "2026-08-05T09:45:45.925443",
+  "last_run_date": "2026-08-05",
+  "last_counted_date": "2026-08-05",
+  "cohort_last_tick_date": "2026-08-05",
+  "last_updated": "2026-08-05T10:12:39.346091",
   "focus_stocks": [
     "MARICO.NS",
     "SBIN.NS",
@@ -43,14 +43,14 @@
     "INDUSINDBK.NS"
   ],
   "paper_trade_stats": {
-    "total": 12,
-    "wins": 7,
+    "total": 13,
+    "wins": 8,
     "losses": 5,
-    "win_rate": 0.583,
-    "total_pnl": 278.0,
-    "avg_win": 175.73,
+    "win_rate": 0.615,
+    "total_pnl": 286.6,
+    "avg_win": 154.84,
     "avg_loss": -190.43,
-    "expectancy": 23.17
+    "expectancy": 22.05
   },
   "brain_notes": [
     "[2026-06-23] Pre-open macro: neutral (+0.07)",
@@ -236,35 +236,35 @@
     },
     {
       "id": 19,
-      "day": 5,
+      "day": 6,
       "start_date": "2026-07-29",
       "ready": false,
       "candidates": []
     },
     {
       "id": 20,
-      "day": 4,
+      "day": 5,
       "start_date": "2026-07-30",
       "ready": false,
       "candidates": []
     },
     {
       "id": 21,
-      "day": 3,
+      "day": 4,
       "start_date": "2026-07-31",
       "ready": false,
       "candidates": []
     },
     {
       "id": 22,
-      "day": 2,
+      "day": 3,
       "start_date": "2026-08-03",
       "ready": false,
       "candidates": []
     },
     {
       "id": 23,
-      "day": 1,
+      "day": 2,
       "start_date": "2026-08-04",
       "ready": false,
       "candidates": []
@@ -314,6 +314,7 @@
     "morning": "2026-08-05",
     "midday": "2026-08-05",
     "afternoon": "2026-08-05",
-    "intraday_close": "2026-08-05"
+    "intraday_close": "2026-08-05",
+    "preclose": "2026-08-05"
   }
 }

@@ -1,6 +1,6 @@
 {
-  "date": "2026-08-04",
-  "session": "preclose",
+  "date": "2026-08-05",
+  "session": "preopen",
   "nifty": {
     "symbol": "^NSEI",
     "value": 24774.3,
@@ -28,46 +28,45 @@
   "sectors": {
     "IT": {
       "symbol": "ITBEES.NS",
-      "value": 34.12,
-      "day_change_pct": -1.44,
+      "value": 34.98,
+      "day_change_pct": 2.52,
       "trend_5d": "strong_up",
       "trend_20d": "strong_up",
-      "ath_pct_60d": -3.83
+      "ath_pct_60d": -1.41
     },
     "Pharma": {
       "symbol": "PHARMABEES.NS",
-      "value": 27.23,
-      "day_change_pct": -0.15,
-      "trend_5d": "up",
+      "value": 27.26,
+      "day_change_pct": 0.11,
+      "trend_5d": "sideways",
       "trend_20d": "strong_up",
-      "ath_pct_60d": -2.58
+      "ath_pct_60d": -2.47
     },
     "Bank": {
       "symbol": "BANKBEES.NS",
-      "value": 592.26,
-      "day_change_pct": 0.2,
-      "trend_5d": "sideways",
+      "value": 597.34,
+      "day_change_pct": 0.86,
+      "trend_5d": "up",
       "trend_20d": "down",
-      "ath_pct_60d": -5.68
+      "ath_pct_60d": -4.87
     },
     "Infra": {
       "symbol": "INFRABEES.NS",
-      "value": 971.97,
-      "day_change_pct": 0.34,
+      "value": 972.07,
+      "day_change_pct": 0.01,
       "trend_5d": "up",
-      "trend_20d": "down",
-      "ath_pct_60d": -2.17
+      "trend_20d": "sideways",
+      "ath_pct_60d": -2.16
     }
   },
-  "market_mood": "bearish",
+  "market_mood": "neutral",
   "trade_allowed": true,
   "warnings": [
-    "Nifty choppy intraday \u2014 wait for cleaner setups",
-    "Global macro risk-off (-0.43) \u2014 Overall macro mood is risk-off (-0.43). US Dow +0.5% overnight. Crude +1.3%. USD/INR -0.1%. Notable: Geopolitical confli"
+    "Nifty choppy intraday \u2014 wait for cleaner setups"
   ],
   "leading_sectors": [
     "IT",
-    "Pharma",
+    "Bank",
     "Infra"
   ],
   "market_regime": "normal",
@@ -76,77 +75,70 @@
   "broad_market_strength": true,
   "intraday_regime": "choppy",
   "macro": {
-    "date": "2026-08-04",
-    "session": "midday",
-    "generated_at": "2026-08-04T07:12:46.737225",
-    "global_score": 0.038,
-    "india_score": -1.0,
-    "overall_score": -0.429,
-    "mood": "risk_off",
+    "date": "2026-08-05",
+    "session": "preopen",
+    "generated_at": "2026-08-05T03:05:51.656907",
+    "global_score": 0.324,
+    "india_score": 0.0,
+    "overall_score": 0.178,
+    "mood": "neutral",
     "drivers": [
-      "\u2018We have always been civil\u2019: My sister refuses to replace me as executor. Can I step down before she dies?",
-      "\u2018My head hit the driver\u2019s window\u2019: A teenager T-boned our car. Will Medicare pay my hospital bills?",
-      "\u2018I\u2019m easing into retirement\u2019: I\u2019m getting an $80,000 pension payout. Where can I invest it safely?",
-      "Microsoft\u2019s stock is on a run not seen in 26 years \u2014 erasing its year-to-date losses",
-      "Should wealthier Americans forgo their Social Security benefits as a charitable gesture?",
-      "If I buy a house for $1 million in cash at 70, will I run out of money by 90?",
-      "Palantir\u2019s stock climbs after earnings, as AI drives turbocharged growth",
-      "As \u2018Spider-Man\u2019 joins \u2018The Odyssey\u2019 in Imax, are premium movie screens worth the extra price?"
+      "Stocks return to record highs. Investors who sat tight during the recent momentum crash are being rewarded.",
+      "Upstart\u2019s AI upgrades pay off, as a pickup in loan growth helps send the stock higher",
+      "Chipotle pulls jalapenos from some locations after salmonella investigation. Here\u2019s what to know.",
+      "Stocks face their weakest seasonal stretch. Why extreme investor pessimism could limit any selling.",
+      "My ex-husband\u2019s sister died \u2014 so why is Fidelity asking me for her death certificate?",
+      "McDonald\u2019s says its value meals have become too complicated",
+      "If I marry my girlfriend, 67, will she lose her Supplemental Security Income and divorced spouse benefits?",
+      "Traders are using options to chase a runaway rebound in stocks, pushing the market even higher"
     ],
     "global_cues": {
       "dow": {
-        "last": 52485.03,
-        "chg_pct": 0.53
+        "last": 54085.88,
+        "chg_pct": 1.71
       },
       "nasdaq": {
-        "last": 25373.85,
-        "chg_pct": 1.0
+        "last": 26584.99,
+        "chg_pct": 2.59
       },
       "sp500": {
-        "last": 7489.72,
-        "chg_pct": 0.7
+        "last": 7736.52,
+        "chg_pct": 1.79
       },
       "nikkei": {
-        "last": 63957.53,
-        "chg_pct": -0.63
+        "last": 65861.0,
+        "chg_pct": 3.3
       },
       "crude": {
-        "last": 84.67,
-        "chg_pct": 1.29
+        "last": 74.62,
+        "chg_pct": -7.12
       },
       "usdinr": {
-        "last": 95.35,
-        "chg_pct": -0.06
+        "last": 95.33,
+        "chg_pct": -0.07
       },
       "gold": {
-        "last": 4049.1,
-        "chg_pct": -1.24
+        "last": 4191.3,
+        "chg_pct": 3.91
       }
     },
-    "summary": "Overall macro mood is risk-off (-0.43). US Dow +0.5% overnight. Crude +1.3%. USD/INR -0.1%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
+    "summary": "Overall macro mood is neutral (+0.18). US Dow +1.7% overnight. Crude -7.1%. USD/INR -0.1%. Notable: Geopolitical conflict / war.",
     "playbook": [
-      "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
-      "Trade-war headlines spook global markets; IT & export names react most."
+      "Geopolitical shocks trigger global risk-off; gold up, equities down initially."
     ],
     "playbook_bias": "risk_off",
     "article_count": 60
   },
-  "macro_risk_factor": 0.7,
+  "macro_risk_factor": 1.0,
   "fii_dii": {
-    "date": "2026-08-04",
-    "fii_net_cr": 922.26,
-    "dii_net_cr": 1571.18,
-    "combined_net_cr": 2493.44,
+    "date": "2026-08-05",
+    "fii_net_cr": 2446.47,
+    "dii_net_cr": -936.14,
+    "combined_net_cr": 1510.33,
     "signal": "inflow",
     "ok": true,
     "error": "",
     "history": [
-      {
-        "date": "2026-06-24",
-        "fii": 17.86,
-        "dii": 680.21,
-        "combined": 698.07
-      },
       {
         "date": "2026-06-25",
         "fii": -1843.4,
@@ -320,15 +312,21 @@
         "fii": 922.26,
         "dii": 1571.18,
         "combined": 2493.44
+      },
+      {
+        "date": "2026-08-05",
+        "fii": 2446.47,
+        "dii": -936.14,
+        "combined": 1510.33
       }
     ]
   },
   "pcr": {
-    "date": "2026-08-04",
-    "pcr": 1.014,
+    "date": "2026-08-05",
+    "pcr": 1.006,
     "reading": "neutral",
-    "total_pe_oi": 2146102,
-    "total_ce_oi": 2115924,
+    "total_pe_oi": 2076347,
+    "total_ce_oi": 2063417,
     "spot": 24614.9,
     "max_pain": 24550.0,
     "max_pain_dist_pct": 0.26,

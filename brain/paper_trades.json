@@ -1,5 +1,5 @@
 {
-  "capital": 67146.64546,
+  "capital": 68463.14546,
   "open_positions": [
     {
       "ticker": "ICICIBANK.NS",
@@ -35,8 +35,8 @@
         "MACD histogram negative",
         "StochRSI overbought with bearish candle \u2014 reversal"
       ],
-      "current_price": 1434.8,
-      "unrealized_pnl": 27.0,
+      "current_price": 1443.6,
+      "unrealized_pnl": 79.8,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -86,8 +86,8 @@
         "RSI=66 elevated",
         "Near upper Bollinger Band"
       ],
-      "current_price": 85.04,
-      "unrealized_pnl": -9.8,
+      "current_price": 85.15,
+      "unrealized_pnl": -4.41,
       "max_held_days": 10,
       "vol_regime_pct": 0.08399999999999999,
       "entry_market": {
@@ -97,7 +97,7 @@
         "regime": "mixed"
       },
       "view_hist": [
-        0,
+        1,
         1,
         1,
         1
@@ -110,9 +110,9 @@
       "open_session": "morning",
       "action": "BUY",
       "entry": 1282.6,
-      "qty": 2,
-      "invested": 2565.2,
-      "stop_loss": 1244.8,
+      "qty": 1,
+      "invested": 1282.6,
+      "stop_loss": 1295.07,
       "target": 1358.2,
       "style": "swing",
       "confidence": 65.6,
@@ -136,8 +136,8 @@
         "\u2713 Daily setup aligned with the higher-timeframe trend",
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction"
       ],
-      "current_price": 1307.8,
-      "unrealized_pnl": 50.4,
+      "current_price": 1330.0,
+      "unrealized_pnl": 47.4,
       "max_held_days": 10,
       "vol_regime_pct": 0.08399999999999999,
       "entry_market": {
@@ -151,7 +151,9 @@
         0,
         0,
         0
-      ]
+      ],
+      "t1_booked": true,
+      "trailing_active": true
     },
     {
       "ticker": "SIEMENS.NS",
@@ -194,8 +196,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "RSI=74 overbought"
       ],
-      "current_price": 3976.2,
-      "unrealized_pnl": 17.1,
+      "current_price": 3969.0,
+      "unrealized_pnl": 9.9,
       "max_held_days": 10,
       "vol_regime_pct": 0.08399999999999999,
       "entry_market": {
@@ -249,8 +251,8 @@
         "RSI=62 elevated",
         "RSI bearish divergence \u2014 price higher but RSI lower"
       ],
-      "current_price": 2759.0,
-      "unrealized_pnl": -79.6,
+      "current_price": 2758.0,
+      "unrealized_pnl": -81.6,
       "max_held_days": 10,
       "vol_regime_pct": 0.08399999999999999,
       "entry_market": {
@@ -309,8 +311,8 @@
         "\u2713 Daily setup aligned with the higher-timeframe trend",
         "RSI=64 elevated"
       ],
-      "current_price": 1640.0,
-      "unrealized_pnl": -17.0,
+      "current_price": 1645.9,
+      "unrealized_pnl": 12.5,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -321,6 +323,7 @@
       },
       "view_hist": [
         0,
+        1,
         1
       ]
     }
@@ -963,6 +966,68 @@
       "pnl_pct": -3.66,
       "won": false,
       "open_days": 3
+    },
+    {
+      "ticker": "JSWSTEEL.NS",
+      "sector": "Metals",
+      "open_date": "2026-08-03",
+      "open_session": "morning",
+      "action": "BUY",
+      "entry": 1282.6,
+      "qty": 1,
+      "invested": 1282.6,
+      "stop_loss": 1295.07,
+      "target": 1358.2,
+      "style": "swing",
+      "confidence": 65.6,
+      "patterns": [
+        "full_bullish_alignment",
+        "tweezer_bottom",
+        "inside_bar",
+        "pivot_point_test",
+        "supertrend_bullish",
+        "adx_ranging_market"
+      ],
+      "buy_reasons": [
+        "All EMAs stacked bullish",
+        "MACD histogram positive",
+        "Candlestick: tweezer bottom",
+        "Supertrend bullish \u2014 price above trend band",
+        "ADX low \u2014 market ranging, signals less reliable",
+        "Testing pivot point \u2014 decision zone",
+        "In a long-term strong uptrend (2yr) \u2014 trend on our side",
+        "Near 52-week high (94% of range) \u2014 breakout zone",
+        "\u2713 Daily setup aligned with the higher-timeframe trend",
+        "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction"
+      ],
+      "current_price": 1330.0,
+      "unrealized_pnl": 94.8,
+      "max_held_days": 10,
+      "vol_regime_pct": 0.08399999999999999,
+      "entry_market": {
+        "nifty_trend": "up",
+        "vix": 11.76,
+        "mood": "bearish",
+        "regime": "mixed"
+      },
+      "view_hist": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "t1_booked": true,
+      "trailing_active": true,
+      "close_date": "2026-08-05",
+      "close_session": "intraday_close",
+      "exit_price": 1320.4,
+      "exit_reason": "partial_t1",
+      "pnl": 33.9,
+      "pnl_gross": 37.8,
+      "costs": 3.9,
+      "pnl_pct": 2.64,
+      "won": true,
+      "open_days": 2
     }
   ],
   "daily_snapshots": [
@@ -1065,11 +1130,11 @@
       "daily_pnl": 126.11
     }
   ],
-  "daily_pnl_today": 0.0,
+  "daily_pnl_today": 33.9,
   "last_snapshot_date": "2026-08-04",
-  "lifetime_wins": 6,
+  "lifetime_wins": 7,
   "lifetime_losses": 5,
-  "lifetime_pnl": 244.1,
+  "lifetime_pnl": 278.0,
   "last_pnl_reset_date": "2026-08-05",
   "max_drawdown_pct": 1.07,
   "current_drawdown_pct": 0.94,

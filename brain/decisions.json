@@ -18647,5 +18647,186 @@
       "tweezer_top",
       "doji"
     ]
+  },
+  {
+    "timestamp": "2026-08-05T09:45:45.892157",
+    "date": "2026-08-05",
+    "ticker": "ICICIBANK.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 92.7,
+    "entry": 1443.6,
+    "stop_loss": 1400.19,
+    "target": 1530.43,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "full_bullish_alignment",
+      "pivot_s1_breakdown",
+      "bearish_harami",
+      "pivot_point_test",
+      "doji",
+      "adx_strong_trend_up"
+    ]
+  },
+  {
+    "timestamp": "2026-08-05T09:45:45.893016",
+    "date": "2026-08-05",
+    "ticker": "UNIONBANK.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 83.5,
+    "entry": 174.9,
+    "stop_loss": 167.81,
+    "target": 189.08,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "full_bullish_alignment",
+      "low_volume_drift",
+      "pivot_point_test",
+      "inside_bar",
+      "momentum_continuation",
+      "three_white_soldiers",
+      "hammer",
+      "spinning_top",
+      "supertrend_bullish",
+      "stoch_rsi_oversold_reversal",
+      "adx_ranging_market"
+    ]
+  },
+  {
+    "timestamp": "2026-08-05T09:45:45.894972",
+    "date": "2026-08-05",
+    "ticker": "PIDILITIND.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 95,
+    "entry": 1645.9,
+    "stop_loss": 1592.01,
+    "target": 1753.67,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "full_bullish_alignment",
+      "pivot_r2_breakout",
+      "52w_breakout",
+      "outside_bar",
+      "pivot_point_test",
+      "pivot_r1_breakout",
+      "near_52w_high",
+      "supertrend_bullish",
+      "volume_breakout_bullish",
+      "adx_strong_trend_up"
+    ]
+  },
+  {
+    "timestamp": "2026-08-05T09:45:45.895860",
+    "date": "2026-08-05",
+    "ticker": "SIEMENS.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 95,
+    "entry": 3969.0,
+    "stop_loss": 3789.74,
+    "target": 4327.52,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "full_bullish_alignment",
+      "52w_breakout",
+      "three_white_soldiers",
+      "pivot_r1_breakout",
+      "near_52w_high",
+      "supertrend_bullish",
+      "bb_upper_rejection",
+      "volume_breakout_bullish",
+      "adx_strong_trend_up"
+    ]
+  },
+  {
+    "timestamp": "2026-08-05T09:45:45.896708",
+    "date": "2026-08-05",
+    "ticker": "JSWSTEEL.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 66.0,
+    "entry": 1330.0,
+    "stop_loss": 1292.97,
+    "target": 1404.06,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "full_bullish_alignment",
+      "strong_bullish_marubozu",
+      "near_52w_high",
+      "supertrend_bullish",
+      "bb_upper_rejection"
+    ]
+  },
+  {
+    "timestamp": "2026-08-05T09:45:45.897544",
+    "date": "2026-08-05",
+    "ticker": "LICI.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 88.4,
+    "entry": 393.4,
+    "stop_loss": 378.91,
+    "target": 422.37,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "bb_lower_bounce",
+      "gap_down_reversal",
+      "volume_climax_bottom",
+      "doji",
+      "volume_breakout_bullish",
+      "supertrend_bullish",
+      "stoch_rsi_oversold_reversal"
+    ]
+  },
+  {
+    "timestamp": "2026-08-05T09:45:45.898847",
+    "date": "2026-08-05",
+    "ticker": "IDFCFIRSTB.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 86.7,
+    "entry": 85.15,
+    "stop_loss": 81.98,
+    "target": 91.5,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "full_bullish_alignment",
+      "stoch_rsi_overbought_reversal",
+      "pivot_s1_breakdown",
+      "dragonfly_doji",
+      "pivot_point_test",
+      "doji",
+      "adx_strong_trend_up"
+    ]
+  },
+  {
+    "timestamp": "2026-08-05T09:45:45.899656",
+    "date": "2026-08-05",
+    "ticker": "ASIANPAINT.NS",
+    "session": "intraday_close",
+    "action": "SELL",
+    "signal": "SELL",
+    "confidence": 52.5,
+    "entry": 2758.0,
+    "stop_loss": 2846.85,
+    "target": 2580.29,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "full_bullish_alignment",
+      "pivot_s1_breakdown",
+      "rsi_bearish_divergence",
+      "spinning_top",
+      "doji",
+      "tweezer_top"
+    ]
   }
 ]

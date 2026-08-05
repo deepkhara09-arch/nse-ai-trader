@@ -1,13 +1,13 @@
 {
   "phase": "paper_trading",
   "day": 32,
-  "session": "afternoon",
+  "session": "intraday_close",
   "start_date": "2026-06-22",
   "phase_start_date": "2026-07-15",
   "last_run_date": "2026-08-04",
   "last_counted_date": "2026-08-04",
   "cohort_last_tick_date": "2026-08-04",
-  "last_updated": "2026-08-05T07:45:47.437337",
+  "last_updated": "2026-08-05T09:45:45.925443",
   "focus_stocks": [
     "MARICO.NS",
     "SBIN.NS",
@@ -43,14 +43,14 @@
     "INDUSINDBK.NS"
   ],
   "paper_trade_stats": {
-    "total": 11,
-    "wins": 6,
+    "total": 12,
+    "wins": 7,
     "losses": 5,
-    "win_rate": 0.545,
-    "total_pnl": 244.1,
-    "avg_win": 199.37,
+    "win_rate": 0.583,
+    "total_pnl": 278.0,
+    "avg_win": 175.73,
     "avg_loss": -190.43,
-    "expectancy": 22.19
+    "expectancy": 23.17
   },
   "brain_notes": [
     "[2026-06-23] Pre-open macro: neutral (+0.07)",
@@ -313,6 +313,7 @@
     "preopen": "2026-08-05",
     "morning": "2026-08-05",
     "midday": "2026-08-05",
-    "afternoon": "2026-08-05"
+    "afternoon": "2026-08-05",
+    "intraday_close": "2026-08-05"
   }
 }

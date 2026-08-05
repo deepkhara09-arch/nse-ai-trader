@@ -1,28 +1,27 @@
 {
   "date": "2026-08-05",
-  "session": "preopen",
+  "session": "morning",
   "nifty": {
     "symbol": "^NSEI",
-    "value": 24774.3,
-    "day_change_pct": 1.6,
-    "trend_5d": "strong_up",
-    "trend_20d": "up",
-    "ath_pct_60d": 0.0,
-    "intraday_surge": true
+    "value": 24614.9,
+    "day_change_pct": -0.64,
+    "trend_5d": "up",
+    "trend_20d": "strong_up",
+    "ath_pct_60d": -0.64
   },
   "vix": {
-    "value": 11.93,
+    "value": 12.19,
     "level": "normal",
-    "percentile_30d": 13.0,
-    "avg_30d": 12.91
+    "percentile_30d": 23.0,
+    "avg_30d": 12.89
   },
   "bank_nifty": {
     "symbol": "^NSEBANK",
-    "value": 58247.95,
-    "day_change_pct": 1.72,
+    "value": 57907.2,
+    "day_change_pct": -0.58,
     "trend_5d": "up",
-    "trend_20d": "sideways",
-    "ath_pct_60d": -0.78,
+    "trend_20d": "up",
+    "ath_pct_60d": -1.36,
     "diverging": false
   },
   "sectors": {
@@ -59,11 +58,9 @@
       "ath_pct_60d": -2.16
     }
   },
-  "market_mood": "neutral",
+  "market_mood": "bullish",
   "trade_allowed": true,
-  "warnings": [
-    "Nifty choppy intraday \u2014 wait for cleaner setups"
-  ],
+  "warnings": [],
   "leading_sectors": [
     "IT",
     "Bank",
@@ -73,7 +70,7 @@
   "sector_breadth": 0.75,
   "lagging_sectors": [],
   "broad_market_strength": true,
-  "intraday_regime": "choppy",
+  "intraday_regime": "mixed",
   "macro": {
     "date": "2026-08-05",
     "session": "preopen",

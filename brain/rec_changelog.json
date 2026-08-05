@@ -3538,5 +3538,85 @@
     "ts": "2026-08-04T10:12:37.887563",
     "detail": "Rank \u25bc2 (#13 \u2192 #15)",
     "confidence": 81.5
+  },
+  {
+    "type": "new",
+    "ticker": "LICI.NS",
+    "nse_code": "LICI",
+    "signal": "BUY",
+    "date": "2026-08-05",
+    "ts": "2026-08-05T04:05:47.765656",
+    "detail": "New BUY recommendation \u2014 confidence 66/100",
+    "confidence": 66.5
+  },
+  {
+    "type": "new",
+    "ticker": "IDFCFIRSTB.NS",
+    "nse_code": "IDFCFIRSTB",
+    "signal": "BUY",
+    "date": "2026-08-05",
+    "ts": "2026-08-05T04:05:47.765656",
+    "detail": "New BUY recommendation \u2014 confidence 66/100",
+    "confidence": 66.3
+  },
+  {
+    "type": "removed",
+    "ticker": "ICICIBANK.NS",
+    "nse_code": "ICICIBANK",
+    "signal": "BUY",
+    "date": "2026-08-05",
+    "ts": "2026-08-05T04:05:47.765656",
+    "detail": "Dropped \u2014 no longer meets threshold (was 75/100)",
+    "confidence": 0
+  },
+  {
+    "type": "removed",
+    "ticker": "MARICO.NS",
+    "nse_code": "MARICO",
+    "signal": "BUY",
+    "date": "2026-08-05",
+    "ts": "2026-08-05T04:05:47.765656",
+    "detail": "Dropped \u2014 no longer meets threshold (was 73/100)",
+    "confidence": 0
+  },
+  {
+    "type": "removed",
+    "ticker": "ABCAPITAL.NS",
+    "nse_code": "ABCAPITAL",
+    "signal": "BUY",
+    "date": "2026-08-05",
+    "ts": "2026-08-05T04:05:47.765656",
+    "detail": "Dropped \u2014 no longer meets threshold (was 67/100)",
+    "confidence": 0
+  },
+  {
+    "type": "removed",
+    "ticker": "ASIANPAINT.NS",
+    "nse_code": "ASIANPAINT",
+    "signal": "BUY",
+    "date": "2026-08-05",
+    "ts": "2026-08-05T04:05:47.765656",
+    "detail": "Dropped \u2014 no longer meets threshold (was 66/100)",
+    "confidence": 0
+  },
+  {
+    "type": "updated",
+    "ticker": "SIEMENS.NS",
+    "nse_code": "SIEMENS",
+    "signal": "BUY",
+    "date": "2026-08-05",
+    "ts": "2026-08-05T04:05:47.765656",
+    "detail": "Rank \u25b21 (#15 \u2192 #14) | Target 1 moved \u20b94287.57 \u2192 \u20b94413.92",
+    "confidence": 81.5
+  },
+  {
+    "type": "updated",
+    "ticker": "PIDILITIND.NS",
+    "nse_code": "PIDILITIND",
+    "signal": "BUY",
+    "date": "2026-08-05",
+    "ts": "2026-08-05T04:05:47.765656",
+    "detail": "Confidence \u25b29 (66 \u2192 75) | Rank \u25bc1 (#14 \u2192 #15) | Stop loss moved \u20b91567.28 \u2192 \u20b91589.51 | Target 1 moved \u20b91707.14 \u2192 \u20b91751.18",
+    "confidence": 75.2
   }
 ]

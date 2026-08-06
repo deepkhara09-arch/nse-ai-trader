@@ -3,79 +3,82 @@
   "session": "midday",
   "nifty": {
     "symbol": "^NSEI",
-    "value": 24624.65,
-    "day_change_pct": 0.04,
-    "trend_5d": "up",
+    "value": 24774.3,
+    "day_change_pct": 1.88,
+    "trend_5d": "strong_up",
     "trend_20d": "up",
-    "ath_pct_60d": -0.6
+    "ath_pct_60d": 0.0,
+    "intraday_surge": true
   },
   "vix": {
-    "value": 12.06,
+    "value": 11.93,
     "level": "normal",
-    "percentile_30d": 20.0,
-    "avg_30d": 12.83
+    "percentile_30d": 11.0,
+    "avg_30d": 12.95
   },
   "bank_nifty": {
     "symbol": "^NSEBANK",
-    "value": 57739.95,
-    "day_change_pct": -0.29,
+    "value": 58247.95,
+    "day_change_pct": 1.93,
     "trend_5d": "up",
-    "trend_20d": "up",
-    "ath_pct_60d": -1.65,
+    "trend_20d": "sideways",
+    "ath_pct_60d": -0.78,
     "diverging": false
   },
   "sectors": {
     "IT": {
       "symbol": "ITBEES.NS",
-      "value": 34.72,
-      "day_change_pct": 0.06,
-      "trend_5d": "sideways",
+      "value": 34.12,
+      "day_change_pct": -1.44,
+      "trend_5d": "strong_up",
       "trend_20d": "strong_up",
-      "ath_pct_60d": -6.11
+      "ath_pct_60d": -3.83
     },
     "Pharma": {
       "symbol": "PHARMABEES.NS",
-      "value": 27.33,
-      "day_change_pct": 0.26,
-      "trend_5d": "up",
-      "trend_20d": "strong_up",
-      "ath_pct_60d": -2.22
+      "value": 27.26,
+      "day_change_pct": 0.11,
+      "trend_5d": "sideways",
+      "trend_20d": "unknown",
+      "ath_pct_60d": -2.47
     },
     "Bank": {
       "symbol": "BANKBEES.NS",
-      "value": 596.31,
-      "day_change_pct": 0.09,
-      "trend_5d": "up",
-      "trend_20d": "sideways",
-      "ath_pct_60d": -5.03
+      "value": 592.26,
+      "day_change_pct": 0.2,
+      "trend_5d": "sideways",
+      "trend_20d": "down",
+      "ath_pct_60d": -5.68
     },
     "Infra": {
       "symbol": "INFRABEES.NS",
-      "value": 974.15,
-      "day_change_pct": 0.58,
-      "trend_5d": "sideways",
-      "trend_20d": "up",
-      "ath_pct_60d": -1.95
+      "value": 971.97,
+      "day_change_pct": 0.34,
+      "trend_5d": "up",
+      "trend_20d": "down",
+      "ath_pct_60d": -2.17
     }
   },
-  "market_mood": "bullish",
+  "market_mood": "neutral",
   "trade_allowed": true,
-  "warnings": [],
+  "warnings": [
+    "Nifty choppy intraday \u2014 wait for cleaner setups"
+  ],
   "leading_sectors": [
-    "Pharma",
-    "Bank"
+    "IT",
+    "Infra"
   ],
   "market_regime": "normal",
   "sector_breadth": 0.5,
   "lagging_sectors": [],
-  "intraday_regime": "mixed",
+  "intraday_regime": "choppy",
   "macro": {
     "date": "2026-08-06",
     "session": "midday",
-    "generated_at": "2026-08-06T06:11:04.912542",
-    "global_score": -0.018,
+    "generated_at": "2026-08-06T06:15:50.177195",
+    "global_score": 0.197,
     "india_score": 0.0,
-    "overall_score": -0.01,
+    "overall_score": 0.108,
     "mood": "neutral",
     "drivers": [
       "I got two email invitations from friends. Is this a phishing scam \u2014 or am I suddenly popular?",
@@ -89,35 +92,35 @@
     ],
     "global_cues": {
       "dow": {
-        "last": 54349.12,
-        "chg_pct": 0.49
+        "last": 53178.41,
+        "chg_pct": 1.86
       },
       "nasdaq": {
-        "last": 26363.44,
-        "chg_pct": -0.83
+        "last": 25913.9,
+        "chg_pct": 3.15
       },
       "sp500": {
-        "last": 7723.55,
-        "chg_pct": -0.17
+        "last": 7600.5,
+        "chg_pct": 2.19
       },
       "nikkei": {
-        "last": 65659.71,
-        "chg_pct": -0.97
+        "last": 65648.13,
+        "chg_pct": 2.97
       },
       "crude": {
-        "last": 75.22,
-        "chg_pct": -0.73
+        "last": 80.34,
+        "chg_pct": -5.11
       },
       "usdinr": {
         "last": 95.2,
-        "chg_pct": 0.11
+        "chg_pct": -0.21
       },
       "gold": {
-        "last": 4245.8,
-        "chg_pct": 3.67
+        "last": 4033.7,
+        "chg_pct": -0.38
       }
     },
-    "summary": "Overall macro mood is neutral (-0.01). US Dow +0.5% overnight. Crude -0.7%. USD/INR +0.1%. Notable: US Fed rate hike / hawkish; Geopolitical conflict / war; Tariffs / trade war.",
+    "summary": "Overall macro mood is neutral (+0.11). US Dow +1.9% overnight. Crude -5.1%. USD/INR -0.2%. Notable: US Fed rate hike / hawkish; Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
       "Hawkish Fed pressures Nifty via FII outflows and stronger USD.",
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",

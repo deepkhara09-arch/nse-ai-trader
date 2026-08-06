@@ -3,10 +3,10 @@
     "ticker": "PIDILITIND.NS",
     "nse_code": "PIDILITIND",
     "company_name": "Pidilite Industries",
-    "date": "2026-08-05",
-    "generated_at": "2026-08-05 10:12 UTC",
+    "date": "2026-08-06",
+    "generated_at": "2026-08-06 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -40,7 +40,7 @@
     "pattern_score": 3.0,
     "confluence_bonus": 10,
     "paper_bonus": 0.0,
-    "success_probability": 0.534,
+    "success_probability": 0.531,
     "base_success_prob": 0.54,
     "profit_probability": -0.06,
     "composite_score": 45.28,
@@ -57,9 +57,9 @@
       "regime"
     ],
     "backtest_tested": true,
-    "backtest_hit_5d": 0.52,
-    "backtest_hit_10d": 0.48,
-    "backtest_sample": 50,
+    "backtest_hit_5d": 0.51,
+    "backtest_hit_10d": 0.49,
+    "backtest_sample": 51,
     "hist_long_trend": "strong_uptrend",
     "hist_52w_position": 95.7,
     "hist_personality": "mean_reverter",
@@ -104,19 +104,19 @@
       "Resistance at \u20b91700.00 is natural target",
       "Latest news: 'Pidilite Q1 Results: Stock recovers from lows after numbers beat expec'",
       "Confluence: 6 independent signal families agree (trend, momentum, volume, pattern, news, regime)",
-      "History backtest: this kind of BUY setup worked 52% of the time over ~1 week on this stock (sample: 50)"
+      "History backtest: this kind of BUY setup worked 51% of the time over ~1 week on this stock (sample: 51)"
     ],
     "patterns_seen": [
+      "volume_breakout_bullish",
+      "near_52w_high",
       "52w_breakout",
       "outside_bar",
-      "near_52w_high",
-      "volume_breakout_bullish",
-      "pivot_r2_breakout",
-      "pivot_r1_breakout",
       "supertrend_bullish",
+      "pivot_r1_breakout",
+      "adx_strong_trend_up",
       "full_bullish_alignment",
       "pivot_point_test",
-      "adx_strong_trend_up"
+      "pivot_r2_breakout"
     ],
     "reliable_patterns": [],
     "nearest_support": 1620.0,
@@ -144,18 +144,18 @@
     "paper_expectancy": 68.95,
     "market_mood": "bearish",
     "market_warning": [
-      "Nifty choppy intraday \u2014 wait for cleaner setups",
-      "Global macro risk-off (-0.29) \u2014 Overall macro mood is risk-off (-0.29). US Dow +1.7% overnight. Crude -5.7%. USD/INR -0.2%. Notable: Geopolitical confli"
+      "Narrow rally \u2014 only 1/4 sectors up. Fragile move.",
+      "Nifty choppy intraday \u2014 wait for cleaner setups"
     ]
   },
   {
     "ticker": "SIEMENS.NS",
     "nse_code": "SIEMENS",
     "company_name": "SIEMENS.NS",
-    "date": "2026-08-05",
-    "generated_at": "2026-08-05 10:12 UTC",
+    "date": "2026-08-06",
+    "generated_at": "2026-08-06 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -189,7 +189,7 @@
     "pattern_score": 2.0,
     "confluence_bonus": 7.5,
     "paper_bonus": 0.0,
-    "success_probability": 0.493,
+    "success_probability": 0.496,
     "base_success_prob": 0.52,
     "profit_probability": 0.02,
     "composite_score": 45.06,
@@ -205,9 +205,9 @@
       "news"
     ],
     "backtest_tested": true,
-    "backtest_hit_5d": 0.429,
-    "backtest_hit_10d": 0.429,
-    "backtest_sample": 49,
+    "backtest_hit_5d": 0.44,
+    "backtest_hit_10d": 0.44,
+    "backtest_sample": 50,
     "hist_long_trend": "strong_uptrend",
     "hist_52w_position": 66.7,
     "hist_personality": "trender",
@@ -251,18 +251,18 @@
       "Resistance at \u20b94100.00 is natural target",
       "Latest news: 'Siemens Energy India shares fall 2.26% in early trade - Moneycontrol.c'",
       "Confluence: 5 independent signal families agree (trend, momentum, volume, pattern, news)",
-      "History backtest: this kind of BUY setup worked 43% of the time over ~1 week on this stock (sample: 49)"
+      "History backtest: this kind of BUY setup worked 44% of the time over ~1 week on this stock (sample: 50)"
     ],
     "patterns_seen": [
-      "52w_breakout",
-      "near_52w_high",
-      "bb_upper_rejection",
       "volume_breakout_bullish",
-      "pivot_r1_breakout",
-      "three_white_soldiers",
+      "near_52w_high",
+      "52w_breakout",
       "supertrend_bullish",
-      "full_bullish_alignment",
-      "adx_strong_trend_up"
+      "pivot_r1_breakout",
+      "bb_upper_rejection",
+      "three_white_soldiers",
+      "adx_strong_trend_up",
+      "full_bullish_alignment"
     ],
     "reliable_patterns": [],
     "nearest_support": 3900.0,
@@ -290,18 +290,18 @@
     "paper_expectancy": 289.93,
     "market_mood": "bearish",
     "market_warning": [
-      "Nifty choppy intraday \u2014 wait for cleaner setups",
-      "Global macro risk-off (-0.29) \u2014 Overall macro mood is risk-off (-0.29). US Dow +1.7% overnight. Crude -5.7%. USD/INR -0.2%. Notable: Geopolitical confli"
+      "Narrow rally \u2014 only 1/4 sectors up. Fragile move.",
+      "Nifty choppy intraday \u2014 wait for cleaner setups"
     ]
   },
   {
     "ticker": "ICICIBANK.NS",
     "nse_code": "ICICIBANK",
     "company_name": "ICICI Bank Ltd",
-    "date": "2026-08-05",
-    "generated_at": "2026-08-05 10:12 UTC",
+    "date": "2026-08-06",
+    "generated_at": "2026-08-06 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -335,7 +335,7 @@
     "pattern_score": 5.0,
     "confluence_bonus": 7.5,
     "paper_bonus": 0.0,
-    "success_probability": 0.523,
+    "success_probability": 0.52,
     "base_success_prob": 0.548,
     "profit_probability": 0.644,
     "composite_score": 55.67,
@@ -351,9 +351,9 @@
       "regime"
     ],
     "backtest_tested": true,
-    "backtest_hit_5d": 0.464,
-    "backtest_hit_10d": 0.5,
-    "backtest_sample": 56,
+    "backtest_hit_5d": 0.456,
+    "backtest_hit_10d": 0.491,
+    "backtest_sample": 57,
     "hist_long_trend": "strong_uptrend",
     "hist_52w_position": 90.0,
     "hist_personality": "choppy",
@@ -368,8 +368,8 @@
       "All EMAs stacked bullish",
       "Positive news sentiment (0.36, news 1.3x reliable here)",
       "News sentiment improving across sessions",
-      "Learned bullish pattern: full_bullish_alignment (rel=64%)",
       "Learned bullish pattern: adx_strong_trend_up (rel=64%)",
+      "Learned bullish pattern: full_bullish_alignment (rel=64%)",
       "ADX strong trend \u2014 directional move confirmed",
       "Testing pivot point \u2014 decision zone",
       "Delivery 48% above avg \u2014 institutional buying",
@@ -392,15 +392,15 @@
       "Resistance at \u20b91500.00 is natural target",
       "Latest news: 'ICICI Bank Share Price Today, ICICI Bank Stock Price Live NSE/BSE Upda'",
       "Confluence: 5 independent signal families agree (trend, volume, pattern, news, regime)",
-      "History backtest: this kind of BUY setup worked 46% of the time over ~1 week on this stock (sample: 56)"
+      "History backtest: this kind of BUY setup worked 46% of the time over ~1 week on this stock (sample: 57)"
     ],
     "patterns_seen": [
-      "pivot_s1_breakdown",
-      "doji",
-      "full_bullish_alignment",
       "bearish_harami",
-      "pivot_point_test",
-      "adx_strong_trend_up"
+      "doji",
+      "pivot_s1_breakdown",
+      "adx_strong_trend_up",
+      "full_bullish_alignment",
+      "pivot_point_test"
     ],
     "reliable_patterns": [
       "full_bullish_alignment",
@@ -431,18 +431,18 @@
     "paper_expectancy": 0,
     "market_mood": "bearish",
     "market_warning": [
-      "Nifty choppy intraday \u2014 wait for cleaner setups",
-      "Global macro risk-off (-0.29) \u2014 Overall macro mood is risk-off (-0.29). US Dow +1.7% overnight. Crude -5.7%. USD/INR -0.2%. Notable: Geopolitical confli"
+      "Narrow rally \u2014 only 1/4 sectors up. Fragile move.",
+      "Nifty choppy intraday \u2014 wait for cleaner setups"
     ]
   },
   {
     "ticker": "LICI.NS",
     "nse_code": "LICI",
     "company_name": "LICI.NS",
-    "date": "2026-08-05",
-    "generated_at": "2026-08-05 10:12 UTC",
+    "date": "2026-08-06",
+    "generated_at": "2026-08-06 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -535,13 +535,13 @@
       "History backtest: this kind of BUY setup worked 28% of the time over ~1 week on this stock (sample: 40)"
     ],
     "patterns_seen": [
-      "volume_climax_bottom",
-      "bb_lower_bounce",
       "volume_breakout_bullish",
+      "volume_climax_bottom",
       "stoch_rsi_oversold_reversal",
-      "doji",
       "supertrend_bullish",
-      "gap_down_reversal"
+      "doji",
+      "gap_down_reversal",
+      "bb_lower_bounce"
     ],
     "reliable_patterns": [],
     "nearest_support": 384.19,
@@ -569,8 +569,8 @@
     "paper_expectancy": 0,
     "market_mood": "bearish",
     "market_warning": [
-      "Nifty choppy intraday \u2014 wait for cleaner setups",
-      "Global macro risk-off (-0.29) \u2014 Overall macro mood is risk-off (-0.29). US Dow +1.7% overnight. Crude -5.7%. USD/INR -0.2%. Notable: Geopolitical confli"
+      "Narrow rally \u2014 only 1/4 sectors up. Fragile move.",
+      "Nifty choppy intraday \u2014 wait for cleaner setups"
     ]
   }
 ]

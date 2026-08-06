@@ -19429,5 +19429,175 @@
       "hammer",
       "momentum_continuation"
     ]
+  },
+  {
+    "timestamp": "2026-08-06T07:45:53.926910",
+    "date": "2026-08-06",
+    "ticker": "ICICIBANK.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 95,
+    "entry": 1454.4,
+    "stop_loss": 1410.55,
+    "target": 1542.1,
+    "reason": "paper afternoon",
+    "patterns": [
+      "pivot_point_test",
+      "full_bullish_alignment",
+      "tweezer_top",
+      "adx_strong_trend_up"
+    ]
+  },
+  {
+    "timestamp": "2026-08-06T07:45:53.927723",
+    "date": "2026-08-06",
+    "ticker": "UNIONBANK.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 58.1,
+    "entry": 178.91,
+    "stop_loss": 171.6,
+    "target": 193.53,
+    "reason": "paper afternoon",
+    "patterns": [
+      "rsi_bearish_divergence",
+      "momentum_continuation",
+      "full_bullish_alignment",
+      "supertrend_bullish",
+      "stoch_rsi_oversold_reversal",
+      "adx_ranging_market"
+    ]
+  },
+  {
+    "timestamp": "2026-08-06T07:45:53.929537",
+    "date": "2026-08-06",
+    "ticker": "PIDILITIND.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 95,
+    "entry": 1674.6,
+    "stop_loss": 1620.33,
+    "target": 1783.14,
+    "reason": "paper afternoon",
+    "patterns": [
+      "pivot_r2_breakout",
+      "bb_upper_rejection",
+      "full_bullish_alignment",
+      "supertrend_bullish",
+      "pivot_r1_breakout",
+      "52w_breakout",
+      "adx_strong_trend_up",
+      "near_52w_high"
+    ]
+  },
+  {
+    "timestamp": "2026-08-06T07:45:53.930373",
+    "date": "2026-08-06",
+    "ticker": "SIEMENS.NS",
+    "session": "afternoon",
+    "action": "SELL",
+    "signal": "SELL",
+    "confidence": 49.0,
+    "entry": 3964.3,
+    "stop_loss": 4143.64,
+    "target": 3605.63,
+    "reason": "paper afternoon",
+    "patterns": [
+      "pivot_point_test",
+      "rsi_bearish_divergence",
+      "inside_bar",
+      "bb_upper_rejection",
+      "tweezer_top",
+      "full_bullish_alignment",
+      "adx_strong_trend_up",
+      "near_52w_high"
+    ]
+  },
+  {
+    "timestamp": "2026-08-06T07:45:53.931143",
+    "date": "2026-08-06",
+    "ticker": "JSWSTEEL.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 95,
+    "entry": 1315.3,
+    "stop_loss": 1274.8,
+    "target": 1396.3,
+    "reason": "paper afternoon",
+    "patterns": [
+      "bb_upper_rejection",
+      "full_bullish_alignment",
+      "supertrend_bullish",
+      "pivot_r1_breakout",
+      "near_52w_high",
+      "three_white_soldiers"
+    ]
+  },
+  {
+    "timestamp": "2026-08-06T07:45:53.931924",
+    "date": "2026-08-06",
+    "ticker": "LICI.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 95,
+    "entry": 388.9,
+    "stop_loss": 373.92,
+    "target": 418.87,
+    "reason": "paper afternoon",
+    "patterns": [
+      "pivot_s1_bounce",
+      "volume_climax_bottom",
+      "volume_breakout_bullish",
+      "bb_lower_bounce",
+      "supertrend_bullish",
+      "stoch_rsi_oversold_reversal",
+      "gap_down_reversal"
+    ]
+  },
+  {
+    "timestamp": "2026-08-06T07:45:53.933165",
+    "date": "2026-08-06",
+    "ticker": "IDFCFIRSTB.NS",
+    "session": "afternoon",
+    "action": "SELL",
+    "signal": "SELL",
+    "confidence": 56.0,
+    "entry": 85.06,
+    "stop_loss": 88.34,
+    "target": 78.49,
+    "reason": "paper afternoon",
+    "patterns": [
+      "pivot_point_test",
+      "tweezer_top",
+      "evening_star",
+      "full_bullish_alignment",
+      "adx_strong_trend_up",
+      "pivot_s1_breakdown"
+    ]
+  },
+  {
+    "timestamp": "2026-08-06T07:45:53.934414",
+    "date": "2026-08-06",
+    "ticker": "CIPLA.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 64.8,
+    "entry": 1477.5,
+    "stop_loss": 1426.06,
+    "target": 1580.38,
+    "reason": "paper afternoon",
+    "patterns": [
+      "hammer",
+      "momentum_continuation",
+      "full_bullish_alignment",
+      "supertrend_bullish",
+      "doji"
+    ]
   }
 ]

@@ -1,6 +1,6 @@
 {
   "date": "2026-08-06",
-  "session": "morning",
+  "session": "midday",
   "nifty": {
     "symbol": "^NSEI",
     "value": 24624.65,
@@ -10,10 +10,10 @@
     "ath_pct_60d": -0.6
   },
   "vix": {
-    "value": 11.93,
+    "value": 12.06,
     "level": "normal",
-    "percentile_30d": 11.0,
-    "avg_30d": 12.95
+    "percentile_30d": 20.0,
+    "avg_30d": 12.83
   },
   "bank_nifty": {
     "symbol": "^NSEBANK",
@@ -27,11 +27,11 @@
   "sectors": {
     "IT": {
       "symbol": "ITBEES.NS",
-      "value": 34.7,
-      "day_change_pct": -0.8,
+      "value": 34.72,
+      "day_change_pct": 0.06,
       "trend_5d": "sideways",
       "trend_20d": "strong_up",
-      "ath_pct_60d": -6.17
+      "ath_pct_60d": -6.11
     },
     "Pharma": {
       "symbol": "PHARMABEES.NS",
@@ -43,41 +43,39 @@
     },
     "Bank": {
       "symbol": "BANKBEES.NS",
-      "value": 592.26,
-      "day_change_pct": 0.2,
-      "trend_5d": "sideways",
-      "trend_20d": "down",
-      "ath_pct_60d": -5.68
+      "value": 596.31,
+      "day_change_pct": 0.09,
+      "trend_5d": "up",
+      "trend_20d": "sideways",
+      "ath_pct_60d": -5.03
     },
     "Infra": {
       "symbol": "INFRABEES.NS",
-      "value": 968.52,
-      "day_change_pct": -0.37,
+      "value": 974.15,
+      "day_change_pct": 0.58,
       "trend_5d": "sideways",
       "trend_20d": "up",
-      "ath_pct_60d": -2.51
+      "ath_pct_60d": -1.95
     }
   },
-  "market_mood": "bearish",
+  "market_mood": "bullish",
   "trade_allowed": true,
-  "warnings": [
-    "Narrow rally \u2014 only 1/4 sectors up. Fragile move.",
-    "Nifty choppy intraday \u2014 wait for cleaner setups"
-  ],
+  "warnings": [],
   "leading_sectors": [
-    "Pharma"
+    "Pharma",
+    "Bank"
   ],
   "market_regime": "normal",
-  "sector_breadth": 0.25,
+  "sector_breadth": 0.5,
   "lagging_sectors": [],
-  "intraday_regime": "choppy",
+  "intraday_regime": "mixed",
   "macro": {
     "date": "2026-08-06",
-    "session": "preopen",
-    "generated_at": "2026-08-06T03:05:46.911589",
-    "global_score": -0.052,
+    "session": "midday",
+    "generated_at": "2026-08-06T06:11:04.912542",
+    "global_score": -0.018,
     "india_score": 0.0,
-    "overall_score": -0.029,
+    "overall_score": -0.01,
     "mood": "neutral",
     "drivers": [
       "I got two email invitations from friends. Is this a phishing scam \u2014 or am I suddenly popular?",
@@ -103,23 +101,23 @@
         "chg_pct": -0.17
       },
       "nikkei": {
-        "last": 65266.67,
-        "chg_pct": -1.56
+        "last": 65659.71,
+        "chg_pct": -0.97
       },
       "crude": {
-        "last": 75.53,
-        "chg_pct": -0.32
+        "last": 75.22,
+        "chg_pct": -0.73
       },
       "usdinr": {
-        "last": 95.11,
-        "chg_pct": 0.01
+        "last": 95.2,
+        "chg_pct": 0.11
       },
       "gold": {
-        "last": 4337.4,
-        "chg_pct": 5.91
+        "last": 4245.8,
+        "chg_pct": 3.67
       }
     },
-    "summary": "Overall macro mood is neutral (-0.03). US Dow +0.5% overnight. Crude -0.3%. USD/INR +0.0%. Notable: US Fed rate hike / hawkish; Geopolitical conflict / war; Tariffs / trade war.",
+    "summary": "Overall macro mood is neutral (-0.01). US Dow +0.5% overnight. Crude -0.7%. USD/INR +0.1%. Notable: US Fed rate hike / hawkish; Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
       "Hawkish Fed pressures Nifty via FII outflows and stronger USD.",
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",

@@ -3808,5 +3808,55 @@
     "ts": "2026-08-06T04:05:47.110789",
     "detail": "Confidence \u25b24 (66 \u2192 70) | Rank \u25b22 (#9 \u2192 #7) | Stop loss moved \u20b9381.12 \u2192 \u20b9376.96 | Target 1 moved \u20b9417.96 \u2192 \u20b9413.77",
     "confidence": 70.5
+  },
+  {
+    "type": "new",
+    "ticker": "ICICIBANK.NS",
+    "nse_code": "ICICIBANK",
+    "signal": "BUY",
+    "date": "2026-08-06",
+    "ts": "2026-08-06T06:11:13.118207",
+    "detail": "New BUY recommendation \u2014 confidence 68/100",
+    "confidence": 67.9
+  },
+  {
+    "type": "removed",
+    "ticker": "SIEMENS.NS",
+    "nse_code": "SIEMENS",
+    "signal": "BUY",
+    "date": "2026-08-06",
+    "ts": "2026-08-06T06:11:13.118207",
+    "detail": "Dropped \u2014 no longer meets threshold (was 79/100)",
+    "confidence": 0
+  },
+  {
+    "type": "removed",
+    "ticker": "JSWSTEEL.NS",
+    "nse_code": "JSWSTEEL",
+    "signal": "BUY",
+    "date": "2026-08-06",
+    "ts": "2026-08-06T06:11:13.118207",
+    "detail": "Dropped \u2014 no longer meets threshold (was 68/100)",
+    "confidence": 0
+  },
+  {
+    "type": "updated",
+    "ticker": "PIDILITIND.NS",
+    "nse_code": "PIDILITIND",
+    "signal": "BUY",
+    "date": "2026-08-06",
+    "ts": "2026-08-06T06:11:13.118207",
+    "detail": "Confidence \u25b28 (71 \u2192 79) | Rank \u25bc2 (#11 \u2192 #13) | Stop loss moved \u20b91606.34 \u2192 \u20b91621.30 | Target 1 moved \u20b91749.92 \u2192 \u20b91790.80",
+    "confidence": 78.8
+  },
+  {
+    "type": "updated",
+    "ticker": "LICI.NS",
+    "nse_code": "LICI",
+    "signal": "BUY",
+    "date": "2026-08-06",
+    "ts": "2026-08-06T06:11:13.118207",
+    "detail": "Confidence \u25bc4 (70 \u2192 66) | Rank \u25b21 (#7 \u2192 #6)",
+    "confidence": 66.5
   }
 ]

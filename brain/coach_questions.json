@@ -1,102 +1,102 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of rsi_bearish_divergence, inside_bar, bb_upper_rejection mean for a swing trade on SIEMENS? Current RSI=84, MACD hist=+42.8344, Vol=0.9x average. Signal is SELL.",
+    "question": "In Indian NSE markets, what does the combination of tweezer_top, near_52w_high, inside_bar mean for a swing trade on SIEMENS? Current RSI=82, MACD hist=+41.6379, Vol=0.9x average. Signal is SELL.",
     "context": {
       "ticker": "SIEMENS.NS",
       "signal": "SELL",
-      "patterns": "rsi_bearish_divergence, inside_bar, bb_upper_rejection",
-      "rsi": 84.2
+      "patterns": "tweezer_top, near_52w_high, inside_bar",
+      "rsi": 81.7
     },
-    "queued_at": "2026-08-06T07:45:53.936840"
+    "queued_at": "2026-08-06T09:45:38.389864"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of pivot_r2_breakout, bb_upper_rejection, 52w_breakout mean for a swing trade on PIDILITIND? Current RSI=73, MACD hist=+5.5403, Vol=1.7x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of 52w_breakout, bb_upper_rejection mean for a swing trade on PIDILITIND? Current RSI=72, MACD hist=+4.7953, Vol=1.6x average. Signal is BUY.",
     "context": {
       "ticker": "PIDILITIND.NS",
       "signal": "BUY",
-      "patterns": "pivot_r2_breakout, bb_upper_rejection, 52w_breakout",
-      "rsi": 72.7
+      "patterns": "52w_breakout, bb_upper_rejection",
+      "rsi": 72.0
     },
-    "queued_at": "2026-08-06T07:45:53.938237"
+    "queued_at": "2026-08-06T09:45:38.391185"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of bb_upper_rejection, pivot_r1_breakout, near_52w_high mean for a swing trade on JSWSTEEL? Current RSI=81, MACD hist=+8.4609, Vol=1.2x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of near_52w_high, three_white_soldiers, pivot_r1_breakout mean for a swing trade on JSWSTEEL? Current RSI=81, MACD hist=+8.4609, Vol=1.2x average. Signal is BUY.",
     "context": {
       "ticker": "JSWSTEEL.NS",
       "signal": "BUY",
-      "patterns": "bb_upper_rejection, pivot_r1_breakout, near_52w_high",
+      "patterns": "near_52w_high, three_white_soldiers, pivot_r1_breakout",
       "rsi": 81.1
     },
-    "queued_at": "2026-08-06T07:45:53.939000"
+    "queued_at": "2026-08-06T09:45:38.391983"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of rsi_bearish_divergence, stoch_rsi_oversold_reversal mean for a swing trade on UNIONBANK? Current RSI=55, MACD hist=+0.4225, Vol=0.7x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of bullish_harami, pivot_point_test, bb_upper_rejection mean for a swing trade on ABCAPITAL? Current RSI=63, MACD hist=+1.6116, Vol=0.7x average. Signal is BUY.",
     "context": {
-      "ticker": "UNIONBANK.NS",
+      "ticker": "ABCAPITAL.NS",
       "signal": "BUY",
-      "patterns": "rsi_bearish_divergence, stoch_rsi_oversold_reversal",
-      "rsi": 55.3
+      "patterns": "bullish_harami, pivot_point_test, bb_upper_rejection",
+      "rsi": 63.4
     },
-    "queued_at": "2026-08-06T07:45:54.030175"
+    "queued_at": "2026-08-06T09:45:38.486187"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of pivot_r2_breakout, bb_upper_rejection, 52w_breakout mean for a swing trade on PIDILITIND? Current RSI=73, MACD hist=+5.5403, Vol=1.7x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of 52w_breakout, bb_upper_rejection mean for a swing trade on PIDILITIND? Current RSI=72, MACD hist=+4.7953, Vol=1.6x average. Signal is BUY.",
     "context": {
       "ticker": "PIDILITIND.NS",
       "signal": "BUY",
-      "patterns": "pivot_r2_breakout, bb_upper_rejection, 52w_breakout",
-      "rsi": 72.7
+      "patterns": "52w_breakout, bb_upper_rejection",
+      "rsi": 72.0
     },
-    "queued_at": "2026-08-06T07:45:54.031935"
+    "queued_at": "2026-08-06T09:45:38.487535"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of rsi_bearish_divergence, inside_bar, bb_upper_rejection mean for a swing trade on SIEMENS? Current RSI=84, MACD hist=+42.8344, Vol=0.9x average. Signal is SELL.",
+    "question": "In Indian NSE markets, what does the combination of tweezer_top, near_52w_high, inside_bar mean for a swing trade on SIEMENS? Current RSI=82, MACD hist=+41.6379, Vol=0.9x average. Signal is SELL.",
     "context": {
       "ticker": "SIEMENS.NS",
       "signal": "SELL",
-      "patterns": "rsi_bearish_divergence, inside_bar, bb_upper_rejection",
-      "rsi": 84.2
+      "patterns": "tweezer_top, near_52w_high, inside_bar",
+      "rsi": 81.7
     },
-    "queued_at": "2026-08-06T07:45:54.035487"
+    "queued_at": "2026-08-06T09:45:38.490800"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of bb_upper_rejection, pivot_r1_breakout, near_52w_high mean for a swing trade on JSWSTEEL? Current RSI=81, MACD hist=+8.4609, Vol=1.2x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of near_52w_high, three_white_soldiers, pivot_r1_breakout mean for a swing trade on JSWSTEEL? Current RSI=81, MACD hist=+8.4609, Vol=1.2x average. Signal is BUY.",
     "context": {
       "ticker": "JSWSTEEL.NS",
       "signal": "BUY",
-      "patterns": "bb_upper_rejection, pivot_r1_breakout, near_52w_high",
+      "patterns": "near_52w_high, three_white_soldiers, pivot_r1_breakout",
       "rsi": 81.1
     },
-    "queued_at": "2026-08-06T07:45:54.036302"
+    "queued_at": "2026-08-06T09:45:38.491625"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of pivot_s1_bounce, volume_climax_bottom, volume_breakout_bullish mean for a long_term trade on LICI? Current RSI=18, MACD hist=-4.5049, Vol=6.8x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of gap_down_reversal, volume_climax_bottom, bb_lower_bounce mean for a long_term trade on LICI? Current RSI=18, MACD hist=-4.5049, Vol=6.8x average. Signal is BUY.",
     "context": {
       "ticker": "LICI.NS",
       "signal": "BUY",
-      "patterns": "pivot_s1_bounce, volume_climax_bottom, volume_breakout_bullish",
+      "patterns": "gap_down_reversal, volume_climax_bottom, bb_lower_bounce",
       "rsi": 18.4
     },
-    "queued_at": "2026-08-06T07:45:54.037087"
+    "queued_at": "2026-08-06T09:45:38.492458"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of pivot_point_test, tweezer_top, evening_star mean for a swing trade on IDFCFIRSTB? Current RSI=73, MACD hist=+0.1908, Vol=0.6x average. Signal is SELL.",
+    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_up, tweezer_top, full_bullish_alignment mean for a swing trade on IDFCFIRSTB? Current RSI=73, MACD hist=+0.1908, Vol=0.6x average. Signal is SELL.",
     "context": {
       "ticker": "IDFCFIRSTB.NS",
       "signal": "SELL",
-      "patterns": "pivot_point_test, tweezer_top, evening_star",
+      "patterns": "adx_strong_trend_up, tweezer_top, full_bullish_alignment",
       "rsi": 72.6
     },
-    "queued_at": "2026-08-06T07:45:54.040556"
+    "queued_at": "2026-08-06T09:45:38.495915"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of hammer, momentum_continuation, full_bullish_alignment mean for a swing trade on CIPLA? Current RSI=57, MACD hist=+2.3931, Vol=0.7x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of hammer, full_bullish_alignment, momentum_continuation mean for a swing trade on CIPLA? Current RSI=57, MACD hist=+2.3931, Vol=0.7x average. Signal is BUY.",
     "context": {
       "ticker": "CIPLA.NS",
       "signal": "BUY",
-      "patterns": "hammer, momentum_continuation, full_bullish_alignment",
+      "patterns": "hammer, full_bullish_alignment, momentum_continuation",
       "rsi": 57.4
     },
-    "queued_at": "2026-08-06T07:45:54.041827"
+    "queued_at": "2026-08-06T09:45:38.497288"
   }
 ]

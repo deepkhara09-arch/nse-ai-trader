@@ -1,6 +1,6 @@
 {
   "date": "2026-08-06",
-  "session": "preopen",
+  "session": "morning",
   "nifty": {
     "symbol": "^NSEI",
     "value": 24624.65,
@@ -10,10 +10,10 @@
     "ath_pct_60d": -0.6
   },
   "vix": {
-    "value": 12.06,
+    "value": 11.93,
     "level": "normal",
-    "percentile_30d": 20.0,
-    "avg_30d": 12.83
+    "percentile_30d": 11.0,
+    "avg_30d": 12.95
   },
   "bank_nifty": {
     "symbol": "^NSEBANK",
@@ -43,11 +43,11 @@
     },
     "Bank": {
       "symbol": "BANKBEES.NS",
-      "value": 595.76,
-      "day_change_pct": -0.26,
+      "value": 592.26,
+      "day_change_pct": 0.2,
       "trend_5d": "sideways",
-      "trend_20d": "up",
-      "ath_pct_60d": -5.12
+      "trend_20d": "down",
+      "ath_pct_60d": -5.68
     },
     "Infra": {
       "symbol": "INFRABEES.NS",

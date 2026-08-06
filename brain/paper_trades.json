@@ -1,5 +1,5 @@
 {
-  "capital": 69754.348955,
+  "capital": 61776.748954999995,
   "open_positions": [
     {
       "ticker": "ICICIBANK.NS",
@@ -35,8 +35,8 @@
         "MACD histogram negative",
         "StochRSI overbought with bearish candle \u2014 reversal"
       ],
-      "current_price": 1444.2,
-      "unrealized_pnl": 83.4,
+      "current_price": 1452.3,
+      "unrealized_pnl": 132.0,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -86,8 +86,8 @@
         "RSI=66 elevated",
         "Near upper Bollinger Band"
       ],
-      "current_price": 85.12,
-      "unrealized_pnl": -5.88,
+      "current_price": 84.99,
+      "unrealized_pnl": -12.25,
       "max_held_days": 10,
       "vol_regime_pct": 0.08399999999999999,
       "entry_market": {
@@ -100,7 +100,7 @@
         1,
         1,
         1,
-        1
+        0
       ]
     },
     {
@@ -144,8 +144,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "RSI=74 overbought"
       ],
-      "current_price": 3970.0,
-      "unrealized_pnl": 10.9,
+      "current_price": 3970.3,
+      "unrealized_pnl": 11.2,
       "max_held_days": 10,
       "vol_regime_pct": 0.08399999999999999,
       "entry_market": {
@@ -199,8 +199,8 @@
         "RSI=62 elevated",
         "RSI bearish divergence \u2014 price higher but RSI lower"
       ],
-      "current_price": 2757.0,
-      "unrealized_pnl": -83.6,
+      "current_price": 2769.0,
+      "unrealized_pnl": -59.6,
       "max_held_days": 10,
       "vol_regime_pct": 0.08399999999999999,
       "entry_market": {
@@ -259,8 +259,8 @@
         "\u2713 Daily setup aligned with the higher-timeframe trend",
         "RSI=64 elevated"
       ],
-      "current_price": 1645.9,
-      "unrealized_pnl": 12.5,
+      "current_price": 1654.2,
+      "unrealized_pnl": 54.0,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -270,11 +270,63 @@
         "regime": "mixed"
       },
       "view_hist": [
-        0,
+        1,
         1,
         1,
         1
       ]
+    },
+    {
+      "ticker": "JSWSTEEL.NS",
+      "sector": "Metals",
+      "open_date": "2026-08-06",
+      "open_session": "morning",
+      "action": "BUY",
+      "entry": 1329.6,
+      "qty": 6,
+      "invested": 7977.6,
+      "stop_loss": 1290.57,
+      "target": 1407.66,
+      "style": "swing",
+      "confidence": 95,
+      "patterns": [
+        "pivot_r2_breakout",
+        "pivot_r1_breakout",
+        "adx_ranging_market",
+        "supertrend_bullish",
+        "52w_breakout",
+        "full_bullish_alignment",
+        "bb_upper_rejection",
+        "near_52w_high"
+      ],
+      "buy_reasons": [
+        "All EMAs stacked bullish",
+        "MACD histogram positive",
+        "High volume confirmation (1.5x avg)",
+        "52-week breakout on high volume \u2014 strong momentum",
+        "Near 52-week high \u2014 potential breakout zone",
+        "Sector tailwind (momentum=0.45)",
+        "Supertrend bullish \u2014 price above trend band",
+        "ADX low \u2014 market ranging, signals less reliable",
+        "Broke above Pivot R1 with volume \u2014 bullish",
+        "Broke above Pivot R2 \u2014 strong momentum",
+        "In a long-term strong uptrend (2yr) \u2014 trend on our side",
+        "Near 52-week high (100% of range) \u2014 breakout zone",
+        "\u2713 Daily setup aligned with the higher-timeframe trend",
+        "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
+        "RSI=66 elevated",
+        "Near upper Bollinger Band"
+      ],
+      "current_price": 1329.6,
+      "unrealized_pnl": 0.0,
+      "max_held_days": 10,
+      "vol_regime_pct": 0.12,
+      "entry_market": {
+        "nifty_trend": "up",
+        "vix": 11.93,
+        "mood": "bearish",
+        "regime": "choppy"
+      }
     }
   ],
   "closed_trades": [
@@ -1148,12 +1200,12 @@
       "daily_pnl": 42.5
     }
   ],
-  "daily_pnl_today": 42.50349500000003,
+  "daily_pnl_today": 0.0,
   "last_snapshot_date": "2026-08-05",
   "lifetime_wins": 8,
   "lifetime_losses": 5,
   "lifetime_pnl": 286.6,
-  "last_pnl_reset_date": "2026-08-05",
+  "last_pnl_reset_date": "2026-08-06",
   "max_drawdown_pct": 1.07,
   "current_drawdown_pct": 0.9,
   "portfolio_peak": 101210.28,

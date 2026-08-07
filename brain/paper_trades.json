@@ -35,8 +35,8 @@
         "MACD histogram negative",
         "StochRSI overbought with bearish candle \u2014 reversal"
       ],
-      "current_price": 1441.6,
-      "unrealized_pnl": 67.8,
+      "current_price": 1434.0,
+      "unrealized_pnl": 22.2,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -86,8 +86,8 @@
         "RSI=66 elevated",
         "Near upper Bollinger Band"
       ],
-      "current_price": 84.8,
-      "unrealized_pnl": -21.56,
+      "current_price": 84.7,
+      "unrealized_pnl": -26.46,
       "max_held_days": 10,
       "vol_regime_pct": 0.08399999999999999,
       "entry_market": {
@@ -144,8 +144,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "RSI=74 overbought"
       ],
-      "current_price": 3964.7,
-      "unrealized_pnl": 5.6,
+      "current_price": 3953.0,
+      "unrealized_pnl": -6.1,
       "max_held_days": 10,
       "vol_regime_pct": 0.08399999999999999,
       "entry_market": {
@@ -157,7 +157,7 @@
       "view_hist": [
         0,
         0,
-        0,
+        1,
         1
       ]
     },
@@ -216,7 +216,7 @@
       },
       "view_hist": [
         1,
-        1,
+        0,
         0,
         0
       ]
@@ -262,8 +262,8 @@
         "RSI=66 elevated",
         "Near upper Bollinger Band"
       ],
-      "current_price": 1300.4,
-      "unrealized_pnl": -175.2,
+      "current_price": 1297.7,
+      "unrealized_pnl": -191.4,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -274,7 +274,7 @@
       },
       "view_hist": [
         1,
-        1,
+        0,
         0,
         0
       ]
@@ -323,8 +323,8 @@
         "MACD histogram negative",
         "Candlestick: gravestone doji"
       ],
-      "current_price": 393.0,
-      "unrealized_pnl": 0.0,
+      "current_price": 393.7,
+      "unrealized_pnl": 14.0,
       "max_held_days": 30,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -332,7 +332,10 @@
         "vix": 12.16,
         "mood": "neutral",
         "regime": "choppy"
-      }
+      },
+      "view_hist": [
+        1
+      ]
     }
   ],
   "closed_trades": [

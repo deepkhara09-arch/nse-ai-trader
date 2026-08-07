@@ -20502,5 +20502,213 @@
       "pivot_s1_breakdown",
       "adx_ranging_market"
     ]
+  },
+  {
+    "timestamp": "2026-08-07T07:45:53.872968",
+    "date": "2026-08-07",
+    "ticker": "MARICO.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 95,
+    "entry": 857.3,
+    "stop_loss": 827.39,
+    "target": 917.13,
+    "reason": "paper afternoon",
+    "patterns": [
+      "supertrend_bullish",
+      "adx_strong_trend_up",
+      "tweezer_bottom",
+      "inside_bar",
+      "pivot_point_test",
+      "full_bullish_alignment",
+      "stoch_rsi_oversold_reversal"
+    ]
+  },
+  {
+    "timestamp": "2026-08-07T07:45:53.873582",
+    "date": "2026-08-07",
+    "ticker": "SBIN.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 63.5,
+    "entry": 1085.7,
+    "stop_loss": 1057.33,
+    "target": 1142.44,
+    "reason": "paper afternoon",
+    "patterns": [
+      "supertrend_bullish",
+      "bb_upper_rejection",
+      "pivot_r1_breakout",
+      "strong_bullish_marubozu",
+      "adx_ranging_market",
+      "full_bullish_alignment"
+    ]
+  },
+  {
+    "timestamp": "2026-08-07T07:45:53.873982",
+    "date": "2026-08-07",
+    "ticker": "ICICIBANK.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 95,
+    "entry": 1434.0,
+    "stop_loss": 1394.12,
+    "target": 1513.76,
+    "reason": "paper afternoon",
+    "patterns": [
+      "rsi_bearish_divergence",
+      "adx_strong_trend_up",
+      "full_bullish_alignment",
+      "pivot_s1_breakdown"
+    ]
+  },
+  {
+    "timestamp": "2026-08-07T07:45:53.885354",
+    "date": "2026-08-07",
+    "ticker": "PFC.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 66.1,
+    "entry": 418.45,
+    "stop_loss": 405.26,
+    "target": 444.83,
+    "reason": "paper afternoon",
+    "patterns": [
+      "supertrend_bullish",
+      "rsi_bullish_divergence",
+      "adx_ranging_market",
+      "pivot_point_test"
+    ]
+  },
+  {
+    "timestamp": "2026-08-07T07:45:53.886194",
+    "date": "2026-08-07",
+    "ticker": "PIDILITIND.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 74.0,
+    "entry": 1655.0,
+    "stop_loss": 1599.9,
+    "target": 1765.19,
+    "reason": "paper afternoon",
+    "patterns": [
+      "adx_strong_trend_up",
+      "bb_upper_rejection",
+      "near_52w_high",
+      "bearish_harami",
+      "strong_bearish_marubozu",
+      "pivot_point_test",
+      "stoch_rsi_overbought_reversal",
+      "full_bullish_alignment"
+    ]
+  },
+  {
+    "timestamp": "2026-08-07T07:45:53.886613",
+    "date": "2026-08-07",
+    "ticker": "SIEMENS.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 81.0,
+    "entry": 3953.0,
+    "stop_loss": 3794.2,
+    "target": 4270.6,
+    "reason": "paper afternoon",
+    "patterns": [
+      "near_52w_high",
+      "adx_strong_trend_up",
+      "full_bullish_alignment",
+      "pivot_s1_breakdown"
+    ]
+  },
+  {
+    "timestamp": "2026-08-07T07:45:53.887461",
+    "date": "2026-08-07",
+    "ticker": "LICI.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 95,
+    "entry": 393.7,
+    "stop_loss": 379.75,
+    "target": 421.6,
+    "reason": "paper afternoon",
+    "patterns": [
+      "supertrend_bullish",
+      "inverted_hammer",
+      "doji",
+      "volume_breakout_bullish",
+      "gravestone_doji",
+      "bb_lower_bounce",
+      "inside_bar",
+      "pivot_point_test",
+      "rsi_bullish_divergence",
+      "gap_down_reversal",
+      "volume_climax_bottom",
+      "stoch_rsi_oversold_reversal"
+    ]
+  },
+  {
+    "timestamp": "2026-08-07T07:45:53.888626",
+    "date": "2026-08-07",
+    "ticker": "ASIANPAINT.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 59.4,
+    "entry": 2713.5,
+    "stop_loss": 2622.86,
+    "target": 2894.79,
+    "reason": "paper afternoon",
+    "patterns": [
+      "gap_up_reversal",
+      "outside_bar",
+      "full_bullish_alignment",
+      "pivot_s1_breakdown"
+    ]
+  },
+  {
+    "timestamp": "2026-08-07T07:45:53.889111",
+    "date": "2026-08-07",
+    "ticker": "CIPLA.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 64.8,
+    "entry": 1463.0,
+    "stop_loss": 1411.64,
+    "target": 1565.73,
+    "reason": "paper afternoon",
+    "patterns": [
+      "supertrend_bullish",
+      "full_bullish_alignment",
+      "pivot_point_test"
+    ]
+  },
+  {
+    "timestamp": "2026-08-07T07:45:53.889587",
+    "date": "2026-08-07",
+    "ticker": "NTPC.NS",
+    "session": "afternoon",
+    "action": "SELL",
+    "signal": "SELL",
+    "confidence": 72.1,
+    "entry": 344.8,
+    "stop_loss": 353.9,
+    "target": 326.6,
+    "reason": "paper afternoon",
+    "patterns": [
+      "tweezer_top",
+      "pivot_s1_breakdown",
+      "full_bearish_alignment",
+      "inside_bar",
+      "bearish_harami",
+      "adx_ranging_market"
+    ]
   }
 ]

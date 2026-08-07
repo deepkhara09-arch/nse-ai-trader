@@ -1,65 +1,5 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of strong_bullish_marubozu, rsi_bearish_divergence, bb_upper_rejection mean for a swing trade on SBIN? Current RSI=59, MACD hist=+2.0037, Vol=0.9x average. Signal is BUY.",
-    "context": {
-      "ticker": "SBIN.NS",
-      "signal": "BUY",
-      "patterns": "strong_bullish_marubozu, rsi_bearish_divergence, bb_upper_rejection",
-      "rsi": 58.6
-    },
-    "queued_at": "2026-08-06T10:12:35.048361"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of rsi_bearish_divergence, stoch_rsi_oversold_reversal mean for a swing trade on UNIONBANK? Current RSI=55, MACD hist=+0.4225, Vol=0.7x average. Signal is BUY.",
-    "context": {
-      "ticker": "UNIONBANK.NS",
-      "signal": "BUY",
-      "patterns": "rsi_bearish_divergence, stoch_rsi_oversold_reversal",
-      "rsi": 55.3
-    },
-    "queued_at": "2026-08-06T10:12:35.051487"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of pivot_s1_breakdown, rsi_bullish_divergence, outside_bar mean for a swing trade on PFC? Current RSI=73, MACD hist=+1.8857, Vol=0.9x average. Signal is BUY.",
-    "context": {
-      "ticker": "PFC.NS",
-      "signal": "BUY",
-      "patterns": "pivot_s1_breakdown, rsi_bullish_divergence, outside_bar",
-      "rsi": 72.8
-    },
-    "queued_at": "2026-08-06T10:12:35.052416"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of 52w_breakout, pivot_r2_breakout, bb_upper_rejection mean for a swing trade on PIDILITIND? Current RSI=73, MACD hist=+5.5403, Vol=1.7x average. Signal is BUY.",
-    "context": {
-      "ticker": "PIDILITIND.NS",
-      "signal": "BUY",
-      "patterns": "52w_breakout, pivot_r2_breakout, bb_upper_rejection",
-      "rsi": 72.7
-    },
-    "queued_at": "2026-08-06T10:12:35.052957"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of rsi_bearish_divergence, inside_bar, tweezer_top mean for a swing trade on SIEMENS? Current RSI=84, MACD hist=+42.8344, Vol=0.9x average. Signal is SELL.",
-    "context": {
-      "ticker": "SIEMENS.NS",
-      "signal": "SELL",
-      "patterns": "rsi_bearish_divergence, inside_bar, tweezer_top",
-      "rsi": 84.2
-    },
-    "queued_at": "2026-08-06T10:12:35.055384"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of pivot_r1_breakout, three_white_soldiers, near_52w_high mean for a swing trade on JSWSTEEL? Current RSI=81, MACD hist=+8.4609, Vol=1.2x average. Signal is BUY.",
-    "context": {
-      "ticker": "JSWSTEEL.NS",
-      "signal": "BUY",
-      "patterns": "pivot_r1_breakout, three_white_soldiers, near_52w_high",
-      "rsi": 81.1
-    },
-    "queued_at": "2026-08-06T10:12:35.055961"
-  },
-  {
     "question": "In Indian NSE markets, what does the combination of bb_lower_bounce, volume_climax_bottom, volume_breakout_bullish mean for a long_term trade on LICI? Current RSI=18, MACD hist=-4.5049, Vol=6.8x average. Signal is BUY.",
     "context": {
       "ticker": "LICI.NS",
@@ -98,5 +38,65 @@
       "rsi": 57.4
     },
     "queued_at": "2026-08-06T10:12:35.063637"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of 52w_breakout, bb_upper_rejection, pivot_r2_breakout mean for a swing trade on PIDILITIND? Current RSI=73, MACD hist=+5.5403, Vol=1.7x average. Signal is BUY.",
+    "context": {
+      "ticker": "PIDILITIND.NS",
+      "signal": "BUY",
+      "patterns": "52w_breakout, bb_upper_rejection, pivot_r2_breakout",
+      "rsi": 72.7
+    },
+    "queued_at": "2026-08-07T03:05:51.237675"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of tweezer_top, bb_upper_rejection, rsi_bearish_divergence mean for a swing trade on SIEMENS? Current RSI=84, MACD hist=+42.8344, Vol=0.9x average. Signal is SELL.",
+    "context": {
+      "ticker": "SIEMENS.NS",
+      "signal": "SELL",
+      "patterns": "tweezer_top, bb_upper_rejection, rsi_bearish_divergence",
+      "rsi": 84.2
+    },
+    "queued_at": "2026-08-07T03:05:51.241004"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of bb_upper_rejection, three_white_soldiers, pivot_r1_breakout mean for a swing trade on JSWSTEEL? Current RSI=81, MACD hist=+8.4609, Vol=1.2x average. Signal is BUY.",
+    "context": {
+      "ticker": "JSWSTEEL.NS",
+      "signal": "BUY",
+      "patterns": "bb_upper_rejection, three_white_soldiers, pivot_r1_breakout",
+      "rsi": 81.1
+    },
+    "queued_at": "2026-08-07T03:05:51.241837"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of gap_down_reversal, bb_lower_bounce, volume_climax_bottom mean for a long_term trade on LICI? Current RSI=18, MACD hist=-4.5049, Vol=6.8x average. Signal is BUY.",
+    "context": {
+      "ticker": "LICI.NS",
+      "signal": "BUY",
+      "patterns": "gap_down_reversal, bb_lower_bounce, volume_climax_bottom",
+      "rsi": 18.4
+    },
+    "queued_at": "2026-08-07T03:05:51.245271"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of tweezer_top, full_bullish_alignment, pivot_s1_breakdown mean for a swing trade on IDFCFIRSTB? Current RSI=73, MACD hist=+0.1908, Vol=0.6x average. Signal is SELL.",
+    "context": {
+      "ticker": "IDFCFIRSTB.NS",
+      "signal": "SELL",
+      "patterns": "tweezer_top, full_bullish_alignment, pivot_s1_breakdown",
+      "rsi": 72.6
+    },
+    "queued_at": "2026-08-07T03:05:51.248642"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of full_bullish_alignment, doji, hammer mean for a swing trade on CIPLA? Current RSI=57, MACD hist=+2.3931, Vol=0.7x average. Signal is BUY.",
+    "context": {
+      "ticker": "CIPLA.NS",
+      "signal": "BUY",
+      "patterns": "full_bullish_alignment, doji, hammer",
+      "rsi": 57.4
+    },
+    "queued_at": "2026-08-07T03:05:51.249878"
   }
 ]

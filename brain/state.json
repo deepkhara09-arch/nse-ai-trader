@@ -1,13 +1,13 @@
 {
   "phase": "paper_trading",
   "day": 34,
-  "session": "morning",
+  "session": "preopen",
   "start_date": "2026-06-22",
   "phase_start_date": "2026-07-15",
   "last_run_date": "2026-08-06",
   "last_counted_date": "2026-08-06",
   "cohort_last_tick_date": "2026-08-06",
-  "last_updated": "2026-08-06T10:12:34.987300",
+  "last_updated": "2026-08-07T03:05:51.144783",
   "focus_stocks": [
     "MARICO.NS",
     "SBIN.NS",
@@ -114,7 +114,8 @@
     "[2026-08-04] Focus refresh \u2014 promoted: ['CIPLA', 'NTPC'] | demoted: ['NESTLEIND', 'HOMEFIRST']",
     "[2026-08-05] Pre-open macro: neutral (+0.18)",
     "[2026-08-06] Pre-open macro: neutral (-0.03)",
-    "[2026-08-06] Cohort batch #19 complete \u2014 30 candidates ready"
+    "[2026-08-06] Cohort batch #19 complete \u2014 30 candidates ready",
+    "[2026-08-07] Pre-open macro: neutral (+0.06)"
   ],
   "alert_sent": false,
   "schema_version": 11,
@@ -344,11 +345,6 @@
     "scored_date": "2026-08-06"
   },
   "sessions_done": {
-    "preopen": "2026-08-06",
-    "morning": "2026-08-06",
-    "midday": "2026-08-06",
-    "afternoon": "2026-08-06",
-    "intraday_close": "2026-08-06",
-    "preclose": "2026-08-06"
+    "preopen": "2026-08-07"
   }
 }

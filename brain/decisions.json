@@ -16282,7 +16282,9 @@
       "bb_upper_rejection",
       "full_bullish_alignment",
       "supertrend_bullish"
-    ]
+    ],
+    "dry_evaluated": true,
+    "dry_outcome": "flat"
   },
   {
     "timestamp": "2026-07-31T15:43:05.712371+05:30",
@@ -16305,7 +16307,9 @@
       "inside_bar",
       "full_bullish_alignment",
       "supertrend_bullish"
-    ]
+    ],
+    "dry_evaluated": true,
+    "dry_outcome": "win"
   },
   {
     "timestamp": "2026-07-31T15:43:05.712376+05:30",
@@ -16326,7 +16330,9 @@
       "spinning_top",
       "full_bullish_alignment",
       "supertrend_bullish"
-    ]
+    ],
+    "dry_evaluated": true,
+    "dry_outcome": "flat"
   },
   {
     "timestamp": "2026-07-31T15:43:05.712380+05:30",
@@ -16348,7 +16354,9 @@
       "bb_upper_rejection",
       "full_bullish_alignment",
       "adx_strong_trend_up"
-    ]
+    ],
+    "dry_evaluated": true,
+    "dry_outcome": "flat"
   },
   {
     "timestamp": "2026-08-03T04:05:51.144606",
@@ -20892,6 +20900,298 @@
     "patterns": [
       "supertrend_bullish",
       "morning_star",
+      "full_bullish_alignment"
+    ]
+  },
+  {
+    "timestamp": "2026-08-07T10:11:11.099362",
+    "date": "2026-08-07",
+    "ticker": "MARICO.NS",
+    "session": "preclose",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 95,
+    "entry": 860.0,
+    "stop_loss": 830.09,
+    "target": 919.83,
+    "reason": "paper preclose",
+    "patterns": [
+      "pivot_point_test",
+      "supertrend_bullish",
+      "tweezer_bottom",
+      "stoch_rsi_oversold_reversal",
+      "adx_strong_trend_up",
+      "inside_bar",
+      "full_bullish_alignment"
+    ]
+  },
+  {
+    "timestamp": "2026-08-07T10:11:11.100250",
+    "date": "2026-08-07",
+    "ticker": "SBIN.NS",
+    "session": "preclose",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 68.6,
+    "entry": 1098.0,
+    "stop_loss": 1069.63,
+    "target": 1154.74,
+    "reason": "paper preclose",
+    "patterns": [
+      "supertrend_bullish",
+      "strong_bullish_marubozu",
+      "pivot_r1_breakout",
+      "bb_upper_rejection",
+      "adx_ranging_market",
+      "full_bullish_alignment"
+    ]
+  },
+  {
+    "timestamp": "2026-08-07T10:11:11.100849",
+    "date": "2026-08-07",
+    "ticker": "ICICIBANK.NS",
+    "session": "preclose",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 95,
+    "entry": 1425.0,
+    "stop_loss": 1385.12,
+    "target": 1504.76,
+    "reason": "paper preclose",
+    "patterns": [
+      "pivot_s1_breakdown",
+      "adx_strong_trend_up",
+      "rsi_bearish_divergence",
+      "full_bullish_alignment"
+    ]
+  },
+  {
+    "timestamp": "2026-08-07T10:11:11.101351",
+    "date": "2026-08-07",
+    "ticker": "UNIONBANK.NS",
+    "session": "preclose",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 66.4,
+    "entry": 183.48,
+    "stop_loss": 176.25,
+    "target": 197.93,
+    "reason": "paper preclose",
+    "patterns": [
+      "supertrend_bullish",
+      "strong_bullish_marubozu",
+      "bb_upper_rejection",
+      "adx_ranging_market",
+      "full_bullish_alignment"
+    ]
+  },
+  {
+    "timestamp": "2026-08-07T10:11:11.102676",
+    "date": "2026-08-07",
+    "ticker": "PFC.NS",
+    "session": "preclose",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 86.1,
+    "entry": 418.4,
+    "stop_loss": 405.21,
+    "target": 444.78,
+    "reason": "paper preclose",
+    "patterns": [
+      "pivot_point_test",
+      "rsi_bullish_divergence",
+      "adx_ranging_market",
+      "supertrend_bullish"
+    ]
+  },
+  {
+    "timestamp": "2026-08-07T10:11:11.103567",
+    "date": "2026-08-07",
+    "ticker": "PIDILITIND.NS",
+    "session": "preclose",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 95,
+    "entry": 1659.7,
+    "stop_loss": 1602.18,
+    "target": 1774.75,
+    "reason": "paper preclose",
+    "patterns": [
+      "supertrend_bullish",
+      "strong_bullish_marubozu",
+      "bb_upper_rejection",
+      "near_52w_high",
+      "full_bullish_alignment"
+    ]
+  },
+  {
+    "timestamp": "2026-08-07T10:11:11.104156",
+    "date": "2026-08-07",
+    "ticker": "SIEMENS.NS",
+    "session": "preclose",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 81.0,
+    "entry": 3940.0,
+    "stop_loss": 3781.2,
+    "target": 4257.6,
+    "reason": "paper preclose",
+    "patterns": [
+      "pivot_s1_breakdown",
+      "near_52w_high",
+      "adx_strong_trend_up",
+      "full_bullish_alignment"
+    ]
+  },
+  {
+    "timestamp": "2026-08-07T10:11:11.105472",
+    "date": "2026-08-07",
+    "ticker": "LICI.NS",
+    "session": "preclose",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 95,
+    "entry": 392.7,
+    "stop_loss": 378.75,
+    "target": 420.6,
+    "reason": "paper preclose",
+    "patterns": [
+      "supertrend_bullish",
+      "pivot_point_test",
+      "gap_down_reversal",
+      "volume_breakout_bullish",
+      "doji",
+      "volume_climax_bottom",
+      "stoch_rsi_oversold_reversal",
+      "rsi_bullish_divergence",
+      "inverted_hammer",
+      "gravestone_doji",
+      "bb_lower_bounce",
+      "inside_bar"
+    ]
+  },
+  {
+    "timestamp": "2026-08-07T10:11:11.107272",
+    "date": "2026-08-07",
+    "ticker": "ASIANPAINT.NS",
+    "session": "preclose",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 79.1,
+    "entry": 2713.6,
+    "stop_loss": 2622.96,
+    "target": 2894.89,
+    "reason": "paper preclose",
+    "patterns": [
+      "pivot_s1_breakdown",
+      "full_bullish_alignment",
+      "gap_up_reversal",
+      "outside_bar"
+    ]
+  },
+  {
+    "timestamp": "2026-08-07T10:11:11.108102",
+    "date": "2026-08-07",
+    "ticker": "CIPLA.NS",
+    "session": "preclose",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 95,
+    "entry": 1469.8,
+    "stop_loss": 1418.44,
+    "target": 1572.53,
+    "reason": "paper preclose",
+    "patterns": [
+      "morning_star",
+      "supertrend_bullish",
+      "full_bullish_alignment"
+    ]
+  },
+  {
+    "timestamp": "2026-08-07T15:42:33.618958+05:30",
+    "date": "2026-08-07",
+    "ticker": "LICI.NS",
+    "session": "preclose",
+    "action": "RECOMMEND",
+    "signal": "BUY",
+    "confidence": 97.2,
+    "entry": 393.29,
+    "stop_loss": 381.12,
+    "target": 415.95,
+    "reason": "rec snapshot (short_term)",
+    "patterns": [
+      "supertrend_bullish",
+      "pivot_point_test",
+      "gap_down_reversal",
+      "volume_breakout_bullish",
+      "doji",
+      "volume_climax_bottom",
+      "stoch_rsi_oversold_reversal",
+      "rsi_bullish_divergence",
+      "inverted_hammer",
+      "gravestone_doji",
+      "bb_lower_bounce",
+      "inside_bar"
+    ]
+  },
+  {
+    "timestamp": "2026-08-07T15:42:33.618968+05:30",
+    "date": "2026-08-07",
+    "ticker": "MARICO.NS",
+    "session": "preclose",
+    "action": "RECOMMEND",
+    "signal": "BUY",
+    "confidence": 73.5,
+    "entry": 861.29,
+    "stop_loss": 830.09,
+    "target": 919.82,
+    "reason": "rec snapshot (short_term)",
+    "patterns": [
+      "pivot_point_test",
+      "supertrend_bullish",
+      "tweezer_bottom",
+      "stoch_rsi_oversold_reversal",
+      "adx_strong_trend_up",
+      "inside_bar",
+      "full_bullish_alignment"
+    ]
+  },
+  {
+    "timestamp": "2026-08-07T15:42:33.618973+05:30",
+    "date": "2026-08-07",
+    "ticker": "ICICIBANK.NS",
+    "session": "preclose",
+    "action": "RECOMMEND",
+    "signal": "BUY",
+    "confidence": 71.5,
+    "entry": 1427.13,
+    "stop_loss": 1385.12,
+    "target": 1504.76,
+    "reason": "rec snapshot (short_term)",
+    "patterns": [
+      "pivot_s1_breakdown",
+      "adx_strong_trend_up",
+      "rsi_bearish_divergence",
+      "full_bullish_alignment"
+    ]
+  },
+  {
+    "timestamp": "2026-08-07T15:42:33.618982+05:30",
+    "date": "2026-08-07",
+    "ticker": "PIDILITIND.NS",
+    "session": "preclose",
+    "action": "RECOMMEND",
+    "signal": "BUY",
+    "confidence": 71.4,
+    "entry": 1662.19,
+    "stop_loss": 1607.04,
+    "target": 1765.02,
+    "reason": "rec snapshot (short_term)",
+    "patterns": [
+      "supertrend_bullish",
+      "strong_bullish_marubozu",
+      "bb_upper_rejection",
+      "near_52w_high",
       "full_bullish_alignment"
     ]
   }

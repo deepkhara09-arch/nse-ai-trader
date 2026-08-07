@@ -4048,5 +4048,45 @@
     "ts": "2026-08-07T09:35:16.719142",
     "detail": "Stop loss moved \u20b91394.12 \u2192 \u20b91380.02 | Target 1 moved \u20b91513.76 \u2192 \u20b91499.66",
     "confidence": 66.9
+  },
+  {
+    "type": "new",
+    "ticker": "MARICO.NS",
+    "nse_code": "MARICO",
+    "signal": "BUY",
+    "date": "2026-08-07",
+    "ts": "2026-08-07T10:12:33.614259",
+    "detail": "New BUY recommendation \u2014 confidence 74/100",
+    "confidence": 73.5
+  },
+  {
+    "type": "new",
+    "ticker": "PIDILITIND.NS",
+    "nse_code": "PIDILITIND",
+    "signal": "BUY",
+    "date": "2026-08-07",
+    "ts": "2026-08-07T10:12:33.614259",
+    "detail": "New BUY recommendation \u2014 confidence 71/100",
+    "confidence": 71.4
+  },
+  {
+    "type": "updated",
+    "ticker": "LICI.NS",
+    "nse_code": "LICI",
+    "signal": "BUY",
+    "date": "2026-08-07",
+    "ts": "2026-08-07T10:12:33.614259",
+    "detail": "Confidence \u25b24 (93 \u2192 97) | Rank \u25b21 (#5 \u2192 #4) | Stop loss moved \u20b9384.45 \u2192 \u20b9381.12",
+    "confidence": 97.2
+  },
+  {
+    "type": "updated",
+    "ticker": "ICICIBANK.NS",
+    "nse_code": "ICICIBANK",
+    "signal": "BUY",
+    "date": "2026-08-07",
+    "ts": "2026-08-07T10:12:33.614259",
+    "detail": "Confidence \u25b25 (67 \u2192 72) | Rank \u25bc1 (#1 \u2192 #2)",
+    "confidence": 71.5
   }
 ]

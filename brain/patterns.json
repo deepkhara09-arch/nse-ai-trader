@@ -1988,10 +1988,10 @@
   "JSWSTEEL.NS": {
     "reliable_patterns": {
       "full_bullish_alignment": {
-        "wins": 1.0,
-        "losses": 0.0,
-        "reliability": 0.667,
-        "last_seen": "2026-08-05"
+        "wins": 0.989,
+        "losses": 1.0,
+        "reliability": 0.498,
+        "last_seen": "2026-08-07"
       },
       "tweezer_bottom": {
         "wins": 1.0,
@@ -2012,29 +2012,59 @@
         "last_seen": "2026-08-05"
       },
       "supertrend_bullish": {
-        "wins": 1.0,
-        "losses": 0.0,
-        "reliability": 0.667,
-        "last_seen": "2026-08-05"
+        "wins": 0.989,
+        "losses": 1.0,
+        "reliability": 0.498,
+        "last_seen": "2026-08-07"
       },
       "adx_ranging_market": {
-        "wins": 1.0,
-        "losses": 0.0,
-        "reliability": 0.667,
-        "last_seen": "2026-08-05"
+        "wins": 0.989,
+        "losses": 1.0,
+        "reliability": 0.498,
+        "last_seen": "2026-08-07"
+      },
+      "pivot_r2_breakout": {
+        "wins": 0.0,
+        "losses": 1.0,
+        "reliability": 0.333,
+        "last_seen": "2026-08-07"
+      },
+      "pivot_r1_breakout": {
+        "wins": 0.0,
+        "losses": 1.0,
+        "reliability": 0.333,
+        "last_seen": "2026-08-07"
+      },
+      "52w_breakout": {
+        "wins": 0.0,
+        "losses": 1.0,
+        "reliability": 0.333,
+        "last_seen": "2026-08-07"
+      },
+      "bb_upper_rejection": {
+        "wins": 0.0,
+        "losses": 1.0,
+        "reliability": 0.333,
+        "last_seen": "2026-08-07"
+      },
+      "near_52w_high": {
+        "wins": 0.0,
+        "losses": 1.0,
+        "reliability": 0.333,
+        "last_seen": "2026-08-07"
       }
     },
     "preferred_style": "swing",
     "swing_wins": 1,
-    "swing_losses": 0,
+    "swing_losses": 1,
     "intraday_wins": 0,
     "intraday_losses": 0,
     "long_term_wins": 0,
     "long_term_losses": 0,
-    "atr_stop_hits": 1,
+    "atr_stop_hits": 2,
     "atr_target_hits": 0,
     "atr_multiplier": 1.5,
-    "last_updated": "2026-08-05",
+    "last_updated": "2026-08-07",
     "attribution": {
       "by_pattern": {
         "full_bullish_alignment": {

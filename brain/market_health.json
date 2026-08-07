@@ -1,6 +1,6 @@
 {
   "date": "2026-08-07",
-  "session": "afternoon",
+  "session": "intraday_close",
   "nifty": {
     "symbol": "^NSEI",
     "value": 24636.0,
@@ -58,11 +58,9 @@
       "ath_pct_60d": -1.62
     }
   },
-  "market_mood": "neutral",
+  "market_mood": "bullish",
   "trade_allowed": true,
-  "warnings": [
-    "Nifty choppy intraday \u2014 wait for cleaner setups"
-  ],
+  "warnings": [],
   "leading_sectors": [
     "IT",
     "Bank"
@@ -70,7 +68,7 @@
   "market_regime": "normal",
   "sector_breadth": 0.5,
   "lagging_sectors": [],
-  "intraday_regime": "choppy",
+  "intraday_regime": "mixed",
   "macro": {
     "date": "2026-08-07",
     "session": "midday",

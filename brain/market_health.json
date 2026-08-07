@@ -58,9 +58,11 @@
       "ath_pct_60d": -1.62
     }
   },
-  "market_mood": "bullish",
+  "market_mood": "neutral",
   "trade_allowed": true,
-  "warnings": [],
+  "warnings": [
+    "Nifty choppy intraday \u2014 wait for cleaner setups"
+  ],
   "leading_sectors": [
     "IT",
     "Bank"
@@ -68,7 +70,7 @@
   "market_regime": "normal",
   "sector_breadth": 0.5,
   "lagging_sectors": [],
-  "intraday_regime": "mixed",
+  "intraday_regime": "choppy",
   "macro": {
     "date": "2026-08-07",
     "session": "midday",

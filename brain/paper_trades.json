@@ -1,5 +1,5 @@
 {
-  "capital": 61776.748954999995,
+  "capital": 59323.55754499999,
   "open_positions": [
     {
       "ticker": "ICICIBANK.NS",
@@ -35,8 +35,8 @@
         "MACD histogram negative",
         "StochRSI overbought with bearish candle \u2014 reversal"
       ],
-      "current_price": 1452.3,
-      "unrealized_pnl": 132.0,
+      "current_price": 1441.6,
+      "unrealized_pnl": 67.8,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -86,8 +86,8 @@
         "RSI=66 elevated",
         "Near upper Bollinger Band"
       ],
-      "current_price": 84.9,
-      "unrealized_pnl": -16.66,
+      "current_price": 84.8,
+      "unrealized_pnl": -21.56,
       "max_held_days": 10,
       "vol_regime_pct": 0.08399999999999999,
       "entry_market": {
@@ -144,8 +144,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "RSI=74 overbought"
       ],
-      "current_price": 3937.3,
-      "unrealized_pnl": -21.8,
+      "current_price": 3964.7,
+      "unrealized_pnl": 5.6,
       "max_held_days": 10,
       "vol_regime_pct": 0.08399999999999999,
       "entry_market": {
@@ -158,62 +158,7 @@
         0,
         0,
         0,
-        0
-      ]
-    },
-    {
-      "ticker": "ASIANPAINT.NS",
-      "sector": "Consumer",
-      "open_date": "2026-08-04",
-      "open_session": "morning",
-      "action": "BUY",
-      "entry": 2798.8,
-      "qty": 2,
-      "invested": 5597.6,
-      "stop_loss": 2711.67,
-      "target": 2973.06,
-      "style": "swing",
-      "confidence": 95,
-      "patterns": [
-        "hammer",
-        "rsi_bearish_divergence",
-        "supertrend_bullish",
-        "doji",
-        "volume_breakout_bullish",
-        "full_bullish_alignment",
-        "three_white_soldiers"
-      ],
-      "buy_reasons": [
-        "All EMAs stacked bullish",
-        "MACD histogram positive",
-        "High volume confirmation (2.4x avg)",
-        "Positive news sentiment (0.36)",
-        "News sentiment improving across sessions",
-        "Candlestick: three white soldiers",
-        "Sector tailwind (momentum=0.37)",
-        "Supertrend bullish \u2014 price above trend band",
-        "In a long-term strong uptrend (2yr) \u2014 trend on our side",
-        "Clean trender aligned with its long-term uptrend",
-        "\u2713 Daily setup aligned with the higher-timeframe trend",
-        "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
-        "RSI=62 elevated",
-        "RSI bearish divergence \u2014 price higher but RSI lower"
-      ],
-      "current_price": 2748.7,
-      "unrealized_pnl": -100.2,
-      "max_held_days": 10,
-      "vol_regime_pct": 0.08399999999999999,
-      "entry_market": {
-        "nifty_trend": "up",
-        "vix": 11.76,
-        "mood": "bearish",
-        "regime": "choppy"
-      },
-      "view_hist": [
-        0,
-        0,
-        0,
-        0
+        1
       ]
     },
     {
@@ -259,8 +204,8 @@
         "\u2713 Daily setup aligned with the higher-timeframe trend",
         "RSI=64 elevated"
       ],
-      "current_price": 1667.9,
-      "unrealized_pnl": 122.5,
+      "current_price": 1655.0,
+      "unrealized_pnl": 58.0,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -272,7 +217,7 @@
       "view_hist": [
         1,
         1,
-        1,
+        0,
         0
       ]
     },
@@ -317,8 +262,8 @@
         "RSI=66 elevated",
         "Near upper Bollinger Band"
       ],
-      "current_price": 1298.4,
-      "unrealized_pnl": -187.2,
+      "current_price": 1300.4,
+      "unrealized_pnl": -175.2,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -330,9 +275,64 @@
       "view_hist": [
         1,
         1,
-        1,
+        0,
         0
       ]
+    },
+    {
+      "ticker": "LICI.NS",
+      "sector": "Insurance",
+      "open_date": "2026-08-07",
+      "open_session": "midday",
+      "action": "BUY",
+      "entry": 393.0,
+      "qty": 20,
+      "invested": 7860.0,
+      "stop_loss": 379.05,
+      "target": 420.9,
+      "style": "long_term",
+      "confidence": 95,
+      "patterns": [
+        "bb_lower_bounce",
+        "gravestone_doji",
+        "pivot_point_test",
+        "stoch_rsi_oversold_reversal",
+        "inside_bar",
+        "doji",
+        "gap_down_reversal",
+        "supertrend_bullish",
+        "inverted_hammer",
+        "rsi_bullish_divergence",
+        "volume_breakout_bullish",
+        "volume_climax_bottom"
+      ],
+      "buy_reasons": [
+        "RSI=18 oversold \u2014 reversal watch",
+        "Near lower Bollinger Band",
+        "High volume confirmation (6.0x avg)",
+        "Candlestick: inverted hammer",
+        "Volume climax at low \u2014 potential capitulation reversal",
+        "RSI bullish divergence \u2014 price lower but RSI higher",
+        "Supertrend bullish \u2014 price above trend band",
+        "Testing pivot point \u2014 decision zone",
+        "StochRSI oversold with bullish candle \u2014 reversal",
+        "Gap down reversal \u2014 buyers stepping in at lower open",
+        "In a long-term strong uptrend (2yr) \u2014 trend on our side",
+        "\u2713 Daily setup aligned with the higher-timeframe trend",
+        "Short EMA below long EMA",
+        "MACD histogram negative",
+        "Candlestick: gravestone doji"
+      ],
+      "current_price": 393.0,
+      "unrealized_pnl": 0.0,
+      "max_held_days": 30,
+      "vol_regime_pct": 0.12,
+      "entry_market": {
+        "nifty_trend": "up",
+        "vix": 12.16,
+        "mood": "neutral",
+        "regime": "choppy"
+      }
     }
   ],
   "closed_trades": [
@@ -1097,6 +1097,71 @@
       "pnl_pct": 0.67,
       "won": true,
       "open_days": 2
+    },
+    {
+      "ticker": "ASIANPAINT.NS",
+      "sector": "Consumer",
+      "open_date": "2026-08-04",
+      "open_session": "morning",
+      "action": "BUY",
+      "entry": 2798.8,
+      "qty": 2,
+      "invested": 5597.6,
+      "stop_loss": 2711.67,
+      "target": 2973.06,
+      "style": "swing",
+      "confidence": 95,
+      "patterns": [
+        "hammer",
+        "rsi_bearish_divergence",
+        "supertrend_bullish",
+        "doji",
+        "volume_breakout_bullish",
+        "full_bullish_alignment",
+        "three_white_soldiers"
+      ],
+      "buy_reasons": [
+        "All EMAs stacked bullish",
+        "MACD histogram positive",
+        "High volume confirmation (2.4x avg)",
+        "Positive news sentiment (0.36)",
+        "News sentiment improving across sessions",
+        "Candlestick: three white soldiers",
+        "Sector tailwind (momentum=0.37)",
+        "Supertrend bullish \u2014 price above trend band",
+        "In a long-term strong uptrend (2yr) \u2014 trend on our side",
+        "Clean trender aligned with its long-term uptrend",
+        "\u2713 Daily setup aligned with the higher-timeframe trend",
+        "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
+        "RSI=62 elevated",
+        "RSI bearish divergence \u2014 price higher but RSI lower"
+      ],
+      "current_price": 2714.0,
+      "unrealized_pnl": -169.6,
+      "max_held_days": 10,
+      "vol_regime_pct": 0.08399999999999999,
+      "entry_market": {
+        "nifty_trend": "up",
+        "vix": 11.76,
+        "mood": "bearish",
+        "regime": "choppy"
+      },
+      "view_hist": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "close_date": "2026-08-07",
+      "close_session": "midday",
+      "exit_price": 2711.67,
+      "exit_reason": "stop_hit",
+      "pnl": -190.79,
+      "pnl_gross": -174.26,
+      "costs": 16.53,
+      "pnl_pct": -3.41,
+      "won": false,
+      "open_days": 3
     }
   ],
   "daily_snapshots": [
@@ -1213,11 +1278,11 @@
       "daily_pnl": 0.0
     }
   ],
-  "daily_pnl_today": 0.0,
+  "daily_pnl_today": -190.7914100000002,
   "last_snapshot_date": "2026-08-06",
   "lifetime_wins": 8,
-  "lifetime_losses": 5,
-  "lifetime_pnl": 286.6,
+  "lifetime_losses": 6,
+  "lifetime_pnl": 95.81,
   "last_pnl_reset_date": "2026-08-07",
   "max_drawdown_pct": 1.07,
   "current_drawdown_pct": 0.79,

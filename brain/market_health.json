@@ -27,11 +27,11 @@
   "sectors": {
     "IT": {
       "symbol": "ITBEES.NS",
-      "value": 34.72,
-      "day_change_pct": 0.06,
-      "trend_5d": "sideways",
+      "value": 34.56,
+      "day_change_pct": -0.46,
+      "trend_5d": "up",
       "trend_20d": "strong_up",
-      "ath_pct_60d": -6.11
+      "ath_pct_60d": -6.54
     },
     "Pharma": {
       "symbol": "PHARMABEES.NS",
@@ -43,32 +43,32 @@
     },
     "Bank": {
       "symbol": "BANKBEES.NS",
-      "value": 596.31,
-      "day_change_pct": 0.09,
+      "value": 600.16,
+      "day_change_pct": 0.65,
       "trend_5d": "up",
       "trend_20d": "sideways",
-      "ath_pct_60d": -5.03
+      "ath_pct_60d": -4.42
     },
     "Infra": {
       "symbol": "INFRABEES.NS",
-      "value": 974.15,
-      "day_change_pct": 0.58,
+      "value": 977.36,
+      "day_change_pct": 0.33,
       "trend_5d": "sideways",
-      "trend_20d": "up",
-      "ath_pct_60d": -1.95
+      "trend_20d": "sideways",
+      "ath_pct_60d": -1.62
     }
   },
-  "market_mood": "bearish",
+  "market_mood": "neutral",
   "trade_allowed": true,
   "warnings": [
-    "Narrow rally \u2014 only 1/4 sectors up. Fragile move.",
     "Nifty choppy intraday \u2014 wait for cleaner setups"
   ],
   "leading_sectors": [
+    "IT",
     "Bank"
   ],
   "market_regime": "normal",
-  "sector_breadth": 0.25,
+  "sector_breadth": 0.5,
   "lagging_sectors": [],
   "intraday_regime": "choppy",
   "macro": {

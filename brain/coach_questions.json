@@ -1,102 +1,102 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of bb_lower_bounce, volume_climax_bottom, volume_breakout_bullish mean for a long_term trade on LICI? Current RSI=18, MACD hist=-4.5049, Vol=6.8x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of rsi_bullish_divergence, pivot_s1_bounce mean for a swing trade on PFC? Current RSI=71, MACD hist=+1.5144, Vol=0.6x average. Signal is BUY.",
     "context": {
-      "ticker": "LICI.NS",
+      "ticker": "PFC.NS",
       "signal": "BUY",
-      "patterns": "bb_lower_bounce, volume_climax_bottom, volume_breakout_bullish",
-      "rsi": 18.4
+      "patterns": "rsi_bullish_divergence, pivot_s1_bounce",
+      "rsi": 70.5
     },
-    "queued_at": "2026-08-06T10:12:35.058502"
+    "queued_at": "2026-08-07T04:05:45.988088"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of pivot_s1_breakdown, macd_bearish_crossover, rsi_bullish_divergence mean for a swing trade on POWERGRID? Current RSI=51, MACD hist=-0.1767, Vol=0.9x average. Signal is BUY.",
-    "context": {
-      "ticker": "POWERGRID.NS",
-      "signal": "BUY",
-      "patterns": "pivot_s1_breakdown, macd_bearish_crossover, rsi_bullish_divergence",
-      "rsi": 51.5
-    },
-    "queued_at": "2026-08-06T10:12:35.060723"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_up, full_bullish_alignment, pivot_s1_breakdown mean for a swing trade on IDFCFIRSTB? Current RSI=73, MACD hist=+0.1908, Vol=0.6x average. Signal is SELL.",
-    "context": {
-      "ticker": "IDFCFIRSTB.NS",
-      "signal": "SELL",
-      "patterns": "adx_strong_trend_up, full_bullish_alignment, pivot_s1_breakdown",
-      "rsi": 72.6
-    },
-    "queued_at": "2026-08-06T10:12:35.061287"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of full_bullish_alignment, momentum_continuation, supertrend_bullish mean for a swing trade on CIPLA? Current RSI=57, MACD hist=+2.3931, Vol=0.7x average. Signal is BUY.",
-    "context": {
-      "ticker": "CIPLA.NS",
-      "signal": "BUY",
-      "patterns": "full_bullish_alignment, momentum_continuation, supertrend_bullish",
-      "rsi": 57.4
-    },
-    "queued_at": "2026-08-06T10:12:35.063637"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of 52w_breakout, bb_upper_rejection, pivot_r2_breakout mean for a swing trade on PIDILITIND? Current RSI=73, MACD hist=+5.5403, Vol=1.7x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of bb_upper_rejection, strong_bullish_marubozu mean for a swing trade on PIDILITIND? Current RSI=73, MACD hist=+6.8604, Vol=1.4x average. Signal is BUY.",
     "context": {
       "ticker": "PIDILITIND.NS",
       "signal": "BUY",
-      "patterns": "52w_breakout, bb_upper_rejection, pivot_r2_breakout",
-      "rsi": 72.7
+      "patterns": "bb_upper_rejection, strong_bullish_marubozu",
+      "rsi": 73.5
     },
-    "queued_at": "2026-08-07T03:05:51.237675"
+    "queued_at": "2026-08-07T04:05:45.988939"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of tweezer_top, bb_upper_rejection, rsi_bearish_divergence mean for a swing trade on SIEMENS? Current RSI=84, MACD hist=+42.8344, Vol=0.9x average. Signal is SELL.",
-    "context": {
-      "ticker": "SIEMENS.NS",
-      "signal": "SELL",
-      "patterns": "tweezer_top, bb_upper_rejection, rsi_bearish_divergence",
-      "rsi": 84.2
-    },
-    "queued_at": "2026-08-07T03:05:51.241004"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of bb_upper_rejection, three_white_soldiers, pivot_r1_breakout mean for a swing trade on JSWSTEEL? Current RSI=81, MACD hist=+8.4609, Vol=1.2x average. Signal is BUY.",
-    "context": {
-      "ticker": "JSWSTEEL.NS",
-      "signal": "BUY",
-      "patterns": "bb_upper_rejection, three_white_soldiers, pivot_r1_breakout",
-      "rsi": 81.1
-    },
-    "queued_at": "2026-08-07T03:05:51.241837"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of gap_down_reversal, bb_lower_bounce, volume_climax_bottom mean for a long_term trade on LICI? Current RSI=18, MACD hist=-4.5049, Vol=6.8x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of volume_breakout_bullish, pivot_point_test, gravestone_doji mean for a long_term trade on LICI? Current RSI=18, MACD hist=-5.2299, Vol=6.0x average. Signal is BUY.",
     "context": {
       "ticker": "LICI.NS",
       "signal": "BUY",
-      "patterns": "gap_down_reversal, bb_lower_bounce, volume_climax_bottom",
-      "rsi": 18.4
+      "patterns": "volume_breakout_bullish, pivot_point_test, gravestone_doji",
+      "rsi": 18.3
     },
-    "queued_at": "2026-08-07T03:05:51.245271"
+    "queued_at": "2026-08-07T04:05:45.990784"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of tweezer_top, full_bullish_alignment, pivot_s1_breakdown mean for a swing trade on IDFCFIRSTB? Current RSI=73, MACD hist=+0.1908, Vol=0.6x average. Signal is SELL.",
-    "context": {
-      "ticker": "IDFCFIRSTB.NS",
-      "signal": "SELL",
-      "patterns": "tweezer_top, full_bullish_alignment, pivot_s1_breakdown",
-      "rsi": 72.6
-    },
-    "queued_at": "2026-08-07T03:05:51.248642"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of full_bullish_alignment, doji, hammer mean for a swing trade on CIPLA? Current RSI=57, MACD hist=+2.3931, Vol=0.7x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of supertrend_bullish, full_bullish_alignment, morning_star mean for a swing trade on CIPLA? Current RSI=64, MACD hist=+2.8521, Vol=1.0x average. Signal is BUY.",
     "context": {
       "ticker": "CIPLA.NS",
       "signal": "BUY",
-      "patterns": "full_bullish_alignment, doji, hammer",
-      "rsi": 57.4
+      "patterns": "supertrend_bullish, full_bullish_alignment, morning_star",
+      "rsi": 64.2
     },
-    "queued_at": "2026-08-07T03:05:51.249878"
+    "queued_at": "2026-08-07T04:05:45.993025"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of adx_ranging_market, inside_bar, pivot_s1_breakdown mean for a swing trade on NTPC? Current RSI=53, MACD hist=+0.7508, Vol=1.0x average. Signal is SELL.",
+    "context": {
+      "ticker": "NTPC.NS",
+      "signal": "SELL",
+      "patterns": "adx_ranging_market, inside_bar, pivot_s1_breakdown",
+      "rsi": 53.2
+    },
+    "queued_at": "2026-08-07T04:05:45.993831"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of rsi_bullish_divergence, pivot_s1_bounce mean for a swing trade on PFC? Current RSI=71, MACD hist=+1.5144, Vol=0.6x average. Signal is BUY.",
+    "context": {
+      "ticker": "PFC.NS",
+      "signal": "BUY",
+      "patterns": "rsi_bullish_divergence, pivot_s1_bounce",
+      "rsi": 70.5
+    },
+    "queued_at": "2026-08-07T04:05:46.092363"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of bb_upper_rejection, strong_bullish_marubozu mean for a swing trade on PIDILITIND? Current RSI=73, MACD hist=+6.8604, Vol=1.4x average. Signal is BUY.",
+    "context": {
+      "ticker": "PIDILITIND.NS",
+      "signal": "BUY",
+      "patterns": "bb_upper_rejection, strong_bullish_marubozu",
+      "rsi": 73.5
+    },
+    "queued_at": "2026-08-07T04:05:46.093259"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of volume_breakout_bullish, pivot_point_test, gravestone_doji mean for a long_term trade on LICI? Current RSI=18, MACD hist=-5.2299, Vol=6.0x average. Signal is BUY.",
+    "context": {
+      "ticker": "LICI.NS",
+      "signal": "BUY",
+      "patterns": "volume_breakout_bullish, pivot_point_test, gravestone_doji",
+      "rsi": 18.3
+    },
+    "queued_at": "2026-08-07T04:05:46.095154"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of supertrend_bullish, full_bullish_alignment, morning_star mean for a swing trade on CIPLA? Current RSI=64, MACD hist=+2.8521, Vol=1.0x average. Signal is BUY.",
+    "context": {
+      "ticker": "CIPLA.NS",
+      "signal": "BUY",
+      "patterns": "supertrend_bullish, full_bullish_alignment, morning_star",
+      "rsi": 64.2
+    },
+    "queued_at": "2026-08-07T04:05:46.099653"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of adx_ranging_market, inside_bar, pivot_s1_breakdown mean for a swing trade on NTPC? Current RSI=53, MACD hist=+0.7508, Vol=1.0x average. Signal is SELL.",
+    "context": {
+      "ticker": "NTPC.NS",
+      "signal": "SELL",
+      "patterns": "adx_ranging_market, inside_bar, pivot_s1_breakdown",
+      "rsi": 53.2
+    },
+    "queued_at": "2026-08-07T04:05:46.100499"
   }
 ]

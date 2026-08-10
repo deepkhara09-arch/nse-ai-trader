@@ -4088,5 +4088,45 @@
     "ts": "2026-08-07T10:12:33.614259",
     "detail": "Confidence \u25b25 (67 \u2192 72) | Rank \u25bc1 (#1 \u2192 #2)",
     "confidence": 71.5
+  },
+  {
+    "type": "removed",
+    "ticker": "MARICO.NS",
+    "nse_code": "MARICO",
+    "signal": "BUY",
+    "date": "2026-08-10",
+    "ts": "2026-08-10T04:05:49.875008",
+    "detail": "Dropped \u2014 no longer meets threshold (was 74/100)",
+    "confidence": 0
+  },
+  {
+    "type": "removed",
+    "ticker": "ICICIBANK.NS",
+    "nse_code": "ICICIBANK",
+    "signal": "BUY",
+    "date": "2026-08-10",
+    "ts": "2026-08-10T04:05:49.875008",
+    "detail": "Dropped \u2014 no longer meets threshold (was 72/100)",
+    "confidence": 0
+  },
+  {
+    "type": "updated",
+    "ticker": "PIDILITIND.NS",
+    "nse_code": "PIDILITIND",
+    "signal": "BUY",
+    "date": "2026-08-10",
+    "ts": "2026-08-10T04:05:49.875008",
+    "detail": "Rank \u25bc1 (#8 \u2192 #9)",
+    "confidence": 68.7
+  },
+  {
+    "type": "updated",
+    "ticker": "LICI.NS",
+    "nse_code": "LICI",
+    "signal": "BUY",
+    "date": "2026-08-10",
+    "ts": "2026-08-10T04:05:49.875008",
+    "detail": "Confidence \u25bc28 (97 \u2192 69) | Rank \u25bc8 (#4 \u2192 #12)",
+    "confidence": 68.7
   }
 ]

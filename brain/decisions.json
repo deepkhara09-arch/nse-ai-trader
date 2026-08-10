@@ -21359,5 +21359,138 @@
       "outside_bar",
       "pivot_r1_breakout"
     ]
+  },
+  {
+    "timestamp": "2026-08-10T05:55:26.710522",
+    "date": "2026-08-10",
+    "ticker": "UNIONBANK.NS",
+    "session": "midday",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 74.4,
+    "entry": 183.06,
+    "stop_loss": 175.54,
+    "target": 198.1,
+    "reason": "paper midday",
+    "patterns": [
+      "supertrend_bullish",
+      "bb_upper_rejection",
+      "full_bullish_alignment",
+      "three_white_soldiers"
+    ]
+  },
+  {
+    "timestamp": "2026-08-10T05:55:26.712036",
+    "date": "2026-08-10",
+    "ticker": "PIDILITIND.NS",
+    "session": "midday",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 95,
+    "entry": 1677.7,
+    "stop_loss": 1621.2,
+    "target": 1790.69,
+    "reason": "paper midday",
+    "patterns": [
+      "pivot_point_test",
+      "near_52w_high",
+      "adx_strong_trend_up",
+      "supertrend_bullish",
+      "stoch_rsi_oversold_reversal",
+      "full_bullish_alignment"
+    ]
+  },
+  {
+    "timestamp": "2026-08-10T05:55:26.712932",
+    "date": "2026-08-10",
+    "ticker": "SIEMENS.NS",
+    "session": "midday",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 90.0,
+    "entry": 3979.9,
+    "stop_loss": 3826.53,
+    "target": 4286.64,
+    "reason": "paper midday",
+    "patterns": [
+      "pivot_point_test",
+      "adx_strong_trend_up",
+      "supertrend_bullish",
+      "spinning_top",
+      "stoch_rsi_oversold_reversal",
+      "full_bullish_alignment"
+    ]
+  },
+  {
+    "timestamp": "2026-08-10T05:55:26.713791",
+    "date": "2026-08-10",
+    "ticker": "LICI.NS",
+    "session": "midday",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 73.5,
+    "entry": 394.4,
+    "stop_loss": 379.97,
+    "target": 423.26,
+    "reason": "paper midday",
+    "patterns": [
+      "volume_breakout_bullish",
+      "pivot_r2_breakout",
+      "full_bearish_alignment",
+      "doji",
+      "supertrend_bullish",
+      "gap_up_continuation",
+      "spinning_top",
+      "volume_climax_bottom",
+      "pivot_r1_breakout"
+    ]
+  },
+  {
+    "timestamp": "2026-08-10T05:55:26.716627",
+    "date": "2026-08-10",
+    "ticker": "NIACL.NS",
+    "session": "midday",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 66.2,
+    "entry": 177.37,
+    "stop_loss": 168.2,
+    "target": 195.7,
+    "reason": "paper midday",
+    "patterns": [
+      "momentum_continuation",
+      "low_volume_drift",
+      "doji",
+      "adx_ranging_market",
+      "supertrend_bullish",
+      "spinning_top",
+      "hammer",
+      "full_bullish_alignment",
+      "pivot_s1_bounce"
+    ]
+  },
+  {
+    "timestamp": "2026-08-10T05:55:26.717500",
+    "date": "2026-08-10",
+    "ticker": "GRASIM.NS",
+    "session": "midday",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 95,
+    "entry": 3375.2,
+    "stop_loss": 3263.95,
+    "target": 3597.7,
+    "reason": "paper midday",
+    "patterns": [
+      "bb_upper_rejection",
+      "pivot_r2_breakout",
+      "near_52w_high",
+      "tweezer_bottom",
+      "pivot_r1_breakout",
+      "52w_breakout",
+      "supertrend_bullish",
+      "outside_bar",
+      "full_bullish_alignment"
+    ]
   }
 ]

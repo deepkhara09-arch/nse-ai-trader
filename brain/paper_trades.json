@@ -35,8 +35,8 @@
         "MACD histogram negative",
         "StochRSI overbought with bearish candle \u2014 reversal"
       ],
-      "current_price": 1428.9,
-      "unrealized_pnl": -8.4,
+      "current_price": 1423.1,
+      "unrealized_pnl": -43.2,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -48,7 +48,7 @@
       "view_hist": [
         1,
         1,
-        1,
+        0,
         0
       ]
     },
@@ -86,8 +86,8 @@
         "RSI=66 elevated",
         "Near upper Bollinger Band"
       ],
-      "current_price": 84.55,
-      "unrealized_pnl": -33.81,
+      "current_price": 84.91,
+      "unrealized_pnl": -16.17,
       "max_held_days": 10,
       "vol_regime_pct": 0.08399999999999999,
       "entry_market": {
@@ -144,8 +144,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "RSI=74 overbought"
       ],
-      "current_price": 3933.8,
-      "unrealized_pnl": -25.3,
+      "current_price": 3979.9,
+      "unrealized_pnl": 20.8,
       "max_held_days": 10,
       "vol_regime_pct": 0.08399999999999999,
       "entry_market": {
@@ -157,8 +157,8 @@
       "view_hist": [
         1,
         1,
-        1,
-        0
+        0,
+        1
       ]
     },
     {
@@ -204,8 +204,8 @@
         "\u2713 Daily setup aligned with the higher-timeframe trend",
         "RSI=64 elevated"
       ],
-      "current_price": 1660.9,
-      "unrealized_pnl": 87.5,
+      "current_price": 1677.7,
+      "unrealized_pnl": 171.5,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -216,7 +216,7 @@
       },
       "view_hist": [
         0,
-        0,
+        1,
         1,
         1
       ]
@@ -265,8 +265,8 @@
         "MACD histogram negative",
         "Candlestick: gravestone doji"
       ],
-      "current_price": 393.2,
-      "unrealized_pnl": 4.0,
+      "current_price": 394.4,
+      "unrealized_pnl": 28.0,
       "max_held_days": 30,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -278,7 +278,7 @@
       "view_hist": [
         1,
         1,
-        1,
+        0,
         0
       ]
     },
@@ -324,8 +324,8 @@
         "RSI=66 elevated",
         "Near upper Bollinger Band"
       ],
-      "current_price": 3355.0,
-      "unrealized_pnl": 0.0,
+      "current_price": 3375.2,
+      "unrealized_pnl": 40.4,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -333,7 +333,10 @@
         "vix": 12.16,
         "mood": "neutral",
         "regime": "mixed"
-      }
+      },
+      "view_hist": [
+        1
+      ]
     }
   ],
   "closed_trades": [

@@ -211,6 +211,14 @@ REVERSAL_CONFIRM_COUNT  = 3    # need this many opposing sessions in the window�
 REVERSAL_WINDOW         = 4    # …out of the last this-many re-analyses
 REVERSAL_MIN_HELD_DAYS  = 2    # never reverse-exit in the first N days (entry room)
 
+# ── Time-decayed stop on stale losers ──────────────────────────────────────────
+# Live data: the entire negative expectancy came from full-width stop-hits
+# (avg -₹196). A position still underwater after a few days gets its stop pulled
+# progressively toward entry, so a dead trade is cut at a smaller loss instead of
+# the full ATR distance. Only applies to LOSERS that haven't started trailing.
+STALE_LOSS_START_DAY       = 3     # start tightening once underwater this many days
+STALE_LOSS_TIGHTEN_PER_DAY = 0.12  # remove this fraction of stop-distance per stale day (cap 60%)
+
 # ── News RSS feeds ────────────────────────────────────────────────────────────
 NEWS_FEEDS = [
     "https://www.moneycontrol.com/rss/latestnews.xml",

@@ -3,10 +3,10 @@
     "ticker": "LICI.NS",
     "nse_code": "LICI",
     "company_name": "LICI.NS",
-    "date": "2026-08-07",
-    "generated_at": "2026-08-07 10:12 UTC",
+    "date": "2026-08-10",
+    "generated_at": "2026-08-10 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -40,12 +40,12 @@
     "pattern_score": 3.0,
     "confluence_bonus": 10,
     "paper_bonus": 0.0,
-    "success_probability": 0.473,
-    "base_success_prob": 0.555,
-    "profit_probability": 0.665,
-    "composite_score": 62.57,
+    "success_probability": 0.468,
+    "base_success_prob": 0.548,
+    "profit_probability": 0.644,
+    "composite_score": 61.61,
     "focus_rank": 4,
-    "rank_delta": -1,
+    "rank_delta": 0,
     "intention": "BUY LICI for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
     "confluence_count": 6,
     "confluence_families": [
@@ -67,7 +67,7 @@
     "data_confidence": "Estimated",
     "data_confidence_key": "estimated",
     "data_confidence_note": "Only 0 paper trade(s) \u2014 probability is an indicator-based estimate, not yet proven",
-    "expected_edge_r": 0.665,
+    "expected_edge_r": 0.644,
     "buy_score": 18.3,
     "sell_score": 4.5,
     "reasons": [
@@ -106,18 +106,18 @@
       "History backtest: this kind of BUY setup worked 28% of the time over ~1 week on this stock (sample: 39)"
     ],
     "patterns_seen": [
+      "bb_lower_bounce",
+      "volume_breakout_bullish",
+      "rsi_bullish_divergence",
+      "volume_climax_bottom",
       "supertrend_bullish",
       "pivot_point_test",
-      "gap_down_reversal",
-      "volume_breakout_bullish",
-      "doji",
-      "volume_climax_bottom",
       "stoch_rsi_oversold_reversal",
-      "rsi_bullish_divergence",
-      "inverted_hammer",
+      "inside_bar",
+      "doji",
       "gravestone_doji",
-      "bb_lower_bounce",
-      "inside_bar"
+      "inverted_hammer",
+      "gap_down_reversal"
     ],
     "reliable_patterns": [],
     "nearest_support": 384.19,
@@ -145,17 +145,17 @@
     "paper_expectancy": 0,
     "market_mood": "neutral",
     "market_warning": [
-      "Nifty choppy intraday \u2014 wait for cleaner setups"
+      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals"
     ]
   },
   {
     "ticker": "MARICO.NS",
     "nse_code": "MARICO",
     "company_name": "Marico Ltd",
-    "date": "2026-08-07",
-    "generated_at": "2026-08-07 10:12 UTC",
+    "date": "2026-08-10",
+    "generated_at": "2026-08-10 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -189,12 +189,12 @@
     "pattern_score": 1.0,
     "confluence_bonus": 7.5,
     "paper_bonus": 0.0,
-    "success_probability": 0.582,
-    "base_success_prob": 0.602,
-    "profit_probability": 0.142,
-    "composite_score": 53.95,
+    "success_probability": 0.574,
+    "base_success_prob": 0.595,
+    "profit_probability": 0.129,
+    "composite_score": 53.13,
     "focus_rank": 9,
-    "rank_delta": 1,
+    "rank_delta": 0,
     "intention": "BUY MARICO for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
     "confluence_count": 5,
     "confluence_families": [
@@ -205,9 +205,9 @@
       "regime"
     ],
     "backtest_tested": true,
-    "backtest_hit_5d": 0.534,
-    "backtest_hit_10d": 0.586,
-    "backtest_sample": 58,
+    "backtest_hit_5d": 0.525,
+    "backtest_hit_10d": 0.576,
+    "backtest_sample": 59,
     "hist_long_trend": "strong_uptrend",
     "hist_52w_position": 94.5,
     "hist_personality": "mean_reverter",
@@ -215,7 +215,7 @@
     "data_confidence": "Estimated",
     "data_confidence_key": "estimated",
     "data_confidence_note": "Only 2 paper trade(s) \u2014 probability is an indicator-based estimate, not yet proven",
-    "expected_edge_r": 0.142,
+    "expected_edge_r": 0.129,
     "buy_score": 11.29,
     "sell_score": 0.6,
     "reasons": [
@@ -247,14 +247,14 @@
       "Resistance at \u20b9874.70 is natural target",
       "Latest news: 'Marico's Stock Slides Over 3% Even As Q1 Net Profit, Revenue Beat Esti'",
       "Confluence: 5 independent signal families agree (trend, volume, pattern, news, regime)",
-      "History backtest: this kind of BUY setup worked 53% of the time over ~1 week on this stock (sample: 58)"
+      "History backtest: this kind of BUY setup worked 52% of the time over ~1 week on this stock (sample: 59)"
     ],
     "patterns_seen": [
-      "pivot_point_test",
-      "supertrend_bullish",
       "tweezer_bottom",
-      "stoch_rsi_oversold_reversal",
       "adx_strong_trend_up",
+      "supertrend_bullish",
+      "pivot_point_test",
+      "stoch_rsi_oversold_reversal",
       "inside_bar",
       "full_bullish_alignment"
     ],
@@ -284,17 +284,17 @@
     "paper_expectancy": 158.35,
     "market_mood": "neutral",
     "market_warning": [
-      "Nifty choppy intraday \u2014 wait for cleaner setups"
+      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals"
     ]
   },
   {
     "ticker": "ICICIBANK.NS",
     "nse_code": "ICICIBANK",
     "company_name": "ICICI Bank Ltd",
-    "date": "2026-08-07",
-    "generated_at": "2026-08-07 10:12 UTC",
+    "date": "2026-08-10",
+    "generated_at": "2026-08-10 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -328,12 +328,12 @@
     "pattern_score": 6.0,
     "confluence_bonus": 7.5,
     "paper_bonus": 0.0,
-    "success_probability": 0.576,
-    "base_success_prob": 0.616,
-    "profit_probability": 0.848,
-    "composite_score": 65.52,
+    "success_probability": 0.569,
+    "base_success_prob": 0.609,
+    "profit_probability": 0.827,
+    "composite_score": 64.56,
     "focus_rank": 2,
-    "rank_delta": -1,
+    "rank_delta": 0,
     "intention": "BUY ICICIBANK for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
     "confluence_count": 5,
     "confluence_families": [
@@ -344,9 +344,9 @@
       "regime"
     ],
     "backtest_tested": true,
-    "backtest_hit_5d": 0.482,
-    "backtest_hit_10d": 0.518,
-    "backtest_sample": 56,
+    "backtest_hit_5d": 0.474,
+    "backtest_hit_10d": 0.509,
+    "backtest_sample": 57,
     "hist_long_trend": "strong_uptrend",
     "hist_52w_position": 94.5,
     "hist_personality": "choppy",
@@ -354,7 +354,7 @@
     "data_confidence": "Estimated",
     "data_confidence_key": "estimated",
     "data_confidence_note": "Only 0 paper trade(s) \u2014 probability is an indicator-based estimate, not yet proven",
-    "expected_edge_r": 0.848,
+    "expected_edge_r": 0.827,
     "buy_score": 10.36,
     "sell_score": 5.5,
     "reasons": [
@@ -383,13 +383,13 @@
       "Resistance at \u20b91449.64 is natural target",
       "Latest news: 'ICICI Bank Share Price Today, ICICI Bank Stock Price Live NSE/BSE Upda'",
       "Confluence: 5 independent signal families agree (trend, volume, pattern, news, regime)",
-      "History backtest: this kind of BUY setup worked 48% of the time over ~1 week on this stock (sample: 56)"
+      "History backtest: this kind of BUY setup worked 47% of the time over ~1 week on this stock (sample: 57)"
     ],
     "patterns_seen": [
-      "pivot_s1_breakdown",
-      "adx_strong_trend_up",
       "rsi_bearish_divergence",
-      "full_bullish_alignment"
+      "adx_strong_trend_up",
+      "full_bullish_alignment",
+      "pivot_s1_breakdown"
     ],
     "reliable_patterns": [
       "full_bullish_alignment",
@@ -420,17 +420,17 @@
     "paper_expectancy": 0,
     "market_mood": "neutral",
     "market_warning": [
-      "Nifty choppy intraday \u2014 wait for cleaner setups"
+      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals"
     ]
   },
   {
     "ticker": "PIDILITIND.NS",
     "nse_code": "PIDILITIND",
     "company_name": "Pidilite Industries",
-    "date": "2026-08-07",
-    "generated_at": "2026-08-07 10:12 UTC",
+    "date": "2026-08-10",
+    "generated_at": "2026-08-10 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -464,12 +464,12 @@
     "pattern_score": 1.0,
     "confluence_bonus": 10,
     "paper_bonus": 0.0,
-    "success_probability": 0.581,
-    "base_success_prob": 0.606,
-    "profit_probability": 0.055,
-    "composite_score": 54.21,
+    "success_probability": 0.579,
+    "base_success_prob": 0.599,
+    "profit_probability": 0.043,
+    "composite_score": 53.4,
     "focus_rank": 8,
-    "rank_delta": 4,
+    "rank_delta": 0,
     "intention": "BUY PIDILITIND for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
     "confluence_count": 7,
     "confluence_families": [
@@ -482,9 +482,9 @@
       "regime"
     ],
     "backtest_tested": true,
-    "backtest_hit_5d": 0.521,
-    "backtest_hit_10d": 0.458,
-    "backtest_sample": 48,
+    "backtest_hit_5d": 0.531,
+    "backtest_hit_10d": 0.469,
+    "backtest_sample": 49,
     "hist_long_trend": "strong_uptrend",
     "hist_52w_position": 100.0,
     "hist_personality": "mean_reverter",
@@ -492,7 +492,7 @@
     "data_confidence": "Estimated",
     "data_confidence_key": "estimated",
     "data_confidence_note": "Only 1 paper trade(s) \u2014 probability is an indicator-based estimate, not yet proven",
-    "expected_edge_r": 0.055,
+    "expected_edge_r": 0.043,
     "buy_score": 8.35,
     "sell_score": 1.5,
     "reasons": [
@@ -524,13 +524,13 @@
       "Resistance at \u20b91686.00 is natural target",
       "Latest news: 'Pidilite Q1 Results: Stock recovers from lows after numbers beat expec'",
       "Confluence: 7 independent signal families agree (trend, momentum, volume, pattern, news, fundamentals, regime)",
-      "History backtest: this kind of BUY setup worked 52% of the time over ~1 week on this stock (sample: 48)"
+      "History backtest: this kind of BUY setup worked 53% of the time over ~1 week on this stock (sample: 49)"
     ],
     "patterns_seen": [
+      "near_52w_high",
       "supertrend_bullish",
       "strong_bullish_marubozu",
       "bb_upper_rejection",
-      "near_52w_high",
       "full_bullish_alignment"
     ],
     "reliable_patterns": [],
@@ -559,7 +559,7 @@
     "paper_expectancy": 68.95,
     "market_mood": "neutral",
     "market_warning": [
-      "Nifty choppy intraday \u2014 wait for cleaner setups"
+      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals"
     ]
   }
 ]

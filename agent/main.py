@@ -475,6 +475,14 @@ def _run_phase(state, phase, session, market_health, day, focus):
         # Update win rate attribution after each session's trade activity
         if session == "preclose":
             patterns = update_attribution(patterns, book.get("closed_trades", []))
+            # Post-mortem every closed trade: diagnose WHY each loss happened and
+            # fold win/loss expectancy into the per-pattern edge memory that the
+            # ranking engine reads back (free, deterministic, non-fatal).
+            try:
+                from agent.loss_forensics import record_outcomes
+                record_outcomes(book.get("closed_trades", []))
+            except Exception as e:
+                print(f"[forensics] skipped (non-fatal): {e}")
             # Finish forward-testing any dry ANALYSE calls from late in the
             # analysis phase that were still inside their proving window.
             decisions, patterns, _ = evaluate_dry_decisions(decisions, merged, patterns)

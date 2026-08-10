@@ -180,6 +180,22 @@ def rank_focus_stocks(
             2
         ) * 100 / 100   # already in 0-100 range conceptually; cap at 100
 
+        # ── Outcome-memory nudge — what actually won/lost with these patterns ──
+        # The tool remembers, per pattern, whether setups like this have historically
+        # MADE or LOST money (expectancy), and puts a small weight on the decision:
+        # patterns with a proven positive edge lift the score a little, proven losers
+        # trim it. It's advisory (±_MAX_NUDGE points) and stays silent until a pattern
+        # has real history — so it weighs the decision without ever deciding it.
+        edge_nudge = 0.0
+        try:
+            from agent.brain import detect_all_patterns
+            from agent.loss_forensics import pattern_edge_weight
+            cur_pats = detect_all_patterns(d, entry.get("prev_bar"), entry.get("prev2_bar"))
+            edge_nudge = pattern_edge_weight(cur_pats)
+            composite = max(0.0, min(100.0, composite + edge_nudge))
+        except Exception:
+            edge_nudge = 0.0
+
         ranked.append({
             "ticker":            ticker,
             "nse_code":          ticker.replace(".NS", ""),
@@ -196,6 +212,7 @@ def rank_focus_stocks(
             "paper_trades":         n_trades,
             "reliable_patterns":    reliable,
             "news_score_pct":       round(news_raw * 100, 1),
+            "edge_memory_nudge":    round(edge_nudge, 2),   # outcome-memory weight applied
         })
 
     ranked.sort(key=lambda x: x["composite_score"], reverse=True)

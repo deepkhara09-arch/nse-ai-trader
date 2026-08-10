@@ -1,49 +1,5 @@
 [
   {
-    "timestamp": "2026-07-02T10:11:53.985053",
-    "date": "2026-07-02",
-    "ticker": "MARICO.NS",
-    "session": "preclose",
-    "action": "ANALYSE",
-    "signal": "BUY",
-    "confidence": 84.0,
-    "entry": 856.0,
-    "stop_loss": 832.36,
-    "target": 903.27,
-    "reason": "Analysis day 8",
-    "patterns": [
-      "strong_bullish_marubozu",
-      "supertrend_bullish",
-      "near_52w_high",
-      "bb_upper_rejection",
-      "full_bullish_alignment",
-      "adx_strong_trend_up"
-    ],
-    "dry_evaluated": true,
-    "dry_outcome": "flat"
-  },
-  {
-    "timestamp": "2026-07-02T10:11:53.985445",
-    "date": "2026-07-02",
-    "ticker": "RECLTD.NS",
-    "session": "preclose",
-    "action": "ANALYSE",
-    "signal": "BUY",
-    "confidence": 95,
-    "entry": 369.3,
-    "stop_loss": 358.0,
-    "target": 391.9,
-    "reason": "Analysis day 8",
-    "patterns": [
-      "outside_bar",
-      "full_bullish_alignment",
-      "supertrend_bullish",
-      "tweezer_bottom"
-    ],
-    "dry_evaluated": true,
-    "dry_outcome": "loss"
-  },
-  {
     "timestamp": "2026-07-02T10:11:53.985830",
     "date": "2026-07-02",
     "ticker": "FEDERALBNK.NS",
@@ -21490,6 +21446,119 @@
       "52w_breakout",
       "supertrend_bullish",
       "outside_bar",
+      "full_bullish_alignment"
+    ]
+  },
+  {
+    "timestamp": "2026-08-10T07:45:51.215501",
+    "date": "2026-08-10",
+    "ticker": "MARICO.NS",
+    "session": "afternoon",
+    "action": "SELL",
+    "signal": "SELL",
+    "confidence": 56.0,
+    "entry": 853.65,
+    "stop_loss": 882.67,
+    "target": 795.61,
+    "reason": "paper afternoon",
+    "patterns": [
+      "pivot_s1_breakdown",
+      "doji",
+      "inside_bar",
+      "pivot_point_test",
+      "rsi_bearish_divergence",
+      "tweezer_top",
+      "adx_strong_trend_up",
+      "full_bullish_alignment"
+    ]
+  },
+  {
+    "timestamp": "2026-08-10T07:45:51.218860",
+    "date": "2026-08-10",
+    "ticker": "PIDILITIND.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 85.5,
+    "entry": 1683.3,
+    "stop_loss": 1624.07,
+    "target": 1801.76,
+    "reason": "paper afternoon",
+    "patterns": [
+      "near_52w_high",
+      "pivot_point_test",
+      "supertrend_bullish",
+      "full_bullish_alignment"
+    ]
+  },
+  {
+    "timestamp": "2026-08-10T07:45:51.220358",
+    "date": "2026-08-10",
+    "ticker": "LICI.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 73.5,
+    "entry": 395.1,
+    "stop_loss": 380.67,
+    "target": 423.96,
+    "reason": "paper afternoon",
+    "patterns": [
+      "spinning_top",
+      "gap_up_continuation",
+      "full_bearish_alignment",
+      "pivot_r2_breakout",
+      "doji",
+      "volume_breakout_bullish",
+      "supertrend_bullish",
+      "volume_climax_bottom",
+      "pivot_r1_breakout"
+    ]
+  },
+  {
+    "timestamp": "2026-08-10T07:45:51.221784",
+    "date": "2026-08-10",
+    "ticker": "ASIANPAINT.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 66.2,
+    "entry": 2755.5,
+    "stop_loss": 2662.91,
+    "target": 2940.69,
+    "reason": "paper afternoon",
+    "patterns": [
+      "momentum_continuation",
+      "stoch_rsi_oversold_reversal",
+      "pivot_point_test",
+      "supertrend_bullish",
+      "hammer",
+      "adx_ranging_market",
+      "full_bullish_alignment"
+    ]
+  },
+  {
+    "timestamp": "2026-08-10T07:45:51.224128",
+    "date": "2026-08-10",
+    "ticker": "GRASIM.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 95,
+    "entry": 3393.9,
+    "stop_loss": 3285.18,
+    "target": 3611.34,
+    "reason": "paper afternoon",
+    "patterns": [
+      "near_52w_high",
+      "pivot_r2_breakout",
+      "tweezer_bottom",
+      "volume_breakout_bullish",
+      "supertrend_bullish",
+      "52w_breakout",
+      "outside_bar",
+      "bb_upper_rejection",
+      "pivot_r1_breakout",
       "full_bullish_alignment"
     ]
   }

@@ -1,6 +1,6 @@
 {
   "date": "2026-08-10",
-  "session": "afternoon",
+  "session": "intraday_close",
   "nifty": {
     "symbol": "^NSEI",
     "value": 24570.65,
@@ -58,11 +58,10 @@
       "ath_pct_60d": -1.07
     }
   },
-  "market_mood": "bearish",
+  "market_mood": "neutral",
   "trade_allowed": true,
   "warnings": [
-    "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
-    "Nifty choppy intraday \u2014 wait for cleaner setups"
+    "Nifty in downtrend (down) \u2014 only high-confidence BUY signals"
   ],
   "leading_sectors": [
     "Infra"
@@ -70,7 +69,7 @@
   "market_regime": "normal",
   "sector_breadth": 0.25,
   "lagging_sectors": [],
-  "intraday_regime": "choppy",
+  "intraday_regime": "mixed",
   "macro": {
     "date": "2026-08-10",
     "session": "midday",

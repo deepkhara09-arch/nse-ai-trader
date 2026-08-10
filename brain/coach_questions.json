@@ -1,102 +1,102 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of doji, inside_bar, tweezer_top mean for a swing trade on MARICO? Current RSI=54, MACD hist=-1.6062, Vol=0.6x average. Signal is SELL.",
-    "context": {
-      "ticker": "MARICO.NS",
-      "signal": "SELL",
-      "patterns": "doji, inside_bar, tweezer_top",
-      "rsi": 54.1
-    },
-    "queued_at": "2026-08-10T07:45:51.215166"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of spinning_top, gap_up_continuation, full_bearish_alignment mean for a swing trade on LICI? Current RSI=25, MACD hist=-4.9856, Vol=3.3x average. Signal is BUY.",
-    "context": {
-      "ticker": "LICI.NS",
-      "signal": "BUY",
-      "patterns": "spinning_top, gap_up_continuation, full_bearish_alignment",
-      "rsi": 25.1
-    },
-    "queued_at": "2026-08-10T07:45:51.220056"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of momentum_continuation, stoch_rsi_oversold_reversal, pivot_point_test mean for a swing trade on ASIANPAINT? Current RSI=57, MACD hist=+2.6756, Vol=1.0x average. Signal is BUY.",
-    "context": {
-      "ticker": "ASIANPAINT.NS",
-      "signal": "BUY",
-      "patterns": "momentum_continuation, stoch_rsi_oversold_reversal, pivot_point_test",
-      "rsi": 56.7
-    },
-    "queued_at": "2026-08-10T07:45:51.221536"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of near_52w_high, pivot_r2_breakout, tweezer_bottom mean for a swing trade on GRASIM? Current RSI=65, MACD hist=+17.2263, Vol=2.0x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of pivot_r1_breakout, tweezer_bottom, pivot_r2_breakout mean for a swing trade on GRASIM? Current RSI=65, MACD hist=+17.2263, Vol=2.0x average. Signal is BUY.",
     "context": {
       "ticker": "GRASIM.NS",
       "signal": "BUY",
-      "patterns": "near_52w_high, pivot_r2_breakout, tweezer_bottom",
+      "patterns": "pivot_r1_breakout, tweezer_bottom, pivot_r2_breakout",
       "rsi": 64.5
     },
-    "queued_at": "2026-08-10T07:45:51.223881"
+    "queued_at": "2026-08-10T09:45:46.885075"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of spinning_top, gap_up_continuation, full_bearish_alignment mean for a swing trade on LICI? Current RSI=25, MACD hist=-4.9856, Vol=3.3x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of strong_bearish_marubozu, adx_strong_trend_down mean for a swing trade on ICICIBANK? Current RSI=42, MACD hist=-2.8365, Vol=1.1x average. Signal is BUY.",
+    "context": {
+      "ticker": "ICICIBANK.NS",
+      "signal": "BUY",
+      "patterns": "strong_bearish_marubozu, adx_strong_trend_down",
+      "rsi": 41.7
+    },
+    "queued_at": "2026-08-10T09:45:46.885910"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of low_volume_drift, adx_strong_trend_up, full_bullish_alignment mean for a swing trade on IDFCFIRSTB? Current RSI=64, MACD hist=+0.0121, Vol=0.4x average. Signal is BUY.",
+    "context": {
+      "ticker": "IDFCFIRSTB.NS",
+      "signal": "BUY",
+      "patterns": "low_volume_drift, adx_strong_trend_up, full_bullish_alignment",
+      "rsi": 63.6
+    },
+    "queued_at": "2026-08-10T09:45:46.886706"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of pivot_r1_breakout, doji, pivot_r2_breakout mean for a swing trade on LICI? Current RSI=25, MACD hist=-4.9856, Vol=3.3x average. Signal is BUY.",
     "context": {
       "ticker": "LICI.NS",
       "signal": "BUY",
-      "patterns": "spinning_top, gap_up_continuation, full_bearish_alignment",
+      "patterns": "pivot_r1_breakout, doji, pivot_r2_breakout",
       "rsi": 25.1
     },
-    "queued_at": "2026-08-10T07:45:51.227025"
+    "queued_at": "2026-08-10T09:45:46.888466"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of near_52w_high, pivot_r2_breakout, tweezer_bottom mean for a swing trade on GRASIM? Current RSI=65, MACD hist=+17.2263, Vol=2.0x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of pivot_r1_breakout, tweezer_bottom, pivot_r2_breakout mean for a swing trade on GRASIM? Current RSI=65, MACD hist=+17.2263, Vol=2.0x average. Signal is BUY.",
     "context": {
       "ticker": "GRASIM.NS",
       "signal": "BUY",
-      "patterns": "near_52w_high, pivot_r2_breakout, tweezer_bottom",
+      "patterns": "pivot_r1_breakout, tweezer_bottom, pivot_r2_breakout",
       "rsi": 64.5
     },
-    "queued_at": "2026-08-10T07:45:51.227970"
+    "queued_at": "2026-08-10T09:45:46.889271"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of doji, inside_bar, tweezer_top mean for a swing trade on MARICO? Current RSI=54, MACD hist=-1.6062, Vol=0.6x average. Signal is SELL.",
+    "question": "In Indian NSE markets, what does the combination of strong_bearish_marubozu, adx_strong_trend_down mean for a swing trade on ICICIBANK? Current RSI=42, MACD hist=-2.8365, Vol=1.1x average. Signal is BUY.",
     "context": {
-      "ticker": "MARICO.NS",
-      "signal": "SELL",
-      "patterns": "doji, inside_bar, tweezer_top",
-      "rsi": 54.1
+      "ticker": "ICICIBANK.NS",
+      "signal": "BUY",
+      "patterns": "strong_bearish_marubozu, adx_strong_trend_down",
+      "rsi": 41.7
     },
-    "queued_at": "2026-08-10T07:45:51.332509"
+    "queued_at": "2026-08-10T09:45:46.989249"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of spinning_top, gap_up_continuation, full_bearish_alignment mean for a swing trade on LICI? Current RSI=25, MACD hist=-4.9856, Vol=3.3x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of pivot_r1_breakout, doji, pivot_r2_breakout mean for a swing trade on LICI? Current RSI=25, MACD hist=-4.9856, Vol=3.3x average. Signal is BUY.",
     "context": {
       "ticker": "LICI.NS",
       "signal": "BUY",
-      "patterns": "spinning_top, gap_up_continuation, full_bearish_alignment",
+      "patterns": "pivot_r1_breakout, doji, pivot_r2_breakout",
       "rsi": 25.1
     },
-    "queued_at": "2026-08-10T07:45:51.340057"
+    "queued_at": "2026-08-10T09:45:46.995359"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of momentum_continuation, stoch_rsi_oversold_reversal, pivot_point_test mean for a swing trade on ASIANPAINT? Current RSI=57, MACD hist=+2.6756, Vol=1.0x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of low_volume_drift, adx_strong_trend_up, full_bullish_alignment mean for a swing trade on IDFCFIRSTB? Current RSI=64, MACD hist=+0.0121, Vol=0.4x average. Signal is BUY.",
     "context": {
-      "ticker": "ASIANPAINT.NS",
+      "ticker": "IDFCFIRSTB.NS",
       "signal": "BUY",
-      "patterns": "momentum_continuation, stoch_rsi_oversold_reversal, pivot_point_test",
-      "rsi": 56.7
+      "patterns": "low_volume_drift, adx_strong_trend_up, full_bullish_alignment",
+      "rsi": 63.6
     },
-    "queued_at": "2026-08-10T07:45:51.343803"
+    "queued_at": "2026-08-10T09:45:46.998569"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of near_52w_high, pivot_r2_breakout, tweezer_bottom mean for a swing trade on GRASIM? Current RSI=65, MACD hist=+17.2263, Vol=2.0x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of doji, momentum_continuation, pivot_point_test mean for a swing trade on NIACL? Current RSI=50, MACD hist=+0.7105, Vol=0.3x average. Signal is BUY.",
+    "context": {
+      "ticker": "NIACL.NS",
+      "signal": "BUY",
+      "patterns": "doji, momentum_continuation, pivot_point_test",
+      "rsi": 50.3
+    },
+    "queued_at": "2026-08-10T09:45:47.000919"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of pivot_r1_breakout, tweezer_bottom, pivot_r2_breakout mean for a swing trade on GRASIM? Current RSI=65, MACD hist=+17.2263, Vol=2.0x average. Signal is BUY.",
     "context": {
       "ticker": "GRASIM.NS",
       "signal": "BUY",
-      "patterns": "near_52w_high, pivot_r2_breakout, tweezer_bottom",
+      "patterns": "pivot_r1_breakout, tweezer_bottom, pivot_r2_breakout",
       "rsi": 64.5
     },
-    "queued_at": "2026-08-10T07:45:51.346199"
+    "queued_at": "2026-08-10T09:45:47.001710"
   }
 ]

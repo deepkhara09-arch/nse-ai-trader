@@ -1788,8 +1788,8 @@
       "direction": 1,
       "score": 0.464,
       "price_at_call": 855.15,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "flat"
     },
     {
       "date": "2026-08-05",
@@ -1797,8 +1797,8 @@
       "direction": 1,
       "score": 0.362,
       "price_at_call": 1444.2,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "wrong"
     },
     {
       "date": "2026-08-05",
@@ -1806,8 +1806,8 @@
       "direction": 1,
       "score": 0.506,
       "price_at_call": 422.6,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "wrong"
     },
     {
       "date": "2026-08-05",
@@ -1815,8 +1815,8 @@
       "direction": 1,
       "score": 0.48,
       "price_at_call": 1645.9,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "right"
     },
     {
       "date": "2026-08-05",
@@ -1824,8 +1824,8 @@
       "direction": 1,
       "score": 0.314,
       "price_at_call": 3970.0,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "wrong"
     },
     {
       "date": "2026-08-05",
@@ -1833,8 +1833,8 @@
       "direction": 1,
       "score": 0.396,
       "price_at_call": 2757.0,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "flat"
     },
     {
       "date": "2026-08-06",
@@ -1952,6 +1952,69 @@
       "price_at_call": 392.7,
       "evaluated": false,
       "outcome": ""
+    },
+    {
+      "date": "2026-08-10",
+      "ticker": "MARICO.NS",
+      "direction": 1,
+      "score": 0.421,
+      "price_at_call": 858.0,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-08-10",
+      "ticker": "ABCAPITAL.NS",
+      "direction": 1,
+      "score": 0.262,
+      "price_at_call": 409.7,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-08-10",
+      "ticker": "PIDILITIND.NS",
+      "direction": 1,
+      "score": 0.494,
+      "price_at_call": 1673.9,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-08-10",
+      "ticker": "SIEMENS.NS",
+      "direction": 1,
+      "score": 0.408,
+      "price_at_call": 3924.5,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-08-10",
+      "ticker": "LICI.NS",
+      "direction": 1,
+      "score": 0.414,
+      "price_at_call": 393.7,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-08-10",
+      "ticker": "NIACL.NS",
+      "direction": 1,
+      "score": 0.306,
+      "price_at_call": 179.56,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-08-10",
+      "ticker": "GRASIM.NS",
+      "direction": 1,
+      "score": 0.223,
+      "price_at_call": 3376.2,
+      "evaluated": false,
+      "outcome": ""
     }
   ],
   "reliability": {
@@ -1962,10 +2025,10 @@
       "last_seen": "2026-08-07"
     },
     "ICICIBANK.NS": {
-      "wins": 5.305,
-      "losses": 3.619,
-      "reliability": 0.594,
-      "last_seen": "2026-08-07"
+      "wins": 5.214,
+      "losses": 4.557,
+      "reliability": 0.534,
+      "last_seen": "2026-08-10"
     },
     "BAJFINANCE.NS": {
       "wins": 1.0,
@@ -2040,10 +2103,10 @@
       "last_seen": "2026-07-23"
     },
     "PIDILITIND.NS": {
-      "wins": 5.831,
-      "losses": 0.922,
-      "reliability": 0.863,
-      "last_seen": "2026-08-07"
+      "wins": 6.731,
+      "losses": 0.906,
+      "reliability": 0.881,
+      "last_seen": "2026-08-10"
     },
     "JSWSTEEL.NS": {
       "wins": 1.0,
@@ -2052,10 +2115,10 @@
       "last_seen": "2026-07-29"
     },
     "SIEMENS.NS": {
-      "wins": 4.904,
-      "losses": 1.949,
-      "reliability": 0.716,
-      "last_seen": "2026-08-07"
+      "wins": 4.82,
+      "losses": 2.916,
+      "reliability": 0.623,
+      "last_seen": "2026-08-10"
     },
     "POWERGRID.NS": {
       "wins": 0.0,
@@ -2064,10 +2127,10 @@
       "last_seen": "2026-08-06"
     },
     "ABCAPITAL.NS": {
-      "wins": 3.943,
-      "losses": 1.0,
-      "reliability": 0.798,
-      "last_seen": "2026-08-07"
+      "wins": 3.875,
+      "losses": 1.983,
+      "reliability": 0.661,
+      "last_seen": "2026-08-10"
     },
     "IDFCFIRSTB.NS": {
       "wins": 1.0,

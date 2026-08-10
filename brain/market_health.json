@@ -1,6 +1,6 @@
 {
   "date": "2026-08-10",
-  "session": "intraday_close",
+  "session": "preclose",
   "nifty": {
     "symbol": "^NSEI",
     "value": 24570.65,
@@ -321,16 +321,15 @@
   },
   "pcr": {
     "date": "2026-08-10",
-    "pcr": 0.734,
-    "reading": "bearish_bias",
-    "total_pe_oi": 1934730,
-    "total_ce_oi": 2634603,
-    "spot": 24570.65,
+    "pcr": 0.848,
+    "reading": "neutral",
+    "total_pe_oi": 2247740,
+    "total_ce_oi": 2650492,
+    "spot": 24583.8,
     "max_pain": 24600.0,
-    "max_pain_dist_pct": -0.12,
-    "oi_bias": "call_heavy_resistance",
+    "max_pain_dist_pct": -0.07,
+    "oi_bias": "balanced",
     "ok": true,
     "error": ""
-  },
-  "oi_note": "Heavy call OI above spot \u2014 option writers see a lid (bearish lean)"
+  }
 }

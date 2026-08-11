@@ -1,5 +1,5 @@
 {
-  "capital": 60333.39601499999,
+  "capital": 64390.89601499999,
   "open_positions": [
     {
       "ticker": "ICICIBANK.NS",
@@ -10,7 +10,7 @@
       "entry": 1430.3,
       "qty": 6,
       "invested": 8581.8,
-      "stop_loss": 1393.12,
+      "stop_loss": 1415.43,
       "target": 1504.66,
       "style": "swing",
       "confidence": 95,
@@ -35,8 +35,8 @@
         "MACD histogram negative",
         "StochRSI overbought with bearish candle \u2014 reversal"
       ],
-      "current_price": 1428.4,
-      "unrealized_pnl": -11.4,
+      "current_price": 1426.8,
+      "unrealized_pnl": -21.0,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -48,9 +48,10 @@
       "view_hist": [
         0,
         0,
-        0,
+        1,
         1
-      ]
+      ],
+      "stale_tightened": true
     },
     {
       "ticker": "IDFCFIRSTB.NS",
@@ -61,7 +62,7 @@
       "entry": 85.24,
       "qty": 49,
       "invested": 4176.76,
-      "stop_loss": 82.13,
+      "stop_loss": 83.62,
       "target": 91.46,
       "style": "swing",
       "confidence": 70.7,
@@ -86,8 +87,8 @@
         "RSI=66 elevated",
         "Near upper Bollinger Band"
       ],
-      "current_price": 84.99,
-      "unrealized_pnl": -12.25,
+      "current_price": 84.46,
+      "unrealized_pnl": -38.22,
       "max_held_days": 10,
       "vol_regime_pct": 0.08399999999999999,
       "entry_market": {
@@ -99,9 +100,10 @@
       "view_hist": [
         0,
         0,
-        0,
+        1,
         1
-      ]
+      ],
+      "stale_tightened": true
     },
     {
       "ticker": "SIEMENS.NS",
@@ -112,7 +114,7 @@
       "entry": 3959.1,
       "qty": 1,
       "invested": 3959.1,
-      "stop_loss": 3809.18,
+      "stop_loss": 3863.15,
       "target": 4258.94,
       "style": "swing",
       "confidence": 95,
@@ -144,8 +146,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "RSI=74 overbought"
       ],
-      "current_price": 3924.5,
-      "unrealized_pnl": -34.6,
+      "current_price": 3902.0,
+      "unrealized_pnl": -57.1,
       "max_held_days": 10,
       "vol_regime_pct": 0.08399999999999999,
       "entry_market": {
@@ -155,11 +157,12 @@
         "regime": "choppy"
       },
       "view_hist": [
-        1,
+        0,
         0,
         0,
         0
-      ]
+      ],
+      "stale_tightened": true
     },
     {
       "ticker": "PIDILITIND.NS",
@@ -204,8 +207,8 @@
         "\u2713 Daily setup aligned with the higher-timeframe trend",
         "RSI=64 elevated"
       ],
-      "current_price": 1673.9,
-      "unrealized_pnl": 152.5,
+      "current_price": 1678.4,
+      "unrealized_pnl": 175.0,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -216,9 +219,9 @@
       },
       "view_hist": [
         1,
-        1,
         0,
-        0
+        0,
+        1
       ]
     },
     {
@@ -228,9 +231,9 @@
       "open_session": "midday",
       "action": "BUY",
       "entry": 393.0,
-      "qty": 20,
-      "invested": 7860.0,
-      "stop_loss": 379.05,
+      "qty": 10,
+      "invested": 3930.0,
+      "stop_loss": 397.6,
       "target": 420.9,
       "style": "long_term",
       "confidence": 95,
@@ -265,8 +268,8 @@
         "MACD histogram negative",
         "Candlestick: gravestone doji"
       ],
-      "current_price": 393.7,
-      "unrealized_pnl": 14.0,
+      "current_price": 405.85,
+      "unrealized_pnl": 128.5,
       "max_held_days": 30,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -280,7 +283,9 @@
         0,
         0,
         1
-      ]
+      ],
+      "t1_booked": true,
+      "trailing_active": true
     },
     {
       "ticker": "GRASIM.NS",
@@ -324,8 +329,8 @@
         "RSI=66 elevated",
         "Near upper Bollinger Band"
       ],
-      "current_price": 3376.2,
-      "unrealized_pnl": 42.4,
+      "current_price": 3345.0,
+      "unrealized_pnl": -20.0,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -1237,6 +1242,79 @@
       "pnl_pct": -3.23,
       "won": false,
       "open_days": 1
+    },
+    {
+      "ticker": "LICI.NS",
+      "sector": "Insurance",
+      "open_date": "2026-08-07",
+      "open_session": "midday",
+      "action": "BUY",
+      "entry": 393.0,
+      "qty": 10,
+      "invested": 3930.0,
+      "stop_loss": 397.6,
+      "target": 420.9,
+      "style": "long_term",
+      "confidence": 95,
+      "patterns": [
+        "bb_lower_bounce",
+        "gravestone_doji",
+        "pivot_point_test",
+        "stoch_rsi_oversold_reversal",
+        "inside_bar",
+        "doji",
+        "gap_down_reversal",
+        "supertrend_bullish",
+        "inverted_hammer",
+        "rsi_bullish_divergence",
+        "volume_breakout_bullish",
+        "volume_climax_bottom"
+      ],
+      "buy_reasons": [
+        "RSI=18 oversold \u2014 reversal watch",
+        "Near lower Bollinger Band",
+        "High volume confirmation (6.0x avg)",
+        "Candlestick: inverted hammer",
+        "Volume climax at low \u2014 potential capitulation reversal",
+        "RSI bullish divergence \u2014 price lower but RSI higher",
+        "Supertrend bullish \u2014 price above trend band",
+        "Testing pivot point \u2014 decision zone",
+        "StochRSI oversold with bullish candle \u2014 reversal",
+        "Gap down reversal \u2014 buyers stepping in at lower open",
+        "In a long-term strong uptrend (2yr) \u2014 trend on our side",
+        "\u2713 Daily setup aligned with the higher-timeframe trend",
+        "Short EMA below long EMA",
+        "MACD histogram negative",
+        "Candlestick: gravestone doji"
+      ],
+      "current_price": 405.85,
+      "unrealized_pnl": 257.0,
+      "max_held_days": 30,
+      "vol_regime_pct": 0.12,
+      "entry_market": {
+        "nifty_trend": "up",
+        "vix": 12.16,
+        "mood": "neutral",
+        "regime": "choppy"
+      },
+      "view_hist": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "t1_booked": true,
+      "trailing_active": true,
+      "close_date": "2026-08-11",
+      "close_session": "morning",
+      "exit_price": 406.95,
+      "exit_reason": "partial_t1",
+      "pnl": 127.5,
+      "pnl_gross": 139.5,
+      "costs": 12.0,
+      "pnl_pct": 3.24,
+      "won": true,
+      "open_days": 2
     }
   ],
   "daily_snapshots": [
@@ -1367,12 +1445,12 @@
       "daily_pnl": 0.0
     }
   ],
-  "daily_pnl_today": 0.0,
+  "daily_pnl_today": 127.5,
   "last_snapshot_date": "2026-08-10",
-  "lifetime_wins": 8,
+  "lifetime_wins": 9,
   "lifetime_losses": 7,
-  "lifetime_pnl": -161.95,
-  "last_pnl_reset_date": "2026-08-10",
+  "lifetime_pnl": -34.45,
+  "last_pnl_reset_date": "2026-08-11",
   "max_drawdown_pct": 1.35,
   "current_drawdown_pct": 1.21,
   "portfolio_peak": 101210.28,

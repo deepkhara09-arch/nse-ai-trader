@@ -3,10 +3,10 @@
     "ticker": "LICI.NS",
     "nse_code": "LICI",
     "company_name": "LICI.NS",
-    "date": "2026-08-10",
-    "generated_at": "2026-08-10 10:12 UTC",
+    "date": "2026-08-11",
+    "generated_at": "2026-08-11 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -81,7 +81,6 @@
       "Delivery 56% above avg \u2014 institutional buying",
       "\u26a0 Buying against a long-term downtrend \u2014 lower conviction",
       "\u26a0 Daily buy fights the higher-timeframe trend \u2014 needs extra conviction",
-      "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
       "Valuation: P/E 8.8x",
       "ROE: 40.8%",
       "ROCE: 49.3%",
@@ -102,15 +101,15 @@
       "History backtest: this kind of BUY setup worked 28% of the time over ~1 week on this stock (sample: 39)"
     ],
     "patterns_seen": [
-      "full_bearish_alignment",
-      "spinning_top",
+      "volume_climax_bottom",
+      "volume_breakout_bullish",
       "gap_up_continuation",
       "supertrend_bullish",
-      "volume_breakout_bullish",
-      "pivot_r2_breakout",
-      "volume_climax_bottom",
+      "full_bearish_alignment",
+      "pivot_r1_breakout",
       "doji",
-      "pivot_r1_breakout"
+      "spinning_top",
+      "pivot_r2_breakout"
     ],
     "reliable_patterns": [],
     "nearest_support": 387.55,
@@ -136,9 +135,8 @@
     "paper_win_rate": 0,
     "paper_pnl": 0,
     "paper_expectancy": 0,
-    "market_mood": "bearish",
+    "market_mood": "neutral",
     "market_warning": [
-      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
       "Nifty choppy intraday \u2014 wait for cleaner setups"
     ]
   },
@@ -146,10 +144,10 @@
     "ticker": "GRASIM.NS",
     "nse_code": "GRASIM",
     "company_name": "Grasim Industries Ltd",
-    "date": "2026-08-10",
-    "generated_at": "2026-08-10 10:12 UTC",
+    "date": "2026-08-11",
+    "generated_at": "2026-08-11 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -183,7 +181,7 @@
     "pattern_score": 3.0,
     "confluence_bonus": 10,
     "paper_bonus": 0.0,
-    "success_probability": 0.488,
+    "success_probability": 0.485,
     "base_success_prob": 0.491,
     "profit_probability": 0.473,
     "composite_score": 50.69,
@@ -200,9 +198,9 @@
       "regime"
     ],
     "backtest_tested": true,
-    "backtest_hit_5d": 0.481,
-    "backtest_hit_10d": 0.5,
-    "backtest_sample": 52,
+    "backtest_hit_5d": 0.472,
+    "backtest_hit_10d": 0.509,
+    "backtest_sample": 53,
     "hist_long_trend": "strong_uptrend",
     "hist_52w_position": 93.6,
     "hist_personality": "mean_reverter",
@@ -231,7 +229,6 @@
       "In a long-term strong uptrend (2yr) \u2014 trend on our side",
       "Near 52-week high (94% of range) \u2014 breakout zone",
       "\u2713 Daily setup aligned with the higher-timeframe trend",
-      "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
       "Valuation: P/E 45.4x",
       "ROE: 6.3%",
       "ROCE: 9.1%",
@@ -247,18 +244,18 @@
       "Resistance at \u20b93500.00 is natural target",
       "Latest news: 'Grasim Industries Share Price - Upstox'",
       "Confluence: 6 independent signal families agree (trend, momentum, volume, pattern, news, regime)",
-      "History backtest: this kind of BUY setup worked 48% of the time over ~1 week on this stock (sample: 52)"
+      "History backtest: this kind of BUY setup worked 47% of the time over ~1 week on this stock (sample: 53)"
     ],
     "patterns_seen": [
+      "outside_bar",
+      "near_52w_high",
+      "full_bullish_alignment",
       "tweezer_bottom",
       "supertrend_bullish",
-      "52w_breakout",
+      "pivot_r1_breakout",
       "bb_upper_rejection",
-      "near_52w_high",
-      "pivot_r2_breakout",
-      "outside_bar",
-      "full_bullish_alignment",
-      "pivot_r1_breakout"
+      "52w_breakout",
+      "pivot_r2_breakout"
     ],
     "reliable_patterns": [],
     "nearest_support": 3323.0,
@@ -284,9 +281,8 @@
     "paper_win_rate": 0,
     "paper_pnl": 0,
     "paper_expectancy": 0,
-    "market_mood": "bearish",
+    "market_mood": "neutral",
     "market_warning": [
-      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
       "Nifty choppy intraday \u2014 wait for cleaner setups"
     ]
   },
@@ -294,10 +290,10 @@
     "ticker": "PIDILITIND.NS",
     "nse_code": "PIDILITIND",
     "company_name": "Pidilite Industries",
-    "date": "2026-08-10",
-    "generated_at": "2026-08-10 10:12 UTC",
+    "date": "2026-08-11",
+    "generated_at": "2026-08-11 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -331,7 +327,7 @@
     "pattern_score": 0.0,
     "confluence_bonus": 10,
     "paper_bonus": 0.0,
-    "success_probability": 0.583,
+    "success_probability": 0.58,
     "base_success_prob": 0.605,
     "profit_probability": 0.054,
     "composite_score": 54.1,
@@ -349,9 +345,9 @@
       "regime"
     ],
     "backtest_tested": true,
-    "backtest_hit_5d": 0.531,
-    "backtest_hit_10d": 0.469,
-    "backtest_sample": 49,
+    "backtest_hit_5d": 0.52,
+    "backtest_hit_10d": 0.48,
+    "backtest_sample": 50,
     "hist_long_trend": "strong_uptrend",
     "hist_52w_position": 100.0,
     "hist_personality": "mean_reverter",
@@ -371,7 +367,6 @@
       "In a long-term strong uptrend (2yr) \u2014 trend on our side",
       "Near 52-week high (100% of range) \u2014 breakout zone",
       "\u2713 Daily setup aligned with the higher-timeframe trend",
-      "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
       "Valuation: P/E 63.1x",
       "ROCE: 33.0%",
       "Revenue growing 21.3% YoY",
@@ -387,15 +382,15 @@
       "Resistance at \u20b91700.00 is natural target",
       "Latest news: 'Pidilite Q1 Results: Stock recovers from lows after numbers beat expec'",
       "Confluence: 7 independent signal families agree (trend, momentum, volume, pattern, news, fundamentals, regime)",
-      "History backtest: this kind of BUY setup worked 53% of the time over ~1 week on this stock (sample: 49)"
+      "History backtest: this kind of BUY setup worked 52% of the time over ~1 week on this stock (sample: 50)"
     ],
     "patterns_seen": [
-      "bearish_harami",
       "adx_strong_trend_up",
       "near_52w_high",
-      "pivot_s1_breakdown",
+      "bearish_harami",
       "full_bullish_alignment",
-      "pivot_point_test"
+      "pivot_point_test",
+      "pivot_s1_breakdown"
     ],
     "reliable_patterns": [],
     "nearest_support": 1620.0,
@@ -421,9 +416,8 @@
     "paper_win_rate": 1.0,
     "paper_pnl": 68.95,
     "paper_expectancy": 68.95,
-    "market_mood": "bearish",
+    "market_mood": "neutral",
     "market_warning": [
-      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
       "Nifty choppy intraday \u2014 wait for cleaner setups"
     ]
   }

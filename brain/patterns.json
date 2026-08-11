@@ -887,10 +887,59 @@
     "atr_multiplier": 1.5,
     "last_updated": "2026-08-11",
     "attribution": {
-      "by_pattern": {},
-      "by_session": {},
-      "by_mood": {},
-      "by_style": {}
+      "by_pattern": {
+        "full_bullish_alignment": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "adx_strong_trend_up": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "pivot_point_test": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "stoch_rsi_overbought_reversal": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "overbought_macd_divergence": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "rsi_bullish_divergence": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        }
+      },
+      "by_session": {
+        "morning": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        }
+      },
+      "by_mood": {
+        "neutral": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        }
+      },
+      "by_style": {
+        "swing": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        }
+      }
     }
   },
   "PIDILITIND.NS": {
@@ -1998,8 +2047,8 @@
         },
         "full_bullish_alignment": {
           "wins": 1,
-          "losses": 0,
-          "total": 1
+          "losses": 1,
+          "total": 2
         },
         "adx_strong_trend_up": {
           "wins": 1,
@@ -2020,6 +2069,46 @@
           "wins": 1,
           "losses": 0,
           "total": 1
+        },
+        "near_52w_high": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "hammer": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "tweezer_bottom": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "supertrend_bullish": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "morning_star": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "inside_bar": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "doji": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "dragonfly_doji": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
         }
       },
       "by_session": {
@@ -2027,20 +2116,25 @@
           "wins": 1,
           "losses": 0,
           "total": 1
+        },
+        "morning": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
         }
       },
       "by_mood": {
         "neutral": {
           "wins": 1,
-          "losses": 0,
-          "total": 1
+          "losses": 1,
+          "total": 2
         }
       },
       "by_style": {
         "swing": {
           "wins": 1,
-          "losses": 0,
-          "total": 1
+          "losses": 1,
+          "total": 2
         }
       }
     }
@@ -2408,6 +2502,175 @@
     "atr_stop_hits": 1,
     "atr_target_hits": 0,
     "atr_multiplier": 1.5,
-    "last_updated": "2026-08-11"
+    "last_updated": "2026-08-11",
+    "attribution": {
+      "by_pattern": {
+        "bb_lower_bounce": {
+          "wins": 2,
+          "losses": 0,
+          "total": 2
+        },
+        "gravestone_doji": {
+          "wins": 2,
+          "losses": 0,
+          "total": 2
+        },
+        "pivot_point_test": {
+          "wins": 2,
+          "losses": 0,
+          "total": 2
+        },
+        "stoch_rsi_oversold_reversal": {
+          "wins": 2,
+          "losses": 0,
+          "total": 2
+        },
+        "inside_bar": {
+          "wins": 2,
+          "losses": 0,
+          "total": 2
+        },
+        "doji": {
+          "wins": 2,
+          "losses": 0,
+          "total": 2
+        },
+        "gap_down_reversal": {
+          "wins": 2,
+          "losses": 0,
+          "total": 2
+        },
+        "supertrend_bullish": {
+          "wins": 2,
+          "losses": 0,
+          "total": 2
+        },
+        "inverted_hammer": {
+          "wins": 2,
+          "losses": 0,
+          "total": 2
+        },
+        "rsi_bullish_divergence": {
+          "wins": 2,
+          "losses": 0,
+          "total": 2
+        },
+        "volume_breakout_bullish": {
+          "wins": 2,
+          "losses": 0,
+          "total": 2
+        },
+        "volume_climax_bottom": {
+          "wins": 2,
+          "losses": 0,
+          "total": 2
+        }
+      },
+      "by_session": {
+        "midday": {
+          "wins": 2,
+          "losses": 0,
+          "total": 2
+        }
+      },
+      "by_mood": {
+        "neutral": {
+          "wins": 2,
+          "losses": 0,
+          "total": 2
+        }
+      },
+      "by_style": {
+        "long_term": {
+          "wins": 2,
+          "losses": 0,
+          "total": 2
+        }
+      }
+    }
+  },
+  "IDFCFIRSTB.NS": {
+    "reliable_patterns": {
+      "adx_strong_trend_up": {
+        "wins": 0.0,
+        "losses": 1.0,
+        "reliability": 0.333,
+        "last_seen": "2026-08-11"
+      },
+      "doji": {
+        "wins": 0.0,
+        "losses": 1.0,
+        "reliability": 0.333,
+        "last_seen": "2026-08-11"
+      },
+      "supertrend_bullish": {
+        "wins": 0.0,
+        "losses": 1.0,
+        "reliability": 0.333,
+        "last_seen": "2026-08-11"
+      },
+      "full_bullish_alignment": {
+        "wins": 0.0,
+        "losses": 1.0,
+        "reliability": 0.333,
+        "last_seen": "2026-08-11"
+      }
+    },
+    "preferred_style": "swing",
+    "swing_wins": 0,
+    "swing_losses": 1,
+    "intraday_wins": 0,
+    "intraday_losses": 0,
+    "long_term_wins": 0,
+    "long_term_losses": 0,
+    "atr_stop_hits": 1,
+    "atr_target_hits": 0,
+    "atr_multiplier": 1.5,
+    "last_updated": "2026-08-11",
+    "attribution": {
+      "by_pattern": {
+        "adx_strong_trend_up": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "doji": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "supertrend_bullish": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "full_bullish_alignment": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        }
+      },
+      "by_session": {
+        "morning": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        }
+      },
+      "by_mood": {
+        "neutral": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        }
+      },
+      "by_style": {
+        "swing": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        }
+      }
+    }
   }
 }

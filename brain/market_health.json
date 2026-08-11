@@ -1,6 +1,6 @@
 {
   "date": "2026-08-11",
-  "session": "intraday_close",
+  "session": "preclose",
   "nifty": {
     "symbol": "^NSEI",
     "value": 24583.8,
@@ -60,7 +60,9 @@
   },
   "market_mood": "neutral",
   "trade_allowed": true,
-  "warnings": [],
+  "warnings": [
+    "Nifty choppy intraday \u2014 wait for cleaner setups"
+  ],
   "leading_sectors": [
     "IT",
     "Infra"
@@ -68,7 +70,7 @@
   "market_regime": "normal",
   "sector_breadth": 0.5,
   "lagging_sectors": [],
-  "intraday_regime": "mixed",
+  "intraday_regime": "choppy",
   "macro": {
     "date": "2026-08-11",
     "session": "midday",
@@ -319,15 +321,16 @@
   },
   "pcr": {
     "date": "2026-08-11",
-    "pcr": 0.848,
-    "reading": "neutral",
-    "total_pe_oi": 2207871,
-    "total_ce_oi": 2604291,
-    "spot": 24583.8,
-    "max_pain": 24600.0,
-    "max_pain_dist_pct": -0.07,
-    "oi_bias": "balanced",
+    "pcr": 0.755,
+    "reading": "bearish_bias",
+    "total_pe_oi": 2169648,
+    "total_ce_oi": 2875061,
+    "spot": 24471.7,
+    "max_pain": 24450.0,
+    "max_pain_dist_pct": 0.09,
+    "oi_bias": "call_heavy_resistance",
     "ok": true,
     "error": ""
-  }
+  },
+  "oi_note": "Heavy call OI above spot \u2014 option writers see a lid (bearish lean)"
 }

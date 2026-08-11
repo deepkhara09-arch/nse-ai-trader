@@ -4248,5 +4248,25 @@
     "ts": "2026-08-11T09:34:47.028468",
     "detail": "Confidence \u25b26 (66 \u2192 73)",
     "confidence": 72.9
+  },
+  {
+    "type": "removed",
+    "ticker": "LICI.NS",
+    "nse_code": "LICI",
+    "signal": "BUY",
+    "date": "2026-08-11",
+    "ts": "2026-08-11T10:12:14.955234",
+    "detail": "Dropped \u2014 no longer meets threshold (was 65/100)",
+    "confidence": 0
+  },
+  {
+    "type": "updated",
+    "ticker": "PIDILITIND.NS",
+    "nse_code": "PIDILITIND",
+    "signal": "BUY",
+    "date": "2026-08-11",
+    "ts": "2026-08-11T10:12:14.955234",
+    "detail": "Rank \u25bc2 (#7 \u2192 #9)",
+    "confidence": 74.3
   }
 ]

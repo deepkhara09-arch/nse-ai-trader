@@ -1,0 +1,416 @@
+{
+  "causes": {
+    "weak_pattern:inside_bar": {
+      "count": 1,
+      "sum_loss_pct": 5.17,
+      "last": "2026-08-11",
+      "examples": [
+        "HOMEFIRST"
+      ],
+      "avg_loss_pct": 5.17
+    },
+    "no_market_tailwind": {
+      "count": 4,
+      "sum_loss_pct": 8.65,
+      "last": "2026-08-11",
+      "examples": [
+        "HOMEFIRST",
+        "NESTLEIND",
+        "UNIONBANK",
+        "SBIN"
+      ],
+      "avg_loss_pct": 2.16
+    },
+    "weak_pattern:pivot_point_test": {
+      "count": 2,
+      "sum_loss_pct": 1.3699999999999999,
+      "last": "2026-08-11",
+      "examples": [
+        "NESTLEIND",
+        "ICICIBANK"
+      ],
+      "avg_loss_pct": 0.68
+    },
+    "weak_pattern:adx_ranging_market": {
+      "count": 2,
+      "sum_loss_pct": 5.07,
+      "last": "2026-08-11",
+      "examples": [
+        "SBIN",
+        "JSWSTEEL"
+      ],
+      "avg_loss_pct": 2.54
+    },
+    "weak_pattern:spinning_top": {
+      "count": 1,
+      "sum_loss_pct": 3.66,
+      "last": "2026-08-11",
+      "examples": [
+        "NESTLEIND"
+      ],
+      "avg_loss_pct": 3.66
+    },
+    "weak_pattern:doji": {
+      "count": 3,
+      "sum_loss_pct": 7.529999999999999,
+      "last": "2026-08-11",
+      "examples": [
+        "ASIANPAINT",
+        "SIEMENS",
+        "IDFCFIRSTB"
+      ],
+      "avg_loss_pct": 2.51
+    },
+    "bought_bearish_tape": {
+      "count": 4,
+      "sum_loss_pct": 10.76,
+      "last": "2026-08-11",
+      "examples": [
+        "ASIANPAINT",
+        "JSWSTEEL",
+        "SIEMENS",
+        "IDFCFIRSTB"
+      ],
+      "avg_loss_pct": 2.69
+    },
+    "failed_immediately": {
+      "count": 1,
+      "sum_loss_pct": 3.23,
+      "last": "2026-08-11",
+      "examples": [
+        "JSWSTEEL"
+      ],
+      "avg_loss_pct": 3.23
+    }
+  },
+  "patterns": {
+    "full_bullish_alignment": {
+      "wins": 8,
+      "losses": 10,
+      "sum_win_pct": 25.69,
+      "sum_loss_pct": 24.24,
+      "edge": 0.027
+    },
+    "near_52w_high": {
+      "wins": 1,
+      "losses": 3,
+      "sum_win_pct": 5.18,
+      "sum_loss_pct": 9.41,
+      "edge": -0.353
+    },
+    "low_volume_drift": {
+      "wins": 1,
+      "losses": 1,
+      "sum_win_pct": 5.18,
+      "sum_loss_pct": 5.17,
+      "edge": 0.0
+    },
+    "spinning_top": {
+      "wins": 2,
+      "losses": 1,
+      "sum_win_pct": 13.11,
+      "sum_loss_pct": 3.66,
+      "edge": 0.0
+    },
+    "pivot_point_test": {
+      "wins": 9,
+      "losses": 2,
+      "sum_win_pct": 28.12,
+      "sum_loss_pct": 1.3699999999999999,
+      "edge": 0.811
+    },
+    "adx_strong_trend_up": {
+      "wins": 5,
+      "losses": 3,
+      "sum_win_pct": 19.34,
+      "sum_loss_pct": 7.9399999999999995,
+      "edge": 0.475
+    },
+    "tweezer_bottom": {
+      "wins": 5,
+      "losses": 2,
+      "sum_win_pct": 11.71,
+      "sum_loss_pct": 2.72,
+      "edge": 0.428
+    },
+    "supertrend_bullish": {
+      "wins": 8,
+      "losses": 9,
+      "sum_win_pct": 15.88,
+      "sum_loss_pct": 23.07,
+      "edge": -0.141
+    },
+    "engulfing_bullish": {
+      "wins": 0,
+      "losses": 1,
+      "sum_win_pct": 0.0,
+      "sum_loss_pct": 5.17,
+      "edge": 0.0
+    },
+    "rsi_bullish_divergence": {
+      "wins": 2,
+      "losses": 2,
+      "sum_win_pct": 3.3000000000000003,
+      "sum_loss_pct": 6.34,
+      "edge": -0.253
+    },
+    "inside_bar": {
+      "wins": 4,
+      "losses": 2,
+      "sum_win_pct": 6.61,
+      "sum_loss_pct": 7.6899999999999995,
+      "edge": -0.06
+    },
+    "pivot_s1_bounce": {
+      "wins": 2,
+      "losses": 0,
+      "sum_win_pct": 5.359999999999999,
+      "sum_loss_pct": 0.0,
+      "edge": 0.0
+    },
+    "pivot_r1_breakout": {
+      "wins": 1,
+      "losses": 4,
+      "sum_win_pct": 0.87,
+      "sum_loss_pct": 10.17,
+      "edge": -0.62
+    },
+    "volume_breakout_bullish": {
+      "wins": 3,
+      "losses": 2,
+      "sum_win_pct": 4.17,
+      "sum_loss_pct": 4.85,
+      "edge": -0.045
+    },
+    "three_white_soldiers": {
+      "wins": 0,
+      "losses": 2,
+      "sum_win_pct": 0.0,
+      "sum_loss_pct": 4.85,
+      "edge": 0.0
+    },
+    "momentum_continuation": {
+      "wins": 0,
+      "losses": 1,
+      "sum_win_pct": 0.0,
+      "sum_loss_pct": 1.44,
+      "edge": 0.0
+    },
+    "adx_ranging_market": {
+      "wins": 2,
+      "losses": 2,
+      "sum_win_pct": 3.31,
+      "sum_loss_pct": 5.07,
+      "edge": -0.147
+    },
+    "stoch_rsi_oversold_reversal": {
+      "wins": 3,
+      "losses": 1,
+      "sum_win_pct": 4.17,
+      "sum_loss_pct": 1.84,
+      "edge": 0.194
+    },
+    "pivot_s1_breakdown": {
+      "wins": 1,
+      "losses": 0,
+      "sum_win_pct": 7.93,
+      "sum_loss_pct": 0.0,
+      "edge": 0.0
+    },
+    "stoch_rsi_overbought_reversal": {
+      "wins": 1,
+      "losses": 1,
+      "sum_win_pct": 7.93,
+      "sum_loss_pct": 1.17,
+      "edge": 0.0
+    },
+    "bb_upper_rejection": {
+      "wins": 0,
+      "losses": 2,
+      "sum_win_pct": 0.0,
+      "sum_loss_pct": 6.890000000000001,
+      "edge": 0.0
+    },
+    "hammer": {
+      "wins": 0,
+      "losses": 2,
+      "sum_win_pct": 0.0,
+      "sum_loss_pct": 5.93,
+      "edge": 0.0
+    },
+    "rsi_bearish_divergence": {
+      "wins": 0,
+      "losses": 1,
+      "sum_win_pct": 0.0,
+      "sum_loss_pct": 3.41,
+      "edge": 0.0
+    },
+    "doji": {
+      "wins": 2,
+      "losses": 3,
+      "sum_win_pct": 3.3000000000000003,
+      "sum_loss_pct": 7.529999999999999,
+      "edge": -0.282
+    },
+    "pivot_r2_breakout": {
+      "wins": 0,
+      "losses": 1,
+      "sum_win_pct": 0.0,
+      "sum_loss_pct": 3.23,
+      "edge": 0.0
+    },
+    "52w_breakout": {
+      "wins": 0,
+      "losses": 1,
+      "sum_win_pct": 0.0,
+      "sum_loss_pct": 3.23,
+      "edge": 0.0
+    },
+    "bb_lower_bounce": {
+      "wins": 2,
+      "losses": 0,
+      "sum_win_pct": 3.3000000000000003,
+      "sum_loss_pct": 0.0,
+      "edge": 0.0
+    },
+    "gravestone_doji": {
+      "wins": 2,
+      "losses": 0,
+      "sum_win_pct": 3.3000000000000003,
+      "sum_loss_pct": 0.0,
+      "edge": 0.0
+    },
+    "gap_down_reversal": {
+      "wins": 2,
+      "losses": 0,
+      "sum_win_pct": 3.3000000000000003,
+      "sum_loss_pct": 0.0,
+      "edge": 0.0
+    },
+    "inverted_hammer": {
+      "wins": 2,
+      "losses": 0,
+      "sum_win_pct": 3.3000000000000003,
+      "sum_loss_pct": 0.0,
+      "edge": 0.0
+    },
+    "volume_climax_bottom": {
+      "wins": 2,
+      "losses": 0,
+      "sum_win_pct": 3.3000000000000003,
+      "sum_loss_pct": 0.0,
+      "edge": 0.0
+    },
+    "overbought_macd_divergence": {
+      "wins": 0,
+      "losses": 1,
+      "sum_win_pct": 0.0,
+      "sum_loss_pct": 1.17,
+      "edge": 0.0
+    },
+    "morning_star": {
+      "wins": 0,
+      "losses": 1,
+      "sum_win_pct": 0.0,
+      "sum_loss_pct": 2.52,
+      "edge": 0.0
+    },
+    "dragonfly_doji": {
+      "wins": 0,
+      "losses": 1,
+      "sum_win_pct": 0.0,
+      "sum_loss_pct": 2.52,
+      "edge": 0.0
+    }
+  },
+  "recent": [
+    {
+      "date": "2026-07-23",
+      "ticker": "HOMEFIRST",
+      "loss_pct": 5.17,
+      "causes": [
+        "weak_pattern:inside_bar",
+        "no_market_tailwind"
+      ]
+    },
+    {
+      "date": "2026-07-24",
+      "ticker": "NESTLEIND",
+      "loss_pct": 0.2,
+      "causes": [
+        "weak_pattern:pivot_point_test",
+        "no_market_tailwind"
+      ]
+    },
+    {
+      "date": "2026-07-30",
+      "ticker": "UNIONBANK",
+      "loss_pct": 1.44,
+      "causes": [
+        "no_market_tailwind"
+      ]
+    },
+    {
+      "date": "2026-07-30",
+      "ticker": "SBIN",
+      "loss_pct": 1.84,
+      "causes": [
+        "weak_pattern:adx_ranging_market",
+        "no_market_tailwind"
+      ]
+    },
+    {
+      "date": "2026-08-04",
+      "ticker": "NESTLEIND",
+      "loss_pct": 3.66,
+      "causes": [
+        "weak_pattern:spinning_top"
+      ]
+    },
+    {
+      "date": "2026-08-07",
+      "ticker": "ASIANPAINT",
+      "loss_pct": 3.41,
+      "causes": [
+        "weak_pattern:doji",
+        "bought_bearish_tape"
+      ]
+    },
+    {
+      "date": "2026-08-07",
+      "ticker": "JSWSTEEL",
+      "loss_pct": 3.23,
+      "causes": [
+        "weak_pattern:adx_ranging_market",
+        "bought_bearish_tape",
+        "failed_immediately"
+      ]
+    },
+    {
+      "date": "2026-08-11",
+      "ticker": "ICICIBANK",
+      "loss_pct": 1.17,
+      "causes": [
+        "weak_pattern:pivot_point_test"
+      ]
+    },
+    {
+      "date": "2026-08-11",
+      "ticker": "SIEMENS",
+      "loss_pct": 2.52,
+      "causes": [
+        "weak_pattern:doji",
+        "bought_bearish_tape"
+      ]
+    },
+    {
+      "date": "2026-08-11",
+      "ticker": "IDFCFIRSTB",
+      "loss_pct": 1.6,
+      "causes": [
+        "weak_pattern:doji",
+        "bought_bearish_tape"
+      ]
+    }
+  ]
+}

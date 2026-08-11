@@ -1,5 +1,5 @@
 {
-  "capital": 64390.89601499999,
+  "capital": 62329.68501499999,
   "open_positions": [
     {
       "ticker": "ICICIBANK.NS",
@@ -10,7 +10,7 @@
       "entry": 1430.3,
       "qty": 6,
       "invested": 8581.8,
-      "stop_loss": 1415.43,
+      "stop_loss": 1417.88,
       "target": 1504.66,
       "style": "swing",
       "confidence": 95,
@@ -35,8 +35,8 @@
         "MACD histogram negative",
         "StochRSI overbought with bearish candle \u2014 reversal"
       ],
-      "current_price": 1426.8,
-      "unrealized_pnl": -21.0,
+      "current_price": 1422.1,
+      "unrealized_pnl": -49.2,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -47,9 +47,9 @@
       },
       "view_hist": [
         0,
-        0,
         1,
-        1
+        1,
+        0
       ],
       "stale_tightened": true
     },
@@ -62,7 +62,7 @@
       "entry": 85.24,
       "qty": 49,
       "invested": 4176.76,
-      "stop_loss": 83.62,
+      "stop_loss": 84.13,
       "target": 91.46,
       "style": "swing",
       "confidence": 70.7,
@@ -87,8 +87,8 @@
         "RSI=66 elevated",
         "Near upper Bollinger Band"
       ],
-      "current_price": 84.46,
-      "unrealized_pnl": -38.22,
+      "current_price": 84.53,
+      "unrealized_pnl": -34.79,
       "max_held_days": 10,
       "vol_regime_pct": 0.08399999999999999,
       "entry_market": {
@@ -99,7 +99,7 @@
       },
       "view_hist": [
         0,
-        0,
+        1,
         1,
         1
       ],
@@ -114,7 +114,7 @@
       "entry": 3959.1,
       "qty": 1,
       "invested": 3959.1,
-      "stop_loss": 3863.15,
+      "stop_loss": 3871.12,
       "target": 4258.94,
       "style": "swing",
       "confidence": 95,
@@ -146,8 +146,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "RSI=74 overbought"
       ],
-      "current_price": 3902.0,
-      "unrealized_pnl": -57.1,
+      "current_price": 3887.1,
+      "unrealized_pnl": -72.0,
       "max_held_days": 10,
       "vol_regime_pct": 0.08399999999999999,
       "entry_market": {
@@ -207,8 +207,8 @@
         "\u2713 Daily setup aligned with the higher-timeframe trend",
         "RSI=64 elevated"
       ],
-      "current_price": 1678.4,
-      "unrealized_pnl": 175.0,
+      "current_price": 1669.4,
+      "unrealized_pnl": 130.0,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -218,74 +218,11 @@
         "regime": "mixed"
       },
       "view_hist": [
+        0,
+        0,
         1,
-        0,
-        0,
-        1
+        0
       ]
-    },
-    {
-      "ticker": "LICI.NS",
-      "sector": "Insurance",
-      "open_date": "2026-08-07",
-      "open_session": "midday",
-      "action": "BUY",
-      "entry": 393.0,
-      "qty": 10,
-      "invested": 3930.0,
-      "stop_loss": 397.6,
-      "target": 420.9,
-      "style": "long_term",
-      "confidence": 95,
-      "patterns": [
-        "bb_lower_bounce",
-        "gravestone_doji",
-        "pivot_point_test",
-        "stoch_rsi_oversold_reversal",
-        "inside_bar",
-        "doji",
-        "gap_down_reversal",
-        "supertrend_bullish",
-        "inverted_hammer",
-        "rsi_bullish_divergence",
-        "volume_breakout_bullish",
-        "volume_climax_bottom"
-      ],
-      "buy_reasons": [
-        "RSI=18 oversold \u2014 reversal watch",
-        "Near lower Bollinger Band",
-        "High volume confirmation (6.0x avg)",
-        "Candlestick: inverted hammer",
-        "Volume climax at low \u2014 potential capitulation reversal",
-        "RSI bullish divergence \u2014 price lower but RSI higher",
-        "Supertrend bullish \u2014 price above trend band",
-        "Testing pivot point \u2014 decision zone",
-        "StochRSI oversold with bullish candle \u2014 reversal",
-        "Gap down reversal \u2014 buyers stepping in at lower open",
-        "In a long-term strong uptrend (2yr) \u2014 trend on our side",
-        "\u2713 Daily setup aligned with the higher-timeframe trend",
-        "Short EMA below long EMA",
-        "MACD histogram negative",
-        "Candlestick: gravestone doji"
-      ],
-      "current_price": 405.85,
-      "unrealized_pnl": 128.5,
-      "max_held_days": 30,
-      "vol_regime_pct": 0.12,
-      "entry_market": {
-        "nifty_trend": "up",
-        "vix": 12.16,
-        "mood": "neutral",
-        "regime": "choppy"
-      },
-      "view_hist": [
-        0,
-        0,
-        0,
-        1
-      ],
-      "t1_booked": true,
-      "trailing_active": true
     },
     {
       "ticker": "GRASIM.NS",
@@ -329,8 +266,8 @@
         "RSI=66 elevated",
         "Near upper Bollinger Band"
       ],
-      "current_price": 3345.0,
-      "unrealized_pnl": -20.0,
+      "current_price": 3350.9,
+      "unrealized_pnl": -8.2,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -345,6 +282,53 @@
         1,
         1
       ]
+    },
+    {
+      "ticker": "MARICO.NS",
+      "sector": "FMCG",
+      "open_date": "2026-08-11",
+      "open_session": "midday",
+      "action": "SELL",
+      "entry": 856.2,
+      "qty": 7,
+      "invested": 5993.4,
+      "stop_loss": 885.02,
+      "target": 798.56,
+      "style": "swing",
+      "confidence": 76.0,
+      "patterns": [
+        "full_bullish_alignment",
+        "pivot_point_test",
+        "tweezer_top",
+        "rsi_bearish_divergence",
+        "doji",
+        "engulfing_bearish",
+        "dragonfly_doji",
+        "pivot_s1_breakdown",
+        "adx_strong_trend_up"
+      ],
+      "buy_reasons": [
+        "All EMAs stacked bullish",
+        "Positive news sentiment (0.42, news 1.0x reliable here)",
+        "Candlestick: dragonfly doji",
+        "ADX strong trend \u2014 directional move confirmed",
+        "MACD histogram negative",
+        "Candlestick: tweezer top",
+        "Candlestick: engulfing bearish",
+        "RSI bearish divergence \u2014 price higher but RSI lower",
+        "Broke below Pivot S1 support \u2014 bearish",
+        "\u26a0 Daily sell fights the higher-timeframe uptrend \u2014 needs extra conviction"
+      ],
+      "current_price": 856.2,
+      "unrealized_pnl": 0.0,
+      "max_held_days": 10,
+      "vol_regime_pct": 0.12,
+      "entry_market": {
+        "nifty_trend": "sideways",
+        "vix": 12.25,
+        "mood": "neutral",
+        "regime": "mixed"
+      }
     }
   ],
   "closed_trades": [
@@ -1315,6 +1299,79 @@
       "pnl_pct": 3.24,
       "won": true,
       "open_days": 2
+    },
+    {
+      "ticker": "LICI.NS",
+      "sector": "Insurance",
+      "open_date": "2026-08-07",
+      "open_session": "midday",
+      "action": "BUY",
+      "entry": 393.0,
+      "qty": 10,
+      "invested": 3930.0,
+      "stop_loss": 397.6,
+      "target": 420.9,
+      "style": "long_term",
+      "confidence": 95,
+      "patterns": [
+        "bb_lower_bounce",
+        "gravestone_doji",
+        "pivot_point_test",
+        "stoch_rsi_oversold_reversal",
+        "inside_bar",
+        "doji",
+        "gap_down_reversal",
+        "supertrend_bullish",
+        "inverted_hammer",
+        "rsi_bullish_divergence",
+        "volume_breakout_bullish",
+        "volume_climax_bottom"
+      ],
+      "buy_reasons": [
+        "RSI=18 oversold \u2014 reversal watch",
+        "Near lower Bollinger Band",
+        "High volume confirmation (6.0x avg)",
+        "Candlestick: inverted hammer",
+        "Volume climax at low \u2014 potential capitulation reversal",
+        "RSI bullish divergence \u2014 price lower but RSI higher",
+        "Supertrend bullish \u2014 price above trend band",
+        "Testing pivot point \u2014 decision zone",
+        "StochRSI oversold with bullish candle \u2014 reversal",
+        "Gap down reversal \u2014 buyers stepping in at lower open",
+        "In a long-term strong uptrend (2yr) \u2014 trend on our side",
+        "\u2713 Daily setup aligned with the higher-timeframe trend",
+        "Short EMA below long EMA",
+        "MACD histogram negative",
+        "Candlestick: gravestone doji"
+      ],
+      "current_price": 405.65,
+      "unrealized_pnl": 126.5,
+      "max_held_days": 30,
+      "vol_regime_pct": 0.12,
+      "entry_market": {
+        "nifty_trend": "up",
+        "vix": 12.16,
+        "mood": "neutral",
+        "regime": "choppy"
+      },
+      "view_hist": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "t1_booked": true,
+      "trailing_active": true,
+      "close_date": "2026-08-11",
+      "close_session": "midday",
+      "exit_price": 394.4,
+      "exit_reason": "stop_hit_gap",
+      "pnl": 2.19,
+      "pnl_gross": 14.0,
+      "costs": 11.81,
+      "pnl_pct": 0.06,
+      "won": true,
+      "open_days": 2
     }
   ],
   "daily_snapshots": [
@@ -1445,11 +1502,11 @@
       "daily_pnl": 0.0
     }
   ],
-  "daily_pnl_today": 127.5,
+  "daily_pnl_today": 129.68899999999977,
   "last_snapshot_date": "2026-08-10",
-  "lifetime_wins": 9,
+  "lifetime_wins": 10,
   "lifetime_losses": 7,
-  "lifetime_pnl": -34.45,
+  "lifetime_pnl": -32.26,
   "last_pnl_reset_date": "2026-08-11",
   "max_drawdown_pct": 1.35,
   "current_drawdown_pct": 1.21,

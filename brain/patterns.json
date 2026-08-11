@@ -2262,5 +2262,92 @@
         }
       }
     }
+  },
+  "LICI.NS": {
+    "reliable_patterns": {
+      "bb_lower_bounce": {
+        "wins": 1.0,
+        "losses": 0.0,
+        "reliability": 0.667,
+        "last_seen": "2026-08-11"
+      },
+      "gravestone_doji": {
+        "wins": 1.0,
+        "losses": 0.0,
+        "reliability": 0.667,
+        "last_seen": "2026-08-11"
+      },
+      "pivot_point_test": {
+        "wins": 1.0,
+        "losses": 0.0,
+        "reliability": 0.667,
+        "last_seen": "2026-08-11"
+      },
+      "stoch_rsi_oversold_reversal": {
+        "wins": 1.0,
+        "losses": 0.0,
+        "reliability": 0.667,
+        "last_seen": "2026-08-11"
+      },
+      "inside_bar": {
+        "wins": 1.0,
+        "losses": 0.0,
+        "reliability": 0.667,
+        "last_seen": "2026-08-11"
+      },
+      "doji": {
+        "wins": 1.0,
+        "losses": 0.0,
+        "reliability": 0.667,
+        "last_seen": "2026-08-11"
+      },
+      "gap_down_reversal": {
+        "wins": 1.0,
+        "losses": 0.0,
+        "reliability": 0.667,
+        "last_seen": "2026-08-11"
+      },
+      "supertrend_bullish": {
+        "wins": 1.0,
+        "losses": 0.0,
+        "reliability": 0.667,
+        "last_seen": "2026-08-11"
+      },
+      "inverted_hammer": {
+        "wins": 1.0,
+        "losses": 0.0,
+        "reliability": 0.667,
+        "last_seen": "2026-08-11"
+      },
+      "rsi_bullish_divergence": {
+        "wins": 1.0,
+        "losses": 0.0,
+        "reliability": 0.667,
+        "last_seen": "2026-08-11"
+      },
+      "volume_breakout_bullish": {
+        "wins": 1.0,
+        "losses": 0.0,
+        "reliability": 0.667,
+        "last_seen": "2026-08-11"
+      },
+      "volume_climax_bottom": {
+        "wins": 1.0,
+        "losses": 0.0,
+        "reliability": 0.667,
+        "last_seen": "2026-08-11"
+      }
+    },
+    "preferred_style": "long_term",
+    "swing_wins": 0,
+    "swing_losses": 0,
+    "intraday_wins": 0,
+    "intraday_losses": 0,
+    "long_term_wins": 1,
+    "long_term_losses": 0,
+    "atr_stop_hits": 1,
+    "atr_target_hits": 0,
+    "atr_multiplier": 1.5,
+    "last_updated": "2026-08-11"
   }
 }

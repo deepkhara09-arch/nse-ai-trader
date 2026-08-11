@@ -1,58 +1,6 @@
 {
-  "capital": 62329.68501499999,
+  "capital": 62339.971394999986,
   "open_positions": [
-    {
-      "ticker": "ICICIBANK.NS",
-      "sector": "Banking",
-      "open_date": "2026-07-30",
-      "open_session": "morning",
-      "action": "BUY",
-      "entry": 1430.3,
-      "qty": 6,
-      "invested": 8581.8,
-      "stop_loss": 1417.88,
-      "target": 1504.66,
-      "style": "swing",
-      "confidence": 95,
-      "patterns": [
-        "full_bullish_alignment",
-        "adx_strong_trend_up",
-        "pivot_point_test",
-        "stoch_rsi_overbought_reversal",
-        "overbought_macd_divergence",
-        "rsi_bullish_divergence"
-      ],
-      "buy_reasons": [
-        "All EMAs stacked bullish",
-        "Learned bullish pattern: full_bullish_alignment (rel=64%)",
-        "Learned bullish pattern: adx_strong_trend_up (rel=64%)",
-        "RSI bullish divergence \u2014 price lower but RSI higher",
-        "ADX strong trend \u2014 directional move confirmed",
-        "Testing pivot point \u2014 decision zone",
-        "In a long-term uptrend (2yr) \u2014 trend on our side",
-        "\u2713 Daily setup aligned with the higher-timeframe trend",
-        "RSI=69 elevated",
-        "MACD histogram negative",
-        "StochRSI overbought with bearish candle \u2014 reversal"
-      ],
-      "current_price": 1422.1,
-      "unrealized_pnl": -49.2,
-      "max_held_days": 10,
-      "vol_regime_pct": 0.12,
-      "entry_market": {
-        "nifty_trend": "up",
-        "vix": 12.01,
-        "mood": "neutral",
-        "regime": "choppy"
-      },
-      "view_hist": [
-        0,
-        1,
-        1,
-        0
-      ],
-      "stale_tightened": true
-    },
     {
       "ticker": "IDFCFIRSTB.NS",
       "sector": "Banking",
@@ -87,8 +35,8 @@
         "RSI=66 elevated",
         "Near upper Bollinger Band"
       ],
-      "current_price": 84.53,
-      "unrealized_pnl": -34.79,
+      "current_price": 84.6,
+      "unrealized_pnl": -31.36,
       "max_held_days": 10,
       "vol_regime_pct": 0.08399999999999999,
       "entry_market": {
@@ -98,7 +46,7 @@
         "regime": "mixed"
       },
       "view_hist": [
-        0,
+        1,
         1,
         1,
         1
@@ -146,8 +94,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "RSI=74 overbought"
       ],
-      "current_price": 3887.1,
-      "unrealized_pnl": -72.0,
+      "current_price": 3888.2,
+      "unrealized_pnl": -70.9,
       "max_held_days": 10,
       "vol_regime_pct": 0.08399999999999999,
       "entry_market": {
@@ -207,8 +155,8 @@
         "\u2713 Daily setup aligned with the higher-timeframe trend",
         "RSI=64 elevated"
       ],
-      "current_price": 1669.4,
-      "unrealized_pnl": 130.0,
+      "current_price": 1672.7,
+      "unrealized_pnl": 146.5,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -219,8 +167,8 @@
       },
       "view_hist": [
         0,
-        0,
         1,
+        0,
         0
       ]
     },
@@ -266,8 +214,8 @@
         "RSI=66 elevated",
         "Near upper Bollinger Band"
       ],
-      "current_price": 3350.9,
-      "unrealized_pnl": -8.2,
+      "current_price": 3326.7,
+      "unrealized_pnl": -56.6,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -319,7 +267,52 @@
         "Broke below Pivot S1 support \u2014 bearish",
         "\u26a0 Daily sell fights the higher-timeframe uptrend \u2014 needs extra conviction"
       ],
-      "current_price": 856.2,
+      "current_price": 856.0,
+      "unrealized_pnl": 1.4,
+      "max_held_days": 10,
+      "vol_regime_pct": 0.12,
+      "entry_market": {
+        "nifty_trend": "sideways",
+        "vix": 12.25,
+        "mood": "neutral",
+        "regime": "mixed"
+      },
+      "view_hist": [
+        1
+      ]
+    },
+    {
+      "ticker": "UNIONBANK.NS",
+      "sector": "Banking",
+      "open_date": "2026-08-11",
+      "open_session": "midday",
+      "action": "BUY",
+      "entry": 184.16,
+      "qty": 46,
+      "invested": 8471.36,
+      "stop_loss": 177.45,
+      "target": 197.58,
+      "style": "swing",
+      "confidence": 91.8,
+      "patterns": [
+        "supertrend_bullish",
+        "outside_bar",
+        "bb_upper_rejection",
+        "full_bullish_alignment",
+        "three_white_soldiers",
+        "pivot_point_test"
+      ],
+      "buy_reasons": [
+        "All EMAs stacked bullish",
+        "MACD histogram positive",
+        "Candlestick: three white soldiers",
+        "Supertrend bullish \u2014 price above trend band",
+        "Testing pivot point \u2014 decision zone",
+        "In a long-term strong uptrend (2yr) \u2014 trend on our side",
+        "\u2713 Daily setup aligned with the higher-timeframe trend",
+        "Near upper Bollinger Band"
+      ],
+      "current_price": 184.16,
       "unrealized_pnl": 0.0,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
@@ -1372,6 +1365,68 @@
       "pnl_pct": 0.06,
       "won": true,
       "open_days": 2
+    },
+    {
+      "ticker": "ICICIBANK.NS",
+      "sector": "Banking",
+      "open_date": "2026-07-30",
+      "open_session": "morning",
+      "action": "BUY",
+      "entry": 1430.3,
+      "qty": 6,
+      "invested": 8581.8,
+      "stop_loss": 1417.88,
+      "target": 1504.66,
+      "style": "swing",
+      "confidence": 95,
+      "patterns": [
+        "full_bullish_alignment",
+        "adx_strong_trend_up",
+        "pivot_point_test",
+        "stoch_rsi_overbought_reversal",
+        "overbought_macd_divergence",
+        "rsi_bullish_divergence"
+      ],
+      "buy_reasons": [
+        "All EMAs stacked bullish",
+        "Learned bullish pattern: full_bullish_alignment (rel=64%)",
+        "Learned bullish pattern: adx_strong_trend_up (rel=64%)",
+        "RSI bullish divergence \u2014 price lower but RSI higher",
+        "ADX strong trend \u2014 directional move confirmed",
+        "Testing pivot point \u2014 decision zone",
+        "In a long-term uptrend (2yr) \u2014 trend on our side",
+        "\u2713 Daily setup aligned with the higher-timeframe trend",
+        "RSI=69 elevated",
+        "MACD histogram negative",
+        "StochRSI overbought with bearish candle \u2014 reversal"
+      ],
+      "current_price": 1419.2,
+      "unrealized_pnl": -66.6,
+      "max_held_days": 10,
+      "vol_regime_pct": 0.12,
+      "entry_market": {
+        "nifty_trend": "up",
+        "vix": 12.01,
+        "mood": "neutral",
+        "regime": "choppy"
+      },
+      "view_hist": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "stale_tightened": true,
+      "close_date": "2026-08-11",
+      "close_session": "midday",
+      "exit_price": 1417.88,
+      "exit_reason": "stop_hit",
+      "pnl": -100.15,
+      "pnl_gross": -74.52,
+      "costs": 25.63,
+      "pnl_pct": -1.17,
+      "won": false,
+      "open_days": 8
     }
   ],
   "daily_snapshots": [
@@ -1502,11 +1557,11 @@
       "daily_pnl": 0.0
     }
   ],
-  "daily_pnl_today": 129.68899999999977,
+  "daily_pnl_today": 29.535380000000686,
   "last_snapshot_date": "2026-08-10",
   "lifetime_wins": 10,
-  "lifetime_losses": 7,
-  "lifetime_pnl": -32.26,
+  "lifetime_losses": 8,
+  "lifetime_pnl": -132.41,
   "last_pnl_reset_date": "2026-08-11",
   "max_drawdown_pct": 1.35,
   "current_drawdown_pct": 1.21,

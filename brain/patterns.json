@@ -749,131 +749,143 @@
   "ICICIBANK.NS": {
     "reliable_patterns": {
       "three_white_soldiers": {
-        "wins": 0.5,
-        "losses": 0.464,
-        "reliability": 0.506,
+        "wins": 0.445,
+        "losses": 0.413,
+        "reliability": 0.505,
         "last_seen": "2026-07-22"
       },
       "spinning_top": {
         "wins": 0.0,
-        "losses": 0.5,
-        "reliability": 0.417,
+        "losses": 0.413,
+        "reliability": 0.431,
         "last_seen": "2026-07-09"
       },
       "full_bullish_alignment": {
-        "wins": 2.46,
-        "losses": 1.409,
-        "reliability": 0.636,
-        "last_seen": "2026-07-22"
+        "wins": 2.192,
+        "losses": 2.255,
+        "reliability": 0.493,
+        "last_seen": "2026-08-11"
       },
       "adx_strong_trend_up": {
-        "wins": 2.46,
-        "losses": 1.409,
-        "reliability": 0.636,
-        "last_seen": "2026-07-22"
+        "wins": 2.192,
+        "losses": 2.255,
+        "reliability": 0.493,
+        "last_seen": "2026-08-11"
       },
       "supertrend_bullish": {
-        "wins": 1.976,
-        "losses": 0.929,
-        "reliability": 0.674,
+        "wins": 1.76,
+        "losses": 0.828,
+        "reliability": 0.655,
         "last_seen": "2026-07-22"
       },
       "pivot_point_test": {
         "wins": 0.0,
-        "losses": 0.5,
-        "reliability": 0.417,
-        "last_seen": "2026-07-09"
+        "losses": 1.413,
+        "reliability": 0.265,
+        "last_seen": "2026-08-11"
       },
       "bb_upper_rejection": {
         "wins": 0.0,
-        "losses": 0.5,
-        "reliability": 0.417,
+        "losses": 0.413,
+        "reliability": 0.431,
         "last_seen": "2026-07-09"
       },
       "pivot_s1_breakdown": {
-        "wins": 0.5,
-        "losses": 0.497,
-        "reliability": 0.501,
+        "wins": 0.43,
+        "losses": 0.428,
+        "reliability": 0.5,
         "last_seen": "2026-07-16"
       },
       "rsi_bearish_divergence": {
-        "wins": 0.5,
-        "losses": 0.48,
+        "wins": 0.445,
+        "losses": 0.428,
         "reliability": 0.503,
         "last_seen": "2026-07-22"
       },
       "tweezer_top": {
         "wins": 0.0,
-        "losses": 0.5,
-        "reliability": 0.417,
+        "losses": 0.428,
+        "reliability": 0.429,
         "last_seen": "2026-07-15"
       },
       "outside_bar": {
-        "wins": 0.5,
-        "losses": 0.483,
+        "wins": 0.443,
+        "losses": 0.428,
         "reliability": 0.503,
         "last_seen": "2026-07-21"
       },
       "engulfing_bearish": {
         "wins": 0.0,
-        "losses": 0.5,
-        "reliability": 0.417,
+        "losses": 0.428,
+        "reliability": 0.429,
         "last_seen": "2026-07-15"
       },
       "doji": {
-        "wins": 0.5,
+        "wins": 0.433,
         "losses": 0.0,
-        "reliability": 0.583,
+        "reliability": 0.572,
         "last_seen": "2026-07-17"
       },
       "macd_bearish_crossover": {
-        "wins": 0.5,
+        "wins": 0.433,
         "losses": 0.0,
-        "reliability": 0.583,
+        "reliability": 0.572,
         "last_seen": "2026-07-17"
       },
       "tweezer_bottom": {
-        "wins": 0.5,
+        "wins": 0.433,
         "losses": 0.0,
-        "reliability": 0.583,
+        "reliability": 0.572,
         "last_seen": "2026-07-17"
       },
       "stoch_rsi_oversold_reversal": {
-        "wins": 1.48,
+        "wins": 1.319,
         "losses": 0.0,
-        "reliability": 0.747,
+        "reliability": 0.72,
         "last_seen": "2026-07-22"
       },
       "inside_bar": {
-        "wins": 0.986,
+        "wins": 0.878,
         "losses": 0.0,
-        "reliability": 0.664,
+        "reliability": 0.646,
         "last_seen": "2026-07-22"
       },
       "morning_star": {
-        "wins": 0.5,
+        "wins": 0.44,
         "losses": 0.0,
-        "reliability": 0.583,
+        "reliability": 0.573,
         "last_seen": "2026-07-20"
       },
       "overbought_macd_divergence": {
-        "wins": 0.5,
-        "losses": 0.0,
-        "reliability": 0.583,
-        "last_seen": "2026-07-21"
+        "wins": 0.443,
+        "losses": 1.0,
+        "reliability": 0.407,
+        "last_seen": "2026-08-11"
+      },
+      "stoch_rsi_overbought_reversal": {
+        "wins": 0.0,
+        "losses": 1.0,
+        "reliability": 0.333,
+        "last_seen": "2026-08-11"
+      },
+      "rsi_bullish_divergence": {
+        "wins": 0.0,
+        "losses": 1.0,
+        "reliability": 0.333,
+        "last_seen": "2026-08-11"
       }
     },
     "preferred_style": "swing",
     "swing_wins": 0,
-    "swing_losses": 0,
+    "swing_losses": 1,
     "intraday_wins": 0,
     "intraday_losses": 0,
     "long_term_wins": 0,
     "long_term_losses": 0,
-    "atr_stop_hits": 0,
+    "atr_stop_hits": 1,
     "atr_target_hits": 0,
     "atr_multiplier": 1.5,
-    "last_updated": "2026-07-22",
+    "last_updated": "2026-08-11",
     "attribution": {
       "by_pattern": {},
       "by_session": {},

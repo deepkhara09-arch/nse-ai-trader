@@ -4298,5 +4298,25 @@
     "ts": "2026-08-12T05:55:19.903710",
     "detail": "Stop loss moved \u20b9181.04 \u2192 \u20b9182.13 | Target 1 moved \u20b9196.86 \u2192 \u20b9197.90",
     "confidence": 65.7
+  },
+  {
+    "type": "removed",
+    "ticker": "UNIONBANK.NS",
+    "nse_code": "UNIONBANK",
+    "signal": "BUY",
+    "date": "2026-08-12",
+    "ts": "2026-08-12T07:45:57.066991",
+    "detail": "Dropped \u2014 no longer meets threshold (was 66/100)",
+    "confidence": 0
+  },
+  {
+    "type": "updated",
+    "ticker": "PIDILITIND.NS",
+    "nse_code": "PIDILITIND",
+    "signal": "BUY",
+    "date": "2026-08-12",
+    "ts": "2026-08-12T07:45:57.066991",
+    "detail": "Rank \u25bc1 (#8 \u2192 #9) | Stop loss moved \u20b91635.04 \u2192 \u20b91651.68 | Target 1 moved \u20b91800.82 \u2192 \u20b91784.62",
+    "confidence": 82.3
   }
 ]

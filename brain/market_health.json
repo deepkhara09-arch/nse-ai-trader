@@ -60,7 +60,9 @@
   },
   "market_mood": "neutral",
   "trade_allowed": true,
-  "warnings": [],
+  "warnings": [
+    "Nifty in intraday downtrend \u2014 avoid new longs this session"
+  ],
   "leading_sectors": [
     "IT",
     "Infra"
@@ -68,7 +70,7 @@
   "market_regime": "normal",
   "sector_breadth": 0.5,
   "lagging_sectors": [],
-  "intraday_regime": "mixed",
+  "intraday_regime": "trending_down",
   "macro": {
     "date": "2026-08-12",
     "session": "midday",

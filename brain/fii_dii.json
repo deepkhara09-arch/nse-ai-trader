@@ -1,18 +1,12 @@
 {
-  "date": "2026-08-11",
-  "fii_net_cr": 1974.76,
-  "dii_net_cr": -1290.29,
-  "combined_net_cr": 684.47,
-  "signal": "inflow",
+  "date": "2026-08-12",
+  "fii_net_cr": 258.55,
+  "dii_net_cr": 24.77,
+  "combined_net_cr": 283.32,
+  "signal": "neutral",
   "ok": true,
   "error": "",
   "history": [
-    {
-      "date": "2026-07-01",
-      "fii": -1140.5,
-      "dii": 3159.24,
-      "combined": 2018.74
-    },
     {
       "date": "2026-07-02",
       "fii": -311.82,
@@ -186,6 +180,12 @@
       "fii": 1974.76,
       "dii": -1290.29,
       "combined": 684.47
+    },
+    {
+      "date": "2026-08-12",
+      "fii": 258.55,
+      "dii": 24.77,
+      "combined": 283.32
     }
   ]
 }

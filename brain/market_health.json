@@ -1,27 +1,27 @@
 {
-  "date": "2026-08-11",
-  "session": "preclose",
+  "date": "2026-08-12",
+  "session": "preopen",
   "nifty": {
     "symbol": "^NSEI",
-    "value": 24583.8,
-    "day_change_pct": 0.05,
+    "value": 24471.7,
+    "day_change_pct": -0.46,
     "trend_5d": "sideways",
     "trend_20d": "up",
-    "ath_pct_60d": -0.77
+    "ath_pct_60d": -1.22
   },
   "vix": {
-    "value": 12.25,
+    "value": 11.86,
     "level": "normal",
-    "percentile_30d": 37.0,
-    "avg_30d": 12.71
+    "percentile_30d": 13.0,
+    "avg_30d": 12.65
   },
   "bank_nifty": {
     "symbol": "^NSEBANK",
-    "value": 57686.95,
-    "day_change_pct": -0.1,
+    "value": 57446.25,
+    "day_change_pct": -0.42,
     "trend_5d": "sideways",
     "trend_20d": "sideways",
-    "ath_pct_60d": -1.74,
+    "ath_pct_60d": -2.15,
     "diverging": false
   },
   "sectors": {
@@ -35,11 +35,11 @@
     },
     "Pharma": {
       "symbol": "PHARMABEES.NS",
-      "value": 27.24,
-      "day_change_pct": -0.29,
+      "value": 27.49,
+      "day_change_pct": 0.92,
       "trend_5d": "sideways",
       "trend_20d": "up",
-      "ath_pct_60d": -2.75
+      "ath_pct_60d": -1.86
     },
     "Bank": {
       "symbol": "BANKBEES.NS",
@@ -72,54 +72,54 @@
   "lagging_sectors": [],
   "intraday_regime": "choppy",
   "macro": {
-    "date": "2026-08-11",
-    "session": "midday",
-    "generated_at": "2026-08-11T06:15:53.575697",
-    "global_score": 0.087,
-    "india_score": 0.2,
-    "overall_score": 0.138,
+    "date": "2026-08-12",
+    "session": "preopen",
+    "generated_at": "2026-08-12T03:05:45.150935",
+    "global_score": 0.115,
+    "india_score": -0.5,
+    "overall_score": -0.162,
     "mood": "neutral",
     "drivers": [
-      "Nvidia teams with Wall Street firms to help finance $500 billion for AI infrastructure",
-      "\u2018Her bank accounts were stripped bare by Medicaid\u2019: My late friend had $20,000 in credit-card debt. Will her life insurance pay for it?",
-      "Rocket Lab reveals some big plans, but its stock is dropping on mixed earnings",
-      "This is the ZIP code with the hottest housing market in the country right now",
-      "EBay may dodge a GameStop takeover \u2014 but there\u2019s a new twist in the Ryan Cohen saga",
-      "Archer strikes deal with Boeing in latest bid to transform aviation through AI",
-      "Apple\u2019s stock could underperform, especially without an \u2018all-glass\u2019 iPhone, this analyst warns",
-      "Intel plans to sell $15 billion worth of stock after it has risen 400% in a year"
+      "CoreWeave\u2019s stock soars as earnings show major AI momentum",
+      "Super Micro\u2019s earnings report brings more good news, and the stock is climbing",
+      "Lumentum sees sales more than double as AI demand swells",
+      "\u2018I unexpectedly came into some money\u2019: Is putting $20,000 into CDs a smart move?",
+      "Is $1 million enough for a household to retire? The answer keeps changing.",
+      "I found a $100 bill in the communal washer at my Airbnb. What should I do?",
+      "\u2018The market is obviously on fire\u2019: Should I take $1,000 from my brokerage account to pay off my car loan?",
+      "We live on a farm and have $2.2 million saved for retirement. We\u2019re ready to retire abroad. Can we afford it?"
     ],
     "global_cues": {
       "dow": {
-        "last": 53975.98,
-        "chg_pct": -0.11
+        "last": 53791.85,
+        "chg_pct": -0.34
       },
       "nasdaq": {
-        "last": 26605.36,
-        "chg_pct": -0.32
+        "last": 26445.45,
+        "chg_pct": -0.6
       },
       "sp500": {
-        "last": 7753.11,
-        "chg_pct": -0.06
+        "last": 7728.2,
+        "chg_pct": -0.32
       },
       "nikkei": {
-        "last": 66970.22,
-        "chg_pct": 2.08
+        "last": 67040.18,
+        "chg_pct": 0.1
       },
       "crude": {
-        "last": 82.13,
-        "chg_pct": 5.05
+        "last": 84.11,
+        "chg_pct": 2.41
       },
       "usdinr": {
-        "last": 95.41,
-        "chg_pct": 0.21
+        "last": 95.43,
+        "chg_pct": 0.03
       },
       "gold": {
-        "last": 4361.8,
-        "chg_pct": 0.49
+        "last": 4472.9,
+        "chg_pct": 2.55
       }
     },
-    "summary": "Overall macro mood is neutral (+0.14). US Dow -0.1% overnight. Crude +5.0%. USD/INR +0.2%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
+    "summary": "Overall macro mood is neutral (-0.16). US Dow -0.3% overnight. Crude +2.4%. USD/INR +0.0%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
       "Trade-war headlines spook global markets; IT & export names react most."
@@ -129,20 +129,14 @@
   },
   "macro_risk_factor": 1.0,
   "fii_dii": {
-    "date": "2026-08-11",
-    "fii_net_cr": 1974.76,
-    "dii_net_cr": -1290.29,
-    "combined_net_cr": 684.47,
-    "signal": "inflow",
+    "date": "2026-08-12",
+    "fii_net_cr": 258.55,
+    "dii_net_cr": 24.77,
+    "combined_net_cr": 283.32,
+    "signal": "neutral",
     "ok": true,
     "error": "",
     "history": [
-      {
-        "date": "2026-07-01",
-        "fii": -1140.5,
-        "dii": 3159.24,
-        "combined": 2018.74
-      },
       {
         "date": "2026-07-02",
         "fii": -311.82,
@@ -316,15 +310,21 @@
         "fii": 1974.76,
         "dii": -1290.29,
         "combined": 684.47
+      },
+      {
+        "date": "2026-08-12",
+        "fii": 258.55,
+        "dii": 24.77,
+        "combined": 283.32
       }
     ]
   },
   "pcr": {
-    "date": "2026-08-11",
-    "pcr": 0.755,
+    "date": "2026-08-12",
+    "pcr": 0.749,
     "reading": "bearish_bias",
-    "total_pe_oi": 2164955,
-    "total_ce_oi": 2868395,
+    "total_pe_oi": 2127372,
+    "total_ce_oi": 2841598,
     "spot": 24471.7,
     "max_pain": 24450.0,
     "max_pain_dist_pct": 0.09,

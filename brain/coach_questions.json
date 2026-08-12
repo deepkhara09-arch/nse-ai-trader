@@ -1,5 +1,25 @@
 [
   {
+    "question": "In Indian NSE markets, what does the combination of full_bearish_alignment, bb_lower_bounce, macd_bearish_crossover mean for a swing trade on NTPC? Current RSI=37, MACD hist=-0.1387, Vol=1.0x average. Signal is SELL.",
+    "context": {
+      "ticker": "NTPC.NS",
+      "signal": "SELL",
+      "patterns": "full_bearish_alignment, bb_lower_bounce, macd_bearish_crossover",
+      "rsi": 37.1
+    },
+    "queued_at": "2026-08-12T05:55:19.785579"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of doji, dragonfly_doji, tweezer_top mean for a swing trade on MARICO? Current RSI=55, MACD hist=-1.7881, Vol=0.7x average. Signal is SELL.",
+    "context": {
+      "ticker": "MARICO.NS",
+      "signal": "SELL",
+      "patterns": "doji, dragonfly_doji, tweezer_top",
+      "rsi": 55.4
+    },
+    "queued_at": "2026-08-12T05:55:19.887649"
+  },
+  {
     "question": "In Indian NSE markets, what does the combination of pivot_point_test, rsi_bullish_divergence mean for a swing trade on SBIN? Current RSI=64, MACD hist=+4.9287, Vol=0.8x average. Signal is BUY.",
     "context": {
       "ticker": "SBIN.NS",
@@ -7,96 +27,76 @@
       "patterns": "pivot_point_test, rsi_bullish_divergence",
       "rsi": 63.9
     },
-    "queued_at": "2026-08-12T04:05:43.222594"
+    "queued_at": "2026-08-12T05:55:19.888523"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of tweezer_bottom, doji, bb_upper_rejection mean for a swing trade on UNIONBANK? Current RSI=72, MACD hist=+1.1360, Vol=0.9x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of tweezer_bottom, rsi_bullish_divergence, doji mean for a swing trade on UNIONBANK? Current RSI=72, MACD hist=+1.1360, Vol=0.9x average. Signal is BUY.",
     "context": {
       "ticker": "UNIONBANK.NS",
       "signal": "BUY",
-      "patterns": "tweezer_bottom, doji, bb_upper_rejection",
+      "patterns": "tweezer_bottom, rsi_bullish_divergence, doji",
       "rsi": 71.8
     },
-    "queued_at": "2026-08-12T04:05:43.223892"
+    "queued_at": "2026-08-12T05:55:19.889864"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of dragonfly_doji, hammer mean for a swing trade on PIDILITIND? Current RSI=65, MACD hist=+6.2659, Vol=0.9x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of hammer, dragonfly_doji mean for a swing trade on PIDILITIND? Current RSI=65, MACD hist=+6.2659, Vol=0.9x average. Signal is BUY.",
     "context": {
       "ticker": "PIDILITIND.NS",
       "signal": "BUY",
-      "patterns": "dragonfly_doji, hammer",
+      "patterns": "hammer, dragonfly_doji",
       "rsi": 65.4
     },
-    "queued_at": "2026-08-12T04:05:43.228454"
+    "queued_at": "2026-08-12T05:55:19.894626"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of adx_ranging_market, stoch_rsi_oversold_reversal, pivot_point_test mean for a swing trade on ASIANPAINT? Current RSI=58, MACD hist=+1.4199, Vol=1.0x average. Signal is BUY.",
-    "context": {
-      "ticker": "ASIANPAINT.NS",
-      "signal": "BUY",
-      "patterns": "adx_ranging_market, stoch_rsi_oversold_reversal, pivot_point_test",
-      "rsi": 58.4
-    },
-    "queued_at": "2026-08-12T04:05:43.231668"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of full_bullish_alignment, pivot_s1_breakdown, stoch_rsi_overbought_reversal mean for a swing trade on CIPLA? Current RSI=64, MACD hist=+0.8180, Vol=0.7x average. Signal is BUY.",
-    "context": {
-      "ticker": "CIPLA.NS",
-      "signal": "BUY",
-      "patterns": "full_bullish_alignment, pivot_s1_breakdown, stoch_rsi_overbought_reversal",
-      "rsi": 63.5
-    },
-    "queued_at": "2026-08-12T04:05:43.232526"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of pivot_s1_breakdown, macd_bearish_crossover, full_bearish_alignment mean for a swing trade on NTPC? Current RSI=37, MACD hist=-0.1387, Vol=1.0x average. Signal is SELL.",
+    "question": "In Indian NSE markets, what does the combination of full_bearish_alignment, bb_lower_bounce, macd_bearish_crossover mean for a swing trade on NTPC? Current RSI=37, MACD hist=-0.1387, Vol=1.0x average. Signal is SELL.",
     "context": {
       "ticker": "NTPC.NS",
       "signal": "SELL",
-      "patterns": "pivot_s1_breakdown, macd_bearish_crossover, full_bearish_alignment",
+      "patterns": "full_bearish_alignment, bb_lower_bounce, macd_bearish_crossover",
       "rsi": 37.1
     },
-    "queued_at": "2026-08-12T04:05:43.233345"
+    "queued_at": "2026-08-12T05:55:19.898913"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of supertrend_bullish, low_volume_drift, full_bullish_alignment mean for a swing trade on NIACL? Current RSI=54, MACD hist=+0.8825, Vol=0.3x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of momentum_continuation, supertrend_bullish, hammer mean for a swing trade on NIACL? Current RSI=54, MACD hist=+0.8825, Vol=0.3x average. Signal is BUY.",
     "context": {
       "ticker": "NIACL.NS",
       "signal": "BUY",
-      "patterns": "supertrend_bullish, low_volume_drift, full_bullish_alignment",
+      "patterns": "momentum_continuation, supertrend_bullish, hammer",
       "rsi": 54.3
     },
-    "queued_at": "2026-08-12T04:05:43.234141"
+    "queued_at": "2026-08-12T05:55:19.899770"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of near_52w_high, supertrend_bullish, pivot_point_test mean for a swing trade on GRASIM? Current RSI=62, MACD hist=+24.4647, Vol=1.2x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of near_52w_high, inside_bar, bearish_harami mean for a swing trade on GRASIM? Current RSI=62, MACD hist=+24.4647, Vol=1.2x average. Signal is BUY.",
     "context": {
       "ticker": "GRASIM.NS",
       "signal": "BUY",
-      "patterns": "near_52w_high, supertrend_bullish, pivot_point_test",
+      "patterns": "near_52w_high, inside_bar, bearish_harami",
       "rsi": 61.5
     },
-    "queued_at": "2026-08-12T04:05:43.234957"
+    "queued_at": "2026-08-12T05:55:19.900641"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of supertrend_bullish, pivot_point_test, strong_bullish_marubozu mean for a swing trade on CHOLAFIN? Current RSI=65, MACD hist=+9.5106, Vol=1.0x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of tweezer_bottom, rsi_bullish_divergence, bullish_harami mean for a swing trade on CHOLAFIN? Current RSI=65, MACD hist=+9.5106, Vol=1.0x average. Signal is BUY.",
     "context": {
       "ticker": "CHOLAFIN.NS",
       "signal": "BUY",
-      "patterns": "supertrend_bullish, pivot_point_test, strong_bullish_marubozu",
+      "patterns": "tweezer_bottom, rsi_bullish_divergence, bullish_harami",
       "rsi": 64.9
     },
-    "queued_at": "2026-08-12T04:05:43.235767"
+    "queued_at": "2026-08-12T05:55:19.901583"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of pivot_r1_breakout, adx_ranging_market, strong_bullish_marubozu mean for a swing trade on GAIL? Current RSI=53, MACD hist=-0.1651, Vol=1.2x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of adx_ranging_market, engulfing_bullish, pivot_r1_breakout mean for a swing trade on GAIL? Current RSI=53, MACD hist=-0.1651, Vol=1.2x average. Signal is BUY.",
     "context": {
       "ticker": "GAIL.NS",
       "signal": "BUY",
-      "patterns": "pivot_r1_breakout, adx_ranging_market, strong_bullish_marubozu",
+      "patterns": "adx_ranging_market, engulfing_bullish, pivot_r1_breakout",
       "rsi": 53.4
     },
-    "queued_at": "2026-08-12T04:05:43.237055"
+    "queued_at": "2026-08-12T05:55:19.902935"
   }
 ]

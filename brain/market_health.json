@@ -1,6 +1,6 @@
 {
   "date": "2026-08-12",
-  "session": "morning",
+  "session": "midday",
   "nifty": {
     "symbol": "^NSEI",
     "value": 24471.7,
@@ -60,9 +60,7 @@
   },
   "market_mood": "neutral",
   "trade_allowed": true,
-  "warnings": [
-    "Nifty choppy intraday \u2014 wait for cleaner setups"
-  ],
+  "warnings": [],
   "leading_sectors": [
     "IT",
     "Infra"
@@ -70,14 +68,14 @@
   "market_regime": "normal",
   "sector_breadth": 0.5,
   "lagging_sectors": [],
-  "intraday_regime": "choppy",
+  "intraday_regime": "mixed",
   "macro": {
     "date": "2026-08-12",
-    "session": "preopen",
-    "generated_at": "2026-08-12T03:05:45.150935",
-    "global_score": 0.115,
+    "session": "midday",
+    "generated_at": "2026-08-12T05:55:11.818640",
+    "global_score": 0.148,
     "india_score": -0.5,
-    "overall_score": -0.162,
+    "overall_score": -0.144,
     "mood": "neutral",
     "drivers": [
       "CoreWeave\u2019s stock soars as earnings show major AI momentum",
@@ -103,23 +101,23 @@
         "chg_pct": -0.32
       },
       "nikkei": {
-        "last": 67040.18,
-        "chg_pct": 0.1
+        "last": 67531.04,
+        "chg_pct": 0.84
       },
       "crude": {
-        "last": 84.11,
-        "chg_pct": 2.41
+        "last": 83.2,
+        "chg_pct": 1.3
       },
       "usdinr": {
         "last": 95.43,
         "chg_pct": 0.03
       },
       "gold": {
-        "last": 4472.9,
-        "chg_pct": 2.55
+        "last": 4383.0,
+        "chg_pct": 0.49
       }
     },
-    "summary": "Overall macro mood is neutral (-0.16). US Dow -0.3% overnight. Crude +2.4%. USD/INR +0.0%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
+    "summary": "Overall macro mood is neutral (-0.14). US Dow -0.3% overnight. Crude +1.3%. USD/INR +0.0%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
       "Trade-war headlines spook global markets; IT & export names react most."

@@ -1,5 +1,5 @@
 {
-  "capital": 70309.26736999999,
+  "capital": 55932.06736999999,
   "open_positions": [
     {
       "ticker": "PIDILITIND.NS",
@@ -44,8 +44,8 @@
         "\u2713 Daily setup aligned with the higher-timeframe trend",
         "RSI=64 elevated"
       ],
-      "current_price": 1677.1,
-      "unrealized_pnl": 168.5,
+      "current_price": 1689.7,
+      "unrealized_pnl": 231.5,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -56,7 +56,7 @@
       },
       "view_hist": [
         0,
-        0,
+        1,
         1,
         1
       ]
@@ -103,8 +103,8 @@
         "RSI=66 elevated",
         "Near upper Bollinger Band"
       ],
-      "current_price": 3310.0,
-      "unrealized_pnl": -90.0,
+      "current_price": 3370.3,
+      "unrealized_pnl": 30.6,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -117,7 +117,7 @@
         1,
         1,
         1,
-        1
+        0
       ]
     },
     {
@@ -156,8 +156,8 @@
         "Broke below Pivot S1 support \u2014 bearish",
         "\u26a0 Daily sell fights the higher-timeframe uptrend \u2014 needs extra conviction"
       ],
-      "current_price": 854.9,
-      "unrealized_pnl": 9.1,
+      "current_price": 848.25,
+      "unrealized_pnl": 55.65,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -167,6 +167,7 @@
         "regime": "mixed"
       },
       "view_hist": [
+        1,
         1,
         1,
         1
@@ -203,8 +204,8 @@
         "\u2713 Daily setup aligned with the higher-timeframe trend",
         "Near upper Bollinger Band"
       ],
-      "current_price": 182.02,
-      "unrealized_pnl": -98.44,
+      "current_price": 185.86,
+      "unrealized_pnl": 78.2,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -215,8 +216,95 @@
       },
       "view_hist": [
         0,
-        0
+        0,
+        1
       ]
+    },
+    {
+      "ticker": "CHOLAFIN.NS",
+      "sector": "NBFC",
+      "open_date": "2026-08-12",
+      "open_session": "morning",
+      "action": "BUY",
+      "entry": 1900.3,
+      "qty": 4,
+      "invested": 7601.2,
+      "stop_loss": 1800.45,
+      "target": 2099.99,
+      "style": "swing",
+      "confidence": 95,
+      "patterns": [
+        "supertrend_bullish",
+        "pivot_point_test",
+        "strong_bullish_marubozu",
+        "full_bullish_alignment",
+        "tweezer_bottom",
+        "rsi_bullish_divergence"
+      ],
+      "buy_reasons": [
+        "All EMAs stacked bullish",
+        "MACD histogram positive",
+        "Candlestick: tweezer bottom",
+        "RSI bullish divergence \u2014 price lower but RSI higher",
+        "Supertrend bullish \u2014 price above trend band",
+        "Testing pivot point \u2014 decision zone",
+        "In a long-term strong uptrend (2yr) \u2014 trend on our side",
+        "Near 52-week high (97% of range) \u2014 breakout zone",
+        "\u2713 Daily setup aligned with the higher-timeframe trend",
+        "RSI=65 elevated",
+        "Near upper Bollinger Band"
+      ],
+      "current_price": 1900.3,
+      "unrealized_pnl": 0.0,
+      "max_held_days": 10,
+      "vol_regime_pct": 0.12,
+      "entry_market": {
+        "nifty_trend": "sideways",
+        "vix": 11.86,
+        "mood": "neutral",
+        "regime": "mixed"
+      }
+    },
+    {
+      "ticker": "NTPC.NS",
+      "sector": "Energy",
+      "open_date": "2026-08-12",
+      "open_session": "morning",
+      "action": "SELL",
+      "entry": 338.8,
+      "qty": 20,
+      "invested": 6776.0,
+      "stop_loss": 347.59,
+      "target": 321.23,
+      "style": "swing",
+      "confidence": 86.4,
+      "patterns": [
+        "pivot_s1_breakdown",
+        "macd_bearish_crossover",
+        "full_bearish_alignment",
+        "pivot_point_test",
+        "three_black_crows",
+        "bb_lower_bounce"
+      ],
+      "buy_reasons": [
+        "Near lower Bollinger Band",
+        "All EMAs stacked bearish",
+        "MACD histogram negative",
+        "Candlestick: three black crows",
+        "Broke below Pivot S1 support \u2014 bearish",
+        "In a long-term strong downtrend (2yr)",
+        "\u2713 Daily setup aligned with the higher-timeframe trend"
+      ],
+      "current_price": 338.8,
+      "unrealized_pnl": 0.0,
+      "max_held_days": 10,
+      "vol_regime_pct": 0.12,
+      "entry_market": {
+        "nifty_trend": "sideways",
+        "vix": 11.86,
+        "mood": "neutral",
+        "regime": "mixed"
+      }
     }
   ],
   "closed_trades": [
@@ -1610,12 +1698,12 @@
       "daily_pnl": -137.03
     }
   ],
-  "daily_pnl_today": -137.0286449999993,
+  "daily_pnl_today": 0.0,
   "last_snapshot_date": "2026-08-11",
   "lifetime_wins": 10,
   "lifetime_losses": 10,
   "lifetime_pnl": -298.98,
-  "last_pnl_reset_date": "2026-08-11",
+  "last_pnl_reset_date": "2026-08-12",
   "max_drawdown_pct": 1.5,
   "current_drawdown_pct": 1.5,
   "portfolio_peak": 101210.28,

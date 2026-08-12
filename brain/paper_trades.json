@@ -1,5 +1,5 @@
 {
-  "capital": 55932.06736999999,
+  "capital": 59316.61736999999,
   "open_positions": [
     {
       "ticker": "PIDILITIND.NS",
@@ -8,9 +8,9 @@
       "open_session": "morning",
       "action": "BUY",
       "entry": 1643.4,
-      "qty": 5,
-      "invested": 8217.0,
-      "stop_loss": 1589.51,
+      "qty": 3,
+      "invested": 4930.2,
+      "stop_loss": 1661.18,
       "target": 1751.17,
       "style": "swing",
       "confidence": 95,
@@ -44,8 +44,8 @@
         "\u2713 Daily setup aligned with the higher-timeframe trend",
         "RSI=64 elevated"
       ],
-      "current_price": 1692.8,
-      "unrealized_pnl": 247.0,
+      "current_price": 1697.4,
+      "unrealized_pnl": 162.0,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -59,7 +59,9 @@
         1,
         1,
         1
-      ]
+      ],
+      "t1_booked": true,
+      "trailing_active": true
     },
     {
       "ticker": "GRASIM.NS",
@@ -103,8 +105,8 @@
         "RSI=66 elevated",
         "Near upper Bollinger Band"
       ],
-      "current_price": 3364.7,
-      "unrealized_pnl": 19.4,
+      "current_price": 3300.1,
+      "unrealized_pnl": -109.8,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -114,10 +116,10 @@
         "regime": "mixed"
       },
       "view_hist": [
+        0,
+        0,
         1,
-        0,
-        0,
-        1
+        0
       ]
     },
     {
@@ -156,8 +158,8 @@
         "Broke below Pivot S1 support \u2014 bearish",
         "\u26a0 Daily sell fights the higher-timeframe uptrend \u2014 needs extra conviction"
       ],
-      "current_price": 847.45,
-      "unrealized_pnl": 61.25,
+      "current_price": 847.55,
+      "unrealized_pnl": 60.55,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -170,7 +172,7 @@
         1,
         1,
         1,
-        1
+        0
       ]
     },
     {
@@ -204,8 +206,8 @@
         "\u2713 Daily setup aligned with the higher-timeframe trend",
         "Near upper Bollinger Band"
       ],
-      "current_price": 185.08,
-      "unrealized_pnl": 42.32,
+      "current_price": 186.87,
+      "unrealized_pnl": 124.66,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -215,7 +217,7 @@
         "regime": "mixed"
       },
       "view_hist": [
-        0,
+        1,
         1,
         1,
         1
@@ -255,8 +257,8 @@
         "RSI=65 elevated",
         "Near upper Bollinger Band"
       ],
-      "current_price": 1892.5,
-      "unrealized_pnl": -31.2,
+      "current_price": 1901.0,
+      "unrealized_pnl": 2.8,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -267,7 +269,8 @@
       },
       "view_hist": [
         1,
-        1
+        1,
+        0
       ]
     },
     {
@@ -300,8 +303,8 @@
         "In a long-term strong downtrend (2yr)",
         "\u2713 Daily setup aligned with the higher-timeframe trend"
       ],
-      "current_price": 338.95,
-      "unrealized_pnl": -3.0,
+      "current_price": 338.3,
+      "unrealized_pnl": 10.0,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -311,6 +314,7 @@
         "regime": "mixed"
       },
       "view_hist": [
+        1,
         1,
         1
       ]
@@ -1570,6 +1574,78 @@
       "won": false,
       "open_days": 6,
       "forensic_done": true
+    },
+    {
+      "ticker": "PIDILITIND.NS",
+      "sector": "Consumer",
+      "open_date": "2026-08-05",
+      "open_session": "morning",
+      "action": "BUY",
+      "entry": 1643.4,
+      "qty": 2,
+      "invested": 4930.2,
+      "stop_loss": 1661.18,
+      "target": 1751.17,
+      "style": "swing",
+      "confidence": 95,
+      "patterns": [
+        "pivot_point_test",
+        "supertrend_bullish",
+        "adx_strong_trend_up",
+        "outside_bar",
+        "near_52w_high",
+        "pivot_r1_breakout",
+        "volume_breakout_bullish",
+        "52w_breakout",
+        "full_bullish_alignment"
+      ],
+      "buy_reasons": [
+        "All EMAs stacked bullish",
+        "MACD histogram positive",
+        "High volume confirmation (2.6x avg)",
+        "Positive news sentiment (0.40, news 1.4x reliable here)",
+        "News sentiment improving across sessions",
+        "52-week breakout on high volume \u2014 strong momentum",
+        "Near 52-week high \u2014 potential breakout zone",
+        "\u26a0 Earnings in 4d \u2014 position size reduced",
+        "Sector tailwind (momentum=0.38)",
+        "Supertrend bullish \u2014 price above trend band",
+        "ADX strong trend \u2014 directional move confirmed",
+        "Broke above Pivot R1 with volume \u2014 bullish",
+        "Testing pivot point \u2014 decision zone",
+        "In a long-term strong uptrend (2yr) \u2014 trend on our side",
+        "Near 52-week high (96% of range) \u2014 breakout zone",
+        "\u2713 Daily setup aligned with the higher-timeframe trend",
+        "RSI=64 elevated"
+      ],
+      "current_price": 1697.4,
+      "unrealized_pnl": 270.0,
+      "max_held_days": 10,
+      "vol_regime_pct": 0.12,
+      "entry_market": {
+        "nifty_trend": "up",
+        "vix": 12.19,
+        "mood": "bullish",
+        "regime": "mixed"
+      },
+      "view_hist": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "t1_booked": true,
+      "trailing_active": true,
+      "close_date": "2026-08-12",
+      "close_session": "intraday_close",
+      "exit_price": 1697.29,
+      "exit_reason": "partial_t1",
+      "pnl": 97.75,
+      "pnl_gross": 107.77,
+      "costs": 10.02,
+      "pnl_pct": 2.97,
+      "won": true,
+      "open_days": 5
     }
   ],
   "daily_snapshots": [
@@ -1707,11 +1783,11 @@
       "daily_pnl": -137.03
     }
   ],
-  "daily_pnl_today": 0.0,
+  "daily_pnl_today": 97.75,
   "last_snapshot_date": "2026-08-11",
-  "lifetime_wins": 10,
+  "lifetime_wins": 11,
   "lifetime_losses": 10,
-  "lifetime_pnl": -298.98,
+  "lifetime_pnl": -201.23,
   "last_pnl_reset_date": "2026-08-12",
   "max_drawdown_pct": 1.5,
   "current_drawdown_pct": 1.5,

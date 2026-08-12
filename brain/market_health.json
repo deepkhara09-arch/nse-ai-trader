@@ -1,6 +1,6 @@
 {
   "date": "2026-08-12",
-  "session": "afternoon",
+  "session": "intraday_close",
   "nifty": {
     "symbol": "^NSEI",
     "value": 24471.7,
@@ -61,7 +61,7 @@
   "market_mood": "neutral",
   "trade_allowed": true,
   "warnings": [
-    "Nifty in intraday downtrend \u2014 avoid new longs this session"
+    "Nifty choppy intraday \u2014 wait for cleaner setups"
   ],
   "leading_sectors": [
     "IT",
@@ -70,7 +70,7 @@
   "market_regime": "normal",
   "sector_breadth": 0.5,
   "lagging_sectors": [],
-  "intraday_regime": "trending_down",
+  "intraday_regime": "choppy",
   "macro": {
     "date": "2026-08-12",
     "session": "midday",

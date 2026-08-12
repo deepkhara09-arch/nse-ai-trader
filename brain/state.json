@@ -1,13 +1,13 @@
 {
   "phase": "paper_trading",
   "day": 37,
-  "session": "afternoon",
+  "session": "intraday_close",
   "start_date": "2026-06-22",
   "phase_start_date": "2026-07-15",
   "last_run_date": "2026-08-11",
   "last_counted_date": "2026-08-11",
   "cohort_last_tick_date": "2026-08-11",
-  "last_updated": "2026-08-12T07:45:56.968544",
+  "last_updated": "2026-08-12T09:43:36.904555",
   "focus_stocks": [
     "MARICO.NS",
     "SBIN.NS",
@@ -48,14 +48,14 @@
     "LICI.NS"
   ],
   "paper_trade_stats": {
-    "total": 20,
-    "wins": 10,
+    "total": 21,
+    "wins": 11,
     "losses": 10,
-    "win_rate": 0.5,
-    "total_pnl": -298.98,
-    "avg_win": 136.84,
+    "win_rate": 0.524,
+    "total_pnl": -201.23,
+    "avg_win": 133.29,
     "avg_loss": -166.74,
-    "expectancy": -14.95
+    "expectancy": -9.58
   },
   "brain_notes": [
     "[2026-06-23] Pre-open macro: neutral (+0.07)",
@@ -361,6 +361,7 @@
     "preopen": "2026-08-12",
     "morning": "2026-08-12",
     "midday": "2026-08-12",
-    "afternoon": "2026-08-12"
+    "afternoon": "2026-08-12",
+    "intraday_close": "2026-08-12"
   }
 }

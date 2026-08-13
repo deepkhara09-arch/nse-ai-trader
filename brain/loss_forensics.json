@@ -10,16 +10,17 @@
       "avg_loss_pct": 5.17
     },
     "no_market_tailwind": {
-      "count": 4,
-      "sum_loss_pct": 8.65,
-      "last": "2026-08-11",
+      "count": 5,
+      "sum_loss_pct": 12.26,
+      "last": "2026-08-13",
       "examples": [
         "HOMEFIRST",
         "NESTLEIND",
         "UNIONBANK",
-        "SBIN"
+        "SBIN",
+        "GRASIM"
       ],
-      "avg_loss_pct": 2.16
+      "avg_loss_pct": 2.45
     },
     "weak_pattern:pivot_point_test": {
       "count": 2,
@@ -86,17 +87,17 @@
   "patterns": {
     "full_bullish_alignment": {
       "wins": 9,
-      "losses": 10,
+      "losses": 11,
       "sum_win_pct": 28.66,
-      "sum_loss_pct": 24.24,
-      "edge": 0.078
+      "sum_loss_pct": 27.849999999999998,
+      "edge": 0.013
     },
     "near_52w_high": {
       "wins": 2,
-      "losses": 3,
+      "losses": 4,
       "sum_win_pct": 8.15,
-      "sum_loss_pct": 9.41,
-      "edge": -0.084
+      "sum_loss_pct": 13.02,
+      "edge": -0.271
     },
     "low_volume_drift": {
       "wins": 1,
@@ -128,17 +129,17 @@
     },
     "tweezer_bottom": {
       "wins": 5,
-      "losses": 2,
+      "losses": 3,
       "sum_win_pct": 11.71,
-      "sum_loss_pct": 2.72,
-      "edge": 0.428
+      "sum_loss_pct": 6.33,
+      "edge": 0.224
     },
     "supertrend_bullish": {
       "wins": 9,
-      "losses": 9,
+      "losses": 10,
       "sum_win_pct": 18.85,
-      "sum_loss_pct": 23.07,
-      "edge": -0.078
+      "sum_loss_pct": 26.68,
+      "edge": -0.137
     },
     "engulfing_bullish": {
       "wins": 0,
@@ -170,10 +171,10 @@
     },
     "pivot_r1_breakout": {
       "wins": 2,
-      "losses": 4,
+      "losses": 5,
       "sum_win_pct": 3.8400000000000003,
-      "sum_loss_pct": 10.17,
-      "edge": -0.352
+      "sum_loss_pct": 13.78,
+      "edge": -0.473
     },
     "volume_breakout_bullish": {
       "wins": 4,
@@ -226,9 +227,9 @@
     },
     "bb_upper_rejection": {
       "wins": 0,
-      "losses": 2,
+      "losses": 3,
       "sum_win_pct": 0.0,
-      "sum_loss_pct": 6.890000000000001,
+      "sum_loss_pct": 10.5,
       "edge": 0.0
     },
     "hammer": {
@@ -254,16 +255,16 @@
     },
     "pivot_r2_breakout": {
       "wins": 0,
-      "losses": 1,
+      "losses": 2,
       "sum_win_pct": 0.0,
-      "sum_loss_pct": 3.23,
+      "sum_loss_pct": 6.84,
       "edge": 0.0
     },
     "52w_breakout": {
       "wins": 1,
-      "losses": 1,
+      "losses": 2,
       "sum_win_pct": 2.97,
-      "sum_loss_pct": 3.23,
+      "sum_loss_pct": 6.84,
       "edge": 0.0
     },
     "bb_lower_bounce": {
@@ -324,9 +325,9 @@
     },
     "outside_bar": {
       "wins": 1,
-      "losses": 0,
+      "losses": 1,
       "sum_win_pct": 2.97,
-      "sum_loss_pct": 0.0,
+      "sum_loss_pct": 3.61,
       "edge": 0.0
     }
   },
@@ -417,6 +418,14 @@
       "causes": [
         "weak_pattern:doji",
         "bought_bearish_tape"
+      ]
+    },
+    {
+      "date": "2026-08-13",
+      "ticker": "GRASIM",
+      "loss_pct": 3.61,
+      "causes": [
+        "no_market_tailwind"
       ]
     }
   ]

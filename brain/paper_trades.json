@@ -44,8 +44,8 @@
         "\u2713 Daily setup aligned with the higher-timeframe trend",
         "RSI=64 elevated"
       ],
-      "current_price": 1686.2,
-      "unrealized_pnl": 128.4,
+      "current_price": 1684.9,
+      "unrealized_pnl": 124.5,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -99,8 +99,8 @@
         "Broke below Pivot S1 support \u2014 bearish",
         "\u26a0 Daily sell fights the higher-timeframe uptrend \u2014 needs extra conviction"
       ],
-      "current_price": 862.95,
-      "unrealized_pnl": -47.25,
+      "current_price": 861.9,
+      "unrealized_pnl": -39.9,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -110,10 +110,10 @@
         "regime": "mixed"
       },
       "view_hist": [
-        0,
         -1,
         0,
-        0
+        0,
+        -1
       ]
     },
     {
@@ -147,8 +147,8 @@
         "\u2713 Daily setup aligned with the higher-timeframe trend",
         "Near upper Bollinger Band"
       ],
-      "current_price": 186.13,
-      "unrealized_pnl": 90.62,
+      "current_price": 186.15,
+      "unrealized_pnl": 91.54,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -198,8 +198,8 @@
         "RSI=65 elevated",
         "Near upper Bollinger Band"
       ],
-      "current_price": 1920.0,
-      "unrealized_pnl": 78.8,
+      "current_price": 1915.6,
+      "unrealized_pnl": 61.2,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -211,7 +211,7 @@
       "view_hist": [
         0,
         0,
-        0,
+        1,
         1
       ]
     },
@@ -245,8 +245,8 @@
         "In a long-term strong downtrend (2yr)",
         "\u2713 Daily setup aligned with the higher-timeframe trend"
       ],
-      "current_price": 343.1,
-      "unrealized_pnl": -86.0,
+      "current_price": 342.5,
+      "unrealized_pnl": -74.0,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -296,8 +296,8 @@
         "MACD histogram negative",
         "Broke below Pivot S1 support \u2014 bearish"
       ],
-      "current_price": 1089.0,
-      "unrealized_pnl": -18.0,
+      "current_price": 1089.3,
+      "unrealized_pnl": -16.2,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -307,6 +307,7 @@
         "regime": "choppy"
       },
       "view_hist": [
+        1,
         1,
         1,
         1
@@ -1708,7 +1709,8 @@
       "costs": 19.8,
       "pnl_pct": -3.61,
       "won": false,
-      "open_days": 3
+      "open_days": 3,
+      "forensic_done": true
     }
   ],
   "daily_snapshots": [
@@ -1851,16 +1853,23 @@
       "capital": 59316.62,
       "open_positions": 6,
       "daily_pnl": 97.75
+    },
+    {
+      "date": "2026-08-13",
+      "portfolio_value": 99703.62,
+      "capital": 59232.32,
+      "open_positions": 6,
+      "daily_pnl": -242.3
     }
   ],
   "daily_pnl_today": -242.29625,
-  "last_snapshot_date": "2026-08-12",
+  "last_snapshot_date": "2026-08-13",
   "lifetime_wins": 11,
   "lifetime_losses": 11,
   "lifetime_pnl": -443.53,
   "last_pnl_reset_date": "2026-08-13",
   "max_drawdown_pct": 1.5,
-  "current_drawdown_pct": 1.14,
+  "current_drawdown_pct": 1.49,
   "portfolio_peak": 101210.28,
-  "sessions_since_peak": 17
+  "sessions_since_peak": 18
 }

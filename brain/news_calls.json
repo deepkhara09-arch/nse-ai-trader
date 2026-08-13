@@ -1959,8 +1959,8 @@
       "direction": 1,
       "score": 0.421,
       "price_at_call": 858.0,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "flat"
     },
     {
       "date": "2026-08-10",
@@ -1968,8 +1968,8 @@
       "direction": 1,
       "score": 0.262,
       "price_at_call": 409.7,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "flat"
     },
     {
       "date": "2026-08-10",
@@ -1977,8 +1977,8 @@
       "direction": 1,
       "score": 0.494,
       "price_at_call": 1673.9,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "flat"
     },
     {
       "date": "2026-08-10",
@@ -1986,8 +1986,8 @@
       "direction": 1,
       "score": 0.408,
       "price_at_call": 3924.5,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "right"
     },
     {
       "date": "2026-08-10",
@@ -1995,8 +1995,8 @@
       "direction": 1,
       "score": 0.414,
       "price_at_call": 393.7,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "right"
     },
     {
       "date": "2026-08-10",
@@ -2004,8 +2004,8 @@
       "direction": 1,
       "score": 0.306,
       "price_at_call": 179.56,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "flat"
     },
     {
       "date": "2026-08-10",
@@ -2013,8 +2013,8 @@
       "direction": 1,
       "score": 0.223,
       "price_at_call": 3376.2,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "wrong"
     },
     {
       "date": "2026-08-11",
@@ -2159,6 +2159,78 @@
       "price_at_call": 1183.9,
       "evaluated": false,
       "outcome": ""
+    },
+    {
+      "date": "2026-08-13",
+      "ticker": "MARICO.NS",
+      "direction": 1,
+      "score": 0.29,
+      "price_at_call": 861.9,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-08-13",
+      "ticker": "SBIN.NS",
+      "direction": 1,
+      "score": 0.571,
+      "price_at_call": 1076.6,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-08-13",
+      "ticker": "UNIONBANK.NS",
+      "direction": 1,
+      "score": 0.206,
+      "price_at_call": 186.15,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-08-13",
+      "ticker": "PFC.NS",
+      "direction": 1,
+      "score": 0.291,
+      "price_at_call": 378.3,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-08-13",
+      "ticker": "PIDILITIND.NS",
+      "direction": 1,
+      "score": 0.444,
+      "price_at_call": 1684.9,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-08-13",
+      "ticker": "NIACL.NS",
+      "direction": 1,
+      "score": 0.221,
+      "price_at_call": 180.78,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-08-13",
+      "ticker": "GRASIM.NS",
+      "direction": 1,
+      "score": 0.383,
+      "price_at_call": 3245.9,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-08-13",
+      "ticker": "CHOLAFIN.NS",
+      "direction": -1,
+      "score": -0.544,
+      "price_at_call": 1915.6,
+      "evaluated": false,
+      "outcome": ""
     }
   ],
   "reliability": {
@@ -2259,10 +2331,10 @@
       "last_seen": "2026-07-29"
     },
     "SIEMENS.NS": {
-      "wins": 6.759,
-      "losses": 2.882,
-      "reliability": 0.701,
-      "last_seen": "2026-08-12"
+      "wins": 7.72,
+      "losses": 2.865,
+      "reliability": 0.729,
+      "last_seen": "2026-08-13"
     },
     "POWERGRID.NS": {
       "wins": 0.0,
@@ -2283,10 +2355,16 @@
       "last_seen": "2026-08-04"
     },
     "LICI.NS": {
-      "wins": 1.0,
+      "wins": 1.994,
       "losses": 0.0,
-      "reliability": 0.667,
-      "last_seen": "2026-08-12"
+      "reliability": 0.832,
+      "last_seen": "2026-08-13"
+    },
+    "GRASIM.NS": {
+      "wins": 0.0,
+      "losses": 1.0,
+      "reliability": 0.333,
+      "last_seen": "2026-08-13"
     }
   }
 }

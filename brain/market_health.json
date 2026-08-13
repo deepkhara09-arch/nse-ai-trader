@@ -1,6 +1,6 @@
 {
   "date": "2026-08-13",
-  "session": "intraday_close",
+  "session": "preclose",
   "nifty": {
     "symbol": "^NSEI",
     "value": 24435.95,
@@ -13,7 +13,7 @@
     "value": 11.69,
     "level": "normal",
     "percentile_30d": 3.0,
-    "avg_30d": 12.69
+    "avg_30d": 12.6
   },
   "bank_nifty": {
     "symbol": "^NSEBANK",
@@ -38,7 +38,7 @@
       "value": 27.43,
       "day_change_pct": -0.22,
       "trend_5d": "sideways",
-      "trend_20d": "unknown",
+      "trend_20d": "up",
       "ath_pct_60d": -2.07
     },
     "Bank": {
@@ -58,11 +58,10 @@
       "ath_pct_60d": -2.06
     }
   },
-  "market_mood": "bearish",
+  "market_mood": "neutral",
   "trade_allowed": true,
   "warnings": [
-    "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
-    "Nifty choppy intraday \u2014 wait for cleaner setups"
+    "Nifty in downtrend (down) \u2014 only high-confidence BUY signals"
   ],
   "leading_sectors": [
     "IT"
@@ -70,7 +69,7 @@
   "market_regime": "normal",
   "sector_breadth": 0.25,
   "lagging_sectors": [],
-  "intraday_regime": "choppy",
+  "intraday_regime": "mixed",
   "macro": {
     "date": "2026-08-13",
     "session": "midday",
@@ -322,13 +321,13 @@
   "flow_tailwind": true,
   "pcr": {
     "date": "2026-08-13",
-    "pcr": 0.754,
+    "pcr": 0.776,
     "reading": "bearish_bias",
-    "total_pe_oi": 1447154,
-    "total_ce_oi": 1918926,
-    "spot": 24435.95,
+    "total_pe_oi": 1777332,
+    "total_ce_oi": 2290859,
+    "spot": 24395.85,
     "max_pain": 24400.0,
-    "max_pain_dist_pct": 0.15,
+    "max_pain_dist_pct": -0.02,
     "oi_bias": "call_heavy_resistance",
     "ok": true,
     "error": ""

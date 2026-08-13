@@ -1,13 +1,13 @@
 {
   "phase": "paper_trading",
-  "day": 38,
-  "session": "intraday_close",
+  "day": 39,
+  "session": "morning",
   "start_date": "2026-06-22",
   "phase_start_date": "2026-07-15",
-  "last_run_date": "2026-08-12",
-  "last_counted_date": "2026-08-12",
-  "cohort_last_tick_date": "2026-08-12",
-  "last_updated": "2026-08-13T09:43:29.921880",
+  "last_run_date": "2026-08-13",
+  "last_counted_date": "2026-08-13",
+  "cohort_last_tick_date": "2026-08-13",
+  "last_updated": "2026-08-13T10:12:19.351165",
   "focus_stocks": [
     "MARICO.NS",
     "SBIN.NS",
@@ -137,45 +137,6 @@
   "schema_version": 11,
   "background_batches": [
     {
-      "id": 20,
-      "day": 7,
-      "start_date": "2026-07-30",
-      "ready": true,
-      "candidates": [
-        "ASIANPAINT.NS",
-        "MARICO.NS",
-        "SWIGGY.NS",
-        "CIPLA.NS",
-        "ABCAPITAL.NS",
-        "ICICIBANK.NS",
-        "UNIONBANK.NS",
-        "NTPC.NS",
-        "NIACL.NS",
-        "CHOLAFIN.NS",
-        "SBIN.NS",
-        "TCS.NS",
-        "IDFCFIRSTB.NS",
-        "PFC.NS",
-        "GAIL.NS",
-        "ANANTRAJ.NS",
-        "SHRIRAMFIN.NS",
-        "TECHM.NS",
-        "BAJFINANCE.NS",
-        "GRASIM.NS",
-        "PIDILITIND.NS",
-        "RELIANCE.NS",
-        "IRCTC.NS",
-        "POLICYBZR.NS",
-        "KOTAKBANK.NS",
-        "INFY.NS",
-        "BPCL.NS",
-        "SBILIFE.NS",
-        "PAYTM.NS",
-        "LICI.NS"
-      ],
-      "scored_date": "2026-08-07"
-    },
-    {
       "id": 21,
       "day": 7,
       "start_date": "2026-07-31",
@@ -294,29 +255,36 @@
     },
     {
       "id": 24,
-      "day": 4,
+      "day": 5,
       "start_date": "2026-08-07",
       "ready": false,
       "candidates": []
     },
     {
       "id": 25,
-      "day": 3,
+      "day": 4,
       "start_date": "2026-08-10",
       "ready": false,
       "candidates": []
     },
     {
       "id": 26,
-      "day": 2,
+      "day": 3,
       "start_date": "2026-08-11",
       "ready": false,
       "candidates": []
     },
     {
       "id": 27,
-      "day": 1,
+      "day": 2,
       "start_date": "2026-08-12",
+      "ready": false,
+      "candidates": []
+    },
+    {
+      "id": 28,
+      "day": 1,
+      "start_date": "2026-08-13",
       "ready": false,
       "candidates": []
     }
@@ -365,6 +333,7 @@
     "morning": "2026-08-13",
     "midday": "2026-08-13",
     "afternoon": "2026-08-13",
-    "intraday_close": "2026-08-13"
+    "intraday_close": "2026-08-13",
+    "preclose": "2026-08-13"
   }
 }

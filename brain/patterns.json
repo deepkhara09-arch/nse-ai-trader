@@ -2692,5 +2692,74 @@
         }
       }
     }
+  },
+  "GRASIM.NS": {
+    "reliable_patterns": {
+      "supertrend_bullish": {
+        "wins": 0.0,
+        "losses": 1.0,
+        "reliability": 0.333,
+        "last_seen": "2026-08-13"
+      },
+      "pivot_r2_breakout": {
+        "wins": 0.0,
+        "losses": 1.0,
+        "reliability": 0.333,
+        "last_seen": "2026-08-13"
+      },
+      "52w_breakout": {
+        "wins": 0.0,
+        "losses": 1.0,
+        "reliability": 0.333,
+        "last_seen": "2026-08-13"
+      },
+      "bb_upper_rejection": {
+        "wins": 0.0,
+        "losses": 1.0,
+        "reliability": 0.333,
+        "last_seen": "2026-08-13"
+      },
+      "tweezer_bottom": {
+        "wins": 0.0,
+        "losses": 1.0,
+        "reliability": 0.333,
+        "last_seen": "2026-08-13"
+      },
+      "near_52w_high": {
+        "wins": 0.0,
+        "losses": 1.0,
+        "reliability": 0.333,
+        "last_seen": "2026-08-13"
+      },
+      "full_bullish_alignment": {
+        "wins": 0.0,
+        "losses": 1.0,
+        "reliability": 0.333,
+        "last_seen": "2026-08-13"
+      },
+      "outside_bar": {
+        "wins": 0.0,
+        "losses": 1.0,
+        "reliability": 0.333,
+        "last_seen": "2026-08-13"
+      },
+      "pivot_r1_breakout": {
+        "wins": 0.0,
+        "losses": 1.0,
+        "reliability": 0.333,
+        "last_seen": "2026-08-13"
+      }
+    },
+    "preferred_style": "swing",
+    "swing_wins": 0,
+    "swing_losses": 1,
+    "intraday_wins": 0,
+    "intraday_losses": 0,
+    "long_term_wins": 0,
+    "long_term_losses": 0,
+    "atr_stop_hits": 1,
+    "atr_target_hits": 0,
+    "atr_multiplier": 1.5,
+    "last_updated": "2026-08-13"
   }
 }

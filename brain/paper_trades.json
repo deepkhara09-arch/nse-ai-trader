@@ -1,5 +1,5 @@
 {
-  "capital": 59316.61736999999,
+  "capital": 59232.32111999999,
   "open_positions": [
     {
       "ticker": "PIDILITIND.NS",
@@ -44,8 +44,8 @@
         "\u2713 Daily setup aligned with the higher-timeframe trend",
         "RSI=64 elevated"
       ],
-      "current_price": 1697.5,
-      "unrealized_pnl": 162.3,
+      "current_price": 1689.4,
+      "unrealized_pnl": 138.0,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -62,65 +62,6 @@
       ],
       "t1_booked": true,
       "trailing_active": true
-    },
-    {
-      "ticker": "GRASIM.NS",
-      "sector": "Metals",
-      "open_date": "2026-08-10",
-      "open_session": "morning",
-      "action": "BUY",
-      "entry": 3355.0,
-      "qty": 2,
-      "invested": 6710.0,
-      "stop_loss": 3243.75,
-      "target": 3577.5,
-      "style": "swing",
-      "confidence": 95,
-      "patterns": [
-        "supertrend_bullish",
-        "pivot_r2_breakout",
-        "52w_breakout",
-        "bb_upper_rejection",
-        "tweezer_bottom",
-        "near_52w_high",
-        "full_bullish_alignment",
-        "outside_bar",
-        "pivot_r1_breakout"
-      ],
-      "buy_reasons": [
-        "All EMAs stacked bullish",
-        "MACD histogram positive",
-        "High volume confirmation (2.0x avg)",
-        "Candlestick: tweezer bottom",
-        "52-week breakout on high volume \u2014 strong momentum",
-        "Near 52-week high \u2014 potential breakout zone",
-        "\u26a0 Earnings in 5d \u2014 position size reduced",
-        "Sector tailwind (momentum=0.49)",
-        "Supertrend bullish \u2014 price above trend band",
-        "Broke above Pivot R1 with volume \u2014 bullish",
-        "Broke above Pivot R2 \u2014 strong momentum",
-        "In a long-term strong uptrend (2yr) \u2014 trend on our side",
-        "Near 52-week high (94% of range) \u2014 breakout zone",
-        "\u2713 Daily setup aligned with the higher-timeframe trend",
-        "RSI=66 elevated",
-        "Near upper Bollinger Band"
-      ],
-      "current_price": 3313.7,
-      "unrealized_pnl": -82.6,
-      "max_held_days": 10,
-      "vol_regime_pct": 0.12,
-      "entry_market": {
-        "nifty_trend": "down",
-        "vix": 12.16,
-        "mood": "neutral",
-        "regime": "mixed"
-      },
-      "view_hist": [
-        0,
-        1,
-        0,
-        0
-      ]
     },
     {
       "ticker": "MARICO.NS",
@@ -158,8 +99,8 @@
         "Broke below Pivot S1 support \u2014 bearish",
         "\u26a0 Daily sell fights the higher-timeframe uptrend \u2014 needs extra conviction"
       ],
-      "current_price": 849.0,
-      "unrealized_pnl": 50.4,
+      "current_price": 853.65,
+      "unrealized_pnl": 17.85,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -170,9 +111,9 @@
       },
       "view_hist": [
         1,
-        1,
         0,
-        -1
+        -1,
+        0
       ]
     },
     {
@@ -206,8 +147,8 @@
         "\u2713 Daily setup aligned with the higher-timeframe trend",
         "Near upper Bollinger Band"
       ],
-      "current_price": 186.7,
-      "unrealized_pnl": 116.84,
+      "current_price": 186.48,
+      "unrealized_pnl": 106.72,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -257,8 +198,8 @@
         "RSI=65 elevated",
         "Near upper Bollinger Band"
       ],
-      "current_price": 1900.9,
-      "unrealized_pnl": 2.4,
+      "current_price": 1900.0,
+      "unrealized_pnl": -1.2,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -269,7 +210,7 @@
       },
       "view_hist": [
         1,
-        1,
+        0,
         0,
         0
       ]
@@ -304,8 +245,8 @@
         "In a long-term strong downtrend (2yr)",
         "\u2713 Daily setup aligned with the higher-timeframe trend"
       ],
-      "current_price": 338.5,
-      "unrealized_pnl": 6.0,
+      "current_price": 339.75,
+      "unrealized_pnl": -19.0,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -318,8 +259,53 @@
         1,
         1,
         1,
-        1
+        0
       ]
+    },
+    {
+      "ticker": "BAJFINANCE.NS",
+      "sector": "NBFC",
+      "open_date": "2026-08-13",
+      "open_session": "morning",
+      "action": "BUY",
+      "entry": 1092.0,
+      "qty": 6,
+      "invested": 6552.0,
+      "stop_loss": 1041.63,
+      "target": 1192.74,
+      "style": "swing",
+      "confidence": 85.3,
+      "patterns": [
+        "rsi_bullish_divergence",
+        "full_bullish_alignment",
+        "adx_strong_trend_up",
+        "pivot_point_test",
+        "doji",
+        "pivot_s1_breakdown",
+        "dragonfly_doji"
+      ],
+      "buy_reasons": [
+        "All EMAs stacked bullish",
+        "Candlestick: dragonfly doji",
+        "RSI bullish divergence \u2014 price lower but RSI higher",
+        "ADX strong trend \u2014 directional move confirmed",
+        "Testing pivot point \u2014 decision zone",
+        "In a long-term strong uptrend (2yr) \u2014 trend on our side",
+        "\u2713 Daily setup aligned with the higher-timeframe trend",
+        "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
+        "MACD histogram negative",
+        "Broke below Pivot S1 support \u2014 bearish"
+      ],
+      "current_price": 1092.0,
+      "unrealized_pnl": 0.0,
+      "max_held_days": 10,
+      "vol_regime_pct": 0.12,
+      "entry_market": {
+        "nifty_trend": "down",
+        "vix": 11.69,
+        "mood": "bearish",
+        "regime": "choppy"
+      }
     }
   ],
   "closed_trades": [
@@ -1649,6 +1635,75 @@
       "won": true,
       "open_days": 5,
       "forensic_done": true
+    },
+    {
+      "ticker": "GRASIM.NS",
+      "sector": "Metals",
+      "open_date": "2026-08-10",
+      "open_session": "morning",
+      "action": "BUY",
+      "entry": 3355.0,
+      "qty": 2,
+      "invested": 6710.0,
+      "stop_loss": 3243.75,
+      "target": 3577.5,
+      "style": "swing",
+      "confidence": 95,
+      "patterns": [
+        "supertrend_bullish",
+        "pivot_r2_breakout",
+        "52w_breakout",
+        "bb_upper_rejection",
+        "tweezer_bottom",
+        "near_52w_high",
+        "full_bullish_alignment",
+        "outside_bar",
+        "pivot_r1_breakout"
+      ],
+      "buy_reasons": [
+        "All EMAs stacked bullish",
+        "MACD histogram positive",
+        "High volume confirmation (2.0x avg)",
+        "Candlestick: tweezer bottom",
+        "52-week breakout on high volume \u2014 strong momentum",
+        "Near 52-week high \u2014 potential breakout zone",
+        "\u26a0 Earnings in 5d \u2014 position size reduced",
+        "Sector tailwind (momentum=0.49)",
+        "Supertrend bullish \u2014 price above trend band",
+        "Broke above Pivot R1 with volume \u2014 bullish",
+        "Broke above Pivot R2 \u2014 strong momentum",
+        "In a long-term strong uptrend (2yr) \u2014 trend on our side",
+        "Near 52-week high (94% of range) \u2014 breakout zone",
+        "\u2713 Daily setup aligned with the higher-timeframe trend",
+        "RSI=66 elevated",
+        "Near upper Bollinger Band"
+      ],
+      "current_price": 3236.0,
+      "unrealized_pnl": -238.0,
+      "max_held_days": 10,
+      "vol_regime_pct": 0.12,
+      "entry_market": {
+        "nifty_trend": "down",
+        "vix": 12.16,
+        "mood": "neutral",
+        "regime": "mixed"
+      },
+      "view_hist": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "close_date": "2026-08-13",
+      "close_session": "morning",
+      "exit_price": 3243.75,
+      "exit_reason": "stop_hit",
+      "pnl": -242.3,
+      "pnl_gross": -222.5,
+      "costs": 19.8,
+      "pnl_pct": -3.61,
+      "won": false,
+      "open_days": 3
     }
   ],
   "daily_snapshots": [
@@ -1793,12 +1848,12 @@
       "daily_pnl": 97.75
     }
   ],
-  "daily_pnl_today": 97.75,
+  "daily_pnl_today": -242.29625,
   "last_snapshot_date": "2026-08-12",
   "lifetime_wins": 11,
-  "lifetime_losses": 10,
-  "lifetime_pnl": -201.23,
-  "last_pnl_reset_date": "2026-08-12",
+  "lifetime_losses": 11,
+  "lifetime_pnl": -443.53,
+  "last_pnl_reset_date": "2026-08-13",
   "max_drawdown_pct": 1.5,
   "current_drawdown_pct": 1.14,
   "portfolio_peak": 101210.28,

@@ -4398,5 +4398,45 @@
     "ts": "2026-08-13T03:05:44.569562",
     "detail": "Rank \u25bc1 (#5 \u2192 #6)",
     "confidence": 66.5
+  },
+  {
+    "type": "removed",
+    "ticker": "GAIL.NS",
+    "nse_code": "GAIL",
+    "signal": "BUY",
+    "date": "2026-08-13",
+    "ts": "2026-08-13T04:05:47.273038",
+    "detail": "Dropped \u2014 no longer meets threshold (was 74/100)",
+    "confidence": 0
+  },
+  {
+    "type": "updated",
+    "ticker": "PIDILITIND.NS",
+    "nse_code": "PIDILITIND",
+    "signal": "BUY",
+    "date": "2026-08-13",
+    "ts": "2026-08-13T04:05:47.273038",
+    "detail": "Confidence \u25bc4 (86 \u2192 82) | Rank \u25bc1 (#5 \u2192 #6) | Stop loss moved \u20b91651.68 \u2192 \u20b91636.81",
+    "confidence": 82.2
+  },
+  {
+    "type": "updated",
+    "ticker": "UNIONBANK.NS",
+    "nse_code": "UNIONBANK",
+    "signal": "BUY",
+    "date": "2026-08-13",
+    "ts": "2026-08-13T04:05:47.273038",
+    "detail": "Target 1 moved \u20b9197.70 \u2192 \u20b9198.99",
+    "confidence": 71.8
+  },
+  {
+    "type": "updated",
+    "ticker": "SBIN.NS",
+    "nse_code": "SBIN",
+    "signal": "BUY",
+    "date": "2026-08-13",
+    "ts": "2026-08-13T04:05:47.273038",
+    "detail": "Rank \u25bc1 (#6 \u2192 #7)",
+    "confidence": 68.9
   }
 ]

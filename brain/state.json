@@ -1,13 +1,13 @@
 {
   "phase": "paper_trading",
   "day": 38,
-  "session": "preopen",
+  "session": "morning",
   "start_date": "2026-06-22",
   "phase_start_date": "2026-07-15",
   "last_run_date": "2026-08-12",
   "last_counted_date": "2026-08-12",
   "cohort_last_tick_date": "2026-08-12",
-  "last_updated": "2026-08-13T03:05:44.450132",
+  "last_updated": "2026-08-13T04:05:47.195782",
   "focus_stocks": [
     "MARICO.NS",
     "SBIN.NS",
@@ -48,14 +48,14 @@
     "BHEL.NS"
   ],
   "paper_trade_stats": {
-    "total": 21,
+    "total": 22,
     "wins": 11,
-    "losses": 10,
-    "win_rate": 0.524,
-    "total_pnl": -201.23,
+    "losses": 11,
+    "win_rate": 0.5,
+    "total_pnl": -443.53,
     "avg_win": 133.29,
-    "avg_loss": -166.74,
-    "expectancy": -9.58
+    "avg_loss": -173.61,
+    "expectancy": -20.16
   },
   "brain_notes": [
     "[2026-06-23] Pre-open macro: neutral (+0.07)",
@@ -361,6 +361,7 @@
     "scored_date": "2026-08-12"
   },
   "sessions_done": {
-    "preopen": "2026-08-13"
+    "preopen": "2026-08-13",
+    "morning": "2026-08-13"
   }
 }

@@ -4458,5 +4458,35 @@
     "ts": "2026-08-13T05:57:06.174583",
     "detail": "Target 1 moved \u20b91134.56 \u2192 \u20b91142.96",
     "confidence": 68.9
+  },
+  {
+    "type": "removed",
+    "ticker": "CIPLA.NS",
+    "nse_code": "CIPLA",
+    "signal": "BUY",
+    "date": "2026-08-13",
+    "ts": "2026-08-13T07:45:51.982213",
+    "detail": "Dropped \u2014 no longer meets threshold (was 72/100)",
+    "confidence": 0
+  },
+  {
+    "type": "updated",
+    "ticker": "PIDILITIND.NS",
+    "nse_code": "PIDILITIND",
+    "signal": "BUY",
+    "date": "2026-08-13",
+    "ts": "2026-08-13T07:45:51.982213",
+    "detail": "Stop loss moved \u20b91635.51 \u2192 \u20b91651.68",
+    "confidence": 82.2
+  },
+  {
+    "type": "updated",
+    "ticker": "SBIN.NS",
+    "nse_code": "SBIN",
+    "signal": "BUY",
+    "date": "2026-08-13",
+    "ts": "2026-08-13T07:45:51.982213",
+    "detail": "Target 1 moved \u20b91142.96 \u2192 \u20b91136.96",
+    "confidence": 68.9
   }
 ]

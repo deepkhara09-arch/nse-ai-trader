@@ -1,102 +1,102 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of rsi_bearish_divergence, bb_upper_rejection, morning_star mean for a swing trade on UNIONBANK? Current RSI=65, MACD hist=+1.3469, Vol=1.2x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of morning_star, rsi_bearish_divergence, bb_upper_rejection mean for a swing trade on UNIONBANK? Current RSI=65, MACD hist=+1.3469, Vol=1.2x average. Signal is BUY.",
     "context": {
       "ticker": "UNIONBANK.NS",
       "signal": "BUY",
-      "patterns": "rsi_bearish_divergence, bb_upper_rejection, morning_star",
+      "patterns": "morning_star, rsi_bearish_divergence, bb_upper_rejection",
       "rsi": 64.7
     },
-    "queued_at": "2026-08-13T05:57:06.046554"
+    "queued_at": "2026-08-13T07:45:51.857643"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of pivot_point_test, full_bullish_alignment, stoch_rsi_overbought_reversal mean for a swing trade on CHOLAFIN? Current RSI=68, MACD hist=+8.7932, Vol=0.9x average. Signal is SELL.",
+    "question": "In Indian NSE markets, what does the combination of supertrend_bullish, full_bullish_alignment, pivot_point_test mean for a swing trade on CHOLAFIN? Current RSI=68, MACD hist=+8.7932, Vol=0.9x average. Signal is BUY.",
     "context": {
       "ticker": "CHOLAFIN.NS",
-      "signal": "SELL",
-      "patterns": "pivot_point_test, full_bullish_alignment, stoch_rsi_overbought_reversal",
+      "signal": "BUY",
+      "patterns": "supertrend_bullish, full_bullish_alignment, pivot_point_test",
       "rsi": 68.1
     },
-    "queued_at": "2026-08-13T05:57:06.047400"
+    "queued_at": "2026-08-13T07:45:51.858446"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of evening_star, dragonfly_doji, rsi_bullish_divergence mean for a swing trade on BAJFINANCE? Current RSI=59, MACD hist=-3.8662, Vol=0.7x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of dragonfly_doji, rsi_bullish_divergence, evening_star mean for a swing trade on BAJFINANCE? Current RSI=59, MACD hist=-3.8214, Vol=0.7x average. Signal is BUY.",
     "context": {
       "ticker": "BAJFINANCE.NS",
       "signal": "BUY",
-      "patterns": "evening_star, dragonfly_doji, rsi_bullish_divergence",
+      "patterns": "dragonfly_doji, rsi_bullish_divergence, evening_star",
       "rsi": 59.1
     },
-    "queued_at": "2026-08-13T05:57:06.048790"
+    "queued_at": "2026-08-13T07:45:51.859754"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_down, doji, hammer mean for a swing trade on MARICO? Current RSI=53, MACD hist=-2.4923, Vol=1.0x average. Signal is BUY.",
-    "context": {
-      "ticker": "MARICO.NS",
-      "signal": "BUY",
-      "patterns": "adx_strong_trend_down, doji, hammer",
-      "rsi": 52.7
-    },
-    "queued_at": "2026-08-13T05:57:06.153031"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of strong_bullish_marubozu, pivot_r2_breakout mean for a swing trade on SBIN? Current RSI=73, MACD hist=+4.9055, Vol=1.5x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of strong_bullish_marubozu, pivot_r2_breakout mean for a swing trade on SBIN? Current RSI=73, MACD hist=+4.7615, Vol=1.5x average. Signal is BUY.",
     "context": {
       "ticker": "SBIN.NS",
       "signal": "BUY",
       "patterns": "strong_bullish_marubozu, pivot_r2_breakout",
       "rsi": 72.9
     },
-    "queued_at": "2026-08-13T05:57:06.153966"
+    "queued_at": "2026-08-13T07:45:51.965011"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of rsi_bearish_divergence, bb_upper_rejection, morning_star mean for a swing trade on UNIONBANK? Current RSI=65, MACD hist=+1.3469, Vol=1.2x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of morning_star, rsi_bearish_divergence, bb_upper_rejection mean for a swing trade on UNIONBANK? Current RSI=65, MACD hist=+1.3469, Vol=1.2x average. Signal is BUY.",
     "context": {
       "ticker": "UNIONBANK.NS",
       "signal": "BUY",
-      "patterns": "rsi_bearish_divergence, bb_upper_rejection, morning_star",
+      "patterns": "morning_star, rsi_bearish_divergence, bb_upper_rejection",
       "rsi": 64.7
     },
-    "queued_at": "2026-08-13T05:57:06.158512"
+    "queued_at": "2026-08-13T07:45:51.969291"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of low_volume_drift, pivot_point_test, full_bullish_alignment mean for a swing trade on CIPLA? Current RSI=73, MACD hist=+0.1857, Vol=0.5x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of stoch_rsi_oversold_reversal, adx_ranging_market, inside_bar mean for a swing trade on ASIANPAINT? Current RSI=56, MACD hist=+0.2825, Vol=0.9x average. Signal is BUY.",
+    "context": {
+      "ticker": "ASIANPAINT.NS",
+      "signal": "BUY",
+      "patterns": "stoch_rsi_oversold_reversal, adx_ranging_market, inside_bar",
+      "rsi": 56.5
+    },
+    "queued_at": "2026-08-13T07:45:51.976508"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of stoch_rsi_overbought_reversal, low_volume_drift, pivot_s1_breakdown mean for a swing trade on CIPLA? Current RSI=73, MACD hist=+0.1857, Vol=0.5x average. Signal is BUY.",
     "context": {
       "ticker": "CIPLA.NS",
       "signal": "BUY",
-      "patterns": "low_volume_drift, pivot_point_test, full_bullish_alignment",
+      "patterns": "stoch_rsi_overbought_reversal, low_volume_drift, pivot_s1_breakdown",
       "rsi": 72.6
     },
-    "queued_at": "2026-08-13T05:57:06.166788"
+    "queued_at": "2026-08-13T07:45:51.977387"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of full_bullish_alignment, supertrend_bullish mean for a swing trade on NIACL? Current RSI=58, MACD hist=+0.9673, Vol=1.0x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of supertrend_bullish, full_bullish_alignment, pivot_point_test mean for a swing trade on NIACL? Current RSI=58, MACD hist=+0.8734, Vol=1.0x average. Signal is BUY.",
     "context": {
       "ticker": "NIACL.NS",
       "signal": "BUY",
-      "patterns": "full_bullish_alignment, supertrend_bullish",
+      "patterns": "supertrend_bullish, full_bullish_alignment, pivot_point_test",
       "rsi": 58.1
     },
-    "queued_at": "2026-08-13T05:57:06.170647"
+    "queued_at": "2026-08-13T07:45:51.978670"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of pivot_point_test, full_bullish_alignment, stoch_rsi_overbought_reversal mean for a swing trade on CHOLAFIN? Current RSI=68, MACD hist=+8.7932, Vol=0.9x average. Signal is SELL.",
+    "question": "In Indian NSE markets, what does the combination of supertrend_bullish, full_bullish_alignment, pivot_point_test mean for a swing trade on CHOLAFIN? Current RSI=68, MACD hist=+8.7932, Vol=0.9x average. Signal is BUY.",
     "context": {
       "ticker": "CHOLAFIN.NS",
-      "signal": "SELL",
-      "patterns": "pivot_point_test, full_bullish_alignment, stoch_rsi_overbought_reversal",
+      "signal": "BUY",
+      "patterns": "supertrend_bullish, full_bullish_alignment, pivot_point_test",
       "rsi": 68.1
     },
-    "queued_at": "2026-08-13T05:57:06.172061"
+    "queued_at": "2026-08-13T07:45:51.979982"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of evening_star, dragonfly_doji, rsi_bullish_divergence mean for a swing trade on BAJFINANCE? Current RSI=59, MACD hist=-3.8662, Vol=0.7x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of dragonfly_doji, rsi_bullish_divergence, evening_star mean for a swing trade on BAJFINANCE? Current RSI=59, MACD hist=-3.8214, Vol=0.7x average. Signal is BUY.",
     "context": {
       "ticker": "BAJFINANCE.NS",
       "signal": "BUY",
-      "patterns": "evening_star, dragonfly_doji, rsi_bullish_divergence",
+      "patterns": "dragonfly_doji, rsi_bullish_divergence, evening_star",
       "rsi": 59.1
     },
-    "queued_at": "2026-08-13T05:57:06.173480"
+    "queued_at": "2026-08-13T07:45:51.981269"
   }
 ]

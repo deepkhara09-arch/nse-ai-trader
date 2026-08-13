@@ -1,55 +1,55 @@
 {
-  "date": "2026-08-12",
-  "session": "midday",
-  "generated_at": "2026-08-12T06:15:49.655895",
-  "global_score": 0.147,
-  "india_score": -0.5,
-  "overall_score": -0.144,
+  "date": "2026-08-13",
+  "session": "preopen",
+  "generated_at": "2026-08-13T03:05:42.817084",
+  "global_score": 0.349,
+  "india_score": 0.0,
+  "overall_score": 0.192,
   "mood": "neutral",
   "drivers": [
-    "CoreWeave\u2019s stock soars as earnings show major AI momentum",
-    "Super Micro\u2019s earnings report brings more good news, and the stock is climbing",
-    "Lumentum sees sales more than double as AI demand swells",
-    "\u2018I unexpectedly came into some money\u2019: Is putting $20,000 into CDs a smart move?",
-    "Is $1 million enough for a household to retire? The answer keeps changing.",
+    "Cisco sees record results from an AI \u2018supercycle,\u2019 but its stock pulls back",
+    "My wife can claim $900 at 62. Should she take it now \u2014 or wait for her spousal benefit?",
     "I found a $100 bill in the communal washer at my Airbnb. What should I do?",
     "\u2018The market is obviously on fire\u2019: Should I take $1,000 from my brokerage account to pay off my car loan?",
-    "We live on a farm and have $2.2 million saved for retirement. We\u2019re ready to retire abroad. Can we afford it?"
+    "Is $1 million enough for a household to retire? The answer keeps changing.",
+    "China\u2019s next economic ambition: workshop for the Muslim world",
+    "Nebius adds to the excitement around neocloud stocks with upbeat earnings of its own",
+    "Lumentum\u2019s stock surges, giving a further boost to the optical-networking trade"
   ],
   "global_cues": {
     "dow": {
-      "last": 53791.85,
-      "chg_pct": -0.34
+      "last": 53770.27,
+      "chg_pct": -0.04
     },
     "nasdaq": {
-      "last": 26445.45,
-      "chg_pct": -0.6
+      "last": 26588.49,
+      "chg_pct": 0.54
     },
     "sp500": {
-      "last": 7728.2,
-      "chg_pct": -0.32
+      "last": 7748.5,
+      "chg_pct": 0.26
     },
     "nikkei": {
-      "last": 67517.8,
-      "chg_pct": 0.82
+      "last": 68609.92,
+      "chg_pct": 1.61
     },
     "crude": {
-      "last": 83.2,
-      "chg_pct": 1.3
+      "last": 82.21,
+      "chg_pct": -1.19
     },
     "usdinr": {
-      "last": 95.43,
-      "chg_pct": 0.03
+      "last": 95.32,
+      "chg_pct": -0.06
     },
     "gold": {
-      "last": 4383.0,
-      "chg_pct": 0.49
+      "last": 4466.2,
+      "chg_pct": 1.9
     }
   },
-  "summary": "Overall macro mood is neutral (-0.14). US Dow -0.3% overnight. Crude +1.3%. USD/INR +0.0%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
+  "summary": "Overall macro mood is neutral (+0.19). US Dow -0.0% overnight. Crude -1.2%. USD/INR -0.1%. Notable: US Fed rate hike / hawkish; Geopolitical conflict / war.",
   "playbook": [
-    "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
-    "Trade-war headlines spook global markets; IT & export names react most."
+    "Hawkish Fed pressures Nifty via FII outflows and stronger USD.",
+    "Geopolitical shocks trigger global risk-off; gold up, equities down initially."
   ],
   "playbook_bias": "risk_off",
   "article_count": 60

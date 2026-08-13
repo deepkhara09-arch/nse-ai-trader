@@ -4438,5 +4438,25 @@
     "open": 6,
     "recs": 1,
     "summary": "Preclose run \u00b7 Paper-trading trading-day 21 \u00b7 6 open \u00b7 21 closed (52% WR) \u00b7 1 live rec(s)."
+  },
+  {
+    "date": "2026-08-13",
+    "triggered_at": "2026-08-13 08:35 IST",
+    "session": "preopen",
+    "phase": "paper_trading",
+    "day": 38,
+    "stats": {
+      "total": 21,
+      "wins": 11,
+      "losses": 10,
+      "win_rate": 0.524,
+      "total_pnl": -201.23,
+      "avg_win": 133.29,
+      "avg_loss": -166.74,
+      "expectancy": -9.58
+    },
+    "open": 6,
+    "recs": 4,
+    "summary": "Pre-open sweep \u2014 macro mood bearish; dashboard refreshed (no trading)."
   }
 ]

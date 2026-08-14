@@ -1,26 +1,26 @@
 {
   "date": "2026-08-14",
-  "session": "afternoon",
+  "session": "intraday_close",
   "nifty": {
     "symbol": "^NSEI",
     "value": 24395.85,
     "day_change_pct": -0.16,
     "trend_5d": "sideways",
-    "trend_20d": "up",
+    "trend_20d": "sideways",
     "ath_pct_60d": -1.53
   },
   "vix": {
     "value": 11.42,
     "level": "normal",
     "percentile_30d": 0.0,
-    "avg_30d": 12.62
+    "avg_30d": 12.59
   },
   "bank_nifty": {
     "symbol": "^NSEBANK",
     "value": 57635.25,
     "day_change_pct": -0.43,
     "trend_5d": "sideways",
-    "trend_20d": "sideways",
+    "trend_20d": "down",
     "ath_pct_60d": -1.82,
     "diverging": false
   },
@@ -38,7 +38,7 @@
       "value": 27.45,
       "day_change_pct": 0.07,
       "trend_5d": "sideways",
-      "trend_20d": "unknown",
+      "trend_20d": "strong_up",
       "ath_pct_60d": -2.0
     },
     "Bank": {
@@ -58,7 +58,7 @@
       "ath_pct_60d": -2.49
     }
   },
-  "market_mood": "bullish",
+  "market_mood": "neutral",
   "trade_allowed": true,
   "warnings": [],
   "leading_sectors": [],
@@ -67,7 +67,7 @@
   "lagging_sectors": [
     "Infra"
   ],
-  "intraday_regime": "trending_up",
+  "intraday_regime": "mixed",
   "macro": {
     "date": "2026-08-14",
     "session": "midday",

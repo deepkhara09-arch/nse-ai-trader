@@ -44,8 +44,8 @@
         "\u2713 Daily setup aligned with the higher-timeframe trend",
         "RSI=64 elevated"
       ],
-      "current_price": 1684.9,
-      "unrealized_pnl": 124.5,
+      "current_price": 1690.7,
+      "unrealized_pnl": 141.9,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -72,7 +72,7 @@
       "entry": 856.2,
       "qty": 7,
       "invested": 5993.4,
-      "stop_loss": 885.02,
+      "stop_loss": 881.56,
       "target": 798.56,
       "style": "swing",
       "confidence": 76.0,
@@ -99,8 +99,8 @@
         "Broke below Pivot S1 support \u2014 bearish",
         "\u26a0 Daily sell fights the higher-timeframe uptrend \u2014 needs extra conviction"
       ],
-      "current_price": 861.9,
-      "unrealized_pnl": -39.9,
+      "current_price": 858.1,
+      "unrealized_pnl": -13.3,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -110,11 +110,12 @@
         "regime": "mixed"
       },
       "view_hist": [
+        0,
+        0,
         -1,
-        0,
-        0,
         -1
-      ]
+      ],
+      "stale_tightened": true
     },
     {
       "ticker": "UNIONBANK.NS",
@@ -147,8 +148,8 @@
         "\u2713 Daily setup aligned with the higher-timeframe trend",
         "Near upper Bollinger Band"
       ],
-      "current_price": 186.15,
-      "unrealized_pnl": 91.54,
+      "current_price": 186.9,
+      "unrealized_pnl": 126.04,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -161,7 +162,7 @@
         1,
         1,
         1,
-        1
+        0
       ]
     },
     {
@@ -198,8 +199,8 @@
         "RSI=65 elevated",
         "Near upper Bollinger Band"
       ],
-      "current_price": 1915.6,
-      "unrealized_pnl": 61.2,
+      "current_price": 1904.2,
+      "unrealized_pnl": 15.6,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -210,9 +211,9 @@
       },
       "view_hist": [
         0,
-        0,
         1,
-        1
+        1,
+        0
       ]
     },
     {
@@ -245,8 +246,8 @@
         "In a long-term strong downtrend (2yr)",
         "\u2713 Daily setup aligned with the higher-timeframe trend"
       ],
-      "current_price": 342.5,
-      "unrealized_pnl": -74.0,
+      "current_price": 341.9,
+      "unrealized_pnl": -62.0,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -296,8 +297,8 @@
         "MACD histogram negative",
         "Broke below Pivot S1 support \u2014 bearish"
       ],
-      "current_price": 1089.3,
-      "unrealized_pnl": -16.2,
+      "current_price": 1096.6,
+      "unrealized_pnl": 27.6,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -1862,12 +1863,12 @@
       "daily_pnl": -242.3
     }
   ],
-  "daily_pnl_today": -242.29625,
+  "daily_pnl_today": 0.0,
   "last_snapshot_date": "2026-08-13",
   "lifetime_wins": 11,
   "lifetime_losses": 11,
   "lifetime_pnl": -443.53,
-  "last_pnl_reset_date": "2026-08-13",
+  "last_pnl_reset_date": "2026-08-14",
   "max_drawdown_pct": 1.5,
   "current_drawdown_pct": 1.49,
   "portfolio_peak": 101210.28,

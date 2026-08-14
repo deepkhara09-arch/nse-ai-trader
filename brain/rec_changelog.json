@@ -4568,5 +4568,55 @@
     "ts": "2026-08-13T10:12:19.466388",
     "detail": "Confidence \u25b24 (69 \u2192 73) | Rank \u25bc1 (#6 \u2192 #7)",
     "confidence": 72.9
+  },
+  {
+    "type": "removed",
+    "ticker": "UNIONBANK.NS",
+    "nse_code": "UNIONBANK",
+    "signal": "BUY",
+    "date": "2026-08-14",
+    "ts": "2026-08-14T04:05:55.864843",
+    "detail": "Dropped \u2014 no longer meets threshold (was 81/100)",
+    "confidence": 0
+  },
+  {
+    "type": "removed",
+    "ticker": "PIDILITIND.NS",
+    "nse_code": "PIDILITIND",
+    "signal": "BUY",
+    "date": "2026-08-14",
+    "ts": "2026-08-14T04:05:55.864843",
+    "detail": "Dropped \u2014 no longer meets threshold (was 78/100)",
+    "confidence": 0
+  },
+  {
+    "type": "removed",
+    "ticker": "SBIN.NS",
+    "nse_code": "SBIN",
+    "signal": "BUY",
+    "date": "2026-08-14",
+    "ts": "2026-08-14T04:05:55.864843",
+    "detail": "Dropped \u2014 no longer meets threshold (was 73/100)",
+    "confidence": 0
+  },
+  {
+    "type": "removed",
+    "ticker": "CIPLA.NS",
+    "nse_code": "CIPLA",
+    "signal": "BUY",
+    "date": "2026-08-14",
+    "ts": "2026-08-14T04:05:55.864843",
+    "detail": "Dropped \u2014 no longer meets threshold (was 70/100)",
+    "confidence": 0
+  },
+  {
+    "type": "removed",
+    "ticker": "ASIANPAINT.NS",
+    "nse_code": "ASIANPAINT",
+    "signal": "BUY",
+    "date": "2026-08-14",
+    "ts": "2026-08-14T04:05:55.864843",
+    "detail": "Dropped \u2014 no longer meets threshold (was 66/100)",
+    "confidence": 0
   }
 ]

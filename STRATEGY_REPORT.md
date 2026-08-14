@@ -1,5 +1,5 @@
 # NSE AI Trader — Strategy Report
-> Updated: 2026-08-13 &nbsp;|&nbsp; Day 39 &nbsp;|&nbsp; Phase: paper_trading
+> Updated: 2026-08-14 &nbsp;|&nbsp; Day 40 &nbsp;|&nbsp; Phase: paper_trading
 
 ---
 
@@ -7,12 +7,12 @@
 
 | Metric | Value |
 |--------|-------|
-| Trades | 22 (11 wins / 11 losses) |
-| Win Rate | 50.0% |
-| Total P&L | ₹-444 |
+| Trades | 23 (11 wins / 12 losses) |
+| Win Rate | 47.8% |
+| Total P&L | ₹-492 |
 | Avg Win | ₹+133 |
-| Avg Loss | ₹-174 |
-| Expectancy / trade | ₹-20 |
+| Avg Loss | ₹-163 |
+| Expectancy / trade | ₹-21 |
 
 ---
 
@@ -21,208 +21,120 @@
 > **Important:** These are paper trade signals based on the agent's learned patterns.
 > Not financial advice. Always use your own judgement and consult a SEBI advisor.
 
-BUY UNIONBANK.NS (UNIONBANK)
-   CMP:           Rs.186.15
-   Entry Zone:    Rs.185.78 - Rs.187.08
-   Stop Loss:     Rs.178.64  (4.0% risk)
-   Target 1:      Rs.201.17  (R:R 1:2.0)
-   Target 2:      Rs.206.18  (R:R 1:2.7)
+BUY Marico Ltd (MARICO)
+   CMP:           Rs.861.90
+   Entry Zone:    Rs.860.18 - Rs.866.21
+   Stop Loss:     Rs.834.82  (3.1% risk)
+   Target 1:      Rs.916.06  (R:R 1:2.0)
+   Target 2:      Rs.934.11  (R:R 1:2.7)
    Hold:          5–15 trading days (swing)
-   Qty (2% risk): 64 shares -> Rs.11,914 invested
-   Max loss:      Rs.481 if SL hit
-   Confidence:    81/100  (Tech:34 Fund:18 News:16 Pat:3)
+   Qty (2% risk): 13 shares -> Rs.11,205 invested
+   Max loss:      Rs.352 if SL hit
+   Confidence:    84/100  (Tech:33 Fund:18 News:14 Pat:7)
    Reasons:
      - All EMAs stacked bullish
-     - MACD histogram positive
-     - Positive news sentiment (0.21, news 1.4x reliable here)
-     - News sentiment improving across sessions
+     - Positive news sentiment (0.21, news 0.9x reliable here)
+     - Learned bullish pattern: full_bullish_alignment (rel=56%)
      - Candlestick: morning star
      - Supertrend bullish — price above trend band
-     - Broke above Pivot R1 with volume — bullish
-     - Delivery 47% above avg — institutional buying
+     - High delivery 74% — strong institutional accumulation
      - In a long-term strong uptrend (2yr) — trend on our side
      - Near 52-week high (94% of range) — breakout zone
      - ✓ Daily setup aligned with the higher-timeframe trend
-     - Valuation: P/E 6.5x
+     - Valuation: P/E 58.9x
+     - ROCE: 58.1%
+     - Revenue growing 21.4% YoY
+     - Net profit up 61.1% QoQ
+     - Sales up 18.7% QoQ
+     - Latest quarter NP: ₹630 Cr
+     - Latest quarter Sales: ₹3,957 Cr
+     - Market Cap: ₹112,145 Cr
+     - Analyst target: +11.4% upside
+     - Promoter holding: 59.0%
+     - Dividend yield: 47.0%
+     - Low debt: D/E 0.12
+     - Reliable patterns on this stock: full_bullish_alignment, adx_strong_trend_up
+     - Support at ₹816.17 cushions downside
+     - Resistance at ₹880.08 is natural target
+     - Latest news: 'Price to earnings forward of Marico Bangladesh Limited. – DSEBD:MARICO'
+     - Paper trade validation: 3 trades, 67% win rate, ₹+89/trade expectancy
+     - Confluence: 5 independent signal families agree (trend, volume, pattern, news, regime)
+     - History backtest: this kind of BUY setup worked 53% of the time over ~1 week on this stock (sample: 58)
+
+---
+
+BUY UNIONBANK.NS (UNIONBANK)
+   CMP:           Rs.186.70
+   Entry Zone:    Rs.186.33 - Rs.187.63
+   Stop Loss:     Rs.182.13  (2.5% risk)
+   Target 1:      Rs.198.26  (R:R 1:2.5)
+   Target 2:      Rs.202.88  (R:R 1:3.5)
+   Hold:          5–15 trading days (swing)
+   Qty (2% risk): 64 shares -> Rs.11,949 invested
+   Max loss:      Rs.292 if SL hit
+   Confidence:    72/100  (Tech:24 Fund:18 News:20 Pat:0)
+   Reasons:
+     - All EMAs stacked bullish
+     - MACD histogram positive
+     - Positive news sentiment (0.42, news 1.4x reliable here)
+     - News sentiment improving across sessions
+     - ADX strong trend — directional move confirmed
+     - Testing pivot point — decision zone
+     - Delivery 47% above avg — institutional buying
+     - In a long-term strong uptrend (2yr) — trend on our side
+     - Near 52-week high (93% of range) — breakout zone
+     - ✓ Daily setup aligned with the higher-timeframe trend
+     - Valuation: P/E 7.0x
      - ROE: 15.8%
      - Net profit up 2.5% QoQ
      - Latest quarter NP: ₹5,642 Cr
      - Latest quarter Sales: ₹15,455 Cr
-     - Market Cap: ₹140,153 Cr
-     - Analyst target: +7.0% upside
+     - Market Cap: ₹143,039 Cr
      - Promoter holding: 74.8%
-     - Dividend yield: 274.0%
-     - Support at ₹176.03 cushions downside
+     - Dividend yield: 268.0%
+     - Support at ₹183.60 cushions downside
      - Resistance at ₹190.00 is natural target
-     - Latest news: 'UNIONBANK Share Price Today - Union Bank of India on NSE/BSE - scanx.t'
+     - Latest news: 'City Union Bank to participate in Axis Capital's India Corporate Day 2'
      - Confluence: 7 independent signal families agree (trend, momentum, volume, pattern, news, fundamentals, regime)
-     - History backtest: this kind of BUY setup worked 45% of the time over ~1 week on this stock (sample: 56)
-   Market warnings: Nifty in downtrend (down) — only high-confidence BUY signals
+     - History backtest: this kind of BUY setup worked 47% of the time over ~1 week on this stock (sample: 53)
 
 ---
 
 BUY Pidilite Industries (PIDILITIND)
-   CMP:           Rs.1,684.90
-   Entry Zone:    Rs.1,681.53 - Rs.1,693.32
-   Stop Loss:     Rs.1,632.31  (3.1% risk)
-   Target 1:      Rs.1,790.08  (R:R 1:2.0)
-   Target 2:      Rs.1,825.14  (R:R 1:2.7)
+   CMP:           Rs.1,695.20
+   Entry Zone:    Rs.1,691.81 - Rs.1,703.68
+   Stop Loss:     Rs.1,651.68  (2.6% risk)
+   Target 1:      Rs.1,782.24  (R:R 1:2.0)
+   Target 2:      Rs.1,815.50  (R:R 1:2.8)
    Hold:          5–15 trading days (swing)
-   Qty (2% risk): 7 shares -> Rs.11,794 invested
-   Max loss:      Rs.368 if SL hit
-   Confidence:    78/100  (Tech:29 Fund:18 News:19 Pat:1)
+   Qty (2% risk): 7 shares -> Rs.11,866 invested
+   Max loss:      Rs.305 if SL hit
+   Confidence:    66/100  (Tech:21 Fund:18 News:16 Pat:0)
    Reasons:
      - All EMAs stacked bullish
      - MACD histogram positive
-     - Positive news sentiment (0.44, news 1.4x reliable here)
-     - ADX strong trend — directional move confirmed
-     - Broke above Pivot R1 with volume — bullish
-     - Testing pivot point — decision zone
-     - High delivery 67% — strong institutional accumulation
+     - Positive news sentiment (0.37, news 1.4x reliable here)
+     - High delivery 64% — strong institutional accumulation
      - In a long-term strong uptrend (2yr) — trend on our side
-     - Near 52-week high (100% of range) — breakout zone
+     - Near 52-week high (97% of range) — breakout zone
      - ✓ Daily setup aligned with the higher-timeframe trend
-     - Valuation: P/E 63.1x
+     - Valuation: P/E 65.2x
      - ROCE: 33.0%
      - Revenue growing 21.3% YoY
      - Net profit up 50.6% QoQ
      - Sales up 27.0% QoQ
      - Latest quarter NP: ₹872 Cr
      - Latest quarter Sales: ₹4,552 Cr
-     - Market Cap: ₹168,953 Cr
+     - Market Cap: ₹172,312 Cr
+     - Analyst target: +5.2% upside
      - Promoter holding: 69.4%
-     - Dividend yield: 69.0%
+     - Dividend yield: 68.0%
      - Low debt: D/E 0.04
-     - Support at ₹1620.58 cushions downside
+     - Support at ₹1665.00 cushions downside
      - Resistance at ₹1800.00 is natural target
-     - Latest news: 'Pidilite Q1 Earnings Impress! Is This The Start Of A Fresh Rally For T'
+     - Latest news: 'Pidilite Ind Standalone June 2026 Net Sales at Rs 4,249.38 crore, up 2'
      - Confluence: 7 independent signal families agree (trend, momentum, volume, pattern, news, fundamentals, regime)
-     - History backtest: this kind of BUY setup worked 54% of the time over ~1 week on this stock (sample: 52)
-   Market warnings: Nifty in downtrend (down) — only high-confidence BUY signals
-
----
-
-BUY State Bank of India (SBIN)
-   CMP:           Rs.1,076.60
-   Entry Zone:    Rs.1,074.45 - Rs.1,081.98
-   Stop Loss:     Rs.1,051.52  (2.3% risk)
-   Target 1:      Rs.1,129.06  (R:R 1:2.1)
-   Target 2:      Rs.1,150.05  (R:R 1:2.9)
-   Hold:          5–15 trading days (swing)
-   Qty (2% risk): 11 shares -> Rs.11,843 invested
-   Max loss:      Rs.276 if SL hit
-   Confidence:    73/100  (Tech:28 Fund:16 News:20 Pat:2)
-   Reasons:
-     - All EMAs stacked bullish
-     - MACD histogram positive
-     - High volume confirmation (1.5x avg)
-     - Positive news sentiment (0.57, news 1.1x reliable here)
-     - News sentiment improving across sessions
-     - ⚠ Earnings in 0d — position size reduced
-     - Supertrend bullish — price above trend band
-     - Broke above Pivot R1 with volume — bullish
-     - Broke above Pivot R2 — strong momentum
-     - Delivery 55% above avg — institutional buying
-     - In a long-term strong uptrend (2yr) — trend on our side
-     - ✓ Daily setup aligned with the higher-timeframe trend
-     - Valuation: P/E 11.7x
-     - ROE: 15.5%
-     - ROCE: 7.5%
-     - Revenue growing 7.1% YoY
-     - Latest quarter NP: ₹19,643 Cr
-     - Latest quarter Sales: ₹101,126 Cr
-     - Market Cap: ₹1,012,783 Cr
-     - Analyst target: +10.4% upside
-     - Promoter holding: 57.2%
-     - Dividend yield: 164.0%
-     - Support at ₹1060.00 cushions downside
-     - Resistance at ₹1097.90 is natural target
-     - Latest news: 'SBI dips 1.5% despite all-round Q1 beat: Opportunity to buy PSU stock?'
-     - Confluence: 5 independent signal families agree (trend, momentum, volume, pattern, news)
-     - History backtest: this kind of BUY setup worked 48% of the time over ~1 week on this stock (sample: 62)
-   Market warnings: Nifty in downtrend (down) — only high-confidence BUY signals
-
----
-
-BUY Cipla Ltd (CIPLA)
-   CMP:           Rs.1,460.10
-   Entry Zone:    Rs.1,457.18 - Rs.1,467.40
-   Stop Loss:     Rs.1,420.90  (2.7% risk)
-   Target 1:      Rs.1,538.50  (R:R 1:2.0)
-   Target 2:      Rs.1,564.64  (R:R 1:2.7)
-   Hold:          5–15 trading days (swing)
-   Qty (2% risk): 8 shares -> Rs.11,681 invested
-   Max loss:      Rs.314 if SL hit
-   Confidence:    70/100  (Tech:40 Fund:13 News:10 Pat:2)
-   Reasons:
-     - All EMAs stacked bullish
-     - MACD histogram positive
-     - Candlestick: tweezer bottom
-     - RSI bullish divergence — price lower but RSI higher
-     - Sector tailwind (momentum=0.33)
-     - Supertrend bullish — price above trend band
-     - Bounced off Pivot S1 support
-     - Testing pivot point — decision zone
-     - High delivery 66% — strong institutional accumulation
-     - In a long-term strong uptrend (2yr) — trend on our side
-     - ✓ Daily setup aligned with the higher-timeframe trend
-     - Valuation: P/E 34.6x
-     - ROCE: 10.1%
-     - Revenue growing 3.5% YoY
-     - Net profit up 42.3% QoQ
-     - Sales up 9.5% QoQ
-     - Latest quarter NP: ₹789 Cr
-     - Latest quarter Sales: ₹7,077 Cr
-     - Market Cap: ₹118,254 Cr
-     - Dividend yield: 89.0%
-     - Low debt: D/E 0.02
-     - Support at ₹1410.24 cushions downside
-     - Resistance at ₹1500.00 is natural target
-     - Confluence: 4 independent signal families agree (trend, momentum, volume, pattern)
-     - History backtest: this kind of BUY setup worked 40% of the time over ~1 week on this stock (sample: 50)
-   Market warnings: Nifty in downtrend (down) — only high-confidence BUY signals
-
----
-
-BUY Asian Paints Ltd (ASIANPAINT)
-   CMP:           Rs.2,743.90
-   Entry Zone:    Rs.2,738.41 - Rs.2,757.62
-   Stop Loss:     Rs.2,649.93  (3.4% risk)
-   Target 1:      Rs.2,931.84  (R:R 1:2.0)
-   Target 2:      Rs.2,994.49  (R:R 1:2.7)
-   Hold:          5–15 trading days (swing)
-   Qty (2% risk): 4 shares -> Rs.10,976 invested
-   Max loss:      Rs.376 if SL hit
-   Confidence:    66/100  (Tech:28 Fund:19 News:12 Pat:2)
-   Reasons:
-     - All EMAs stacked bullish
-     - Candlestick: engulfing bullish
-     - Supertrend bullish — price above trend band
-     - ADX low — market ranging, signals less reliable
-     - Testing pivot point — decision zone
-     - StochRSI oversold with bullish candle — reversal
-     - High delivery 64% — strong institutional accumulation
-     - In a long-term strong uptrend (2yr) — trend on our side
-     - Clean trender aligned with its long-term uptrend
-     - ✓ Daily setup aligned with the higher-timeframe trend
-     - Valuation: P/E 55.1x
-     - ROCE: 26.0%
-     - Revenue growing 17.9% YoY
-     - Net profit up 31.3% QoQ
-     - Sales up 14.0% QoQ
-     - Latest quarter NP: ₹1,539 Cr
-     - Latest quarter Sales: ₹10,521 Cr
-     - Market Cap: ₹262,189 Cr
-     - Analyst target: +10.2% upside
-     - Promoter holding: 52.9%
-     - Dividend yield: 100.0%
-     - Low debt: D/E 0.18
-     - Support at ₹2646.09 cushions downside
-     - Resistance at ₹2805.00 is natural target
-     - Latest news: 'Smiti Holding pledges 4.03 Cr Asian Paints shares to Bajaj Finance - s'
-     - Confluence: 4 independent signal families agree (trend, volume, pattern, fundamentals)
-     - History backtest: this kind of BUY setup worked 50% of the time over ~1 week on this stock (sample: 48)
-   Market warnings: Nifty in downtrend (down) — only high-confidence BUY signals
+     - History backtest: this kind of BUY setup worked 53% of the time over ~1 week on this stock (sample: 49)
 
 ---
 
@@ -235,14 +147,14 @@ BUY Asian Paints Ltd (ASIANPAINT)
 - ABCAPITAL.NS
 - PFC.NS
 - PIDILITIND.NS
-- ASIANPAINT.NS
 - CIPLA.NS
 - NTPC.NS
 - NIACL.NS
-- GRASIM.NS
 - CHOLAFIN.NS
 - GAIL.NS
 - BAJFINANCE.NS
+- TATASTEEL.NS
+- JSWSTEEL.NS
 
 ---
 

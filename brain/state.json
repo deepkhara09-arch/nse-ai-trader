@@ -1,13 +1,13 @@
 {
   "phase": "paper_trading",
-  "day": 39,
-  "session": "intraday_close",
+  "day": 40,
+  "session": "morning",
   "start_date": "2026-06-22",
   "phase_start_date": "2026-07-15",
-  "last_run_date": "2026-08-13",
-  "last_counted_date": "2026-08-13",
-  "cohort_last_tick_date": "2026-08-13",
-  "last_updated": "2026-08-14T09:38:46.982622",
+  "last_run_date": "2026-08-14",
+  "last_counted_date": "2026-08-14",
+  "cohort_last_tick_date": "2026-08-14",
+  "last_updated": "2026-08-14T10:12:34.720912",
   "focus_stocks": [
     "MARICO.NS",
     "SBIN.NS",
@@ -16,36 +16,38 @@
     "ABCAPITAL.NS",
     "PFC.NS",
     "PIDILITIND.NS",
-    "ASIANPAINT.NS",
     "CIPLA.NS",
     "NTPC.NS",
     "NIACL.NS",
-    "GRASIM.NS",
     "CHOLAFIN.NS",
     "GAIL.NS",
-    "BAJFINANCE.NS"
+    "BAJFINANCE.NS",
+    "TATASTEEL.NS",
+    "JSWSTEEL.NS"
   ],
   "dropped_stocks": [
     "SIEMENS.NS",
-    "RECLTD.NS",
-    "NYKAA.NS",
-    "HOMEFIRST.NS",
-    "ADANIENT.NS",
-    "NESTLEIND.NS",
-    "INDUSINDBK.NS",
-    "NHPC.NS",
-    "LICI.NS",
-    "GAIL.NS",
-    "SUNPHARMA.NS",
-    "BANDHANBNK.NS",
     "FEDERALBNK.NS",
-    "BAJFINANCE.NS",
-    "POWERGRID.NS",
     "JSWSTEEL.NS",
+    "SUNPHARMA.NS",
+    "ADANIENT.NS",
+    "BHEL.NS",
+    "HOMEFIRST.NS",
     "KOTAKBANK.NS",
-    "IDFCFIRSTB.NS",
     "AXISBANK.NS",
-    "BHEL.NS"
+    "INDUSINDBK.NS",
+    "NYKAA.NS",
+    "BAJFINANCE.NS",
+    "RECLTD.NS",
+    "BANDHANBNK.NS",
+    "LICI.NS",
+    "POWERGRID.NS",
+    "ASIANPAINT.NS",
+    "NESTLEIND.NS",
+    "GRASIM.NS",
+    "NHPC.NS",
+    "IDFCFIRSTB.NS",
+    "GAIL.NS"
   ],
   "paper_trade_stats": {
     "total": 23,
@@ -132,7 +134,8 @@
     "[2026-08-12] Focus refresh \u2014 promoted: ['BAJFINANCE'] | demoted: ['HOMEFIRST']",
     "[2026-08-12] Cohort batch #23 complete \u2014 30 candidates ready",
     "[2026-08-13] Pre-open macro: neutral (+0.19)",
-    "[2026-08-14] Pre-open macro: neutral (+0.16)"
+    "[2026-08-14] Pre-open macro: neutral (+0.16)",
+    "[2026-08-14] Focus refresh \u2014 promoted: ['TATASTEEL', 'JSWSTEEL'] | demoted: ['GRASIM', 'ASIANPAINT']"
   ],
   "alert_sent": false,
   "schema_version": 11,
@@ -256,35 +259,35 @@
     },
     {
       "id": 24,
-      "day": 5,
+      "day": 6,
       "start_date": "2026-08-07",
       "ready": false,
       "candidates": []
     },
     {
       "id": 25,
-      "day": 4,
+      "day": 5,
       "start_date": "2026-08-10",
       "ready": false,
       "candidates": []
     },
     {
       "id": 26,
-      "day": 3,
+      "day": 4,
       "start_date": "2026-08-11",
       "ready": false,
       "candidates": []
     },
     {
       "id": 27,
-      "day": 2,
+      "day": 3,
       "start_date": "2026-08-12",
       "ready": false,
       "candidates": []
     },
     {
       "id": 28,
-      "day": 1,
+      "day": 2,
       "start_date": "2026-08-13",
       "ready": false,
       "candidates": []
@@ -334,6 +337,7 @@
     "morning": "2026-08-14",
     "midday": "2026-08-14",
     "afternoon": "2026-08-14",
-    "intraday_close": "2026-08-14"
+    "intraday_close": "2026-08-14",
+    "preclose": "2026-08-14"
   }
 }

@@ -2022,8 +2022,8 @@
       "direction": 1,
       "score": 0.452,
       "price_at_call": 854.9,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "flat"
     },
     {
       "date": "2026-08-11",
@@ -2031,8 +2031,8 @@
       "direction": 1,
       "score": 0.348,
       "price_at_call": 1066.2,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "flat"
     },
     {
       "date": "2026-08-11",
@@ -2040,8 +2040,8 @@
       "direction": 1,
       "score": 0.268,
       "price_at_call": 380.55,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "flat"
     },
     {
       "date": "2026-08-11",
@@ -2049,8 +2049,8 @@
       "direction": 1,
       "score": 0.51,
       "price_at_call": 1677.1,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "right"
     },
     {
       "date": "2026-08-11",
@@ -2058,8 +2058,8 @@
       "direction": 1,
       "score": 0.393,
       "price_at_call": 4011.0,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "flat"
     },
     {
       "date": "2026-08-11",
@@ -2067,8 +2067,8 @@
       "direction": 1,
       "score": 0.288,
       "price_at_call": 405.0,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "right"
     },
     {
       "date": "2026-08-11",
@@ -2076,8 +2076,8 @@
       "direction": 1,
       "score": 0.481,
       "price_at_call": 179.29,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "flat"
     },
     {
       "date": "2026-08-11",
@@ -2085,8 +2085,8 @@
       "direction": 1,
       "score": 0.351,
       "price_at_call": 3310.0,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "wrong"
     },
     {
       "date": "2026-08-12",
@@ -2231,6 +2231,60 @@
       "price_at_call": 1915.6,
       "evaluated": false,
       "outcome": ""
+    },
+    {
+      "date": "2026-08-14",
+      "ticker": "MARICO.NS",
+      "direction": 1,
+      "score": 0.214,
+      "price_at_call": 861.9,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-08-14",
+      "ticker": "SBIN.NS",
+      "direction": 1,
+      "score": 0.439,
+      "price_at_call": 1066.0,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-08-14",
+      "ticker": "UNIONBANK.NS",
+      "direction": 1,
+      "score": 0.419,
+      "price_at_call": 186.7,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-08-14",
+      "ticker": "PFC.NS",
+      "direction": 1,
+      "score": 0.338,
+      "price_at_call": 377.0,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-08-14",
+      "ticker": "PIDILITIND.NS",
+      "direction": 1,
+      "score": 0.367,
+      "price_at_call": 1695.2,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-08-14",
+      "ticker": "GRASIM.NS",
+      "direction": 1,
+      "score": 0.38,
+      "price_at_call": 3238.0,
+      "evaluated": false,
+      "outcome": ""
     }
   ],
   "reliability": {
@@ -2319,10 +2373,10 @@
       "last_seen": "2026-07-23"
     },
     "PIDILITIND.NS": {
-      "wins": 7.654,
-      "losses": 0.896,
-      "reliability": 0.895,
-      "last_seen": "2026-08-12"
+      "wins": 8.566,
+      "losses": 0.886,
+      "reliability": 0.906,
+      "last_seen": "2026-08-14"
     },
     "JSWSTEEL.NS": {
       "wins": 1.0,
@@ -2355,16 +2409,16 @@
       "last_seen": "2026-08-04"
     },
     "LICI.NS": {
-      "wins": 1.994,
+      "wins": 2.983,
       "losses": 0.0,
-      "reliability": 0.832,
-      "last_seen": "2026-08-13"
+      "reliability": 0.997,
+      "last_seen": "2026-08-14"
     },
     "GRASIM.NS": {
       "wins": 0.0,
-      "losses": 1.0,
-      "reliability": 0.333,
-      "last_seen": "2026-08-13"
+      "losses": 1.994,
+      "reliability": 0.168,
+      "last_seen": "2026-08-14"
     }
   }
 }

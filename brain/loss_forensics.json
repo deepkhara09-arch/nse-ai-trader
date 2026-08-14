@@ -52,15 +52,16 @@
       "avg_loss_pct": 3.66
     },
     "weak_pattern:doji": {
-      "count": 3,
-      "sum_loss_pct": 7.529999999999999,
-      "last": "2026-08-11",
+      "count": 4,
+      "sum_loss_pct": 8.34,
+      "last": "2026-08-14",
       "examples": [
         "ASIANPAINT",
         "SIEMENS",
-        "IDFCFIRSTB"
+        "IDFCFIRSTB",
+        "MARICO"
       ],
-      "avg_loss_pct": 2.51
+      "avg_loss_pct": 2.08
     },
     "bought_bearish_tape": {
       "count": 4,
@@ -82,15 +83,24 @@
         "JSWSTEEL"
       ],
       "avg_loss_pct": 3.23
+    },
+    "thesis_reversed_cut_early": {
+      "count": 1,
+      "sum_loss_pct": 0.81,
+      "last": "2026-08-14",
+      "examples": [
+        "MARICO"
+      ],
+      "avg_loss_pct": 0.81
     }
   },
   "patterns": {
     "full_bullish_alignment": {
       "wins": 9,
-      "losses": 11,
+      "losses": 12,
       "sum_win_pct": 28.66,
-      "sum_loss_pct": 27.849999999999998,
-      "edge": 0.013
+      "sum_loss_pct": 28.659999999999997,
+      "edge": 0.0
     },
     "near_52w_high": {
       "wins": 2,
@@ -115,17 +125,17 @@
     },
     "pivot_point_test": {
       "wins": 10,
-      "losses": 2,
+      "losses": 3,
       "sum_win_pct": 31.09,
-      "sum_loss_pct": 1.3699999999999999,
-      "edge": 0.826
+      "sum_loss_pct": 2.1799999999999997,
+      "edge": 0.741
     },
     "adx_strong_trend_up": {
       "wins": 6,
-      "losses": 3,
+      "losses": 4,
       "sum_win_pct": 22.31,
-      "sum_loss_pct": 7.9399999999999995,
-      "edge": 0.532
+      "sum_loss_pct": 8.75,
+      "edge": 0.452
     },
     "tweezer_bottom": {
       "wins": 5,
@@ -213,9 +223,9 @@
     },
     "pivot_s1_breakdown": {
       "wins": 1,
-      "losses": 0,
+      "losses": 1,
       "sum_win_pct": 7.93,
-      "sum_loss_pct": 0.0,
+      "sum_loss_pct": 0.81,
       "edge": 0.0
     },
     "stoch_rsi_overbought_reversal": {
@@ -241,17 +251,17 @@
     },
     "rsi_bearish_divergence": {
       "wins": 0,
-      "losses": 1,
+      "losses": 2,
       "sum_win_pct": 0.0,
-      "sum_loss_pct": 3.41,
+      "sum_loss_pct": 4.220000000000001,
       "edge": 0.0
     },
     "doji": {
       "wins": 2,
-      "losses": 3,
+      "losses": 4,
       "sum_win_pct": 3.3000000000000003,
-      "sum_loss_pct": 7.529999999999999,
-      "edge": -0.282
+      "sum_loss_pct": 8.34,
+      "edge": -0.28
     },
     "pivot_r2_breakout": {
       "wins": 0,
@@ -318,9 +328,9 @@
     },
     "dragonfly_doji": {
       "wins": 0,
-      "losses": 1,
+      "losses": 2,
       "sum_win_pct": 0.0,
-      "sum_loss_pct": 2.52,
+      "sum_loss_pct": 3.33,
       "edge": 0.0
     },
     "outside_bar": {
@@ -328,6 +338,20 @@
       "losses": 1,
       "sum_win_pct": 2.97,
       "sum_loss_pct": 3.61,
+      "edge": 0.0
+    },
+    "tweezer_top": {
+      "wins": 0,
+      "losses": 1,
+      "sum_win_pct": 0.0,
+      "sum_loss_pct": 0.81,
+      "edge": 0.0
+    },
+    "engulfing_bearish": {
+      "wins": 0,
+      "losses": 1,
+      "sum_win_pct": 0.0,
+      "sum_loss_pct": 0.81,
       "edge": 0.0
     }
   },
@@ -426,6 +450,15 @@
       "loss_pct": 3.61,
       "causes": [
         "no_market_tailwind"
+      ]
+    },
+    {
+      "date": "2026-08-14",
+      "ticker": "MARICO",
+      "loss_pct": 0.81,
+      "causes": [
+        "weak_pattern:doji",
+        "thesis_reversed_cut_early"
       ]
     }
   ]

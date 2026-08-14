@@ -1284,8 +1284,8 @@
       "by_pattern": {
         "full_bullish_alignment": {
           "wins": 2,
-          "losses": 0,
-          "total": 2
+          "losses": 1,
+          "total": 3
         },
         "pivot_s1_bounce": {
           "wins": 2,
@@ -1304,13 +1304,43 @@
         },
         "pivot_point_test": {
           "wins": 2,
-          "losses": 0,
-          "total": 2
+          "losses": 1,
+          "total": 3
         },
         "adx_strong_trend_up": {
           "wins": 2,
-          "losses": 0,
-          "total": 2
+          "losses": 1,
+          "total": 3
+        },
+        "tweezer_top": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "rsi_bearish_divergence": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "doji": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "engulfing_bearish": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "dragonfly_doji": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "pivot_s1_breakdown": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
         }
       },
       "by_session": {
@@ -1318,20 +1348,25 @@
           "wins": 2,
           "losses": 0,
           "total": 2
+        },
+        "midday": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
         }
       },
       "by_mood": {
         "neutral": {
           "wins": 2,
-          "losses": 0,
-          "total": 2
+          "losses": 1,
+          "total": 3
         }
       },
       "by_style": {
         "swing": {
           "wins": 2,
-          "losses": 0,
-          "total": 2
+          "losses": 1,
+          "total": 3
         }
       }
     }

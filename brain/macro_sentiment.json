@@ -1,10 +1,10 @@
 {
   "date": "2026-08-14",
-  "session": "preopen",
-  "generated_at": "2026-08-14T03:05:58.093904",
-  "global_score": 0.294,
+  "session": "midday",
+  "generated_at": "2026-08-14T05:55:26.230933",
+  "global_score": 0.241,
   "india_score": 0.0,
-  "overall_score": 0.162,
+  "overall_score": 0.133,
   "mood": "neutral",
   "drivers": [
     "Reddit is joining the S&P 500 after months of speculation. Analysts have these concerns.",
@@ -30,25 +30,26 @@
       "chg_pct": 0.65
     },
     "nikkei": {
-      "last": 68889.01,
-      "chg_pct": 0.85
+      "last": 68632.52,
+      "chg_pct": 0.47
     },
     "crude": {
-      "last": 81.32,
-      "chg_pct": -2.34
+      "last": 83.27,
+      "chg_pct": 0.08
     },
     "usdinr": {
-      "last": 95.43,
-      "chg_pct": 0.09
+      "last": 95.42,
+      "chg_pct": 0.08
     },
     "gold": {
-      "last": 4370.4,
-      "chg_pct": -0.87
+      "last": 4408.9,
+      "chg_pct": 0.59
     }
   },
-  "summary": "Overall macro mood is neutral (+0.16). US Dow +0.1% overnight. Crude -2.3%. USD/INR +0.1%. Notable: Geopolitical conflict / war.",
+  "summary": "Overall macro mood is neutral (+0.13). US Dow +0.1% overnight. Crude +0.1%. USD/INR +0.1%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
   "playbook": [
-    "Geopolitical shocks trigger global risk-off; gold up, equities down initially."
+    "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
+    "Trade-war headlines spook global markets; IT & export names react most."
   ],
   "playbook_bias": "risk_off",
   "article_count": 60

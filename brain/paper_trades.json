@@ -1,5 +1,5 @@
 {
-  "capital": 59232.32111999999,
+  "capital": 57432.295244999994,
   "open_positions": [
     {
       "ticker": "PIDILITIND.NS",
@@ -44,8 +44,8 @@
         "\u2713 Daily setup aligned with the higher-timeframe trend",
         "RSI=64 elevated"
       ],
-      "current_price": 1690.7,
-      "unrealized_pnl": 141.9,
+      "current_price": 1698.2,
+      "unrealized_pnl": 164.4,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -62,60 +62,6 @@
       ],
       "t1_booked": true,
       "trailing_active": true
-    },
-    {
-      "ticker": "MARICO.NS",
-      "sector": "FMCG",
-      "open_date": "2026-08-11",
-      "open_session": "midday",
-      "action": "SELL",
-      "entry": 856.2,
-      "qty": 7,
-      "invested": 5993.4,
-      "stop_loss": 881.56,
-      "target": 798.56,
-      "style": "swing",
-      "confidence": 76.0,
-      "patterns": [
-        "full_bullish_alignment",
-        "pivot_point_test",
-        "tweezer_top",
-        "rsi_bearish_divergence",
-        "doji",
-        "engulfing_bearish",
-        "dragonfly_doji",
-        "pivot_s1_breakdown",
-        "adx_strong_trend_up"
-      ],
-      "buy_reasons": [
-        "All EMAs stacked bullish",
-        "Positive news sentiment (0.42, news 1.0x reliable here)",
-        "Candlestick: dragonfly doji",
-        "ADX strong trend \u2014 directional move confirmed",
-        "MACD histogram negative",
-        "Candlestick: tweezer top",
-        "Candlestick: engulfing bearish",
-        "RSI bearish divergence \u2014 price higher but RSI lower",
-        "Broke below Pivot S1 support \u2014 bearish",
-        "\u26a0 Daily sell fights the higher-timeframe uptrend \u2014 needs extra conviction"
-      ],
-      "current_price": 858.1,
-      "unrealized_pnl": -13.3,
-      "max_held_days": 10,
-      "vol_regime_pct": 0.12,
-      "entry_market": {
-        "nifty_trend": "sideways",
-        "vix": 12.25,
-        "mood": "neutral",
-        "regime": "mixed"
-      },
-      "view_hist": [
-        0,
-        0,
-        -1,
-        -1
-      ],
-      "stale_tightened": true
     },
     {
       "ticker": "UNIONBANK.NS",
@@ -148,8 +94,8 @@
         "\u2713 Daily setup aligned with the higher-timeframe trend",
         "Near upper Bollinger Band"
       ],
-      "current_price": 186.9,
-      "unrealized_pnl": 126.04,
+      "current_price": 187.15,
+      "unrealized_pnl": 137.54,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -161,8 +107,8 @@
       "view_hist": [
         1,
         1,
-        1,
-        0
+        0,
+        1
       ]
     },
     {
@@ -199,8 +145,8 @@
         "RSI=65 elevated",
         "Near upper Bollinger Band"
       ],
-      "current_price": 1904.2,
-      "unrealized_pnl": 15.6,
+      "current_price": 1903.0,
+      "unrealized_pnl": 10.8,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -210,9 +156,9 @@
         "regime": "mixed"
       },
       "view_hist": [
+        1,
+        1,
         0,
-        1,
-        1,
         0
       ]
     },
@@ -246,8 +192,8 @@
         "In a long-term strong downtrend (2yr)",
         "\u2713 Daily setup aligned with the higher-timeframe trend"
       ],
-      "current_price": 341.9,
-      "unrealized_pnl": -62.0,
+      "current_price": 338.75,
+      "unrealized_pnl": 1.0,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -297,8 +243,8 @@
         "MACD histogram negative",
         "Broke below Pivot S1 support \u2014 bearish"
       ],
-      "current_price": 1096.6,
-      "unrealized_pnl": 27.6,
+      "current_price": 1090.7,
+      "unrealized_pnl": -7.8,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -311,8 +257,50 @@
         1,
         1,
         1,
-        1
+        0
       ]
+    },
+    {
+      "ticker": "MARICO.NS",
+      "sector": "FMCG",
+      "open_date": "2026-08-14",
+      "open_session": "midday",
+      "action": "BUY",
+      "entry": 860.55,
+      "qty": 9,
+      "invested": 7744.95,
+      "stop_loss": 833.53,
+      "target": 914.59,
+      "style": "swing",
+      "confidence": 95,
+      "patterns": [
+        "full_bullish_alignment",
+        "adx_strong_trend_up",
+        "supertrend_bullish",
+        "morning_star",
+        "strong_bullish_marubozu"
+      ],
+      "buy_reasons": [
+        "All EMAs stacked bullish",
+        "Positive news sentiment (0.29, news 0.9x reliable here)",
+        "Candlestick: morning star",
+        "Supertrend bullish \u2014 price above trend band",
+        "ADX strong trend \u2014 directional move confirmed",
+        "In a long-term strong uptrend (2yr) \u2014 trend on our side",
+        "Near 52-week high (94% of range) \u2014 breakout zone",
+        "\u2713 Daily setup aligned with the higher-timeframe trend",
+        "MACD histogram negative"
+      ],
+      "current_price": 860.55,
+      "unrealized_pnl": 0.0,
+      "max_held_days": 10,
+      "vol_regime_pct": 0.12,
+      "entry_market": {
+        "nifty_trend": "sideways",
+        "vix": 11.42,
+        "mood": "neutral",
+        "regime": "choppy"
+      }
     }
   ],
   "closed_trades": [
@@ -1712,6 +1700,70 @@
       "won": false,
       "open_days": 3,
       "forensic_done": true
+    },
+    {
+      "ticker": "MARICO.NS",
+      "sector": "FMCG",
+      "open_date": "2026-08-11",
+      "open_session": "midday",
+      "action": "SELL",
+      "entry": 856.2,
+      "qty": 7,
+      "invested": 5993.4,
+      "stop_loss": 878.52,
+      "target": 798.56,
+      "style": "swing",
+      "confidence": 76.0,
+      "patterns": [
+        "full_bullish_alignment",
+        "pivot_point_test",
+        "tweezer_top",
+        "rsi_bearish_divergence",
+        "doji",
+        "engulfing_bearish",
+        "dragonfly_doji",
+        "pivot_s1_breakdown",
+        "adx_strong_trend_up"
+      ],
+      "buy_reasons": [
+        "All EMAs stacked bullish",
+        "Positive news sentiment (0.42, news 1.0x reliable here)",
+        "Candlestick: dragonfly doji",
+        "ADX strong trend \u2014 directional move confirmed",
+        "MACD histogram negative",
+        "Candlestick: tweezer top",
+        "Candlestick: engulfing bearish",
+        "RSI bearish divergence \u2014 price higher but RSI lower",
+        "Broke below Pivot S1 support \u2014 bearish",
+        "\u26a0 Daily sell fights the higher-timeframe uptrend \u2014 needs extra conviction"
+      ],
+      "current_price": 860.55,
+      "unrealized_pnl": -30.45,
+      "max_held_days": 10,
+      "vol_regime_pct": 0.12,
+      "entry_market": {
+        "nifty_trend": "sideways",
+        "vix": 12.25,
+        "mood": "neutral",
+        "regime": "mixed"
+      },
+      "view_hist": [
+        0,
+        -1,
+        -1,
+        -1
+      ],
+      "stale_tightened": true,
+      "close_date": "2026-08-14",
+      "close_session": "midday",
+      "exit_price": 860.55,
+      "exit_reason": "reversal_exit",
+      "pnl": -48.48,
+      "pnl_gross": -30.45,
+      "costs": 18.03,
+      "pnl_pct": -0.81,
+      "won": false,
+      "open_days": 3
     }
   ],
   "daily_snapshots": [
@@ -1863,11 +1915,11 @@
       "daily_pnl": -242.3
     }
   ],
-  "daily_pnl_today": 0.0,
+  "daily_pnl_today": -48.47587499999936,
   "last_snapshot_date": "2026-08-13",
   "lifetime_wins": 11,
-  "lifetime_losses": 11,
-  "lifetime_pnl": -443.53,
+  "lifetime_losses": 12,
+  "lifetime_pnl": -492.01,
   "last_pnl_reset_date": "2026-08-14",
   "max_drawdown_pct": 1.5,
   "current_drawdown_pct": 1.49,

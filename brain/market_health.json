@@ -1,26 +1,26 @@
 {
   "date": "2026-08-14",
-  "session": "morning",
+  "session": "midday",
   "nifty": {
     "symbol": "^NSEI",
     "value": 24395.85,
     "day_change_pct": -0.16,
     "trend_5d": "sideways",
-    "trend_20d": "sideways",
+    "trend_20d": "up",
     "ath_pct_60d": -1.53
   },
   "vix": {
     "value": 11.42,
     "level": "normal",
     "percentile_30d": 0.0,
-    "avg_30d": 12.59
+    "avg_30d": 12.62
   },
   "bank_nifty": {
     "symbol": "^NSEBANK",
     "value": 57635.25,
     "day_change_pct": -0.43,
     "trend_5d": "sideways",
-    "trend_20d": "down",
+    "trend_20d": "sideways",
     "ath_pct_60d": -1.82,
     "diverging": false
   },
@@ -38,7 +38,7 @@
       "value": 27.45,
       "day_change_pct": 0.07,
       "trend_5d": "sideways",
-      "trend_20d": "strong_up",
+      "trend_20d": "unknown",
       "ath_pct_60d": -2.0
     },
     "Bank": {
@@ -72,11 +72,11 @@
   "intraday_regime": "choppy",
   "macro": {
     "date": "2026-08-14",
-    "session": "preopen",
-    "generated_at": "2026-08-14T03:05:58.093904",
-    "global_score": 0.294,
+    "session": "midday",
+    "generated_at": "2026-08-14T05:55:26.230933",
+    "global_score": 0.241,
     "india_score": 0.0,
-    "overall_score": 0.162,
+    "overall_score": 0.133,
     "mood": "neutral",
     "drivers": [
       "Reddit is joining the S&P 500 after months of speculation. Analysts have these concerns.",
@@ -102,25 +102,26 @@
         "chg_pct": 0.65
       },
       "nikkei": {
-        "last": 68889.01,
-        "chg_pct": 0.85
+        "last": 68632.52,
+        "chg_pct": 0.47
       },
       "crude": {
-        "last": 81.32,
-        "chg_pct": -2.34
+        "last": 83.27,
+        "chg_pct": 0.08
       },
       "usdinr": {
-        "last": 95.43,
-        "chg_pct": 0.09
+        "last": 95.42,
+        "chg_pct": 0.08
       },
       "gold": {
-        "last": 4370.4,
-        "chg_pct": -0.87
+        "last": 4408.9,
+        "chg_pct": 0.59
       }
     },
-    "summary": "Overall macro mood is neutral (+0.16). US Dow +0.1% overnight. Crude -2.3%. USD/INR +0.1%. Notable: Geopolitical conflict / war.",
+    "summary": "Overall macro mood is neutral (+0.13). US Dow +0.1% overnight. Crude +0.1%. USD/INR +0.1%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
-      "Geopolitical shocks trigger global risk-off; gold up, equities down initially."
+      "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
+      "Trade-war headlines spook global markets; IT & export names react most."
     ],
     "playbook_bias": "risk_off",
     "article_count": 60

@@ -4638,5 +4638,25 @@
     "ts": "2026-08-14T05:55:36.484646",
     "detail": "New BUY recommendation \u2014 confidence 74/100",
     "confidence": 74.0
+  },
+  {
+    "type": "removed",
+    "ticker": "UNIONBANK.NS",
+    "nse_code": "UNIONBANK",
+    "signal": "BUY",
+    "date": "2026-08-14",
+    "ts": "2026-08-14T07:45:51.285224",
+    "detail": "Dropped \u2014 no longer meets threshold (was 74/100)",
+    "confidence": 0
+  },
+  {
+    "type": "updated",
+    "ticker": "MARICO.NS",
+    "nse_code": "MARICO",
+    "signal": "BUY",
+    "date": "2026-08-14",
+    "ts": "2026-08-14T07:45:51.285224",
+    "detail": "Stop loss moved \u20b9833.53 \u2192 \u20b9844.79",
+    "confidence": 79.6
   }
 ]

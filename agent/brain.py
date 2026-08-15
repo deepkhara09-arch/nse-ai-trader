@@ -910,6 +910,30 @@ def analyse_stock(
     except Exception:
         pass
 
+    # ── Outcome-memory gate: act on what these patterns have ACTUALLY done ──────
+    # The tool records, per pattern, whether setups like this have historically
+    # MADE or LOST money (loss_forensics edge memory). A pattern set with a proven
+    # NEGATIVE edge is exactly the kind of setup that keeps losing, so — same
+    # mechanism as the mood/sector/MTF gates — it must clear a higher conviction
+    # bar. A proven-POSITIVE edge lowers the bar slightly (earned conviction). Stays
+    # silent until a pattern has real history, so it never reacts to one trade.
+    edge_penalty = 0.0
+    edge_boost   = 0.0
+    edge_val     = 0.0
+    try:
+        from agent.loss_forensics import pattern_edge_weight
+        edge_val = pattern_edge_weight(patterns)   # ~[-3, +3] composite-points scale
+        if edge_val <= -1.5:
+            edge_penalty = 1.5
+            (buy_reasons if leaning_buy else sell_reasons).append(
+                "⚠ These patterns have a proven losing record for us — needs extra conviction")
+        elif edge_val <= -0.6:
+            edge_penalty = 0.8
+        elif edge_val >= 1.5:
+            edge_boost = 0.6   # patterns that have genuinely made money — earned trust
+    except Exception:
+        pass
+
     buy_score  = round(buy_score,  2)
     sell_score = round(sell_score, 2)
     gap = abs(buy_score - sell_score)
@@ -920,7 +944,10 @@ def analyse_stock(
     # need a ~9-point setup — the tool would go fully dark and stop learning. Cap
     # at 3.0 (=BUY bar 8.0): only genuinely exceptional setups pass a hostile
     # regime, but the door isn't fully welded shut.
-    extra_bar = min(3.0, mtf_penalty + mood_penalty + self_penalty + sector_penalty)
+    extra_bar = min(3.0, mtf_penalty + mood_penalty + self_penalty + sector_penalty + edge_penalty)
+    # A proven-profitable pattern set can lower the bar a little (earned conviction),
+    # but never below the base requirement — a boost can't wave a weak setup through.
+    extra_bar = max(0.0, extra_bar - edge_boost)
     if buy_score >= BUY_SIGNAL_MIN_SCORE + extra_bar and buy_score > sell_score and gap >= SIGNAL_SCORE_GAP:
         signal = "BUY"
     elif sell_score >= SELL_SIGNAL_MIN_SCORE + extra_bar and sell_score > buy_score and gap >= SIGNAL_SCORE_GAP:
@@ -1033,6 +1060,16 @@ def analyse_stock(
                 confidence = min(round(confidence * (0.95 + 0.1 * boost_wr), 1), 95)
     except Exception:
         pass   # coach is always optional — never block trading logic
+
+    # ── Outcome-memory confidence reflection ──────────────────────────────────
+    # Mirror the edge into confidence too: a setup whose patterns have a proven
+    # losing record should read LESS confident even if it still passed the bar;
+    # a proven winner reads a touch more confident. Bounded and evidence-gated.
+    if signal != "WATCH" and edge_val:
+        if edge_val < 0:
+            confidence = max(round(confidence * (1 + edge_val * 0.06), 1), 30)  # up to −18%
+        elif edge_val > 0:
+            confidence = min(round(confidence * (1 + edge_val * 0.03), 1), 95)  # up to +9%
 
     # ── Queue a question if a rare signal combination appeared ────────────────
     # The tool asks the coach about setups it hasn't seen much of yet.

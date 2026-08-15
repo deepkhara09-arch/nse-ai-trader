@@ -72,13 +72,18 @@ def advance_session(state: dict, current_session: str) -> dict:
     """
     from agent.trading_calendar import is_trading_day, reason_not_trading, ist_today
 
-    order = ["morning", "midday", "afternoon", "preclose"]
+    # The trading day only ever rolls over at PRECLOSE — that's the sole thing this
+    # function decides. Session flow itself is driven each run by the workflow's
+    # SESSION env (state["session"] is overwritten from it), so this pointer is
+    # advisory. The full 6-session order is listed so a non-preclose caller advances
+    # to the correct NEXT session instead of silently resetting to the start.
+    order = ["preopen", "morning", "midday", "afternoon", "intraday_close", "preclose"]
     try:
         idx = order.index(current_session)
     except ValueError:
         idx = 0
 
-    if idx == len(order) - 1:
+    if current_session == "preclose":
         # preclose done → candidate for end-of-trading-day rollover.
         # Use IST date (NSE timezone), NOT the server's UTC date.
         today = ist_today()

@@ -1,12 +1,12 @@
 {
   "date": "2026-08-17",
-  "session": "morning",
+  "session": "midday",
   "nifty": {
     "symbol": "^NSEI",
     "value": 24366.0,
     "day_change_pct": -0.12,
     "trend_5d": "down",
-    "trend_20d": "sideways",
+    "trend_20d": "up",
     "ath_pct_60d": -1.65
   },
   "vix": {
@@ -72,11 +72,11 @@
   "intraday_regime": "mixed",
   "macro": {
     "date": "2026-08-17",
-    "session": "preopen",
-    "generated_at": "2026-08-17T03:05:39.819099",
-    "global_score": 0.037,
+    "session": "midday",
+    "generated_at": "2026-08-17T06:15:43.993181",
+    "global_score": -0.016,
     "india_score": 0.0,
-    "overall_score": 0.02,
+    "overall_score": -0.009,
     "mood": "neutral",
     "drivers": [
       "U.S. stock futures little changed as investors ponder the Fed\u2019s next move",
@@ -102,23 +102,23 @@
         "chg_pct": -0.17
       },
       "nikkei": {
-        "last": 68721.44,
-        "chg_pct": 0.01
+        "last": 69198.71,
+        "chg_pct": 0.71
       },
       "crude": {
-        "last": 82.47,
-        "chg_pct": 0.08
+        "last": 82.4,
+        "chg_pct": 1.42
       },
       "usdinr": {
-        "last": 95.42,
-        "chg_pct": 0.01
+        "last": 95.6,
+        "chg_pct": 0.2
       },
       "gold": {
-        "last": 4445.5,
-        "chg_pct": 1.49
+        "last": 4380.4,
+        "chg_pct": 0.38
       }
     },
-    "summary": "Overall macro mood is neutral (+0.02). US Dow -0.2% overnight. Crude +0.1%. USD/INR +0.0%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
+    "summary": "Overall macro mood is neutral (-0.01). US Dow -0.2% overnight. Crude +1.4%. USD/INR +0.2%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
       "Trade-war headlines spook global markets; IT & export names react most."

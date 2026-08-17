@@ -1,12 +1,12 @@
 {
   "date": "2026-08-17",
-  "session": "afternoon",
+  "session": "intraday_close",
   "nifty": {
     "symbol": "^NSEI",
     "value": 24366.0,
     "day_change_pct": -0.12,
     "trend_5d": "down",
-    "trend_20d": "up",
+    "trend_20d": "sideways",
     "ath_pct_60d": -1.65
   },
   "vix": {
@@ -38,7 +38,7 @@
       "value": 27.25,
       "day_change_pct": -0.73,
       "trend_5d": "sideways",
-      "trend_20d": "unknown",
+      "trend_20d": "up",
       "ath_pct_60d": -2.71
     },
     "Bank": {
@@ -58,10 +58,11 @@
       "ath_pct_60d": -1.67
     }
   },
-  "market_mood": "neutral",
+  "market_mood": "bearish",
   "trade_allowed": true,
   "warnings": [
-    "Nifty in downtrend (down) \u2014 only high-confidence BUY signals"
+    "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
+    "Nifty choppy intraday \u2014 wait for cleaner setups"
   ],
   "leading_sectors": [],
   "market_regime": "normal",
@@ -69,7 +70,7 @@
   "lagging_sectors": [
     "IT"
   ],
-  "intraday_regime": "mixed",
+  "intraday_regime": "choppy",
   "macro": {
     "date": "2026-08-17",
     "session": "midday",

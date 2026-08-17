@@ -4778,5 +4778,35 @@
     "ts": "2026-08-17T07:45:55.931831",
     "detail": "Confidence \u25b210 (68 \u2192 78) | Stop loss moved \u20b9178.66 \u2192 \u20b9185.50 | Target 1 moved \u20b9199.48 \u2192 \u20b9201.42",
     "confidence": 78.2
+  },
+  {
+    "type": "removed",
+    "ticker": "PIDILITIND.NS",
+    "nse_code": "PIDILITIND",
+    "signal": "BUY",
+    "date": "2026-08-17",
+    "ts": "2026-08-17T09:21:17.761724",
+    "detail": "Dropped \u2014 no longer meets threshold (was 69/100)",
+    "confidence": 0
+  },
+  {
+    "type": "updated",
+    "ticker": "UNIONBANK.NS",
+    "nse_code": "UNIONBANK",
+    "signal": "BUY",
+    "date": "2026-08-17",
+    "ts": "2026-08-17T09:21:17.761724",
+    "detail": "Rank \u25bc1 (#5 \u2192 #6) | Stop loss moved \u20b9185.50 \u2192 \u20b9182.13",
+    "confidence": 78.2
+  },
+  {
+    "type": "updated",
+    "ticker": "MARICO.NS",
+    "nse_code": "MARICO",
+    "signal": "BUY",
+    "date": "2026-08-17",
+    "ts": "2026-08-17T09:21:17.761724",
+    "detail": "Confidence \u25bc8 (82 \u2192 74)",
+    "confidence": 74.2
   }
 ]

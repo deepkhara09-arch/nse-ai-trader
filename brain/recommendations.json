@@ -3,10 +3,10 @@
     "ticker": "MARICO.NS",
     "nse_code": "MARICO",
     "company_name": "Marico Ltd",
-    "date": "2026-08-14",
-    "generated_at": "2026-08-14 10:12 UTC",
+    "date": "2026-08-17",
+    "generated_at": "2026-08-17 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -40,12 +40,12 @@
     "pattern_score": 7.0,
     "confluence_bonus": 7.5,
     "paper_bonus": 5.0,
-    "success_probability": 0.61,
-    "base_success_prob": 0.643,
-    "profit_probability": 0.22,
-    "composite_score": 56.94,
+    "success_probability": 0.609,
+    "base_success_prob": 0.641,
+    "profit_probability": 0.216,
+    "composite_score": 56.72,
     "focus_rank": 3,
-    "rank_delta": 2,
+    "rank_delta": 0,
     "intention": "BUY MARICO for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
     "confluence_count": 5,
     "confluence_families": [
@@ -66,7 +66,7 @@
     "data_confidence": "Estimated",
     "data_confidence_key": "estimated",
     "data_confidence_note": "Only 3 paper trade(s) \u2014 probability is an indicator-based estimate, not yet proven",
-    "expected_edge_r": 0.22,
+    "expected_edge_r": 0.216,
     "buy_score": 12.39,
     "sell_score": 2.0,
     "reasons": [
@@ -100,10 +100,10 @@
       "History backtest: this kind of BUY setup worked 53% of the time over ~1 week on this stock (sample: 58)"
     ],
     "patterns_seen": [
+      "supertrend_bullish",
       "adx_strong_trend_down",
       "full_bullish_alignment",
       "strong_bullish_marubozu",
-      "supertrend_bullish",
       "morning_star"
     ],
     "reliable_patterns": [
@@ -134,16 +134,18 @@
     "paper_pnl": 268.23,
     "paper_expectancy": 89.41,
     "market_mood": "neutral",
-    "market_warning": []
+    "market_warning": [
+      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals"
+    ]
   },
   {
     "ticker": "UNIONBANK.NS",
     "nse_code": "UNIONBANK",
     "company_name": "UNIONBANK.NS",
-    "date": "2026-08-14",
-    "generated_at": "2026-08-14 10:12 UTC",
+    "date": "2026-08-17",
+    "generated_at": "2026-08-17 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -177,12 +179,12 @@
     "pattern_score": 0.0,
     "confluence_bonus": 10,
     "paper_bonus": 0.0,
-    "success_probability": 0.517,
-    "base_success_prob": 0.536,
-    "profit_probability": 0.34,
-    "composite_score": 56.57,
+    "success_probability": 0.513,
+    "base_success_prob": 0.534,
+    "profit_probability": 0.335,
+    "composite_score": 56.33,
     "focus_rank": 4,
-    "rank_delta": -2,
+    "rank_delta": 0,
     "intention": "BUY UNIONBANK for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
     "confluence_count": 7,
     "confluence_families": [
@@ -195,9 +197,9 @@
       "regime"
     ],
     "backtest_tested": true,
-    "backtest_hit_5d": 0.472,
-    "backtest_hit_10d": 0.472,
-    "backtest_sample": 53,
+    "backtest_hit_5d": 0.463,
+    "backtest_hit_10d": 0.463,
+    "backtest_sample": 54,
     "hist_long_trend": "strong_uptrend",
     "hist_52w_position": 93.2,
     "hist_personality": "choppy",
@@ -205,7 +207,7 @@
     "data_confidence": "Estimated",
     "data_confidence_key": "estimated",
     "data_confidence_note": "Only 1 paper trade(s) \u2014 probability is an indicator-based estimate, not yet proven",
-    "expected_edge_r": 0.34,
+    "expected_edge_r": 0.335,
     "buy_score": 8.92,
     "sell_score": 3.5,
     "reasons": [
@@ -231,16 +233,16 @@
       "Resistance at \u20b9190.00 is natural target",
       "Latest news: 'City Union Bank to participate in Axis Capital's India Corporate Day 2'",
       "Confluence: 7 independent signal families agree (trend, momentum, volume, pattern, news, fundamentals, regime)",
-      "History backtest: this kind of BUY setup worked 47% of the time over ~1 week on this stock (sample: 53)"
+      "History backtest: this kind of BUY setup worked 46% of the time over ~1 week on this stock (sample: 54)"
     ],
     "patterns_seen": [
+      "low_volume_drift",
+      "bb_upper_rejection",
+      "spinning_top",
       "pivot_point_test",
       "full_bullish_alignment",
-      "stoch_rsi_overbought_reversal",
       "adx_strong_trend_up",
-      "spinning_top",
-      "bb_upper_rejection",
-      "low_volume_drift"
+      "stoch_rsi_overbought_reversal"
     ],
     "reliable_patterns": [],
     "nearest_support": 183.6,
@@ -267,16 +269,18 @@
     "paper_pnl": -66.76,
     "paper_expectancy": -66.76,
     "market_mood": "neutral",
-    "market_warning": []
+    "market_warning": [
+      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals"
+    ]
   },
   {
     "ticker": "PIDILITIND.NS",
     "nse_code": "PIDILITIND",
     "company_name": "Pidilite Industries",
-    "date": "2026-08-14",
-    "generated_at": "2026-08-14 10:12 UTC",
+    "date": "2026-08-17",
+    "generated_at": "2026-08-17 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -310,12 +314,12 @@
     "pattern_score": 0.0,
     "confluence_bonus": 10,
     "paper_bonus": 0.0,
-    "success_probability": 0.592,
-    "base_success_prob": 0.618,
-    "profit_probability": 0.127,
-    "composite_score": 56.09,
+    "success_probability": 0.587,
+    "base_success_prob": 0.616,
+    "profit_probability": 0.124,
+    "composite_score": 55.88,
     "focus_rank": 5,
-    "rank_delta": -1,
+    "rank_delta": 0,
     "intention": "BUY PIDILITIND for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
     "confluence_count": 7,
     "confluence_families": [
@@ -328,9 +332,9 @@
       "regime"
     ],
     "backtest_tested": true,
-    "backtest_hit_5d": 0.531,
-    "backtest_hit_10d": 0.469,
-    "backtest_sample": 49,
+    "backtest_hit_5d": 0.52,
+    "backtest_hit_10d": 0.46,
+    "backtest_sample": 50,
     "hist_long_trend": "strong_uptrend",
     "hist_52w_position": 97.1,
     "hist_personality": "mean_reverter",
@@ -338,7 +342,7 @@
     "data_confidence": "Estimated",
     "data_confidence_key": "estimated",
     "data_confidence_note": "Only 2 paper trade(s) \u2014 probability is an indicator-based estimate, not yet proven",
-    "expected_edge_r": 0.127,
+    "expected_edge_r": 0.124,
     "buy_score": 8.0,
     "sell_score": 5.5,
     "reasons": [
@@ -365,15 +369,15 @@
       "Resistance at \u20b91800.00 is natural target",
       "Latest news: 'Pidilite Ind Standalone June 2026 Net Sales at Rs 4,249.38 crore, up 2'",
       "Confluence: 7 independent signal families agree (trend, momentum, volume, pattern, news, fundamentals, regime)",
-      "History backtest: this kind of BUY setup worked 53% of the time over ~1 week on this stock (sample: 49)"
+      "History backtest: this kind of BUY setup worked 52% of the time over ~1 week on this stock (sample: 50)"
     ],
     "patterns_seen": [
       "pivot_s1_breakdown",
+      "low_volume_drift",
       "pivot_point_test",
-      "full_bullish_alignment",
-      "tweezer_top",
       "near_52w_high",
-      "low_volume_drift"
+      "full_bullish_alignment",
+      "tweezer_top"
     ],
     "reliable_patterns": [],
     "nearest_support": 1665.0,
@@ -400,6 +404,8 @@
     "paper_pnl": 166.7,
     "paper_expectancy": 83.35,
     "market_mood": "neutral",
-    "market_warning": []
+    "market_warning": [
+      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals"
+    ]
   }
 ]

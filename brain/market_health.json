@@ -1,122 +1,123 @@
 {
-  "date": "2026-08-14",
-  "session": "preclose",
+  "date": "2026-08-17",
+  "session": "preopen",
   "nifty": {
     "symbol": "^NSEI",
-    "value": 24395.85,
-    "day_change_pct": -0.16,
-    "trend_5d": "sideways",
+    "value": 24366.0,
+    "day_change_pct": -0.12,
+    "trend_5d": "down",
     "trend_20d": "up",
-    "ath_pct_60d": -1.53
+    "ath_pct_60d": -1.65
   },
   "vix": {
-    "value": 11.42,
+    "value": 11.31,
     "level": "normal",
     "percentile_30d": 0.0,
-    "avg_30d": 12.62
+    "avg_30d": 12.55
   },
   "bank_nifty": {
     "symbol": "^NSEBANK",
-    "value": 57635.25,
-    "day_change_pct": -0.43,
+    "value": 57491.1,
+    "day_change_pct": -0.25,
     "trend_5d": "sideways",
     "trend_20d": "sideways",
-    "ath_pct_60d": -1.82,
+    "ath_pct_60d": -2.07,
     "diverging": false
   },
   "sectors": {
     "IT": {
       "symbol": "ITBEES.NS",
-      "value": 34.65,
-      "day_change_pct": -1.67,
-      "trend_5d": "sideways",
+      "value": 34.81,
+      "day_change_pct": 0.12,
+      "trend_5d": "down",
       "trend_20d": "strong_up",
-      "ath_pct_60d": -6.3
+      "ath_pct_60d": -5.87
     },
     "Pharma": {
       "symbol": "PHARMABEES.NS",
-      "value": 27.45,
-      "day_change_pct": 0.07,
+      "value": 27.25,
+      "day_change_pct": -0.73,
       "trend_5d": "sideways",
-      "trend_20d": "unknown",
-      "ath_pct_60d": -2.0
+      "trend_20d": "up",
+      "ath_pct_60d": -2.71
     },
     "Bank": {
       "symbol": "BANKBEES.NS",
-      "value": 599.01,
-      "day_change_pct": 0.7,
+      "value": 596.37,
+      "day_change_pct": -0.27,
       "trend_5d": "sideways",
       "trend_20d": "sideways",
-      "ath_pct_60d": -4.6
+      "ath_pct_60d": -5.02
     },
     "Infra": {
       "symbol": "INFRABEES.NS",
-      "value": 968.74,
-      "day_change_pct": -0.44,
-      "trend_5d": "down",
-      "trend_20d": "up",
-      "ath_pct_60d": -2.49
+      "value": 976.93,
+      "day_change_pct": 0.9,
+      "trend_5d": "sideways",
+      "trend_20d": "sideways",
+      "ath_pct_60d": -1.67
     }
   },
   "market_mood": "neutral",
   "trade_allowed": true,
-  "warnings": [],
+  "warnings": [
+    "Nifty in downtrend (down) \u2014 only high-confidence BUY signals"
+  ],
   "leading_sectors": [],
   "market_regime": "normal",
   "sector_breadth": 0.0,
   "lagging_sectors": [
-    "Infra"
+    "IT"
   ],
-  "intraday_regime": "mixed",
   "macro": {
-    "date": "2026-08-14",
-    "session": "midday",
-    "generated_at": "2026-08-14T06:15:45.788517",
-    "global_score": 0.245,
+    "date": "2026-08-17",
+    "session": "preopen",
+    "generated_at": "2026-08-17T03:05:39.819099",
+    "global_score": 0.037,
     "india_score": 0.0,
-    "overall_score": 0.135,
+    "overall_score": 0.02,
     "mood": "neutral",
     "drivers": [
-      "Reddit is joining the S&P 500 after months of speculation. Analysts have these concerns.",
-      "\u2018My wife and I are both retired\u2019: Should we dip into our $2.3 million investments to pay off our 2.9% $300,000 mortgage?",
-      "Dell\u2019s stock has beaten Micron and AMD this year \u2014 and now it\u2019s adding to its gains",
-      "Salesforce\u2019s stock gets a boost as J.P. Morgan says AI fears are overblown",
-      "Sandisk\u2019s stock is flying higher. Here are the new targets that are exciting Wall Street.",
-      "Markets are looking eerily calm as investors chase FOMO rally",
-      "\u2018It feels like a medical miracle\u2019: How did a single QR code coupon cut my $618 Walgreens prescription to $15?",
-      "I found a $100 bill in the communal washer at my Airbnb. What should I do?"
+      "U.S. stock futures little changed as investors ponder the Fed\u2019s next move",
+      "Can I claim 50% of my husband\u2019s Social Security now \u2014 and switch to my higher benefit at 70?",
+      "My friend\u2019s mother died. Can she stop Medicaid from taking the family home?",
+      "\u2018It\u2019s a double-edged sword\u2019: My husband got a $42,000 bonus. Will it wipe out our Affordable Care Act subsidy?",
+      "I\u2019m 63, a retired CPA with a $1.2 million 401(k). Do I need to bother with a Roth conversion?",
+      "Here\u2019s the real reason oil prices aren\u2019t moving higher",
+      "The Mediterranean diet is the best out there. Here\u2019s why Americans struggle with it.",
+      "Walmart and Target are about to reveal the health of the U.S. consumer"
     ],
     "global_cues": {
       "dow": {
-        "last": 53839.99,
-        "chg_pct": 0.13
+        "last": 53732.41,
+        "chg_pct": -0.2
       },
       "nasdaq": {
-        "last": 26803.03,
-        "chg_pct": 0.81
+        "last": 26729.16,
+        "chg_pct": -0.28
       },
       "sp500": {
-        "last": 7798.99,
-        "chg_pct": 0.65
+        "last": 7785.76,
+        "chg_pct": -0.17
       },
       "nikkei": {
-        "last": 68845.55,
-        "chg_pct": 0.79
+        "last": 68721.44,
+        "chg_pct": 0.01
       },
       "crude": {
-        "last": 83.27,
+        "last": 82.47,
         "chg_pct": 0.08
       },
       "usdinr": {
         "last": 95.42,
-        "chg_pct": 0.08
+        "chg_pct": 0.01
       },
       "gold": {
-        "last": 4363.6,
-        "chg_pct": -1.03
+        "last": 4445.5,
+        "chg_pct": 1.49
       }
     },
-    "summary": "Overall macro mood is neutral (+0.14). US Dow +0.1% overnight. Crude +0.1%. USD/INR +0.1%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
+    "summary": "Overall macro mood is neutral (+0.02). US Dow -0.2% overnight. Crude +0.1%. USD/INR +0.0%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
       "Trade-war headlines spook global markets; IT & export names react most."
@@ -126,20 +127,14 @@
   },
   "macro_risk_factor": 1.0,
   "fii_dii": {
-    "date": "2026-08-14",
-    "fii_net_cr": -510.69,
-    "dii_net_cr": 4353.09,
-    "combined_net_cr": 3842.4,
-    "signal": "strong_inflow",
+    "date": "2026-08-17",
+    "fii_net_cr": 508.12,
+    "dii_net_cr": 356.4,
+    "combined_net_cr": 864.52,
+    "signal": "inflow",
     "ok": true,
     "error": "",
     "history": [
-      {
-        "date": "2026-07-06",
-        "fii": 243.03,
-        "dii": 3791.42,
-        "combined": 4034.45
-      },
       {
         "date": "2026-07-07",
         "fii": 393.19,
@@ -313,16 +308,21 @@
         "fii": -510.69,
         "dii": 4353.09,
         "combined": 3842.4
+      },
+      {
+        "date": "2026-08-17",
+        "fii": 508.12,
+        "dii": 356.4,
+        "combined": 864.52
       }
     ]
   },
-  "flow_tailwind": true,
   "pcr": {
-    "date": "2026-08-14",
+    "date": "2026-08-17",
     "pcr": 0.884,
     "reading": "neutral",
-    "total_pe_oi": 2066658,
-    "total_ce_oi": 2338723,
+    "total_pe_oi": 2054161,
+    "total_ce_oi": 2322870,
     "spot": 24366.0,
     "max_pain": 24400.0,
     "max_pain_dist_pct": -0.14,

@@ -6843,22 +6843,22 @@
     "date": "2026-08-18",
     "ranked": [
       {
-        "ticker": "PIDILITIND.NS",
-        "rank": 1,
-        "composite_score": 63.65,
-        "success_probability": 0.738
-      },
-      {
         "ticker": "GAIL.NS",
-        "rank": 2,
+        "rank": 1,
         "composite_score": 63.01,
         "success_probability": 0.556
       },
       {
-        "ticker": "MARICO.NS",
+        "ticker": "PIDILITIND.NS",
+        "rank": 2,
+        "composite_score": 58.79,
+        "success_probability": 0.695
+      },
+      {
+        "ticker": "SHRIRAMFIN.NS",
         "rank": 3,
-        "composite_score": 53.13,
-        "success_probability": 0.604
+        "composite_score": 53.05,
+        "success_probability": 0.491
       },
       {
         "ticker": "SBIN.NS",
@@ -6867,39 +6867,39 @@
         "success_probability": 0.51
       },
       {
-        "ticker": "SHRIRAMFIN.NS",
-        "rank": 5,
-        "composite_score": 52.17,
-        "success_probability": 0.491
-      },
-      {
         "ticker": "CHOLAFIN.NS",
-        "rank": 6,
+        "rank": 5,
         "composite_score": 51.17,
         "success_probability": 0.489
       },
       {
         "ticker": "CIPLA.NS",
-        "rank": 7,
+        "rank": 6,
         "composite_score": 50.44,
         "success_probability": 0.478
       },
       {
         "ticker": "UNIONBANK.NS",
-        "rank": 8,
-        "composite_score": 47.78,
+        "rank": 7,
+        "composite_score": 48.28,
         "success_probability": 0.469
       },
       {
         "ticker": "SIEMENS.NS",
-        "rank": 9,
-        "composite_score": 47.7,
+        "rank": 8,
+        "composite_score": 47.68,
         "success_probability": 0.523
+      },
+      {
+        "ticker": "MARICO.NS",
+        "rank": 9,
+        "composite_score": 46.82,
+        "success_probability": 0.561
       },
       {
         "ticker": "ABCAPITAL.NS",
         "rank": 10,
-        "composite_score": 45.37,
+        "composite_score": 45.91,
         "success_probability": 0.447
       },
       {
@@ -6917,20 +6917,20 @@
       {
         "ticker": "BAJFINANCE.NS",
         "rank": 13,
-        "composite_score": 40.55,
+        "composite_score": 40.74,
         "success_probability": 0.411
       },
       {
-        "ticker": "DRREDDY.NS",
+        "ticker": "NTPC.NS",
         "rank": 14,
-        "composite_score": 31.96,
-        "success_probability": 0.356
+        "composite_score": 36.94,
+        "success_probability": 0.364
       },
       {
-        "ticker": "NTPC.NS",
+        "ticker": "DRREDDY.NS",
         "rank": 15,
-        "composite_score": 27.6,
-        "success_probability": 0.314
+        "composite_score": 31.96,
+        "success_probability": 0.356
       }
     ]
   }

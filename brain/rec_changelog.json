@@ -4848,5 +4848,25 @@
     "ts": "2026-08-18T04:05:48.941030",
     "detail": "Confidence \u25bc6 (72 \u2192 66) | Rank \u25bc3 (#6 \u2192 #9) | Target 1 moved \u20b9202.23 \u2192 \u20b9199.16",
     "confidence": 65.7
+  },
+  {
+    "type": "removed",
+    "ticker": "UNIONBANK.NS",
+    "nse_code": "UNIONBANK",
+    "signal": "BUY",
+    "date": "2026-08-18",
+    "ts": "2026-08-18T06:15:53.094120",
+    "detail": "Dropped \u2014 no longer meets threshold (was 66/100)",
+    "confidence": 0
+  },
+  {
+    "type": "updated",
+    "ticker": "PIDILITIND.NS",
+    "nse_code": "PIDILITIND",
+    "signal": "BUY",
+    "date": "2026-08-18",
+    "ts": "2026-08-18T06:15:53.094120",
+    "detail": "Confidence \u25bc7 (74 \u2192 66) | Rank \u25b21 (#2 \u2192 #1)",
+    "confidence": 66.5
   }
 ]

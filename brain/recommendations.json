@@ -4,9 +4,9 @@
     "nse_code": "PIDILITIND",
     "company_name": "Pidilite Industries",
     "date": "2026-08-18",
-    "generated_at": "2026-08-18 07:45 UTC",
-    "valid_until": "15:15 IST",
-    "session": "afternoon",
+    "generated_at": "2026-08-18 09:45 UTC",
+    "valid_until": "15:40 IST",
+    "session": "intraday_close",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -21,17 +21,17 @@
     "exit_window": "Monitor at each daily open; trail stop as it moves in favour",
     "target_timeframe": "1\u20133 trading weeks",
     "action_urgency": "No rush \u2014 swing setups allow flexible entry within the zone",
-    "cmp": 1667.0,
-    "entry_low": 1663.67,
-    "entry_high": 1675.33,
-    "stop_loss": 1621.73,
-    "target1": 1757.54,
-    "target2": 1787.72,
+    "cmp": 1665.0,
+    "entry_low": 1661.67,
+    "entry_high": 1673.32,
+    "stop_loss": 1619.73,
+    "target1": 1755.54,
+    "target2": 1785.72,
     "risk_pct": 2.72,
     "rr_target1": 2.0,
     "rr_target2": 2.67,
     "recommended_qty": 7,
-    "capital_needed": 11669.0,
+    "capital_needed": 11655.0,
     "max_loss_if_sl": 316.89,
     "confidence": 73.8,
     "tech_score": 25.3,
@@ -45,7 +45,7 @@
     "profit_probability": 0.244,
     "composite_score": 58.79,
     "focus_rank": 2,
-    "rank_delta": -1,
+    "rank_delta": 0,
     "intention": "BUY PIDILITIND for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
     "confluence_count": 5,
     "confluence_families": [
@@ -79,6 +79,7 @@
       "In a long-term strong uptrend (2yr) \u2014 trend on our side",
       "Near 52-week high (92% of range) \u2014 breakout zone",
       "\u2713 Daily setup aligned with the higher-timeframe trend",
+      "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
       "Valuation: P/E 65.2x",
       "ROCE: 33.0%",
       "Revenue growing 21.3% YoY",
@@ -99,8 +100,8 @@
       "History backtest: this kind of BUY setup worked 51% of the time over ~1 week on this stock (sample: 51)"
     ],
     "patterns_seen": [
-      "pivot_s1_breakdown",
       "full_bullish_alignment",
+      "pivot_s1_breakdown",
       "adx_strong_trend_up"
     ],
     "reliable_patterns": [
@@ -131,9 +132,10 @@
     "paper_win_rate": 1.0,
     "paper_pnl": 205.17,
     "paper_expectancy": 68.39,
-    "market_mood": "neutral",
+    "market_mood": "bearish",
     "market_warning": [
-      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals"
+      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
+      "Nifty in intraday downtrend \u2014 avoid new longs this session"
     ]
   }
 ]

@@ -1,19 +1,19 @@
 {
   "date": "2026-08-18",
-  "session": "afternoon",
+  "session": "intraday_close",
   "nifty": {
     "symbol": "^NSEI",
     "value": 24366.0,
     "day_change_pct": -0.12,
     "trend_5d": "down",
-    "trend_20d": "up",
+    "trend_20d": "sideways",
     "ath_pct_60d": -1.65
   },
   "vix": {
     "value": 11.31,
     "level": "normal",
     "percentile_30d": 0.0,
-    "avg_30d": 12.56
+    "avg_30d": 12.55
   },
   "bank_nifty": {
     "symbol": "^NSEBANK",
@@ -58,10 +58,11 @@
       "ath_pct_60d": -1.67
     }
   },
-  "market_mood": "neutral",
+  "market_mood": "bearish",
   "trade_allowed": true,
   "warnings": [
-    "Nifty in downtrend (down) \u2014 only high-confidence BUY signals"
+    "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
+    "Nifty in intraday downtrend \u2014 avoid new longs this session"
   ],
   "leading_sectors": [],
   "market_regime": "normal",
@@ -70,7 +71,7 @@
     "IT",
     "Pharma"
   ],
-  "intraday_regime": "mixed",
+  "intraday_regime": "trending_down",
   "macro": {
     "date": "2026-08-18",
     "session": "midday",

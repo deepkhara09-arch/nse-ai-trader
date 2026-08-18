@@ -1,13 +1,13 @@
 {
   "phase": "paper_trading",
   "day": 41,
-  "session": "morning",
+  "session": "preopen",
   "start_date": "2026-06-22",
   "phase_start_date": "2026-07-15",
   "last_run_date": "2026-08-17",
   "last_counted_date": "2026-08-17",
   "cohort_last_tick_date": "2026-08-17",
-  "last_updated": "2026-08-17T10:13:47.883557",
+  "last_updated": "2026-08-18T03:05:44.995458",
   "focus_stocks": [
     "MARICO.NS",
     "SBIN.NS",
@@ -140,7 +140,8 @@
     "[2026-08-14] Focus refresh \u2014 promoted: ['TATASTEEL', 'JSWSTEEL'] | demoted: ['GRASIM', 'ASIANPAINT']",
     "[2026-08-17] Pre-open macro: neutral (+0.02)",
     "[2026-08-17] Focus refresh \u2014 promoted: ['SIEMENS', 'DRREDDY', 'SHRIRAMFIN'] | demoted: ['PFC', 'TATASTEEL', 'JSWSTEEL']",
-    "[2026-08-17] Cohort batch #24 complete \u2014 30 candidates ready"
+    "[2026-08-17] Cohort batch #24 complete \u2014 30 candidates ready",
+    "[2026-08-18] Pre-open macro: neutral (+0.07)"
   ],
   "alert_sent": false,
   "schema_version": 11,
@@ -370,11 +371,6 @@
     "scored_date": "2026-08-17"
   },
   "sessions_done": {
-    "preopen": "2026-08-17",
-    "morning": "2026-08-17",
-    "midday": "2026-08-17",
-    "afternoon": "2026-08-17",
-    "intraday_close": "2026-08-17",
-    "preclose": "2026-08-17"
+    "preopen": "2026-08-18"
   }
 }

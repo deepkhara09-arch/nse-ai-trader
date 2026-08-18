@@ -96,18 +96,18 @@
   },
   "patterns": {
     "full_bullish_alignment": {
-      "wins": 9,
+      "wins": 10,
       "losses": 12,
-      "sum_win_pct": 28.66,
+      "sum_win_pct": 29.44,
       "sum_loss_pct": 28.659999999999997,
-      "edge": 0.0
+      "edge": 0.012
     },
     "near_52w_high": {
-      "wins": 2,
+      "wins": 3,
       "losses": 4,
-      "sum_win_pct": 8.15,
+      "sum_win_pct": 8.93,
       "sum_loss_pct": 13.02,
-      "edge": -0.271
+      "edge": -0.195
     },
     "low_volume_drift": {
       "wins": 1,
@@ -124,18 +124,18 @@
       "edge": 0.0
     },
     "pivot_point_test": {
-      "wins": 10,
+      "wins": 11,
       "losses": 3,
-      "sum_win_pct": 31.09,
+      "sum_win_pct": 31.87,
       "sum_loss_pct": 2.1799999999999997,
-      "edge": 0.741
+      "edge": 0.707
     },
     "adx_strong_trend_up": {
-      "wins": 6,
+      "wins": 7,
       "losses": 4,
-      "sum_win_pct": 22.31,
+      "sum_win_pct": 23.09,
       "sum_loss_pct": 8.75,
-      "edge": 0.452
+      "edge": 0.435
     },
     "tweezer_bottom": {
       "wins": 5,
@@ -145,11 +145,11 @@
       "edge": 0.224
     },
     "supertrend_bullish": {
-      "wins": 9,
+      "wins": 10,
       "losses": 10,
-      "sum_win_pct": 18.85,
+      "sum_win_pct": 19.630000000000003,
       "sum_loss_pct": 26.68,
-      "edge": -0.137
+      "edge": -0.117
     },
     "engulfing_bullish": {
       "wins": 0,
@@ -180,18 +180,18 @@
       "edge": 0.0
     },
     "pivot_r1_breakout": {
-      "wins": 2,
+      "wins": 3,
       "losses": 5,
-      "sum_win_pct": 3.8400000000000003,
+      "sum_win_pct": 4.62,
       "sum_loss_pct": 13.78,
-      "edge": -0.473
+      "edge": -0.382
     },
     "volume_breakout_bullish": {
-      "wins": 4,
+      "wins": 5,
       "losses": 2,
-      "sum_win_pct": 7.140000000000001,
+      "sum_win_pct": 7.920000000000001,
       "sum_loss_pct": 4.85,
-      "edge": 0.127
+      "edge": 0.146
     },
     "three_white_soldiers": {
       "wins": 0,
@@ -271,11 +271,11 @@
       "edge": 0.0
     },
     "52w_breakout": {
-      "wins": 1,
+      "wins": 2,
       "losses": 2,
-      "sum_win_pct": 2.97,
+      "sum_win_pct": 3.75,
       "sum_loss_pct": 6.84,
-      "edge": 0.0
+      "edge": -0.258
     },
     "bb_lower_bounce": {
       "wins": 2,
@@ -334,9 +334,9 @@
       "edge": 0.0
     },
     "outside_bar": {
-      "wins": 1,
+      "wins": 2,
       "losses": 1,
-      "sum_win_pct": 2.97,
+      "sum_win_pct": 3.75,
       "sum_loss_pct": 3.61,
       "edge": 0.0
     },

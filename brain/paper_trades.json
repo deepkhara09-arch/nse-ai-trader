@@ -43,10 +43,10 @@
         "regime": "mixed"
       },
       "view_hist": [
-        1,
         0,
         1,
-        0
+        0,
+        1
       ]
     },
     {
@@ -97,7 +97,7 @@
         0,
         0,
         0,
-        0
+        1
       ],
       "stale_tightened": true
     },
@@ -131,8 +131,8 @@
         "In a long-term strong downtrend (2yr)",
         "\u2713 Daily setup aligned with the higher-timeframe trend"
       ],
-      "current_price": 337.7,
-      "unrealized_pnl": 22.0,
+      "current_price": 338.15,
+      "unrealized_pnl": 13.0,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -145,7 +145,7 @@
         0,
         0,
         0,
-        0
+        1
       ]
     },
     {
@@ -157,7 +157,7 @@
       "entry": 1092.0,
       "qty": 6,
       "invested": 6552.0,
-      "stop_loss": 1041.63,
+      "stop_loss": 1047.67,
       "target": 1192.74,
       "style": "swing",
       "confidence": 85.3,
@@ -182,8 +182,8 @@
         "MACD histogram negative",
         "Broke below Pivot S1 support \u2014 bearish"
       ],
-      "current_price": 1091.0,
-      "unrealized_pnl": -6.0,
+      "current_price": 1091.5,
+      "unrealized_pnl": -3.0,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -197,7 +197,8 @@
         1,
         1,
         1
-      ]
+      ],
+      "stale_tightened": true
     },
     {
       "ticker": "MARICO.NS",
@@ -242,8 +243,8 @@
       },
       "view_hist": [
         1,
-        1,
         0,
+        1,
         1
       ]
     },
@@ -295,6 +296,7 @@
         "regime": "choppy"
       },
       "view_hist": [
+        1,
         1,
         1,
         1
@@ -1834,7 +1836,8 @@
       "costs": 14.87,
       "pnl_pct": 0.78,
       "won": true,
-      "open_days": 9
+      "open_days": 9,
+      "forensic_done": true
     }
   ],
   "daily_snapshots": [
@@ -1998,16 +2001,23 @@
       "capital": 57432.3,
       "open_positions": 6,
       "daily_pnl": 0.0
+    },
+    {
+      "date": "2026-08-18",
+      "portfolio_value": 99373.92,
+      "capital": 58441.26,
+      "open_positions": 6,
+      "daily_pnl": 38.47
     }
   ],
   "daily_pnl_today": 38.46938999999992,
-  "last_snapshot_date": "2026-08-17",
+  "last_snapshot_date": "2026-08-18",
   "lifetime_wins": 12,
   "lifetime_losses": 12,
   "lifetime_pnl": -453.54,
   "last_pnl_reset_date": "2026-08-18",
-  "max_drawdown_pct": 1.51,
-  "current_drawdown_pct": 1.43,
+  "max_drawdown_pct": 1.81,
+  "current_drawdown_pct": 1.81,
   "portfolio_peak": 101210.28,
-  "sessions_since_peak": 20
+  "sessions_since_peak": 21
 }

@@ -170,6 +170,7 @@ def _build_html(
   <!-- ── LEARN tab ── -->
   <section class="tab-panel" id="tab-learn" hidden>
     {_section_learning_progress(decisions)}
+    {_section_loss_lessons(patterns)}
     {_section_coach(coach_memory)}
     {_section_focus_competition()}
     {_section_attribution(attribution)}
@@ -2475,6 +2476,78 @@ def _section_brain(focus, patterns) -> str:
     return f"""<div class="section" id="brain">
   <h2>Brain Insights <span>Learned pattern reliability per focus stock</span></h2>
   <div class="grid2">{cards}</div>
+</div>"""
+
+
+def _section_loss_lessons(patterns: dict = None) -> str:
+    """Surface what the tool has LEARNED from wins & losses so it's visible and
+    verifiable: the recurring causes behind losses, and which patterns actually
+    make vs lose money market-wide (global reliability). Reads the free, local
+    learning stores — never fabricates; shows an honest 'not enough data' when empty."""
+    # ── Loss post-mortem causes ────────────────────────────────────────────────
+    causes_html = '<p style="color:var(--muted);font-size:.8rem">No losses analysed yet.</p>'
+    try:
+        from agent.loss_forensics import load_forensics
+        fx = load_forensics()
+        causes = fx.get("causes", {})
+        if causes:
+            rows = ""
+            for c, info in sorted(causes.items(), key=lambda kv: -kv[1]["count"])[:8]:
+                nice = c.replace("_", " ").replace("weak pattern:", "weak signal: ")
+                rows += (
+                    f'<tr><td style="color:var(--fg)">{nice}</td>'
+                    f'<td style="text-align:center">{info["count"]}&times;</td>'
+                    f'<td style="text-align:center;color:#ef4444">-{info.get("avg_loss_pct",0)}%</td>'
+                    f'<td class="muted" style="font-size:.72rem">{", ".join(info.get("examples",[])[:4])}</td></tr>'
+                )
+            causes_html = (
+                '<table style="width:100%;border-collapse:collapse;font-size:.8rem">'
+                '<thead><tr style="color:var(--muted);font-size:.72rem">'
+                '<th style="text-align:left;padding:4px 0">Why losses happened</th>'
+                '<th>Times</th><th>Avg loss</th><th>Examples</th></tr></thead>'
+                f'<tbody>{rows}</tbody></table>'
+            )
+    except Exception:
+        pass
+
+    # ── Global pattern edge (best & worst, pooled across all stocks) ───────────
+    pat_html = '<p style="color:var(--muted);font-size:.8rem">Patterns need ~4 closed trades each to rank.</p>'
+    try:
+        gp = (patterns or {}).get("__GLOBAL__", {}).get("patterns", {})
+        ranked = [(p, i) for p, i in gp.items()
+                  if (i.get("wins", 0) + i.get("losses", 0)) >= 4]
+        if ranked:
+            ranked.sort(key=lambda x: x[1].get("reliability", 0.5), reverse=True)
+            best = ranked[:5]
+            worst = ranked[-5:][::-1]
+            def _plist(items, good):
+                out = ""
+                for p, i in items:
+                    n = i.get("wins", 0) + i.get("losses", 0)
+                    rel = i.get("reliability", 0.5)
+                    col = "#22c55e" if good else "#ef4444"
+                    out += (f'<div style="display:flex;justify-content:space-between;'
+                            f'padding:3px 0;font-size:.78rem">'
+                            f'<span style="color:var(--fg)">{p.replace("_"," ")}</span>'
+                            f'<span style="color:{col}">{rel*100:.0f}% <span class="muted" '
+                            f'style="font-size:.68rem">({n:.0f})</span></span></div>')
+                return out
+            pat_html = (
+                '<div class="grid2"><div>'
+                '<div class="muted" style="font-size:.72rem;margin-bottom:4px">✓ Patterns that MAKE money</div>'
+                f'{_plist(best, True)}</div><div>'
+                '<div class="muted" style="font-size:.72rem;margin-bottom:4px">✗ Patterns that LOSE money</div>'
+                f'{_plist(worst, False)}</div></div>'
+            )
+    except Exception:
+        pass
+
+    return f"""<div class="section" id="loss-lessons">
+  <h2>What the Tool Learned <span>Why losses happen &amp; which patterns actually pay — pooled across all stocks</span></h2>
+  <div class="grid2">
+    <div class="card"><h3 style="margin-bottom:8px">Loss post-mortem</h3>{causes_html}</div>
+    <div class="card"><h3 style="margin-bottom:8px">Pattern edge (market-wide)</h3>{pat_html}</div>
+  </div>
 </div>"""
 
 

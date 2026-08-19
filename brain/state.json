@@ -1,13 +1,13 @@
 {
   "phase": "paper_trading",
   "day": 42,
-  "session": "preopen",
+  "session": "morning",
   "start_date": "2026-06-22",
   "phase_start_date": "2026-07-15",
   "last_run_date": "2026-08-18",
   "last_counted_date": "2026-08-18",
   "cohort_last_tick_date": "2026-08-18",
-  "last_updated": "2026-08-19T03:05:43.502625",
+  "last_updated": "2026-08-19T04:05:40.116639",
   "focus_stocks": [
     "MARICO.NS",
     "SBIN.NS",
@@ -54,14 +54,14 @@
     "IDFCFIRSTB.NS"
   ],
   "paper_trade_stats": {
-    "total": 24,
+    "total": 25,
     "wins": 12,
-    "losses": 12,
-    "win_rate": 0.5,
-    "total_pnl": -453.54,
+    "losses": 13,
+    "win_rate": 0.48,
+    "total_pnl": -616.93,
     "avg_win": 125.39,
-    "avg_loss": -163.18,
-    "expectancy": -18.9
+    "avg_loss": -163.2,
+    "expectancy": -24.68
   },
   "brain_notes": [
     "[2026-06-23] Pre-open macro: neutral (+0.07)",
@@ -376,6 +376,7 @@
     "scored_date": "2026-08-18"
   },
   "sessions_done": {
-    "preopen": "2026-08-19"
+    "preopen": "2026-08-19",
+    "morning": "2026-08-19"
   }
 }

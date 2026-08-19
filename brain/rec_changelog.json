@@ -4928,5 +4928,55 @@
     "ts": "2026-08-19T03:05:43.622618",
     "detail": "Rank \u25b21 (#6 \u2192 #5)",
     "confidence": 70.6
+  },
+  {
+    "type": "new",
+    "ticker": "GAIL.NS",
+    "nse_code": "GAIL",
+    "signal": "BUY",
+    "date": "2026-08-19",
+    "ts": "2026-08-19T04:05:40.211745",
+    "detail": "New BUY recommendation \u2014 confidence 67/100",
+    "confidence": 67.0
+  },
+  {
+    "type": "removed",
+    "ticker": "MARICO.NS",
+    "nse_code": "MARICO",
+    "signal": "BUY",
+    "date": "2026-08-19",
+    "ts": "2026-08-19T04:05:40.211745",
+    "detail": "Dropped \u2014 no longer meets threshold (was 71/100)",
+    "confidence": 0
+  },
+  {
+    "type": "removed",
+    "ticker": "SIEMENS.NS",
+    "nse_code": "SIEMENS",
+    "signal": "BUY",
+    "date": "2026-08-19",
+    "ts": "2026-08-19T04:05:40.211745",
+    "detail": "Dropped \u2014 no longer meets threshold (was 67/100)",
+    "confidence": 0
+  },
+  {
+    "type": "updated",
+    "ticker": "PIDILITIND.NS",
+    "nse_code": "PIDILITIND",
+    "signal": "BUY",
+    "date": "2026-08-19",
+    "ts": "2026-08-19T04:05:40.211745",
+    "detail": "Confidence \u25bc17 (90 \u2192 73) | Rank \u25b21 (#2 \u2192 #1)",
+    "confidence": 72.7
+  },
+  {
+    "type": "updated",
+    "ticker": "UNIONBANK.NS",
+    "nse_code": "UNIONBANK",
+    "signal": "BUY",
+    "date": "2026-08-19",
+    "ts": "2026-08-19T04:05:40.211745",
+    "detail": "Confidence \u25bc5 (71 \u2192 66) | Rank \u25b23 (#7 \u2192 #4)",
+    "confidence": 65.8
   }
 ]

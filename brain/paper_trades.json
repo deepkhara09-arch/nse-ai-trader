@@ -1,5 +1,5 @@
 {
-  "capital": 58441.264635,
+  "capital": 58121.522235,
   "open_positions": [
     {
       "ticker": "UNIONBANK.NS",
@@ -32,8 +32,8 @@
         "\u2713 Daily setup aligned with the higher-timeframe trend",
         "Near upper Bollinger Band"
       ],
-      "current_price": 186.01,
-      "unrealized_pnl": 85.1,
+      "current_price": 185.66,
+      "unrealized_pnl": 69.0,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -43,63 +43,11 @@
         "regime": "mixed"
       },
       "view_hist": [
-        0,
         1,
         0,
-        1
+        1,
+        0
       ]
-    },
-    {
-      "ticker": "CHOLAFIN.NS",
-      "sector": "NBFC",
-      "open_date": "2026-08-12",
-      "open_session": "morning",
-      "action": "BUY",
-      "entry": 1900.3,
-      "qty": 4,
-      "invested": 7601.2,
-      "stop_loss": 1866.23,
-      "target": 2099.99,
-      "style": "swing",
-      "confidence": 95,
-      "patterns": [
-        "supertrend_bullish",
-        "pivot_point_test",
-        "strong_bullish_marubozu",
-        "full_bullish_alignment",
-        "tweezer_bottom",
-        "rsi_bullish_divergence"
-      ],
-      "buy_reasons": [
-        "All EMAs stacked bullish",
-        "MACD histogram positive",
-        "Candlestick: tweezer bottom",
-        "RSI bullish divergence \u2014 price lower but RSI higher",
-        "Supertrend bullish \u2014 price above trend band",
-        "Testing pivot point \u2014 decision zone",
-        "In a long-term strong uptrend (2yr) \u2014 trend on our side",
-        "Near 52-week high (97% of range) \u2014 breakout zone",
-        "\u2713 Daily setup aligned with the higher-timeframe trend",
-        "RSI=65 elevated",
-        "Near upper Bollinger Band"
-      ],
-      "current_price": 1870.1,
-      "unrealized_pnl": -120.8,
-      "max_held_days": 10,
-      "vol_regime_pct": 0.12,
-      "entry_market": {
-        "nifty_trend": "sideways",
-        "vix": 11.86,
-        "mood": "neutral",
-        "regime": "mixed"
-      },
-      "view_hist": [
-        0,
-        0,
-        0,
-        1
-      ],
-      "stale_tightened": true
     },
     {
       "ticker": "NTPC.NS",
@@ -131,8 +79,8 @@
         "In a long-term strong downtrend (2yr)",
         "\u2713 Daily setup aligned with the higher-timeframe trend"
       ],
-      "current_price": 338.15,
-      "unrealized_pnl": 13.0,
+      "current_price": 336.4,
+      "unrealized_pnl": 48.0,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -144,7 +92,7 @@
       "view_hist": [
         0,
         0,
-        0,
+        1,
         1
       ]
     },
@@ -157,7 +105,7 @@
       "entry": 1092.0,
       "qty": 6,
       "invested": 6552.0,
-      "stop_loss": 1047.67,
+      "stop_loss": 1058.31,
       "target": 1192.74,
       "style": "swing",
       "confidence": 85.3,
@@ -182,8 +130,8 @@
         "MACD histogram negative",
         "Broke below Pivot S1 support \u2014 bearish"
       ],
-      "current_price": 1091.5,
-      "unrealized_pnl": -3.0,
+      "current_price": 1082.0,
+      "unrealized_pnl": -60.0,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -196,7 +144,7 @@
         1,
         1,
         1,
-        1
+        0
       ],
       "stale_tightened": true
     },
@@ -209,7 +157,7 @@
       "entry": 860.55,
       "qty": 9,
       "invested": 7744.95,
-      "stop_loss": 833.53,
+      "stop_loss": 836.77,
       "target": 914.59,
       "style": "swing",
       "confidence": 95,
@@ -231,8 +179,8 @@
         "\u2713 Daily setup aligned with the higher-timeframe trend",
         "MACD histogram negative"
       ],
-      "current_price": 844.2,
-      "unrealized_pnl": -147.15,
+      "current_price": 851.2,
+      "unrealized_pnl": -84.15,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -242,11 +190,12 @@
         "regime": "choppy"
       },
       "view_hist": [
-        1,
         0,
         1,
-        1
-      ]
+        1,
+        0
+      ],
+      "stale_tightened": true
     },
     {
       "ticker": "SIEMENS.NS",
@@ -285,8 +234,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "RSI=68 elevated"
       ],
-      "current_price": 3960.0,
-      "unrealized_pnl": 0.3,
+      "current_price": 3905.0,
+      "unrealized_pnl": -54.7,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -299,8 +248,59 @@
         1,
         1,
         1,
-        1
+        0
       ]
+    },
+    {
+      "ticker": "GAIL.NS",
+      "sector": "Energy",
+      "open_date": "2026-08-19",
+      "open_session": "morning",
+      "action": "BUY",
+      "entry": 172.39,
+      "qty": 45,
+      "invested": 7757.55,
+      "stop_loss": 165.89,
+      "target": 185.38,
+      "style": "swing",
+      "confidence": 95,
+      "patterns": [
+        "bullish_harami",
+        "pivot_point_test",
+        "pivot_s1_bounce",
+        "adx_ranging_market",
+        "full_bullish_alignment",
+        "stoch_rsi_oversold_reversal",
+        "tweezer_bottom",
+        "low_volume_drift",
+        "supertrend_bullish"
+      ],
+      "buy_reasons": [
+        "All EMAs stacked bullish",
+        "RSI=48 in healthy buy zone",
+        "Candlestick: bullish harami",
+        "Candlestick: tweezer bottom",
+        "Supertrend bullish \u2014 price above trend band",
+        "ADX low \u2014 market ranging, signals less reliable",
+        "Bounced off Pivot S1 support",
+        "Testing pivot point \u2014 decision zone",
+        "StochRSI oversold with bullish candle \u2014 reversal",
+        "In a long-term strong uptrend (2yr) \u2014 trend on our side",
+        "Clean trender aligned with its long-term uptrend",
+        "\u2713 Daily setup aligned with the higher-timeframe trend",
+        "\u26a0 Sector momentum -0.30 \u2014 buying into a falling sector needs extra conviction",
+        "MACD histogram negative"
+      ],
+      "current_price": 172.39,
+      "unrealized_pnl": 0.0,
+      "max_held_days": 10,
+      "vol_regime_pct": 0.12,
+      "entry_market": {
+        "nifty_trend": "down",
+        "vix": 11.39,
+        "mood": "neutral",
+        "regime": "mixed"
+      }
     }
   ],
   "closed_trades": [
@@ -1838,6 +1838,68 @@
       "won": true,
       "open_days": 9,
       "forensic_done": true
+    },
+    {
+      "ticker": "CHOLAFIN.NS",
+      "sector": "NBFC",
+      "open_date": "2026-08-12",
+      "open_session": "morning",
+      "action": "BUY",
+      "entry": 1900.3,
+      "qty": 4,
+      "invested": 7601.2,
+      "stop_loss": 1866.23,
+      "target": 2099.99,
+      "style": "swing",
+      "confidence": 95,
+      "patterns": [
+        "supertrend_bullish",
+        "pivot_point_test",
+        "strong_bullish_marubozu",
+        "full_bullish_alignment",
+        "tweezer_bottom",
+        "rsi_bullish_divergence"
+      ],
+      "buy_reasons": [
+        "All EMAs stacked bullish",
+        "MACD histogram positive",
+        "Candlestick: tweezer bottom",
+        "RSI bullish divergence \u2014 price lower but RSI higher",
+        "Supertrend bullish \u2014 price above trend band",
+        "Testing pivot point \u2014 decision zone",
+        "In a long-term strong uptrend (2yr) \u2014 trend on our side",
+        "Near 52-week high (97% of range) \u2014 breakout zone",
+        "\u2713 Daily setup aligned with the higher-timeframe trend",
+        "RSI=65 elevated",
+        "Near upper Bollinger Band"
+      ],
+      "current_price": 1862.4,
+      "unrealized_pnl": -151.6,
+      "max_held_days": 10,
+      "vol_regime_pct": 0.12,
+      "entry_market": {
+        "nifty_trend": "sideways",
+        "vix": 11.86,
+        "mood": "neutral",
+        "regime": "mixed"
+      },
+      "view_hist": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "stale_tightened": true,
+      "close_date": "2026-08-19",
+      "close_session": "morning",
+      "exit_price": 1865.1,
+      "exit_reason": "stop_hit_gap",
+      "pnl": -163.39,
+      "pnl_gross": -140.8,
+      "costs": 22.59,
+      "pnl_pct": -2.15,
+      "won": false,
+      "open_days": 5
     }
   ],
   "daily_snapshots": [
@@ -2010,12 +2072,12 @@
       "daily_pnl": 38.47
     }
   ],
-  "daily_pnl_today": 38.46938999999992,
+  "daily_pnl_today": -163.39240000000018,
   "last_snapshot_date": "2026-08-18",
   "lifetime_wins": 12,
-  "lifetime_losses": 12,
-  "lifetime_pnl": -453.54,
-  "last_pnl_reset_date": "2026-08-18",
+  "lifetime_losses": 13,
+  "lifetime_pnl": -616.93,
+  "last_pnl_reset_date": "2026-08-19",
   "max_drawdown_pct": 1.81,
   "current_drawdown_pct": 1.81,
   "portfolio_peak": 101210.28,

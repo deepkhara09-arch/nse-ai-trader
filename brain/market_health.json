@@ -1,6 +1,6 @@
 {
   "date": "2026-08-19",
-  "session": "preopen",
+  "session": "morning",
   "nifty": {
     "symbol": "^NSEI",
     "value": 24154.9,
@@ -17,11 +17,11 @@
   },
   "bank_nifty": {
     "symbol": "^NSEBANK",
-    "value": 57497.8,
-    "day_change_pct": 0.01,
-    "trend_5d": "sideways",
+    "value": 57262.4,
+    "day_change_pct": -0.41,
+    "trend_5d": "down",
     "trend_20d": "sideways",
-    "ath_pct_60d": -2.06,
+    "ath_pct_60d": -2.46,
     "diverging": false
   },
   "sectors": {
@@ -38,7 +38,7 @@
       "value": 27.18,
       "day_change_pct": 0.0,
       "trend_5d": "down",
-      "trend_20d": "unknown",
+      "trend_20d": "up",
       "ath_pct_60d": -2.96
     },
     "Bank": {

@@ -2032,15 +2032,34 @@ def _section_recommendations(recs, validated: bool = False, stats: dict = None,
         pos = held.get(rec.get("ticker"))
         held_html = ""
         if pos:
+            # Show the LIVE managed stop/target (may have moved since entry via
+            # trailing / stale-tightening / runner-lock) and flag WHAT changed, so
+            # if you're mirroring the trade you always act on the current levels —
+            # never a stale entry-day number. The recommendation card's own
+            # entry-style stop is for NEW entries; for a held trade THIS is the plan.
+            _entry   = pos.get("entry", 0)
+            _stop    = pos.get("stop_loss", 0)
+            _is_buy  = pos.get("action", "BUY") == "BUY"
+            # Original entry stop distance is unknown post-move, so describe direction.
+            if pos.get("t1_booked"):
+                stop_note = " (raised — half booked at T1, runner protected)"
+            elif pos.get("trailing_active"):
+                stop_note = " (trailed to lock profit)"
+            elif pos.get("stale_tightened"):
+                stop_note = " (tightened — trade underwater, cutting risk)"
+            elif (_is_buy and _stop < _entry) or (not _is_buy and _stop > _entry):
+                stop_note = " (original stop — thesis still intact)"
+            else:
+                stop_note = ""
             held_html = (
                 '<div style="background:#0a1a10;border:1px solid #3ecf8e55;border-radius:8px;'
                 'padding:8px 11px;margin:8px 0;font-size:.72rem;color:#3ecf8e;line-height:1.5">'
                 f'<b>&#9679; The tool is holding this</b> — {pos.get("action","BUY")} '
-                f'{pos.get("qty","?")}x @ &#8377;{pos.get("entry",0):,.2f} since {pos.get("open_date","?")}'
-                f'<br>Live management: stop <b>&#8377;{pos.get("stop_loss",0):,.2f}</b>'
-                f'{" (trailed up)" if pos.get("trailing_active") else ""} &middot; '
+                f'{pos.get("qty","?")}x @ &#8377;{_entry:,.2f} since {pos.get("open_date","?")}'
+                f'<br><b>Current managed plan</b> (mirror THIS, not the entry box above): '
+                f'stop <b>&#8377;{_stop:,.2f}</b>{stop_note} &middot; '
                 f'target <b>&#8377;{pos.get("target",0):,.2f}</b> &middot; style {pos.get("style","swing")}'
-                '<br>If you followed this call, mirror these stop/target updates.</div>'
+                '<br>These update every session with price &amp; conditions — check here each run before acting.</div>'
             )
         rr1    = rec.get("rr_target1", 0)
         rr2    = rec.get("rr_target2", 0)

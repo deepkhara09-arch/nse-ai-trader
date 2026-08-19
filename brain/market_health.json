@@ -1,6 +1,6 @@
 {
   "date": "2026-08-19",
-  "session": "morning",
+  "session": "midday",
   "nifty": {
     "symbol": "^NSEI",
     "value": 24287.65,
@@ -71,11 +71,11 @@
   "intraday_regime": "mixed",
   "macro": {
     "date": "2026-08-19",
-    "session": "preopen",
-    "generated_at": "2026-08-19T03:05:40.291876",
-    "global_score": 0.046,
+    "session": "midday",
+    "generated_at": "2026-08-19T06:15:41.954739",
+    "global_score": 0.054,
     "india_score": 0.0,
-    "overall_score": 0.025,
+    "overall_score": 0.03,
     "mood": "neutral",
     "drivers": [
       "Trump holds off on new 50% tariffs for Canadian goods",
@@ -89,35 +89,35 @@
     ],
     "global_cues": {
       "dow": {
-        "last": 53343.4,
-        "chg_pct": -0.22
+        "last": 53459.78,
+        "chg_pct": -0.51
       },
       "nasdaq": {
-        "last": 26289.71,
-        "chg_pct": -1.33
+        "last": 26644.91,
+        "chg_pct": -0.32
       },
       "sp500": {
         "last": 7691.76,
         "chg_pct": -0.69
       },
       "nikkei": {
-        "last": 65724.25,
-        "chg_pct": -2.57
+        "last": 65335.45,
+        "chg_pct": -3.15
       },
       "crude": {
-        "last": 84.79,
-        "chg_pct": -0.18
+        "last": 84.94,
+        "chg_pct": 0.52
       },
       "usdinr": {
-        "last": 95.67,
-        "chg_pct": -0.03
+        "last": 95.74,
+        "chg_pct": 0.05
       },
       "gold": {
-        "last": 4407.9,
-        "chg_pct": 0.96
+        "last": 4366.0,
+        "chg_pct": -1.17
       }
     },
-    "summary": "Overall macro mood is neutral (+0.03). US Dow -0.2% overnight. Crude -0.2%. USD/INR -0.0%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
+    "summary": "Overall macro mood is neutral (+0.03). US Dow -0.5% overnight. Crude +0.5%. USD/INR +0.1%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
       "Trade-war headlines spook global markets; IT & export names react most."

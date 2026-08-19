@@ -3,25 +3,25 @@
   "session": "morning",
   "nifty": {
     "symbol": "^NSEI",
-    "value": 24154.9,
-    "day_change_pct": -0.55,
-    "trend_5d": "down",
-    "trend_20d": "sideways",
-    "ath_pct_60d": -2.5
+    "value": 24287.65,
+    "day_change_pct": -0.32,
+    "trend_5d": "sideways",
+    "trend_20d": "up",
+    "ath_pct_60d": -1.96
   },
   "vix": {
-    "value": 11.39,
+    "value": 11.33,
     "level": "normal",
-    "percentile_30d": 7.0,
-    "avg_30d": 12.52
+    "percentile_30d": 4.0,
+    "avg_30d": 12.51
   },
   "bank_nifty": {
     "symbol": "^NSEBANK",
-    "value": 57262.4,
-    "day_change_pct": -0.41,
-    "trend_5d": "down",
+    "value": 57497.8,
+    "day_change_pct": 0.01,
+    "trend_5d": "sideways",
     "trend_20d": "sideways",
-    "ath_pct_60d": -2.46,
+    "ath_pct_60d": -2.06,
     "diverging": false
   },
   "sectors": {
@@ -38,7 +38,7 @@
       "value": 27.18,
       "day_change_pct": 0.0,
       "trend_5d": "down",
-      "trend_20d": "up",
+      "trend_20d": "unknown",
       "ath_pct_60d": -2.96
     },
     "Bank": {
@@ -60,9 +60,7 @@
   },
   "market_mood": "neutral",
   "trade_allowed": true,
-  "warnings": [
-    "Nifty in downtrend (down) \u2014 only high-confidence BUY signals"
-  ],
+  "warnings": [],
   "leading_sectors": [],
   "market_regime": "normal",
   "sector_breadth": 0.0,

@@ -32,8 +32,8 @@
         "\u2713 Daily setup aligned with the higher-timeframe trend",
         "Near upper Bollinger Band"
       ],
-      "current_price": 185.5,
-      "unrealized_pnl": 61.64,
+      "current_price": 185.82,
+      "unrealized_pnl": 76.36,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -46,7 +46,7 @@
         0,
         0,
         0,
-        0
+        1
       ]
     },
     {
@@ -79,8 +79,8 @@
         "In a long-term strong downtrend (2yr)",
         "\u2713 Daily setup aligned with the higher-timeframe trend"
       ],
-      "current_price": 334.8,
-      "unrealized_pnl": 80.0,
+      "current_price": 334.85,
+      "unrealized_pnl": 79.0,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -90,9 +90,9 @@
         "regime": "mixed"
       },
       "view_hist": [
-        1,
         0,
         1,
+        0,
         0
       ]
     },
@@ -105,7 +105,7 @@
       "entry": 1092.0,
       "qty": 6,
       "invested": 6552.0,
-      "stop_loss": 1072.54,
+      "stop_loss": 1075.32,
       "target": 1192.74,
       "style": "swing",
       "confidence": 85.3,
@@ -130,8 +130,8 @@
         "MACD histogram negative",
         "Broke below Pivot S1 support \u2014 bearish"
       ],
-      "current_price": 1080.2,
-      "unrealized_pnl": -70.8,
+      "current_price": 1080.6,
+      "unrealized_pnl": -68.4,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -179,8 +179,8 @@
         "\u2713 Daily setup aligned with the higher-timeframe trend",
         "MACD histogram negative"
       ],
-      "current_price": 849.95,
-      "unrealized_pnl": -95.4,
+      "current_price": 848.1,
+      "unrealized_pnl": -112.05,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -190,8 +190,8 @@
         "regime": "choppy"
       },
       "view_hist": [
-        0,
         1,
+        0,
         0,
         0
       ],
@@ -234,8 +234,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "RSI=68 elevated"
       ],
-      "current_price": 3885.5,
-      "unrealized_pnl": -74.2,
+      "current_price": 3887.5,
+      "unrealized_pnl": -72.2,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -291,8 +291,8 @@
         "\u26a0 Sector momentum -0.30 \u2014 buying into a falling sector needs extra conviction",
         "MACD histogram negative"
       ],
-      "current_price": 172.3,
-      "unrealized_pnl": -4.05,
+      "current_price": 172.38,
+      "unrealized_pnl": -0.45,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -303,6 +303,7 @@
       },
       "view_hist": [
         0,
+        1,
         1,
         1
       ]
@@ -1904,7 +1905,8 @@
       "costs": 22.59,
       "pnl_pct": -2.15,
       "won": false,
-      "open_days": 5
+      "open_days": 5,
+      "forensic_done": true
     }
   ],
   "daily_snapshots": [
@@ -2075,16 +2077,23 @@
       "capital": 58441.26,
       "open_positions": 6,
       "daily_pnl": 38.47
+    },
+    {
+      "date": "2026-08-19",
+      "portfolio_value": 99285.34,
+      "capital": 58121.52,
+      "open_positions": 6,
+      "daily_pnl": -163.39
     }
   ],
   "daily_pnl_today": -163.39240000000018,
-  "last_snapshot_date": "2026-08-18",
+  "last_snapshot_date": "2026-08-19",
   "lifetime_wins": 12,
   "lifetime_losses": 13,
   "lifetime_pnl": -616.93,
   "last_pnl_reset_date": "2026-08-19",
-  "max_drawdown_pct": 1.81,
-  "current_drawdown_pct": 1.81,
+  "max_drawdown_pct": 1.9,
+  "current_drawdown_pct": 1.9,
   "portfolio_peak": 101210.28,
-  "sessions_since_peak": 21
+  "sessions_since_peak": 22
 }

@@ -1,6 +1,6 @@
 {
   "date": "2026-08-19",
-  "session": "intraday_close",
+  "session": "preclose",
   "nifty": {
     "symbol": "^NSEI",
     "value": 24154.9,
@@ -38,7 +38,7 @@
       "value": 27.18,
       "day_change_pct": 0.0,
       "trend_5d": "down",
-      "trend_20d": "unknown",
+      "trend_20d": "up",
       "ath_pct_60d": -2.96
     },
     "Bank": {
@@ -58,10 +58,11 @@
       "ath_pct_60d": -1.58
     }
   },
-  "market_mood": "neutral",
+  "market_mood": "bearish",
   "trade_allowed": true,
   "warnings": [
-    "Nifty in downtrend (down) \u2014 only high-confidence BUY signals"
+    "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
+    "Nifty choppy intraday \u2014 wait for cleaner setups"
   ],
   "leading_sectors": [],
   "market_regime": "normal",
@@ -70,7 +71,7 @@
     "IT",
     "Pharma"
   ],
-  "intraday_regime": "mixed",
+  "intraday_regime": "choppy",
   "macro": {
     "date": "2026-08-19",
     "session": "midday",
@@ -322,13 +323,13 @@
   "flow_tailwind": true,
   "pcr": {
     "date": "2026-08-19",
-    "pcr": 0.626,
+    "pcr": 0.701,
     "reading": "bearish_bias",
-    "total_pe_oi": 2039709,
-    "total_ce_oi": 3256171,
-    "spot": 24154.9,
+    "total_pe_oi": 2152036,
+    "total_ce_oi": 3068579,
+    "spot": 24078.3,
     "max_pain": 24200.0,
-    "max_pain_dist_pct": -0.19,
+    "max_pain_dist_pct": -0.51,
     "oi_bias": "call_heavy_resistance",
     "ok": true,
     "error": ""

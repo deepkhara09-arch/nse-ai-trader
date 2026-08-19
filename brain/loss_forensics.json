@@ -10,27 +10,29 @@
       "avg_loss_pct": 5.17
     },
     "no_market_tailwind": {
-      "count": 5,
-      "sum_loss_pct": 12.26,
-      "last": "2026-08-13",
+      "count": 6,
+      "sum_loss_pct": 14.41,
+      "last": "2026-08-19",
       "examples": [
         "HOMEFIRST",
         "NESTLEIND",
         "UNIONBANK",
         "SBIN",
-        "GRASIM"
+        "GRASIM",
+        "CHOLAFIN"
       ],
-      "avg_loss_pct": 2.45
+      "avg_loss_pct": 2.4
     },
     "weak_pattern:pivot_point_test": {
-      "count": 2,
-      "sum_loss_pct": 1.3699999999999999,
-      "last": "2026-08-11",
+      "count": 3,
+      "sum_loss_pct": 3.5199999999999996,
+      "last": "2026-08-19",
       "examples": [
         "NESTLEIND",
-        "ICICIBANK"
+        "ICICIBANK",
+        "CHOLAFIN"
       ],
-      "avg_loss_pct": 0.68
+      "avg_loss_pct": 1.17
     },
     "weak_pattern:adx_ranging_market": {
       "count": 2,
@@ -97,10 +99,10 @@
   "patterns": {
     "full_bullish_alignment": {
       "wins": 10,
-      "losses": 12,
+      "losses": 13,
       "sum_win_pct": 29.44,
-      "sum_loss_pct": 28.659999999999997,
-      "edge": 0.012
+      "sum_loss_pct": 30.809999999999995,
+      "edge": -0.02
     },
     "near_52w_high": {
       "wins": 3,
@@ -125,10 +127,10 @@
     },
     "pivot_point_test": {
       "wins": 11,
-      "losses": 3,
+      "losses": 4,
       "sum_win_pct": 31.87,
-      "sum_loss_pct": 2.1799999999999997,
-      "edge": 0.707
+      "sum_loss_pct": 4.33,
+      "edge": 0.612
     },
     "adx_strong_trend_up": {
       "wins": 7,
@@ -139,17 +141,17 @@
     },
     "tweezer_bottom": {
       "wins": 5,
-      "losses": 3,
+      "losses": 4,
       "sum_win_pct": 11.71,
-      "sum_loss_pct": 6.33,
-      "edge": 0.224
+      "sum_loss_pct": 8.48,
+      "edge": 0.12
     },
     "supertrend_bullish": {
       "wins": 10,
-      "losses": 10,
+      "losses": 11,
       "sum_win_pct": 19.630000000000003,
-      "sum_loss_pct": 26.68,
-      "edge": -0.117
+      "sum_loss_pct": 28.83,
+      "edge": -0.146
     },
     "engulfing_bullish": {
       "wins": 0,
@@ -160,10 +162,10 @@
     },
     "rsi_bullish_divergence": {
       "wins": 2,
-      "losses": 2,
+      "losses": 3,
       "sum_win_pct": 3.3000000000000003,
-      "sum_loss_pct": 6.34,
-      "edge": -0.253
+      "sum_loss_pct": 8.49,
+      "edge": -0.346
     },
     "inside_bar": {
       "wins": 4,
@@ -353,6 +355,13 @@
       "sum_win_pct": 0.0,
       "sum_loss_pct": 0.81,
       "edge": 0.0
+    },
+    "strong_bullish_marubozu": {
+      "wins": 0,
+      "losses": 1,
+      "sum_win_pct": 0.0,
+      "sum_loss_pct": 2.15,
+      "edge": 0.0
     }
   },
   "recent": [
@@ -459,6 +468,15 @@
       "causes": [
         "weak_pattern:doji",
         "thesis_reversed_cut_early"
+      ]
+    },
+    {
+      "date": "2026-08-19",
+      "ticker": "CHOLAFIN",
+      "loss_pct": 2.15,
+      "causes": [
+        "weak_pattern:pivot_point_test",
+        "no_market_tailwind"
       ]
     }
   ]

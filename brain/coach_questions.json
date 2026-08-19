@@ -1,102 +1,102 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_up, inside_bar, full_bullish_alignment mean for a swing trade on HINDALCO? Current RSI=70, MACD hist=+4.3302, Vol=0.5x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of shooting_star, low_volume_drift mean for a swing trade on SIEMENS? Current RSI=73, MACD hist=+3.6760, Vol=0.3x average. Signal is BUY.",
+    "context": {
+      "ticker": "SIEMENS.NS",
+      "signal": "BUY",
+      "patterns": "shooting_star, low_volume_drift",
+      "rsi": 72.7
+    },
+    "queued_at": "2026-08-19T10:11:10.560337"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of full_bullish_alignment, spinning_top, pivot_s1_breakdown mean for a swing trade on SHRIRAMFIN? Current RSI=64, MACD hist=+1.1561, Vol=0.5x average. Signal is BUY.",
+    "context": {
+      "ticker": "SHRIRAMFIN.NS",
+      "signal": "BUY",
+      "patterns": "full_bullish_alignment, spinning_top, pivot_s1_breakdown",
+      "rsi": 63.5
+    },
+    "queued_at": "2026-08-19T10:11:10.561203"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of full_bullish_alignment, inside_bar, adx_strong_trend_up mean for a swing trade on HINDALCO? Current RSI=70, MACD hist=+4.5167, Vol=0.5x average. Signal is BUY.",
     "context": {
       "ticker": "HINDALCO.NS",
       "signal": "BUY",
-      "patterns": "adx_strong_trend_up, inside_bar, full_bullish_alignment",
+      "patterns": "full_bullish_alignment, inside_bar, adx_strong_trend_up",
       "rsi": 69.7
     },
-    "queued_at": "2026-08-19T07:45:47.676014"
+    "queued_at": "2026-08-19T10:11:10.562668"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of pivot_s1_breakdown, adx_strong_trend_up mean for a swing trade on UNIONBANK? Current RSI=75, MACD hist=+0.9024, Vol=0.5x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_up, pivot_s1_breakdown, low_volume_drift mean for a swing trade on UNIONBANK? Current RSI=73, MACD hist=+1.0828, Vol=0.5x average. Signal is BUY.",
     "context": {
       "ticker": "UNIONBANK.NS",
       "signal": "BUY",
-      "patterns": "pivot_s1_breakdown, adx_strong_trend_up",
-      "rsi": 75.3
+      "patterns": "adx_strong_trend_up, pivot_s1_breakdown, low_volume_drift",
+      "rsi": 73.2
     },
-    "queued_at": "2026-08-19T09:45:38.517236"
+    "queued_at": "2026-08-19T10:11:10.563682"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of adx_ranging_market, bullish_harami mean for a swing trade on GAIL? Current RSI=48, MACD hist=-0.3554, Vol=0.5x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of bullish_harami, adx_ranging_market mean for a swing trade on GAIL? Current RSI=48, MACD hist=-0.3592, Vol=0.5x average. Signal is BUY.",
     "context": {
       "ticker": "GAIL.NS",
       "signal": "BUY",
-      "patterns": "adx_ranging_market, bullish_harami",
+      "patterns": "bullish_harami, adx_ranging_market",
       "rsi": 47.8
     },
-    "queued_at": "2026-08-19T09:45:38.521342"
+    "queued_at": "2026-08-19T10:11:10.567065"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of low_volume_drift, shooting_star mean for a swing trade on SIEMENS? Current RSI=73, MACD hist=+3.6760, Vol=0.3x average. Signal is BUY.",
-    "context": {
-      "ticker": "SIEMENS.NS",
-      "signal": "BUY",
-      "patterns": "low_volume_drift, shooting_star",
-      "rsi": 72.7
-    },
-    "queued_at": "2026-08-19T09:45:38.522888"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of pivot_s1_breakdown, adx_strong_trend_up mean for a swing trade on UNIONBANK? Current RSI=75, MACD hist=+0.9024, Vol=0.5x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_up, pivot_s1_breakdown, low_volume_drift mean for a swing trade on UNIONBANK? Current RSI=73, MACD hist=+1.0828, Vol=0.5x average. Signal is BUY.",
     "context": {
       "ticker": "UNIONBANK.NS",
       "signal": "BUY",
-      "patterns": "pivot_s1_breakdown, adx_strong_trend_up",
-      "rsi": 75.3
+      "patterns": "adx_strong_trend_up, pivot_s1_breakdown, low_volume_drift",
+      "rsi": 73.2
     },
-    "queued_at": "2026-08-19T09:45:38.525653"
+    "queued_at": "2026-08-19T10:12:11.668467"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of low_volume_drift, shooting_star mean for a swing trade on SIEMENS? Current RSI=73, MACD hist=+3.6760, Vol=0.3x average. Signal is BUY.",
-    "context": {
-      "ticker": "SIEMENS.NS",
-      "signal": "BUY",
-      "patterns": "low_volume_drift, shooting_star",
-      "rsi": 72.7
-    },
-    "queued_at": "2026-08-19T09:45:38.528430"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of adx_ranging_market, bullish_harami mean for a swing trade on GAIL? Current RSI=48, MACD hist=-0.3554, Vol=0.5x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of bullish_harami, adx_ranging_market mean for a swing trade on GAIL? Current RSI=48, MACD hist=-0.3592, Vol=0.5x average. Signal is BUY.",
     "context": {
       "ticker": "GAIL.NS",
       "signal": "BUY",
-      "patterns": "adx_ranging_market, bullish_harami",
+      "patterns": "bullish_harami, adx_ranging_market",
       "rsi": 47.8
     },
-    "queued_at": "2026-08-19T09:45:38.529401"
+    "queued_at": "2026-08-19T10:12:11.677316"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of pivot_s1_breakdown, adx_strong_trend_up mean for a swing trade on UNIONBANK? Current RSI=75, MACD hist=+0.9024, Vol=0.5x average. Signal is BUY.",
-    "context": {
-      "ticker": "UNIONBANK.NS",
-      "signal": "BUY",
-      "patterns": "pivot_s1_breakdown, adx_strong_trend_up",
-      "rsi": 75.3
-    },
-    "queued_at": "2026-08-19T09:45:38.629828"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of adx_ranging_market, bullish_harami mean for a swing trade on GAIL? Current RSI=48, MACD hist=-0.3554, Vol=0.5x average. Signal is BUY.",
-    "context": {
-      "ticker": "GAIL.NS",
-      "signal": "BUY",
-      "patterns": "adx_ranging_market, bullish_harami",
-      "rsi": 47.8
-    },
-    "queued_at": "2026-08-19T09:45:38.639002"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of low_volume_drift, shooting_star mean for a swing trade on SIEMENS? Current RSI=73, MACD hist=+3.6760, Vol=0.3x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of shooting_star, low_volume_drift mean for a swing trade on SIEMENS? Current RSI=73, MACD hist=+3.6760, Vol=0.3x average. Signal is BUY.",
     "context": {
       "ticker": "SIEMENS.NS",
       "signal": "BUY",
-      "patterns": "low_volume_drift, shooting_star",
+      "patterns": "shooting_star, low_volume_drift",
       "rsi": 72.7
     },
-    "queued_at": "2026-08-19T09:45:38.642747"
+    "queued_at": "2026-08-19T10:12:11.681094"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of full_bullish_alignment, spinning_top, pivot_s1_breakdown mean for a swing trade on SHRIRAMFIN? Current RSI=64, MACD hist=+1.1561, Vol=0.5x average. Signal is BUY.",
+    "context": {
+      "ticker": "SHRIRAMFIN.NS",
+      "signal": "BUY",
+      "patterns": "full_bullish_alignment, spinning_top, pivot_s1_breakdown",
+      "rsi": 63.5
+    },
+    "queued_at": "2026-08-19T10:12:11.682036"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of full_bullish_alignment, inside_bar, adx_strong_trend_up mean for a swing trade on HINDALCO? Current RSI=70, MACD hist=+4.5167, Vol=0.5x average. Signal is BUY.",
+    "context": {
+      "ticker": "HINDALCO.NS",
+      "signal": "BUY",
+      "patterns": "full_bullish_alignment, inside_bar, adx_strong_trend_up",
+      "rsi": 69.7
+    },
+    "queued_at": "2026-08-19T10:12:11.683547"
   }
 ]

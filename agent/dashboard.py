@@ -115,7 +115,7 @@ def _build_html(
     vix_str   = f"{vix_val}" if vix_val != "" else "—"
 
     return f"""<!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
@@ -136,6 +136,9 @@ def _build_html(
 <link rel="icon" type="image/png" sizes="32x32" href="icon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
 <link rel="manifest" href="manifest.json">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap">
 <style>{_css()}</style>
 </head>
 <body>
@@ -197,21 +200,23 @@ def _build_html(
 
 def _css() -> str:
     return """
-/* ── Flowr-inspired design system (dark default, light via prefers-color-scheme) ── */
+/* ── NSE AI trading terminal — dark-first, green-biased neutral, depth + motion ── */
 :root {
-  /* surfaces */
-  --bg:     #0e0e0e;
-  --card:   #181818;
-  --card2:  #222;
-  --card3:  #262626;
-  --border: #282828;
-  --border2:#333;
+  /* surfaces — near-black with a faint green-bias so the neutral reads chosen,
+     not defaulted; each step up in elevation gets a subtly warmer/lighter tone */
+  --bg:     #0b0e0d;
+  --bg2:    #0e1211;
+  --card:   #141917;
+  --card2:  #1b211f;
+  --card3:  #222927;
+  --border: #232b28;
+  --border2:#2e3733;
   /* ink */
-  --text:   #efefef;
-  --muted:  #888;
-  --muted2: #aaa;
-  --ink3:   #444;
-  /* accents (Flowr palette) */
+  --text:   #eef2f0;
+  --muted:  #8a938f;
+  --muted2: #aeb6b2;
+  --ink3:   #444c49;
+  /* accents */
   --green:  #3ecf8e;  --g-bg: #0a2318;
   --red:    #e07070;  --r-bg: #280e0e;
   --amber:  #e6a93a;  --a-bg: #2a1e00;
@@ -220,20 +225,27 @@ def _css() -> str:
   --yellow: #e6a93a;
   --blue:   #7eb3ff;
   --cyan:   #3ecf8e;
-  --font:   -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --mono:   'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+  /* depth system — lit-from-above cards, green-tinted ambient glow */
+  --elev-1: 0 1px 0 rgba(255,255,255,.03) inset, 0 1px 2px rgba(0,0,0,.4);
+  --elev-2: 0 1px 0 rgba(255,255,255,.04) inset, 0 4px 16px -4px rgba(0,0,0,.55);
+  --glow:   0 0 0 1px rgba(62,207,142,.16), 0 8px 30px -8px rgba(62,207,142,.22);
+  --sheen:  linear-gradient(180deg, rgba(255,255,255,.035), rgba(255,255,255,0) 42%);
+  --font:   'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --display:'Inter Tight', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --mono:   'JetBrains Mono', 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
 }
 @media (prefers-color-scheme: light) {
   :root {
-    --bg:     #fafaf8;
-    --card:   #f2f2ef;
-    --card2:  #e8e8e4;
-    --card3:  #e8e8e4;
-    --border: #e4e4e0;
-    --border2:#d8d8d2;
-    --text:   #111;
-    --muted:  #777;
-    --muted2: #555;
+    --bg:     #f6f7f5;
+    --bg2:    #fbfcfa;
+    --card:   #ffffff;
+    --card2:  #eef1ee;
+    --card3:  #e6eae7;
+    --border: #e3e7e3;
+    --border2:#d5dad6;
+    --text:   #131715;
+    --muted:  #6b736f;
+    --muted2: #4b524e;
     --ink3:   #bbb;
     --green:  #1a6b42;  --g-bg: #edf6f1;
     --red:    #c0392b;  --r-bg: #fdf0ef;
@@ -243,33 +255,53 @@ def _css() -> str:
     --yellow: #c8860a;
     --blue:   #2563eb;
     --cyan:   #1a6b42;
+    --elev-1: 0 1px 2px rgba(20,30,25,.06);
+    --elev-2: 0 4px 16px -4px rgba(20,30,25,.10);
+    --glow:   0 0 0 1px rgba(26,107,66,.18), 0 8px 24px -8px rgba(26,107,66,.16);
+    --sheen:  linear-gradient(180deg, rgba(255,255,255,.5), rgba(255,255,255,0) 42%);
   }
 }
 *,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0 }
 html { scroll-behavior: smooth; -webkit-tap-highlight-color: transparent }
 body {
   background: var(--bg);
+  /* ambient depth: a faint green aurora up top + a whisper of grain, fixed so it
+     doesn't scroll — gives the near-black ground dimension instead of dead flatness */
+  background-image:
+    radial-gradient(1100px 520px at 50% -280px, rgba(62,207,142,.08), transparent 70%),
+    radial-gradient(760px 400px at 100% 0, rgba(126,179,255,.05), transparent 65%);
+  background-attachment: fixed;
   color: var(--text);
   font-family: var(--font);
   font-size: 14px;
   line-height: 1.5;
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 a { color: inherit; text-decoration: none }
 h2 {
-  font-size: 1rem;
-  font-weight: 500;
+  font-family: var(--display);
+  font-size: 1.06rem;
+  font-weight: 600;
   color: var(--text);
   margin-bottom: 12px;
   display: flex;
   align-items: baseline;
   gap: 8px;
-  letter-spacing: -.03em;
+  letter-spacing: -.02em;
   flex-wrap: wrap;
+  text-wrap: balance;
 }
-h2 span { font-size: .68rem; color: var(--muted); font-weight: 400; letter-spacing: 0 }
-h3 { font-size: .85rem; font-weight: 500; letter-spacing: -.02em }
+/* a small accent tick before each section title — encodes "live section", quiet */
+h2::before {
+  content: ""; width: 3px; height: 15px; border-radius: 2px;
+  background: linear-gradient(var(--green), color-mix(in srgb, var(--green) 40%, transparent));
+  align-self: center; flex-shrink: 0;
+  box-shadow: 0 0 8px -1px var(--green);
+}
+h2 span { font-size: .68rem; color: var(--muted); font-weight: 400; letter-spacing: 0; font-family: var(--font) }
+h3 { font-family: var(--display); font-size: .85rem; font-weight: 600; letter-spacing: -.01em }
 
 /* ── Header (Flowr: clean, hairline, system font) ── */
 .header {
@@ -323,15 +355,24 @@ h3 { font-size: .85rem; font-weight: 500; letter-spacing: -.02em }
   padding-bottom: calc(18px + env(safe-area-inset-bottom));
 }
 .nt {
+  position: relative;
   flex: 1; display: flex; flex-direction: column; align-items: center; gap: 4px;
   background: none; border: none; cursor: pointer;
-  color: var(--muted); padding: 2px 0; min-height: 44px;
-  font-family: inherit; font-size: .6rem; font-weight: 500; letter-spacing: .02em;
-  transition: color .15s;
+  color: var(--muted); padding: 6px 0 2px; min-height: 44px;
+  font-family: inherit; font-size: .6rem; font-weight: 600; letter-spacing: .02em;
+  transition: color .2s, transform .12s cubic-bezier(.2,.7,.3,1);
 }
-.nt svg { width: 22px; height: 22px }
+.nt svg { width: 22px; height: 22px; transition: transform .2s cubic-bezier(.2,.7,.3,1) }
+/* animated glow pill behind the active tab's icon */
+.nt::before {
+  content: ""; position: absolute; top: 2px; width: 40px; height: 26px; border-radius: 99px;
+  background: var(--g-bg); opacity: 0; transform: scale(.7);
+  transition: opacity .25s, transform .25s cubic-bezier(.2,.8,.2,1);
+}
 .nt-active { color: var(--green) }
-.nt:active { opacity: .6 }
+.nt-active::before { opacity: 1; transform: scale(1) }
+.nt-active svg { transform: translateY(-1px) }
+.nt:active { transform: scale(.9) }
 .logo-sub { font-size: .6rem; color: var(--muted); margin-top: -1px }
 .header-right { display: flex; align-items: center; gap: 14px }
 .hdr-stat { display: flex; flex-direction: column; align-items: flex-end }
@@ -373,26 +414,39 @@ h3 { font-size: .85rem; font-weight: 500; letter-spacing: -.02em }
 .grid3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px }
 .grid4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px }
 
-/* ── Cards (Flowr: soft surface, hairline border, gentle radius) ── */
-.card {
-  background: var(--card);
+/* ── Cards: soft elevated surface, hairline border, lit-from-above sheen ── */
+.card, .stat-card {
+  position: relative;
+  background:
+    var(--sheen),
+    linear-gradient(180deg, var(--card), var(--bg2));
   border: 0.5px solid var(--border);
-  border-radius: 12px;
+  border-radius: 14px;
   padding: 16px;
+  box-shadow: var(--elev-1);
+  transition: transform .22s cubic-bezier(.2,.7,.3,1), box-shadow .22s, border-color .22s;
 }
-.stat-card {
-  background: var(--card);
-  border: 0.5px solid var(--border);
-  border-radius: 12px;
-  padding: 14px 16px;
+.stat-card { padding: 14px 16px; }
+/* interactive lift on pointer devices only — the whole board feels tactile */
+@media (hover: hover) {
+  .card:hover, .stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--border2);
+    box-shadow: var(--elev-2);
+  }
 }
-.stat-val { font-size: 1.6rem; font-weight: 400; line-height: 1.1; margin-bottom: 3px; letter-spacing: -.04em; font-variant-numeric: tabular-nums }
+.stat-val {
+  font-family: var(--display);
+  font-size: 1.7rem; font-weight: 600; line-height: 1.1; margin-bottom: 3px;
+  letter-spacing: -.03em; font-variant-numeric: tabular-nums;
+}
 .stat-label { font-size: .62rem; color: var(--muted); font-weight: 500; text-transform: uppercase; letter-spacing: .07em }
 
-/* ── Badges (Flowr: 99px pills with soft accent backgrounds) ── */
+/* ── Badges: 99px pills with soft accent backgrounds + a hairline for definition ── */
 .badge {
-  display: inline-block; padding: 2px 9px; border-radius: 99px;
+  display: inline-block; padding: 2.5px 9px; border-radius: 99px;
   font-size: .63rem; font-weight: 600; white-space: nowrap; letter-spacing: .01em;
+  border: 0.5px solid color-mix(in srgb, currentColor 22%, transparent);
 }
 .badge-green  { background: var(--g-bg); color: var(--green) }
 .badge-red    { background: var(--r-bg); color: var(--red) }
@@ -433,9 +487,21 @@ tr:last-child td { border: none }
 tr:hover td { background: var(--card2) }
 .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch }
 
-/* ── Progress (Flowr: 2px hairline bar) ── */
-.progress { height: 2px; border-radius: 99px; background: var(--border); overflow: hidden }
-.progress-fill { height: 100%; border-radius: 99px; transition: width .4s }
+/* ── Progress: hairline track with a glowing, animated fill ── */
+.progress { height: 4px; border-radius: 99px; background: var(--border); overflow: hidden; position: relative }
+.progress-fill {
+  height: 100%; border-radius: 99px; position: relative;
+  transition: width 1s cubic-bezier(.2,.8,.2,1);
+  box-shadow: 0 0 8px -1px currentColor;
+}
+/* travelling sheen so live/growing bars feel alive */
+.progress-fill::after {
+  content: ""; position: absolute; inset: 0; border-radius: inherit;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.35), transparent);
+  transform: translateX(-100%);
+  animation: barsheen 2.4s ease-in-out infinite;
+}
+@keyframes barsheen { 0% { transform: translateX(-100%) } 60%,100% { transform: translateX(100%) } }
 
 /* ── Market bar ── */
 .market-bar {
@@ -661,6 +727,60 @@ tr:hover td { background: var(--card2) }
   .header { padding-left: max(20px, env(safe-area-inset-left)); padding-right: max(20px, env(safe-area-inset-right)) }
   .container { padding-left: max(14px, env(safe-area-inset-left)); padding-right: max(14px, env(safe-area-inset-right)) }
   body { padding-bottom: env(safe-area-inset-bottom) }
+}
+
+/* ═══ IMMERSION LAYER — motion, depth, tactility (keeps the same dark theme) ═══ */
+
+/* Scroll-reveal: sections rise + fade as they enter view (JS toggles .in-view).
+   Falls back to fully-visible if JS is off — content is never hidden by default. */
+.reveal { opacity: 0; transform: translateY(14px); transition: opacity .6s cubic-bezier(.2,.7,.3,1), transform .6s cubic-bezier(.2,.7,.3,1) }
+.reveal.in-view { opacity: 1; transform: none }
+.no-js .reveal { opacity: 1; transform: none }
+
+/* Header: sharper glass + a hairline glow along the bottom edge */
+.header { box-shadow: 0 1px 0 rgba(62,207,142,.06), 0 6px 20px -12px rgba(0,0,0,.8) }
+.logo-icon { box-shadow: 0 0 0 1px rgba(62,207,142,.35), 0 4px 14px -3px rgba(62,207,142,.5); position: relative; overflow: hidden }
+.logo-icon::after { content:""; position:absolute; inset:0; background: var(--sheen) }
+
+/* Tactile press — everything you can tap dips slightly, like a real key */
+.nav a, .badge, .pill, .hmap-cell, button, [onclick], [data-tab] { transition: transform .12s cubic-bezier(.2,.7,.3,1), color .15s, background .15s, border-color .15s, box-shadow .2s }
+.nav a:active, .badge:active, .pill:active, .hmap-cell:active, button:active, [onclick]:active { transform: scale(.96) }
+
+/* Nav pill tabs — active/hover gets a soft green wash + lift */
+.nav a:hover { color: var(--text); background: var(--card2); border-color: var(--border); transform: translateY(-1px) }
+
+/* Heatmap cells — real depth + a lift-and-glow on hover, snappier feel */
+.hmap-cell { box-shadow: var(--elev-1); transition: transform .16s cubic-bezier(.2,.7,.3,1), box-shadow .16s }
+.hmap-cell:hover { transform: translateY(-2px) scale(1.04); box-shadow: var(--elev-2); z-index: 5 }
+
+/* Tables — quiet zebra + a green edge-cue on the hovered row */
+tbody tr { transition: background .14s }
+tr:hover td { background: color-mix(in srgb, var(--green) 7%, var(--card2)) }
+tbody tr { box-shadow: inset 2px 0 0 transparent; transition: box-shadow .16s, background .14s }
+tbody tr:hover { box-shadow: inset 2px 0 0 var(--green) }
+
+/* Market bar + banners — match the elevated card language */
+.market-bar { background: linear-gradient(180deg, var(--card), var(--bg2)); box-shadow: var(--elev-1) }
+.alert-banner { box-shadow: var(--glow); background: linear-gradient(180deg, color-mix(in srgb, var(--g-bg) 80%, var(--card)), var(--card)) }
+
+/* Stat values animating up read as tabular so they don't jitter mid-count */
+.stat-val, .mkt-val, .hdr-val { font-variant-numeric: tabular-nums }
+
+/* Focus-visible: a clear ring for keyboard users (accessibility) */
+:focus-visible { outline: 2px solid var(--green); outline-offset: 2px; border-radius: 6px }
+
+/* A live pulse dot used next to "managed live / active" labels */
+.live-dot { display:inline-block; width:7px; height:7px; border-radius:50%; background: var(--green); box-shadow: 0 0 0 0 rgba(62,207,142,.6); animation: livepulse 2s infinite }
+@keyframes livepulse {
+  0%   { box-shadow: 0 0 0 0 rgba(62,207,142,.5) }
+  70%  { box-shadow: 0 0 0 7px rgba(62,207,142,0) }
+  100% { box-shadow: 0 0 0 0 rgba(62,207,142,0) }
+}
+
+/* Respect users who prefer no motion — kill transforms/animations, keep it legible */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; scroll-behavior: auto !important }
+  .reveal { opacity: 1 !important; transform: none !important }
 }
 """
 
@@ -2902,6 +3022,13 @@ def _section_runlog(state: dict) -> str:
 
 def _scripts() -> str:
     return """<script>
+// signal that JS is live (CSS uses .no-js as the graceful fallback)
+document.documentElement.classList.remove('no-js');
+var REDUCED = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+// ── Haptics: a light tap on supported devices (Android/Chrome). No-op elsewhere. ─
+function haptic(ms) { try { if (navigator.vibrate && !REDUCED) navigator.vibrate(ms || 8); } catch(e) {} }
+
 // ── Bottom-nav tab switching ──────────────────────────────────────────────
 function switchTab(key) {
   document.querySelectorAll('.tab-panel').forEach(function(p) {
@@ -2910,9 +3037,12 @@ function switchTab(key) {
   document.querySelectorAll('.nt').forEach(function(b) {
     b.classList.toggle('nt-active', b.dataset.tab === key);
   });
+  haptic(10);
   // remember last tab + scroll to top of content
   try { localStorage.setItem('nse_tab', key); } catch(e) {}
   window.scrollTo({top: 0, behavior: 'instant'});
+  // re-run reveal for the newly shown panel's sections
+  requestAnimationFrame(armReveal);
 }
 // restore last-viewed tab on load (default: home)
 (function() {
@@ -2946,4 +3076,72 @@ document.querySelectorAll('[data-spark]').forEach(function(el) {
     '<polyline points="' + pts + '" fill="none" stroke="' + col + '" stroke-width="1.8" stroke-linejoin="round"/>' +
     '</svg>';
 });
+
+// ── Scroll-reveal: sections & cards rise into view as you scroll ───────────
+var _revObserver = null;
+function armReveal() {
+  if (REDUCED) return;  // reduced-motion users see everything immediately (CSS handles it)
+  // tag the top-level blocks inside every VISIBLE panel
+  document.querySelectorAll('.tab-panel:not([hidden]) > .section, .tab-panel:not([hidden]) > .card, .tab-panel:not([hidden]) > .market-bar, .tab-panel:not([hidden]) > .alert-banner').forEach(function(el, i) {
+    if (el.dataset.revealed) return;
+    el.classList.add('reveal');
+    el.style.transitionDelay = Math.min(i * 45, 260) + 'ms';
+    _revObserver.observe(el);
+  });
+}
+if ('IntersectionObserver' in window && !REDUCED) {
+  _revObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) {
+        e.target.classList.add('in-view');
+        e.target.dataset.revealed = '1';
+        _revObserver.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.06, rootMargin: '0px 0px -6% 0px' });
+  armReveal();
+}
+
+// ── Count-up: numeric stat values tick up to their final value on first view ──
+function animateCount(el) {
+  var raw = el.textContent.trim();
+  var m = raw.match(/^([^\\d\\-]*)(-?[\\d,]+(?:\\.\\d+)?)(.*)$/);
+  if (!m) return;
+  var prefix = m[1], numStr = m[2].replace(/,/g, ''), suffix = m[3];
+  var target = parseFloat(numStr);
+  if (!isFinite(target)) return;
+  var decimals = (numStr.split('.')[1] || '').length;
+  var hadComma = m[2].indexOf(',') >= 0;
+  var dur = 900, t0 = null;
+  function fmt(v) {
+    var s = decimals ? v.toFixed(decimals) : Math.round(v).toString();
+    if (hadComma) { var p = s.split('.'); p[0] = p[0].replace(/\\B(?=(\\d{3})+(?!\\d))/g, ','); s = p.join('.'); }
+    return prefix + s + suffix;
+  }
+  function step(ts) {
+    if (t0 === null) t0 = ts;
+    var p = Math.min((ts - t0) / dur, 1);
+    var eased = 1 - Math.pow(1 - p, 3);   // easeOutCubic
+    el.textContent = fmt(target * eased);
+    if (p < 1) requestAnimationFrame(step); else el.textContent = fmt(target);
+  }
+  requestAnimationFrame(step);
+}
+if ('IntersectionObserver' in window && !REDUCED) {
+  var _countObs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting && !e.target.dataset.counted) {
+        e.target.dataset.counted = '1';
+        animateCount(e.target);
+        _countObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.5 });
+  document.querySelectorAll('.stat-val').forEach(function(el) { _countObs.observe(el); });
+}
+
+// ── Global light haptic on any tap target ─────────────────────────────────
+document.addEventListener('click', function(ev) {
+  if (ev.target.closest('a, button, .badge, .pill, .hmap-cell, [onclick], [data-tab]')) haptic(6);
+}, { passive: true });
 </script>"""

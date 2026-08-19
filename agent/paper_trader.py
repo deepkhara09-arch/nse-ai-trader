@@ -542,8 +542,21 @@ def _check_exits(book: dict, stock_data: Dict, session: str, patterns_db: Dict):
         # to breakeven, and let the rest run. This locks in gains, converts a
         # potential round-trip into a guaranteed small win, and removes downside on
         # the remainder — a well-established way to lift win-rate and cut give-back.
+        # On the CLEANEST, highest-conviction setups, let the FULL position ride to
+        # target instead of booking half at the midpoint. Live data showed winners
+        # were only realising ~1.2x risk (avg +2.9%) vs the 2:1 the targets promise,
+        # because partial-booking caps the upside — the tool cut winners short while
+        # losers ran to full stop. Now that confidence is conviction-calibrated (a
+        # contradicted setup can't read high), an ≥85 read is a genuinely one-sided
+        # edge that has earned the right to run for the full target.
+        _conv = 0.0
+        try:
+            _conv = float(pos.get("confidence", 0) or 0)
+        except (TypeError, ValueError):
+            _conv = 0.0
+        _let_it_ride = _conv >= 85
         if (not hit_stop and not pos.get("t1_booked") and pos.get("qty", 0) >= 2
-                and target_ and stop_loss_):
+                and target_ and stop_loss_ and not _let_it_ride):
             t1 = pos["entry"] + (target_ - pos["entry"]) * 0.5   # halfway to target
             reached_t1 = ((pos["action"] == "BUY"  and high_ >= t1) or
                           (pos["action"] == "SELL" and low_  <= t1))

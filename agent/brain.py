@@ -934,17 +934,37 @@ def analyse_stock(
     except Exception:
         pass
 
+    # ── Internal-contradiction gate: don't buy something the evidence half-hates ─
+    # The biggest real losses were BUYs that ALSO carried strong opposing signals
+    # (a bullish stack plus bb_upper_rejection / rsi_bearish_divergence). The gap
+    # rule alone let these through because the winning side was large in absolute
+    # terms. When the OPPOSING side is a big fraction of the winning side, the trade
+    # is genuinely conflicted — raise the bar, same as the other gates.
+    conflict_penalty = 0.0
+    _hi = max(buy_score, sell_score)
+    _lo = min(buy_score, sell_score)
+    if _hi > 0:
+        _opp_ratio = _lo / _hi
+        if _opp_ratio >= 0.55:
+            conflict_penalty = 1.5
+            (buy_reasons if buy_score >= sell_score else sell_reasons).append(
+                f"⚠ Strong opposing signals present (opposing evidence {_opp_ratio*100:.0f}% "
+                f"of the leading side) — conflicted setup, needs extra conviction")
+        elif _opp_ratio >= 0.40:
+            conflict_penalty = 0.8
+
     buy_score  = round(buy_score,  2)
     sell_score = round(sell_score, 2)
     gap = abs(buy_score - sell_score)
 
     # ── Determine signal (HTF conflict / counter-tape / falling sector / poor
-    #    recent form all raise the required bar) ─────────────────────────────────
+    #    recent form / internal contradiction all raise the required bar) ─────────
     # Cap the combined penalty. Each gate is a real caution, but if ALL fire we'd
     # need a ~9-point setup — the tool would go fully dark and stop learning. Cap
     # at 3.0 (=BUY bar 8.0): only genuinely exceptional setups pass a hostile
     # regime, but the door isn't fully welded shut.
-    extra_bar = min(3.0, mtf_penalty + mood_penalty + self_penalty + sector_penalty + edge_penalty)
+    extra_bar = min(3.0, mtf_penalty + mood_penalty + self_penalty + sector_penalty
+                    + edge_penalty + conflict_penalty)
     # A proven-profitable pattern set can lower the bar a little (earned conviction),
     # but never below the base requirement — a boost can't wave a weak setup through.
     extra_bar = max(0.0, extra_bar - edge_boost)
@@ -1003,7 +1023,23 @@ def analyse_stock(
     #   + proven-reliable patterns fired   + multi-timeframe/sector/mood alignment
     #   + institutional accumulation       - fighting any of those tapes
     max_score = max(buy_score, sell_score)
-    base_conf = (max_score / 10) * 100
+    min_score = min(buy_score, sell_score)
+
+    # CONVICTION MARGIN, not raw quantity. Live forward-test data showed the tool's
+    # WORST losses were high-"confidence" BUYs that ALSO carried strong opposing
+    # (bearish) signals — e.g. a BUY stacking full_bullish_alignment AND
+    # bb_upper_rejection / rsi_bearish_divergence. Because old confidence read only
+    # max_score, a coin-flip (buy 8 / sell 7) looked as sure as a clean edge
+    # (buy 8 / sell 1). It must not. We scale the raw score by how DECISIVELY the
+    # winning side beat the losing side: conviction = winner / (winner + loser).
+    # A contradicted setup (loser nearly as big) is discounted hard; a clean,
+    # one-sided setup keeps its confidence. This is the single biggest calibration
+    # fix — it directly attacks the "maximally confident on the worst trades" bug.
+    conviction = max_score / (max_score + min_score) if (max_score + min_score) > 0 else 1.0
+    # Map conviction [0.5 .. 1.0] onto a [0.55 .. 1.0] multiplier (a pure coin-flip
+    # keeps ~55% of the raw confidence; a fully one-sided read keeps all of it).
+    conviction_mult = max(0.55, min(1.0, (conviction - 0.5) / 0.5 * 0.45 + 0.55))
+    base_conf = (max_score / 10) * 100 * conviction_mult
 
     # How many of the fired patterns are PROVEN (traded, reliability >= 0.55)?
     proven = sum(1 for p in patterns

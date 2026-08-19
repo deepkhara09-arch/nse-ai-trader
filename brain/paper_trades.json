@@ -32,8 +32,8 @@
         "\u2713 Daily setup aligned with the higher-timeframe trend",
         "Near upper Bollinger Band"
       ],
-      "current_price": 186.06,
-      "unrealized_pnl": 87.4,
+      "current_price": 185.45,
+      "unrealized_pnl": 59.34,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -43,8 +43,8 @@
         "regime": "mixed"
       },
       "view_hist": [
-        0,
         1,
+        0,
         0,
         0
       ]
@@ -79,8 +79,8 @@
         "In a long-term strong downtrend (2yr)",
         "\u2713 Daily setup aligned with the higher-timeframe trend"
       ],
-      "current_price": 335.2,
-      "unrealized_pnl": 72.0,
+      "current_price": 336.0,
+      "unrealized_pnl": 56.0,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -90,10 +90,10 @@
         "regime": "mixed"
       },
       "view_hist": [
+        1,
+        1,
         0,
-        1,
-        1,
-        0
+        1
       ]
     },
     {
@@ -105,7 +105,7 @@
       "entry": 1092.0,
       "qty": 6,
       "invested": 6552.0,
-      "stop_loss": 1066.4,
+      "stop_loss": 1072.54,
       "target": 1192.74,
       "style": "swing",
       "confidence": 85.3,
@@ -130,8 +130,8 @@
         "MACD histogram negative",
         "Broke below Pivot S1 support \u2014 bearish"
       ],
-      "current_price": 1081.2,
-      "unrealized_pnl": -64.8,
+      "current_price": 1077.4,
+      "unrealized_pnl": -87.6,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -142,7 +142,7 @@
       },
       "view_hist": [
         1,
-        1,
+        0,
         0,
         0
       ],
@@ -179,8 +179,8 @@
         "\u2713 Daily setup aligned with the higher-timeframe trend",
         "MACD histogram negative"
       ],
-      "current_price": 853.9,
-      "unrealized_pnl": -59.85,
+      "current_price": 850.9,
+      "unrealized_pnl": -86.85,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -191,9 +191,9 @@
       },
       "view_hist": [
         1,
-        1,
         0,
-        1
+        1,
+        0
       ],
       "stale_tightened": true
     },
@@ -234,8 +234,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "RSI=68 elevated"
       ],
-      "current_price": 3903.6,
-      "unrealized_pnl": -56.1,
+      "current_price": 3902.8,
+      "unrealized_pnl": -56.9,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -246,7 +246,7 @@
       },
       "view_hist": [
         1,
-        1,
+        0,
         0,
         0
       ]
@@ -291,8 +291,8 @@
         "\u26a0 Sector momentum -0.30 \u2014 buying into a falling sector needs extra conviction",
         "MACD histogram negative"
       ],
-      "current_price": 171.88,
-      "unrealized_pnl": -22.95,
+      "current_price": 173.51,
+      "unrealized_pnl": 50.4,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -302,7 +302,8 @@
         "regime": "mixed"
       },
       "view_hist": [
-        0
+        0,
+        1
       ]
     }
   ],

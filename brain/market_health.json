@@ -1,6 +1,6 @@
 {
   "date": "2026-08-19",
-  "session": "afternoon",
+  "session": "intraday_close",
   "nifty": {
     "symbol": "^NSEI",
     "value": 24154.9,
@@ -13,14 +13,14 @@
     "value": 11.39,
     "level": "normal",
     "percentile_30d": 7.0,
-    "avg_30d": 12.47
+    "avg_30d": 12.53
   },
   "bank_nifty": {
     "symbol": "^NSEBANK",
     "value": 57262.4,
     "day_change_pct": -0.41,
     "trend_5d": "down",
-    "trend_20d": "down",
+    "trend_20d": "sideways",
     "ath_pct_60d": -2.46,
     "diverging": false
   },

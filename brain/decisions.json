@@ -1,89 +1,5 @@
 [
   {
-    "timestamp": "2026-07-21T06:12:16.138427",
-    "date": "2026-07-21",
-    "ticker": "MARICO.NS",
-    "session": "midday",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 83.0,
-    "entry": 847.0,
-    "stop_loss": 822.49,
-    "target": 896.03,
-    "reason": "paper midday",
-    "patterns": [
-      "spinning_top",
-      "adx_strong_trend_up",
-      "supertrend_bullish",
-      "stoch_rsi_oversold_reversal",
-      "full_bullish_alignment",
-      "outside_bar"
-    ]
-  },
-  {
-    "timestamp": "2026-07-21T06:12:16.139122",
-    "date": "2026-07-21",
-    "ticker": "SBIN.NS",
-    "session": "midday",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 90.2,
-    "entry": 1051.0,
-    "stop_loss": 1021.15,
-    "target": 1110.7,
-    "reason": "paper midday",
-    "patterns": [
-      "pivot_r1_breakout",
-      "macd_bullish_crossover",
-      "supertrend_bullish",
-      "bb_upper_rejection",
-      "full_bullish_alignment",
-      "three_white_soldiers",
-      "adx_ranging_market"
-    ]
-  },
-  {
-    "timestamp": "2026-07-21T06:12:16.139814",
-    "date": "2026-07-21",
-    "ticker": "HOMEFIRST.NS",
-    "session": "midday",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 95,
-    "entry": 1280.0,
-    "stop_loss": 1219.14,
-    "target": 1401.71,
-    "reason": "paper midday",
-    "patterns": [
-      "inside_bar",
-      "low_volume_drift",
-      "adx_strong_trend_up",
-      "supertrend_bullish",
-      "engulfing_bullish",
-      "full_bullish_alignment",
-      "rsi_bullish_divergence"
-    ]
-  },
-  {
-    "timestamp": "2026-07-21T06:12:16.140511",
-    "date": "2026-07-21",
-    "ticker": "NESTLEIND.NS",
-    "session": "midday",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 55.9,
-    "entry": 1453.5,
-    "stop_loss": 1408.11,
-    "target": 1544.28,
-    "reason": "paper midday",
-    "patterns": [
-      "engulfing_bullish",
-      "full_bullish_alignment",
-      "supertrend_bullish",
-      "adx_ranging_market"
-    ]
-  },
-  {
     "timestamp": "2026-07-21T06:12:16.140947",
     "date": "2026-07-21",
     "ticker": "ICICIBANK.NS",
@@ -21329,6 +21245,85 @@
       "inside_bar",
       "full_bullish_alignment",
       "pivot_s1_breakdown"
+    ]
+  },
+  {
+    "timestamp": "2026-08-19T09:45:38.517503",
+    "date": "2026-08-19",
+    "ticker": "UNIONBANK.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 76.2,
+    "entry": 185.5,
+    "stop_loss": 178.68,
+    "target": 199.14,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "full_bullish_alignment",
+      "pivot_s1_breakdown",
+      "adx_strong_trend_up"
+    ]
+  },
+  {
+    "timestamp": "2026-08-19T09:45:38.518792",
+    "date": "2026-08-19",
+    "ticker": "PIDILITIND.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 67.3,
+    "entry": 1648.1,
+    "stop_loss": 1601.34,
+    "target": 1741.61,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "full_bullish_alignment",
+      "pivot_s1_breakdown"
+    ]
+  },
+  {
+    "timestamp": "2026-08-19T09:45:38.521593",
+    "date": "2026-08-19",
+    "ticker": "GAIL.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 95,
+    "entry": 172.3,
+    "stop_loss": 165.81,
+    "target": 185.29,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "supertrend_bullish",
+      "full_bullish_alignment",
+      "low_volume_drift",
+      "adx_ranging_market",
+      "bullish_harami",
+      "tweezer_bottom",
+      "stoch_rsi_oversold_reversal",
+      "pivot_s1_bounce",
+      "pivot_point_test"
+    ]
+  },
+  {
+    "timestamp": "2026-08-19T09:45:38.523119",
+    "date": "2026-08-19",
+    "ticker": "SIEMENS.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 73.8,
+    "entry": 3885.5,
+    "stop_loss": 3720.05,
+    "target": 4216.4,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "low_volume_drift",
+      "full_bullish_alignment",
+      "pivot_s1_breakdown",
+      "shooting_star",
+      "adx_strong_trend_up"
     ]
   }
 ]

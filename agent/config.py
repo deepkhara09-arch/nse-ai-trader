@@ -132,6 +132,24 @@ ATR_STOP_MULTIPLIER    = 1.5       # stop = entry ± 1.5x ATR
 ATR_TARGET_MULTIPLIER  = 3.0       # target = entry ± 3.0x ATR (2:1 R:R minimum)
 FLAT_STOP_PCT          = 0.035     # fallback if ATR unavailable
 FLAT_TARGET_PCT        = 0.07
+# Minimum stop DISTANCE as a fraction of price. Low-ATR (quiet) stocks were getting
+# stops just 0.1% from entry — inside normal intraday noise, so they were clipped on
+# a random tick before the thesis could play out. Floor it so every trade has real
+# room; the target scales with the floored stop to preserve ≥2:1 reward:risk.
+MIN_STOP_DISTANCE_PCT  = 0.012     # never place a stop tighter than 1.2% from entry
+
+# ── Risk-parity per-trade cap ─────────────────────────────────────────────────
+# CRITICAL sizing fix. Position size was purely a % of capital (qty = invest/price),
+# which IGNORES stop distance — so a wide-stop trade silently risked far more than a
+# tight-stop one (live data: dollar risk ranged ₹4–₹365 per trade, an 85x spread).
+# Real risk management fixes the LOSS per trade, not the amount invested: cap each
+# trade's risk = (entry − stop) × qty at this fraction of capital, and take the
+# smaller of the capital-based and risk-based quantities. This makes every losing
+# trade cost roughly the same, so no single wide-stop idea can dominate the book.
+MAX_RISK_PER_TRADE_PCT = 0.005  # never risk more than 0.5% of capital on one trade
+                                # (binds on wide-stop trades: HOMEFIRST/UNIONBANK type
+                                #  risked ₹400-500; this caps them without touching the
+                                #  tighter-stop majority — keeps the worst losses smaller)
 
 # ── Volatility regime scaling ─────────────────────────────────────────────────
 # Position size and stop width scale with VIX so dollar risk stays constant.

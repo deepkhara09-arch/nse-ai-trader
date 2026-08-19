@@ -257,6 +257,21 @@ def _try_open_positions(book: dict, opinions: List[dict], patterns_db: Dict, ses
 
         max_invest = book["capital"] * pos_pct
         qty = int(max_invest // entry)
+
+        # ── Risk-parity cap: bound the LOSS this trade can take, not just the
+        # amount invested. qty is the SMALLER of the capital-based size and the
+        # size at which (entry − stop) × qty ≤ MAX_RISK_PER_TRADE_PCT of capital.
+        # A wide stop therefore buys fewer shares (same rupee risk), a tight stop
+        # more — so every losing trade costs roughly the same and no single
+        # wide-stop idea can blow a hole in the book.
+        from agent.config import MAX_RISK_PER_TRADE_PCT
+        stop_px = op.get("stop_loss")
+        per_share_risk = abs(entry - stop_px) if stop_px else 0
+        if per_share_risk > 0:
+            risk_budget = book["capital"] * MAX_RISK_PER_TRADE_PCT
+            risk_qty = int(risk_budget // per_share_risk)
+            if risk_qty < qty:
+                qty = risk_qty
         if qty < 1:
             continue
 

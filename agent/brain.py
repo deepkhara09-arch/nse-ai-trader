@@ -21,7 +21,7 @@ from agent.config import (
     BRAIN_DIR, PATTERN_FILE, BRAIN_DECISIONS_FILE,
     BUY_SIGNAL_MIN_SCORE, SELL_SIGNAL_MIN_SCORE, SIGNAL_SCORE_GAP,
     ATR_STOP_MULTIPLIER, ATR_TARGET_MULTIPLIER,
-    FLAT_STOP_PCT,
+    FLAT_STOP_PCT, MIN_STOP_DISTANCE_PCT,
     PATTERN_DECAY_RATE, PATTERN_DECAY_HALFLIFE_DAYS,
     MIN_PATTERN_SAMPLES, CONFIDENCE_FLOOR,
 )
@@ -1018,15 +1018,26 @@ def analyse_stock(
     atr_mult   = tk_known.get("atr_multiplier", ATR_STOP_MULTIPLIER)
     atr_target = ATR_TARGET_MULTIPLIER
 
+    # Minimum stop DISTANCE floor. Live data showed low-ATR stocks (NESTLEIND,
+    # MARICO) got stops just 0.1% from entry — the stop sits inside normal intraday
+    # noise and gets clipped on a random tick before the thesis can play out. Floor
+    # the stop distance so every trade has real room to breathe; the target moves
+    # with it to preserve the reward:risk ratio.
+    stop_dist = atr * atr_mult
+    min_dist  = close * MIN_STOP_DISTANCE_PCT
+    if stop_dist < min_dist:
+        stop_dist = min_dist
+    target_dist = max(atr * atr_target, stop_dist * 2.0)   # keep ≥2:1 R:R
+
     if signal == "BUY":
         entry     = close
-        stop_loss = round(close - atr * atr_mult, 2)
-        target    = round(close + atr * atr_target, 2)
+        stop_loss = round(close - stop_dist, 2)
+        target    = round(close + target_dist, 2)
         style     = _classify_style(d, patterns, tk_known, signal)
     elif signal == "SELL":
         entry     = close
-        stop_loss = round(close + atr * atr_mult, 2)
-        target    = round(close - atr * atr_target, 2)
+        stop_loss = round(close + stop_dist, 2)
+        target    = round(close - target_dist, 2)
         style     = _classify_style(d, patterns, tk_known, signal)
     else:
         entry = stop_loss = target = close

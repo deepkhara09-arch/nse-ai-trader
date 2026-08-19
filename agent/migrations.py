@@ -86,6 +86,8 @@ def _migrate_v2(state, stock_data, patterns, book, fundamentals, decisions):
 
     # Ensure patterns db has the ticker-level structure ranking_engine expects
     for ticker, pat in patterns.items():
+        if ticker.startswith("__"):   # reserved keys (e.g. __GLOBAL__) aren't tickers
+            continue
         pat.setdefault("preferred_style", "swing")
         pat.setdefault("reliability", {})
         pat.setdefault("sample_counts", {})
@@ -108,6 +110,8 @@ def _migrate_v3(state, stock_data, patterns, book, fundamentals, decisions):
 
     # Patterns: add ATR tuning fields per ticker
     for ticker, tk in patterns.items():
+        if ticker.startswith("__"):
+            continue
         tk.setdefault("atr_stop_hits",   0)
         tk.setdefault("atr_target_hits", 0)
         tk.setdefault("atr_multiplier",  ATR_STOP_MULTIPLIER)
@@ -168,6 +172,8 @@ def _migrate_v4(state, stock_data, patterns, book, fundamentals, decisions):
 
     # Patterns: add attribution stats stub per ticker
     for ticker, tk in patterns.items():
+        if ticker.startswith("__"):
+            continue
         tk.setdefault("attribution", {
             "by_pattern":  {},   # pattern_name → {wins, losses, total}
             "by_session":  {},   # morning/midday/preclose → {wins, losses}
@@ -376,7 +382,7 @@ def check_schema_health() -> dict:
         "day":               state.get("day"),
         "focus_stocks":      state.get("focus_stocks", []),
         "stocks_tracked":    len(stock_data),
-        "patterns_tracked":  len(patterns),
+        "patterns_tracked":  sum(1 for k in patterns if not str(k).startswith("__")),
         "open_positions":    len(book.get("open_positions", [])),
         "closed_trades":     len(book.get("closed_trades", [])),
         "fundamentals":      len(fund),

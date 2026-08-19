@@ -17,8 +17,10 @@ def update_attribution(patterns: Dict, closed_trades: List[dict]) -> Dict:
     Recompute attribution stats from all closed trades.
     Called every preclose after paper trades are settled.
     """
-    # Reset all attribution counters
+    # Reset all attribution counters (skip reserved non-ticker keys like __GLOBAL__)
     for ticker in patterns:
+        if ticker.startswith("__"):
+            continue
         patterns[ticker]["attribution"] = {
             "by_pattern": {},
             "by_session": {},

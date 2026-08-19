@@ -284,10 +284,18 @@ def _try_open_positions(book: dict, opinions: List[dict], patterns_db: Dict, ses
             # Capture market context AT ENTRY so the coach can later explain whether
             # the outcome was driven by the setup or by the conditions at open time.
             "entry_market": {
-                "nifty_trend": (market_health or {}).get("nifty", {}).get("trend_5d", "?"),
-                "vix":         vix_val,
-                "mood":        (market_health or {}).get("market_mood", "neutral"),
-                "regime":      (market_health or {}).get("intraday_regime", "?"),
+                "nifty_trend":     (market_health or {}).get("nifty", {}).get("trend_5d", "?"),
+                "vix":             vix_val,
+                "mood":            (market_health or {}).get("market_mood", "neutral"),
+                "regime":          (market_health or {}).get("intraday_regime", "?"),
+                # Per-stock decision context AT ENTRY (from the opinion) — lets the
+                # forensics/attribution layers learn e.g. "bought a falling sector".
+                "sector_momentum": op.get("sector_momentum", 0),
+                "delivery_signal": op.get("delivery_signal", "neutral"),
+                "rsi":             op.get("rsi_at_entry"),
+                "mtf_alignment":   op.get("mtf_alignment", "neutral"),
+                "opposing_ratio":  op.get("opposing_ratio", 0),
+                "hist_long_trend": op.get("hist_long_trend"),
             },
         }
         book["open_positions"].append(pos)

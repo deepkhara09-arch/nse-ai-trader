@@ -518,6 +518,28 @@ def analyse_stock(
     patterns = detect_all_patterns(d, prev if prev else None, prev2 if prev2 else None)
     tk_known  = patterns_db.get(ticker, {})
     reliable  = tk_known.get("reliable_patterns", {})
+    # GLOBAL (cross-ticker) pattern reliability — pooled market-wide, so a pattern's
+    # real edge is known even when THIS ticker has only 0-2 samples of it (the norm).
+    global_pats = patterns_db.get("__GLOBAL__", {}).get("patterns", {})
+
+    def _blended_rel(pattern):
+        """Reliability for a pattern, blending the per-ticker record with the global
+        pooled one. Per-ticker dominates once it has real samples (a pattern can
+        behave differently on a given stock), but until then the global signal fills
+        the vacuum instead of defaulting to a blind 0.5. Returns (rel, sample)."""
+        info  = reliable.get(pattern, {})
+        t_w, t_l = info.get("wins", 0), info.get("losses", 0)
+        t_n = t_w + t_l
+        g = global_pats.get(pattern, {})
+        g_rel, g_n = g.get("reliability", 0.5), (g.get("wins", 0) + g.get("losses", 0))
+        if t_n >= 3:                       # enough local evidence — trust the stock
+            return info.get("reliability", 0.5), t_n
+        if g_n >= 4:                       # thin locally but global has spoken
+            # weight the local (if any) with the global by their sample sizes
+            t_rel = info.get("reliability", 0.5)
+            blended = (t_rel * t_n + g_rel * g_n) / (t_n + g_n)
+            return round(blended, 3), t_n + g_n
+        return info.get("reliability", 0.5), t_n   # neither has evidence → base 0.5
 
     # ── Score buy vs sell ─────────────────────────────────────────────────────
     buy_score  = 0
@@ -528,13 +550,14 @@ def analyse_stock(
     def _score(pattern, side, pts, reason):
         nonlocal buy_score, sell_score
         info  = reliable.get(pattern, {})
-        rel   = info.get("reliability", 0.5)
-        wins  = info.get("wins", 0)
-        losses= info.get("losses", 0)
-        sample = wins + losses
+        rel, sample = _blended_rel(pattern)
 
-        if rel < CONFIDENCE_FLOOR and info:
-            return   # pattern exists in DB but is proven unreliable — ignore
+        # Drop a pattern proven unreliable either on THIS ticker or market-wide.
+        has_evidence = bool(info) or (pattern in global_pats
+                                      and (global_pats[pattern].get("wins", 0)
+                                           + global_pats[pattern].get("losses", 0)) >= 4)
+        if rel < CONFIDENCE_FLOOR and has_evidence:
+            return   # pattern is proven unreliable (local or global) — ignore
 
         # ── Outcome-weighted scoring ───────────────────────────────────────────
         # Lean HARDER on a pattern's real win-rate, but only as the sample grows —
@@ -1153,6 +1176,14 @@ def analyse_stock(
         "days_to_earnings": days_to_earnings,   # for earnings-aware sizing downstream
         "mtf_alignment": mtf_alignment,         # aligned / conflict / neutral (multi-timeframe)
         "price_is_live": d.get("price_is_live", True),  # gate trading on stale prices
+        # Decision context, surfaced so paper_trader can snapshot it AT ENTRY and the
+        # learning layers can later mine WHY a setup failed (e.g. bought a falling
+        # sector). Previously these lived only inside analyse_stock and were lost.
+        "sector_momentum":  round(float(d.get("sector_momentum", 0) or 0), 3),
+        "delivery_signal":  d.get("delivery_signal", "neutral"),
+        "rsi_at_entry":     round(float(rsi), 1),
+        "hist_long_trend":  d.get("hist_long_trend"),
+        "opposing_ratio":   round(_lo / _hi, 2) if _hi > 0 else 0.0,  # internal-conflict measure
     }
 
 
@@ -1239,6 +1270,36 @@ def learn_from_trade(
         pr["reliability"] = round(
             (pr["wins"] + prior_weight * 0.5) / (total + prior_weight), 3
         )
+
+        # ── GLOBAL pattern reliability (pooled across ALL tickers) ─────────────
+        # Data showed the flaw: per-ticker learning collects a MEDIAN of 1 sample
+        # per pattern — only 10 of 273 entries ever reach the 3-sample minimum, so
+        # the reliability gate almost never activates and the tool flies blind. A
+        # candlestick/indicator pattern behaves similarly across stocks, so pooling
+        # its outcomes market-wide gives a real, fast signal (e.g. bb_upper_rejection
+        # 0/6, supertrend_bullish ~37% over 36 samples). Stored under a reserved key
+        # so it lives in the same file with no migration. Same decay + smoothing.
+        gdb = patterns_db.setdefault("__GLOBAL__", {"patterns": {}})
+        gp  = gdb["patterns"].setdefault(p, {"wins": 0.0, "losses": 0.0,
+                                             "reliability": 0.5, "last_seen": today})
+        try:
+            from datetime import date as _gd
+            glast = _gd.fromisoformat(gp.get("last_seen", today))
+            gdays = max(0, (ist_today() - glast).days)
+            if gdays > 0:
+                gdecay = 0.5 ** (gdays / PATTERN_DECAY_HALFLIFE_DAYS)
+                gp["wins"]   = round(gp["wins"]   * gdecay, 3)
+                gp["losses"] = round(gp["losses"] * gdecay, 3)
+        except Exception:
+            pass
+        gp["last_seen"] = today
+        if won:
+            gp["wins"]   = round(gp["wins"] + weight, 3)
+        else:
+            gp["losses"] = round(gp["losses"] + weight, 3)
+        gtot = gp["wins"] + gp["losses"]
+        gprior = max(4 - gtot, 0)   # slightly stronger prior — needs 4+ before it bites
+        gp["reliability"] = round((gp["wins"] + gprior * 0.5) / (gtot + gprior), 3)
 
     # Dry forward-tests only teach pattern reliability — style preference and ATR
     # tuning need REAL executed exits, so they stop here.

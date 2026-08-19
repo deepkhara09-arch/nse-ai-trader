@@ -1,61 +1,61 @@
 {
-  "date": "2026-08-18",
-  "session": "preclose",
+  "date": "2026-08-19",
+  "session": "preopen",
   "nifty": {
     "symbol": "^NSEI",
-    "value": 24366.0,
-    "day_change_pct": -0.12,
+    "value": 24154.9,
+    "day_change_pct": -0.55,
     "trend_5d": "down",
     "trend_20d": "sideways",
-    "ath_pct_60d": -1.65
+    "ath_pct_60d": -2.5
   },
   "vix": {
-    "value": 11.31,
+    "value": 11.39,
     "level": "normal",
-    "percentile_30d": 0.0,
-    "avg_30d": 12.58
+    "percentile_30d": 7.0,
+    "avg_30d": 12.53
   },
   "bank_nifty": {
     "symbol": "^NSEBANK",
-    "value": 57491.1,
-    "day_change_pct": -0.25,
+    "value": 57497.8,
+    "day_change_pct": 0.01,
     "trend_5d": "sideways",
     "trend_20d": "sideways",
-    "ath_pct_60d": -2.07,
+    "ath_pct_60d": -2.06,
     "diverging": false
   },
   "sectors": {
     "IT": {
       "symbol": "ITBEES.NS",
-      "value": 34.81,
-      "day_change_pct": 0.12,
+      "value": 34.24,
+      "day_change_pct": -1.64,
       "trend_5d": "down",
       "trend_20d": "strong_up",
-      "ath_pct_60d": -5.87
+      "ath_pct_60d": -7.41
     },
     "Pharma": {
       "symbol": "PHARMABEES.NS",
       "value": 27.18,
-      "day_change_pct": -0.26,
+      "day_change_pct": 0.0,
       "trend_5d": "down",
-      "trend_20d": "up",
+      "trend_20d": "unknown",
       "ath_pct_60d": -2.96
     },
     "Bank": {
       "symbol": "BANKBEES.NS",
-      "value": 596.37,
-      "day_change_pct": -0.27,
+      "value": 598.42,
+      "day_change_pct": 0.34,
       "trend_5d": "sideways",
       "trend_20d": "sideways",
-      "ath_pct_60d": -5.02
+      "ath_pct_60d": -4.7
     },
     "Infra": {
       "symbol": "INFRABEES.NS",
-      "value": 976.93,
-      "day_change_pct": 0.9,
+      "value": 977.79,
+      "day_change_pct": 0.09,
       "trend_5d": "sideways",
       "trend_20d": "sideways",
-      "ath_pct_60d": -1.67
+      "ath_pct_60d": -1.58
     }
   },
   "market_mood": "neutral",
@@ -72,54 +72,54 @@
   ],
   "intraday_regime": "mixed",
   "macro": {
-    "date": "2026-08-18",
-    "session": "midday",
-    "generated_at": "2026-08-18T07:50:24.690864",
-    "global_score": 0.101,
+    "date": "2026-08-19",
+    "session": "preopen",
+    "generated_at": "2026-08-19T03:05:40.291876",
+    "global_score": 0.046,
     "india_score": 0.0,
-    "overall_score": 0.056,
+    "overall_score": 0.025,
     "mood": "neutral",
     "drivers": [
-      "Why this popular Treasury-bond ETF is trading at its lowest since 2004",
-      "\u2018It\u2019s a double-edged sword\u2019: My husband got a $42,000 bonus. Will it wipe out our Affordable Care Act subsidy?",
-      "There\u2019s a 49% chance the Dow will finish this year up double digits. Here\u2019s why.",
-      "The number of \u2018negative-beta\u2019 stocks in the S&P 500 just hit a new record high. What that means for investors.",
-      "I\u2019m 63, a retired CPA with a $1.2 million 401(k). Do I need to bother with a Roth conversion?",
-      "Micron, Sandisk and other chip stocks climb as investors get more confident about AI spending",
-      "A new set of Trump tariffs for Canada could take effect Wednesday. Here\u2019s what\u2019s at stake.",
-      "SpaceX\u2019s stock is rising, and that\u2019s a good sign for Nvidia and Google"
+      "Trump holds off on new 50% tariffs for Canadian goods",
+      "Cerebras\u2019s stock has been a post-IPO bust. Its comeback hinges on this new chip.",
+      "\u2018We are committed Christians\u2019: Our son and daughter-in-law cut us out of their lives after a political argument. Should we change our $3 million will?",
+      "My son does not work, yet pays $500 for Affordable Care Act health insurance. Is that fair?",
+      "\u2018This is very stressful\u2019: My son\u2019s roof was damaged in a storm, but his insurance won\u2019t pay. Can he fight this?",
+      "\u2018Too many people go bankrupt\u2019: Should Medicare provide catastrophic coverage?",
+      "Meta is facing its \u2018Big Tobacco\u2019 moment \u2014 and investors can profit",
+      "AI chip stocks were riding high. Here\u2019s why Micron and others are now pulling back."
     ],
     "global_cues": {
       "dow": {
-        "last": 53732.41,
-        "chg_pct": -0.2
+        "last": 53343.4,
+        "chg_pct": -0.22
       },
       "nasdaq": {
-        "last": 26729.16,
-        "chg_pct": -0.28
+        "last": 26289.71,
+        "chg_pct": -1.33
       },
       "sp500": {
-        "last": 7785.76,
-        "chg_pct": -0.17
+        "last": 7691.76,
+        "chg_pct": -0.69
       },
       "nikkei": {
-        "last": 67460.73,
-        "chg_pct": -1.82
+        "last": 65724.25,
+        "chg_pct": -2.57
       },
       "crude": {
-        "last": 84.5,
-        "chg_pct": 2.55
+        "last": 84.79,
+        "chg_pct": -0.18
       },
       "usdinr": {
         "last": 95.67,
-        "chg_pct": 0.23
+        "chg_pct": -0.03
       },
       "gold": {
-        "last": 4417.8,
-        "chg_pct": 0.85
+        "last": 4407.9,
+        "chg_pct": 0.96
       }
     },
-    "summary": "Overall macro mood is neutral (+0.06). US Dow -0.2% overnight. Crude +2.5%. USD/INR +0.2%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
+    "summary": "Overall macro mood is neutral (+0.03). US Dow -0.2% overnight. Crude -0.2%. USD/INR -0.0%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
       "Trade-war headlines spook global markets; IT & export names react most."
@@ -129,20 +129,14 @@
   },
   "macro_risk_factor": 1.0,
   "fii_dii": {
-    "date": "2026-08-18",
-    "fii_net_cr": -2535.1,
-    "dii_net_cr": 5101.46,
-    "combined_net_cr": 2566.36,
-    "signal": "inflow",
+    "date": "2026-08-19",
+    "fii_net_cr": 1651.53,
+    "dii_net_cr": 2579.31,
+    "combined_net_cr": 4230.84,
+    "signal": "strong_inflow",
     "ok": true,
     "error": "",
     "history": [
-      {
-        "date": "2026-07-08",
-        "fii": 393.19,
-        "dii": -383.43,
-        "combined": 9.76
-      },
       {
         "date": "2026-07-09",
         "fii": -532.86,
@@ -316,15 +310,22 @@
         "fii": -2535.1,
         "dii": 5101.46,
         "combined": 2566.36
+      },
+      {
+        "date": "2026-08-19",
+        "fii": 1651.53,
+        "dii": 2579.31,
+        "combined": 4230.84
       }
     ]
   },
+  "flow_tailwind": true,
   "pcr": {
-    "date": "2026-08-18",
-    "pcr": 0.635,
+    "date": "2026-08-19",
+    "pcr": 0.626,
     "reading": "bearish_bias",
-    "total_pe_oi": 2080972,
-    "total_ce_oi": 3276342,
+    "total_pe_oi": 2039709,
+    "total_ce_oi": 3256171,
     "spot": 24154.9,
     "max_pain": 24200.0,
     "max_pain_dist_pct": -0.19,

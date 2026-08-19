@@ -1,85 +1,5 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of pivot_s1_breakdown, macd_bearish_crossover, full_bearish_alignment mean for a swing trade on NTPC? Current RSI=37, MACD hist=-0.1849, Vol=0.8x average. Signal is SELL.",
-    "context": {
-      "ticker": "NTPC.NS",
-      "signal": "SELL",
-      "patterns": "pivot_s1_breakdown, macd_bearish_crossover, full_bearish_alignment",
-      "rsi": 36.9
-    },
-    "queued_at": "2026-08-18T10:11:08.649875"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of pivot_s1_bounce, low_volume_drift mean for a swing trade on BAJFINANCE? Current RSI=59, MACD hist=-6.2091, Vol=0.2x average. Signal is BUY.",
-    "context": {
-      "ticker": "BAJFINANCE.NS",
-      "signal": "BUY",
-      "patterns": "pivot_s1_bounce, low_volume_drift",
-      "rsi": 58.5
-    },
-    "queued_at": "2026-08-18T10:11:08.650875"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of bb_upper_rejection, pivot_s1_breakdown, outside_bar mean for a swing trade on UNIONBANK? Current RSI=80, MACD hist=+1.3764, Vol=1.0x average. Signal is BUY.",
-    "context": {
-      "ticker": "UNIONBANK.NS",
-      "signal": "BUY",
-      "patterns": "bb_upper_rejection, pivot_s1_breakdown, outside_bar",
-      "rsi": 80.5
-    },
-    "queued_at": "2026-08-18T10:12:13.855417"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of hammer, adx_ranging_market, pivot_point_test mean for a swing trade on ABCAPITAL? Current RSI=49, MACD hist=-2.2188, Vol=0.6x average. Signal is BUY.",
-    "context": {
-      "ticker": "ABCAPITAL.NS",
-      "signal": "BUY",
-      "patterns": "hammer, adx_ranging_market, pivot_point_test",
-      "rsi": 49.0
-    },
-    "queued_at": "2026-08-18T10:12:13.859093"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of pivot_s1_breakdown, full_bullish_alignment mean for a swing trade on CIPLA? Current RSI=45, MACD hist=-3.6073, Vol=0.6x average. Signal is BUY.",
-    "context": {
-      "ticker": "CIPLA.NS",
-      "signal": "BUY",
-      "patterns": "pivot_s1_breakdown, full_bullish_alignment",
-      "rsi": 45.1
-    },
-    "queued_at": "2026-08-18T10:12:13.863365"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of pivot_s1_breakdown, macd_bearish_crossover, full_bearish_alignment mean for a swing trade on NTPC? Current RSI=37, MACD hist=-0.1849, Vol=0.8x average. Signal is SELL.",
-    "context": {
-      "ticker": "NTPC.NS",
-      "signal": "SELL",
-      "patterns": "pivot_s1_breakdown, macd_bearish_crossover, full_bearish_alignment",
-      "rsi": 36.9
-    },
-    "queued_at": "2026-08-18T10:12:13.864427"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of pivot_s1_breakdown, low_volume_drift, full_bullish_alignment mean for a swing trade on CHOLAFIN? Current RSI=64, MACD hist=+0.3865, Vol=0.5x average. Signal is BUY.",
-    "context": {
-      "ticker": "CHOLAFIN.NS",
-      "signal": "BUY",
-      "patterns": "pivot_s1_breakdown, low_volume_drift, full_bullish_alignment",
-      "rsi": 64.3
-    },
-    "queued_at": "2026-08-18T10:12:13.865469"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of pivot_s1_bounce, low_volume_drift mean for a swing trade on BAJFINANCE? Current RSI=59, MACD hist=-6.2091, Vol=0.2x average. Signal is BUY.",
-    "context": {
-      "ticker": "BAJFINANCE.NS",
-      "signal": "BUY",
-      "patterns": "pivot_s1_bounce, low_volume_drift",
-      "rsi": 58.5
-    },
-    "queued_at": "2026-08-18T10:12:13.867151"
-  },
-  {
     "question": "In Indian NSE markets, what does the combination of pivot_s1_breakdown, low_volume_drift, full_bullish_alignment mean for a swing trade on SHRIRAMFIN? Current RSI=68, MACD hist=+3.4436, Vol=0.4x average. Signal is BUY.",
     "context": {
       "ticker": "SHRIRAMFIN.NS",
@@ -98,5 +18,85 @@
       "rsi": 67.1
     },
     "queued_at": "2026-08-18T10:12:13.872890"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of stoch_rsi_overbought_reversal, pivot_point_test, bb_upper_rejection mean for a swing trade on UNIONBANK? Current RSI=80, MACD hist=+1.3764, Vol=1.0x average. Signal is BUY.",
+    "context": {
+      "ticker": "UNIONBANK.NS",
+      "signal": "BUY",
+      "patterns": "stoch_rsi_overbought_reversal, pivot_point_test, bb_upper_rejection",
+      "rsi": 80.5
+    },
+    "queued_at": "2026-08-19T03:05:43.604273"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of pivot_point_test, hammer, adx_ranging_market mean for a swing trade on ABCAPITAL? Current RSI=49, MACD hist=-2.2188, Vol=0.6x average. Signal is BUY.",
+    "context": {
+      "ticker": "ABCAPITAL.NS",
+      "signal": "BUY",
+      "patterns": "pivot_point_test, hammer, adx_ranging_market",
+      "rsi": 49.0
+    },
+    "queued_at": "2026-08-19T03:05:43.607834"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of pivot_s1_breakdown, full_bullish_alignment mean for a swing trade on CIPLA? Current RSI=45, MACD hist=-3.6073, Vol=0.6x average. Signal is BUY.",
+    "context": {
+      "ticker": "CIPLA.NS",
+      "signal": "BUY",
+      "patterns": "pivot_s1_breakdown, full_bullish_alignment",
+      "rsi": 45.1
+    },
+    "queued_at": "2026-08-19T03:05:43.612003"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of macd_bearish_crossover, full_bearish_alignment, bearish_harami mean for a swing trade on NTPC? Current RSI=37, MACD hist=-0.1849, Vol=0.8x average. Signal is SELL.",
+    "context": {
+      "ticker": "NTPC.NS",
+      "signal": "SELL",
+      "patterns": "macd_bearish_crossover, full_bearish_alignment, bearish_harami",
+      "rsi": 36.9
+    },
+    "queued_at": "2026-08-19T03:05:43.613025"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of pivot_s1_breakdown, full_bullish_alignment, low_volume_drift mean for a swing trade on CHOLAFIN? Current RSI=64, MACD hist=+0.3865, Vol=0.5x average. Signal is BUY.",
+    "context": {
+      "ticker": "CHOLAFIN.NS",
+      "signal": "BUY",
+      "patterns": "pivot_s1_breakdown, full_bullish_alignment, low_volume_drift",
+      "rsi": 64.3
+    },
+    "queued_at": "2026-08-19T03:05:43.614027"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of pivot_s1_bounce, low_volume_drift mean for a swing trade on BAJFINANCE? Current RSI=59, MACD hist=-6.2091, Vol=0.2x average. Signal is BUY.",
+    "context": {
+      "ticker": "BAJFINANCE.NS",
+      "signal": "BUY",
+      "patterns": "pivot_s1_bounce, low_volume_drift",
+      "rsi": 58.5
+    },
+    "queued_at": "2026-08-19T03:05:43.615721"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of pivot_s1_breakdown, full_bullish_alignment, low_volume_drift mean for a swing trade on SHRIRAMFIN? Current RSI=68, MACD hist=+3.4436, Vol=0.4x average. Signal is BUY.",
+    "context": {
+      "ticker": "SHRIRAMFIN.NS",
+      "signal": "BUY",
+      "patterns": "pivot_s1_breakdown, full_bullish_alignment, low_volume_drift",
+      "rsi": 67.6
+    },
+    "queued_at": "2026-08-19T03:05:43.619908"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of supertrend_bullish, full_bullish_alignment, pivot_point_test mean for a swing trade on HINDALCO? Current RSI=67, MACD hist=+6.9977, Vol=0.7x average. Signal is BUY.",
+    "context": {
+      "ticker": "HINDALCO.NS",
+      "signal": "BUY",
+      "patterns": "supertrend_bullish, full_bullish_alignment, pivot_point_test",
+      "rsi": 67.1
+    },
+    "queued_at": "2026-08-19T03:05:43.621561"
   }
 ]

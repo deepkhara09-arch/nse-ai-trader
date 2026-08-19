@@ -1,13 +1,13 @@
 {
   "phase": "paper_trading",
   "day": 42,
-  "session": "morning",
+  "session": "preopen",
   "start_date": "2026-06-22",
   "phase_start_date": "2026-07-15",
   "last_run_date": "2026-08-18",
   "last_counted_date": "2026-08-18",
   "cohort_last_tick_date": "2026-08-18",
-  "last_updated": "2026-08-18T10:12:13.760294",
+  "last_updated": "2026-08-19T03:05:43.502625",
   "focus_stocks": [
     "MARICO.NS",
     "SBIN.NS",
@@ -145,7 +145,8 @@
     "[2026-08-17] Cohort batch #24 complete \u2014 30 candidates ready",
     "[2026-08-18] Pre-open macro: neutral (+0.07)",
     "[2026-08-18] Focus refresh \u2014 promoted: ['ASIANPAINT', 'HINDALCO'] | demoted: ['DRREDDY', 'NIACL']",
-    "[2026-08-18] Cohort batch #25 complete \u2014 30 candidates ready"
+    "[2026-08-18] Cohort batch #25 complete \u2014 30 candidates ready",
+    "[2026-08-19] Pre-open macro: neutral (+0.03)"
   ],
   "alert_sent": false,
   "schema_version": 11,
@@ -375,11 +376,6 @@
     "scored_date": "2026-08-18"
   },
   "sessions_done": {
-    "preopen": "2026-08-18",
-    "morning": "2026-08-18",
-    "midday": "2026-08-18",
-    "afternoon": "2026-08-18",
-    "intraday_close": "2026-08-18",
-    "preclose": "2026-08-18"
+    "preopen": "2026-08-19"
   }
 }

@@ -5068,5 +5068,55 @@
     "ts": "2026-08-19T10:12:11.687857",
     "detail": "Confidence \u25b210 (67 \u2192 78) | Rank \u25b21 (#2 \u2192 #1)",
     "confidence": 77.5
+  },
+  {
+    "type": "new",
+    "ticker": "MARICO.NS",
+    "nse_code": "MARICO",
+    "signal": "BUY",
+    "date": "2026-08-20",
+    "ts": "2026-08-20T04:05:45.566183",
+    "detail": "New BUY recommendation \u2014 confidence 70/100",
+    "confidence": 69.6
+  },
+  {
+    "type": "removed",
+    "ticker": "GAIL.NS",
+    "nse_code": "GAIL",
+    "signal": "BUY",
+    "date": "2026-08-20",
+    "ts": "2026-08-20T04:05:45.566183",
+    "detail": "Dropped \u2014 no longer meets threshold (was 78/100)",
+    "confidence": 0
+  },
+  {
+    "type": "removed",
+    "ticker": "HINDALCO.NS",
+    "nse_code": "HINDALCO",
+    "signal": "BUY",
+    "date": "2026-08-20",
+    "ts": "2026-08-20T04:05:45.566183",
+    "detail": "Dropped \u2014 no longer meets threshold (was 65/100)",
+    "confidence": 0
+  },
+  {
+    "type": "updated",
+    "ticker": "PIDILITIND.NS",
+    "nse_code": "PIDILITIND",
+    "signal": "BUY",
+    "date": "2026-08-20",
+    "ts": "2026-08-20T04:05:45.566183",
+    "detail": "Confidence \u25bc7 (88 \u2192 81) | Rank \u25b21 (#3 \u2192 #2) | Target 1 moved \u20b91730.86 \u2192 \u20b91742.96",
+    "confidence": 81.2
+  },
+  {
+    "type": "updated",
+    "ticker": "UNIONBANK.NS",
+    "nse_code": "UNIONBANK",
+    "signal": "BUY",
+    "date": "2026-08-20",
+    "ts": "2026-08-20T04:05:45.566183",
+    "detail": "Confidence \u25b212 (66 \u2192 78) | Stop loss moved \u20b9181.04 \u2192 \u20b9182.13 | Target 1 moved \u20b9197.62 \u2192 \u20b9198.85",
+    "confidence": 77.6
   }
 ]

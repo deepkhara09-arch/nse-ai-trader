@@ -1,26 +1,26 @@
 {
   "date": "2026-08-20",
-  "session": "midday",
+  "session": "afternoon",
   "nifty": {
     "symbol": "^NSEI",
     "value": 24078.3,
     "day_change_pct": -0.32,
     "trend_5d": "down",
-    "trend_20d": "sideways",
+    "trend_20d": "up",
     "ath_pct_60d": -2.81
   },
   "vix": {
     "value": 11.32,
     "level": "normal",
     "percentile_30d": 3.0,
-    "avg_30d": 12.43
+    "avg_30d": 12.51
   },
   "bank_nifty": {
     "symbol": "^NSEBANK",
     "value": 57239.75,
     "day_change_pct": -0.04,
     "trend_5d": "sideways",
-    "trend_20d": "down",
+    "trend_20d": "up",
     "ath_pct_60d": -2.5,
     "diverging": false
   },

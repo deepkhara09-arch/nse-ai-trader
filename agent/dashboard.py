@@ -142,6 +142,7 @@ def _build_html(
 <style>{_css()}</style>
 </head>
 <body>
+<canvas id="ambient" aria-hidden="true"></canvas>
 {_header(phase, day, now_utc, mood, trade_ok, nifty_str, vix_str)}
 
 <div class="container">
@@ -149,6 +150,7 @@ def _build_html(
 
   <!-- ── HOME tab ── -->
   <section class="tab-panel" id="tab-home">
+    {_hero(stats, book, portfolio, pnl_total, pnl_pct, phase, day, trade_ok, focus)}
     {_market_bar(nifty, vix, mood, mkt_warn, market_health)}
     {_section_status(state, phase, day, focus, stock_data)}
     {_section_heatmap(stock_data)}
@@ -777,10 +779,78 @@ tbody tr:hover { box-shadow: inset 2px 0 0 var(--green) }
   100% { box-shadow: 0 0 0 0 rgba(62,207,142,0) }
 }
 
+/* ── Ambient canvas: a slow-drifting particle field behind everything ── */
+#ambient {
+  position: fixed; inset: 0; width: 100%; height: 100%;
+  z-index: 0; pointer-events: none; opacity: .55;
+}
+.header, .container, .bottom-nav, .phase-strip { position: relative; z-index: 1 }
+
+/* ── HERO: the landing moment — equity chart backdrop + headline value ── */
+.hero {
+  position: relative; overflow: hidden;
+  border: 0.5px solid var(--border); border-radius: 18px;
+  background: linear-gradient(155deg, var(--card) 0%, var(--bg2) 60%, var(--bg) 100%);
+  box-shadow: var(--elev-2), var(--glow);
+  padding: 22px 22px 18px; margin-bottom: 16px;
+  isolation: isolate;
+}
+/* the equity area-chart sits low and faint, as an atmospheric backdrop */
+.hero-chart {
+  position: absolute; left: 0; right: 0; bottom: 0; height: 62%;
+  z-index: -1; opacity: .9;
+  -webkit-mask-image: linear-gradient(180deg, transparent, #000 55%);
+          mask-image: linear-gradient(180deg, transparent, #000 55%);
+}
+.hero::before {  /* corner bloom */
+  content: ""; position: absolute; top: -40%; right: -10%; width: 60%; height: 120%;
+  background: radial-gradient(circle, rgba(62,207,142,.16), transparent 62%);
+  z-index: -1; pointer-events: none;
+}
+.hero-grid { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px }
+.hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-size: .64rem; font-weight: 600; letter-spacing: .04em; text-transform: uppercase;
+  color: var(--green); margin-bottom: 12px;
+}
+.hero-value {
+  font-family: var(--display); font-weight: 700;
+  font-size: clamp(2.1rem, 8vw, 3.1rem); line-height: 1; letter-spacing: -.04em;
+  font-variant-numeric: tabular-nums; margin-bottom: 6px;
+}
+.hero-delta { font-family: var(--display); font-size: 1.05rem; font-weight: 600; font-variant-numeric: tabular-nums }
+.hero-delta-pct { font-weight: 500; opacity: .85 }
+.hero-sub { font-size: .72rem; color: var(--muted); margin-top: 9px }
+.hero-chips { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 14px }
+.hero-chip {
+  font-size: .7rem; color: var(--muted2);
+  background: color-mix(in srgb, var(--card2) 80%, transparent);
+  border: 0.5px solid var(--border); border-radius: 99px; padding: 4px 11px;
+  backdrop-filter: blur(4px);
+}
+.hero-chip b { color: var(--text); font-variant-numeric: tabular-nums }
+.hero-gauge { display: flex; flex-direction: column; align-items: center; gap: 6px; flex-shrink: 0 }
+.hero-gauge-lbl { font-size: .62rem; text-align: center; color: var(--text); line-height: 1.3 }
+
+/* ── Donut / gauge ring ── */
+.donut { display: block }
+.donut-txt { font-family: var(--display); font-size: 1.15rem; font-weight: 700; font-variant-numeric: tabular-nums }
+.donut-ring { transition: stroke-dashoffset 1.3s cubic-bezier(.2,.8,.2,1) }
+.donut-ring.animate { stroke-dashoffset: var(--doff) !important }
+
+@media (max-width: 560px) {
+  .hero { padding: 18px 16px 14px }
+  .hero-grid { flex-direction: column-reverse; align-items: stretch }
+  .hero-gauge { flex-direction: row; align-self: flex-end; gap: 10px }
+  .donut { width: 76px; height: 76px }
+}
+
 /* Respect users who prefer no motion — kill transforms/animations, keep it legible */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; scroll-behavior: auto !important }
   .reveal { opacity: 1 !important; transform: none !important }
+  #ambient { display: none }
+  .donut-ring { transition: none }
 }
 """
 
@@ -844,6 +914,65 @@ def _alert_banner(alert, stats) -> str:
       Expectancy: <strong class="{'green' if stats['expectancy']>0 else 'red'}">
         &#8377;{stats['expectancy']:+,.0f}</strong> per trade.
       See <a href="#recommendations" style="color:var(--cyan)">Recommendations</a> below.
+    </div>
+  </div>
+</div>"""
+
+
+def _donut(pct: float, color: str, label_val: str, size: int = 108) -> str:
+    """An SVG progress ring (gauge). pct 0..100. Animates via CSS stroke-dashoffset."""
+    r = (size - 14) / 2
+    circ = 2 * 3.141592653589793 * r
+    off  = circ * (1 - max(0, min(100, pct)) / 100)
+    cx = size / 2
+    return (
+        f'<svg class="donut" width="{size}" height="{size}" viewBox="0 0 {size} {size}">'
+        f'<circle cx="{cx}" cy="{cx}" r="{r}" fill="none" stroke="var(--border)" stroke-width="8"/>'
+        f'<circle class="donut-ring" cx="{cx}" cy="{cx}" r="{r}" fill="none" stroke="{color}" '
+        f'stroke-width="8" stroke-linecap="round" transform="rotate(-90 {cx} {cx})" '
+        f'stroke-dasharray="{circ:.1f}" stroke-dashoffset="{circ:.1f}" '
+        f'style="--doff:{off:.1f}"/>'
+        f'<text x="50%" y="50%" text-anchor="middle" dominant-baseline="central" '
+        f'class="donut-txt" fill="var(--text)">{label_val}</text>'
+        f'</svg>'
+    )
+
+
+def _hero(stats, book, portfolio, pnl_total, pnl_pct, phase, day, trade_ok, focus) -> str:
+    """Full-bleed landing hero: the portfolio equity as an ambient chart backdrop
+    with the headline value/P&L overlaid, a live win-rate gauge, and status chips.
+    Pure presentation over data already computed elsewhere — nothing new is stored."""
+    p_cls   = "green" if pnl_total >= 0 else "red"
+    arrow   = "&#9650;" if pnl_total >= 0 else "&#9660;"
+    has_tr  = stats["total"] > 0
+    wr_pct  = round(stats["win_rate"] * 100, 1) if has_tr else 0
+    wr_col  = "var(--green)" if (has_tr and stats["win_rate"] >= WIN_RATE_THRESHOLD) else ("var(--amber)" if has_tr else "var(--muted)")
+    wr_disp = f"{wr_pct:.0f}%" if has_tr else "—"
+
+    snaps = book.get("daily_snapshots", [])
+    vals  = [s.get("portfolio_value", INITIAL_CAPITAL) for s in snaps] or [INITIAL_CAPITAL]
+    curve_color = "#3ecf8e" if vals[-1] >= vals[0] else "#e07070"
+
+    live_txt = "Systems online &middot; trading enabled" if trade_ok else "Systems online &middot; standing down (risk-off)"
+
+    return f"""<div class="hero">
+  <div class="hero-chart" data-hero='{json.dumps(vals)}' data-color='{curve_color}'></div>
+  <div class="hero-grid">
+    <div class="hero-main">
+      <div class="hero-eyebrow"><span class="live-dot"></span>{live_txt}</div>
+      <div class="hero-value">&#8377;{portfolio:,.0f}</div>
+      <div class="hero-delta {p_cls}">{arrow} &#8377;{abs(pnl_total):,.0f} <span class="hero-delta-pct">({pnl_pct:+.2f}%)</span></div>
+      <div class="hero-sub">Paper portfolio &middot; virtual &#8377;{INITIAL_CAPITAL:,} &middot; {phase.replace('_',' ').title()} &middot; day {day}</div>
+      <div class="hero-chips">
+        <span class="hero-chip"><b>{stats['total']}</b> trades</span>
+        <span class="hero-chip"><b class="green">{stats['wins']}</b>W / <b class="red">{stats['losses']}</b>L</span>
+        <span class="hero-chip"><b>{len(book.get('open_positions', []))}</b> open</span>
+        <span class="hero-chip"><b>{len(focus)}</b> focus</span>
+      </div>
+    </div>
+    <div class="hero-gauge">
+      {_donut(wr_pct, wr_col, wr_disp)}
+      <div class="hero-gauge-lbl">Win rate<br><span class="muted">target {WIN_RATE_THRESHOLD*100:.0f}%</span></div>
     </div>
   </div>
 </div>"""
@@ -3144,4 +3273,98 @@ if ('IntersectionObserver' in window && !REDUCED) {
 document.addEventListener('click', function(ev) {
   if (ev.target.closest('a, button, .badge, .pill, .hmap-cell, [onclick], [data-tab]')) haptic(6);
 }, { passive: true });
+
+// ── Hero equity chart: smooth area curve with a glowing stroke + end dot ───
+(function(){
+  var el = document.querySelector('.hero-chart');
+  if (!el) return;
+  var vals; try { vals = JSON.parse(el.dataset.hero || '[]'); } catch(e) { return; }
+  if (vals.length < 2) return;
+  var color = el.dataset.color || '#3ecf8e';
+  function draw() {
+    var W = el.offsetWidth || 340, H = el.offsetHeight || 150;
+    var mn = Math.min.apply(null, vals), mx = Math.max.apply(null, vals);
+    var rng = (mx - mn) || 1, pad = rng * 0.15;
+    mn -= pad; mx += pad; rng = mx - mn;
+    function X(i){ return (i/(vals.length-1))*W; }
+    function Y(v){ return H - ((v-mn)/rng)*(H-6) - 3; }
+    // smooth path (Catmull-Rom -> bezier)
+    var d = 'M' + X(0).toFixed(1) + ',' + Y(vals[0]).toFixed(1);
+    for (var i=0;i<vals.length-1;i++){
+      var x0=X(Math.max(0,i-1)),y0=Y(vals[Math.max(0,i-1)]);
+      var x1=X(i),y1=Y(vals[i]);
+      var x2=X(i+1),y2=Y(vals[i+1]);
+      var x3=X(Math.min(vals.length-1,i+2)),y3=Y(vals[Math.min(vals.length-1,i+2)]);
+      var c1x=x1+(x2-x0)/6, c1y=y1+(y2-y0)/6, c2x=x2-(x3-x1)/6, c2y=y2-(y3-y1)/6;
+      d += ' C'+c1x.toFixed(1)+','+c1y.toFixed(1)+' '+c2x.toFixed(1)+','+c2y.toFixed(1)+' '+x2.toFixed(1)+','+y2.toFixed(1);
+    }
+    var area = d + ' L'+W+','+H+' L0,'+H+' Z';
+    var gid='hg'+Math.random().toString(36).slice(2,7);
+    var ex=X(vals.length-1).toFixed(1), ey=Y(vals[vals.length-1]).toFixed(1);
+    el.innerHTML =
+      '<svg viewBox="0 0 '+W+' '+H+'" preserveAspectRatio="none" style="width:100%;height:100%;display:block">'+
+      '<defs><linearGradient id="'+gid+'" x1="0" y1="0" x2="0" y2="1">'+
+      '<stop offset="0%" stop-color="'+color+'" stop-opacity="0.32"/>'+
+      '<stop offset="100%" stop-color="'+color+'" stop-opacity="0"/></linearGradient>'+
+      '<filter id="'+gid+'g"><feGaussianBlur stdDeviation="2.2"/></filter></defs>'+
+      '<path d="'+area+'" fill="url(#'+gid+')"/>'+
+      '<path d="'+d+'" fill="none" stroke="'+color+'" stroke-width="2.4" stroke-linejoin="round" opacity="0.5" filter="url(#'+gid+'g)"/>'+
+      '<path d="'+d+'" fill="none" stroke="'+color+'" stroke-width="1.8" stroke-linejoin="round"/>'+
+      '<circle cx="'+ex+'" cy="'+ey+'" r="3.4" fill="'+color+'"/>'+
+      '<circle cx="'+ex+'" cy="'+ey+'" r="3.4" fill="none" stroke="'+color+'" stroke-width="1.5" opacity="0.5"><animate attributeName="r" from="3.4" to="9" dur="1.8s" repeatCount="indefinite"/><animate attributeName="opacity" from="0.5" to="0" dur="1.8s" repeatCount="indefinite"/></circle>'+
+      '</svg>';
+  }
+  draw();
+  var rt; window.addEventListener('resize', function(){ clearTimeout(rt); rt=setTimeout(draw,150); });
+})();
+
+// ── Donut rings animate to their value when scrolled into view ─────────────
+if ('IntersectionObserver' in window) {
+  var _dObs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('animate'); _dObs.unobserve(e.target); } });
+  }, { threshold: 0.4 });
+  document.querySelectorAll('.donut-ring').forEach(function(r){ _dObs.observe(r); });
+} else {
+  document.querySelectorAll('.donut-ring').forEach(function(r){ r.classList.add('animate'); });
+}
+
+// ── Ambient particle field — slow, cheap, green motes drifting upward ──────
+(function(){
+  var cv = document.getElementById('ambient');
+  if (!cv || REDUCED) { if (cv) cv.style.display='none'; return; }
+  var ctx = cv.getContext('2d'), DPR = Math.min(window.devicePixelRatio||1, 2);
+  var parts = [], W, H;
+  function size(){
+    W = cv.clientWidth; H = cv.clientHeight;
+    cv.width = W*DPR; cv.height = H*DPR; ctx.setTransform(DPR,0,0,DPR,0,0);
+    var target = Math.min(46, Math.floor(W*H/26000));
+    parts = [];
+    for (var i=0;i<target;i++) parts.push({
+      x: Math.random()*W, y: Math.random()*H,
+      r: Math.random()*1.6+0.5, vy: -(Math.random()*0.22+0.05),
+      vx: (Math.random()-0.5)*0.12, a: Math.random()*0.5+0.15
+    });
+  }
+  size();
+  var raf, running = true;
+  function tick(){
+    if (!running) return;
+    ctx.clearRect(0,0,W,H);
+    for (var i=0;i<parts.length;i++){
+      var p=parts[i]; p.y+=p.vy; p.x+=p.vx;
+      if (p.y < -5){ p.y = H+5; p.x = Math.random()*W; }
+      if (p.x < -5) p.x = W+5; else if (p.x > W+5) p.x = -5;
+      ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,6.283);
+      ctx.fillStyle = 'rgba(62,207,142,'+p.a+')'; ctx.fill();
+    }
+    raf = requestAnimationFrame(tick);
+  }
+  tick();
+  // pause when tab hidden (saves battery, respects the device)
+  document.addEventListener('visibilitychange', function(){
+    running = !document.hidden;
+    if (running) tick(); else cancelAnimationFrame(raf);
+  });
+  var rt2; window.addEventListener('resize', function(){ clearTimeout(rt2); rt2=setTimeout(size,200); });
+})();
 </script>"""

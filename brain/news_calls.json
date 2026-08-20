@@ -2292,8 +2292,8 @@
       "direction": 1,
       "score": 0.21,
       "price_at_call": 1064.6,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "wrong"
     },
     {
       "date": "2026-08-17",
@@ -2301,8 +2301,8 @@
       "direction": 1,
       "score": 0.238,
       "price_at_call": 188.83,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "wrong"
     },
     {
       "date": "2026-08-18",
@@ -2375,6 +2375,51 @@
       "price_at_call": 3887.5,
       "evaluated": false,
       "outcome": ""
+    },
+    {
+      "date": "2026-08-20",
+      "ticker": "UNIONBANK.NS",
+      "direction": 1,
+      "score": 0.366,
+      "price_at_call": 184.76,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-08-20",
+      "ticker": "PIDILITIND.NS",
+      "direction": 1,
+      "score": 0.28,
+      "price_at_call": 1660.1,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-08-20",
+      "ticker": "SIEMENS.NS",
+      "direction": 1,
+      "score": 0.263,
+      "price_at_call": 3898.0,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-08-20",
+      "ticker": "SHRIRAMFIN.NS",
+      "direction": 1,
+      "score": 0.202,
+      "price_at_call": 1121.9,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-08-20",
+      "ticker": "HINDALCO.NS",
+      "direction": 1,
+      "score": 0.201,
+      "price_at_call": 1022.95,
+      "evaluated": false,
+      "outcome": ""
     }
   ],
   "reliability": {
@@ -2421,10 +2466,10 @@
       "last_seen": "2026-08-07"
     },
     "UNIONBANK.NS": {
-      "wins": 8.598,
-      "losses": 2.724,
-      "reliability": 0.759,
-      "last_seen": "2026-08-07"
+      "wins": 7.976,
+      "losses": 3.527,
+      "reliability": 0.693,
+      "last_seen": "2026-08-20"
     },
     "FEDERALBNK.NS": {
       "wins": 4.798,
@@ -2439,10 +2484,10 @@
       "last_seen": "2026-07-21"
     },
     "SBIN.NS": {
-      "wins": 3.435,
-      "losses": 5.659,
-      "reliability": 0.378,
-      "last_seen": "2026-08-19"
+      "wins": 3.415,
+      "losses": 6.626,
+      "reliability": 0.34,
+      "last_seen": "2026-08-20"
     },
     "GAIL.NS": {
       "wins": 1.994,

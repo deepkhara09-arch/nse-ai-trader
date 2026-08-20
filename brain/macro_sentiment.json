@@ -1,53 +1,54 @@
 {
-  "date": "2026-08-19",
-  "session": "midday",
-  "generated_at": "2026-08-19T07:50:53.818401",
-  "global_score": 0.015,
-  "india_score": 0.0,
-  "overall_score": 0.008,
-  "mood": "neutral",
+  "date": "2026-08-20",
+  "session": "preopen",
+  "generated_at": "2026-08-20T03:05:40.500044",
+  "global_score": 0.084,
+  "india_score": 1.0,
+  "overall_score": 0.496,
+  "mood": "risk_on",
   "drivers": [
-    "Trump holds off on new 50% tariffs for Canadian goods",
-    "Cerebras\u2019s stock has been a post-IPO bust. Its comeback hinges on this new chip.",
-    "\u2018We are committed Christians\u2019: Our son and daughter-in-law cut us out of their lives after a political argument. Should we change our $3 million will?",
     "My son does not work, yet pays $500 for Affordable Care Act health insurance. Is that fair?",
-    "\u2018This is very stressful\u2019: My son\u2019s roof was damaged in a storm, but his insurance won\u2019t pay. Can he fight this?",
-    "\u2018Too many people go bankrupt\u2019: Should Medicare provide catastrophic coverage?",
-    "Meta is facing its \u2018Big Tobacco\u2019 moment \u2014 and investors can profit",
-    "AI chip stocks were riding high. Here\u2019s why Micron and others are now pulling back."
+    "I hold my mother-in-law\u2019s power of attorney. I\u2019m also her executor and trustee. Do I have ultimate authority?",
+    "Retirees: This investment gives you a guaranteed 5% safe withdrawal rate",
+    "The chip-stock rally hits a speed bump \u2014 but these analysts see reason to be hopeful",
+    "ServiceNow\u2019s stock leads a software rally. Here\u2019s what\u2019s energizing investors.",
+    "A $420 camera for $10: China\u2019s young consumers would rather rent than buy. Beijing has a problem.",
+    "Marvell\u2019s stock pops on news of Google chip deal \u2014\u00a0and Broadcom\u2019s falls",
+    "Why the Treasury market\u2019s newfound calm could break down in September"
   ],
   "global_cues": {
     "dow": {
-      "last": 53343.4,
-      "chg_pct": -0.22
+      "last": 53463.05,
+      "chg_pct": 0.22
     },
     "nasdaq": {
-      "last": 26289.71,
-      "chg_pct": -1.33
+      "last": 26331.09,
+      "chg_pct": 0.16
     },
     "sp500": {
-      "last": 7691.76,
-      "chg_pct": -0.69
+      "last": 7707.98,
+      "chg_pct": 0.21
     },
     "nikkei": {
-      "last": 65326.42,
-      "chg_pct": -3.16
+      "last": 65982.49,
+      "chg_pct": 1.0
     },
     "crude": {
-      "last": 84.94,
-      "chg_pct": 0.52
+      "last": 84.51,
+      "chg_pct": -0.51
     },
     "usdinr": {
       "last": 95.74,
-      "chg_pct": 0.05
+      "chg_pct": -0.08
     },
     "gold": {
-      "last": 4366.0,
-      "chg_pct": -1.17
+      "last": 4549.7,
+      "chg_pct": 4.21
     }
   },
-  "summary": "Overall macro mood is neutral (+0.01). US Dow -0.2% overnight. Crude +0.5%. USD/INR +0.1%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
+  "summary": "Overall macro mood is risk-on (+0.50). US Dow +0.2% overnight. Crude -0.5%. USD/INR -0.1%. Notable: US Fed rate hike / hawkish; Geopolitical conflict / war; Tariffs / trade war.",
   "playbook": [
+    "Hawkish Fed pressures Nifty via FII outflows and stronger USD.",
     "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
     "Trade-war headlines spook global markets; IT & export names react most."
   ],

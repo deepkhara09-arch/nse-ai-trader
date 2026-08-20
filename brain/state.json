@@ -1,13 +1,13 @@
 {
   "phase": "paper_trading",
   "day": 43,
-  "session": "morning",
+  "session": "preopen",
   "start_date": "2026-06-22",
   "phase_start_date": "2026-07-15",
   "last_run_date": "2026-08-19",
   "last_counted_date": "2026-08-19",
   "cohort_last_tick_date": "2026-08-19",
-  "last_updated": "2026-08-19T10:12:11.573420",
+  "last_updated": "2026-08-20T03:05:41.479036",
   "focus_stocks": [
     "MARICO.NS",
     "SBIN.NS",
@@ -149,7 +149,8 @@
     "[2026-08-18] Cohort batch #25 complete \u2014 30 candidates ready",
     "[2026-08-19] Pre-open macro: neutral (+0.03)",
     "[2026-08-19] Focus refresh \u2014 promoted: ['LICI'] | demoted: ['CHOLAFIN']",
-    "[2026-08-19] Cohort batch #26 complete \u2014 30 candidates ready"
+    "[2026-08-19] Cohort batch #26 complete \u2014 30 candidates ready",
+    "[2026-08-20] Pre-open macro: risk_on (+0.50)"
   ],
   "alert_sent": false,
   "schema_version": 11,
@@ -379,11 +380,6 @@
     "scored_date": "2026-08-19"
   },
   "sessions_done": {
-    "preopen": "2026-08-19",
-    "morning": "2026-08-19",
-    "midday": "2026-08-19",
-    "afternoon": "2026-08-19",
-    "intraday_close": "2026-08-19",
-    "preclose": "2026-08-19"
+    "preopen": "2026-08-20"
   }
 }

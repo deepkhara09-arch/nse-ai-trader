@@ -3,10 +3,10 @@
     "ticker": "PIDILITIND.NS",
     "nse_code": "PIDILITIND",
     "company_name": "Pidilite Industries",
-    "date": "2026-08-19",
-    "generated_at": "2026-08-19 10:12 UTC",
+    "date": "2026-08-20",
+    "generated_at": "2026-08-20 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -103,9 +103,9 @@
       "History backtest: this kind of BUY setup worked 51% of the time over ~1 week on this stock (sample: 51)"
     ],
     "patterns_seen": [
+      "pivot_s1_breakdown",
       "full_bullish_alignment",
-      "adx_strong_trend_up",
-      "pivot_s1_breakdown"
+      "adx_strong_trend_up"
     ],
     "reliable_patterns": [
       "full_bullish_alignment",
@@ -145,10 +145,10 @@
     "ticker": "GAIL.NS",
     "nse_code": "GAIL",
     "company_name": "GAIL.NS",
-    "date": "2026-08-19",
-    "generated_at": "2026-08-19 10:12 UTC",
+    "date": "2026-08-20",
+    "generated_at": "2026-08-20 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -213,8 +213,8 @@
     "reasons": [
       "All EMAs stacked bullish",
       "RSI=48 in healthy buy zone",
-      "Candlestick: bullish harami",
       "Candlestick: tweezer bottom",
+      "Candlestick: bullish harami",
       "Supertrend bullish \u2014 price above trend band",
       "ADX low \u2014 market ranging, signals less reliable",
       "Bounced off Pivot S1 support",
@@ -245,15 +245,15 @@
       "History backtest: this kind of BUY setup worked 33% of the time over ~1 week on this stock (sample: 43)"
     ],
     "patterns_seen": [
-      "pivot_point_test",
-      "stoch_rsi_oversold_reversal",
-      "supertrend_bullish",
-      "bullish_harami",
       "low_volume_drift",
+      "stoch_rsi_oversold_reversal",
       "full_bullish_alignment",
       "tweezer_bottom",
+      "supertrend_bullish",
+      "bullish_harami",
+      "pivot_s1_bounce",
       "adx_ranging_market",
-      "pivot_s1_bounce"
+      "pivot_point_test"
     ],
     "reliable_patterns": [],
     "nearest_support": 169.24,
@@ -289,10 +289,10 @@
     "ticker": "UNIONBANK.NS",
     "nse_code": "UNIONBANK",
     "company_name": "UNIONBANK.NS",
-    "date": "2026-08-19",
-    "generated_at": "2026-08-19 10:12 UTC",
+    "date": "2026-08-20",
+    "generated_at": "2026-08-20 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -326,7 +326,7 @@
     "pattern_score": 0.0,
     "confluence_bonus": 10,
     "paper_bonus": 0.0,
-    "success_probability": 0.517,
+    "success_probability": 0.515,
     "base_success_prob": 0.544,
     "profit_probability": 0.36,
     "composite_score": 57.38,
@@ -344,9 +344,9 @@
       "regime"
     ],
     "backtest_tested": true,
-    "backtest_hit_5d": 0.455,
-    "backtest_hit_10d": 0.473,
-    "backtest_sample": 55,
+    "backtest_hit_5d": 0.446,
+    "backtest_hit_10d": 0.464,
+    "backtest_sample": 56,
     "hist_long_trend": "strong_uptrend",
     "hist_52w_position": 93.1,
     "hist_personality": "choppy",
@@ -379,13 +379,13 @@
       "Resistance at \u20b9190.00 is natural target",
       "Latest news: 'UNIONBANK Share Price Today - Union Bank of India on NSE/BSE - scanx.t'",
       "Confluence: 7 independent signal families agree (trend, momentum, volume, pattern, news, fundamentals, regime)",
-      "History backtest: this kind of BUY setup worked 46% of the time over ~1 week on this stock (sample: 55)"
+      "History backtest: this kind of BUY setup worked 45% of the time over ~1 week on this stock (sample: 56)"
     ],
     "patterns_seen": [
-      "full_bullish_alignment",
-      "adx_strong_trend_up",
       "pivot_s1_breakdown",
-      "low_volume_drift"
+      "full_bullish_alignment",
+      "low_volume_drift",
+      "adx_strong_trend_up"
     ],
     "reliable_patterns": [],
     "nearest_support": 182.5,
@@ -421,10 +421,10 @@
     "ticker": "HINDALCO.NS",
     "nse_code": "HINDALCO",
     "company_name": "HINDALCO.NS",
-    "date": "2026-08-19",
-    "generated_at": "2026-08-19 10:12 UTC",
+    "date": "2026-08-20",
+    "generated_at": "2026-08-20 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -458,7 +458,7 @@
     "pattern_score": 0.0,
     "confluence_bonus": 10,
     "paper_bonus": 0.0,
-    "success_probability": 0.566,
+    "success_probability": 0.563,
     "base_success_prob": 0.566,
     "profit_probability": 0.698,
     "composite_score": 64.23,
@@ -475,9 +475,9 @@
       "fundamentals"
     ],
     "backtest_tested": true,
-    "backtest_hit_5d": 0.567,
-    "backtest_hit_10d": 0.6,
-    "backtest_sample": 60,
+    "backtest_hit_5d": 0.557,
+    "backtest_hit_10d": 0.59,
+    "backtest_sample": 61,
     "hist_long_trend": "strong_uptrend",
     "hist_52w_position": 84.1,
     "hist_personality": "choppy",
@@ -511,13 +511,13 @@
       "Resistance at \u20b91054.05 is natural target",
       "Latest news: 'Explained: Why Vedanta Aluminium, Hindalco, Nalco shares tumbled up to'",
       "Confluence: 6 independent signal families agree (trend, momentum, volume, pattern, news, fundamentals)",
-      "History backtest: this kind of BUY setup worked 57% of the time over ~1 week on this stock (sample: 60)"
+      "History backtest: this kind of BUY setup worked 56% of the time over ~1 week on this stock (sample: 61)"
     ],
     "patterns_seen": [
-      "full_bullish_alignment",
       "inside_bar",
-      "adx_strong_trend_up",
-      "pivot_s1_breakdown"
+      "pivot_s1_breakdown",
+      "full_bullish_alignment",
+      "adx_strong_trend_up"
     ],
     "reliable_patterns": [],
     "nearest_support": 1020.0,

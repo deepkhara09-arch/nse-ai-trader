@@ -1,6 +1,6 @@
 {
   "date": "2026-08-21",
-  "session": "intraday_close",
+  "session": "preclose",
   "nifty": {
     "symbol": "^NSEI",
     "value": 24231.85,
@@ -320,13 +320,13 @@
   },
   "pcr": {
     "date": "2026-08-21",
-    "pcr": 1.097,
+    "pcr": 1.087,
     "reading": "neutral",
-    "total_pe_oi": 2756915,
-    "total_ce_oi": 2513411,
-    "spot": 24231.85,
+    "total_pe_oi": 3008128,
+    "total_ce_oi": 2767129,
+    "spot": 24252.0,
     "max_pain": 24250.0,
-    "max_pain_dist_pct": -0.07,
+    "max_pain_dist_pct": 0.01,
     "oi_bias": "balanced",
     "ok": true,
     "error": ""

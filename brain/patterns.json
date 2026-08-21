@@ -119,13 +119,13 @@
       "by_pattern": {
         "supertrend_bullish": {
           "wins": 0,
-          "losses": 1,
-          "total": 1
+          "losses": 2,
+          "total": 2
         },
         "full_bullish_alignment": {
           "wins": 0,
-          "losses": 1,
-          "total": 1
+          "losses": 2,
+          "total": 2
         },
         "pivot_r1_breakout": {
           "wins": 0,
@@ -139,10 +139,25 @@
         },
         "three_white_soldiers": {
           "wins": 0,
+          "losses": 2,
+          "total": 2
+        },
+        "momentum_continuation": {
+          "wins": 0,
           "losses": 1,
           "total": 1
         },
-        "momentum_continuation": {
+        "outside_bar": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "bb_upper_rejection": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "pivot_point_test": {
           "wins": 0,
           "losses": 1,
           "total": 1
@@ -153,20 +168,25 @@
           "wins": 0,
           "losses": 1,
           "total": 1
+        },
+        "midday": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
         }
       },
       "by_mood": {
         "neutral": {
           "wins": 0,
-          "losses": 1,
-          "total": 1
+          "losses": 2,
+          "total": 2
         }
       },
       "by_style": {
         "swing": {
           "wins": 0,
-          "losses": 1,
-          "total": 1
+          "losses": 2,
+          "total": 2
         }
       }
     }
@@ -1326,8 +1346,8 @@
       "by_pattern": {
         "full_bullish_alignment": {
           "wins": 2,
-          "losses": 1,
-          "total": 3
+          "losses": 2,
+          "total": 4
         },
         "pivot_s1_bounce": {
           "wins": 2,
@@ -1336,8 +1356,8 @@
         },
         "supertrend_bullish": {
           "wins": 2,
-          "losses": 0,
-          "total": 2
+          "losses": 1,
+          "total": 3
         },
         "tweezer_bottom": {
           "wins": 2,
@@ -1351,8 +1371,8 @@
         },
         "adx_strong_trend_up": {
           "wins": 2,
-          "losses": 1,
-          "total": 3
+          "losses": 2,
+          "total": 4
         },
         "tweezer_top": {
           "wins": 0,
@@ -1383,6 +1403,16 @@
           "wins": 0,
           "losses": 1,
           "total": 1
+        },
+        "morning_star": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "strong_bullish_marubozu": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
         }
       },
       "by_session": {
@@ -1393,22 +1423,22 @@
         },
         "midday": {
           "wins": 0,
-          "losses": 1,
-          "total": 1
+          "losses": 2,
+          "total": 2
         }
       },
       "by_mood": {
         "neutral": {
           "wins": 2,
-          "losses": 1,
-          "total": 3
+          "losses": 2,
+          "total": 4
         }
       },
       "by_style": {
         "swing": {
           "wins": 2,
-          "losses": 1,
-          "total": 3
+          "losses": 2,
+          "total": 4
         }
       }
     }

@@ -31,8 +31,8 @@
         "In a long-term strong downtrend (2yr)",
         "\u2713 Daily setup aligned with the higher-timeframe trend"
       ],
-      "current_price": 339.45,
-      "unrealized_pnl": -13.0,
+      "current_price": 340.45,
+      "unrealized_pnl": -33.0,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -83,8 +83,8 @@
         "MACD histogram negative",
         "Broke below Pivot S1 support \u2014 bearish"
       ],
-      "current_price": 1093.1,
-      "unrealized_pnl": 6.6,
+      "current_price": 1092.3,
+      "unrealized_pnl": 1.8,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -97,7 +97,7 @@
         0,
         0,
         0,
-        0
+        1
       ],
       "stale_tightened": true
     },
@@ -110,7 +110,7 @@
       "entry": 3959.7,
       "qty": 1,
       "invested": 3959.7,
-      "stop_loss": 3843.97,
+      "stop_loss": 3857.86,
       "target": 4299.34,
       "style": "swing",
       "confidence": 90.6,
@@ -247,8 +247,8 @@
         "\u2713 Daily setup aligned with the higher-timeframe trend",
         "MACD histogram negative"
       ],
-      "current_price": 411.1,
-      "unrealized_pnl": 25.5,
+      "current_price": 411.9,
+      "unrealized_pnl": 37.5,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -264,6 +264,7 @@
         "hist_long_trend": "strong_uptrend"
       },
       "view_hist": [
+        0,
         0,
         0,
         0
@@ -1926,7 +1927,8 @@
       "costs": 23.09,
       "pnl_pct": -1.59,
       "won": false,
-      "open_days": 5
+      "open_days": 5,
+      "forensic_done": true
     },
     {
       "ticker": "UNIONBANK.NS",
@@ -1985,7 +1987,8 @@
       "costs": 25.34,
       "pnl_pct": -0.88,
       "won": false,
-      "open_days": 8
+      "open_days": 8,
+      "forensic_done": true
     }
   ],
   "daily_snapshots": [
@@ -2170,16 +2173,23 @@
       "capital": 58121.52,
       "open_positions": 6,
       "daily_pnl": 0.0
+    },
+    {
+      "date": "2026-08-21",
+      "portfolio_value": 99129.64,
+      "capital": 67999.29,
+      "open_positions": 5,
+      "daily_pnl": -197.55
     }
   ],
   "daily_pnl_today": -197.54524999999887,
-  "last_snapshot_date": "2026-08-20",
+  "last_snapshot_date": "2026-08-21",
   "lifetime_wins": 12,
   "lifetime_losses": 15,
   "lifetime_pnl": -814.47,
   "last_pnl_reset_date": "2026-08-21",
-  "max_drawdown_pct": 1.9,
-  "current_drawdown_pct": 1.86,
+  "max_drawdown_pct": 2.06,
+  "current_drawdown_pct": 2.06,
   "portfolio_peak": 101210.28,
-  "sessions_since_peak": 23
+  "sessions_since_peak": 24
 }

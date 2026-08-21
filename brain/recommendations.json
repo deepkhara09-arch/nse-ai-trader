@@ -3,10 +3,10 @@
     "ticker": "PIDILITIND.NS",
     "nse_code": "PIDILITIND",
     "company_name": "Pidilite Industries",
-    "date": "2026-08-20",
-    "generated_at": "2026-08-20 10:12 UTC",
+    "date": "2026-08-21",
+    "generated_at": "2026-08-21 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -40,10 +40,10 @@
     "pattern_score": 7.5,
     "confluence_bonus": 10,
     "paper_bonus": 5.0,
-    "success_probability": 0.667,
-    "base_success_prob": 0.735,
-    "profit_probability": 0.316,
-    "composite_score": 63.84,
+    "success_probability": 0.663,
+    "base_success_prob": 0.729,
+    "profit_probability": 0.305,
+    "composite_score": 63.09,
     "focus_rank": 3,
     "rank_delta": 0,
     "intention": "BUY PIDILITIND for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
@@ -67,7 +67,7 @@
     "data_confidence": "Estimated",
     "data_confidence_key": "estimated",
     "data_confidence_note": "Only 3 paper trade(s) \u2014 probability is an indicator-based estimate, not yet proven",
-    "expected_edge_r": 0.316,
+    "expected_edge_r": 0.305,
     "buy_score": 12.65,
     "sell_score": 5.0,
     "reasons": [
@@ -103,12 +103,12 @@
       "History backtest: this kind of BUY setup worked 51% of the time over ~1 week on this stock (sample: 51)"
     ],
     "patterns_seen": [
-      "adx_strong_trend_up",
-      "pivot_s1_breakdown",
-      "full_bullish_alignment",
-      "macd_bearish_crossover",
       "tweezer_top",
-      "pivot_point_test"
+      "pivot_point_test",
+      "macd_bearish_crossover",
+      "adx_strong_trend_up",
+      "full_bullish_alignment",
+      "pivot_s1_breakdown"
     ],
     "reliable_patterns": [
       "full_bullish_alignment",
@@ -139,18 +139,16 @@
     "paper_pnl": 205.17,
     "paper_expectancy": 68.39,
     "market_mood": "neutral",
-    "market_warning": [
-      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals"
-    ]
+    "market_warning": []
   },
   {
     "ticker": "UNIONBANK.NS",
     "nse_code": "UNIONBANK",
     "company_name": "UNIONBANK.NS",
-    "date": "2026-08-20",
-    "generated_at": "2026-08-20 10:12 UTC",
+    "date": "2026-08-21",
+    "generated_at": "2026-08-21 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -185,11 +183,11 @@
     "confluence_bonus": 10,
     "paper_bonus": 0.0,
     "success_probability": 0.498,
-    "base_success_prob": 0.521,
-    "profit_probability": 0.303,
-    "composite_score": 54.27,
+    "base_success_prob": 0.52,
+    "profit_probability": 0.3,
+    "composite_score": 54.1,
     "focus_rank": 6,
-    "rank_delta": -1,
+    "rank_delta": 0,
     "intention": "BUY UNIONBANK for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
     "confluence_count": 7,
     "confluence_families": [
@@ -212,7 +210,7 @@
     "data_confidence": "Estimated",
     "data_confidence_key": "estimated",
     "data_confidence_note": "Only 1 paper trade(s) \u2014 probability is an indicator-based estimate, not yet proven",
-    "expected_edge_r": 0.303,
+    "expected_edge_r": 0.3,
     "buy_score": 8.35,
     "sell_score": 3.0,
     "reasons": [
@@ -241,8 +239,8 @@
       "History backtest: this kind of BUY setup worked 45% of the time over ~1 week on this stock (sample: 56)"
     ],
     "patterns_seen": [
-      "full_bullish_alignment",
       "adx_strong_trend_up",
+      "full_bullish_alignment",
       "pivot_s1_breakdown"
     ],
     "reliable_patterns": [],
@@ -270,18 +268,16 @@
     "paper_pnl": -66.76,
     "paper_expectancy": -66.76,
     "market_mood": "neutral",
-    "market_warning": [
-      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals"
-    ]
+    "market_warning": []
   },
   {
     "ticker": "HINDALCO.NS",
     "nse_code": "HINDALCO",
     "company_name": "HINDALCO.NS",
-    "date": "2026-08-20",
-    "generated_at": "2026-08-20 10:12 UTC",
+    "date": "2026-08-21",
+    "generated_at": "2026-08-21 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -315,12 +311,12 @@
     "pattern_score": 0.0,
     "confluence_bonus": 10,
     "paper_bonus": 0.0,
-    "success_probability": 0.574,
-    "base_success_prob": 0.582,
-    "profit_probability": 0.746,
-    "composite_score": 66.57,
-    "focus_rank": 1,
-    "rank_delta": 0,
+    "success_probability": 0.57,
+    "base_success_prob": 0.575,
+    "profit_probability": 0.725,
+    "composite_score": 65.6,
+    "focus_rank": 2,
+    "rank_delta": -1,
     "intention": "BUY HINDALCO for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
     "confluence_count": 6,
     "confluence_families": [
@@ -342,7 +338,7 @@
     "data_confidence": "Estimated",
     "data_confidence_key": "estimated",
     "data_confidence_note": "Only 0 paper trade(s) \u2014 probability is an indicator-based estimate, not yet proven",
-    "expected_edge_r": 0.746,
+    "expected_edge_r": 0.725,
     "buy_score": 7.3,
     "sell_score": 2.0,
     "reasons": [
@@ -371,9 +367,9 @@
       "History backtest: this kind of BUY setup worked 56% of the time over ~1 week on this stock (sample: 61)"
     ],
     "patterns_seen": [
-      "low_volume_drift",
-      "full_bullish_alignment",
       "adx_strong_trend_up",
+      "full_bullish_alignment",
+      "low_volume_drift",
       "pivot_s1_breakdown"
     ],
     "reliable_patterns": [],
@@ -401,8 +397,6 @@
     "paper_pnl": 0,
     "paper_expectancy": 0,
     "market_mood": "neutral",
-    "market_warning": [
-      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals"
-    ]
+    "market_warning": []
   }
 ]

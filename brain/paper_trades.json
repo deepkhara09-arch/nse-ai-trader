@@ -10,7 +10,7 @@
       "entry": 184.16,
       "qty": 46,
       "invested": 8471.36,
-      "stop_loss": 181.48,
+      "stop_loss": 183.09,
       "target": 197.58,
       "style": "swing",
       "confidence": 91.8,
@@ -32,8 +32,8 @@
         "\u2713 Daily setup aligned with the higher-timeframe trend",
         "Near upper Bollinger Band"
       ],
-      "current_price": 183.81,
-      "unrealized_pnl": -16.1,
+      "current_price": 184.04,
+      "unrealized_pnl": -5.52,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -44,7 +44,7 @@
       },
       "view_hist": [
         1,
-        1,
+        0,
         0,
         0
       ],
@@ -59,7 +59,7 @@
       "entry": 338.8,
       "qty": 20,
       "invested": 6776.0,
-      "stop_loss": 347.59,
+      "stop_loss": 343.19,
       "target": 321.23,
       "style": "swing",
       "confidence": 86.4,
@@ -80,8 +80,8 @@
         "In a long-term strong downtrend (2yr)",
         "\u2713 Daily setup aligned with the higher-timeframe trend"
       ],
-      "current_price": 337.8,
-      "unrealized_pnl": 20.0,
+      "current_price": 341.55,
+      "unrealized_pnl": -55.0,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -95,7 +95,8 @@
         0,
         0,
         0
-      ]
+      ],
+      "stale_tightened": true
     },
     {
       "ticker": "BAJFINANCE.NS",
@@ -131,8 +132,8 @@
         "MACD histogram negative",
         "Broke below Pivot S1 support \u2014 bearish"
       ],
-      "current_price": 1095.6,
-      "unrealized_pnl": 21.6,
+      "current_price": 1098.5,
+      "unrealized_pnl": 39.0,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -144,7 +145,7 @@
       "view_hist": [
         1,
         1,
-        1,
+        0,
         0
       ],
       "stale_tightened": true
@@ -158,7 +159,7 @@
       "entry": 3959.7,
       "qty": 1,
       "invested": 3959.7,
-      "stop_loss": 3810.26,
+      "stop_loss": 3828.19,
       "target": 4299.34,
       "style": "swing",
       "confidence": 90.6,
@@ -186,8 +187,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "RSI=68 elevated"
       ],
-      "current_price": 3908.0,
-      "unrealized_pnl": -51.7,
+      "current_price": 3908.8,
+      "unrealized_pnl": -50.9,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -244,8 +245,8 @@
         "\u26a0 Sector momentum -0.30 \u2014 buying into a falling sector needs extra conviction",
         "MACD histogram negative"
       ],
-      "current_price": 172.43,
-      "unrealized_pnl": 1.8,
+      "current_price": 172.6,
+      "unrealized_pnl": 9.45,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -295,8 +296,8 @@
         "\u2713 Daily setup aligned with the higher-timeframe trend",
         "MACD histogram negative"
       ],
-      "current_price": 409.4,
-      "unrealized_pnl": 0.0,
+      "current_price": 412.75,
+      "unrealized_pnl": 50.25,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -310,7 +311,10 @@
         "mtf_alignment": "aligned",
         "opposing_ratio": 0.09,
         "hist_long_trend": "strong_uptrend"
-      }
+      },
+      "view_hist": [
+        0
+      ]
     }
   ],
   "closed_trades": [

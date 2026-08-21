@@ -1,6 +1,6 @@
 {
   "date": "2026-08-21",
-  "session": "morning",
+  "session": "midday",
   "nifty": {
     "symbol": "^NSEI",
     "value": 24231.85,
@@ -13,7 +13,7 @@
     "value": 10.76,
     "level": "normal",
     "percentile_30d": 0.0,
-    "avg_30d": 12.38
+    "avg_30d": 12.33
   },
   "bank_nifty": {
     "symbol": "^NSEBANK",
@@ -72,11 +72,11 @@
   "intraday_regime": "choppy",
   "macro": {
     "date": "2026-08-21",
-    "session": "preopen",
-    "generated_at": "2026-08-21T03:05:53.330859",
-    "global_score": -0.164,
+    "session": "midday",
+    "generated_at": "2026-08-21T06:15:39.125428",
+    "global_score": -0.191,
     "india_score": 0.0,
-    "overall_score": -0.09,
+    "overall_score": -0.105,
     "mood": "neutral",
     "drivers": [
       "My son does not work, yet pays $500 for Affordable Care Act health insurance. Is that fair?",
@@ -102,23 +102,23 @@
         "chg_pct": -0.87
       },
       "nikkei": {
-        "last": 66008.45,
-        "chg_pct": -0.31
+        "last": 65852.11,
+        "chg_pct": -0.55
       },
       "crude": {
-        "last": 86.57,
-        "chg_pct": 0.86
+        "last": 87.83,
+        "chg_pct": 2.33
       },
       "usdinr": {
-        "last": 95.69,
-        "chg_pct": 0.2
+        "last": 95.73,
+        "chg_pct": 0.25
       },
       "gold": {
-        "last": 4595.4,
-        "chg_pct": 2.36
+        "last": 4516.3,
+        "chg_pct": 0.6
       }
     },
-    "summary": "Overall macro mood is neutral (-0.09). US Dow -1.3% overnight. Crude +0.9%. USD/INR +0.2%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
+    "summary": "Overall macro mood is neutral (-0.10). US Dow -1.3% overnight. Crude +2.3%. USD/INR +0.2%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
       "Trade-war headlines spook global markets; IT & export names react most."

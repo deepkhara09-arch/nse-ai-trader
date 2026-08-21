@@ -13,7 +13,7 @@
     "value": 10.76,
     "level": "normal",
     "percentile_30d": 0.0,
-    "avg_30d": 12.38
+    "avg_30d": 12.4
   },
   "bank_nifty": {
     "symbol": "^NSEBANK",
@@ -60,14 +60,16 @@
   },
   "market_mood": "neutral",
   "trade_allowed": true,
-  "warnings": [],
+  "warnings": [
+    "Nifty choppy intraday \u2014 wait for cleaner setups"
+  ],
   "leading_sectors": [],
   "market_regime": "normal",
   "sector_breadth": 0.0,
   "lagging_sectors": [
     "IT"
   ],
-  "intraday_regime": "mixed",
+  "intraday_regime": "choppy",
   "macro": {
     "date": "2026-08-21",
     "session": "preopen",

@@ -1,55 +1,6 @@
 {
-  "capital": 59602.48723499999,
+  "capital": 67999.286985,
   "open_positions": [
-    {
-      "ticker": "UNIONBANK.NS",
-      "sector": "Banking",
-      "open_date": "2026-08-11",
-      "open_session": "midday",
-      "action": "BUY",
-      "entry": 184.16,
-      "qty": 46,
-      "invested": 8471.36,
-      "stop_loss": 183.09,
-      "target": 197.58,
-      "style": "swing",
-      "confidence": 91.8,
-      "patterns": [
-        "supertrend_bullish",
-        "outside_bar",
-        "bb_upper_rejection",
-        "full_bullish_alignment",
-        "three_white_soldiers",
-        "pivot_point_test"
-      ],
-      "buy_reasons": [
-        "All EMAs stacked bullish",
-        "MACD histogram positive",
-        "Candlestick: three white soldiers",
-        "Supertrend bullish \u2014 price above trend band",
-        "Testing pivot point \u2014 decision zone",
-        "In a long-term strong uptrend (2yr) \u2014 trend on our side",
-        "\u2713 Daily setup aligned with the higher-timeframe trend",
-        "Near upper Bollinger Band"
-      ],
-      "current_price": 183.62,
-      "unrealized_pnl": -24.84,
-      "max_held_days": 10,
-      "vol_regime_pct": 0.12,
-      "entry_market": {
-        "nifty_trend": "sideways",
-        "vix": 12.25,
-        "mood": "neutral",
-        "regime": "mixed"
-      },
-      "view_hist": [
-        0,
-        0,
-        0,
-        0
-      ],
-      "stale_tightened": true
-    },
     {
       "ticker": "NTPC.NS",
       "sector": "Energy",
@@ -80,8 +31,8 @@
         "In a long-term strong downtrend (2yr)",
         "\u2713 Daily setup aligned with the higher-timeframe trend"
       ],
-      "current_price": 339.7,
-      "unrealized_pnl": -18.0,
+      "current_price": 339.45,
+      "unrealized_pnl": -13.0,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -132,8 +83,8 @@
         "MACD histogram negative",
         "Broke below Pivot S1 support \u2014 bearish"
       ],
-      "current_price": 1092.7,
-      "unrealized_pnl": 4.2,
+      "current_price": 1093.1,
+      "unrealized_pnl": 6.6,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -143,7 +94,7 @@
         "regime": "choppy"
       },
       "view_hist": [
-        1,
+        0,
         0,
         0,
         0
@@ -187,8 +138,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "RSI=68 elevated"
       ],
-      "current_price": 3901.4,
-      "unrealized_pnl": -58.3,
+      "current_price": 3920.0,
+      "unrealized_pnl": -39.7,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -245,8 +196,8 @@
         "\u26a0 Sector momentum -0.30 \u2014 buying into a falling sector needs extra conviction",
         "MACD histogram negative"
       ],
-      "current_price": 172.13,
-      "unrealized_pnl": -11.7,
+      "current_price": 171.89,
+      "unrealized_pnl": -22.5,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -296,8 +247,8 @@
         "\u2713 Daily setup aligned with the higher-timeframe trend",
         "MACD histogram negative"
       ],
-      "current_price": 411.2,
-      "unrealized_pnl": 27.0,
+      "current_price": 411.1,
+      "unrealized_pnl": 25.5,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -313,6 +264,7 @@
         "hist_long_trend": "strong_uptrend"
       },
       "view_hist": [
+        0,
         0,
         0
       ]
@@ -1975,6 +1927,65 @@
       "pnl_pct": -1.59,
       "won": false,
       "open_days": 5
+    },
+    {
+      "ticker": "UNIONBANK.NS",
+      "sector": "Banking",
+      "open_date": "2026-08-11",
+      "open_session": "midday",
+      "action": "BUY",
+      "entry": 184.16,
+      "qty": 46,
+      "invested": 8471.36,
+      "stop_loss": 183.09,
+      "target": 197.58,
+      "style": "swing",
+      "confidence": 91.8,
+      "patterns": [
+        "supertrend_bullish",
+        "outside_bar",
+        "bb_upper_rejection",
+        "full_bullish_alignment",
+        "three_white_soldiers",
+        "pivot_point_test"
+      ],
+      "buy_reasons": [
+        "All EMAs stacked bullish",
+        "MACD histogram positive",
+        "Candlestick: three white soldiers",
+        "Supertrend bullish \u2014 price above trend band",
+        "Testing pivot point \u2014 decision zone",
+        "In a long-term strong uptrend (2yr) \u2014 trend on our side",
+        "\u2713 Daily setup aligned with the higher-timeframe trend",
+        "Near upper Bollinger Band"
+      ],
+      "current_price": 182.71,
+      "unrealized_pnl": -66.7,
+      "max_held_days": 10,
+      "vol_regime_pct": 0.12,
+      "entry_market": {
+        "nifty_trend": "sideways",
+        "vix": 12.25,
+        "mood": "neutral",
+        "regime": "mixed"
+      },
+      "view_hist": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "stale_tightened": true,
+      "close_date": "2026-08-21",
+      "close_session": "intraday_close",
+      "exit_price": 183.09,
+      "exit_reason": "stop_hit",
+      "pnl": -74.56,
+      "pnl_gross": -49.22,
+      "costs": 25.34,
+      "pnl_pct": -0.88,
+      "won": false,
+      "open_days": 8
     }
   ],
   "daily_snapshots": [
@@ -2161,11 +2172,11 @@
       "daily_pnl": 0.0
     }
   ],
-  "daily_pnl_today": -122.98499999999919,
+  "daily_pnl_today": -197.54524999999887,
   "last_snapshot_date": "2026-08-20",
   "lifetime_wins": 12,
-  "lifetime_losses": 14,
-  "lifetime_pnl": -739.91,
+  "lifetime_losses": 15,
+  "lifetime_pnl": -814.47,
   "last_pnl_reset_date": "2026-08-21",
   "max_drawdown_pct": 1.9,
   "current_drawdown_pct": 1.86,

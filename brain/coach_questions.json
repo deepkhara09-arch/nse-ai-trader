@@ -1,33 +1,23 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of low_volume_drift, spinning_top, supertrend_bullish mean for a swing trade on SHRIRAMFIN? Current RSI=67, MACD hist=-1.7959, Vol=0.4x average. Signal is BUY.",
-    "context": {
-      "ticker": "SHRIRAMFIN.NS",
-      "signal": "BUY",
-      "patterns": "low_volume_drift, spinning_top, supertrend_bullish",
-      "rsi": 67.1
-    },
-    "queued_at": "2026-08-21T07:45:50.416627"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of outside_bar, full_bullish_alignment, adx_strong_trend_up mean for a swing trade on HINDALCO? Current RSI=62, MACD hist=+0.4756, Vol=0.9x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of pivot_point_test, full_bullish_alignment, outside_bar mean for a swing trade on HINDALCO? Current RSI=62, MACD hist=+0.4756, Vol=0.9x average. Signal is BUY.",
     "context": {
       "ticker": "HINDALCO.NS",
       "signal": "BUY",
-      "patterns": "outside_bar, full_bullish_alignment, adx_strong_trend_up",
+      "patterns": "pivot_point_test, full_bullish_alignment, outside_bar",
       "rsi": 61.5
     },
-    "queued_at": "2026-08-21T07:45:50.417588"
+    "queued_at": "2026-08-21T09:45:37.599044"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of low_volume_drift, pivot_s1_breakdown, full_bearish_alignment mean for a swing trade on DMART? Current RSI=58, MACD hist=+8.1082, Vol=0.4x average. Signal is SELL.",
+    "question": "In Indian NSE markets, what does the combination of doji, adx_ranging_market, full_bearish_alignment mean for a swing trade on DMART? Current RSI=54, MACD hist=+4.7143, Vol=0.8x average. Signal is SELL.",
     "context": {
       "ticker": "DMART.NS",
       "signal": "SELL",
-      "patterns": "low_volume_drift, pivot_s1_breakdown, full_bearish_alignment",
-      "rsi": 57.9
+      "patterns": "doji, adx_ranging_market, full_bearish_alignment",
+      "rsi": 53.6
     },
-    "queued_at": "2026-08-21T07:45:50.418160"
+    "queued_at": "2026-08-21T09:45:37.600032"
   },
   {
     "question": "In Indian NSE markets, what does the combination of bullish_harami, bb_midline_support mean for a swing trade on BAJFINANCE? Current RSI=37, MACD hist=-6.6034, Vol=0.7x average. Signal is BUY.",
@@ -37,27 +27,27 @@
       "patterns": "bullish_harami, bb_midline_support",
       "rsi": 37.4
     },
-    "queued_at": "2026-08-21T07:45:50.419639"
+    "queued_at": "2026-08-21T09:45:37.601941"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of ema_golden_cross, adx_ranging_market mean for a swing trade on ABCAPITAL? Current RSI=53, MACD hist=-1.7892, Vol=1.4x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of adx_ranging_market, ema_golden_cross mean for a swing trade on ABCAPITAL? Current RSI=53, MACD hist=-1.7892, Vol=1.4x average. Signal is BUY.",
     "context": {
       "ticker": "ABCAPITAL.NS",
       "signal": "BUY",
-      "patterns": "ema_golden_cross, adx_ranging_market",
+      "patterns": "adx_ranging_market, ema_golden_cross",
       "rsi": 52.8
     },
-    "queued_at": "2026-08-21T07:45:50.420987"
+    "queued_at": "2026-08-21T09:45:37.604368"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of ema_golden_cross, adx_ranging_market mean for a swing trade on ABCAPITAL? Current RSI=53, MACD hist=-1.7892, Vol=1.4x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of adx_ranging_market, ema_golden_cross mean for a swing trade on ABCAPITAL? Current RSI=53, MACD hist=-1.7892, Vol=1.4x average. Signal is BUY.",
     "context": {
       "ticker": "ABCAPITAL.NS",
       "signal": "BUY",
-      "patterns": "ema_golden_cross, adx_ranging_market",
+      "patterns": "adx_ranging_market, ema_golden_cross",
       "rsi": 52.8
     },
-    "queued_at": "2026-08-21T07:45:50.506749"
+    "queued_at": "2026-08-21T09:45:37.719879"
   },
   {
     "question": "In Indian NSE markets, what does the combination of bullish_harami, bb_midline_support mean for a swing trade on BAJFINANCE? Current RSI=37, MACD hist=-6.6034, Vol=0.7x average. Signal is BUY.",
@@ -67,36 +57,46 @@
       "patterns": "bullish_harami, bb_midline_support",
       "rsi": 37.4
     },
-    "queued_at": "2026-08-21T07:45:50.510908"
+    "queued_at": "2026-08-21T09:45:37.726490"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of low_volume_drift, spinning_top, supertrend_bullish mean for a swing trade on SHRIRAMFIN? Current RSI=67, MACD hist=-1.7959, Vol=0.4x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of full_bullish_alignment, supertrend_bullish mean for a swing trade on SHRIRAMFIN? Current RSI=67, MACD hist=-1.5784, Vol=0.6x average. Signal is BUY.",
     "context": {
       "ticker": "SHRIRAMFIN.NS",
       "signal": "BUY",
-      "patterns": "low_volume_drift, spinning_top, supertrend_bullish",
-      "rsi": 67.1
+      "patterns": "full_bullish_alignment, supertrend_bullish",
+      "rsi": 67.5
     },
-    "queued_at": "2026-08-21T07:45:50.511929"
+    "queued_at": "2026-08-21T09:45:37.728226"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of outside_bar, full_bullish_alignment, adx_strong_trend_up mean for a swing trade on HINDALCO? Current RSI=62, MACD hist=+0.4756, Vol=0.9x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of bb_lower_bounce, stoch_rsi_oversold_reversal, adx_ranging_market mean for a swing trade on ASIANPAINT? Current RSI=31, MACD hist=-17.0876, Vol=0.5x average. Signal is BUY.",
+    "context": {
+      "ticker": "ASIANPAINT.NS",
+      "signal": "BUY",
+      "patterns": "bb_lower_bounce, stoch_rsi_oversold_reversal, adx_ranging_market",
+      "rsi": 31.1
+    },
+    "queued_at": "2026-08-21T09:45:37.729241"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of pivot_point_test, full_bullish_alignment, outside_bar mean for a swing trade on HINDALCO? Current RSI=62, MACD hist=+0.4756, Vol=0.9x average. Signal is BUY.",
     "context": {
       "ticker": "HINDALCO.NS",
       "signal": "BUY",
-      "patterns": "outside_bar, full_bullish_alignment, adx_strong_trend_up",
+      "patterns": "pivot_point_test, full_bullish_alignment, outside_bar",
       "rsi": 61.5
     },
-    "queued_at": "2026-08-21T07:45:50.512846"
+    "queued_at": "2026-08-21T09:45:37.730267"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of low_volume_drift, pivot_s1_breakdown, full_bearish_alignment mean for a swing trade on DMART? Current RSI=58, MACD hist=+8.1082, Vol=0.4x average. Signal is SELL.",
+    "question": "In Indian NSE markets, what does the combination of doji, adx_ranging_market, full_bearish_alignment mean for a swing trade on DMART? Current RSI=54, MACD hist=+4.7143, Vol=0.8x average. Signal is SELL.",
     "context": {
       "ticker": "DMART.NS",
       "signal": "SELL",
-      "patterns": "low_volume_drift, pivot_s1_breakdown, full_bearish_alignment",
-      "rsi": 57.9
+      "patterns": "doji, adx_ranging_market, full_bearish_alignment",
+      "rsi": 53.6
     },
-    "queued_at": "2026-08-21T07:45:50.521317"
+    "queued_at": "2026-08-21T09:45:37.731271"
   }
 ]

@@ -1173,33 +1173,33 @@
   "MARICO.NS": {
     "reliable_patterns": {
       "near_52w_high": {
-        "wins": 0.366,
-        "losses": 0.379,
+        "wins": 0.297,
+        "losses": 0.308,
         "reliability": 0.498,
         "last_seen": "2026-07-16"
       },
       "full_bullish_alignment": {
-        "wins": 1.791,
-        "losses": 1.423,
-        "reliability": 0.557,
-        "last_seen": "2026-08-14"
+        "wins": 1.72,
+        "losses": 2.367,
+        "reliability": 0.421,
+        "last_seen": "2026-08-21"
       },
       "adx_strong_trend_up": {
-        "wins": 1.791,
-        "losses": 1.423,
-        "reliability": 0.557,
-        "last_seen": "2026-08-14"
+        "wins": 1.72,
+        "losses": 2.367,
+        "reliability": 0.421,
+        "last_seen": "2026-08-21"
       },
       "stoch_rsi_overbought_reversal": {
-        "wins": 0.354,
+        "wins": 0.278,
         "losses": 0.0,
-        "reliability": 0.559,
+        "reliability": 0.546,
         "last_seen": "2026-07-10"
       },
       "bb_upper_rejection": {
-        "wins": 0.354,
+        "wins": 0.278,
         "losses": 0.0,
-        "reliability": 0.559,
+        "reliability": 0.546,
         "last_seen": "2026-07-10"
       },
       "pivot_s1_breakdown": {
@@ -1210,15 +1210,15 @@
       },
       "stoch_rsi_oversold_reversal": {
         "wins": 0.0,
-        "losses": 0.379,
-        "reliability": 0.437,
+        "losses": 0.308,
+        "reliability": 0.449,
         "last_seen": "2026-07-16"
       },
       "supertrend_bullish": {
-        "wins": 0.944,
-        "losses": 0.423,
-        "reliability": 0.587,
-        "last_seen": "2026-08-04"
+        "wins": 0.856,
+        "losses": 1.383,
+        "reliability": 0.412,
+        "last_seen": "2026-08-21"
       },
       "rsi_bearish_divergence": {
         "wins": 0.0,
@@ -1228,26 +1228,26 @@
       },
       "outside_bar": {
         "wins": 0.0,
-        "losses": 0.379,
-        "reliability": 0.437,
+        "losses": 0.308,
+        "reliability": 0.449,
         "last_seen": "2026-07-16"
       },
       "three_black_crows": {
-        "wins": 0.406,
+        "wins": 0.341,
         "losses": 0.0,
-        "reliability": 0.568,
+        "reliability": 0.557,
         "last_seen": "2026-07-22"
       },
       "pivot_s1_bounce": {
-        "wins": 0.944,
+        "wins": 0.856,
         "losses": 0.0,
-        "reliability": 0.657,
+        "reliability": 0.643,
         "last_seen": "2026-08-04"
       },
       "tweezer_bottom": {
-        "wins": 0.944,
+        "wins": 0.856,
         "losses": 0.0,
-        "reliability": 0.657,
+        "reliability": 0.643,
         "last_seen": "2026-08-04"
       },
       "pivot_point_test": {
@@ -1279,19 +1279,31 @@
         "losses": 1.0,
         "reliability": 0.333,
         "last_seen": "2026-08-14"
+      },
+      "morning_star": {
+        "wins": 0.0,
+        "losses": 1.0,
+        "reliability": 0.333,
+        "last_seen": "2026-08-21"
+      },
+      "strong_bullish_marubozu": {
+        "wins": 0.0,
+        "losses": 1.0,
+        "reliability": 0.333,
+        "last_seen": "2026-08-21"
       }
     },
     "preferred_style": "swing",
     "swing_wins": 1,
-    "swing_losses": 1,
+    "swing_losses": 2,
     "intraday_wins": 0,
     "intraday_losses": 0,
     "long_term_wins": 0,
     "long_term_losses": 0,
-    "atr_stop_hits": 0,
+    "atr_stop_hits": 1,
     "atr_target_hits": 0,
     "atr_multiplier": 1.5,
-    "last_updated": "2026-08-14",
+    "last_updated": "2026-08-21",
     "attribution": {
       "by_pattern": {
         "full_bullish_alignment": {
@@ -3006,6 +3018,40 @@
           "losses": 1,
           "total": 1
         }
+      }
+    }
+  },
+  "__GLOBAL__": {
+    "patterns": {
+      "full_bullish_alignment": {
+        "wins": 0.0,
+        "losses": 1.0,
+        "reliability": 0.375,
+        "last_seen": "2026-08-21"
+      },
+      "adx_strong_trend_up": {
+        "wins": 0.0,
+        "losses": 1.0,
+        "reliability": 0.375,
+        "last_seen": "2026-08-21"
+      },
+      "supertrend_bullish": {
+        "wins": 0.0,
+        "losses": 1.0,
+        "reliability": 0.375,
+        "last_seen": "2026-08-21"
+      },
+      "morning_star": {
+        "wins": 0.0,
+        "losses": 1.0,
+        "reliability": 0.375,
+        "last_seen": "2026-08-21"
+      },
+      "strong_bullish_marubozu": {
+        "wins": 0.0,
+        "losses": 1.0,
+        "reliability": 0.375,
+        "last_seen": "2026-08-21"
       }
     }
   }

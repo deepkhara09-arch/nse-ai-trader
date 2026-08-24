@@ -1,113 +1,5 @@
 [
   {
-    "timestamp": "2026-07-23T04:05:48.245032",
-    "date": "2026-07-23",
-    "ticker": "JSWSTEEL.NS",
-    "session": "morning",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 66.0,
-    "entry": 1272.4,
-    "stop_loss": 1233.23,
-    "target": 1350.73,
-    "reason": "paper morning",
-    "patterns": [
-      "supertrend_bullish",
-      "ema_golden_cross",
-      "pivot_r1_breakout",
-      "adx_ranging_market",
-      "three_white_soldiers",
-      "bb_upper_rejection"
-    ]
-  },
-  {
-    "timestamp": "2026-07-23T04:05:48.246016",
-    "date": "2026-07-23",
-    "ticker": "POWERGRID.NS",
-    "session": "morning",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 68.6,
-    "entry": 289.35,
-    "stop_loss": 281.96,
-    "target": 304.14,
-    "reason": "paper morning",
-    "patterns": [
-      "rsi_bearish_divergence",
-      "engulfing_bullish",
-      "tweezer_bottom",
-      "full_bearish_alignment",
-      "supertrend_bullish",
-      "adx_ranging_market"
-    ]
-  },
-  {
-    "timestamp": "2026-07-23T04:05:48.246618",
-    "date": "2026-07-23",
-    "ticker": "NHPC.NS",
-    "session": "morning",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 88.4,
-    "entry": 80.98,
-    "stop_loss": 78.56,
-    "target": 85.81,
-    "reason": "paper morning",
-    "patterns": [
-      "full_bullish_alignment",
-      "pivot_point_test",
-      "supertrend_bullish",
-      "momentum_continuation",
-      "piercing_line"
-    ]
-  },
-  {
-    "timestamp": "2026-07-23T06:16:04.669325",
-    "date": "2026-07-23",
-    "ticker": "MARICO.NS",
-    "session": "midday",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 95,
-    "entry": 856.45,
-    "stop_loss": 830.96,
-    "target": 907.44,
-    "reason": "paper midday",
-    "patterns": [
-      "outside_bar",
-      "full_bullish_alignment",
-      "momentum_continuation",
-      "supertrend_bullish",
-      "near_52w_high",
-      "tweezer_bottom",
-      "macd_bullish_crossover",
-      "adx_strong_trend_up",
-      "rsi_bearish_divergence",
-      "engulfing_bullish",
-      "pivot_point_test",
-      "bb_upper_rejection"
-    ]
-  },
-  {
-    "timestamp": "2026-07-23T06:16:04.670711",
-    "date": "2026-07-23",
-    "ticker": "ICICIBANK.NS",
-    "session": "midday",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 67.6,
-    "entry": 1434.4,
-    "stop_loss": 1395.14,
-    "target": 1512.91,
-    "reason": "paper midday",
-    "patterns": [
-      "strong_bearish_marubozu",
-      "full_bullish_alignment",
-      "pivot_s1_breakdown",
-      "adx_strong_trend_up"
-    ]
-  },
-  {
     "timestamp": "2026-07-23T06:16:04.672215",
     "date": "2026-07-23",
     "ticker": "PIDILITIND.NS",
@@ -21281,6 +21173,115 @@
       "supertrend_bullish",
       "full_bullish_alignment",
       "rsi_bearish_divergence"
+    ]
+  },
+  {
+    "timestamp": "2026-08-24T06:16:00.824435",
+    "date": "2026-08-24",
+    "ticker": "ABCAPITAL.NS",
+    "session": "midday",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 51.8,
+    "entry": 411.25,
+    "stop_loss": 397.47,
+    "target": 438.81,
+    "reason": "paper midday",
+    "patterns": [
+      "rsi_bearish_divergence",
+      "supertrend_bullish",
+      "stoch_rsi_oversold_reversal",
+      "full_bullish_alignment",
+      "adx_ranging_market"
+    ]
+  },
+  {
+    "timestamp": "2026-08-24T06:16:00.828544",
+    "date": "2026-08-24",
+    "ticker": "SIEMENS.NS",
+    "session": "midday",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 95,
+    "entry": 4063.7,
+    "stop_loss": 3919.36,
+    "target": 4352.39,
+    "reason": "paper midday",
+    "patterns": [
+      "near_52w_high",
+      "rsi_bearish_divergence",
+      "adx_strong_trend_up",
+      "supertrend_bullish",
+      "stoch_rsi_oversold_reversal",
+      "full_bullish_alignment",
+      "outside_bar",
+      "tweezer_bottom"
+    ]
+  },
+  {
+    "timestamp": "2026-08-24T06:16:00.829493",
+    "date": "2026-08-24",
+    "ticker": "SHRIRAMFIN.NS",
+    "session": "midday",
+    "action": "SELL",
+    "signal": "SELL",
+    "confidence": 42.5,
+    "entry": 1118.7,
+    "stop_loss": 1154.59,
+    "target": 1046.91,
+    "reason": "paper midday",
+    "patterns": [
+      "rsi_bearish_divergence",
+      "engulfing_bearish",
+      "strong_bearish_marubozu",
+      "pivot_s1_breakdown",
+      "full_bullish_alignment",
+      "gap_up_reversal"
+    ]
+  },
+  {
+    "timestamp": "2026-08-24T06:16:00.831024",
+    "date": "2026-08-24",
+    "ticker": "HINDALCO.NS",
+    "session": "midday",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 95,
+    "entry": 1052.7,
+    "stop_loss": 1011.34,
+    "target": 1135.41,
+    "reason": "paper midday",
+    "patterns": [
+      "engulfing_bullish",
+      "adx_strong_trend_up",
+      "supertrend_bullish",
+      "inside_bar",
+      "stoch_rsi_oversold_reversal",
+      "macd_bearish_crossover",
+      "full_bullish_alignment"
+    ]
+  },
+  {
+    "timestamp": "2026-08-24T06:16:00.831946",
+    "date": "2026-08-24",
+    "ticker": "GRASIM.NS",
+    "session": "midday",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 95,
+    "entry": 3285.3,
+    "stop_loss": 3152.07,
+    "target": 3551.77,
+    "reason": "paper midday",
+    "patterns": [
+      "pivot_s1_bounce",
+      "rsi_bearish_divergence",
+      "adx_strong_trend_up",
+      "momentum_continuation",
+      "pivot_point_test",
+      "supertrend_bullish",
+      "stoch_rsi_oversold_reversal",
+      "full_bullish_alignment"
     ]
   }
 ]

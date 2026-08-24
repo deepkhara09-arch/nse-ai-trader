@@ -5288,5 +5288,25 @@
     "ts": "2026-08-24T04:05:45.280784",
     "detail": "Dropped \u2014 no longer meets threshold (was 82/100)",
     "confidence": 0
+  },
+  {
+    "type": "updated",
+    "ticker": "HINDALCO.NS",
+    "nse_code": "HINDALCO",
+    "signal": "BUY",
+    "date": "2026-08-24",
+    "ts": "2026-08-24T06:16:00.954746",
+    "detail": "Target 1 moved \u20b91113.73 \u2192 \u20b91121.63",
+    "confidence": 72.0
+  },
+  {
+    "type": "updated",
+    "ticker": "SIEMENS.NS",
+    "nse_code": "SIEMENS",
+    "signal": "BUY",
+    "date": "2026-08-24",
+    "ts": "2026-08-24T06:16:00.954746",
+    "detail": "Stop loss moved \u20b93868.80 \u2192 \u20b93968.38 | Target 1 moved \u20b94233.30 \u2192 \u20b94304.27",
+    "confidence": 67.8
   }
 ]

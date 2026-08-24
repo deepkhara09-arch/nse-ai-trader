@@ -1560,10 +1560,64 @@
     "atr_multiplier": 1.5,
     "last_updated": "2026-08-24",
     "attribution": {
-      "by_pattern": {},
-      "by_session": {},
-      "by_mood": {},
-      "by_style": {}
+      "by_pattern": {
+        "rsi_bullish_divergence": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "full_bullish_alignment": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "adx_strong_trend_up": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "pivot_point_test": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "doji": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "pivot_s1_breakdown": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "dragonfly_doji": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        }
+      },
+      "by_session": {
+        "morning": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        }
+      },
+      "by_mood": {
+        "neutral": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        }
+      },
+      "by_style": {
+        "swing": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        }
+      }
     }
   },
   "HOMEFIRST.NS": {
@@ -3236,6 +3290,61 @@
     "atr_stop_hits": 1,
     "atr_target_hits": 0,
     "atr_multiplier": 1.5,
-    "last_updated": "2026-08-24"
+    "last_updated": "2026-08-24",
+    "attribution": {
+      "by_pattern": {
+        "pivot_s1_breakdown": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "macd_bearish_crossover": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "full_bearish_alignment": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "pivot_point_test": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "three_black_crows": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "bb_lower_bounce": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        }
+      },
+      "by_session": {
+        "morning": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        }
+      },
+      "by_mood": {
+        "neutral": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        }
+      },
+      "by_style": {
+        "swing": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        }
+      }
+    }
   }
 }

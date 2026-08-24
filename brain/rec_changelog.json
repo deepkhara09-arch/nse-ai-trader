@@ -5338,5 +5338,45 @@
     "ts": "2026-08-24T09:27:10.626299",
     "detail": "Dropped \u2014 no longer meets threshold (was 68/100)",
     "confidence": 0
+  },
+  {
+    "type": "new",
+    "ticker": "GRASIM.NS",
+    "nse_code": "GRASIM",
+    "signal": "BUY",
+    "date": "2026-08-24",
+    "ts": "2026-08-24T10:12:16.244410",
+    "detail": "New BUY recommendation \u2014 confidence 76/100",
+    "confidence": 76.1
+  },
+  {
+    "type": "updated",
+    "ticker": "PIDILITIND.NS",
+    "nse_code": "PIDILITIND",
+    "signal": "BUY",
+    "date": "2026-08-24",
+    "ts": "2026-08-24T10:12:16.244410",
+    "detail": "Confidence \u25b29 (89 \u2192 98)",
+    "confidence": 98.2
+  },
+  {
+    "type": "updated",
+    "ticker": "SIEMENS.NS",
+    "nse_code": "SIEMENS",
+    "signal": "BUY",
+    "date": "2026-08-24",
+    "ts": "2026-08-24T10:12:16.244410",
+    "detail": "Confidence \u25b210 (68 \u2192 78) | Rank \u25bc2 (#8 \u2192 #10)",
+    "confidence": 78.3
+  },
+  {
+    "type": "updated",
+    "ticker": "HINDALCO.NS",
+    "nse_code": "HINDALCO",
+    "signal": "BUY",
+    "date": "2026-08-24",
+    "ts": "2026-08-24T10:12:16.244410",
+    "detail": "Confidence \u25b24 (72 \u2192 76)",
+    "confidence": 76.1
   }
 ]

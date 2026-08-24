@@ -3,10 +3,10 @@
     "ticker": "PIDILITIND.NS",
     "nse_code": "PIDILITIND",
     "company_name": "Pidilite Industries",
-    "date": "2026-08-21",
-    "generated_at": "2026-08-21 10:12 UTC",
+    "date": "2026-08-24",
+    "generated_at": "2026-08-24 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -40,7 +40,7 @@
     "pattern_score": 8.5,
     "confluence_bonus": 10,
     "paper_bonus": 5.0,
-    "success_probability": 0.655,
+    "success_probability": 0.652,
     "base_success_prob": 0.733,
     "profit_probability": 0.312,
     "composite_score": 62.37,
@@ -57,9 +57,9 @@
       "regime"
     ],
     "backtest_tested": true,
-    "backtest_hit_5d": 0.472,
-    "backtest_hit_10d": 0.434,
-    "backtest_sample": 53,
+    "backtest_hit_5d": 0.463,
+    "backtest_hit_10d": 0.426,
+    "backtest_sample": 54,
     "hist_long_trend": "strong_uptrend",
     "hist_52w_position": 90.3,
     "hist_personality": "mean_reverter",
@@ -100,17 +100,17 @@
       "Latest news: 'Rising raw material costs may weigh on Pidilite's near-term margins - '",
       "Paper trade validation: 3 trades, 100% win rate, \u20b9+68/trade expectancy",
       "Confluence: 6 independent signal families agree (trend, volume, pattern, news, fundamentals, regime)",
-      "History backtest: this kind of BUY setup worked 47% of the time over ~1 week on this stock (sample: 53)"
+      "History backtest: this kind of BUY setup worked 46% of the time over ~1 week on this stock (sample: 54)"
     ],
     "patterns_seen": [
-      "rsi_bullish_divergence",
-      "full_bullish_alignment",
       "pivot_point_test",
       "pivot_s1_breakdown",
+      "full_bullish_alignment",
       "spinning_top",
-      "inside_bar",
+      "rsi_bullish_divergence",
       "low_volume_drift",
-      "doji"
+      "doji",
+      "inside_bar"
     ],
     "reliable_patterns": [
       "full_bullish_alignment",
@@ -141,8 +141,6 @@
     "paper_pnl": 205.17,
     "paper_expectancy": 68.39,
     "market_mood": "neutral",
-    "market_warning": [
-      "Nifty choppy intraday \u2014 wait for cleaner setups"
-    ]
+    "market_warning": []
   }
 ]

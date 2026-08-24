@@ -5318,5 +5318,25 @@
     "ts": "2026-08-24T07:45:45.135847",
     "detail": "Confidence \u25bc4 (72 \u2192 68) | Target 1 moved \u20b93507.36 \u2192 \u20b93527.80",
     "confidence": 68.3
+  },
+  {
+    "type": "new",
+    "ticker": "PIDILITIND.NS",
+    "nse_code": "PIDILITIND",
+    "signal": "BUY",
+    "date": "2026-08-24",
+    "ts": "2026-08-24T09:27:10.626299",
+    "detail": "New BUY recommendation \u2014 confidence 89/100",
+    "confidence": 88.8
+  },
+  {
+    "type": "removed",
+    "ticker": "GRASIM.NS",
+    "nse_code": "GRASIM",
+    "signal": "BUY",
+    "date": "2026-08-24",
+    "ts": "2026-08-24T09:27:10.626299",
+    "detail": "Dropped \u2014 no longer meets threshold (was 68/100)",
+    "confidence": 0
   }
 ]

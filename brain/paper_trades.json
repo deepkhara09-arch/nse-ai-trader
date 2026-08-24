@@ -38,8 +38,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "RSI=68 elevated"
       ],
-      "current_price": 4078.2,
-      "unrealized_pnl": 118.5,
+      "current_price": 4094.0,
+      "unrealized_pnl": 134.3,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -49,7 +49,7 @@
         "regime": "choppy"
       },
       "view_hist": [
-        0,
+        1,
         1,
         1,
         1
@@ -96,8 +96,8 @@
         "\u26a0 Sector momentum -0.30 \u2014 buying into a falling sector needs extra conviction",
         "MACD histogram negative"
       ],
-      "current_price": 172.72,
-      "unrealized_pnl": 14.85,
+      "current_price": 172.23,
+      "unrealized_pnl": -7.2,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -147,8 +147,8 @@
         "\u2713 Daily setup aligned with the higher-timeframe trend",
         "MACD histogram negative"
       ],
-      "current_price": 410.15,
-      "unrealized_pnl": 11.25,
+      "current_price": 411.25,
+      "unrealized_pnl": 27.75,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -204,8 +204,8 @@
         "\u2713 Daily setup aligned with the higher-timeframe trend",
         "MACD histogram negative"
       ],
-      "current_price": 1049.5,
-      "unrealized_pnl": 32.9,
+      "current_price": 1051.05,
+      "unrealized_pnl": 43.75,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -221,6 +221,7 @@
         "hist_long_trend": "strong_uptrend"
       },
       "view_hist": [
+        1,
         1,
         1
       ]
@@ -265,8 +266,8 @@
         "\u2713 Daily setup aligned with the higher-timeframe trend",
         "RSI bearish divergence \u2014 price higher but RSI lower"
       ],
-      "current_price": 3293.4,
-      "unrealized_pnl": 16.2,
+      "current_price": 3275.1,
+      "unrealized_pnl": -20.4,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -282,7 +283,8 @@
         "hist_long_trend": "strong_uptrend"
       },
       "view_hist": [
-        1
+        1,
+        0
       ]
     },
     {
@@ -317,8 +319,8 @@
         "Gap up fade \u2014 selling into strength",
         "\u26a0 Daily sell fights the higher-timeframe uptrend \u2014 needs extra conviction"
       ],
-      "current_price": 1117.9,
-      "unrealized_pnl": 0.0,
+      "current_price": 1114.0,
+      "unrealized_pnl": 15.6,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -332,7 +334,10 @@
         "mtf_alignment": "conflict",
         "opposing_ratio": 0.35,
         "hist_long_trend": "strong_uptrend"
-      }
+      },
+      "view_hist": [
+        0
+      ]
     }
   ],
   "closed_trades": [

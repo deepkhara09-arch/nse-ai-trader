@@ -1,102 +1,102 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of engulfing_bullish, supertrend_bullish, adx_strong_trend_up mean for a swing trade on HINDALCO? Current RSI=59, MACD hist=-0.6071, Vol=0.5x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of adx_ranging_market, pivot_point_test mean for a swing trade on ABCAPITAL? Current RSI=45, MACD hist=-0.5373, Vol=0.5x average. Signal is BUY.",
+    "context": {
+      "ticker": "ABCAPITAL.NS",
+      "signal": "BUY",
+      "patterns": "adx_ranging_market, pivot_point_test",
+      "rsi": 44.5
+    },
+    "queued_at": "2026-08-25T04:05:51.681844"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of macd_bullish_crossover, full_bullish_alignment, morning_star mean for a swing trade on HINDALCO? Current RSI=59, MACD hist=+0.1464, Vol=0.8x average. Signal is BUY.",
     "context": {
       "ticker": "HINDALCO.NS",
       "signal": "BUY",
-      "patterns": "engulfing_bullish, supertrend_bullish, adx_strong_trend_up",
-      "rsi": 58.7
+      "patterns": "macd_bullish_crossover, full_bullish_alignment, morning_star",
+      "rsi": 58.6
     },
-    "queued_at": "2026-08-24T10:12:16.235393"
+    "queued_at": "2026-08-25T04:05:51.682856"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of momentum_continuation, pivot_point_test, adx_strong_trend_up mean for a swing trade on GRASIM? Current RSI=55, MACD hist=+2.2951, Vol=1.6x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of momentum_continuation, adx_strong_trend_up, pivot_point_test mean for a swing trade on GRASIM? Current RSI=55, MACD hist=+2.2951, Vol=1.6x average. Signal is BUY.",
     "context": {
       "ticker": "GRASIM.NS",
       "signal": "BUY",
-      "patterns": "momentum_continuation, pivot_point_test, adx_strong_trend_up",
+      "patterns": "momentum_continuation, adx_strong_trend_up, pivot_point_test",
       "rsi": 54.9
     },
-    "queued_at": "2026-08-24T10:12:16.239027"
+    "queued_at": "2026-08-25T04:05:51.683845"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of pivot_s1_breakdown, adx_strong_trend_up, macd_bearish_crossover mean for a swing trade on UNIONBANK? Current RSI=66, MACD hist=-0.0132, Vol=0.6x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_up, spinning_top, low_volume_drift mean for a swing trade on UNIONBANK? Current RSI=66, MACD hist=-0.2640, Vol=0.4x average. Signal is BUY.",
     "context": {
       "ticker": "UNIONBANK.NS",
       "signal": "BUY",
-      "patterns": "pivot_s1_breakdown, adx_strong_trend_up, macd_bearish_crossover",
-      "rsi": 66.3
+      "patterns": "adx_strong_trend_up, spinning_top, low_volume_drift",
+      "rsi": 66.4
     },
-    "queued_at": "2026-08-25T03:05:46.616154"
+    "queued_at": "2026-08-25T04:05:51.801382"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of pivot_point_test, supertrend_bullish, outside_bar mean for a swing trade on CIPLA? Current RSI=32, MACD hist=-5.0148, Vol=0.8x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of adx_ranging_market, pivot_point_test mean for a swing trade on ABCAPITAL? Current RSI=45, MACD hist=-0.5373, Vol=0.5x average. Signal is BUY.",
     "context": {
-      "ticker": "CIPLA.NS",
+      "ticker": "ABCAPITAL.NS",
       "signal": "BUY",
-      "patterns": "pivot_point_test, supertrend_bullish, outside_bar",
-      "rsi": 32.2
+      "patterns": "adx_ranging_market, pivot_point_test",
+      "rsi": 44.5
     },
-    "queued_at": "2026-08-25T03:05:46.621914"
+    "queued_at": "2026-08-25T04:05:51.802519"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of adx_ranging_market, morning_star mean for a swing trade on GAIL? Current RSI=45, MACD hist=-0.5052, Vol=0.5x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of bb_midline_support, adx_ranging_market mean for a swing trade on PIDILITIND? Current RSI=59, MACD hist=-6.0125, Vol=0.5x average. Signal is BUY.",
     "context": {
-      "ticker": "GAIL.NS",
+      "ticker": "PIDILITIND.NS",
       "signal": "BUY",
-      "patterns": "adx_ranging_market, morning_star",
-      "rsi": 44.6
+      "patterns": "bb_midline_support, adx_ranging_market",
+      "rsi": 58.8
     },
-    "queued_at": "2026-08-25T03:05:46.622950"
+    "queued_at": "2026-08-25T04:05:51.803551"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of rsi_bearish_divergence, outside_bar, stoch_rsi_oversold_reversal mean for a swing trade on SIEMENS? Current RSI=52, MACD hist=-12.8840, Vol=0.9x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of volume_breakout_bullish, pivot_r2_breakout, strong_bullish_marubozu mean for a swing trade on SIEMENS? Current RSI=59, MACD hist=-1.5763, Vol=2.9x average. Signal is BUY.",
     "context": {
       "ticker": "SIEMENS.NS",
       "signal": "BUY",
-      "patterns": "rsi_bearish_divergence, outside_bar, stoch_rsi_oversold_reversal",
-      "rsi": 52.0
+      "patterns": "volume_breakout_bullish, pivot_r2_breakout, strong_bullish_marubozu",
+      "rsi": 59.5
     },
-    "queued_at": "2026-08-25T03:05:46.624002"
+    "queued_at": "2026-08-25T04:05:51.808934"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of pivot_s1_breakdown, gap_up_reversal, full_bullish_alignment mean for a swing trade on SHRIRAMFIN? Current RSI=60, MACD hist=-1.4947, Vol=0.5x average. Signal is SELL.",
-    "context": {
-      "ticker": "SHRIRAMFIN.NS",
-      "signal": "SELL",
-      "patterns": "pivot_s1_breakdown, gap_up_reversal, full_bullish_alignment",
-      "rsi": 60.4
-    },
-    "queued_at": "2026-08-25T03:05:46.627561"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of adx_ranging_market, low_volume_drift, pivot_point_test mean for a swing trade on ASIANPAINT? Current RSI=19, MACD hist=-16.0737, Vol=0.3x average. Signal is BUY.",
-    "context": {
-      "ticker": "ASIANPAINT.NS",
-      "signal": "BUY",
-      "patterns": "adx_ranging_market, low_volume_drift, pivot_point_test",
-      "rsi": 19.0
-    },
-    "queued_at": "2026-08-25T03:05:46.628583"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of macd_bearish_crossover, adx_strong_trend_up, supertrend_bullish mean for a swing trade on HINDALCO? Current RSI=59, MACD hist=-0.6071, Vol=0.5x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of macd_bullish_crossover, full_bullish_alignment, morning_star mean for a swing trade on HINDALCO? Current RSI=59, MACD hist=+0.1464, Vol=0.8x average. Signal is BUY.",
     "context": {
       "ticker": "HINDALCO.NS",
       "signal": "BUY",
-      "patterns": "macd_bearish_crossover, adx_strong_trend_up, supertrend_bullish",
-      "rsi": 58.7
+      "patterns": "macd_bullish_crossover, full_bullish_alignment, morning_star",
+      "rsi": 58.6
     },
-    "queued_at": "2026-08-25T03:05:46.629661"
+    "queued_at": "2026-08-25T04:05:51.813964"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of rsi_bearish_divergence, adx_strong_trend_up, pivot_point_test mean for a swing trade on GRASIM? Current RSI=55, MACD hist=+2.2951, Vol=1.6x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of momentum_continuation, adx_strong_trend_up, pivot_point_test mean for a swing trade on GRASIM? Current RSI=55, MACD hist=+2.2951, Vol=1.6x average. Signal is BUY.",
     "context": {
       "ticker": "GRASIM.NS",
       "signal": "BUY",
-      "patterns": "rsi_bearish_divergence, adx_strong_trend_up, pivot_point_test",
+      "patterns": "momentum_continuation, adx_strong_trend_up, pivot_point_test",
       "rsi": 54.9
     },
-    "queued_at": "2026-08-25T03:05:46.633352"
+    "queued_at": "2026-08-25T04:05:51.817625"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of full_bullish_alignment, supertrend_bullish, stoch_rsi_oversold_reversal mean for a swing trade on LT? Current RSI=59, MACD hist=+7.6689, Vol=0.8x average. Signal is BUY.",
+    "context": {
+      "ticker": "LT.NS",
+      "signal": "BUY",
+      "patterns": "full_bullish_alignment, supertrend_bullish, stoch_rsi_oversold_reversal",
+      "rsi": 58.8
+    },
+    "queued_at": "2026-08-25T04:05:51.819394"
   }
 ]

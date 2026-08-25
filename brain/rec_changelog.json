@@ -5428,5 +5428,45 @@
     "ts": "2026-08-25T07:45:45.263710",
     "detail": "Confidence \u25b24 (75 \u2192 79)",
     "confidence": 78.8
+  },
+  {
+    "type": "new",
+    "ticker": "GRASIM.NS",
+    "nse_code": "GRASIM",
+    "signal": "BUY",
+    "date": "2026-08-25",
+    "ts": "2026-08-25T09:45:49.186439",
+    "detail": "New BUY recommendation \u2014 confidence 72/100",
+    "confidence": 72.1
+  },
+  {
+    "type": "removed",
+    "ticker": "PIDILITIND.NS",
+    "nse_code": "PIDILITIND",
+    "signal": "BUY",
+    "date": "2026-08-25",
+    "ts": "2026-08-25T09:45:49.186439",
+    "detail": "Dropped \u2014 no longer meets threshold (was 79/100)",
+    "confidence": 0
+  },
+  {
+    "type": "removed",
+    "ticker": "HINDALCO.NS",
+    "nse_code": "HINDALCO",
+    "signal": "BUY",
+    "date": "2026-08-25",
+    "ts": "2026-08-25T09:45:49.186439",
+    "detail": "Dropped \u2014 no longer meets threshold (was 78/100)",
+    "confidence": 0
+  },
+  {
+    "type": "updated",
+    "ticker": "SIEMENS.NS",
+    "nse_code": "SIEMENS",
+    "signal": "BUY",
+    "date": "2026-08-25",
+    "ts": "2026-08-25T09:45:49.186439",
+    "detail": "Rank \u25bc1 (#10 \u2192 #11) | Target 1 moved \u20b94345.41 \u2192 \u20b94317.91",
+    "confidence": 66.5
   }
 ]

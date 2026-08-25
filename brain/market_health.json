@@ -1,27 +1,27 @@
 {
-  "date": "2026-08-24",
-  "session": "preclose",
+  "date": "2026-08-25",
+  "session": "preopen",
   "nifty": {
     "symbol": "^NSEI",
-    "value": 24252.0,
-    "day_change_pct": 0.08,
+    "value": 24219.05,
+    "day_change_pct": -0.14,
     "trend_5d": "sideways",
     "trend_20d": "up",
-    "ath_pct_60d": -2.11
+    "ath_pct_60d": -2.24
   },
   "vix": {
-    "value": 11.2,
+    "value": 11.53,
     "level": "normal",
-    "percentile_30d": 3.0,
-    "avg_30d": 12.3
+    "percentile_30d": 23.0,
+    "avg_30d": 12.24
   },
   "bank_nifty": {
     "symbol": "^NSEBANK",
-    "value": 57761.95,
-    "day_change_pct": 0.46,
+    "value": 57525.95,
+    "day_change_pct": -0.41,
     "trend_5d": "sideways",
     "trend_20d": "up",
-    "ath_pct_60d": -1.61,
+    "ath_pct_60d": -1.83,
     "diverging": false
   },
   "sectors": {
@@ -35,11 +35,11 @@
     },
     "Pharma": {
       "symbol": "PHARMABEES.NS",
-      "value": 27.08,
-      "day_change_pct": -0.4,
+      "value": 27.07,
+      "day_change_pct": -0.04,
       "trend_5d": "sideways",
       "trend_20d": "up",
-      "ath_pct_60d": -3.32
+      "ath_pct_60d": -3.36
     },
     "Bank": {
       "symbol": "BANKBEES.NS",
@@ -61,54 +61,54 @@
   ],
   "intraday_regime": "mixed",
   "macro": {
-    "date": "2026-08-24",
-    "session": "midday",
-    "generated_at": "2026-08-24T06:15:51.909710",
-    "global_score": -0.078,
-    "india_score": 0.0,
-    "overall_score": -0.043,
-    "mood": "neutral",
+    "date": "2026-08-25",
+    "session": "preopen",
+    "generated_at": "2026-08-25T03:05:44.641904",
+    "global_score": 0.074,
+    "india_score": 1.0,
+    "overall_score": 0.491,
+    "mood": "risk_on",
     "drivers": [
-      "Stock futures flat as U.S. and Canada appear headed for trade war",
-      "My son does not work, yet pays $500 for Affordable Care Act health insurance. Is that fair?",
-      "\u2018The market is obviously on fire\u2019: Should I take $1,000 from my brokerage account to pay off my car loan?",
-      "\u2018We are committed Christians\u2019: Our son and daughter-in-law cut us off over politics. Should we change our $3 million will?",
-      "We\u2019re in our 50s and have $1.5 million in traditional 401(k)s. Is it too early to start Roth conversions?",
-      "\u2018The estrangement isn\u2019t about politics\u2019: My daughter hasn\u2019t spoken to me for 4 years. Do I leave her a monthly annuity?",
       "\u2018She looked into COBRA\u2019: My friend was laid off and lost her health insurance. How can she find affordable coverage?",
-      "Nvidia is the beating heart of the AI boom and the stock market \u2014 which sets up a big test"
+      "My father-in-law passed away, leaving a house with tenants. Do I evict them?",
+      "\u2018My main goal is to help people\u2019: I\u2019m single, 74, with $10 million burning a hole in my pocket. What should I do?",
+      "Visa and Mastercard stocks hit fresh records, underscoring a resilient U.S. consumer",
+      "SpaceX plans to put Nvidia-powered AI satellites in orbit next year",
+      "Here\u2019s how overvalued the stock market really is",
+      "Bitcoin has beaten stocks and gold over six months. Now it\u2019s closing in on $80,000.",
+      "It\u2019s time to bet big on Nvidia\u2019s stock, says this analyst who thinks the market has it all wrong"
     ],
     "global_cues": {
       "dow": {
-        "last": 53277.01,
-        "chg_pct": 0.98
+        "last": 53417.16,
+        "chg_pct": 0.26
       },
       "nasdaq": {
-        "last": 26180.46,
-        "chg_pct": 0.43
+        "last": 25980.19,
+        "chg_pct": -0.76
       },
       "sp500": {
-        "last": 7674.37,
-        "chg_pct": 0.43
+        "last": 7652.86,
+        "chg_pct": -0.28
       },
       "nikkei": {
-        "last": 65565.32,
-        "chg_pct": -0.68
+        "last": 65598.68,
+        "chg_pct": 0.11
       },
       "crude": {
-        "last": 87.06,
-        "chg_pct": -0.88
+        "last": 85.55,
+        "chg_pct": 0.64
       },
       "usdinr": {
-        "last": 95.7,
-        "chg_pct": -0.08
+        "last": 95.74,
+        "chg_pct": 0.04
       },
       "gold": {
-        "last": 4624.1,
-        "chg_pct": 2.39
+        "last": 4683.7,
+        "chg_pct": 0.92
       }
     },
-    "summary": "Overall macro mood is neutral (-0.04). US Dow +1.0% overnight. Crude -0.9%. USD/INR -0.1%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
+    "summary": "Overall macro mood is risk-on (+0.49). US Dow +0.3% overnight. Crude +0.6%. USD/INR +0.0%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
       "Trade-war headlines spook global markets; IT & export names react most."
@@ -116,22 +116,17 @@
     "playbook_bias": "risk_off",
     "article_count": 60
   },
+  "macro_tailwind": true,
   "macro_risk_factor": 1.0,
   "fii_dii": {
-    "date": "2026-08-24",
-    "fii_net_cr": -542.71,
-    "dii_net_cr": 2124.14,
-    "combined_net_cr": 1581.43,
-    "signal": "inflow",
+    "date": "2026-08-25",
+    "fii_net_cr": 1181.66,
+    "dii_net_cr": 2493.41,
+    "combined_net_cr": 3675.07,
+    "signal": "strong_inflow",
     "ok": true,
     "error": "",
     "history": [
-      {
-        "date": "2026-07-14",
-        "fii": -3062.27,
-        "dii": 2171.7,
-        "combined": -890.57
-      },
       {
         "date": "2026-07-15",
         "fii": -739.69,
@@ -305,15 +300,22 @@
         "fii": -542.71,
         "dii": 2124.14,
         "combined": 1581.43
+      },
+      {
+        "date": "2026-08-25",
+        "fii": 1181.66,
+        "dii": 2493.41,
+        "combined": 3675.07
       }
     ]
   },
+  "flow_tailwind": true,
   "pcr": {
-    "date": "2026-08-24",
-    "pcr": 0.699,
+    "date": "2026-08-25",
+    "pcr": 0.695,
     "reading": "bearish_bias",
-    "total_pe_oi": 2423149,
-    "total_ce_oi": 3466939,
+    "total_pe_oi": 2357999,
+    "total_ce_oi": 3393209,
     "spot": 24219.05,
     "max_pain": 24200.0,
     "max_pain_dist_pct": 0.08,

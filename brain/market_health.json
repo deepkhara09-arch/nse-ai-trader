@@ -1,6 +1,6 @@
 {
   "date": "2026-08-25",
-  "session": "morning",
+  "session": "midday",
   "nifty": {
     "symbol": "^NSEI",
     "value": 24219.05,
@@ -62,11 +62,11 @@
   "intraday_regime": "mixed",
   "macro": {
     "date": "2026-08-25",
-    "session": "preopen",
-    "generated_at": "2026-08-25T03:05:44.641904",
-    "global_score": 0.074,
+    "session": "midday",
+    "generated_at": "2026-08-25T06:15:45.445368",
+    "global_score": 0.114,
     "india_score": 1.0,
-    "overall_score": 0.491,
+    "overall_score": 0.513,
     "mood": "risk_on",
     "drivers": [
       "\u2018She looked into COBRA\u2019: My friend was laid off and lost her health insurance. How can she find affordable coverage?",
@@ -92,23 +92,23 @@
         "chg_pct": -0.28
       },
       "nikkei": {
-        "last": 65598.68,
-        "chg_pct": 0.11
+        "last": 65788.18,
+        "chg_pct": 0.4
       },
       "crude": {
-        "last": 85.55,
-        "chg_pct": 0.64
+        "last": 85.01,
+        "chg_pct": -2.35
       },
       "usdinr": {
-        "last": 95.74,
-        "chg_pct": 0.04
+        "last": 95.7,
+        "chg_pct": -0.0
       },
       "gold": {
-        "last": 4683.7,
-        "chg_pct": 0.92
+        "last": 4640.8,
+        "chg_pct": 0.36
       }
     },
-    "summary": "Overall macro mood is risk-on (+0.49). US Dow +0.3% overnight. Crude +0.6%. USD/INR +0.0%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
+    "summary": "Overall macro mood is risk-on (+0.51). US Dow +0.3% overnight. Crude -2.4%. USD/INR -0.0%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
       "Trade-war headlines spook global markets; IT & export names react most."

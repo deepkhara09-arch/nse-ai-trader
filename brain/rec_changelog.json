@@ -5468,5 +5468,55 @@
     "ts": "2026-08-25T09:45:49.186439",
     "detail": "Rank \u25bc1 (#10 \u2192 #11) | Target 1 moved \u20b94345.41 \u2192 \u20b94317.91",
     "confidence": 66.5
+  },
+  {
+    "type": "new",
+    "ticker": "PIDILITIND.NS",
+    "nse_code": "PIDILITIND",
+    "signal": "BUY",
+    "date": "2026-08-25",
+    "ts": "2026-08-25T10:12:10.593367",
+    "detail": "New BUY recommendation \u2014 confidence 88/100",
+    "confidence": 87.7
+  },
+  {
+    "type": "new",
+    "ticker": "SHRIRAMFIN.NS",
+    "nse_code": "SHRIRAMFIN",
+    "signal": "BUY",
+    "date": "2026-08-25",
+    "ts": "2026-08-25T10:12:10.593367",
+    "detail": "New BUY recommendation \u2014 confidence 74/100",
+    "confidence": 73.6
+  },
+  {
+    "type": "new",
+    "ticker": "ASIANPAINT.NS",
+    "nse_code": "ASIANPAINT",
+    "signal": "BUY",
+    "date": "2026-08-25",
+    "ts": "2026-08-25T10:12:10.593367",
+    "detail": "New BUY recommendation \u2014 confidence 68/100",
+    "confidence": 67.7
+  },
+  {
+    "type": "removed",
+    "ticker": "GRASIM.NS",
+    "nse_code": "GRASIM",
+    "signal": "BUY",
+    "date": "2026-08-25",
+    "ts": "2026-08-25T10:12:10.593367",
+    "detail": "Dropped \u2014 no longer meets threshold (was 72/100)",
+    "confidence": 0
+  },
+  {
+    "type": "removed",
+    "ticker": "SIEMENS.NS",
+    "nse_code": "SIEMENS",
+    "signal": "BUY",
+    "date": "2026-08-25",
+    "ts": "2026-08-25T10:12:10.593367",
+    "detail": "Dropped \u2014 no longer meets threshold (was 66/100)",
+    "confidence": 0
   }
 ]

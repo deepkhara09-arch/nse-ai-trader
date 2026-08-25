@@ -38,8 +38,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "RSI=68 elevated"
       ],
-      "current_price": 4070.0,
-      "unrealized_pnl": 110.3,
+      "current_price": 4073.6,
+      "unrealized_pnl": 113.9,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -52,7 +52,7 @@
         1,
         1,
         1,
-        1
+        0
       ],
       "stale_tightened": true
     },
@@ -96,8 +96,8 @@
         "\u26a0 Sector momentum -0.30 \u2014 buying into a falling sector needs extra conviction",
         "MACD histogram negative"
       ],
-      "current_price": 174.0,
-      "unrealized_pnl": 72.45,
+      "current_price": 174.15,
+      "unrealized_pnl": 79.2,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -204,8 +204,8 @@
         "\u2713 Daily setup aligned with the higher-timeframe trend",
         "MACD histogram negative"
       ],
-      "current_price": 1046.6,
-      "unrealized_pnl": 12.6,
+      "current_price": 1046.5,
+      "unrealized_pnl": 11.9,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -223,7 +223,7 @@
       "view_hist": [
         1,
         1,
-        1,
+        0,
         0
       ]
     },
@@ -267,8 +267,8 @@
         "\u2713 Daily setup aligned with the higher-timeframe trend",
         "RSI bearish divergence \u2014 price higher but RSI lower"
       ],
-      "current_price": 3300.0,
-      "unrealized_pnl": 29.4,
+      "current_price": 3274.1,
+      "unrealized_pnl": -22.4,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -286,7 +286,7 @@
       "view_hist": [
         0,
         0,
-        0,
+        1,
         1
       ]
     },
@@ -322,8 +322,8 @@
         "Gap up fade \u2014 selling into strength",
         "\u26a0 Daily sell fights the higher-timeframe uptrend \u2014 needs extra conviction"
       ],
-      "current_price": 1136.0,
-      "unrealized_pnl": -72.4,
+      "current_price": 1137.0,
+      "unrealized_pnl": -76.4,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -340,7 +340,7 @@
       },
       "view_hist": [
         0,
-        0,
+        -1,
         -1,
         -1
       ]
@@ -2384,16 +2384,23 @@
       "capital": 62815.82,
       "open_positions": 6,
       "daily_pnl": -155.67
+    },
+    {
+      "date": "2026-08-25",
+      "portfolio_value": 99100.07,
+      "capital": 62815.82,
+      "open_positions": 6,
+      "daily_pnl": 0.0
     }
   ],
   "daily_pnl_today": 0.0,
-  "last_snapshot_date": "2026-08-24",
+  "last_snapshot_date": "2026-08-25",
   "lifetime_wins": 12,
   "lifetime_losses": 17,
   "lifetime_pnl": -970.14,
   "last_pnl_reset_date": "2026-08-25",
-  "max_drawdown_pct": 2.06,
-  "current_drawdown_pct": 1.84,
+  "max_drawdown_pct": 2.08,
+  "current_drawdown_pct": 2.08,
   "portfolio_peak": 101210.28,
-  "sessions_since_peak": 25
+  "sessions_since_peak": 26
 }

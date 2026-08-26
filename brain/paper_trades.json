@@ -38,8 +38,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "RSI=68 elevated"
       ],
-      "current_price": 4096.9,
-      "unrealized_pnl": 137.2,
+      "current_price": 4090.4,
+      "unrealized_pnl": 130.7,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -50,7 +50,7 @@
       },
       "view_hist": [
         1,
-        1,
+        0,
         0,
         0
       ],
@@ -96,8 +96,8 @@
         "\u26a0 Sector momentum -0.30 \u2014 buying into a falling sector needs extra conviction",
         "MACD histogram negative"
       ],
-      "current_price": 175.35,
-      "unrealized_pnl": 133.2,
+      "current_price": 174.65,
+      "unrealized_pnl": 101.7,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -147,8 +147,8 @@
         "\u2713 Daily setup aligned with the higher-timeframe trend",
         "MACD histogram negative"
       ],
-      "current_price": 414.1,
-      "unrealized_pnl": 70.5,
+      "current_price": 412.95,
+      "unrealized_pnl": 53.25,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -204,8 +204,8 @@
         "\u2713 Daily setup aligned with the higher-timeframe trend",
         "MACD histogram negative"
       ],
-      "current_price": 1049.5,
-      "unrealized_pnl": 32.9,
+      "current_price": 1045.45,
+      "unrealized_pnl": 4.55,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -221,7 +221,7 @@
         "hist_long_trend": "strong_uptrend"
       },
       "view_hist": [
-        1,
+        0,
         0,
         0,
         0
@@ -267,8 +267,8 @@
         "\u2713 Daily setup aligned with the higher-timeframe trend",
         "RSI bearish divergence \u2014 price higher but RSI lower"
       ],
-      "current_price": 3276.9,
-      "unrealized_pnl": -16.8,
+      "current_price": 3281.0,
+      "unrealized_pnl": -8.6,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -284,9 +284,9 @@
         "hist_long_trend": "strong_uptrend"
       },
       "view_hist": [
+        1,
+        1,
         0,
-        1,
-        1,
         0
       ]
     },
@@ -330,8 +330,8 @@
         "MACD histogram negative",
         "RSI bearish divergence \u2014 price higher but RSI lower"
       ],
-      "current_price": 1123.5,
-      "unrealized_pnl": 0.0,
+      "current_price": 1127.0,
+      "unrealized_pnl": 24.5,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -345,7 +345,10 @@
         "mtf_alignment": "aligned",
         "opposing_ratio": 0.23,
         "hist_long_trend": "strong_uptrend"
-      }
+      },
+      "view_hist": [
+        1
+      ]
     }
   ],
   "closed_trades": [

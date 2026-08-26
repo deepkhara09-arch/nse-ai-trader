@@ -3139,9 +3139,9 @@
     "patterns": {
       "full_bullish_alignment": {
         "wins": 0.0,
-        "losses": 2.966,
-        "reliability": 0.129,
-        "last_seen": "2026-08-24"
+        "losses": 3.932,
+        "reliability": 0.009,
+        "last_seen": "2026-08-26"
       },
       "adx_strong_trend_up": {
         "wins": 0.0,
@@ -3193,9 +3193,9 @@
       },
       "pivot_s1_breakdown": {
         "wins": 0.0,
-        "losses": 2.0,
-        "reliability": 0.25,
-        "last_seen": "2026-08-24"
+        "losses": 2.977,
+        "reliability": 0.128,
+        "last_seen": "2026-08-26"
       },
       "macd_bearish_crossover": {
         "wins": 0.0,
@@ -3238,6 +3238,30 @@
         "losses": 1.0,
         "reliability": 0.375,
         "last_seen": "2026-08-24"
+      },
+      "rsi_bearish_divergence": {
+        "wins": 0.0,
+        "losses": 1.0,
+        "reliability": 0.375,
+        "last_seen": "2026-08-26"
+      },
+      "strong_bearish_marubozu": {
+        "wins": 0.0,
+        "losses": 1.0,
+        "reliability": 0.375,
+        "last_seen": "2026-08-26"
+      },
+      "gap_up_reversal": {
+        "wins": 0.0,
+        "losses": 1.0,
+        "reliability": 0.375,
+        "last_seen": "2026-08-26"
+      },
+      "engulfing_bearish": {
+        "wins": 0.0,
+        "losses": 1.0,
+        "reliability": 0.375,
+        "last_seen": "2026-08-26"
       }
     }
   },
@@ -3346,5 +3370,56 @@
         }
       }
     }
+  },
+  "SHRIRAMFIN.NS": {
+    "reliable_patterns": {
+      "rsi_bearish_divergence": {
+        "wins": 0.0,
+        "losses": 1.0,
+        "reliability": 0.333,
+        "last_seen": "2026-08-26"
+      },
+      "pivot_s1_breakdown": {
+        "wins": 0.0,
+        "losses": 1.0,
+        "reliability": 0.333,
+        "last_seen": "2026-08-26"
+      },
+      "strong_bearish_marubozu": {
+        "wins": 0.0,
+        "losses": 1.0,
+        "reliability": 0.333,
+        "last_seen": "2026-08-26"
+      },
+      "full_bullish_alignment": {
+        "wins": 0.0,
+        "losses": 1.0,
+        "reliability": 0.333,
+        "last_seen": "2026-08-26"
+      },
+      "gap_up_reversal": {
+        "wins": 0.0,
+        "losses": 1.0,
+        "reliability": 0.333,
+        "last_seen": "2026-08-26"
+      },
+      "engulfing_bearish": {
+        "wins": 0.0,
+        "losses": 1.0,
+        "reliability": 0.333,
+        "last_seen": "2026-08-26"
+      }
+    },
+    "preferred_style": "swing",
+    "swing_wins": 0,
+    "swing_losses": 1,
+    "intraday_wins": 0,
+    "intraday_losses": 0,
+    "long_term_wins": 0,
+    "long_term_losses": 0,
+    "atr_stop_hits": 0,
+    "atr_target_hits": 0,
+    "atr_multiplier": 1.5,
+    "last_updated": "2026-08-26"
   }
 }

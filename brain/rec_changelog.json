@@ -5558,5 +5558,15 @@
     "ts": "2026-08-26T04:05:48.124468",
     "detail": "Rank \u25bc5 (#4 \u2192 #9) | Stop loss moved \u20b91100.17 \u2192 \u20b91087.60 | Target 1 moved \u20b91210.66 \u2192 \u20b91195.30",
     "confidence": 72.3
+  },
+  {
+    "type": "removed",
+    "ticker": "SHRIRAMFIN.NS",
+    "nse_code": "SHRIRAMFIN",
+    "signal": "BUY",
+    "date": "2026-08-26",
+    "ts": "2026-08-26T07:45:51.343750",
+    "detail": "Dropped \u2014 no longer meets threshold (was 72/100)",
+    "confidence": 0
   }
 ]

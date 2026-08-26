@@ -1,6 +1,6 @@
 {
   "date": "2026-08-26",
-  "session": "midday",
+  "session": "afternoon",
   "nifty": {
     "symbol": "^NSEI",
     "value": 24334.55,
@@ -58,11 +58,10 @@
       "ath_pct_60d": -0.89
     }
   },
-  "market_mood": "bearish",
+  "market_mood": "neutral",
   "trade_allowed": true,
   "warnings": [
-    "Narrow rally \u2014 only 1/4 sectors up. Fragile move.",
-    "Nifty choppy intraday \u2014 wait for cleaner setups"
+    "Narrow rally \u2014 only 1/4 sectors up. Fragile move."
   ],
   "leading_sectors": [
     "IT"
@@ -70,7 +69,7 @@
   "market_regime": "normal",
   "sector_breadth": 0.25,
   "lagging_sectors": [],
-  "intraday_regime": "choppy",
+  "intraday_regime": "mixed",
   "macro": {
     "date": "2026-08-26",
     "session": "midday",

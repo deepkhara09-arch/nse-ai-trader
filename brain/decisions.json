@@ -1,84 +1,5 @@
 [
   {
-    "timestamp": "2026-07-27T07:45:50.078395",
-    "date": "2026-07-27",
-    "ticker": "NESTLEIND.NS",
-    "session": "afternoon",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 66.2,
-    "entry": 1439.3,
-    "stop_loss": 1390.04,
-    "target": 1537.82,
-    "reason": "paper afternoon",
-    "patterns": [
-      "full_bullish_alignment",
-      "doji",
-      "shooting_star",
-      "momentum_continuation"
-    ]
-  },
-  {
-    "timestamp": "2026-07-27T07:45:50.078803",
-    "date": "2026-07-27",
-    "ticker": "ICICIBANK.NS",
-    "session": "afternoon",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 95,
-    "entry": 1438.5,
-    "stop_loss": 1398.84,
-    "target": 1517.83,
-    "reason": "paper afternoon",
-    "patterns": [
-      "stoch_rsi_oversold_reversal",
-      "adx_strong_trend_up",
-      "full_bullish_alignment",
-      "pivot_point_test",
-      "supertrend_bullish"
-    ]
-  },
-  {
-    "timestamp": "2026-07-27T07:45:50.079458",
-    "date": "2026-07-27",
-    "ticker": "UNIONBANK.NS",
-    "session": "afternoon",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 75.5,
-    "entry": 171.06,
-    "stop_loss": 162.01,
-    "target": 189.17,
-    "reason": "paper afternoon",
-    "patterns": [
-      "outside_bar",
-      "full_bullish_alignment",
-      "rsi_bullish_divergence",
-      "engulfing_bullish",
-      "adx_ranging_market",
-      "supertrend_bullish"
-    ]
-  },
-  {
-    "timestamp": "2026-07-27T07:45:50.079852",
-    "date": "2026-07-27",
-    "ticker": "ABCAPITAL.NS",
-    "session": "afternoon",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 81.8,
-    "entry": 398.2,
-    "stop_loss": 381.68,
-    "target": 431.23,
-    "reason": "paper afternoon",
-    "patterns": [
-      "stoch_rsi_oversold_reversal",
-      "full_bullish_alignment",
-      "supertrend_bullish",
-      "piercing_line"
-    ]
-  },
-  {
     "timestamp": "2026-07-27T07:45:50.080548",
     "date": "2026-07-27",
     "ticker": "PFC.NS",
@@ -21284,6 +21205,91 @@
       "adx_strong_trend_up",
       "full_bullish_alignment",
       "momentum_continuation"
+    ]
+  },
+  {
+    "timestamp": "2026-08-26T07:45:51.213201",
+    "date": "2026-08-26",
+    "ticker": "SBIN.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 74.7,
+    "entry": 1055.6,
+    "stop_loss": 1024.47,
+    "target": 1117.85,
+    "reason": "paper afternoon",
+    "patterns": [
+      "engulfing_bullish",
+      "tweezer_bottom",
+      "full_bullish_alignment",
+      "outside_bar",
+      "stoch_rsi_oversold_reversal",
+      "supertrend_bullish"
+    ]
+  },
+  {
+    "timestamp": "2026-08-26T07:45:51.216810",
+    "date": "2026-08-26",
+    "ticker": "SIEMENS.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 81.6,
+    "entry": 4046.0,
+    "stop_loss": 3899.99,
+    "target": 4338.03,
+    "reason": "paper afternoon",
+    "patterns": [
+      "pivot_point_test",
+      "near_52w_high",
+      "full_bullish_alignment",
+      "macd_bullish_crossover",
+      "adx_strong_trend_up"
+    ]
+  },
+  {
+    "timestamp": "2026-08-26T07:45:51.219938",
+    "date": "2026-08-26",
+    "ticker": "GRASIM.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 56.2,
+    "entry": 3271.3,
+    "stop_loss": 3146.84,
+    "target": 3520.22,
+    "reason": "paper afternoon",
+    "patterns": [
+      "stoch_rsi_overbought_reversal",
+      "engulfing_bearish",
+      "rsi_bullish_divergence",
+      "pivot_s1_breakdown",
+      "full_bullish_alignment",
+      "adx_strong_trend_up",
+      "inside_bar"
+    ]
+  },
+  {
+    "timestamp": "2026-08-26T07:45:51.223025",
+    "date": "2026-08-26",
+    "ticker": "NIACL.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 61.0,
+    "entry": 187.7,
+    "stop_loss": 179.99,
+    "target": 203.13,
+    "reason": "paper afternoon",
+    "patterns": [
+      "rsi_bearish_divergence",
+      "outside_bar",
+      "full_bullish_alignment",
+      "adx_strong_trend_up",
+      "stoch_rsi_oversold_reversal",
+      "momentum_continuation",
+      "supertrend_bullish"
     ]
   }
 ]

@@ -7,76 +7,6 @@
       "patterns": "stoch_rsi_oversold_reversal, supertrend_bullish, strong_bullish_marubozu",
       "rsi": 54.4
     },
-    "queued_at": "2026-08-26T06:15:52.291352"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of rsi_bullish_divergence, stoch_rsi_overbought_reversal, adx_strong_trend_up mean for a swing trade on GRASIM? Current RSI=66, MACD hist=+0.6149, Vol=1.6x average. Signal is BUY.",
-    "context": {
-      "ticker": "GRASIM.NS",
-      "signal": "BUY",
-      "patterns": "rsi_bullish_divergence, stoch_rsi_overbought_reversal, adx_strong_trend_up",
-      "rsi": 66.3
-    },
-    "queued_at": "2026-08-26T06:15:52.292841"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of stoch_rsi_oversold_reversal, supertrend_bullish, rsi_bearish_divergence mean for a swing trade on NIACL? Current RSI=57, MACD hist=+0.7025, Vol=0.8x average. Signal is BUY.",
-    "context": {
-      "ticker": "NIACL.NS",
-      "signal": "BUY",
-      "patterns": "stoch_rsi_oversold_reversal, supertrend_bullish, rsi_bearish_divergence",
-      "rsi": 56.7
-    },
-    "queued_at": "2026-08-26T06:15:52.294635"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of rsi_bullish_divergence, stoch_rsi_overbought_reversal, adx_strong_trend_up mean for a swing trade on GRASIM? Current RSI=66, MACD hist=+0.6149, Vol=1.6x average. Signal is BUY.",
-    "context": {
-      "ticker": "GRASIM.NS",
-      "signal": "BUY",
-      "patterns": "rsi_bullish_divergence, stoch_rsi_overbought_reversal, adx_strong_trend_up",
-      "rsi": 66.3
-    },
-    "queued_at": "2026-08-26T06:15:52.297389"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of stoch_rsi_oversold_reversal, supertrend_bullish, strong_bullish_marubozu mean for a swing trade on SHRIRAMFIN? Current RSI=54, MACD hist=-1.6314, Vol=0.6x average. Signal is BUY.",
-    "context": {
-      "ticker": "SHRIRAMFIN.NS",
-      "signal": "BUY",
-      "patterns": "stoch_rsi_oversold_reversal, supertrend_bullish, strong_bullish_marubozu",
-      "rsi": 54.4
-    },
-    "queued_at": "2026-08-26T06:15:52.297992"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of engulfing_bullish, outside_bar mean for a swing trade on SBIN? Current RSI=48, MACD hist=-3.7576, Vol=1.0x average. Signal is BUY.",
-    "context": {
-      "ticker": "SBIN.NS",
-      "signal": "BUY",
-      "patterns": "engulfing_bullish, outside_bar",
-      "rsi": 47.6
-    },
-    "queued_at": "2026-08-26T06:15:52.380323"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of adx_ranging_market, hammer, pivot_point_test mean for a swing trade on ABCAPITAL? Current RSI=39, MACD hist=-0.3618, Vol=1.0x average. Signal is BUY.",
-    "context": {
-      "ticker": "ABCAPITAL.NS",
-      "signal": "BUY",
-      "patterns": "adx_ranging_market, hammer, pivot_point_test",
-      "rsi": 38.8
-    },
-    "queued_at": "2026-08-26T06:15:52.381014"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of stoch_rsi_oversold_reversal, supertrend_bullish, strong_bullish_marubozu mean for a swing trade on SHRIRAMFIN? Current RSI=54, MACD hist=-1.6314, Vol=0.6x average. Signal is BUY.",
-    "context": {
-      "ticker": "SHRIRAMFIN.NS",
-      "signal": "BUY",
-      "patterns": "stoch_rsi_oversold_reversal, supertrend_bullish, strong_bullish_marubozu",
-      "rsi": 54.4
-    },
     "queued_at": "2026-08-26T06:15:52.383251"
   },
   {
@@ -98,5 +28,75 @@
       "rsi": 56.7
     },
     "queued_at": "2026-08-26T06:15:52.499695"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of engulfing_bullish, outside_bar mean for a swing trade on SBIN? Current RSI=48, MACD hist=-3.7576, Vol=1.0x average. Signal is BUY.",
+    "context": {
+      "ticker": "SBIN.NS",
+      "signal": "BUY",
+      "patterns": "engulfing_bullish, outside_bar",
+      "rsi": 47.6
+    },
+    "queued_at": "2026-08-26T07:45:51.212908"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of stoch_rsi_overbought_reversal, engulfing_bearish, rsi_bullish_divergence mean for a swing trade on GRASIM? Current RSI=66, MACD hist=+0.6149, Vol=1.6x average. Signal is BUY.",
+    "context": {
+      "ticker": "GRASIM.NS",
+      "signal": "BUY",
+      "patterns": "stoch_rsi_overbought_reversal, engulfing_bearish, rsi_bullish_divergence",
+      "rsi": 66.3
+    },
+    "queued_at": "2026-08-26T07:45:51.219702"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of rsi_bearish_divergence, outside_bar, full_bullish_alignment mean for a swing trade on NIACL? Current RSI=57, MACD hist=+0.7025, Vol=0.8x average. Signal is BUY.",
+    "context": {
+      "ticker": "NIACL.NS",
+      "signal": "BUY",
+      "patterns": "rsi_bearish_divergence, outside_bar, full_bullish_alignment",
+      "rsi": 56.7
+    },
+    "queued_at": "2026-08-26T07:45:51.222786"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of stoch_rsi_overbought_reversal, engulfing_bearish, rsi_bullish_divergence mean for a swing trade on GRASIM? Current RSI=66, MACD hist=+0.6149, Vol=1.6x average. Signal is BUY.",
+    "context": {
+      "ticker": "GRASIM.NS",
+      "signal": "BUY",
+      "patterns": "stoch_rsi_overbought_reversal, engulfing_bearish, rsi_bullish_divergence",
+      "rsi": 66.3
+    },
+    "queued_at": "2026-08-26T07:45:51.227541"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of engulfing_bullish, outside_bar mean for a swing trade on SBIN? Current RSI=48, MACD hist=-3.7576, Vol=1.0x average. Signal is BUY.",
+    "context": {
+      "ticker": "SBIN.NS",
+      "signal": "BUY",
+      "patterns": "engulfing_bullish, outside_bar",
+      "rsi": 47.6
+    },
+    "queued_at": "2026-08-26T07:45:51.332720"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of stoch_rsi_overbought_reversal, engulfing_bearish, rsi_bullish_divergence mean for a swing trade on GRASIM? Current RSI=66, MACD hist=+0.6149, Vol=1.6x average. Signal is BUY.",
+    "context": {
+      "ticker": "GRASIM.NS",
+      "signal": "BUY",
+      "patterns": "stoch_rsi_overbought_reversal, engulfing_bearish, rsi_bullish_divergence",
+      "rsi": 66.3
+    },
+    "queued_at": "2026-08-26T07:45:51.339378"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of rsi_bearish_divergence, outside_bar, full_bullish_alignment mean for a swing trade on NIACL? Current RSI=57, MACD hist=+0.7025, Vol=0.8x average. Signal is BUY.",
+    "context": {
+      "ticker": "NIACL.NS",
+      "signal": "BUY",
+      "patterns": "rsi_bearish_divergence, outside_bar, full_bullish_alignment",
+      "rsi": 56.7
+    },
+    "queued_at": "2026-08-26T07:45:51.342501"
   }
 ]

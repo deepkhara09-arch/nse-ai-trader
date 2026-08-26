@@ -3420,6 +3420,61 @@
     "atr_stop_hits": 0,
     "atr_target_hits": 0,
     "atr_multiplier": 1.5,
-    "last_updated": "2026-08-26"
+    "last_updated": "2026-08-26",
+    "attribution": {
+      "by_pattern": {
+        "rsi_bearish_divergence": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "pivot_s1_breakdown": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "strong_bearish_marubozu": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "full_bullish_alignment": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "gap_up_reversal": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "engulfing_bearish": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        }
+      },
+      "by_session": {
+        "midday": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        }
+      },
+      "by_mood": {
+        "neutral": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        }
+      },
+      "by_style": {
+        "swing": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        }
+      }
+    }
   }
 }

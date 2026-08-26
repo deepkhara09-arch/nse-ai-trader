@@ -91,11 +91,12 @@
       "avg_loss_pct": 3.23
     },
     "thesis_reversed_cut_early": {
-      "count": 1,
-      "sum_loss_pct": 0.81,
-      "last": "2026-08-14",
+      "count": 2,
+      "sum_loss_pct": 1.61,
+      "last": "2026-08-26",
       "examples": [
-        "MARICO"
+        "MARICO",
+        "SHRIRAMFIN"
       ],
       "avg_loss_pct": 0.81
     }
@@ -103,10 +104,10 @@
   "patterns": {
     "full_bullish_alignment": {
       "wins": 10,
-      "losses": 16,
+      "losses": 17,
       "sum_win_pct": 29.44,
-      "sum_loss_pct": 34.45,
-      "edge": -0.064
+      "sum_loss_pct": 35.25,
+      "edge": -0.072
     },
     "near_52w_high": {
       "wins": 3,
@@ -229,10 +230,10 @@
     },
     "pivot_s1_breakdown": {
       "wins": 1,
-      "losses": 3,
+      "losses": 4,
       "sum_win_pct": 7.93,
-      "sum_loss_pct": 3.15,
-      "edge": 0.398
+      "sum_loss_pct": 3.95,
+      "edge": 0.265
     },
     "stoch_rsi_overbought_reversal": {
       "wins": 1,
@@ -257,9 +258,9 @@
     },
     "rsi_bearish_divergence": {
       "wins": 0,
-      "losses": 2,
+      "losses": 3,
       "sum_win_pct": 0.0,
-      "sum_loss_pct": 4.220000000000001,
+      "sum_loss_pct": 5.0200000000000005,
       "edge": 0.0
     },
     "doji": {
@@ -355,9 +356,9 @@
     },
     "engulfing_bearish": {
       "wins": 0,
-      "losses": 1,
+      "losses": 2,
       "sum_win_pct": 0.0,
-      "sum_loss_pct": 0.81,
+      "sum_loss_pct": 1.61,
       "edge": 0.0
     },
     "strong_bullish_marubozu": {
@@ -386,6 +387,20 @@
       "losses": 1,
       "sum_win_pct": 0.0,
       "sum_loss_pct": 1.17,
+      "edge": 0.0
+    },
+    "strong_bearish_marubozu": {
+      "wins": 0,
+      "losses": 1,
+      "sum_win_pct": 0.0,
+      "sum_loss_pct": 0.8,
+      "edge": 0.0
+    },
+    "gap_up_reversal": {
+      "wins": 0,
+      "losses": 1,
+      "sum_win_pct": 0.0,
+      "sum_loss_pct": 0.8,
       "edge": 0.0
     }
   },
@@ -537,6 +552,14 @@
         "weak_pattern:doji",
         "bought_bearish_tape",
         "no_market_tailwind"
+      ]
+    },
+    {
+      "date": "2026-08-26",
+      "ticker": "SHRIRAMFIN",
+      "loss_pct": 0.8,
+      "causes": [
+        "thesis_reversed_cut_early"
       ]
     }
   ]

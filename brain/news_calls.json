@@ -2427,8 +2427,8 @@
       "direction": -1,
       "score": -0.304,
       "price_at_call": 849.9,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "flat"
     },
     {
       "date": "2026-08-21",
@@ -2436,8 +2436,8 @@
       "direction": 1,
       "score": 0.344,
       "price_at_call": 182.71,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "right"
     },
     {
       "date": "2026-08-21",
@@ -2445,8 +2445,8 @@
       "direction": 1,
       "score": 0.309,
       "price_at_call": 1646.5,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "flat"
     },
     {
       "date": "2026-08-21",
@@ -2454,8 +2454,8 @@
       "direction": 1,
       "score": 0.29,
       "price_at_call": 3920.0,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "right"
     },
     {
       "date": "2026-08-21",
@@ -2463,8 +2463,8 @@
       "direction": 1,
       "score": 0.212,
       "price_at_call": 1130.0,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "flat"
     },
     {
       "date": "2026-08-21",
@@ -2472,8 +2472,8 @@
       "direction": 1,
       "score": 0.354,
       "price_at_call": 1036.0,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "right"
     },
     {
       "date": "2026-08-24",
@@ -2600,6 +2600,33 @@
       "price_at_call": 1314.3,
       "evaluated": false,
       "outcome": ""
+    },
+    {
+      "date": "2026-08-26",
+      "ticker": "SBIN.NS",
+      "direction": 1,
+      "score": 0.393,
+      "price_at_call": 1054.5,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-08-26",
+      "ticker": "PIDILITIND.NS",
+      "direction": 1,
+      "score": 0.216,
+      "price_at_call": 1649.6,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-08-26",
+      "ticker": "RELIANCE.NS",
+      "direction": 1,
+      "score": 0.35,
+      "price_at_call": 1302.5,
+      "evaluated": false,
+      "outcome": ""
     }
   ],
   "reliability": {
@@ -2646,10 +2673,10 @@
       "last_seen": "2026-08-07"
     },
     "UNIONBANK.NS": {
-      "wins": 8.749,
-      "losses": 5.399,
-      "reliability": 0.618,
-      "last_seen": "2026-08-25"
+      "wins": 9.699,
+      "losses": 5.368,
+      "reliability": 0.644,
+      "last_seen": "2026-08-26"
     },
     "FEDERALBNK.NS": {
       "wins": 4.798,
@@ -2700,10 +2727,10 @@
       "last_seen": "2026-07-29"
     },
     "SIEMENS.NS": {
-      "wins": 9.197,
-      "losses": 3.651,
-      "reliability": 0.716,
-      "last_seen": "2026-08-25"
+      "wins": 10.144,
+      "losses": 3.63,
+      "reliability": 0.736,
+      "last_seen": "2026-08-26"
     },
     "POWERGRID.NS": {
       "wins": 0.0,
@@ -2754,10 +2781,10 @@
       "last_seen": "2026-08-25"
     },
     "HINDALCO.NS": {
-      "wins": 1.0,
+      "wins": 1.994,
       "losses": 0.0,
-      "reliability": 0.667,
-      "last_seen": "2026-08-25"
+      "reliability": 0.832,
+      "last_seen": "2026-08-26"
     }
   }
 }

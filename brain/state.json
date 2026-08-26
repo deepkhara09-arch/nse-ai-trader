@@ -1,13 +1,13 @@
 {
   "phase": "paper_trading",
   "day": 47,
-  "session": "afternoon",
+  "session": "intraday_close",
   "start_date": "2026-06-22",
   "phase_start_date": "2026-07-15",
   "last_run_date": "2026-08-25",
   "last_counted_date": "2026-08-25",
   "cohort_last_tick_date": "2026-08-25",
-  "last_updated": "2026-08-26T07:45:51.253124",
+  "last_updated": "2026-08-26T09:21:57.076219",
   "focus_stocks": [
     "SBIN.NS",
     "ABCAPITAL.NS",
@@ -364,6 +364,7 @@
     "preopen": "2026-08-26",
     "morning": "2026-08-26",
     "midday": "2026-08-26",
-    "afternoon": "2026-08-26"
+    "afternoon": "2026-08-26",
+    "intraday_close": "2026-08-26"
   }
 }

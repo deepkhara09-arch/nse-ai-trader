@@ -1,102 +1,102 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of pivot_s1_breakdown, pivot_point_test mean for a swing trade on SBIN? Current RSI=49, MACD hist=-3.8996, Vol=0.9x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of pivot_point_test, pivot_s1_breakdown mean for a swing trade on SBIN? Current RSI=49, MACD hist=-3.8996, Vol=0.9x average. Signal is BUY.",
     "context": {
       "ticker": "SBIN.NS",
       "signal": "BUY",
-      "patterns": "pivot_s1_breakdown, pivot_point_test",
+      "patterns": "pivot_point_test, pivot_s1_breakdown",
       "rsi": 48.9
     },
-    "queued_at": "2026-08-25T10:12:10.571561"
+    "queued_at": "2026-08-26T03:05:38.854276"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of adx_ranging_market, bb_midline_support mean for a swing trade on PIDILITIND? Current RSI=59, MACD hist=-6.0125, Vol=0.5x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of bb_midline_support, adx_ranging_market mean for a swing trade on PIDILITIND? Current RSI=59, MACD hist=-6.0125, Vol=0.5x average. Signal is BUY.",
     "context": {
       "ticker": "PIDILITIND.NS",
       "signal": "BUY",
-      "patterns": "adx_ranging_market, bb_midline_support",
+      "patterns": "bb_midline_support, adx_ranging_market",
       "rsi": 58.8
     },
-    "queued_at": "2026-08-25T10:12:10.573350"
+    "queued_at": "2026-08-26T03:05:38.856095"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of adx_ranging_market, strong_bullish_marubozu mean for a swing trade on GAIL? Current RSI=47, MACD hist=-0.3918, Vol=0.4x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of strong_bullish_marubozu, adx_ranging_market mean for a swing trade on GAIL? Current RSI=47, MACD hist=-0.3918, Vol=0.4x average. Signal is BUY.",
     "context": {
       "ticker": "GAIL.NS",
       "signal": "BUY",
-      "patterns": "adx_ranging_market, strong_bullish_marubozu",
+      "patterns": "strong_bullish_marubozu, adx_ranging_market",
       "rsi": 47.2
     },
-    "queued_at": "2026-08-25T10:12:10.577978"
+    "queued_at": "2026-08-26T03:05:38.860916"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of volume_breakout_bullish, strong_bullish_marubozu, pivot_r2_breakout mean for a swing trade on SIEMENS? Current RSI=59, MACD hist=-1.5763, Vol=2.9x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of strong_bullish_marubozu, pivot_r1_breakout, rsi_bearish_divergence mean for a swing trade on SIEMENS? Current RSI=59, MACD hist=-1.5763, Vol=2.9x average. Signal is BUY.",
     "context": {
       "ticker": "SIEMENS.NS",
       "signal": "BUY",
-      "patterns": "volume_breakout_bullish, strong_bullish_marubozu, pivot_r2_breakout",
+      "patterns": "strong_bullish_marubozu, pivot_r1_breakout, rsi_bearish_divergence",
       "rsi": 59.5
     },
-    "queued_at": "2026-08-25T10:12:10.579013"
+    "queued_at": "2026-08-26T03:05:38.861995"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of piercing_line, near_52w_high, full_bullish_alignment mean for a swing trade on SHRIRAMFIN? Current RSI=58, MACD hist=-2.2742, Vol=0.7x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of pivot_point_test, doji, full_bullish_alignment mean for a swing trade on SHRIRAMFIN? Current RSI=58, MACD hist=-2.2742, Vol=0.7x average. Signal is BUY.",
     "context": {
       "ticker": "SHRIRAMFIN.NS",
       "signal": "BUY",
-      "patterns": "piercing_line, near_52w_high, full_bullish_alignment",
+      "patterns": "pivot_point_test, doji, full_bullish_alignment",
       "rsi": 57.9
     },
-    "queued_at": "2026-08-25T10:12:10.580040"
+    "queued_at": "2026-08-26T03:05:38.863068"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of adx_ranging_market, pivot_point_test, stoch_rsi_oversold_reversal mean for a swing trade on ASIANPAINT? Current RSI=19, MACD hist=-16.0737, Vol=0.3x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of pivot_point_test, low_volume_drift, adx_ranging_market mean for a swing trade on ASIANPAINT? Current RSI=19, MACD hist=-16.0737, Vol=0.3x average. Signal is BUY.",
     "context": {
       "ticker": "ASIANPAINT.NS",
       "signal": "BUY",
-      "patterns": "adx_ranging_market, pivot_point_test, stoch_rsi_oversold_reversal",
+      "patterns": "pivot_point_test, low_volume_drift, adx_ranging_market",
       "rsi": 19.0
     },
-    "queued_at": "2026-08-25T10:12:10.583741"
+    "queued_at": "2026-08-26T03:05:38.866900"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of gap_up_reversal, full_bullish_alignment, rsi_bearish_divergence mean for a swing trade on HINDALCO? Current RSI=59, MACD hist=+0.1464, Vol=0.8x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of macd_bullish_crossover, rsi_bearish_divergence, adx_strong_trend_up mean for a swing trade on HINDALCO? Current RSI=59, MACD hist=+0.1464, Vol=0.8x average. Signal is BUY.",
     "context": {
       "ticker": "HINDALCO.NS",
       "signal": "BUY",
-      "patterns": "gap_up_reversal, full_bullish_alignment, rsi_bearish_divergence",
+      "patterns": "macd_bullish_crossover, rsi_bearish_divergence, adx_strong_trend_up",
       "rsi": 58.6
     },
-    "queued_at": "2026-08-25T10:12:10.587344"
+    "queued_at": "2026-08-26T03:05:38.870639"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of pivot_s1_breakdown, momentum_continuation, pivot_point_test mean for a swing trade on GRASIM? Current RSI=55, MACD hist=+2.2951, Vol=1.6x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of pivot_point_test, rsi_bearish_divergence, adx_strong_trend_up mean for a swing trade on GRASIM? Current RSI=55, MACD hist=+2.2951, Vol=1.6x average. Signal is BUY.",
     "context": {
       "ticker": "GRASIM.NS",
       "signal": "BUY",
-      "patterns": "pivot_s1_breakdown, momentum_continuation, pivot_point_test",
+      "patterns": "pivot_point_test, rsi_bearish_divergence, adx_strong_trend_up",
       "rsi": 54.9
     },
-    "queued_at": "2026-08-25T10:12:10.588387"
+    "queued_at": "2026-08-26T03:05:38.871740"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of stoch_rsi_oversold_reversal, full_bullish_alignment, supertrend_bullish mean for a swing trade on LT? Current RSI=59, MACD hist=+7.6689, Vol=0.8x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of rsi_bearish_divergence, stoch_rsi_oversold_reversal, full_bullish_alignment mean for a swing trade on LT? Current RSI=59, MACD hist=+7.6689, Vol=0.8x average. Signal is BUY.",
     "context": {
       "ticker": "LT.NS",
       "signal": "BUY",
-      "patterns": "stoch_rsi_oversold_reversal, full_bullish_alignment, supertrend_bullish",
+      "patterns": "rsi_bearish_divergence, stoch_rsi_oversold_reversal, full_bullish_alignment",
       "rsi": 58.8
     },
-    "queued_at": "2026-08-25T10:12:10.590061"
+    "queued_at": "2026-08-26T03:05:38.873481"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of full_bullish_alignment, supertrend_bullish, pivot_point_test mean for a swing trade on NIACL? Current RSI=61, MACD hist=+0.7538, Vol=0.2x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of pivot_point_test, low_volume_drift, adx_strong_trend_up mean for a swing trade on NIACL? Current RSI=61, MACD hist=+0.7538, Vol=0.2x average. Signal is BUY.",
     "context": {
       "ticker": "NIACL.NS",
       "signal": "BUY",
-      "patterns": "full_bullish_alignment, supertrend_bullish, pivot_point_test",
+      "patterns": "pivot_point_test, low_volume_drift, adx_strong_trend_up",
       "rsi": 61.1
     },
-    "queued_at": "2026-08-25T10:12:10.591748"
+    "queued_at": "2026-08-26T03:05:38.875188"
   }
 ]

@@ -3,10 +3,10 @@
     "ticker": "PIDILITIND.NS",
     "nse_code": "PIDILITIND",
     "company_name": "Pidilite Industries",
-    "date": "2026-08-25",
-    "generated_at": "2026-08-25 10:12 UTC",
+    "date": "2026-08-26",
+    "generated_at": "2026-08-26 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -40,10 +40,10 @@
     "pattern_score": 7.5,
     "confluence_bonus": 10,
     "paper_bonus": 5.0,
-    "success_probability": 0.661,
-    "base_success_prob": 0.746,
-    "profit_probability": 0.335,
-    "composite_score": 64.03,
+    "success_probability": 0.657,
+    "base_success_prob": 0.74,
+    "profit_probability": 0.324,
+    "composite_score": 63.29,
     "focus_rank": 3,
     "rank_delta": 0,
     "intention": "BUY PIDILITIND for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
@@ -67,7 +67,7 @@
     "data_confidence": "Estimated",
     "data_confidence_key": "estimated",
     "data_confidence_note": "Only 3 paper trade(s) \u2014 probability is an indicator-based estimate, not yet proven",
-    "expected_edge_r": 0.335,
+    "expected_edge_r": 0.324,
     "buy_score": 10.18,
     "sell_score": 0.75,
     "reasons": [
@@ -105,11 +105,11 @@
       "History backtest: this kind of BUY setup worked 46% of the time over ~1 week on this stock (sample: 54)"
     ],
     "patterns_seen": [
-      "adx_ranging_market",
+      "pivot_point_test",
       "bb_midline_support",
       "full_bullish_alignment",
-      "supertrend_bullish",
-      "pivot_point_test"
+      "adx_ranging_market",
+      "supertrend_bullish"
     ],
     "reliable_patterns": [
       "full_bullish_alignment",
@@ -140,16 +140,18 @@
     "paper_pnl": 205.17,
     "paper_expectancy": 68.39,
     "market_mood": "neutral",
-    "market_warning": []
+    "market_warning": [
+      "Narrow rally \u2014 only 1/4 sectors up. Fragile move."
+    ]
   },
   {
     "ticker": "SHRIRAMFIN.NS",
     "nse_code": "SHRIRAMFIN",
     "company_name": "SHRIRAMFIN.NS",
-    "date": "2026-08-25",
-    "generated_at": "2026-08-25 10:12 UTC",
+    "date": "2026-08-26",
+    "generated_at": "2026-08-26 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -183,10 +185,10 @@
     "pattern_score": 1.0,
     "confluence_bonus": 7.5,
     "paper_bonus": 0.0,
-    "success_probability": 0.543,
-    "base_success_prob": 0.532,
-    "profit_probability": 0.596,
-    "composite_score": 57.94,
+    "success_probability": 0.539,
+    "base_success_prob": 0.53,
+    "profit_probability": 0.59,
+    "composite_score": 57.67,
     "focus_rank": 4,
     "rank_delta": 0,
     "intention": "BUY SHRIRAMFIN for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
@@ -199,9 +201,9 @@
       "regime"
     ],
     "backtest_tested": true,
-    "backtest_hit_5d": 0.569,
-    "backtest_hit_10d": 0.603,
-    "backtest_sample": 58,
+    "backtest_hit_5d": 0.559,
+    "backtest_hit_10d": 0.61,
+    "backtest_sample": 59,
     "hist_long_trend": "strong_uptrend",
     "hist_52w_position": 97.6,
     "hist_personality": "choppy",
@@ -209,7 +211,7 @@
     "data_confidence": "Estimated",
     "data_confidence_key": "estimated",
     "data_confidence_note": "Only 0 paper trade(s) \u2014 probability is an indicator-based estimate, not yet proven",
-    "expected_edge_r": 0.596,
+    "expected_edge_r": 0.59,
     "buy_score": 13.23,
     "sell_score": 1,
     "reasons": [
@@ -241,16 +243,16 @@
       "Resistance at \u20b91200.00 is natural target",
       "Latest news: 'Top gainers and losers, Aug 20: Eternal, Shriram Finance surge 2%, Tat'",
       "Confluence: 5 independent signal families agree (trend, volume, pattern, news, regime)",
-      "History backtest: this kind of BUY setup worked 57% of the time over ~1 week on this stock (sample: 58)"
+      "History backtest: this kind of BUY setup worked 56% of the time over ~1 week on this stock (sample: 59)"
     ],
     "patterns_seen": [
-      "piercing_line",
-      "near_52w_high",
-      "full_bullish_alignment",
-      "supertrend_bullish",
       "pivot_point_test",
+      "doji",
+      "full_bullish_alignment",
+      "piercing_line",
       "stoch_rsi_oversold_reversal",
-      "doji"
+      "supertrend_bullish",
+      "near_52w_high"
     ],
     "reliable_patterns": [],
     "nearest_support": 1090.2,
@@ -277,16 +279,18 @@
     "paper_pnl": 0,
     "paper_expectancy": 0,
     "market_mood": "neutral",
-    "market_warning": []
+    "market_warning": [
+      "Narrow rally \u2014 only 1/4 sectors up. Fragile move."
+    ]
   },
   {
     "ticker": "ASIANPAINT.NS",
     "nse_code": "ASIANPAINT",
     "company_name": "Asian Paints Ltd",
-    "date": "2026-08-25",
-    "generated_at": "2026-08-25 10:12 UTC",
+    "date": "2026-08-26",
+    "generated_at": "2026-08-26 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -324,8 +328,8 @@
     "base_success_prob": 0.463,
     "profit_probability": 0.158,
     "composite_score": 46.36,
-    "focus_rank": 14,
-    "rank_delta": -1,
+    "focus_rank": 13,
+    "rank_delta": 1,
     "intention": "BUY ASIANPAINT for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
     "confluence_count": 5,
     "confluence_families": [
@@ -382,12 +386,12 @@
       "History backtest: this kind of BUY setup worked 48% of the time over ~1 week on this stock (sample: 52)"
     ],
     "patterns_seen": [
-      "adx_ranging_market",
-      "supertrend_bullish",
       "pivot_point_test",
       "rsi_bearish_divergence",
+      "low_volume_drift",
+      "adx_ranging_market",
       "stoch_rsi_oversold_reversal",
-      "low_volume_drift"
+      "supertrend_bullish"
     ],
     "reliable_patterns": [],
     "nearest_support": 2500,
@@ -414,6 +418,8 @@
     "paper_pnl": -190.79,
     "paper_expectancy": -190.79,
     "market_mood": "neutral",
-    "market_warning": []
+    "market_warning": [
+      "Narrow rally \u2014 only 1/4 sectors up. Fragile move."
+    ]
   }
 ]

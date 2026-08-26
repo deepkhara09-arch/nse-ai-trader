@@ -1,13 +1,13 @@
 {
   "phase": "paper_trading",
   "day": 47,
-  "session": "morning",
+  "session": "preopen",
   "start_date": "2026-06-22",
   "phase_start_date": "2026-07-15",
   "last_run_date": "2026-08-25",
   "last_counted_date": "2026-08-25",
   "cohort_last_tick_date": "2026-08-25",
-  "last_updated": "2026-08-25T10:12:10.497992",
+  "last_updated": "2026-08-26T03:05:38.758538",
   "focus_stocks": [
     "SBIN.NS",
     "ABCAPITAL.NS",
@@ -162,7 +162,8 @@
     "[2026-08-24] Pre-open macro: neutral (-0.03)",
     "[2026-08-24] Focus refresh \u2014 promoted: ['BANKBARODA', 'LT', 'RELIANCE'] | demoted: ['NTPC', 'BAJFINANCE', 'MARICO']",
     "[2026-08-25] Pre-open macro: risk_on (+0.49)",
-    "[2026-08-25] Focus refresh \u2014 promoted: ['NIACL', 'LICI'] | demoted: ['ICICIBANK', 'UNIONBANK']"
+    "[2026-08-25] Focus refresh \u2014 promoted: ['NIACL', 'LICI'] | demoted: ['ICICIBANK', 'UNIONBANK']",
+    "[2026-08-26] Pre-open macro: neutral (+0.06)"
   ],
   "alert_sent": false,
   "schema_version": 11,
@@ -360,11 +361,6 @@
     "scored_date": "2026-08-21"
   },
   "sessions_done": {
-    "preopen": "2026-08-25",
-    "morning": "2026-08-25",
-    "midday": "2026-08-25",
-    "afternoon": "2026-08-25",
-    "intraday_close": "2026-08-25",
-    "preclose": "2026-08-25"
+    "preopen": "2026-08-26"
   }
 }

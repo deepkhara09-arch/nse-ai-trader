@@ -592,6 +592,17 @@ def _check_exits(book: dict, stock_data: Dict, session: str, patterns_db: Dict):
                     "won": part_pnl > 0, "qty": half,
                     "open_days": _days_between(pos["open_date"], today),
                 })
+                # CRITICAL: teach the brain from this WIN. This was previously
+                # skipped — only stop_hit/target_hit/time_exit taught learning — so
+                # every profitable partial-book (the tool's most reliable winning
+                # exit) was invisible to pattern learning. The result: global pattern
+                # reliability recorded wins=0 for everything and wrongly branded good
+                # setups as losers, which the edge-gate then penalised. Recording the
+                # win here fixes that systemic bias so learning sees both sides.
+                patterns_db = learn_from_trade(
+                    ticker, pos.get("patterns", []), part_pnl > 0,
+                    pos.get("style", "swing"), patterns_db, exit_reason="partial_t1"
+                )
                 print(f"[paper] PARTIAL {ticker} | booked {half} @ ₹{t1:.2f} (T1) | "
                       f"PnL ₹{part_pnl:+.0f} | stop -> breakeven, {remaining} riding to target")
                 stop_loss_ = pos["stop_loss"]   # refresh for the checks below

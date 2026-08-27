@@ -1,13 +1,13 @@
 {
   "phase": "paper_trading",
-  "day": 49,
+  "day": 50,
   "session": "morning",
   "start_date": "2026-06-22",
   "phase_start_date": "2026-07-15",
-  "last_run_date": "2026-08-27",
-  "last_counted_date": "2026-08-27",
-  "cohort_last_tick_date": "2026-08-27",
-  "last_updated": "2026-08-27T10:12:13.830736",
+  "last_run_date": "2026-08-28",
+  "last_counted_date": "2026-08-28",
+  "cohort_last_tick_date": "2026-08-28",
+  "last_updated": "2026-08-27T19:16:30.069817",
   "focus_stocks": [
     "SBIN.NS",
     "ABCAPITAL.NS",
@@ -68,7 +68,6 @@
     "expectancy": -33.53
   },
   "brain_notes": [
-    "[2026-06-24] Pre-open macro: neutral (+0.00)",
     "[2026-06-25] Pre-open macro: neutral (+0.18)",
     "[2026-06-29] Pre-open macro: risk_off (-0.46)",
     "[2026-06-30] Pre-open macro: neutral (+0.07)",
@@ -167,50 +166,12 @@
     "[2026-08-26] Cohort batch #29 complete \u2014 30 candidates ready",
     "[2026-08-27] Pre-open macro: neutral (-0.05)",
     "[2026-08-27] Focus refresh \u2014 promoted: ['HOMEFIRST', 'VBL', 'JSWSTEEL'] | demoted: ['BANKBARODA', 'CIPLA', 'NIACL']",
-    "[2026-08-27] Cohort batch #30 complete \u2014 30 candidates ready"
+    "[2026-08-27] Cohort batch #30 complete \u2014 30 candidates ready",
+    "[2026-08-28] Cohort batch #31 complete \u2014 30 candidates ready"
   ],
   "alert_sent": false,
   "schema_version": 11,
   "background_batches": [
-    {
-      "id": 27,
-      "day": 7,
-      "start_date": "2026-08-12",
-      "ready": true,
-      "candidates": [
-        "PIDILITIND.NS",
-        "HINDALCO.NS",
-        "SBIN.NS",
-        "DMART.NS",
-        "ICICIBANK.NS",
-        "GAIL.NS",
-        "BAJFINANCE.NS",
-        "GRASIM.NS",
-        "UNIONBANK.NS",
-        "BHEL.NS",
-        "MARICO.NS",
-        "ABCAPITAL.NS",
-        "SHRIRAMFIN.NS",
-        "ASHOKLEY.NS",
-        "ASIANPAINT.NS",
-        "POLICYBZR.NS",
-        "GICRE.NS",
-        "M&MFIN.NS",
-        "TATAPOWER.NS",
-        "ETERNAL.NS",
-        "SIEMENS.NS",
-        "CIPLA.NS",
-        "IDFCFIRSTB.NS",
-        "LICI.NS",
-        "RELIANCE.NS",
-        "LT.NS",
-        "ONGC.NS",
-        "PNB.NS",
-        "CANBK.NS",
-        "BANKBARODA.NS"
-      ],
-      "scored_date": "2026-08-20"
-    },
     {
       "id": 28,
       "day": 7,
@@ -330,56 +291,95 @@
     },
     {
       "id": 31,
-      "day": 6,
+      "day": 7,
       "start_date": "2026-08-20",
-      "ready": false,
-      "candidates": []
+      "ready": true,
+      "candidates": [
+        "JSWSTEEL.NS",
+        "SIEMENS.NS",
+        "LT.NS",
+        "GRASIM.NS",
+        "HINDALCO.NS",
+        "PIDILITIND.NS",
+        "GAIL.NS",
+        "HOMEFIRST.NS",
+        "ETERNAL.NS",
+        "SHRIRAMFIN.NS",
+        "NYKAA.NS",
+        "LICI.NS",
+        "VBL.NS",
+        "UNIONBANK.NS",
+        "EMAMILTD.NS",
+        "DRREDDY.NS",
+        "BEL.NS",
+        "TATASTEEL.NS",
+        "COALINDIA.NS",
+        "HDFCLIFE.NS",
+        "ABCAPITAL.NS",
+        "ADANIENT.NS",
+        "GICRE.NS",
+        "IDFCFIRSTB.NS",
+        "POLICYBZR.NS",
+        "CHOLAFIN.NS",
+        "AXISBANK.NS",
+        "SBIN.NS",
+        "DMART.NS",
+        "SWIGGY.NS"
+      ],
+      "scored_date": "2026-08-28"
     },
     {
       "id": 32,
-      "day": 5,
+      "day": 6,
       "start_date": "2026-08-21",
       "ready": false,
       "candidates": []
     },
     {
       "id": 33,
-      "day": 4,
+      "day": 5,
       "start_date": "2026-08-24",
       "ready": false,
       "candidates": []
     },
     {
       "id": 34,
-      "day": 1,
+      "day": 2,
       "start_date": "2026-08-27",
+      "ready": false,
+      "candidates": []
+    },
+    {
+      "id": 35,
+      "day": 1,
+      "start_date": "2026-08-28",
       "ready": false,
       "candidates": []
     }
   ],
   "background_cohort": {
-    "id": 30,
+    "id": 31,
     "day": 7,
-    "start_date": "2026-08-19",
+    "start_date": "2026-08-20",
     "ready": true,
     "candidates": [
+      "JSWSTEEL.NS",
       "SIEMENS.NS",
       "LT.NS",
-      "PIDILITIND.NS",
-      "VBL.NS",
       "GRASIM.NS",
-      "ETERNAL.NS",
       "HINDALCO.NS",
+      "PIDILITIND.NS",
       "GAIL.NS",
-      "JSWSTEEL.NS",
-      "LICI.NS",
+      "HOMEFIRST.NS",
+      "ETERNAL.NS",
       "SHRIRAMFIN.NS",
       "NYKAA.NS",
+      "LICI.NS",
+      "VBL.NS",
       "UNIONBANK.NS",
       "EMAMILTD.NS",
       "DRREDDY.NS",
       "BEL.NS",
-      "HOMEFIRST.NS",
       "TATASTEEL.NS",
       "COALINDIA.NS",
       "HDFCLIFE.NS",
@@ -394,14 +394,9 @@
       "DMART.NS",
       "SWIGGY.NS"
     ],
-    "scored_date": "2026-08-27"
+    "scored_date": "2026-08-28"
   },
   "sessions_done": {
-    "preopen": "2026-08-27",
-    "morning": "2026-08-27",
-    "midday": "2026-08-27",
-    "afternoon": "2026-08-27",
-    "intraday_close": "2026-08-27",
-    "preclose": "2026-08-27"
+    "preclose": "2026-08-28"
   }
 }

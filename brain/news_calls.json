@@ -2544,8 +2544,8 @@
       "direction": 1,
       "score": 0.281,
       "price_at_call": 407.0,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "flat"
     },
     {
       "date": "2026-08-25",
@@ -2553,8 +2553,8 @@
       "direction": 1,
       "score": 0.416,
       "price_at_call": 1649.9,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "flat"
     },
     {
       "date": "2026-08-25",
@@ -2562,8 +2562,8 @@
       "direction": 1,
       "score": 0.302,
       "price_at_call": 4073.6,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "flat"
     },
     {
       "date": "2026-08-25",
@@ -2571,8 +2571,8 @@
       "direction": 1,
       "score": 0.296,
       "price_at_call": 1046.5,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "wrong"
     },
     {
       "date": "2026-08-25",
@@ -2580,8 +2580,8 @@
       "direction": 1,
       "score": 0.322,
       "price_at_call": 3274.1,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "flat"
     },
     {
       "date": "2026-08-25",
@@ -2589,8 +2589,8 @@
       "direction": 1,
       "score": 0.309,
       "price_at_call": 4119.0,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "wrong"
     },
     {
       "date": "2026-08-25",
@@ -2598,8 +2598,8 @@
       "direction": 1,
       "score": 0.589,
       "price_at_call": 1314.3,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "wrong"
     },
     {
       "date": "2026-08-26",
@@ -2652,6 +2652,69 @@
       "direction": 1,
       "score": 0.352,
       "price_at_call": 4035.6,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-08-28",
+      "ticker": "SBIN.NS",
+      "direction": 1,
+      "score": 0.256,
+      "price_at_call": 1042.9,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-08-28",
+      "ticker": "PIDILITIND.NS",
+      "direction": -1,
+      "score": -0.362,
+      "price_at_call": 1656.0,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-08-28",
+      "ticker": "SIEMENS.NS",
+      "direction": 1,
+      "score": 0.218,
+      "price_at_call": 4095.0,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-08-28",
+      "ticker": "SHRIRAMFIN.NS",
+      "direction": 1,
+      "score": 0.229,
+      "price_at_call": 1101.0,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-08-28",
+      "ticker": "ASIANPAINT.NS",
+      "direction": 1,
+      "score": 0.356,
+      "price_at_call": 2631.0,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-08-28",
+      "ticker": "LT.NS",
+      "direction": 1,
+      "score": 0.413,
+      "price_at_call": 4027.0,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-08-28",
+      "ticker": "HOMEFIRST.NS",
+      "direction": 1,
+      "score": 0.21,
+      "price_at_call": 1200.2,
       "evaluated": false,
       "outcome": ""
     }
@@ -2808,10 +2871,22 @@
       "last_seen": "2026-08-25"
     },
     "HINDALCO.NS": {
-      "wins": 1.983,
+      "wins": 1.972,
+      "losses": 1.994,
+      "reliability": 0.497,
+      "last_seen": "2026-08-28"
+    },
+    "LT.NS": {
+      "wins": 0.0,
       "losses": 1.0,
-      "reliability": 0.664,
-      "last_seen": "2026-08-27"
+      "reliability": 0.333,
+      "last_seen": "2026-08-28"
+    },
+    "RELIANCE.NS": {
+      "wins": 0.0,
+      "losses": 1.0,
+      "reliability": 0.333,
+      "last_seen": "2026-08-28"
     }
   }
 }

@@ -1,5 +1,5 @@
 {
-  "date": "2026-08-27",
+  "date": "2026-08-28",
   "session": "preclose",
   "nifty": {
     "symbol": "^NSEI",
@@ -35,11 +35,11 @@
     },
     "Pharma": {
       "symbol": "PHARMABEES.NS",
-      "value": 27.45,
-      "day_change_pct": 0.99,
+      "value": 27.54,
+      "day_change_pct": 0.33,
       "trend_5d": "up",
       "trend_20d": "up",
-      "ath_pct_60d": -2.0
+      "ath_pct_60d": -1.68
     },
     "Bank": {
       "symbol": "BANKBEES.NS",
@@ -51,11 +51,11 @@
     },
     "Infra": {
       "symbol": "INFRABEES.NS",
-      "value": 965.09,
-      "day_change_pct": -0.32,
+      "value": 959.2,
+      "day_change_pct": -0.61,
       "trend_5d": "unknown",
       "trend_20d": "unknown",
-      "ath_pct_60d": -1.2
+      "ath_pct_60d": -1.81
     }
   },
   "market_mood": "neutral",
@@ -129,7 +129,7 @@
   },
   "macro_risk_factor": 1.0,
   "fii_dii": {
-    "date": "2026-08-27",
+    "date": "2026-08-28",
     "fii_net_cr": -298.26,
     "dii_net_cr": 4977.17,
     "combined_net_cr": 4678.91,
@@ -137,12 +137,6 @@
     "ok": true,
     "error": "",
     "history": [
-      {
-        "date": "2026-07-17",
-        "fii": -4205.56,
-        "dii": 2986.41,
-        "combined": -1219.15
-      },
       {
         "date": "2026-07-20",
         "fii": -1121.04,
@@ -316,12 +310,18 @@
         "fii": -298.26,
         "dii": 4977.17,
         "combined": 4678.91
+      },
+      {
+        "date": "2026-08-28",
+        "fii": -298.26,
+        "dii": 4977.17,
+        "combined": 4678.91
       }
     ]
   },
   "flow_tailwind": true,
   "pcr": {
-    "date": "2026-08-27",
+    "date": "2026-08-28",
     "pcr": 0.593,
     "reading": "complacent_caution",
     "total_pe_oi": 1688865,

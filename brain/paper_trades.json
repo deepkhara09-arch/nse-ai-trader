@@ -38,8 +38,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "RSI=68 elevated"
       ],
-      "current_price": 4088.0,
-      "unrealized_pnl": 128.3,
+      "current_price": 4088.5,
+      "unrealized_pnl": 128.8,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -49,7 +49,7 @@
         "regime": "choppy"
       },
       "view_hist": [
-        0,
+        1,
         1,
         1,
         1
@@ -65,7 +65,7 @@
       "entry": 172.39,
       "qty": 45,
       "invested": 7757.55,
-      "stop_loss": 165.89,
+      "stop_loss": 169.01,
       "target": 185.38,
       "style": "swing",
       "confidence": 95,
@@ -96,8 +96,8 @@
         "\u26a0 Sector momentum -0.30 \u2014 buying into a falling sector needs extra conviction",
         "MACD histogram negative"
       ],
-      "current_price": 172.5,
-      "unrealized_pnl": 4.95,
+      "current_price": 172.18,
+      "unrealized_pnl": -9.45,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -111,7 +111,8 @@
         0,
         0,
         0
-      ]
+      ],
+      "stale_tightened": true
     },
     {
       "ticker": "ABCAPITAL.NS",
@@ -147,8 +148,8 @@
         "\u2713 Daily setup aligned with the higher-timeframe trend",
         "MACD histogram negative"
       ],
-      "current_price": 410.35,
-      "unrealized_pnl": 14.25,
+      "current_price": 411.05,
+      "unrealized_pnl": 24.75,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -165,8 +166,8 @@
       },
       "view_hist": [
         0,
-        0,
         1,
+        0,
         0
       ]
     },
@@ -179,7 +180,7 @@
       "entry": 1044.8,
       "qty": 7,
       "invested": 7313.6,
-      "stop_loss": 1008.4,
+      "stop_loss": 1012.77,
       "target": 1127.51,
       "style": "swing",
       "confidence": 95,
@@ -204,8 +205,8 @@
         "\u2713 Daily setup aligned with the higher-timeframe trend",
         "MACD histogram negative"
       ],
-      "current_price": 1039.2,
-      "unrealized_pnl": -39.2,
+      "current_price": 1032.2,
+      "unrealized_pnl": -88.2,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -221,8 +222,8 @@
         "hist_long_trend": "strong_uptrend"
       },
       "view_hist": [
-        0,
         1,
+        0,
         0,
         0
       ],
@@ -237,7 +238,7 @@
       "entry": 3285.3,
       "qty": 2,
       "invested": 6570.6,
-      "stop_loss": 3182.13,
+      "stop_loss": 3194.51,
       "target": 3551.77,
       "style": "swing",
       "confidence": 95,
@@ -268,8 +269,8 @@
         "\u2713 Daily setup aligned with the higher-timeframe trend",
         "RSI bearish divergence \u2014 price higher but RSI lower"
       ],
-      "current_price": 3284.1,
-      "unrealized_pnl": -2.4,
+      "current_price": 3272.0,
+      "unrealized_pnl": -26.6,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -285,8 +286,8 @@
         "hist_long_trend": "strong_uptrend"
       },
       "view_hist": [
-        0,
         1,
+        0,
         0,
         0
       ],
@@ -332,8 +333,8 @@
         "MACD histogram negative",
         "RSI bearish divergence \u2014 price higher but RSI lower"
       ],
-      "current_price": 1096.2,
-      "unrealized_pnl": -191.1,
+      "current_price": 1104.1,
+      "unrealized_pnl": -135.8,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -350,7 +351,7 @@
       },
       "view_hist": [
         1,
-        1,
+        0,
         0,
         0
       ]

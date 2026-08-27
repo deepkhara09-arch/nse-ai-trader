@@ -378,40 +378,18 @@ def _update_trailing_stops(book: dict, stock_data: Dict) -> dict:
                     pos["stop_loss"] = new_sl
                     pos["trailing_active"] = True
 
-        # ── Time-decayed stop on a STALE LOSER ─────────────────────────────────
-        # The whole negative expectancy in the live data came from full-width
-        # stops: 6 stop-hits averaged -₹196 while the winners were healthy. A
-        # losing position that ISN'T working after several days is more likely to
-        # keep failing, so we progressively pull its stop IN (toward entry) the
-        # longer it sits underwater — cutting a dead trade at a smaller loss
-        # instead of the full ATR stop. Only tightens (never loosens), never
-        # crosses entry, and leaves winners/breakeven trades alone.
-        from agent.config import STALE_LOSS_START_DAY, STALE_LOSS_TIGHTEN_PER_DAY
-        try:
-            held = _days_between(pos.get("open_date", ""), ist_today().isoformat())
-        except Exception:
-            held = 0
-        underwater = (current < entry) if pos["action"] == "BUY" else (current > entry)
-        if underwater and held >= STALE_LOSS_START_DAY and not pos.get("trailing_active"):
-            # Fraction of the original stop-distance to REMOVE, growing per stale day.
-            shrink = min(0.6, (held - STALE_LOSS_START_DAY + 1) * STALE_LOSS_TIGHTEN_PER_DAY)
-            if pos["action"] == "BUY":
-                orig_dist = entry - pos["stop_loss"]
-                if orig_dist > 0:
-                    tightened = round(entry - orig_dist * (1 - shrink), 2)
-                    # only pull IN, and never above the session low (avoid self-trigger)
-                    tightened = min(tightened, round(sess_low * 0.999, 2)) if sess_low else tightened
-                    if tightened > pos["stop_loss"]:
-                        pos["stop_loss"] = tightened
-                        pos["stale_tightened"] = True
-            else:
-                orig_dist = pos["stop_loss"] - entry
-                if orig_dist > 0:
-                    tightened = round(entry + orig_dist * (1 - shrink), 2)
-                    tightened = max(tightened, round(sess_high * 1.001, 2)) if sess_high else tightened
-                    if tightened < pos["stop_loss"]:
-                        pos["stop_loss"] = tightened
-                        pos["stale_tightened"] = True
+        # ── (REMOVED) Time-decayed stop on a STALE LOSER ───────────────────────
+        # This rule pulled the stop toward entry the longer a trade sat underwater,
+        # meaning to "cut dead trades early". The live data proved it did the
+        # OPPOSITE of its goal: of 30 closed trades, the 9 it touched went 0-for-9
+        # (0% win rate, −₹832), and it caused 8 of 17 stop-hits — while the trades
+        # it never touched ran 57% win rate near breakeven. It was strangling
+        # trades at −1% to −2.5% that were still developing (winners here take ~5
+        # days to work; this started tightening on day 3), converting normal
+        # drawdown into near-certain small losses. A stop must give a thesis room
+        # to breathe; tightening it on noise is how you guarantee getting shaken
+        # out right before the recovery. Removed entirely — trades now ride their
+        # original ATR stop (with a real minimum distance) until it genuinely hits.
     return book
 
 

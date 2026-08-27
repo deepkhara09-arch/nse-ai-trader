@@ -229,13 +229,14 @@ REVERSAL_CONFIRM_COUNT  = 3    # need this many opposing sessions in the window�
 REVERSAL_WINDOW         = 4    # …out of the last this-many re-analyses
 REVERSAL_MIN_HELD_DAYS  = 2    # never reverse-exit in the first N days (entry room)
 
-# ── Time-decayed stop on stale losers ──────────────────────────────────────────
-# Live data: the entire negative expectancy came from full-width stop-hits
-# (avg -₹196). A position still underwater after a few days gets its stop pulled
-# progressively toward entry, so a dead trade is cut at a smaller loss instead of
-# the full ATR distance. Only applies to LOSERS that haven't started trailing.
-STALE_LOSS_START_DAY       = 3     # start tightening once underwater this many days
-STALE_LOSS_TIGHTEN_PER_DAY = 0.12  # remove this fraction of stop-distance per stale day (cap 60%)
+# ── (REMOVED) Time-decayed stop on stale losers ────────────────────────────────
+# These drove the "stale-loser stop tightening" that the data proved was net
+# harmful (trades it touched went 0-for-9, −₹832; see paper_trader._update_trailing
+# _stops). The rule is gone; the constants are retained as no-ops only so any
+# external reference does not error. Do NOT reintroduce tightening on drawdown —
+# a trade needs room to breathe; strangling it on noise guarantees a shakeout.
+STALE_LOSS_START_DAY       = 999   # (disabled — effectively never)
+STALE_LOSS_TIGHTEN_PER_DAY = 0.0   # (disabled)
 
 # ── News RSS feeds ────────────────────────────────────────────────────────────
 NEWS_FEEDS = [

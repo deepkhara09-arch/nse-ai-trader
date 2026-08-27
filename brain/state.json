@@ -1,13 +1,13 @@
 {
   "phase": "paper_trading",
   "day": 48,
-  "session": "morning",
+  "session": "preopen",
   "start_date": "2026-06-22",
   "phase_start_date": "2026-07-15",
   "last_run_date": "2026-08-26",
   "last_counted_date": "2026-08-26",
   "cohort_last_tick_date": "2026-08-26",
-  "last_updated": "2026-08-26T10:13:45.223243",
+  "last_updated": "2026-08-27T03:05:45.379309",
   "focus_stocks": [
     "SBIN.NS",
     "ABCAPITAL.NS",
@@ -165,7 +165,8 @@
     "[2026-08-25] Focus refresh \u2014 promoted: ['NIACL', 'LICI'] | demoted: ['ICICIBANK', 'UNIONBANK']",
     "[2026-08-26] Pre-open macro: neutral (+0.06)",
     "[2026-08-26] Focus refresh \u2014 promoted: ['COALINDIA'] | demoted: ['RELIANCE']",
-    "[2026-08-26] Cohort batch #29 complete \u2014 30 candidates ready"
+    "[2026-08-26] Cohort batch #29 complete \u2014 30 candidates ready",
+    "[2026-08-27] Pre-open macro: neutral (-0.05)"
   ],
   "alert_sent": false,
   "schema_version": 11,
@@ -395,11 +396,6 @@
     "scored_date": "2026-08-26"
   },
   "sessions_done": {
-    "preopen": "2026-08-26",
-    "morning": "2026-08-26",
-    "midday": "2026-08-26",
-    "afternoon": "2026-08-26",
-    "intraday_close": "2026-08-26",
-    "preclose": "2026-08-26"
+    "preopen": "2026-08-27"
   }
 }

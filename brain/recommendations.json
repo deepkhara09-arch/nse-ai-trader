@@ -3,10 +3,10 @@
     "ticker": "SBIN.NS",
     "nse_code": "SBIN",
     "company_name": "State Bank of India",
-    "date": "2026-08-26",
-    "generated_at": "2026-08-26 10:13 UTC",
+    "date": "2026-08-27",
+    "generated_at": "2026-08-27 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -45,7 +45,7 @@
     "profit_probability": 0.422,
     "composite_score": 59.95,
     "focus_rank": 5,
-    "rank_delta": -1,
+    "rank_delta": 0,
     "intention": "BUY SBIN for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
     "confluence_count": 5,
     "confluence_families": [
@@ -99,12 +99,12 @@
       "History backtest: this kind of BUY setup worked 58% of the time over ~1 week on this stock (sample: 62)"
     ],
     "patterns_seen": [
-      "stoch_rsi_oversold_reversal",
-      "supertrend_bullish",
       "full_bullish_alignment",
+      "outside_bar",
+      "supertrend_bullish",
+      "stoch_rsi_oversold_reversal",
       "tweezer_bottom",
-      "engulfing_bullish",
-      "outside_bar"
+      "engulfing_bullish"
     ],
     "reliable_patterns": [],
     "nearest_support": 1027.4,
@@ -131,18 +131,16 @@
     "paper_pnl": -151.69,
     "paper_expectancy": -151.69,
     "market_mood": "neutral",
-    "market_warning": [
-      "Narrow rally \u2014 only 1/4 sectors up. Fragile move."
-    ]
+    "market_warning": []
   },
   {
     "ticker": "SHRIRAMFIN.NS",
     "nse_code": "SHRIRAMFIN",
     "company_name": "SHRIRAMFIN.NS",
-    "date": "2026-08-26",
-    "generated_at": "2026-08-26 10:13 UTC",
+    "date": "2026-08-27",
+    "generated_at": "2026-08-27 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -176,12 +174,12 @@
     "pattern_score": 3.0,
     "confluence_bonus": 5.0,
     "paper_bonus": 0.0,
-    "success_probability": 0.506,
-    "base_success_prob": 0.484,
-    "profit_probability": 0.21,
-    "composite_score": 48.68,
+    "success_probability": 0.511,
+    "base_success_prob": 0.491,
+    "profit_probability": 0.227,
+    "composite_score": 49.57,
     "focus_rank": 9,
-    "rank_delta": -1,
+    "rank_delta": 0,
     "intention": "BUY SHRIRAMFIN for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
     "confluence_count": 4,
     "confluence_families": [
@@ -201,14 +199,14 @@
     "data_confidence": "Estimated",
     "data_confidence_key": "estimated",
     "data_confidence_note": "Only 1 paper trade(s) \u2014 probability is an indicator-based estimate, not yet proven",
-    "expected_edge_r": 0.21,
+    "expected_edge_r": 0.227,
     "buy_score": 13.8,
     "sell_score": 3.0,
     "reasons": [
       "All EMAs stacked bullish",
       "RSI=54 in healthy buy zone",
-      "Candlestick: tweezer bottom",
       "Candlestick: engulfing bullish",
+      "Candlestick: tweezer bottom",
       "Sector headwind (momentum=-0.34)",
       "Supertrend bullish \u2014 price above trend band",
       "Testing pivot point \u2014 decision zone",
@@ -235,14 +233,14 @@
       "History backtest: this kind of BUY setup worked 56% of the time over ~1 week on this stock (sample: 59)"
     ],
     "patterns_seen": [
-      "stoch_rsi_oversold_reversal",
-      "supertrend_bullish",
       "full_bullish_alignment",
-      "pivot_point_test",
       "strong_bullish_marubozu",
+      "pivot_point_test",
+      "engulfing_bullish",
+      "supertrend_bullish",
+      "stoch_rsi_oversold_reversal",
       "tweezer_bottom",
-      "rsi_bearish_divergence",
-      "engulfing_bullish"
+      "rsi_bearish_divergence"
     ],
     "reliable_patterns": [],
     "nearest_support": 1090.2,
@@ -269,18 +267,16 @@
     "paper_pnl": -35.85,
     "paper_expectancy": -35.85,
     "market_mood": "neutral",
-    "market_warning": [
-      "Narrow rally \u2014 only 1/4 sectors up. Fragile move."
-    ]
+    "market_warning": []
   },
   {
     "ticker": "HINDALCO.NS",
     "nse_code": "HINDALCO",
     "company_name": "HINDALCO.NS",
-    "date": "2026-08-26",
-    "generated_at": "2026-08-26 10:13 UTC",
+    "date": "2026-08-27",
+    "generated_at": "2026-08-27 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -314,12 +310,12 @@
     "pattern_score": 2.0,
     "confluence_bonus": 7.5,
     "paper_bonus": 0.0,
-    "success_probability": 0.56,
-    "base_success_prob": 0.542,
-    "profit_probability": 0.626,
-    "composite_score": 61.07,
+    "success_probability": 0.562,
+    "base_success_prob": 0.549,
+    "profit_probability": 0.647,
+    "composite_score": 62.04,
     "focus_rank": 3,
-    "rank_delta": -1,
+    "rank_delta": 0,
     "intention": "BUY HINDALCO for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
     "confluence_count": 5,
     "confluence_families": [
@@ -330,9 +326,9 @@
       "regime"
     ],
     "backtest_tested": true,
-    "backtest_hit_5d": 0.603,
-    "backtest_hit_10d": 0.569,
-    "backtest_sample": 58,
+    "backtest_hit_5d": 0.593,
+    "backtest_hit_10d": 0.576,
+    "backtest_sample": 59,
     "hist_long_trend": "strong_uptrend",
     "hist_52w_position": 86.6,
     "hist_personality": "choppy",
@@ -340,7 +336,7 @@
     "data_confidence": "Estimated",
     "data_confidence_key": "estimated",
     "data_confidence_note": "Only 0 paper trade(s) \u2014 probability is an indicator-based estimate, not yet proven",
-    "expected_edge_r": 0.626,
+    "expected_edge_r": 0.647,
     "buy_score": 11.0,
     "sell_score": 3.0,
     "reasons": [
@@ -367,18 +363,18 @@
       "Support at \u20b91027.62 cushions downside",
       "Resistance at \u20b91078.50 is natural target",
       "Confluence: 5 independent signal families agree (trend, volume, pattern, fundamentals, regime)",
-      "History backtest: this kind of BUY setup worked 60% of the time over ~1 week on this stock (sample: 58)"
+      "History backtest: this kind of BUY setup worked 59% of the time over ~1 week on this stock (sample: 59)"
     ],
     "patterns_seen": [
-      "stoch_rsi_oversold_reversal",
-      "supertrend_bullish",
       "full_bullish_alignment",
+      "macd_bearish_crossover",
+      "hammer",
       "pivot_s1_bounce",
       "pivot_point_test",
-      "hammer",
-      "rsi_bearish_divergence",
-      "macd_bearish_crossover",
-      "adx_strong_trend_up"
+      "adx_strong_trend_up",
+      "supertrend_bullish",
+      "stoch_rsi_oversold_reversal",
+      "rsi_bearish_divergence"
     ],
     "reliable_patterns": [],
     "nearest_support": 1027.62,
@@ -405,8 +401,6 @@
     "paper_pnl": 0,
     "paper_expectancy": 0,
     "market_mood": "neutral",
-    "market_warning": [
-      "Narrow rally \u2014 only 1/4 sectors up. Fragile move."
-    ]
+    "market_warning": []
   }
 ]

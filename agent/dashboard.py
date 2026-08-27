@@ -784,7 +784,13 @@ tbody tr:hover { box-shadow: inset 2px 0 0 var(--green) }
   position: fixed; inset: 0; width: 100%; height: 100%;
   z-index: 0; pointer-events: none; opacity: .55;
 }
-.header, .container, .bottom-nav, .phase-strip { position: relative; z-index: 1 }
+/* Lift real content above the ambient canvas (z-index:0). The header, bottom-nav
+   and phase-strip keep their OWN positioning (sticky/fixed) — only give them a
+   stacking context above the canvas; never override their position. */
+.container { position: relative; z-index: 1 }
+.header { z-index: 100 }        /* stays sticky (defined above) */
+.bottom-nav { z-index: 200 }    /* stays fixed (defined above) — must never scroll away */
+.phase-strip { position: relative; z-index: 1 }
 
 /* ── HERO: the landing moment — equity chart backdrop + headline value ── */
 .hero {

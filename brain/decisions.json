@@ -1,94 +1,5 @@
 [
   {
-    "timestamp": "2026-07-27T09:45:39.392141",
-    "date": "2026-07-27",
-    "ticker": "NHPC.NS",
-    "session": "intraday_close",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 74.4,
-    "entry": 79.85,
-    "stop_loss": 77.4,
-    "target": 84.76,
-    "reason": "paper intraday_close",
-    "patterns": [
-      "macd_bearish_crossover",
-      "stoch_rsi_oversold_reversal",
-      "pivot_point_test",
-      "doji",
-      "supertrend_bullish",
-      "spinning_top",
-      "gap_down_reversal",
-      "low_volume_drift",
-      "full_bullish_alignment"
-    ]
-  },
-  {
-    "timestamp": "2026-07-27T09:45:39.392588",
-    "date": "2026-07-27",
-    "ticker": "FEDERALBNK.NS",
-    "session": "intraday_close",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 95,
-    "entry": 356.65,
-    "stop_loss": 344.8,
-    "target": 380.35,
-    "reason": "paper intraday_close",
-    "patterns": [
-      "supertrend_bullish",
-      "adx_strong_trend_up",
-      "low_volume_drift",
-      "full_bullish_alignment",
-      "near_52w_high"
-    ]
-  },
-  {
-    "timestamp": "2026-07-27T10:11:19.316119",
-    "date": "2026-07-27",
-    "ticker": "MARICO.NS",
-    "session": "preclose",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 95,
-    "entry": 858.65,
-    "stop_loss": 834.73,
-    "target": 906.5,
-    "reason": "paper preclose",
-    "patterns": [
-      "rsi_bullish_divergence",
-      "macd_bearish_crossover",
-      "pivot_point_test",
-      "hammer",
-      "adx_strong_trend_up",
-      "full_bullish_alignment",
-      "supertrend_bullish",
-      "near_52w_high"
-    ]
-  },
-  {
-    "timestamp": "2026-07-27T10:11:19.316888",
-    "date": "2026-07-27",
-    "ticker": "SBIN.NS",
-    "session": "preclose",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 95,
-    "entry": 1020.6,
-    "stop_loss": 989.54,
-    "target": 1082.72,
-    "reason": "paper preclose",
-    "patterns": [
-      "stoch_rsi_oversold_reversal",
-      "adx_ranging_market",
-      "rsi_bullish_divergence",
-      "ema_death_cross",
-      "piercing_line",
-      "supertrend_bullish",
-      "pivot_r1_breakout"
-    ]
-  },
-  {
     "timestamp": "2026-07-27T10:11:19.317788",
     "date": "2026-07-27",
     "ticker": "NESTLEIND.NS",
@@ -21297,6 +21208,95 @@
       "rsi_bearish_divergence",
       "macd_bearish_crossover",
       "adx_strong_trend_up"
+    ]
+  },
+  {
+    "timestamp": "2026-08-27T04:05:46.689694",
+    "date": "2026-08-27",
+    "ticker": "ABCAPITAL.NS",
+    "session": "morning",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 84.2,
+    "entry": 412.35,
+    "stop_loss": 398.56,
+    "target": 439.94,
+    "reason": "paper morning",
+    "patterns": [
+      "supertrend_bullish",
+      "stoch_rsi_oversold_reversal",
+      "full_bullish_alignment",
+      "pivot_point_test",
+      "adx_ranging_market",
+      "doji",
+      "engulfing_bullish"
+    ]
+  },
+  {
+    "timestamp": "2026-08-27T04:05:46.692284",
+    "date": "2026-08-27",
+    "ticker": "GAIL.NS",
+    "session": "morning",
+    "action": "SELL",
+    "signal": "SELL",
+    "confidence": 61.1,
+    "entry": 173.88,
+    "stop_loss": 178.41,
+    "target": 164.83,
+    "reason": "paper morning",
+    "patterns": [
+      "inside_bar",
+      "pivot_point_test",
+      "rsi_bearish_divergence",
+      "pivot_s1_breakdown",
+      "tweezer_top",
+      "shooting_star",
+      "adx_ranging_market",
+      "bearish_harami",
+      "stoch_rsi_overbought_reversal"
+    ]
+  },
+  {
+    "timestamp": "2026-08-27T04:05:46.693351",
+    "date": "2026-08-27",
+    "ticker": "SIEMENS.NS",
+    "session": "morning",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 74.2,
+    "entry": 4085.3,
+    "stop_loss": 3938.78,
+    "target": 4378.34,
+    "reason": "paper morning",
+    "patterns": [
+      "full_bullish_alignment",
+      "pivot_point_test",
+      "adx_strong_trend_up",
+      "momentum_continuation",
+      "near_52w_high",
+      "strong_bearish_marubozu"
+    ]
+  },
+  {
+    "timestamp": "2026-08-27T04:05:46.698638",
+    "date": "2026-08-27",
+    "ticker": "NIACL.NS",
+    "session": "morning",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 61.0,
+    "entry": 186.79,
+    "stop_loss": 179.08,
+    "target": 202.22,
+    "reason": "paper morning",
+    "patterns": [
+      "supertrend_bullish",
+      "stoch_rsi_oversold_reversal",
+      "full_bullish_alignment",
+      "adx_strong_trend_up",
+      "rsi_bearish_divergence",
+      "momentum_continuation",
+      "outside_bar"
     ]
   }
 ]

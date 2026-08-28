@@ -1,65 +1,5 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of adx_ranging_market, bb_midline_support, early_recovery mean for a swing trade on HOMEFIRST? Current RSI=44, MACD hist=+0.6600, Vol=0.7x average. Signal is BUY.",
-    "context": {
-      "ticker": "HOMEFIRST.NS",
-      "signal": "BUY",
-      "patterns": "adx_ranging_market, bb_midline_support, early_recovery",
-      "rsi": 44.4
-    },
-    "queued_at": "2026-08-27T19:16:30.161093"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of outside_bar, engulfing_bearish, bb_lower_bounce mean for a swing trade on VBL? Current RSI=36, MACD hist=+0.7426, Vol=5.9x average. Signal is SELL.",
-    "context": {
-      "ticker": "VBL.NS",
-      "signal": "SELL",
-      "patterns": "outside_bar, engulfing_bearish, bb_lower_bounce",
-      "rsi": 35.9
-    },
-    "queued_at": "2026-08-27T19:16:30.162233"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of pivot_point_test, adx_ranging_market mean for a swing trade on ABCAPITAL? Current RSI=40, MACD hist=-0.3094, Vol=0.6x average. Signal is BUY.",
-    "context": {
-      "ticker": "ABCAPITAL.NS",
-      "signal": "BUY",
-      "patterns": "pivot_point_test, adx_ranging_market",
-      "rsi": 40.4
-    },
-    "queued_at": "2026-08-28T03:05:40.082056"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of adx_ranging_market, spinning_top mean for a swing trade on PIDILITIND? Current RSI=39, MACD hist=-6.9775, Vol=0.6x average. Signal is BUY.",
-    "context": {
-      "ticker": "PIDILITIND.NS",
-      "signal": "BUY",
-      "patterns": "adx_ranging_market, spinning_top",
-      "rsi": 39.5
-    },
-    "queued_at": "2026-08-28T03:05:40.083166"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of stoch_rsi_overbought_reversal, adx_ranging_market, shooting_star mean for a swing trade on GAIL? Current RSI=46, MACD hist=-0.1236, Vol=0.5x average. Signal is SELL.",
-    "context": {
-      "ticker": "GAIL.NS",
-      "signal": "SELL",
-      "patterns": "stoch_rsi_overbought_reversal, adx_ranging_market, shooting_star",
-      "rsi": 45.8
-    },
-    "queued_at": "2026-08-28T03:05:40.088093"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of strong_bearish_marubozu, momentum_continuation mean for a swing trade on SIEMENS? Current RSI=57, MACD hist=+2.4602, Vol=0.8x average. Signal is BUY.",
-    "context": {
-      "ticker": "SIEMENS.NS",
-      "signal": "BUY",
-      "patterns": "strong_bearish_marubozu, momentum_continuation",
-      "rsi": 57.3
-    },
-    "queued_at": "2026-08-28T03:05:40.089175"
-  },
-  {
     "question": "In Indian NSE markets, what does the combination of pivot_point_test, rsi_bullish_divergence, low_volume_drift mean for a swing trade on ASIANPAINT? Current RSI=23, MACD hist=-11.9334, Vol=0.4x average. Signal is BUY.",
     "context": {
       "ticker": "ASIANPAINT.NS",
@@ -98,5 +38,65 @@
       "rsi": 35.9
     },
     "queued_at": "2026-08-28T03:05:40.099905"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of shooting_star, spinning_top, adx_ranging_market mean for a swing trade on PIDILITIND? Current RSI=39, MACD hist=-6.9775, Vol=0.6x average. Signal is BUY.",
+    "context": {
+      "ticker": "PIDILITIND.NS",
+      "signal": "BUY",
+      "patterns": "shooting_star, spinning_top, adx_ranging_market",
+      "rsi": 39.5
+    },
+    "queued_at": "2026-08-28T04:05:42.802271"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of early_recovery, pivot_s1_breakdown, oversold_macd_reversal mean for a swing trade on COALINDIA? Current RSI=30, MACD hist=+0.0398, Vol=0.7x average. Signal is SELL.",
+    "context": {
+      "ticker": "COALINDIA.NS",
+      "signal": "SELL",
+      "patterns": "early_recovery, pivot_s1_breakdown, oversold_macd_reversal",
+      "rsi": 29.6
+    },
+    "queued_at": "2026-08-28T04:05:42.808779"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of early_recovery, bb_midline_support, adx_ranging_market mean for a swing trade on HOMEFIRST? Current RSI=44, MACD hist=+0.6600, Vol=0.7x average. Signal is BUY.",
+    "context": {
+      "ticker": "HOMEFIRST.NS",
+      "signal": "BUY",
+      "patterns": "early_recovery, bb_midline_support, adx_ranging_market",
+      "rsi": 44.4
+    },
+    "queued_at": "2026-08-28T04:05:42.809910"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of shooting_star, spinning_top, adx_ranging_market mean for a swing trade on PIDILITIND? Current RSI=39, MACD hist=-6.9775, Vol=0.6x average. Signal is BUY.",
+    "context": {
+      "ticker": "PIDILITIND.NS",
+      "signal": "BUY",
+      "patterns": "shooting_star, spinning_top, adx_ranging_market",
+      "rsi": 39.5
+    },
+    "queued_at": "2026-08-28T04:05:42.923693"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of early_recovery, pivot_s1_breakdown, oversold_macd_reversal mean for a swing trade on COALINDIA? Current RSI=30, MACD hist=+0.0398, Vol=0.7x average. Signal is SELL.",
+    "context": {
+      "ticker": "COALINDIA.NS",
+      "signal": "SELL",
+      "patterns": "early_recovery, pivot_s1_breakdown, oversold_macd_reversal",
+      "rsi": 29.6
+    },
+    "queued_at": "2026-08-28T04:05:42.935380"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of early_recovery, bb_midline_support, adx_ranging_market mean for a swing trade on HOMEFIRST? Current RSI=44, MACD hist=+0.6600, Vol=0.7x average. Signal is BUY.",
+    "context": {
+      "ticker": "HOMEFIRST.NS",
+      "signal": "BUY",
+      "patterns": "early_recovery, bb_midline_support, adx_ranging_market",
+      "rsi": 44.4
+    },
+    "queued_at": "2026-08-28T04:05:42.936492"
   }
 ]

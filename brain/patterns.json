@@ -497,94 +497,106 @@
     "reliable_patterns": {
       "inside_bar": {
         "wins": 0.0,
-        "losses": 0.5,
-        "reliability": 0.417,
+        "losses": 0.375,
+        "reliability": 0.438,
         "last_seen": "2026-07-09"
       },
       "full_bullish_alignment": {
-        "wins": 0.5,
-        "losses": 1.449,
-        "reliability": 0.342,
-        "last_seen": "2026-07-15"
+        "wins": 0.388,
+        "losses": 2.124,
+        "reliability": 0.211,
+        "last_seen": "2026-08-28"
       },
       "supertrend_bullish": {
         "wins": 0.0,
-        "losses": 1.5,
-        "reliability": 0.25,
-        "last_seen": "2026-07-09"
+        "losses": 2.124,
+        "reliability": 0.146,
+        "last_seen": "2026-08-28"
       },
       "pivot_point_test": {
         "wins": 0.0,
-        "losses": 1.0,
-        "reliability": 0.333,
-        "last_seen": "2026-07-09"
+        "losses": 1.749,
+        "reliability": 0.208,
+        "last_seen": "2026-08-28"
       },
       "doji": {
         "wins": 0.0,
-        "losses": 0.5,
-        "reliability": 0.417,
+        "losses": 0.375,
+        "reliability": 0.438,
         "last_seen": "2026-07-09"
       },
       "stoch_rsi_oversold_reversal": {
         "wins": 0.0,
-        "losses": 1.0,
-        "reliability": 0.333,
-        "last_seen": "2026-07-09"
+        "losses": 1.749,
+        "reliability": 0.208,
+        "last_seen": "2026-08-28"
       },
       "rsi_bearish_divergence": {
         "wins": 0.0,
-        "losses": 0.5,
-        "reliability": 0.417,
+        "losses": 0.375,
+        "reliability": 0.438,
         "last_seen": "2026-07-09"
       },
       "low_volume_drift": {
         "wins": 0.0,
-        "losses": 0.5,
-        "reliability": 0.417,
-        "last_seen": "2026-07-09"
+        "losses": 1.375,
+        "reliability": 0.271,
+        "last_seen": "2026-08-28"
       },
       "tweezer_bottom": {
         "wins": 0.0,
-        "losses": 0.5,
-        "reliability": 0.417,
-        "last_seen": "2026-07-09"
+        "losses": 1.375,
+        "reliability": 0.271,
+        "last_seen": "2026-08-28"
       },
       "pivot_s1_bounce": {
         "wins": 0.0,
-        "losses": 0.5,
-        "reliability": 0.417,
-        "last_seen": "2026-07-09"
+        "losses": 1.375,
+        "reliability": 0.271,
+        "last_seen": "2026-08-28"
       },
       "engulfing_bearish": {
-        "wins": 0.5,
+        "wins": 0.388,
         "losses": 0.0,
-        "reliability": 0.583,
+        "reliability": 0.565,
         "last_seen": "2026-07-15"
       },
       "rsi_bullish_divergence": {
-        "wins": 0.5,
+        "wins": 0.388,
         "losses": 0.0,
-        "reliability": 0.583,
+        "reliability": 0.565,
         "last_seen": "2026-07-15"
       },
       "pivot_s1_breakdown": {
-        "wins": 0.5,
+        "wins": 0.388,
         "losses": 0.0,
-        "reliability": 0.583,
+        "reliability": 0.565,
         "last_seen": "2026-07-15"
+      },
+      "bullish_harami": {
+        "wins": 0.0,
+        "losses": 1.0,
+        "reliability": 0.333,
+        "last_seen": "2026-08-28"
+      },
+      "adx_ranging_market": {
+        "wins": 0.0,
+        "losses": 1.0,
+        "reliability": 0.333,
+        "last_seen": "2026-08-28"
       }
     },
     "preferred_style": "swing",
     "swing_wins": 0,
-    "swing_losses": 0,
+    "swing_losses": 1,
     "intraday_wins": 0,
     "intraday_losses": 0,
     "long_term_wins": 0,
     "long_term_losses": 0,
-    "atr_stop_hits": 0,
+    "atr_stop_hits": 1,
     "atr_target_hits": 0,
     "atr_multiplier": 1.5,
-    "last_updated": "2026-07-15",
+    "last_updated": "2026-08-28",
     "attribution": {
       "by_pattern": {},
       "by_session": {},
@@ -3139,8 +3151,8 @@
     "patterns": {
       "full_bullish_alignment": {
         "wins": 10.0,
-        "losses": 18.0,
-        "reliability": 0.357,
+        "losses": 19.0,
+        "reliability": 0.345,
         "last_seen": "2026-08-28"
       },
       "near_52w_high": {
@@ -3151,8 +3163,8 @@
       },
       "low_volume_drift": {
         "wins": 1.0,
-        "losses": 1.0,
-        "reliability": 0.5,
+        "losses": 2.0,
+        "reliability": 0.375,
         "last_seen": "2026-08-28"
       },
       "spinning_top": {
@@ -3163,8 +3175,8 @@
       },
       "pivot_point_test": {
         "wins": 11.0,
-        "losses": 8.0,
-        "reliability": 0.579,
+        "losses": 9.0,
+        "reliability": 0.55,
         "last_seen": "2026-08-28"
       },
       "adx_strong_trend_up": {
@@ -3175,14 +3187,14 @@
       },
       "tweezer_bottom": {
         "wins": 5.0,
-        "losses": 5.0,
-        "reliability": 0.5,
+        "losses": 6.0,
+        "reliability": 0.455,
         "last_seen": "2026-08-28"
       },
       "supertrend_bullish": {
         "wins": 10.0,
-        "losses": 14.0,
-        "reliability": 0.417,
+        "losses": 15.0,
+        "reliability": 0.4,
         "last_seen": "2026-08-28"
       },
       "engulfing_bullish": {
@@ -3205,8 +3217,8 @@
       },
       "pivot_s1_bounce": {
         "wins": 2.0,
-        "losses": 0.0,
-        "reliability": 0.75,
+        "losses": 1.0,
+        "reliability": 0.625,
         "last_seen": "2026-08-28"
       },
       "pivot_r1_breakout": {
@@ -3235,14 +3247,14 @@
       },
       "adx_ranging_market": {
         "wins": 2.0,
-        "losses": 2.0,
-        "reliability": 0.5,
+        "losses": 3.0,
+        "reliability": 0.4,
         "last_seen": "2026-08-28"
       },
       "stoch_rsi_oversold_reversal": {
         "wins": 3.0,
-        "losses": 2.0,
-        "reliability": 0.6,
+        "losses": 3.0,
+        "reliability": 0.5,
         "last_seen": "2026-08-28"
       },
       "pivot_s1_breakdown": {
@@ -3390,6 +3402,12 @@
         "last_seen": "2026-08-28"
       },
       "gap_up_reversal": {
+        "wins": 0.0,
+        "losses": 1.0,
+        "reliability": 0.375,
+        "last_seen": "2026-08-28"
+      },
+      "bullish_harami": {
         "wins": 0.0,
         "losses": 1.0,
         "reliability": 0.375,

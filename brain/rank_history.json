@@ -7603,22 +7603,22 @@
     "date": "2026-08-28",
     "ranked": [
       {
-        "ticker": "GAIL.NS",
-        "rank": 1,
-        "composite_score": 63.34,
-        "success_probability": 0.559
-      },
-      {
         "ticker": "HINDALCO.NS",
-        "rank": 2,
+        "rank": 1,
         "composite_score": 58.3,
         "success_probability": 0.523
       },
       {
         "ticker": "PIDILITIND.NS",
-        "rank": 3,
+        "rank": 2,
         "composite_score": 57.02,
         "success_probability": 0.701
+      },
+      {
+        "ticker": "GAIL.NS",
+        "rank": 3,
+        "composite_score": 56.01,
+        "success_probability": 0.531
       },
       {
         "ticker": "JSWSTEEL.NS",
@@ -7647,7 +7647,7 @@
       {
         "ticker": "COALINDIA.NS",
         "rank": 8,
-        "composite_score": 49.52,
+        "composite_score": 49.84,
         "success_probability": 0.458
       },
       {
@@ -7669,16 +7669,16 @@
         "success_probability": 0.461
       },
       {
-        "ticker": "SHRIRAMFIN.NS",
+        "ticker": "VBL.NS",
         "rank": 12,
-        "composite_score": 45.45,
-        "success_probability": 0.452
+        "composite_score": 46.0,
+        "success_probability": 0.429
       },
       {
-        "ticker": "VBL.NS",
+        "ticker": "SHRIRAMFIN.NS",
         "rank": 13,
-        "composite_score": 45.2,
-        "success_probability": 0.429
+        "composite_score": 45.45,
+        "success_probability": 0.452
       },
       {
         "ticker": "LICI.NS",
@@ -7689,7 +7689,7 @@
       {
         "ticker": "GRASIM.NS",
         "rank": 15,
-        "composite_score": 40.85,
+        "composite_score": 41.03,
         "success_probability": 0.432
       }
     ]

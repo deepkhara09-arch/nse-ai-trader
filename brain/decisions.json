@@ -1,91 +1,5 @@
 [
   {
-    "timestamp": "2026-07-28T09:44:45.082549",
-    "date": "2026-07-28",
-    "ticker": "LICI.NS",
-    "session": "intraday_close",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 70.0,
-    "entry": 426.8,
-    "stop_loss": 412.97,
-    "target": 454.46,
-    "reason": "paper intraday_close",
-    "patterns": [
-      "low_volume_drift",
-      "morning_star",
-      "stoch_rsi_oversold_reversal",
-      "rsi_bearish_divergence",
-      "supertrend_bullish",
-      "ema_death_cross"
-    ]
-  },
-  {
-    "timestamp": "2026-07-28T09:44:45.083183",
-    "date": "2026-07-28",
-    "ticker": "NHPC.NS",
-    "session": "intraday_close",
-    "action": "SELL",
-    "signal": "SELL",
-    "confidence": 59.5,
-    "entry": 78.35,
-    "stop_loss": 80.69,
-    "target": 73.66,
-    "reason": "paper intraday_close",
-    "patterns": [
-      "adx_strong_trend_up",
-      "low_volume_drift",
-      "stoch_rsi_overbought_reversal",
-      "pivot_s1_breakdown",
-      "tweezer_top",
-      "full_bullish_alignment",
-      "engulfing_bearish",
-      "rsi_bullish_divergence"
-    ]
-  },
-  {
-    "timestamp": "2026-07-28T09:44:45.083449",
-    "date": "2026-07-28",
-    "ticker": "FEDERALBNK.NS",
-    "session": "intraday_close",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 92.0,
-    "entry": 357.15,
-    "stop_loss": 345.5,
-    "target": 380.44,
-    "reason": "paper intraday_close",
-    "patterns": [
-      "adx_strong_trend_up",
-      "rsi_bearish_divergence",
-      "supertrend_bullish",
-      "full_bullish_alignment",
-      "near_52w_high"
-    ]
-  },
-  {
-    "timestamp": "2026-07-28T10:11:29.297797",
-    "date": "2026-07-28",
-    "ticker": "MARICO.NS",
-    "session": "preclose",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 95,
-    "entry": 883.25,
-    "stop_loss": 859.35,
-    "target": 931.06,
-    "reason": "paper preclose",
-    "patterns": [
-      "near_52w_high",
-      "adx_strong_trend_up",
-      "macd_bullish_crossover",
-      "supertrend_bullish",
-      "rsi_bearish_divergence",
-      "momentum_continuation",
-      "full_bullish_alignment"
-    ]
-  },
-  {
     "timestamp": "2026-07-28T10:11:29.299169",
     "date": "2026-07-28",
     "ticker": "HOMEFIRST.NS",
@@ -21281,6 +21195,93 @@
       "near_52w_high",
       "full_bullish_alignment",
       "stoch_rsi_overbought_reversal"
+    ]
+  },
+  {
+    "timestamp": "2026-08-28T09:45:42.280853",
+    "date": "2026-08-28",
+    "ticker": "SIEMENS.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 95,
+    "entry": 4080.0,
+    "stop_loss": 3931.09,
+    "target": 4377.81,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "supertrend_bullish",
+      "tweezer_bottom",
+      "full_bullish_alignment",
+      "adx_strong_trend_up",
+      "near_52w_high",
+      "bullish_harami",
+      "pivot_point_test"
+    ]
+  },
+  {
+    "timestamp": "2026-08-28T09:45:42.286312",
+    "date": "2026-08-28",
+    "ticker": "COALINDIA.NS",
+    "session": "intraday_close",
+    "action": "SELL",
+    "signal": "SELL",
+    "confidence": 64.2,
+    "entry": 400.6,
+    "stop_loss": 408.99,
+    "target": 383.81,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "oversold_macd_reversal",
+      "adx_strong_trend_down",
+      "early_recovery",
+      "full_bearish_alignment",
+      "three_black_crows",
+      "pivot_s1_breakdown"
+    ]
+  },
+  {
+    "timestamp": "2026-08-28T09:45:42.288162",
+    "date": "2026-08-28",
+    "ticker": "VBL.NS",
+    "session": "intraday_close",
+    "action": "SELL",
+    "signal": "SELL",
+    "confidence": 56.6,
+    "entry": 412.85,
+    "stop_loss": 428.67,
+    "target": 381.21,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "pivot_s1_breakdown",
+      "adx_strong_trend_down",
+      "early_recovery",
+      "full_bearish_alignment",
+      "volume_breakdown_bearish",
+      "bb_lower_bounce"
+    ]
+  },
+  {
+    "timestamp": "2026-08-28T09:45:42.289265",
+    "date": "2026-08-28",
+    "ticker": "JSWSTEEL.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 61.8,
+    "entry": 1326.6,
+    "stop_loss": 1290.73,
+    "target": 1398.34,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "engulfing_bearish",
+      "stoch_rsi_overbought_reversal",
+      "pivot_point_test",
+      "full_bullish_alignment",
+      "near_52w_high",
+      "adx_strong_trend_up",
+      "bb_upper_rejection",
+      "pivot_s1_breakdown"
     ]
   }
 ]

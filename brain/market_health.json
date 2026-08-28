@@ -60,7 +60,9 @@
   },
   "market_mood": "neutral",
   "trade_allowed": true,
-  "warnings": [],
+  "warnings": [
+    "Net institutional outflow (\u20b9+144 Cr)"
+  ],
   "leading_sectors": [
     "Pharma"
   ],
@@ -131,10 +133,10 @@
   "macro_risk_factor": 1.0,
   "fii_dii": {
     "date": "2026-08-28",
-    "fii_net_cr": -298.26,
-    "dii_net_cr": 4977.17,
-    "combined_net_cr": 4678.91,
-    "signal": "strong_inflow",
+    "fii_net_cr": -5039.8,
+    "dii_net_cr": 5183.93,
+    "combined_net_cr": 144.13,
+    "signal": "outflow",
     "ok": true,
     "error": "",
     "history": [
@@ -314,19 +316,18 @@
       },
       {
         "date": "2026-08-28",
-        "fii": -298.26,
-        "dii": 4977.17,
-        "combined": 4678.91
+        "fii": -5039.8,
+        "dii": 5183.93,
+        "combined": 144.13
       }
     ]
   },
-  "flow_tailwind": true,
   "pcr": {
     "date": "2026-08-28",
-    "pcr": 0.777,
+    "pcr": 0.776,
     "reading": "bearish_bias",
-    "total_pe_oi": 2224497,
-    "total_ce_oi": 2861653,
+    "total_pe_oi": 2167095,
+    "total_ce_oi": 2792623,
     "spot": 24175.65,
     "max_pain": 24200.0,
     "max_pain_dist_pct": -0.1,

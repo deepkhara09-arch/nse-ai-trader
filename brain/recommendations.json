@@ -3,10 +3,10 @@
     "ticker": "SIEMENS.NS",
     "nse_code": "SIEMENS",
     "company_name": "SIEMENS.NS",
-    "date": "2026-08-28",
-    "generated_at": "2026-08-28 09:45 UTC",
-    "valid_until": "15:40 IST",
-    "session": "intraday_close",
+    "date": "2026-08-29",
+    "generated_at": "2026-08-28 19:24 UTC",
+    "valid_until": "09:35 IST",
+    "session": "preclose",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -40,10 +40,10 @@
     "pattern_score": 1.0,
     "confluence_bonus": 5.0,
     "paper_bonus": 0.0,
-    "success_probability": 0.591,
-    "base_success_prob": 0.564,
-    "profit_probability": 0.107,
-    "composite_score": 52.78,
+    "success_probability": 0.578,
+    "base_success_prob": 0.551,
+    "profit_probability": 0.081,
+    "composite_score": 51.18,
     "focus_rank": 5,
     "rank_delta": 0,
     "intention": "BUY SIEMENS for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
@@ -55,9 +55,9 @@
       "news"
     ],
     "backtest_tested": true,
-    "backtest_hit_5d": 0.653,
-    "backtest_hit_10d": 0.531,
-    "backtest_sample": 49,
+    "backtest_hit_5d": 0.64,
+    "backtest_hit_10d": 0.52,
+    "backtest_sample": 50,
     "hist_long_trend": "strong_uptrend",
     "hist_52w_position": 71.7,
     "hist_personality": "trender",
@@ -65,7 +65,7 @@
     "data_confidence": "Estimated",
     "data_confidence_key": "estimated",
     "data_confidence_note": "Only 2 paper trade(s) \u2014 probability is an indicator-based estimate, not yet proven",
-    "expected_edge_r": 0.107,
+    "expected_edge_r": 0.081,
     "buy_score": 13.99,
     "sell_score": 1,
     "reasons": [
@@ -81,7 +81,6 @@
       "In a long-term strong uptrend (2yr) \u2014 trend on our side",
       "Clean trender aligned with its long-term uptrend",
       "\u2713 Daily setup aligned with the higher-timeframe trend",
-      "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
       "Valuation: P/E 86.6x",
       "ROCE: 9.2%",
       "Revenue growing 14.8% YoY",
@@ -97,16 +96,16 @@
       "Resistance at \u20b94200.00 is natural target",
       "Latest news: 'Siemens rallies 5%, hits new high in subdued market; what's driving st'",
       "Confluence: 4 independent signal families agree (trend, momentum, pattern, news)",
-      "History backtest: this kind of BUY setup worked 65% of the time over ~1 week on this stock (sample: 49)"
+      "History backtest: this kind of BUY setup worked 64% of the time over ~1 week on this stock (sample: 50)"
     ],
     "patterns_seen": [
       "supertrend_bullish",
-      "tweezer_bottom",
-      "full_bullish_alignment",
-      "adx_strong_trend_up",
       "near_52w_high",
+      "tweezer_bottom",
+      "pivot_point_test",
       "bullish_harami",
-      "pivot_point_test"
+      "full_bullish_alignment",
+      "adx_strong_trend_up"
     ],
     "reliable_patterns": [],
     "nearest_support": 4004.93,
@@ -132,20 +131,19 @@
     "paper_win_rate": 0.5,
     "paper_pnl": 190.2,
     "paper_expectancy": 95.1,
-    "market_mood": "bearish",
+    "market_mood": "neutral",
     "market_warning": [
-      "Nifty choppy intraday \u2014 wait for cleaner setups",
-      "PCR low (0.59) \u2014 market complacent, caution"
+      "Net institutional outflow (\u20b9+144 Cr)"
     ]
   },
   {
     "ticker": "JSWSTEEL.NS",
     "nse_code": "JSWSTEEL",
     "company_name": "JSW Steel Ltd",
-    "date": "2026-08-28",
-    "generated_at": "2026-08-28 09:45 UTC",
-    "valid_until": "15:40 IST",
-    "session": "intraday_close",
+    "date": "2026-08-29",
+    "generated_at": "2026-08-28 19:24 UTC",
+    "valid_until": "09:35 IST",
+    "session": "preclose",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -179,10 +177,10 @@
     "pattern_score": 8.5,
     "confluence_bonus": 7.5,
     "paper_bonus": 5.0,
-    "success_probability": 0.629,
-    "base_success_prob": 0.65,
-    "profit_probability": 0.166,
-    "composite_score": 53.62,
+    "success_probability": 0.621,
+    "base_success_prob": 0.638,
+    "profit_probability": 0.144,
+    "composite_score": 52.12,
     "focus_rank": 4,
     "rank_delta": 0,
     "intention": "BUY JSWSTEEL for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
@@ -205,7 +203,7 @@
     "data_confidence": "Estimated",
     "data_confidence_key": "estimated",
     "data_confidence_note": "Only 3 paper trade(s) \u2014 probability is an indicator-based estimate, not yet proven",
-    "expected_edge_r": 0.166,
+    "expected_edge_r": 0.144,
     "buy_score": 9.32,
     "sell_score": 6.0,
     "reasons": [
@@ -219,7 +217,6 @@
       "In a long-term strong uptrend (2yr) \u2014 trend on our side",
       "Near 52-week high (100% of range) \u2014 breakout zone",
       "\u2713 Daily setup aligned with the higher-timeframe trend",
-      "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
       "\u26a0 Strong opposing signals present (opposing evidence 64% of the leading side) \u2014 conflicted setup, needs extra conviction",
       "Valuation: P/E 13.2x",
       "ROCE: 14.5%",
@@ -238,14 +235,14 @@
       "History backtest: this kind of BUY setup worked 58% of the time over ~1 week on this stock (sample: 62)"
     ],
     "patterns_seen": [
-      "engulfing_bearish",
-      "stoch_rsi_overbought_reversal",
-      "pivot_point_test",
-      "full_bullish_alignment",
       "near_52w_high",
-      "adx_strong_trend_up",
+      "stoch_rsi_overbought_reversal",
+      "engulfing_bearish",
+      "pivot_point_test",
       "bb_upper_rejection",
-      "pivot_s1_breakdown"
+      "full_bullish_alignment",
+      "pivot_s1_breakdown",
+      "adx_strong_trend_up"
     ],
     "reliable_patterns": [
       "full_bullish_alignment",
@@ -275,10 +272,9 @@
     "paper_win_rate": 0.667,
     "paper_pnl": -215.26,
     "paper_expectancy": -71.75,
-    "market_mood": "bearish",
+    "market_mood": "neutral",
     "market_warning": [
-      "Nifty choppy intraday \u2014 wait for cleaner setups",
-      "PCR low (0.59) \u2014 market complacent, caution"
+      "Net institutional outflow (\u20b9+144 Cr)"
     ]
   }
 ]

@@ -5878,5 +5878,25 @@
     "open": 6,
     "recs": 1,
     "summary": "Intraday square-off (3:15) \u00b7 Paper-trading trading-day 33 \u00b7 6 open \u00b7 32 closed (38% WR)."
+  },
+  {
+    "date": "2026-08-29",
+    "triggered_at": "2026-08-29 00:54 IST",
+    "session": "preclose",
+    "phase": "paper_trading",
+    "day": 50,
+    "stats": {
+      "total": 32,
+      "wins": 12,
+      "losses": 20,
+      "win_rate": 0.375,
+      "total_pnl": -1382.86,
+      "avg_win": 125.39,
+      "avg_loss": -144.38,
+      "expectancy": -43.21
+    },
+    "open": 6,
+    "recs": 2,
+    "summary": "Preclose \u2014 NSE closed (weekend); dashboard refreshed, no trading, day unchanged."
   }
 ]

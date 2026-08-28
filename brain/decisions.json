@@ -1,48 +1,5 @@
 [
   {
-    "timestamp": "2026-07-28T10:11:29.299169",
-    "date": "2026-07-28",
-    "ticker": "HOMEFIRST.NS",
-    "session": "preclose",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 95,
-    "entry": 1181.8,
-    "stop_loss": 1116.66,
-    "target": 1312.09,
-    "reason": "paper preclose",
-    "patterns": [
-      "shooting_star",
-      "adx_strong_trend_up",
-      "pivot_point_test",
-      "gap_up_reversal",
-      "full_bullish_alignment"
-    ]
-  },
-  {
-    "timestamp": "2026-07-28T10:11:29.299980",
-    "date": "2026-07-28",
-    "ticker": "NESTLEIND.NS",
-    "session": "preclose",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 95,
-    "entry": 1491.8,
-    "stop_loss": 1441.9,
-    "target": 1591.6,
-    "reason": "paper preclose",
-    "patterns": [
-      "near_52w_high",
-      "supertrend_bullish",
-      "spinning_top",
-      "morning_star",
-      "stoch_rsi_oversold_reversal",
-      "full_bullish_alignment",
-      "macd_bearish_crossover",
-      "inside_bar"
-    ]
-  },
-  {
     "timestamp": "2026-07-28T10:11:29.300456",
     "date": "2026-07-28",
     "ticker": "ICICIBANK.NS",
@@ -21282,6 +21239,51 @@
       "adx_strong_trend_up",
       "bb_upper_rejection",
       "pivot_s1_breakdown"
+    ]
+  },
+  {
+    "timestamp": "2026-08-29T00:54:43.411135+05:30",
+    "date": "2026-08-29",
+    "ticker": "SIEMENS.NS",
+    "session": "preclose",
+    "action": "RECOMMEND",
+    "signal": "BUY",
+    "confidence": 73.9,
+    "entry": 4086.12,
+    "stop_loss": 3972.89,
+    "target": 4328.18,
+    "reason": "rec snapshot (short_term)",
+    "patterns": [
+      "supertrend_bullish",
+      "near_52w_high",
+      "tweezer_bottom",
+      "pivot_point_test",
+      "bullish_harami",
+      "full_bullish_alignment",
+      "adx_strong_trend_up"
+    ]
+  },
+  {
+    "timestamp": "2026-08-29T00:54:43.411144+05:30",
+    "date": "2026-08-29",
+    "ticker": "JSWSTEEL.NS",
+    "session": "preclose",
+    "action": "RECOMMEND",
+    "signal": "BUY",
+    "confidence": 69.9,
+    "entry": 1328.59,
+    "stop_loss": 1290.73,
+    "target": 1398.34,
+    "reason": "rec snapshot (short_term)",
+    "patterns": [
+      "near_52w_high",
+      "stoch_rsi_overbought_reversal",
+      "engulfing_bearish",
+      "pivot_point_test",
+      "bb_upper_rejection",
+      "full_bullish_alignment",
+      "pivot_s1_breakdown",
+      "adx_strong_trend_up"
     ]
   }
 ]

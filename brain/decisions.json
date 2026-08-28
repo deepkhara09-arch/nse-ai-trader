@@ -1,47 +1,5 @@
 [
   {
-    "timestamp": "2026-07-28T09:44:45.076277",
-    "date": "2026-07-28",
-    "ticker": "MARICO.NS",
-    "session": "intraday_close",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 93.1,
-    "entry": 881.8,
-    "stop_loss": 857.9,
-    "target": 929.61,
-    "reason": "paper intraday_close",
-    "patterns": [
-      "adx_strong_trend_up",
-      "rsi_bearish_divergence",
-      "momentum_continuation",
-      "supertrend_bullish",
-      "macd_bullish_crossover",
-      "full_bullish_alignment",
-      "near_52w_high"
-    ]
-  },
-  {
-    "timestamp": "2026-07-28T09:44:45.079591",
-    "date": "2026-07-28",
-    "ticker": "HOMEFIRST.NS",
-    "session": "intraday_close",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 76.2,
-    "entry": 1181.3,
-    "stop_loss": 1116.16,
-    "target": 1311.59,
-    "reason": "paper intraday_close",
-    "patterns": [
-      "adx_strong_trend_up",
-      "shooting_star",
-      "pivot_point_test",
-      "full_bullish_alignment",
-      "gap_up_reversal"
-    ]
-  },
-  {
     "timestamp": "2026-07-28T09:44:45.080119",
     "date": "2026-07-28",
     "ticker": "NESTLEIND.NS",
@@ -21282,6 +21240,48 @@
       "tweezer_bottom",
       "adx_strong_trend_up",
       "supertrend_bullish"
+    ]
+  },
+  {
+    "timestamp": "2026-08-28T06:15:53.055889",
+    "date": "2026-08-28",
+    "ticker": "SIEMENS.NS",
+    "session": "midday",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 95,
+    "entry": 4075.6,
+    "stop_loss": 3926.69,
+    "target": 4373.41,
+    "reason": "paper midday",
+    "patterns": [
+      "supertrend_bullish",
+      "full_bullish_alignment",
+      "pivot_point_test",
+      "near_52w_high",
+      "tweezer_bottom",
+      "bullish_harami",
+      "adx_strong_trend_up"
+    ]
+  },
+  {
+    "timestamp": "2026-08-28T06:15:53.062799",
+    "date": "2026-08-28",
+    "ticker": "JSWSTEEL.NS",
+    "session": "midday",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 60.0,
+    "entry": 1326.9,
+    "stop_loss": 1290.99,
+    "target": 1398.73,
+    "reason": "paper midday",
+    "patterns": [
+      "full_bullish_alignment",
+      "near_52w_high",
+      "bb_upper_rejection",
+      "stoch_rsi_overbought_reversal",
+      "adx_strong_trend_up"
     ]
   }
 ]

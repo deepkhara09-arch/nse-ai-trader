@@ -1,25 +1,5 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of pivot_point_test, rsi_bullish_divergence, low_volume_drift mean for a swing trade on ASIANPAINT? Current RSI=23, MACD hist=-11.9334, Vol=0.4x average. Signal is BUY.",
-    "context": {
-      "ticker": "ASIANPAINT.NS",
-      "signal": "BUY",
-      "patterns": "pivot_point_test, rsi_bullish_divergence, low_volume_drift",
-      "rsi": 22.6
-    },
-    "queued_at": "2026-08-28T03:05:40.090983"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of doji, pivot_s1_breakdown, outside_bar mean for a swing trade on HINDALCO? Current RSI=56, MACD hist=-0.1683, Vol=0.5x average. Signal is BUY.",
-    "context": {
-      "ticker": "HINDALCO.NS",
-      "signal": "BUY",
-      "patterns": "doji, pivot_s1_breakdown, outside_bar",
-      "rsi": 56.5
-    },
-    "queued_at": "2026-08-28T03:05:40.094940"
-  },
-  {
     "question": "In Indian NSE markets, what does the combination of early_recovery, adx_ranging_market, bb_midline_support mean for a swing trade on HOMEFIRST? Current RSI=44, MACD hist=+0.6600, Vol=0.7x average. Signal is BUY.",
     "context": {
       "ticker": "HOMEFIRST.NS",
@@ -98,5 +78,25 @@
       "rsi": 44.4
     },
     "queued_at": "2026-08-28T04:05:42.936492"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of stoch_rsi_overbought_reversal, adx_strong_trend_up mean for a swing trade on JSWSTEEL? Current RSI=60, MACD hist=+4.3572, Vol=1.1x average. Signal is BUY.",
+    "context": {
+      "ticker": "JSWSTEEL.NS",
+      "signal": "BUY",
+      "patterns": "stoch_rsi_overbought_reversal, adx_strong_trend_up",
+      "rsi": 59.7
+    },
+    "queued_at": "2026-08-28T06:15:53.062511"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of stoch_rsi_overbought_reversal, adx_strong_trend_up mean for a swing trade on JSWSTEEL? Current RSI=60, MACD hist=+4.3572, Vol=1.1x average. Signal is BUY.",
+    "context": {
+      "ticker": "JSWSTEEL.NS",
+      "signal": "BUY",
+      "patterns": "stoch_rsi_overbought_reversal, adx_strong_trend_up",
+      "rsi": 59.7
+    },
+    "queued_at": "2026-08-28T06:15:53.181799"
   }
 ]

@@ -1,6 +1,6 @@
 {
   "date": "2026-08-28",
-  "session": "morning",
+  "session": "midday",
   "nifty": {
     "symbol": "^NSEI",
     "value": 24090.85,
@@ -58,9 +58,10 @@
       "ath_pct_60d": -1.81
     }
   },
-  "market_mood": "neutral",
+  "market_mood": "bearish",
   "trade_allowed": true,
   "warnings": [
+    "Nifty choppy intraday \u2014 wait for cleaner setups",
     "PCR low (0.59) \u2014 market complacent, caution"
   ],
   "leading_sectors": [
@@ -71,24 +72,24 @@
   "lagging_sectors": [
     "IT"
   ],
-  "intraday_regime": "mixed",
+  "intraday_regime": "choppy",
   "macro": {
     "date": "2026-08-28",
-    "session": "preopen",
-    "generated_at": "2026-08-28T03:05:38.283198",
-    "global_score": 0.199,
-    "india_score": 0.0,
-    "overall_score": 0.109,
-    "mood": "neutral",
+    "session": "midday",
+    "generated_at": "2026-08-28T06:15:43.485909",
+    "global_score": 0.117,
+    "india_score": 1.0,
+    "overall_score": 0.514,
+    "mood": "risk_on",
     "drivers": [
+      "Judge says Trump administration\u2019s blacklist of Anthropic was illegal",
       "Marvell boosts its forecasts, but the stock slides as Wall Street wonders if there\u2019s more to the story",
       "SpaceX\u2019s $100 billion spaceport plan has investors asking where all the money is coming from",
       "Is Nvidia heading for $1 trillion in annual revenue? One analyst now thinks that\u2019s possible.",
       "My mother, 91, has dementia. Every bank says I need her signature to unlock her $100,000 stock certificate. What can I do?",
       "CrowdStrike\u2019s stock jumps after record-breaking earnings. Wall Street is lapping it up.",
       "Salesforce\u2019s stock rockets 20% and gives the software sector a major lift",
-      "Good Good Golf ad fallout deepens as Callaway ends partnership, retailers pull gear and Golf Channel delays show",
-      "The options market is signaling further gains for the S&P 500, but one indicator is flashing a warning"
+      "Good Good Golf ad fallout deepens as Callaway ends partnership, retailers pull gear and Golf Channel delays show"
     ],
     "global_cues": {
       "dow": {
@@ -104,23 +105,23 @@
         "chg_pct": 0.72
       },
       "nikkei": {
-        "last": 66682.88,
-        "chg_pct": 0.83
+        "last": 66327.97,
+        "chg_pct": 0.3
       },
       "crude": {
-        "last": 83.21,
-        "chg_pct": -0.38
+        "last": 83.53,
+        "chg_pct": 1.58
       },
       "usdinr": {
-        "last": 95.53,
-        "chg_pct": 0.1
+        "last": 95.55,
+        "chg_pct": 0.12
       },
       "gold": {
-        "last": 4636.8,
-        "chg_pct": 0.59
+        "last": 4609.7,
+        "chg_pct": 0.25
       }
     },
-    "summary": "Overall macro mood is neutral (+0.11). US Dow +0.2% overnight. Crude -0.4%. USD/INR +0.1%. Notable: US Fed rate cut / dovish; Geopolitical conflict / war; Tariffs / trade war.",
+    "summary": "Overall macro mood is risk-on (+0.51). US Dow +0.2% overnight. Crude +1.6%. USD/INR +0.1%. Notable: US Fed rate cut / dovish; Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
       "Dovish Fed usually lifts EM equities incl. Nifty; FIIs tend to buy.",
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
@@ -129,6 +130,7 @@
     "playbook_bias": "risk_off",
     "article_count": 60
   },
+  "macro_tailwind": true,
   "macro_risk_factor": 1.0,
   "fii_dii": {
     "date": "2026-08-28",

@@ -1,6 +1,6 @@
 {
   "date": "2026-08-28",
-  "session": "intraday_close",
+  "session": "preclose",
   "nifty": {
     "symbol": "^NSEI",
     "value": 24090.85,
@@ -58,12 +58,9 @@
       "ath_pct_60d": -1.81
     }
   },
-  "market_mood": "bearish",
+  "market_mood": "neutral",
   "trade_allowed": true,
-  "warnings": [
-    "Nifty choppy intraday \u2014 wait for cleaner setups",
-    "PCR low (0.59) \u2014 market complacent, caution"
-  ],
+  "warnings": [],
   "leading_sectors": [
     "Pharma"
   ],
@@ -72,7 +69,7 @@
   "lagging_sectors": [
     "IT"
   ],
-  "intraday_regime": "choppy",
+  "intraday_regime": "mixed",
   "macro": {
     "date": "2026-08-28",
     "session": "midday",
@@ -326,13 +323,13 @@
   "flow_tailwind": true,
   "pcr": {
     "date": "2026-08-28",
-    "pcr": 0.593,
-    "reading": "complacent_caution",
-    "total_pe_oi": 1688865,
-    "total_ce_oi": 2847898,
-    "spot": 24090.85,
+    "pcr": 0.777,
+    "reading": "bearish_bias",
+    "total_pe_oi": 2224497,
+    "total_ce_oi": 2861653,
+    "spot": 24175.65,
     "max_pain": 24200.0,
-    "max_pain_dist_pct": -0.45,
+    "max_pain_dist_pct": -0.1,
     "oi_bias": "call_heavy_resistance",
     "ok": true,
     "error": ""

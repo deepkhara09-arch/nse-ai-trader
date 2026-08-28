@@ -1,13 +1,13 @@
 {
   "phase": "paper_trading",
   "day": 50,
-  "session": "morning",
+  "session": "preopen",
   "start_date": "2026-06-22",
   "phase_start_date": "2026-07-15",
   "last_run_date": "2026-08-28",
   "last_counted_date": "2026-08-28",
   "cohort_last_tick_date": "2026-08-28",
-  "last_updated": "2026-08-27T19:16:30.069817",
+  "last_updated": "2026-08-28T03:05:39.992843",
   "focus_stocks": [
     "SBIN.NS",
     "ABCAPITAL.NS",
@@ -68,7 +68,6 @@
     "expectancy": -33.53
   },
   "brain_notes": [
-    "[2026-06-25] Pre-open macro: neutral (+0.18)",
     "[2026-06-29] Pre-open macro: risk_off (-0.46)",
     "[2026-06-30] Pre-open macro: neutral (+0.07)",
     "[2026-07-01] Pre-open macro: neutral (+0.02)",
@@ -167,7 +166,8 @@
     "[2026-08-27] Pre-open macro: neutral (-0.05)",
     "[2026-08-27] Focus refresh \u2014 promoted: ['HOMEFIRST', 'VBL', 'JSWSTEEL'] | demoted: ['BANKBARODA', 'CIPLA', 'NIACL']",
     "[2026-08-27] Cohort batch #30 complete \u2014 30 candidates ready",
-    "[2026-08-28] Cohort batch #31 complete \u2014 30 candidates ready"
+    "[2026-08-28] Cohort batch #31 complete \u2014 30 candidates ready",
+    "[2026-08-28] Pre-open macro: neutral (+0.11)"
   ],
   "alert_sent": false,
   "schema_version": 11,
@@ -397,6 +397,7 @@
     "scored_date": "2026-08-28"
   },
   "sessions_done": {
-    "preclose": "2026-08-28"
+    "preclose": "2026-08-28",
+    "preopen": "2026-08-28"
   }
 }

@@ -27,11 +27,11 @@
   "sectors": {
     "IT": {
       "symbol": "ITBEES.NS",
-      "value": 33.71,
-      "day_change_pct": -0.15,
-      "trend_5d": "sideways",
+      "value": 34.7,
+      "day_change_pct": 2.94,
+      "trend_5d": "up",
       "trend_20d": "down",
-      "ath_pct_60d": -8.84
+      "ath_pct_60d": -6.17
     },
     "Pharma": {
       "symbol": "PHARMABEES.NS",
@@ -43,11 +43,11 @@
     },
     "Bank": {
       "symbol": "BANKBEES.NS",
-      "value": 596.79,
-      "day_change_pct": -0.46,
+      "value": 596.06,
+      "day_change_pct": -0.12,
       "trend_5d": "sideways",
       "trend_20d": "sideways",
-      "ath_pct_60d": -1.84
+      "ath_pct_60d": -1.96
     },
     "Infra": {
       "symbol": "INFRABEES.NS",
@@ -65,10 +65,11 @@
     "Net institutional outflow (\u20b9+144 Cr)"
   ],
   "leading_sectors": [
+    "IT",
     "Pharma"
   ],
   "market_regime": "normal",
-  "sector_breadth": 0.25,
+  "sector_breadth": 0.5,
   "lagging_sectors": [],
   "intraday_regime": "choppy",
   "macro": {

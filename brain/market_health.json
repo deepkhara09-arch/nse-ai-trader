@@ -62,7 +62,7 @@
   "trade_allowed": true,
   "warnings": [
     "Nifty choppy intraday \u2014 wait for cleaner setups",
-    "Net institutional outflow (\u20b9+144 Cr)"
+    "Heavy FII/DII outflow (\u20b9-3,397 Cr) \u2014 institutions selling"
   ],
   "leading_sectors": [
     "Pharma"
@@ -128,13 +128,13 @@
     "playbook_bias": "risk_off",
     "article_count": 60
   },
-  "macro_risk_factor": 1.0,
+  "macro_risk_factor": 0.75,
   "fii_dii": {
     "date": "2026-08-31",
-    "fii_net_cr": -5039.8,
-    "dii_net_cr": 5183.93,
-    "combined_net_cr": 144.13,
-    "signal": "outflow",
+    "fii_net_cr": -7985.88,
+    "dii_net_cr": 4588.88,
+    "combined_net_cr": -3397.0,
+    "signal": "strong_outflow",
     "ok": true,
     "error": "",
     "history": [
@@ -314,9 +314,9 @@
       },
       {
         "date": "2026-08-31",
-        "fii": -5039.8,
-        "dii": 5183.93,
-        "combined": 144.13
+        "fii": -7985.88,
+        "dii": 4588.88,
+        "combined": -3397.0
       }
     ]
   },

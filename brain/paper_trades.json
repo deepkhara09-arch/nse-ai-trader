@@ -38,8 +38,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "RSI=68 elevated"
       ],
-      "current_price": 4039.6,
-      "unrealized_pnl": 79.9,
+      "current_price": 4039.4,
+      "unrealized_pnl": 79.7,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -90,8 +90,8 @@
         "\u2713 Daily setup aligned with the higher-timeframe trend",
         "MACD histogram negative"
       ],
-      "current_price": 400.0,
-      "unrealized_pnl": -141.0,
+      "current_price": 401.6,
+      "unrealized_pnl": -117.0,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -173,7 +173,7 @@
       "view_hist": [
         0,
         0,
-        0,
+        1,
         1
       ],
       "stale_tightened": true
@@ -210,8 +210,8 @@
         "In a long-term strong downtrend (2yr)",
         "\u2713 Daily setup aligned with the higher-timeframe trend"
       ],
-      "current_price": 401.8,
-      "unrealized_pnl": -13.65,
+      "current_price": 402.95,
+      "unrealized_pnl": -28.6,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -264,8 +264,8 @@
         "In a long-term strong downtrend (2yr)",
         "\u2713 Daily setup aligned with the higher-timeframe trend"
       ],
-      "current_price": 408.55,
-      "unrealized_pnl": 73.8,
+      "current_price": 408.0,
+      "unrealized_pnl": 80.4,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -329,8 +329,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "Near upper Bollinger Band"
       ],
-      "current_price": 1166.0,
-      "unrealized_pnl": -78.4,
+      "current_price": 1165.0,
+      "unrealized_pnl": -82.4,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -346,6 +346,7 @@
         "hist_long_trend": "uptrend"
       },
       "view_hist": [
+        0,
         0,
         0,
         0
@@ -2330,7 +2331,8 @@
       "costs": 23.22,
       "pnl_pct": -3.49,
       "won": false,
-      "open_days": 2
+      "open_days": 2,
+      "forensic_done": true
     },
     {
       "ticker": "GAIL.NS",
@@ -2398,7 +2400,8 @@
       "costs": 23.15,
       "pnl_pct": -1.32,
       "won": false,
-      "open_days": 7
+      "open_days": 7,
+      "forensic_done": true
     },
     {
       "ticker": "HINDALCO.NS",
@@ -2466,7 +2469,8 @@
       "costs": 21.67,
       "pnl_pct": -2.72,
       "won": false,
-      "open_days": 5
+      "open_days": 5,
+      "forensic_done": true
     }
   ],
   "daily_snapshots": [
@@ -2693,16 +2697,23 @@
       "capital": 59387.07,
       "open_positions": 6,
       "daily_pnl": 0.0
+    },
+    {
+      "date": "2026-08-31",
+      "portfolio_value": 98416.74,
+      "capital": 66818.39,
+      "open_positions": 6,
+      "daily_pnl": -198.91
     }
   ],
   "daily_pnl_today": -198.91493999999955,
-  "last_snapshot_date": "2026-08-28",
+  "last_snapshot_date": "2026-08-31",
   "lifetime_wins": 12,
   "lifetime_losses": 21,
   "lifetime_pnl": -1581.77,
   "last_pnl_reset_date": "2026-08-31",
-  "max_drawdown_pct": 2.43,
-  "current_drawdown_pct": 2.4,
+  "max_drawdown_pct": 2.76,
+  "current_drawdown_pct": 2.76,
   "portfolio_peak": 101210.28,
-  "sessions_since_peak": 29
+  "sessions_since_peak": 30
 }

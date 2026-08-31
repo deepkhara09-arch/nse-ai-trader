@@ -598,10 +598,74 @@
     "atr_multiplier": 1.5,
     "last_updated": "2026-08-28",
     "attribution": {
-      "by_pattern": {},
-      "by_session": {},
-      "by_mood": {},
-      "by_style": {}
+      "by_pattern": {
+        "bullish_harami": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "pivot_point_test": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "pivot_s1_bounce": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "adx_ranging_market": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "full_bullish_alignment": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "stoch_rsi_oversold_reversal": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "tweezer_bottom": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "low_volume_drift": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "supertrend_bullish": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        }
+      },
+      "by_session": {
+        "morning": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        }
+      },
+      "by_mood": {
+        "neutral": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        }
+      },
+      "by_style": {
+        "swing": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        }
+      }
     }
   },
   "AXISBANK.NS": {
@@ -3611,8 +3675,8 @@
       "by_pattern": {
         "rsi_bearish_divergence": {
           "wins": 0,
-          "losses": 1,
-          "total": 1
+          "losses": 2,
+          "total": 2
         },
         "pivot_s1_breakdown": {
           "wins": 0,
@@ -3626,8 +3690,8 @@
         },
         "full_bullish_alignment": {
           "wins": 0,
-          "losses": 1,
-          "total": 1
+          "losses": 2,
+          "total": 2
         },
         "gap_up_reversal": {
           "wins": 0,
@@ -3638,10 +3702,45 @@
           "wins": 0,
           "losses": 1,
           "total": 1
+        },
+        "supertrend_bullish": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "strong_bullish_marubozu": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "pivot_point_test": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "tweezer_bottom": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "stoch_rsi_oversold_reversal": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "engulfing_bullish": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
         }
       },
       "by_session": {
         "midday": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "morning": {
           "wins": 0,
           "losses": 1,
           "total": 1
@@ -3650,15 +3749,15 @@
       "by_mood": {
         "neutral": {
           "wins": 0,
-          "losses": 1,
-          "total": 1
+          "losses": 2,
+          "total": 2
         }
       },
       "by_style": {
         "swing": {
           "wins": 0,
-          "losses": 1,
-          "total": 1
+          "losses": 2,
+          "total": 2
         }
       }
     }
@@ -3718,6 +3817,66 @@
     "atr_stop_hits": 1,
     "atr_target_hits": 0,
     "atr_multiplier": 1.5,
-    "last_updated": "2026-08-31"
+    "last_updated": "2026-08-31",
+    "attribution": {
+      "by_pattern": {
+        "engulfing_bullish": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "stoch_rsi_oversold_reversal": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "adx_strong_trend_up": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "supertrend_bullish": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "macd_bearish_crossover": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "full_bullish_alignment": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "inside_bar": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        }
+      },
+      "by_session": {
+        "morning": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        }
+      },
+      "by_mood": {
+        "neutral": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        }
+      },
+      "by_style": {
+        "swing": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        }
+      }
+    }
   }
 }

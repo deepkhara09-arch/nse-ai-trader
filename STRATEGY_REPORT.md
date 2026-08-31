@@ -1,5 +1,5 @@
 # NSE AI Trader — Strategy Report
-> Updated: 2026-08-29 &nbsp;|&nbsp; Day 50 &nbsp;|&nbsp; Phase: paper_trading
+> Updated: 2026-08-31 &nbsp;|&nbsp; Day 51 &nbsp;|&nbsp; Phase: paper_trading
 
 ---
 
@@ -7,12 +7,12 @@
 
 | Metric | Value |
 |--------|-------|
-| Trades | 32 (12 wins / 20 losses) |
-| Win Rate | 37.5% |
-| Total P&L | ₹-1,383 |
+| Trades | 33 (12 wins / 21 losses) |
+| Win Rate | 36.4% |
+| Total P&L | ₹-1,582 |
 | Avg Win | ₹+125 |
-| Avg Loss | ₹-144 |
-| Expectancy / trade | ₹-43 |
+| Avg Loss | ₹-147 |
+| Expectancy / trade | ₹-48 |
 
 ---
 
@@ -21,71 +21,29 @@
 > **Important:** These are paper trade signals based on the agent's learned patterns.
 > Not financial advice. Always use your own judgement and consult a SEBI advisor.
 
-BUY SIEMENS.NS (SIEMENS)
-   CMP:           Rs.4,080.00
-   Entry Zone:    Rs.4,071.84 - Rs.4,100.40
-   Stop Loss:     Rs.3,972.89  (2.6% risk)
-   Target 1:      Rs.4,328.18  (R:R 1:2.3)
-   Target 2:      Rs.4,427.45  (R:R 1:3.2)
-   Hold:          5–15 trading days (swing)
-   Qty (2% risk): 2 shares -> Rs.8,160 invested
-   Max loss:      Rs.214 if SL hit
-   Confidence:    74/100  (Tech:37 Fund:15 News:15 Pat:1)
-   Reasons:
-     - All EMAs stacked bullish
-     - MACD histogram positive
-     - Positive news sentiment (0.22, news 1.4x reliable here)
-     - Candlestick: tweezer bottom
-     - Candlestick: bullish harami
-     - Near 52-week high — potential breakout zone
-     - Supertrend bullish — price above trend band
-     - ADX strong trend — directional move confirmed
-     - Testing pivot point — decision zone
-     - In a long-term strong uptrend (2yr) — trend on our side
-     - Clean trender aligned with its long-term uptrend
-     - ✓ Daily setup aligned with the higher-timeframe trend
-     - Valuation: P/E 86.6x
-     - ROCE: 9.2%
-     - Revenue growing 14.8% YoY
-     - Net profit up 33.5% QoQ
-     - Sales up 20.5% QoQ
-     - Latest quarter NP: ₹370 Cr
-     - Latest quarter Sales: ₹4,618 Cr
-     - Market Cap: ₹145,831 Cr
-     - Promoter holding: 76.9%
-     - Dividend yield: 45.0%
-     - Low debt: D/E 0.02
-     - Support at ₹4004.93 cushions downside
-     - Resistance at ₹4200.00 is natural target
-     - Latest news: 'Siemens rallies 5%, hits new high in subdued market; what's driving st'
-     - Confluence: 4 independent signal families agree (trend, momentum, pattern, news)
-     - History backtest: this kind of BUY setup worked 64% of the time over ~1 week on this stock (sample: 50)
-   Market warnings: Net institutional outflow (₹+144 Cr)
-
----
-
 BUY JSW Steel Ltd (JSWSTEEL)
-   CMP:           Rs.1,326.60
-   Entry Zone:    Rs.1,323.95 - Rs.1,333.23
-   Stop Loss:     Rs.1,290.73  (2.7% risk)
-   Target 1:      Rs.1,398.34  (R:R 1:2.0)
-   Target 2:      Rs.1,422.25  (R:R 1:2.7)
+   CMP:           Rs.1,312.00
+   Entry Zone:    Rs.1,309.38 - Rs.1,318.56
+   Stop Loss:     Rs.1,281.44  (2.3% risk)
+   Target 1:      Rs.1,373.12  (R:R 1:2.0)
+   Target 2:      Rs.1,397.03  (R:R 1:2.8)
    Hold:          5–15 trading days (swing)
-   Qty (2% risk): 9 shares -> Rs.11,939 invested
-   Max loss:      Rs.323 if SL hit
-   Confidence:    70/100  (Tech:25 Fund:11 News:13 Pat:8)
+   Qty (2% risk): 9 shares -> Rs.11,808 invested
+   Max loss:      Rs.275 if SL hit
+   Confidence:    76/100  (Tech:27 Fund:11 News:15 Pat:8)
    Reasons:
      - All EMAs stacked bullish
      - MACD histogram positive
      - High volume confirmation (1.5x avg)
+     - Positive news sentiment (0.17)
      - Learned bullish pattern: full_bullish_alignment (rel=60%)
-     - Near 52-week high — potential breakout zone
      - ADX strong trend — directional move confirmed
-     - Testing pivot point — decision zone
+     - Delivery 50% above avg — institutional buying
      - In a long-term strong uptrend (2yr) — trend on our side
-     - Near 52-week high (100% of range) — breakout zone
+     - Near 52-week high (98% of range) — breakout zone
      - ✓ Daily setup aligned with the higher-timeframe trend
-     - ⚠ Strong opposing signals present (opposing evidence 64% of the leading side) — conflicted setup, needs extra conviction
+     - ⚠ Market mood is bearish — buying against the tape needs extra conviction
+     - ⚠ Strong opposing signals present (opposing evidence 60% of the leading side) — conflicted setup, needs extra conviction
      - Valuation: P/E 13.2x
      - ROCE: 14.5%
      - Revenue growing 9.8% YoY
@@ -95,13 +53,60 @@ BUY JSW Steel Ltd (JSWSTEEL)
      - Promoter holding: 63.6%
      - Dividend yield: 53.0%
      - Reliable patterns on this stock: full_bullish_alignment, supertrend_bullish, adx_ranging_market
-     - Support at ₹1299.78 cushions downside
-     - Resistance at ₹1400.00 is natural target
+     - Support at ₹1291.77 cushions downside
+     - Resistance at ₹1337.50 is natural target
      - Latest news: 'JSW Steel Share Price: 52-week high and company metrics - Univest'
      - Paper trade validation: 3 trades, 67% win rate, ₹-72/trade expectancy
-     - Confluence: 5 independent signal families agree (trend, momentum, pattern, news, regime)
-     - History backtest: this kind of BUY setup worked 58% of the time over ~1 week on this stock (sample: 62)
-   Market warnings: Net institutional outflow (₹+144 Cr)
+     - Confluence: 6 independent signal families agree (trend, momentum, volume, pattern, news, regime)
+     - History backtest: this kind of BUY setup worked 57% of the time over ~1 week on this stock (sample: 63)
+   Market warnings: Nifty choppy intraday — wait for cleaner setups | Net institutional outflow (₹+144 Cr)
+
+---
+
+BUY GAIL.NS (GAIL)
+   CMP:           Rs.172.32
+   Entry Zone:    Rs.171.98 - Rs.173.18
+   Stop Loss:     Rs.168.00  (2.5% risk)
+   Target 1:      Rs.180.96  (R:R 1:2.0)
+   Target 2:      Rs.183.84  (R:R 1:2.7)
+   Hold:          5–15 trading days (swing)
+   Qty (2% risk): 69 shares -> Rs.11,890 invested
+   Max loss:      Rs.298 if SL hit
+   Confidence:    74/100  (Tech:26 Fund:22 News:17 Pat:2)
+   Reasons:
+     - RSI=47 in healthy buy zone
+     - Near lower Bollinger Band
+     - Positive news sentiment (0.17, news 1.4x reliable here)
+     - News sentiment improving across sessions
+     - RSI bullish divergence — price lower but RSI higher
+     - Sector headwind (momentum=-0.34)
+     - Supertrend bullish — price above trend band
+     - ADX low — market ranging, signals less reliable
+     - Testing pivot point — decision zone
+     - High delivery 75% — strong institutional accumulation
+     - In a long-term strong uptrend (2yr) — trend on our side
+     - Clean trender aligned with its long-term uptrend
+     - ✓ Daily setup aligned with the higher-timeframe trend
+     - ⚠ Sector momentum -0.34 — buying into a falling sector needs extra conviction
+     - ⚠ Market mood is bearish — buying against the tape needs extra conviction
+     - Valuation: P/E 11.5x
+     - ROCE: 19.2%
+     - Revenue growing 16.7% YoY
+     - Net profit up 214.2% QoQ
+     - Sales up 15.8% QoQ
+     - Latest quarter NP: ₹4,665 Cr
+     - Latest quarter Sales: ₹41,198 Cr
+     - Market Cap: ₹113,381 Cr
+     - Analyst target: +12.8% upside
+     - Promoter holding: 63.7%
+     - Dividend yield: 315.0%
+     - Low debt: D/E 0.28
+     - Support at ₹169.24 cushions downside
+     - Resistance at ₹175.15 is natural target
+     - Latest news: 'GAIL Share Price - Upstox'
+     - Confluence: 5 independent signal families agree (trend, volume, pattern, news, fundamentals)
+     - History backtest: this kind of BUY setup worked 46% of the time over ~1 week on this stock (sample: 48)
+   Market warnings: Nifty choppy intraday — wait for cleaner setups | Net institutional outflow (₹+144 Cr)
 
 ---
 
@@ -112,7 +117,6 @@ BUY JSW Steel Ltd (JSWSTEEL)
 - PIDILITIND.NS
 - GAIL.NS
 - SIEMENS.NS
-- SHRIRAMFIN.NS
 - ASIANPAINT.NS
 - HINDALCO.NS
 - GRASIM.NS
@@ -122,6 +126,7 @@ BUY JSW Steel Ltd (JSWSTEEL)
 - HOMEFIRST.NS
 - VBL.NS
 - JSWSTEEL.NS
+- AXISBANK.NS
 
 ---
 

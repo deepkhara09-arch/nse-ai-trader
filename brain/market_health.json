@@ -1,6 +1,6 @@
 {
   "date": "2026-08-31",
-  "session": "intraday_close",
+  "session": "preclose",
   "nifty": {
     "symbol": "^NSEI",
     "value": 24175.65,
@@ -27,11 +27,11 @@
   "sectors": {
     "IT": {
       "symbol": "ITBEES.NS",
-      "value": 34.7,
-      "day_change_pct": 2.94,
-      "trend_5d": "up",
+      "value": 33.71,
+      "day_change_pct": -0.15,
+      "trend_5d": "sideways",
       "trend_20d": "down",
-      "ath_pct_60d": -6.17
+      "ath_pct_60d": -8.84
     },
     "Pharma": {
       "symbol": "PHARMABEES.NS",
@@ -43,11 +43,11 @@
     },
     "Bank": {
       "symbol": "BANKBEES.NS",
-      "value": 596.06,
-      "day_change_pct": -0.12,
+      "value": 596.79,
+      "day_change_pct": -0.46,
       "trend_5d": "sideways",
       "trend_20d": "sideways",
-      "ath_pct_60d": -1.96
+      "ath_pct_60d": -1.84
     },
     "Infra": {
       "symbol": "INFRABEES.NS",
@@ -65,11 +65,10 @@
     "Net institutional outflow (\u20b9+144 Cr)"
   ],
   "leading_sectors": [
-    "IT",
     "Pharma"
   ],
   "market_regime": "normal",
-  "sector_breadth": 0.5,
+  "sector_breadth": 0.25,
   "lagging_sectors": [],
   "intraday_regime": "choppy",
   "macro": {
@@ -323,13 +322,13 @@
   },
   "pcr": {
     "date": "2026-08-31",
-    "pcr": 0.776,
-    "reading": "bearish_bias",
-    "total_pe_oi": 2167095,
-    "total_ce_oi": 2792623,
-    "spot": 24175.65,
-    "max_pain": 24200.0,
-    "max_pain_dist_pct": -0.1,
+    "pcr": 0.815,
+    "reading": "neutral",
+    "total_pe_oi": 2505819,
+    "total_ce_oi": 3075806,
+    "spot": 24080.4,
+    "max_pain": 24100.0,
+    "max_pain_dist_pct": -0.08,
     "oi_bias": "call_heavy_resistance",
     "ok": true,
     "error": ""

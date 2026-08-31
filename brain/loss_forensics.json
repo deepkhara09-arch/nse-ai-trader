@@ -1,50 +1,53 @@
 {
   "causes": {
     "weak_pattern:inside_bar": {
-      "count": 1,
-      "sum_loss_pct": 5.17,
-      "last": "2026-08-11",
+      "count": 2,
+      "sum_loss_pct": 7.890000000000001,
+      "last": "2026-08-31",
       "examples": [
-        "HOMEFIRST"
+        "HOMEFIRST",
+        "HINDALCO"
       ],
-      "avg_loss_pct": 5.17
+      "avg_loss_pct": 3.95
     },
     "no_market_tailwind": {
-      "count": 9,
-      "sum_loss_pct": 18.049999999999997,
-      "last": "2026-08-24",
+      "count": 11,
+      "sum_loss_pct": 22.089999999999996,
+      "last": "2026-08-31",
       "examples": [
-        "UNIONBANK",
-        "SBIN",
         "GRASIM",
         "CHOLAFIN",
         "MARICO",
-        "BAJFINANCE"
+        "BAJFINANCE",
+        "GAIL",
+        "HINDALCO"
       ],
       "avg_loss_pct": 2.01
     },
     "weak_pattern:pivot_point_test": {
-      "count": 5,
-      "sum_loss_pct": 5.569999999999999,
-      "last": "2026-08-24",
+      "count": 6,
+      "sum_loss_pct": 9.059999999999999,
+      "last": "2026-08-31",
       "examples": [
         "NESTLEIND",
         "ICICIBANK",
         "CHOLAFIN",
         "UNIONBANK",
-        "NTPC"
+        "NTPC",
+        "SHRIRAMFIN"
       ],
-      "avg_loss_pct": 1.11
+      "avg_loss_pct": 1.51
     },
     "weak_pattern:adx_ranging_market": {
-      "count": 2,
-      "sum_loss_pct": 5.07,
-      "last": "2026-08-11",
+      "count": 3,
+      "sum_loss_pct": 6.390000000000001,
+      "last": "2026-08-31",
       "examples": [
         "SBIN",
-        "JSWSTEEL"
+        "JSWSTEEL",
+        "GAIL"
       ],
-      "avg_loss_pct": 2.54
+      "avg_loss_pct": 2.13
     },
     "weak_pattern:spinning_top": {
       "count": 1,
@@ -104,10 +107,10 @@
   "patterns": {
     "full_bullish_alignment": {
       "wins": 10,
-      "losses": 17,
+      "losses": 20,
       "sum_win_pct": 29.44,
-      "sum_loss_pct": 35.25,
-      "edge": -0.072
+      "sum_loss_pct": 42.78,
+      "edge": -0.148
     },
     "near_52w_high": {
       "wins": 3,
@@ -118,9 +121,9 @@
     },
     "low_volume_drift": {
       "wins": 1,
-      "losses": 1,
+      "losses": 2,
       "sum_win_pct": 5.18,
-      "sum_loss_pct": 5.17,
+      "sum_loss_pct": 6.49,
       "edge": 0.0
     },
     "spinning_top": {
@@ -132,37 +135,37 @@
     },
     "pivot_point_test": {
       "wins": 11,
-      "losses": 7,
+      "losses": 9,
       "sum_win_pct": 31.87,
-      "sum_loss_pct": 7.55,
-      "edge": 0.45
+      "sum_loss_pct": 12.36,
+      "edge": 0.325
     },
     "adx_strong_trend_up": {
       "wins": 7,
-      "losses": 6,
+      "losses": 7,
       "sum_win_pct": 23.09,
-      "sum_loss_pct": 11.51,
-      "edge": 0.297
+      "sum_loss_pct": 14.23,
+      "edge": 0.211
     },
     "tweezer_bottom": {
       "wins": 5,
-      "losses": 4,
+      "losses": 6,
       "sum_win_pct": 11.71,
-      "sum_loss_pct": 8.48,
-      "edge": 0.12
+      "sum_loss_pct": 13.290000000000001,
+      "edge": -0.048
     },
     "supertrend_bullish": {
       "wins": 10,
-      "losses": 13,
+      "losses": 16,
       "sum_win_pct": 19.630000000000003,
-      "sum_loss_pct": 31.299999999999997,
-      "edge": -0.169
+      "sum_loss_pct": 38.83,
+      "edge": -0.246
     },
     "engulfing_bullish": {
       "wins": 0,
-      "losses": 1,
+      "losses": 3,
       "sum_win_pct": 0.0,
-      "sum_loss_pct": 5.17,
+      "sum_loss_pct": 11.38,
       "edge": 0.0
     },
     "rsi_bullish_divergence": {
@@ -174,16 +177,16 @@
     },
     "inside_bar": {
       "wins": 4,
-      "losses": 2,
+      "losses": 3,
       "sum_win_pct": 6.61,
-      "sum_loss_pct": 7.6899999999999995,
-      "edge": -0.06
+      "sum_loss_pct": 10.41,
+      "edge": -0.181
     },
     "pivot_s1_bounce": {
       "wins": 2,
-      "losses": 0,
+      "losses": 1,
       "sum_win_pct": 5.359999999999999,
-      "sum_loss_pct": 0.0,
+      "sum_loss_pct": 1.32,
       "edge": 0.0
     },
     "pivot_r1_breakout": {
@@ -216,17 +219,17 @@
     },
     "adx_ranging_market": {
       "wins": 2,
-      "losses": 2,
+      "losses": 3,
       "sum_win_pct": 3.31,
-      "sum_loss_pct": 5.07,
-      "edge": -0.147
+      "sum_loss_pct": 6.390000000000001,
+      "edge": -0.205
     },
     "stoch_rsi_oversold_reversal": {
       "wins": 3,
-      "losses": 1,
+      "losses": 4,
       "sum_win_pct": 4.17,
-      "sum_loss_pct": 1.84,
-      "edge": 0.194
+      "sum_loss_pct": 9.370000000000001,
+      "edge": -0.248
     },
     "pivot_s1_breakdown": {
       "wins": 1,
@@ -258,10 +261,10 @@
     },
     "rsi_bearish_divergence": {
       "wins": 0,
-      "losses": 3,
+      "losses": 4,
       "sum_win_pct": 0.0,
-      "sum_loss_pct": 5.0200000000000005,
-      "edge": 0.0
+      "sum_loss_pct": 8.510000000000002,
+      "edge": -0.709
     },
     "doji": {
       "wins": 2,
@@ -363,16 +366,16 @@
     },
     "strong_bullish_marubozu": {
       "wins": 0,
-      "losses": 2,
+      "losses": 3,
       "sum_win_pct": 0.0,
-      "sum_loss_pct": 3.74,
+      "sum_loss_pct": 7.23,
       "edge": 0.0
     },
     "macd_bearish_crossover": {
       "wins": 0,
-      "losses": 1,
+      "losses": 2,
       "sum_win_pct": 0.0,
-      "sum_loss_pct": 1.17,
+      "sum_loss_pct": 3.89,
       "edge": 0.0
     },
     "full_bearish_alignment": {
@@ -401,6 +404,13 @@
       "losses": 1,
       "sum_win_pct": 0.0,
       "sum_loss_pct": 0.8,
+      "edge": 0.0
+    },
+    "bullish_harami": {
+      "wins": 0,
+      "losses": 1,
+      "sum_win_pct": 0.0,
+      "sum_loss_pct": 1.32,
       "edge": 0.0
     }
   },
@@ -560,6 +570,32 @@
       "loss_pct": 0.8,
       "causes": [
         "thesis_reversed_cut_early"
+      ]
+    },
+    {
+      "date": "2026-08-28",
+      "ticker": "SHRIRAMFIN",
+      "loss_pct": 3.49,
+      "causes": [
+        "weak_pattern:pivot_point_test"
+      ]
+    },
+    {
+      "date": "2026-08-28",
+      "ticker": "GAIL",
+      "loss_pct": 1.32,
+      "causes": [
+        "weak_pattern:adx_ranging_market",
+        "no_market_tailwind"
+      ]
+    },
+    {
+      "date": "2026-08-31",
+      "ticker": "HINDALCO",
+      "loss_pct": 2.72,
+      "causes": [
+        "weak_pattern:inside_bar",
+        "no_market_tailwind"
       ]
     }
   ]

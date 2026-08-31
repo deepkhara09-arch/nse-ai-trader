@@ -1,6 +1,6 @@
 {
   "date": "2026-08-31",
-  "session": "morning",
+  "session": "midday",
   "nifty": {
     "symbol": "^NSEI",
     "value": 24175.65,
@@ -73,11 +73,11 @@
   "intraday_regime": "choppy",
   "macro": {
     "date": "2026-08-31",
-    "session": "preopen",
-    "generated_at": "2026-08-31T03:05:48.888178",
-    "global_score": -0.001,
+    "session": "midday",
+    "generated_at": "2026-08-31T06:15:42.396184",
+    "global_score": 0.076,
     "india_score": 0.0,
-    "overall_score": -0.001,
+    "overall_score": 0.042,
     "mood": "neutral",
     "drivers": [
       "U.S. stock futures slip as chances of rate hike rise after Warsh\u2019s Jackson Hole comments",
@@ -103,23 +103,23 @@
         "chg_pct": -0.25
       },
       "nikkei": {
-        "last": 65361.6,
-        "chg_pct": -1.57
+        "last": 66149.17,
+        "chg_pct": -0.39
       },
       "crude": {
-        "last": 85.15,
-        "chg_pct": 2.1
+        "last": 83.4,
+        "chg_pct": -0.16
       },
       "usdinr": {
-        "last": 95.36,
-        "chg_pct": -0.12
+        "last": 95.43,
+        "chg_pct": -0.04
       },
       "gold": {
-        "last": 4466.7,
-        "chg_pct": -0.25
+        "last": 4478.1,
+        "chg_pct": -2.85
       }
     },
-    "summary": "Overall macro mood is neutral (-0.00). US Dow -0.0% overnight. Crude +2.1%. USD/INR -0.1%. Notable: US Fed rate hike / hawkish; Geopolitical conflict / war; Tariffs / trade war.",
+    "summary": "Overall macro mood is neutral (+0.04). US Dow -0.0% overnight. Crude -0.2%. USD/INR -0.0%. Notable: US Fed rate hike / hawkish; Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
       "Hawkish Fed pressures Nifty via FII outflows and stronger USD.",
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",

@@ -5898,5 +5898,25 @@
     "open": 6,
     "recs": 2,
     "summary": "Preclose \u2014 NSE closed (weekend); dashboard refreshed, no trading, day unchanged."
+  },
+  {
+    "date": "2026-08-31",
+    "triggered_at": "2026-08-31 08:35 IST",
+    "session": "preopen",
+    "phase": "paper_trading",
+    "day": 50,
+    "stats": {
+      "total": 32,
+      "wins": 12,
+      "losses": 20,
+      "win_rate": 0.375,
+      "total_pnl": -1382.86,
+      "avg_win": 125.39,
+      "avg_loss": -144.38,
+      "expectancy": -43.21
+    },
+    "open": 6,
+    "recs": 2,
+    "summary": "Pre-open sweep \u2014 macro mood neutral; dashboard refreshed (no trading)."
   }
 ]

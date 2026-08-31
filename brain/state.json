@@ -1,13 +1,13 @@
 {
   "phase": "paper_trading",
   "day": 50,
-  "session": "preopen",
+  "session": "morning",
   "start_date": "2026-06-22",
   "phase_start_date": "2026-07-15",
   "last_run_date": "2026-08-28",
   "last_counted_date": "2026-08-28",
   "cohort_last_tick_date": "2026-08-28",
-  "last_updated": "2026-08-31T03:05:50.989540",
+  "last_updated": "2026-08-31T04:05:40.813481",
   "focus_stocks": [
     "SBIN.NS",
     "ABCAPITAL.NS",
@@ -58,14 +58,14 @@
     "ICICIBANK.NS"
   ],
   "paper_trade_stats": {
-    "total": 32,
+    "total": 33,
     "wins": 12,
-    "losses": 20,
-    "win_rate": 0.375,
-    "total_pnl": -1382.86,
+    "losses": 21,
+    "win_rate": 0.364,
+    "total_pnl": -1581.77,
     "avg_win": 125.39,
-    "avg_loss": -144.38,
-    "expectancy": -43.21
+    "avg_loss": -146.97,
+    "expectancy": -47.93
   },
   "brain_notes": [
     "[2026-06-30] Pre-open macro: neutral (+0.07)",
@@ -397,6 +397,7 @@
     "scored_date": "2026-08-28"
   },
   "sessions_done": {
-    "preopen": "2026-08-31"
+    "preopen": "2026-08-31",
+    "morning": "2026-08-31"
   }
 }

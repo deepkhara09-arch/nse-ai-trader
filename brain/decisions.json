@@ -1,74 +1,5 @@
 [
   {
-    "timestamp": "2026-07-28T10:11:29.306685",
-    "date": "2026-07-28",
-    "ticker": "FEDERALBNK.NS",
-    "session": "preclose",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 95,
-    "entry": 357.25,
-    "stop_loss": 345.6,
-    "target": 380.54,
-    "reason": "paper preclose",
-    "patterns": [
-      "near_52w_high",
-      "adx_strong_trend_up",
-      "supertrend_bullish",
-      "rsi_bearish_divergence",
-      "full_bullish_alignment"
-    ]
-  },
-  {
-    "timestamp": "2026-07-28T15:42:26.692102+05:30",
-    "date": "2026-07-28",
-    "ticker": "NESTLEIND.NS",
-    "session": "preclose",
-    "action": "RECOMMEND",
-    "signal": "BUY",
-    "confidence": 81.5,
-    "entry": 1494.04,
-    "stop_loss": 1441.9,
-    "target": 1591.6,
-    "reason": "rec snapshot (short_term)",
-    "patterns": [
-      "near_52w_high",
-      "supertrend_bullish",
-      "spinning_top",
-      "morning_star",
-      "stoch_rsi_oversold_reversal",
-      "full_bullish_alignment",
-      "macd_bearish_crossover",
-      "inside_bar"
-    ],
-    "dry_evaluated": true,
-    "dry_outcome": "flat"
-  },
-  {
-    "timestamp": "2026-07-28T15:42:26.692128+05:30",
-    "date": "2026-07-28",
-    "ticker": "PIDILITIND.NS",
-    "session": "preclose",
-    "action": "RECOMMEND",
-    "signal": "BUY",
-    "confidence": 75.0,
-    "entry": 1627.64,
-    "stop_loss": 1585.04,
-    "target": 1722.83,
-    "reason": "rec snapshot (short_term)",
-    "patterns": [
-      "near_52w_high",
-      "pivot_r1_breakout",
-      "adx_strong_trend_up",
-      "supertrend_bullish",
-      "bb_upper_rejection",
-      "morning_star",
-      "full_bullish_alignment"
-    ],
-    "dry_evaluated": true,
-    "dry_outcome": "flat"
-  },
-  {
     "timestamp": "2026-07-28T15:42:26.692139+05:30",
     "date": "2026-07-28",
     "ticker": "FEDERALBNK.NS",
@@ -21287,6 +21218,76 @@
       "engulfing_bearish",
       "full_bullish_alignment",
       "adx_strong_trend_up"
+    ]
+  },
+  {
+    "timestamp": "2026-08-31T07:45:47.193000",
+    "date": "2026-08-31",
+    "ticker": "COALINDIA.NS",
+    "session": "afternoon",
+    "action": "SELL",
+    "signal": "SELL",
+    "confidence": 44.9,
+    "entry": 400.9,
+    "stop_loss": 409.72,
+    "target": 383.26,
+    "reason": "paper afternoon",
+    "patterns": [
+      "volume_breakdown_bearish",
+      "outside_bar",
+      "pivot_point_test",
+      "spinning_top",
+      "full_bearish_alignment",
+      "shooting_star",
+      "doji",
+      "stoch_rsi_overbought_reversal",
+      "adx_strong_trend_down",
+      "early_recovery",
+      "rsi_bullish_divergence"
+    ]
+  },
+  {
+    "timestamp": "2026-08-31T07:45:47.194730",
+    "date": "2026-08-31",
+    "ticker": "VBL.NS",
+    "session": "afternoon",
+    "action": "SELL",
+    "signal": "SELL",
+    "confidence": 90.7,
+    "entry": 410.55,
+    "stop_loss": 426.34,
+    "target": 378.98,
+    "reason": "paper afternoon",
+    "patterns": [
+      "macd_bearish_crossover",
+      "three_black_crows",
+      "bb_lower_bounce",
+      "full_bearish_alignment",
+      "pivot_s1_breakdown",
+      "adx_strong_trend_down"
+    ]
+  },
+  {
+    "timestamp": "2026-08-31T07:45:47.195817",
+    "date": "2026-08-31",
+    "ticker": "JSWSTEEL.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 72.7,
+    "entry": 1318.0,
+    "stop_loss": 1281.42,
+    "target": 1391.16,
+    "reason": "paper afternoon",
+    "patterns": [
+      "full_bullish_alignment",
+      "spinning_top",
+      "adx_strong_trend_up",
+      "stoch_rsi_overbought_reversal",
+      "doji",
+      "pivot_s1_breakdown",
+      "near_52w_high",
+      "rsi_bullish_divergence"
     ]
   }
 ]

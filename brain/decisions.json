@@ -1,71 +1,5 @@
 [
   {
-    "timestamp": "2026-07-28T15:42:26.692139+05:30",
-    "date": "2026-07-28",
-    "ticker": "FEDERALBNK.NS",
-    "session": "preclose",
-    "action": "RECOMMEND",
-    "signal": "BUY",
-    "confidence": 71.9,
-    "entry": 357.79,
-    "stop_loss": 347.09,
-    "target": 377.57,
-    "reason": "rec snapshot (short_term)",
-    "patterns": [
-      "near_52w_high",
-      "adx_strong_trend_up",
-      "supertrend_bullish",
-      "rsi_bearish_divergence",
-      "full_bullish_alignment"
-    ],
-    "dry_evaluated": true,
-    "dry_outcome": "flat"
-  },
-  {
-    "timestamp": "2026-07-28T15:42:26.692147+05:30",
-    "date": "2026-07-28",
-    "ticker": "ICICIBANK.NS",
-    "session": "preclose",
-    "action": "RECOMMEND",
-    "signal": "BUY",
-    "confidence": 69.9,
-    "entry": 1432.95,
-    "stop_loss": 1391.44,
-    "target": 1509.52,
-    "reason": "rec snapshot (short_term)",
-    "patterns": [
-      "full_bullish_alignment",
-      "adx_strong_trend_up",
-      "pivot_point_test"
-    ],
-    "dry_evaluated": true,
-    "dry_outcome": "flat"
-  },
-  {
-    "timestamp": "2026-07-28T15:42:26.692153+05:30",
-    "date": "2026-07-28",
-    "ticker": "MARICO.NS",
-    "session": "preclose",
-    "action": "RECOMMEND",
-    "signal": "BUY",
-    "confidence": 69.3,
-    "entry": 884.58,
-    "stop_loss": 859.35,
-    "target": 931.05,
-    "reason": "rec snapshot (short_term)",
-    "patterns": [
-      "near_52w_high",
-      "adx_strong_trend_up",
-      "macd_bullish_crossover",
-      "supertrend_bullish",
-      "rsi_bearish_divergence",
-      "momentum_continuation",
-      "full_bullish_alignment"
-    ],
-    "dry_evaluated": true,
-    "dry_outcome": "loss"
-  },
-  {
     "timestamp": "2026-07-28T15:42:26.692158+05:30",
     "date": "2026-07-28",
     "ticker": "LICI.NS",
@@ -21288,6 +21222,67 @@
       "pivot_s1_breakdown",
       "near_52w_high",
       "rsi_bullish_divergence"
+    ]
+  },
+  {
+    "timestamp": "2026-08-31T09:45:39.986075",
+    "date": "2026-08-31",
+    "ticker": "GRASIM.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 81.6,
+    "entry": 3318.5,
+    "stop_loss": 3209.96,
+    "target": 3535.57,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "three_white_soldiers",
+      "full_bullish_alignment",
+      "supertrend_bullish",
+      "stoch_rsi_oversold_reversal"
+    ]
+  },
+  {
+    "timestamp": "2026-08-31T09:45:39.989996",
+    "date": "2026-08-31",
+    "ticker": "VBL.NS",
+    "session": "intraday_close",
+    "action": "SELL",
+    "signal": "SELL",
+    "confidence": 90.7,
+    "entry": 408.55,
+    "stop_loss": 424.34,
+    "target": 376.98,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "bb_lower_bounce",
+      "full_bearish_alignment",
+      "adx_strong_trend_down",
+      "three_black_crows",
+      "pivot_s1_breakdown",
+      "macd_bearish_crossover"
+    ]
+  },
+  {
+    "timestamp": "2026-08-31T09:45:39.991052",
+    "date": "2026-08-31",
+    "ticker": "JSWSTEEL.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 47.3,
+    "entry": 1312.0,
+    "stop_loss": 1276.13,
+    "target": 1383.74,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "engulfing_bearish",
+      "adx_strong_trend_up",
+      "full_bullish_alignment",
+      "pivot_s1_breakdown",
+      "stoch_rsi_overbought_reversal",
+      "bb_upper_rejection"
     ]
   }
 ]

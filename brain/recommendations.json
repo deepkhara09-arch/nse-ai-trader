@@ -3,10 +3,10 @@
     "ticker": "JSWSTEEL.NS",
     "nse_code": "JSWSTEEL",
     "company_name": "JSW Steel Ltd",
-    "date": "2026-08-31",
-    "generated_at": "2026-08-31 10:12 UTC",
+    "date": "2026-09-01",
+    "generated_at": "2026-09-01 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -40,12 +40,12 @@
     "pattern_score": 8.5,
     "confluence_bonus": 10,
     "paper_bonus": 5.0,
-    "success_probability": 0.637,
-    "base_success_prob": 0.666,
-    "profit_probability": 0.194,
-    "composite_score": 55.13,
+    "success_probability": 0.631,
+    "base_success_prob": 0.66,
+    "profit_probability": 0.184,
+    "composite_score": 54.4,
     "focus_rank": 4,
-    "rank_delta": -1,
+    "rank_delta": 0,
     "intention": "BUY JSWSTEEL for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
     "confluence_count": 6,
     "confluence_families": [
@@ -57,9 +57,9 @@
       "regime"
     ],
     "backtest_tested": true,
-    "backtest_hit_5d": 0.571,
-    "backtest_hit_10d": 0.603,
-    "backtest_sample": 63,
+    "backtest_hit_5d": 0.562,
+    "backtest_hit_10d": 0.594,
+    "backtest_sample": 64,
     "hist_long_trend": "strong_uptrend",
     "hist_52w_position": 97.5,
     "hist_personality": "mean_reverter",
@@ -67,7 +67,7 @@
     "data_confidence": "Estimated",
     "data_confidence_key": "estimated",
     "data_confidence_note": "Only 3 paper trade(s) \u2014 probability is an indicator-based estimate, not yet proven",
-    "expected_edge_r": 0.194,
+    "expected_edge_r": 0.184,
     "buy_score": 10.02,
     "sell_score": 6.0,
     "reasons": [
@@ -97,15 +97,15 @@
       "Latest news: 'JSW Steel Share Price: 52-week high and company metrics - Univest'",
       "Paper trade validation: 3 trades, 67% win rate, \u20b9-72/trade expectancy",
       "Confluence: 6 independent signal families agree (trend, momentum, volume, pattern, news, regime)",
-      "History backtest: this kind of BUY setup worked 57% of the time over ~1 week on this stock (sample: 63)"
+      "History backtest: this kind of BUY setup worked 56% of the time over ~1 week on this stock (sample: 64)"
     ],
     "patterns_seen": [
       "pivot_s1_breakdown",
-      "full_bullish_alignment",
-      "adx_strong_trend_up",
-      "bb_upper_rejection",
       "stoch_rsi_overbought_reversal",
-      "engulfing_bearish"
+      "bb_upper_rejection",
+      "adx_strong_trend_up",
+      "engulfing_bearish",
+      "full_bullish_alignment"
     ],
     "reliable_patterns": [
       "full_bullish_alignment",
@@ -138,17 +138,17 @@
     "market_mood": "bearish",
     "market_warning": [
       "Nifty choppy intraday \u2014 wait for cleaner setups",
-      "Net institutional outflow (\u20b9+144 Cr)"
+      "Heavy FII/DII outflow (\u20b9-3,397 Cr) \u2014 institutions selling"
     ]
   },
   {
     "ticker": "GAIL.NS",
     "nse_code": "GAIL",
     "company_name": "GAIL.NS",
-    "date": "2026-08-31",
-    "generated_at": "2026-08-31 10:12 UTC",
+    "date": "2026-09-01",
+    "generated_at": "2026-09-01 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -182,10 +182,10 @@
     "pattern_score": 2.0,
     "confluence_bonus": 7.5,
     "paper_bonus": 0.0,
-    "success_probability": 0.529,
-    "base_success_prob": 0.56,
-    "profit_probability": 0.4,
-    "composite_score": 59.45,
+    "success_probability": 0.524,
+    "base_success_prob": 0.553,
+    "profit_probability": 0.383,
+    "composite_score": 58.56,
     "focus_rank": 2,
     "rank_delta": 0,
     "intention": "BUY GAIL for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
@@ -208,7 +208,7 @@
     "data_confidence": "Estimated",
     "data_confidence_key": "estimated",
     "data_confidence_note": "Only 1 paper trade(s) \u2014 probability is an indicator-based estimate, not yet proven",
-    "expected_edge_r": 0.4,
+    "expected_edge_r": 0.383,
     "buy_score": 9.59,
     "sell_score": 1.5,
     "reasons": [
@@ -246,8 +246,8 @@
       "History backtest: this kind of BUY setup worked 46% of the time over ~1 week on this stock (sample: 48)"
     ],
     "patterns_seen": [
-      "adx_ranging_market",
       "rsi_bullish_divergence",
+      "adx_ranging_market",
       "supertrend_bullish",
       "pivot_point_test"
     ],
@@ -278,7 +278,7 @@
     "market_mood": "bearish",
     "market_warning": [
       "Nifty choppy intraday \u2014 wait for cleaner setups",
-      "Net institutional outflow (\u20b9+144 Cr)"
+      "Heavy FII/DII outflow (\u20b9-3,397 Cr) \u2014 institutions selling"
     ]
   }
 ]

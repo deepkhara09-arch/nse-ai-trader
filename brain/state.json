@@ -1,13 +1,13 @@
 {
   "phase": "paper_trading",
   "day": 51,
-  "session": "morning",
+  "session": "preopen",
   "start_date": "2026-06-22",
   "phase_start_date": "2026-07-15",
   "last_run_date": "2026-08-31",
   "last_counted_date": "2026-08-31",
   "cohort_last_tick_date": "2026-08-31",
-  "last_updated": "2026-08-31T10:12:33.742856",
+  "last_updated": "2026-09-01T03:05:42.394050",
   "focus_stocks": [
     "SBIN.NS",
     "ABCAPITAL.NS",
@@ -68,7 +68,6 @@
     "expectancy": -47.93
   },
   "brain_notes": [
-    "[2026-07-01] Cohort batch #1 complete \u2014 30 candidates ready",
     "[2026-07-01] Selected 15 focus stocks. Scores: MARICO=59 | RECLTD=59 | FEDERALBNK=52 | SBIN=51 | KOTAKBANK=51 | HOMEFIRST=51 | NESTLEIND=50 | ICICIBANK=49 | BAJFINANCE=49 | UNIONBANK=49 | ABCAPITAL=49 | PFC=49 | GAIL=49 | AXISBANK=48 | PIDILITIND=48",
     "Phase \u2192 analysis on day 8 (2026-07-01) | Selected 15 focus stocks. Scores: MARICO=59 | RECLTD=59 | FEDERALBNK=52 | SBIN=51 | KOTAKBANK=51 | HOMEFIRST=51 | NESTLEIND=50 | ICICIBANK=49 | BAJFINANCE=49 | UNIONBANK=49 | ABCAPITAL=49 | PFC=49 | GAIL=49 | AXISBANK=48 | PIDILITIND=48",
     "[2026-07-02] Pre-open macro: risk_on (+0.53)",
@@ -167,7 +166,8 @@
     "[2026-08-28] Pre-open macro: neutral (+0.11)",
     "[2026-08-31] Pre-open macro: neutral (-0.00)",
     "[2026-08-31] Focus refresh \u2014 promoted: ['AXISBANK'] | demoted: ['SHRIRAMFIN']",
-    "[2026-08-31] Cohort batch #32 complete \u2014 30 candidates ready"
+    "[2026-08-31] Cohort batch #32 complete \u2014 30 candidates ready",
+    "[2026-09-01] Pre-open macro: neutral (+0.00)"
   ],
   "alert_sent": false,
   "schema_version": 11,
@@ -397,11 +397,6 @@
     "scored_date": "2026-08-31"
   },
   "sessions_done": {
-    "preopen": "2026-08-31",
-    "morning": "2026-08-31",
-    "midday": "2026-08-31",
-    "afternoon": "2026-08-31",
-    "intraday_close": "2026-08-31",
-    "preclose": "2026-08-31"
+    "preopen": "2026-09-01"
   }
 }

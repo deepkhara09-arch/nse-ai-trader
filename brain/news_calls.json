@@ -2634,8 +2634,8 @@
       "direction": 1,
       "score": 0.301,
       "price_at_call": 1044.1,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "wrong"
     },
     {
       "date": "2026-08-27",
@@ -2643,8 +2643,8 @@
       "direction": 1,
       "score": 0.244,
       "price_at_call": 2637.8,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "wrong"
     },
     {
       "date": "2026-08-27",
@@ -2652,8 +2652,8 @@
       "direction": 1,
       "score": 0.352,
       "price_at_call": 4035.6,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "wrong"
     },
     {
       "date": "2026-08-28",
@@ -2762,6 +2762,69 @@
       "price_at_call": 4020.0,
       "evaluated": false,
       "outcome": ""
+    },
+    {
+      "date": "2026-09-01",
+      "ticker": "SBIN.NS",
+      "direction": 1,
+      "score": 0.258,
+      "price_at_call": 1029.9,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-09-01",
+      "ticker": "GAIL.NS",
+      "direction": 1,
+      "score": 0.31,
+      "price_at_call": 172.46,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-09-01",
+      "ticker": "SIEMENS.NS",
+      "direction": 1,
+      "score": 0.252,
+      "price_at_call": 4030.0,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-09-01",
+      "ticker": "GRASIM.NS",
+      "direction": 1,
+      "score": 0.224,
+      "price_at_call": 3300.0,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-09-01",
+      "ticker": "LT.NS",
+      "direction": 1,
+      "score": 0.465,
+      "price_at_call": 3992.5,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-09-01",
+      "ticker": "COALINDIA.NS",
+      "direction": 1,
+      "score": 0.204,
+      "price_at_call": 402.1,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-09-01",
+      "ticker": "JSWSTEEL.NS",
+      "direction": 1,
+      "score": 0.204,
+      "price_at_call": 1314.0,
+      "evaluated": false,
+      "outcome": ""
     }
   ],
   "reliability": {
@@ -2826,10 +2889,10 @@
       "last_seen": "2026-07-21"
     },
     "SBIN.NS": {
-      "wins": 3.205,
-      "losses": 7.218,
-      "reliability": 0.307,
-      "last_seen": "2026-08-31"
+      "wins": 3.187,
+      "losses": 8.176,
+      "reliability": 0.28,
+      "last_seen": "2026-09-01"
     },
     "GAIL.NS": {
       "wins": 1.994,
@@ -2923,15 +2986,21 @@
     },
     "LT.NS": {
       "wins": 0.0,
-      "losses": 1.0,
-      "reliability": 0.333,
-      "last_seen": "2026-08-28"
+      "losses": 1.977,
+      "reliability": 0.17,
+      "last_seen": "2026-09-01"
     },
     "RELIANCE.NS": {
       "wins": 0.0,
       "losses": 1.983,
       "reliability": 0.169,
       "last_seen": "2026-08-31"
+    },
+    "ASIANPAINT.NS": {
+      "wins": 0.0,
+      "losses": 1.0,
+      "reliability": 0.333,
+      "last_seen": "2026-09-01"
     }
   }
 }

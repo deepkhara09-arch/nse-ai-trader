@@ -41,8 +41,8 @@
         "\u2713 Daily setup aligned with the higher-timeframe trend",
         "RSI bearish divergence \u2014 price higher but RSI lower"
       ],
-      "current_price": 3295.7,
-      "unrealized_pnl": 20.8,
+      "current_price": 3300.0,
+      "unrealized_pnl": 29.4,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -61,7 +61,7 @@
         0,
         0,
         0,
-        0
+        1
       ],
       "stale_tightened": true
     },
@@ -97,8 +97,8 @@
         "In a long-term strong downtrend (2yr)",
         "\u2713 Daily setup aligned with the higher-timeframe trend"
       ],
-      "current_price": 401.75,
-      "unrealized_pnl": -13.0,
+      "current_price": 402.1,
+      "unrealized_pnl": -17.55,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -151,8 +151,8 @@
         "In a long-term strong downtrend (2yr)",
         "\u2713 Daily setup aligned with the higher-timeframe trend"
       ],
-      "current_price": 400.45,
-      "unrealized_pnl": 171.0,
+      "current_price": 407.85,
+      "unrealized_pnl": 82.2,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -171,7 +171,7 @@
         1,
         1,
         1,
-        1
+        0
       ]
     },
     {
@@ -216,8 +216,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "Near upper Bollinger Band"
       ],
-      "current_price": 1176.0,
-      "unrealized_pnl": -38.4,
+      "current_price": 1183.8,
+      "unrealized_pnl": -7.2,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -278,8 +278,8 @@
         "Negative news sentiment (-0.18, news 1.2x reliable here)",
         "News sentiment worsening across sessions"
       ],
-      "current_price": 1643.9,
-      "unrealized_pnl": -9.3,
+      "current_price": 1642.3,
+      "unrealized_pnl": -14.1,
       "max_held_days": 10,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -295,6 +295,7 @@
         "hist_long_trend": "strong_uptrend"
       },
       "view_hist": [
+        1,
         1,
         1,
         1
@@ -342,8 +343,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "Near upper Bollinger Band"
       ],
-      "current_price": 172.78,
-      "unrealized_pnl": -12.92,
+      "current_price": 172.46,
+      "unrealized_pnl": -23.8,
       "max_held_days": 10,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -359,6 +360,7 @@
         "hist_long_trend": "strong_uptrend"
       },
       "view_hist": [
+        1,
         1,
         1
       ]
@@ -2546,7 +2548,8 @@
       "costs": 11.95,
       "pnl_pct": 0.87,
       "won": true,
-      "open_days": 10
+      "open_days": 10,
+      "forensic_done": true
     },
     {
       "ticker": "ABCAPITAL.NS",
@@ -2614,7 +2617,8 @@
       "costs": 18.13,
       "pnl_pct": -3.48,
       "won": false,
-      "open_days": 7
+      "open_days": 7,
+      "forensic_done": true
     }
   ],
   "daily_snapshots": [
@@ -2848,16 +2852,23 @@
       "capital": 66818.39,
       "open_positions": 6,
       "daily_pnl": -198.91
+    },
+    {
+      "date": "2026-09-01",
+      "portfolio_value": 98287.96,
+      "capital": 65911.42,
+      "open_positions": 6,
+      "daily_pnl": -179.23
     }
   ],
   "daily_pnl_today": -179.2283749999994,
-  "last_snapshot_date": "2026-08-31",
+  "last_snapshot_date": "2026-09-01",
   "lifetime_wins": 13,
   "lifetime_losses": 22,
   "lifetime_pnl": -1761.0,
   "last_pnl_reset_date": "2026-09-01",
-  "max_drawdown_pct": 2.76,
-  "current_drawdown_pct": 2.76,
+  "max_drawdown_pct": 2.89,
+  "current_drawdown_pct": 2.89,
   "portfolio_peak": 101210.28,
-  "sessions_since_peak": 30
+  "sessions_since_peak": 31
 }

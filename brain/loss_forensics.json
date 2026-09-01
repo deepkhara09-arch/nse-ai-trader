@@ -11,18 +11,18 @@
       "avg_loss_pct": 3.95
     },
     "no_market_tailwind": {
-      "count": 11,
-      "sum_loss_pct": 22.089999999999996,
-      "last": "2026-08-31",
+      "count": 12,
+      "sum_loss_pct": 25.569999999999997,
+      "last": "2026-09-01",
       "examples": [
-        "GRASIM",
         "CHOLAFIN",
         "MARICO",
         "BAJFINANCE",
         "GAIL",
-        "HINDALCO"
+        "HINDALCO",
+        "ABCAPITAL"
       ],
-      "avg_loss_pct": 2.01
+      "avg_loss_pct": 2.13
     },
     "weak_pattern:pivot_point_test": {
       "count": 6,
@@ -39,15 +39,16 @@
       "avg_loss_pct": 1.51
     },
     "weak_pattern:adx_ranging_market": {
-      "count": 3,
-      "sum_loss_pct": 6.390000000000001,
-      "last": "2026-08-31",
+      "count": 4,
+      "sum_loss_pct": 9.870000000000001,
+      "last": "2026-09-01",
       "examples": [
         "SBIN",
         "JSWSTEEL",
-        "GAIL"
+        "GAIL",
+        "ABCAPITAL"
       ],
-      "avg_loss_pct": 2.13
+      "avg_loss_pct": 2.47
     },
     "weak_pattern:spinning_top": {
       "count": 1,
@@ -106,11 +107,11 @@
   },
   "patterns": {
     "full_bullish_alignment": {
-      "wins": 10,
-      "losses": 20,
-      "sum_win_pct": 29.44,
-      "sum_loss_pct": 42.78,
-      "edge": -0.148
+      "wins": 11,
+      "losses": 21,
+      "sum_win_pct": 30.310000000000002,
+      "sum_loss_pct": 46.26,
+      "edge": -0.166
     },
     "near_52w_high": {
       "wins": 3,
@@ -127,25 +128,25 @@
       "edge": 0.0
     },
     "spinning_top": {
-      "wins": 2,
+      "wins": 3,
       "losses": 1,
-      "sum_win_pct": 13.11,
+      "sum_win_pct": 13.979999999999999,
       "sum_loss_pct": 3.66,
-      "edge": 0.0
+      "edge": 0.86
     },
     "pivot_point_test": {
-      "wins": 11,
+      "wins": 12,
       "losses": 9,
-      "sum_win_pct": 31.87,
+      "sum_win_pct": 32.74,
       "sum_loss_pct": 12.36,
-      "edge": 0.325
+      "edge": 0.323
     },
     "adx_strong_trend_up": {
-      "wins": 7,
+      "wins": 8,
       "losses": 7,
-      "sum_win_pct": 23.09,
+      "sum_win_pct": 23.96,
       "sum_loss_pct": 14.23,
-      "edge": 0.211
+      "edge": 0.216
     },
     "tweezer_bottom": {
       "wins": 5,
@@ -155,11 +156,11 @@
       "edge": -0.048
     },
     "supertrend_bullish": {
-      "wins": 10,
-      "losses": 16,
-      "sum_win_pct": 19.630000000000003,
-      "sum_loss_pct": 38.83,
-      "edge": -0.246
+      "wins": 11,
+      "losses": 17,
+      "sum_win_pct": 20.500000000000004,
+      "sum_loss_pct": 42.309999999999995,
+      "edge": -0.26
     },
     "engulfing_bullish": {
       "wins": 0,
@@ -191,10 +192,10 @@
     },
     "pivot_r1_breakout": {
       "wins": 3,
-      "losses": 5,
+      "losses": 6,
       "sum_win_pct": 4.62,
-      "sum_loss_pct": 13.78,
-      "edge": -0.382
+      "sum_loss_pct": 17.259999999999998,
+      "edge": -0.468
     },
     "volume_breakout_bullish": {
       "wins": 5,
@@ -219,17 +220,17 @@
     },
     "adx_ranging_market": {
       "wins": 2,
-      "losses": 3,
+      "losses": 4,
       "sum_win_pct": 3.31,
-      "sum_loss_pct": 6.390000000000001,
-      "edge": -0.205
+      "sum_loss_pct": 9.870000000000001,
+      "edge": -0.364
     },
     "stoch_rsi_oversold_reversal": {
-      "wins": 3,
+      "wins": 4,
       "losses": 4,
-      "sum_win_pct": 4.17,
+      "sum_win_pct": 5.04,
       "sum_loss_pct": 9.370000000000001,
-      "edge": -0.248
+      "edge": -0.18
     },
     "pivot_s1_breakdown": {
       "wins": 1,
@@ -267,17 +268,17 @@
       "edge": -0.709
     },
     "doji": {
-      "wins": 2,
+      "wins": 3,
       "losses": 5,
-      "sum_win_pct": 3.3000000000000003,
+      "sum_win_pct": 4.17,
       "sum_loss_pct": 9.51,
-      "edge": -0.296
+      "edge": -0.223
     },
     "pivot_r2_breakout": {
       "wins": 0,
-      "losses": 2,
+      "losses": 3,
       "sum_win_pct": 0.0,
-      "sum_loss_pct": 6.84,
+      "sum_loss_pct": 10.32,
       "edge": 0.0
     },
     "52w_breakout": {
@@ -366,10 +367,10 @@
     },
     "strong_bullish_marubozu": {
       "wins": 0,
-      "losses": 3,
+      "losses": 4,
       "sum_win_pct": 0.0,
-      "sum_loss_pct": 7.23,
-      "edge": 0.0
+      "sum_loss_pct": 10.71,
+      "edge": -0.893
     },
     "macd_bearish_crossover": {
       "wins": 0,
@@ -411,6 +412,13 @@
       "losses": 1,
       "sum_win_pct": 0.0,
       "sum_loss_pct": 1.32,
+      "edge": 0.0
+    },
+    "ema_golden_cross": {
+      "wins": 0,
+      "losses": 1,
+      "sum_win_pct": 0.0,
+      "sum_loss_pct": 3.48,
       "edge": 0.0
     }
   },
@@ -595,6 +603,15 @@
       "loss_pct": 2.72,
       "causes": [
         "weak_pattern:inside_bar",
+        "no_market_tailwind"
+      ]
+    },
+    {
+      "date": "2026-09-01",
+      "ticker": "ABCAPITAL",
+      "loss_pct": 3.48,
+      "causes": [
+        "weak_pattern:adx_ranging_market",
         "no_market_tailwind"
       ]
     }

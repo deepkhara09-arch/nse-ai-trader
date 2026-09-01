@@ -1,6 +1,6 @@
 {
   "date": "2026-09-01",
-  "session": "intraday_close",
+  "session": "preclose",
   "nifty": {
     "symbol": "^NSEI",
     "value": 24080.4,
@@ -58,9 +58,10 @@
       "ath_pct_60d": -2.42
     }
   },
-  "market_mood": "neutral",
+  "market_mood": "bearish",
   "trade_allowed": true,
   "warnings": [
+    "Nifty choppy intraday \u2014 wait for cleaner setups",
     "Heavy FII/DII outflow (\u20b9-3,397 Cr) \u2014 institutions selling"
   ],
   "leading_sectors": [
@@ -72,7 +73,7 @@
   "lagging_sectors": [
     "Infra"
   ],
-  "intraday_regime": "mixed",
+  "intraday_regime": "choppy",
   "macro": {
     "date": "2026-09-01",
     "session": "midday",
@@ -324,16 +325,15 @@
   },
   "pcr": {
     "date": "2026-09-01",
-    "pcr": 0.804,
+    "pcr": 0.863,
     "reading": "neutral",
-    "total_pe_oi": 2425847,
-    "total_ce_oi": 3017461,
-    "spot": 24080.4,
-    "max_pain": 24100.0,
-    "max_pain_dist_pct": -0.08,
-    "oi_bias": "call_heavy_resistance",
+    "total_pe_oi": 2781647,
+    "total_ce_oi": 3222387,
+    "spot": 24055.8,
+    "max_pain": 24050.0,
+    "max_pain_dist_pct": 0.02,
+    "oi_bias": "balanced",
     "ok": true,
     "error": ""
-  },
-  "oi_note": "Heavy call OI above spot \u2014 option writers see a lid (bearish lean)"
+  }
 }

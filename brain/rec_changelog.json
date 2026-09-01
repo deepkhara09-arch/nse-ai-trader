@@ -5948,5 +5948,45 @@
     "ts": "2026-09-01T09:32:32.337819",
     "detail": "Stop loss moved \u20b91289.30 \u2192 \u20b91272.41",
     "confidence": 66.2
+  },
+  {
+    "type": "new",
+    "ticker": "SIEMENS.NS",
+    "nse_code": "SIEMENS",
+    "signal": "BUY",
+    "date": "2026-09-01",
+    "ts": "2026-09-01T10:12:05.969082",
+    "detail": "New BUY recommendation \u2014 confidence 74/100",
+    "confidence": 73.9
+  },
+  {
+    "type": "updated",
+    "ticker": "PIDILITIND.NS",
+    "nse_code": "PIDILITIND",
+    "signal": "BUY",
+    "date": "2026-09-01",
+    "ts": "2026-09-01T10:12:05.969082",
+    "detail": "Confidence \u25b214 (74 \u2192 88) | Rank \u25bc1 (#2 \u2192 #3)",
+    "confidence": 87.7
+  },
+  {
+    "type": "updated",
+    "ticker": "GAIL.NS",
+    "nse_code": "GAIL",
+    "signal": "BUY",
+    "date": "2026-09-01",
+    "ts": "2026-09-01T10:12:05.969082",
+    "detail": "Confidence \u25b29 (78 \u2192 87)",
+    "confidence": 86.7
+  },
+  {
+    "type": "updated",
+    "ticker": "JSWSTEEL.NS",
+    "nse_code": "JSWSTEEL",
+    "signal": "BUY",
+    "date": "2026-09-01",
+    "ts": "2026-09-01T10:12:05.969082",
+    "detail": "Confidence \u25b210 (66 \u2192 76) | Rank \u25bc1 (#3 \u2192 #4)",
+    "confidence": 76.3
   }
 ]

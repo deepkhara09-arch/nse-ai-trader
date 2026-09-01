@@ -4,8 +4,8 @@
   "nifty": {
     "symbol": "^NSEI",
     "value": 24080.4,
-    "day_change_pct": -0.39,
-    "trend_5d": "down",
+    "day_change_pct": -0.04,
+    "trend_5d": "sideways",
     "trend_20d": "down",
     "ath_pct_60d": -2.8
   },
@@ -22,7 +22,7 @@
     "trend_5d": "up",
     "trend_20d": "sideways",
     "ath_pct_60d": -0.98,
-    "diverging": true
+    "diverging": false
   },
   "sectors": {
     "IT": {
@@ -58,12 +58,9 @@
       "ath_pct_60d": -2.42
     }
   },
-  "market_mood": "bearish",
+  "market_mood": "neutral",
   "trade_allowed": true,
   "warnings": [
-    "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
-    "Bank Nifty outperforming while Nifty down \u2014 banking sector resilient",
-    "Nifty choppy intraday \u2014 wait for cleaner setups",
     "Heavy FII/DII outflow (\u20b9-3,397 Cr) \u2014 institutions selling"
   ],
   "leading_sectors": [
@@ -75,7 +72,7 @@
   "lagging_sectors": [
     "Infra"
   ],
-  "intraday_regime": "choppy",
+  "intraday_regime": "mixed",
   "macro": {
     "date": "2026-09-01",
     "session": "midday",

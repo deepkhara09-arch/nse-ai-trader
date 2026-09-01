@@ -1,13 +1,13 @@
 {
   "phase": "paper_trading",
   "day": 51,
-  "session": "morning",
+  "session": "midday",
   "start_date": "2026-06-22",
   "phase_start_date": "2026-07-15",
   "last_run_date": "2026-08-31",
   "last_counted_date": "2026-08-31",
   "cohort_last_tick_date": "2026-08-31",
-  "last_updated": "2026-09-01T04:05:47.380211",
+  "last_updated": "2026-09-01T06:15:55.767598",
   "focus_stocks": [
     "SBIN.NS",
     "ABCAPITAL.NS",
@@ -58,14 +58,14 @@
     "HOMEFIRST.NS"
   ],
   "paper_trade_stats": {
-    "total": 34,
+    "total": 35,
     "wins": 13,
-    "losses": 21,
-    "win_rate": 0.382,
-    "total_pnl": -1547.42,
+    "losses": 22,
+    "win_rate": 0.371,
+    "total_pnl": -1761.0,
     "avg_win": 118.38,
-    "avg_loss": -146.97,
-    "expectancy": -45.51
+    "avg_loss": -150.0,
+    "expectancy": -50.31
   },
   "brain_notes": [
     "[2026-07-01] Selected 15 focus stocks. Scores: MARICO=59 | RECLTD=59 | FEDERALBNK=52 | SBIN=51 | KOTAKBANK=51 | HOMEFIRST=51 | NESTLEIND=50 | ICICIBANK=49 | BAJFINANCE=49 | UNIONBANK=49 | ABCAPITAL=49 | PFC=49 | GAIL=49 | AXISBANK=48 | PIDILITIND=48",
@@ -398,6 +398,7 @@
   },
   "sessions_done": {
     "preopen": "2026-09-01",
-    "morning": "2026-09-01"
+    "morning": "2026-09-01",
+    "midday": "2026-09-01"
   }
 }

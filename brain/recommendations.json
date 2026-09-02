@@ -3,10 +3,10 @@
     "ticker": "PIDILITIND.NS",
     "nse_code": "PIDILITIND",
     "company_name": "Pidilite Industries",
-    "date": "2026-09-01",
-    "generated_at": "2026-09-01 10:12 UTC",
+    "date": "2026-09-02",
+    "generated_at": "2026-09-02 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -40,12 +40,12 @@
     "pattern_score": 10,
     "confluence_bonus": 7.5,
     "paper_bonus": 5.0,
-    "success_probability": 0.652,
-    "base_success_prob": 0.737,
-    "profit_probability": 0.319,
-    "composite_score": 60.57,
+    "success_probability": 0.669,
+    "base_success_prob": 0.762,
+    "profit_probability": 0.364,
+    "composite_score": 63.61,
     "focus_rank": 3,
-    "rank_delta": -1,
+    "rank_delta": 0,
     "intention": "BUY PIDILITIND for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
     "confluence_count": 5,
     "confluence_families": [
@@ -66,15 +66,15 @@
     "data_confidence": "Estimated",
     "data_confidence_key": "estimated",
     "data_confidence_note": "Only 3 paper trade(s) \u2014 probability is an indicator-based estimate, not yet proven",
-    "expected_edge_r": 0.319,
+    "expected_edge_r": 0.364,
     "buy_score": 13.12,
     "sell_score": 0.75,
     "reasons": [
       "All EMAs stacked bullish",
       "RSI=50 in healthy buy zone",
       "High volume confirmation (1.8x avg)",
-      "Learned bullish pattern: supertrend_bullish (rel=87%)",
       "Learned bullish pattern: full_bullish_alignment (rel=79%)",
+      "Learned bullish pattern: supertrend_bullish (rel=87%)",
       "Learned bullish pattern: pivot_point_test (rel=100%)",
       "Sector headwind (momentum=-0.31)",
       "Supertrend bullish \u2014 price above trend band",
@@ -106,10 +106,10 @@
       "History backtest: this kind of BUY setup worked 45% of the time over ~1 week on this stock (sample: 53)"
     ],
     "patterns_seen": [
+      "full_bullish_alignment",
       "outside_bar",
       "supertrend_bullish",
       "strong_bullish_marubozu",
-      "full_bullish_alignment",
       "pivot_point_test",
       "adx_ranging_market"
     ],
@@ -147,18 +147,18 @@
     "paper_expectancy": 68.39,
     "market_mood": "bearish",
     "market_warning": [
-      "Nifty choppy intraday \u2014 wait for cleaner setups",
-      "Heavy FII/DII outflow (\u20b9-3,397 Cr) \u2014 institutions selling"
+      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
+      "Nifty choppy intraday \u2014 wait for cleaner setups"
     ]
   },
   {
     "ticker": "GAIL.NS",
     "nse_code": "GAIL",
     "company_name": "GAIL.NS",
-    "date": "2026-09-01",
-    "generated_at": "2026-09-01 10:12 UTC",
+    "date": "2026-09-02",
+    "generated_at": "2026-09-02 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -192,10 +192,10 @@
     "pattern_score": 1.0,
     "confluence_bonus": 10,
     "paper_bonus": 0.0,
-    "success_probability": 0.569,
-    "base_success_prob": 0.617,
-    "profit_probability": 0.542,
-    "composite_score": 66.72,
+    "success_probability": 0.579,
+    "base_success_prob": 0.631,
+    "profit_probability": 0.578,
+    "composite_score": 68.54,
     "focus_rank": 1,
     "rank_delta": 0,
     "intention": "BUY GAIL for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
@@ -219,7 +219,7 @@
     "data_confidence": "Estimated",
     "data_confidence_key": "estimated",
     "data_confidence_note": "Only 1 paper trade(s) \u2014 probability is an indicator-based estimate, not yet proven",
-    "expected_edge_r": 0.542,
+    "expected_edge_r": 0.578,
     "buy_score": 13.21,
     "sell_score": 0.75,
     "reasons": [
@@ -259,13 +259,13 @@
       "History backtest: this kind of BUY setup worked 46% of the time over ~1 week on this stock (sample: 48)"
     ],
     "patterns_seen": [
-      "macd_bullish_crossover",
-      "supertrend_bullish",
-      "full_bullish_alignment",
-      "tweezer_bottom",
-      "pivot_r1_breakout",
-      "ema_golden_cross",
       "momentum_continuation",
+      "macd_bullish_crossover",
+      "pivot_r1_breakout",
+      "full_bullish_alignment",
+      "supertrend_bullish",
+      "ema_golden_cross",
+      "tweezer_bottom",
       "adx_ranging_market"
     ],
     "reliable_patterns": [],
@@ -294,18 +294,18 @@
     "paper_expectancy": -102.35,
     "market_mood": "bearish",
     "market_warning": [
-      "Nifty choppy intraday \u2014 wait for cleaner setups",
-      "Heavy FII/DII outflow (\u20b9-3,397 Cr) \u2014 institutions selling"
+      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
+      "Nifty choppy intraday \u2014 wait for cleaner setups"
     ]
   },
   {
     "ticker": "JSWSTEEL.NS",
     "nse_code": "JSWSTEEL",
     "company_name": "JSW Steel Ltd",
-    "date": "2026-09-01",
-    "generated_at": "2026-09-01 10:12 UTC",
+    "date": "2026-09-02",
+    "generated_at": "2026-09-02 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -339,12 +339,12 @@
     "pattern_score": 7.5,
     "confluence_bonus": 10,
     "paper_bonus": 5.0,
-    "success_probability": 0.631,
-    "base_success_prob": 0.661,
-    "profit_probability": 0.185,
-    "composite_score": 55.35,
+    "success_probability": 0.645,
+    "base_success_prob": 0.681,
+    "profit_probability": 0.221,
+    "composite_score": 57.8,
     "focus_rank": 4,
-    "rank_delta": -1,
+    "rank_delta": 0,
     "intention": "BUY JSWSTEEL for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
     "confluence_count": 6,
     "confluence_families": [
@@ -366,7 +366,7 @@
     "data_confidence": "Estimated",
     "data_confidence_key": "estimated",
     "data_confidence_note": "Only 3 paper trade(s) \u2014 probability is an indicator-based estimate, not yet proven",
-    "expected_edge_r": 0.185,
+    "expected_edge_r": 0.221,
     "buy_score": 10.82,
     "sell_score": 4.0,
     "reasons": [
@@ -398,11 +398,11 @@
       "History backtest: this kind of BUY setup worked 56% of the time over ~1 week on this stock (sample: 64)"
     ],
     "patterns_seen": [
-      "pivot_s1_breakdown",
-      "three_black_crows",
+      "momentum_continuation",
       "full_bullish_alignment",
+      "pivot_s1_breakdown",
       "adx_strong_trend_up",
-      "momentum_continuation"
+      "three_black_crows"
     ],
     "reliable_patterns": [
       "full_bullish_alignment",
@@ -434,18 +434,18 @@
     "paper_expectancy": -71.75,
     "market_mood": "bearish",
     "market_warning": [
-      "Nifty choppy intraday \u2014 wait for cleaner setups",
-      "Heavy FII/DII outflow (\u20b9-3,397 Cr) \u2014 institutions selling"
+      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
+      "Nifty choppy intraday \u2014 wait for cleaner setups"
     ]
   },
   {
     "ticker": "SIEMENS.NS",
     "nse_code": "SIEMENS",
     "company_name": "SIEMENS.NS",
-    "date": "2026-09-01",
-    "generated_at": "2026-09-01 10:12 UTC",
+    "date": "2026-09-02",
+    "generated_at": "2026-09-02 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -479,12 +479,12 @@
     "pattern_score": 3.5,
     "confluence_bonus": 5.0,
     "paper_bonus": 5.0,
-    "success_probability": 0.593,
-    "base_success_prob": 0.579,
-    "profit_probability": 0.072,
-    "composite_score": 50.31,
+    "success_probability": 0.602,
+    "base_success_prob": 0.592,
+    "profit_probability": 0.096,
+    "composite_score": 51.88,
     "focus_rank": 9,
-    "rank_delta": -1,
+    "rank_delta": 0,
     "intention": "BUY SIEMENS for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
     "confluence_count": 4,
     "confluence_families": [
@@ -504,7 +504,7 @@
     "data_confidence": "Estimated",
     "data_confidence_key": "estimated",
     "data_confidence_note": "Only 3 paper trade(s) \u2014 probability is an indicator-based estimate, not yet proven",
-    "expected_edge_r": 0.072,
+    "expected_edge_r": 0.096,
     "buy_score": 11.32,
     "sell_score": 5.0,
     "reasons": [
@@ -539,12 +539,12 @@
       "History backtest: this kind of BUY setup worked 63% of the time over ~1 week on this stock (sample: 51)"
     ],
     "patterns_seen": [
-      "evening_star",
-      "pivot_s1_breakdown",
       "full_bullish_alignment",
       "macd_bearish_crossover",
+      "low_volume_drift",
+      "pivot_s1_breakdown",
       "adx_strong_trend_up",
-      "low_volume_drift"
+      "evening_star"
     ],
     "reliable_patterns": [
       "full_bullish_alignment"
@@ -574,8 +574,8 @@
     "paper_expectancy": 74.85,
     "market_mood": "bearish",
     "market_warning": [
-      "Nifty choppy intraday \u2014 wait for cleaner setups",
-      "Heavy FII/DII outflow (\u20b9-3,397 Cr) \u2014 institutions selling"
+      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
+      "Nifty choppy intraday \u2014 wait for cleaner setups"
     ]
   }
 ]

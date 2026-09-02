@@ -1,13 +1,13 @@
 {
   "phase": "paper_trading",
   "day": 52,
-  "session": "morning",
+  "session": "preopen",
   "start_date": "2026-06-22",
   "phase_start_date": "2026-07-15",
   "last_run_date": "2026-09-01",
   "last_counted_date": "2026-09-01",
   "cohort_last_tick_date": "2026-09-01",
-  "last_updated": "2026-09-01T10:12:05.846842",
+  "last_updated": "2026-09-02T03:05:35.424930",
   "focus_stocks": [
     "SBIN.NS",
     "ABCAPITAL.NS",
@@ -68,7 +68,6 @@
     "expectancy": -50.31
   },
   "brain_notes": [
-    "[2026-07-02] Pre-open macro: risk_on (+0.53)",
     "[2026-07-02] Cohort batch #2 complete \u2014 30 candidates ready",
     "[2026-07-03] Pre-open macro: risk_on (+0.62)",
     "[2026-07-03] Cohort batch #3 complete \u2014 30 candidates ready",
@@ -167,7 +166,8 @@
     "[2026-08-31] Cohort batch #32 complete \u2014 30 candidates ready",
     "[2026-09-01] Pre-open macro: neutral (+0.00)",
     "[2026-09-01] Focus refresh \u2014 promoted: ['ADANIPORTS'] | demoted: ['AXISBANK']",
-    "[2026-09-01] Cohort batch #33 complete \u2014 30 candidates ready"
+    "[2026-09-01] Cohort batch #33 complete \u2014 30 candidates ready",
+    "[2026-09-02] Pre-open macro: neutral (+0.15)"
   ],
   "alert_sent": false,
   "schema_version": 11,
@@ -397,11 +397,6 @@
     "scored_date": "2026-09-01"
   },
   "sessions_done": {
-    "preopen": "2026-09-01",
-    "morning": "2026-09-01",
-    "midday": "2026-09-01",
-    "afternoon": "2026-09-01",
-    "intraday_close": "2026-09-01",
-    "preclose": "2026-09-01"
+    "preopen": "2026-09-02"
   }
 }

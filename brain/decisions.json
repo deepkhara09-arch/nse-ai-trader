@@ -1,90 +1,5 @@
 [
   {
-    "timestamp": "2026-07-30T04:05:45.833669",
-    "date": "2026-07-30",
-    "ticker": "MARICO.NS",
-    "session": "morning",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 95,
-    "entry": 885.7,
-    "stop_loss": 860.34,
-    "target": 936.41,
-    "reason": "paper morning",
-    "patterns": [
-      "full_bullish_alignment",
-      "adx_strong_trend_up",
-      "pivot_r1_breakout",
-      "strong_bullish_marubozu",
-      "bb_upper_rejection",
-      "near_52w_high",
-      "supertrend_bullish"
-    ]
-  },
-  {
-    "timestamp": "2026-07-30T04:05:45.834863",
-    "date": "2026-07-30",
-    "ticker": "HOMEFIRST.NS",
-    "session": "morning",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 91.6,
-    "entry": 1176.9,
-    "stop_loss": 1107.05,
-    "target": 1316.59,
-    "reason": "paper morning",
-    "patterns": [
-      "full_bullish_alignment",
-      "adx_strong_trend_up",
-      "gap_up_reversal",
-      "rsi_bearish_divergence",
-      "outside_bar",
-      "pivot_s1_breakdown"
-    ]
-  },
-  {
-    "timestamp": "2026-07-30T04:05:45.835629",
-    "date": "2026-07-30",
-    "ticker": "NESTLEIND.NS",
-    "session": "morning",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 95,
-    "entry": 1524.4,
-    "stop_loss": 1473.04,
-    "target": 1627.13,
-    "reason": "paper morning",
-    "patterns": [
-      "full_bullish_alignment",
-      "pivot_r1_breakout",
-      "spinning_top",
-      "bb_upper_rejection",
-      "near_52w_high",
-      "supertrend_bullish"
-    ]
-  },
-  {
-    "timestamp": "2026-07-30T04:05:45.836383",
-    "date": "2026-07-30",
-    "ticker": "ICICIBANK.NS",
-    "session": "morning",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 95,
-    "entry": 1430.3,
-    "stop_loss": 1393.12,
-    "target": 1504.66,
-    "reason": "paper morning",
-    "patterns": [
-      "full_bullish_alignment",
-      "adx_strong_trend_up",
-      "pivot_point_test",
-      "stoch_rsi_overbought_reversal",
-      "overbought_macd_divergence",
-      "rsi_bullish_divergence"
-    ]
-  },
-  {
     "timestamp": "2026-07-30T04:05:45.837084",
     "date": "2026-07-30",
     "ticker": "UNIONBANK.NS",
@@ -21243,6 +21158,91 @@
       "macd_bearish_crossover",
       "adx_strong_trend_up",
       "low_volume_drift"
+    ]
+  },
+  {
+    "timestamp": "2026-09-02T04:05:45.313324",
+    "date": "2026-09-02",
+    "ticker": "SIEMENS.NS",
+    "session": "morning",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 57.2,
+    "entry": 3993.6,
+    "stop_loss": 3858.41,
+    "target": 4263.99,
+    "reason": "paper morning",
+    "patterns": [
+      "macd_bearish_crossover",
+      "low_volume_drift",
+      "evening_star",
+      "adx_strong_trend_up",
+      "full_bullish_alignment",
+      "pivot_s1_breakdown"
+    ]
+  },
+  {
+    "timestamp": "2026-09-02T04:05:45.314287",
+    "date": "2026-09-02",
+    "ticker": "ASIANPAINT.NS",
+    "session": "morning",
+    "action": "SELL",
+    "signal": "SELL",
+    "confidence": 61.4,
+    "entry": 2530.3,
+    "stop_loss": 2599.32,
+    "target": 2392.26,
+    "reason": "paper morning",
+    "patterns": [
+      "full_bearish_alignment",
+      "stoch_rsi_overbought_reversal",
+      "outside_bar",
+      "volume_breakdown_bearish",
+      "three_black_crows",
+      "pivot_s1_breakdown"
+    ]
+  },
+  {
+    "timestamp": "2026-09-02T04:05:45.319036",
+    "date": "2026-09-02",
+    "ticker": "VBL.NS",
+    "session": "morning",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 46.5,
+    "entry": 405.85,
+    "stop_loss": 389.54,
+    "target": 438.46,
+    "reason": "paper morning",
+    "patterns": [
+      "inverted_hammer",
+      "full_bearish_alignment",
+      "supertrend_bullish",
+      "bb_lower_bounce",
+      "bullish_harami",
+      "pivot_point_test",
+      "inside_bar",
+      "adx_strong_trend_down"
+    ]
+  },
+  {
+    "timestamp": "2026-09-02T04:05:45.319931",
+    "date": "2026-09-02",
+    "ticker": "JSWSTEEL.NS",
+    "session": "morning",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 62.1,
+    "entry": 1301.9,
+    "stop_loss": 1264.91,
+    "target": 1375.87,
+    "reason": "paper morning",
+    "patterns": [
+      "momentum_continuation",
+      "adx_strong_trend_up",
+      "three_black_crows",
+      "full_bullish_alignment",
+      "pivot_s1_breakdown"
     ]
   }
 ]

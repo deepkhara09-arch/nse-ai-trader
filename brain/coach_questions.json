@@ -1,95 +1,5 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of pivot_s1_breakdown, adx_strong_trend_down, three_black_crows mean for a swing trade on VBL? Current RSI=29, MACD hist=-1.4933, Vol=1.4x average. Signal is SELL.",
-    "context": {
-      "ticker": "VBL.NS",
-      "signal": "SELL",
-      "patterns": "pivot_s1_breakdown, adx_strong_trend_down, three_black_crows",
-      "rsi": 29.1
-    },
-    "queued_at": "2026-09-01T10:12:05.963486"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of pivot_s1_breakdown, three_black_crows, adx_strong_trend_up mean for a swing trade on JSWSTEEL? Current RSI=57, MACD hist=+2.3797, Vol=1.1x average. Signal is BUY.",
-    "context": {
-      "ticker": "JSWSTEEL.NS",
-      "signal": "BUY",
-      "patterns": "pivot_s1_breakdown, three_black_crows, adx_strong_trend_up",
-      "rsi": 56.9
-    },
-    "queued_at": "2026-09-01T10:12:05.964541"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of strong_bullish_marubozu, adx_ranging_market mean for a swing trade on PIDILITIND? Current RSI=50, MACD hist=-4.8120, Vol=1.8x average. Signal is BUY.",
-    "context": {
-      "ticker": "PIDILITIND.NS",
-      "signal": "BUY",
-      "patterns": "strong_bullish_marubozu, adx_ranging_market",
-      "rsi": 50.5
-    },
-    "queued_at": "2026-09-02T03:05:35.505275"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of momentum_continuation, macd_bullish_crossover, pivot_r1_breakout mean for a swing trade on GAIL? Current RSI=54, MACD hist=+0.0115, Vol=1.5x average. Signal is BUY.",
-    "context": {
-      "ticker": "GAIL.NS",
-      "signal": "BUY",
-      "patterns": "momentum_continuation, macd_bullish_crossover, pivot_r1_breakout",
-      "rsi": 54.2
-    },
-    "queued_at": "2026-09-02T03:05:35.508528"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of macd_bearish_crossover, low_volume_drift, evening_star mean for a swing trade on SIEMENS? Current RSI=52, MACD hist=-0.6968, Vol=0.5x average. Signal is BUY.",
-    "context": {
-      "ticker": "SIEMENS.NS",
-      "signal": "BUY",
-      "patterns": "macd_bearish_crossover, low_volume_drift, evening_star",
-      "rsi": 51.6
-    },
-    "queued_at": "2026-09-02T03:05:35.511221"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of three_black_crows, outside_bar, full_bearish_alignment mean for a swing trade on ASIANPAINT? Current RSI=34, MACD hist=-6.4665, Vol=2.0x average. Signal is SELL.",
-    "context": {
-      "ticker": "ASIANPAINT.NS",
-      "signal": "SELL",
-      "patterns": "three_black_crows, outside_bar, full_bearish_alignment",
-      "rsi": 34.0
-    },
-    "queued_at": "2026-09-02T03:05:35.513939"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of rsi_bullish_divergence, pivot_s1_breakdown, bb_lower_bounce mean for a swing trade on HINDALCO? Current RSI=42, MACD hist=-4.4250, Vol=1.2x average. Signal is BUY.",
-    "context": {
-      "ticker": "HINDALCO.NS",
-      "signal": "BUY",
-      "patterns": "rsi_bullish_divergence, pivot_s1_breakdown, bb_lower_bounce",
-      "rsi": 42.4
-    },
-    "queued_at": "2026-09-02T03:05:35.514794"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of momentum_continuation, macd_bullish_crossover mean for a swing trade on GRASIM? Current RSI=57, MACD hist=+0.3224, Vol=0.9x average. Signal is BUY.",
-    "context": {
-      "ticker": "GRASIM.NS",
-      "signal": "BUY",
-      "patterns": "momentum_continuation, macd_bullish_crossover",
-      "rsi": 57.2
-    },
-    "queued_at": "2026-09-02T03:05:35.515654"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of bb_lower_bounce, full_bearish_alignment, strong_bearish_marubozu mean for a swing trade on VBL? Current RSI=29, MACD hist=-1.4933, Vol=1.4x average. Signal is SELL.",
-    "context": {
-      "ticker": "VBL.NS",
-      "signal": "SELL",
-      "patterns": "bb_lower_bounce, full_bearish_alignment, strong_bearish_marubozu",
-      "rsi": 29.1
-    },
-    "queued_at": "2026-09-02T03:05:35.518590"
-  },
-  {
     "question": "In Indian NSE markets, what does the combination of momentum_continuation, pivot_s1_breakdown, adx_strong_trend_up mean for a swing trade on JSWSTEEL? Current RSI=57, MACD hist=+2.3797, Vol=1.1x average. Signal is BUY.",
     "context": {
       "ticker": "JSWSTEEL.NS",
@@ -98,5 +8,95 @@
       "rsi": 56.9
     },
     "queued_at": "2026-09-02T03:05:35.519367"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of macd_bearish_crossover, low_volume_drift, evening_star mean for a swing trade on SIEMENS? Current RSI=52, MACD hist=-0.6884, Vol=0.5x average. Signal is BUY.",
+    "context": {
+      "ticker": "SIEMENS.NS",
+      "signal": "BUY",
+      "patterns": "macd_bearish_crossover, low_volume_drift, evening_star",
+      "rsi": 51.6
+    },
+    "queued_at": "2026-09-02T04:05:45.313038"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of full_bearish_alignment, stoch_rsi_overbought_reversal, outside_bar mean for a swing trade on ASIANPAINT? Current RSI=34, MACD hist=-6.4787, Vol=2.0x average. Signal is SELL.",
+    "context": {
+      "ticker": "ASIANPAINT.NS",
+      "signal": "SELL",
+      "patterns": "full_bearish_alignment, stoch_rsi_overbought_reversal, outside_bar",
+      "rsi": 34.0
+    },
+    "queued_at": "2026-09-02T04:05:45.314084"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of inverted_hammer, full_bearish_alignment, supertrend_bullish mean for a swing trade on VBL? Current RSI=31, MACD hist=-1.6586, Vol=0.8x average. Signal is BUY.",
+    "context": {
+      "ticker": "VBL.NS",
+      "signal": "BUY",
+      "patterns": "inverted_hammer, full_bearish_alignment, supertrend_bullish",
+      "rsi": 30.6
+    },
+    "queued_at": "2026-09-02T04:05:45.318842"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of momentum_continuation, adx_strong_trend_up, three_black_crows mean for a swing trade on JSWSTEEL? Current RSI=57, MACD hist=+2.3701, Vol=1.1x average. Signal is BUY.",
+    "context": {
+      "ticker": "JSWSTEEL.NS",
+      "signal": "BUY",
+      "patterns": "momentum_continuation, adx_strong_trend_up, three_black_crows",
+      "rsi": 56.9
+    },
+    "queued_at": "2026-09-02T04:05:45.319759"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of inverted_hammer, full_bearish_alignment, supertrend_bullish mean for a swing trade on VBL? Current RSI=31, MACD hist=-1.6586, Vol=0.8x average. Signal is BUY.",
+    "context": {
+      "ticker": "VBL.NS",
+      "signal": "BUY",
+      "patterns": "inverted_hammer, full_bearish_alignment, supertrend_bullish",
+      "rsi": 30.6
+    },
+    "queued_at": "2026-09-02T04:05:45.322110"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of macd_bearish_crossover, low_volume_drift, evening_star mean for a swing trade on SIEMENS? Current RSI=52, MACD hist=-0.6884, Vol=0.5x average. Signal is BUY.",
+    "context": {
+      "ticker": "SIEMENS.NS",
+      "signal": "BUY",
+      "patterns": "macd_bearish_crossover, low_volume_drift, evening_star",
+      "rsi": 51.6
+    },
+    "queued_at": "2026-09-02T04:05:45.431741"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of full_bearish_alignment, stoch_rsi_overbought_reversal, outside_bar mean for a swing trade on ASIANPAINT? Current RSI=34, MACD hist=-6.4787, Vol=2.0x average. Signal is SELL.",
+    "context": {
+      "ticker": "ASIANPAINT.NS",
+      "signal": "SELL",
+      "patterns": "full_bearish_alignment, stoch_rsi_overbought_reversal, outside_bar",
+      "rsi": 34.0
+    },
+    "queued_at": "2026-09-02T04:05:45.432732"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of inverted_hammer, full_bearish_alignment, supertrend_bullish mean for a swing trade on VBL? Current RSI=31, MACD hist=-1.6586, Vol=0.8x average. Signal is BUY.",
+    "context": {
+      "ticker": "VBL.NS",
+      "signal": "BUY",
+      "patterns": "inverted_hammer, full_bearish_alignment, supertrend_bullish",
+      "rsi": 30.6
+    },
+    "queued_at": "2026-09-02T04:05:45.437213"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of momentum_continuation, adx_strong_trend_up, three_black_crows mean for a swing trade on JSWSTEEL? Current RSI=57, MACD hist=+2.3701, Vol=1.1x average. Signal is BUY.",
+    "context": {
+      "ticker": "JSWSTEEL.NS",
+      "signal": "BUY",
+      "patterns": "momentum_continuation, adx_strong_trend_up, three_black_crows",
+      "rsi": 56.9
+    },
+    "queued_at": "2026-09-02T04:05:45.438121"
   }
 ]

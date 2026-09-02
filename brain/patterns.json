@@ -3399,10 +3399,10 @@
         "last_seen": "2026-09-01"
       },
       "pivot_s1_breakdown": {
-        "wins": 1.0,
-        "losses": 4.0,
-        "reliability": 0.2,
-        "last_seen": "2026-08-28"
+        "wins": 0.972,
+        "losses": 4.886,
+        "reliability": 0.166,
+        "last_seen": "2026-09-02"
       },
       "stoch_rsi_overbought_reversal": {
         "wins": 1.0,
@@ -3526,15 +3526,15 @@
       },
       "full_bearish_alignment": {
         "wins": 0.0,
-        "losses": 1.0,
-        "reliability": 0.375,
-        "last_seen": "2026-08-28"
+        "losses": 1.972,
+        "reliability": 0.254,
+        "last_seen": "2026-09-02"
       },
       "three_black_crows": {
         "wins": 0.0,
-        "losses": 1.0,
-        "reliability": 0.375,
-        "last_seen": "2026-08-28"
+        "losses": 1.972,
+        "reliability": 0.254,
+        "last_seen": "2026-09-02"
       },
       "strong_bearish_marubozu": {
         "wins": 0.0,
@@ -3559,6 +3559,24 @@
         "losses": 1.0,
         "reliability": 0.375,
         "last_seen": "2026-09-01"
+      },
+      "adx_strong_trend_down": {
+        "wins": 0.0,
+        "losses": 1.0,
+        "reliability": 0.375,
+        "last_seen": "2026-09-02"
+      },
+      "oversold_macd_reversal": {
+        "wins": 0.0,
+        "losses": 1.0,
+        "reliability": 0.375,
+        "last_seen": "2026-09-02"
+      },
+      "early_recovery": {
+        "wins": 0.0,
+        "losses": 1.0,
+        "reliability": 0.375,
+        "last_seen": "2026-09-02"
       }
     }
   },
@@ -3961,5 +3979,56 @@
         }
       }
     }
+  },
+  "COALINDIA.NS": {
+    "reliable_patterns": {
+      "adx_strong_trend_down": {
+        "wins": 0.0,
+        "losses": 1.0,
+        "reliability": 0.333,
+        "last_seen": "2026-09-02"
+      },
+      "oversold_macd_reversal": {
+        "wins": 0.0,
+        "losses": 1.0,
+        "reliability": 0.333,
+        "last_seen": "2026-09-02"
+      },
+      "three_black_crows": {
+        "wins": 0.0,
+        "losses": 1.0,
+        "reliability": 0.333,
+        "last_seen": "2026-09-02"
+      },
+      "pivot_s1_breakdown": {
+        "wins": 0.0,
+        "losses": 1.0,
+        "reliability": 0.333,
+        "last_seen": "2026-09-02"
+      },
+      "full_bearish_alignment": {
+        "wins": 0.0,
+        "losses": 1.0,
+        "reliability": 0.333,
+        "last_seen": "2026-09-02"
+      },
+      "early_recovery": {
+        "wins": 0.0,
+        "losses": 1.0,
+        "reliability": 0.333,
+        "last_seen": "2026-09-02"
+      }
+    },
+    "preferred_style": "swing",
+    "swing_wins": 0,
+    "swing_losses": 1,
+    "intraday_wins": 0,
+    "intraday_losses": 0,
+    "long_term_wins": 0,
+    "long_term_losses": 0,
+    "atr_stop_hits": 1,
+    "atr_target_hits": 0,
+    "atr_multiplier": 1.5,
+    "last_updated": "2026-09-02"
   }
 }

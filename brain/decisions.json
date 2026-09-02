@@ -1,67 +1,5 @@
 [
   {
-    "timestamp": "2026-07-30T04:05:45.837084",
-    "date": "2026-07-30",
-    "ticker": "UNIONBANK.NS",
-    "session": "morning",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 56.7,
-    "entry": 169.9,
-    "stop_loss": 161.09,
-    "target": 187.53,
-    "reason": "paper morning",
-    "patterns": [
-      "full_bullish_alignment",
-      "pivot_point_test",
-      "macd_bullish_crossover",
-      "supertrend_bullish",
-      "adx_ranging_market"
-    ]
-  },
-  {
-    "timestamp": "2026-07-30T04:05:45.838217",
-    "date": "2026-07-30",
-    "ticker": "PFC.NS",
-    "session": "morning",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 66.4,
-    "entry": 427.0,
-    "stop_loss": 414.45,
-    "target": 452.1,
-    "reason": "paper morning",
-    "patterns": [
-      "supertrend_bullish",
-      "adx_ranging_market",
-      "pivot_r1_breakout",
-      "ema_golden_cross"
-    ]
-  },
-  {
-    "timestamp": "2026-07-30T04:05:45.838925",
-    "date": "2026-07-30",
-    "ticker": "PIDILITIND.NS",
-    "session": "morning",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 95,
-    "entry": 1630.9,
-    "stop_loss": 1575.89,
-    "target": 1740.92,
-    "reason": "paper morning",
-    "patterns": [
-      "full_bullish_alignment",
-      "adx_strong_trend_up",
-      "spinning_top",
-      "bb_upper_rejection",
-      "near_52w_high",
-      "macd_bullish_crossover",
-      "three_white_soldiers",
-      "supertrend_bullish"
-    ]
-  },
-  {
     "timestamp": "2026-07-30T04:05:45.839642",
     "date": "2026-07-30",
     "ticker": "SIEMENS.NS",
@@ -21243,6 +21181,68 @@
       "three_black_crows",
       "full_bullish_alignment",
       "pivot_s1_breakdown"
+    ]
+  },
+  {
+    "timestamp": "2026-09-02T06:15:54.964471",
+    "date": "2026-09-02",
+    "ticker": "SIEMENS.NS",
+    "session": "midday",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 57.2,
+    "entry": 4013.0,
+    "stop_loss": 3877.81,
+    "target": 4283.39,
+    "reason": "paper midday",
+    "patterns": [
+      "low_volume_drift",
+      "pivot_s1_breakdown",
+      "full_bullish_alignment",
+      "evening_star",
+      "adx_strong_trend_up",
+      "macd_bearish_crossover"
+    ]
+  },
+  {
+    "timestamp": "2026-09-02T06:15:54.965587",
+    "date": "2026-09-02",
+    "ticker": "ASIANPAINT.NS",
+    "session": "midday",
+    "action": "SELL",
+    "signal": "SELL",
+    "confidence": 61.4,
+    "entry": 2513.6,
+    "stop_loss": 2582.62,
+    "target": 2375.56,
+    "reason": "paper midday",
+    "patterns": [
+      "volume_breakdown_bearish",
+      "stoch_rsi_overbought_reversal",
+      "pivot_s1_breakdown",
+      "full_bearish_alignment",
+      "outside_bar",
+      "three_black_crows"
+    ]
+  },
+  {
+    "timestamp": "2026-09-02T06:15:54.972122",
+    "date": "2026-09-02",
+    "ticker": "JSWSTEEL.NS",
+    "session": "midday",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 62.1,
+    "entry": 1301.8,
+    "stop_loss": 1264.81,
+    "target": 1375.77,
+    "reason": "paper midday",
+    "patterns": [
+      "pivot_s1_breakdown",
+      "full_bullish_alignment",
+      "adx_strong_trend_up",
+      "momentum_continuation",
+      "three_black_crows"
     ]
   }
 ]

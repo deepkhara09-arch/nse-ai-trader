@@ -41,8 +41,8 @@
         "\u2713 Daily setup aligned with the higher-timeframe trend",
         "RSI bearish divergence \u2014 price higher but RSI lower"
       ],
-      "current_price": 3239.0,
-      "unrealized_pnl": -92.6,
+      "current_price": 3245.5,
+      "unrealized_pnl": -79.6,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -59,8 +59,8 @@
       },
       "view_hist": [
         0,
-        0,
         1,
+        0,
         0
       ],
       "stale_tightened": true
@@ -96,8 +96,8 @@
         "In a long-term strong downtrend (2yr)",
         "\u2713 Daily setup aligned with the higher-timeframe trend"
       ],
-      "current_price": 405.85,
-      "unrealized_pnl": 106.2,
+      "current_price": 413.8,
+      "unrealized_pnl": 10.8,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -114,7 +114,7 @@
       },
       "view_hist": [
         1,
-        1,
+        0,
         0,
         0
       ]
@@ -161,8 +161,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "Near upper Bollinger Band"
       ],
-      "current_price": 1169.2,
-      "unrealized_pnl": -65.6,
+      "current_price": 1185.8,
+      "unrealized_pnl": 0.8,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -223,8 +223,8 @@
         "Negative news sentiment (-0.18, news 1.2x reliable here)",
         "News sentiment worsening across sessions"
       ],
-      "current_price": 1629.2,
-      "unrealized_pnl": -53.4,
+      "current_price": 1626.3,
+      "unrealized_pnl": -62.1,
       "max_held_days": 10,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -242,7 +242,7 @@
       "view_hist": [
         1,
         1,
-        1,
+        0,
         0
       ]
     },
@@ -288,8 +288,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "Near upper Bollinger Band"
       ],
-      "current_price": 171.69,
-      "unrealized_pnl": -49.98,
+      "current_price": 171.59,
+      "unrealized_pnl": -53.38,
       "max_held_days": 10,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -307,7 +307,7 @@
       "view_hist": [
         1,
         1,
-        1,
+        0,
         0
       ]
     },
@@ -344,8 +344,8 @@
         "Candlestick: three black crows",
         "Broke below Pivot S1 support \u2014 bearish"
       ],
-      "current_price": 1301.9,
-      "unrealized_pnl": 0.0,
+      "current_price": 1301.8,
+      "unrealized_pnl": -0.3,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -359,7 +359,10 @@
         "mtf_alignment": "aligned",
         "opposing_ratio": 0.51,
         "hist_long_trend": "strong_uptrend"
-      }
+      },
+      "view_hist": [
+        0
+      ]
     }
   ],
   "closed_trades": [

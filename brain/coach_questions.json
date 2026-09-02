@@ -1,13 +1,33 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of bearish_harami, macd_bearish_crossover, ema_death_cross mean for a swing trade on GAIL? Current RSI=41, MACD hist=-0.0808, Vol=1.0x average. Signal is SELL.",
+    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_down, full_bearish_alignment, pivot_r1_breakout mean for a swing trade on ADANIPORTS? Current RSI=48, MACD hist=-0.7554, Vol=1.6x average. Signal is BUY.",
     "context": {
-      "ticker": "GAIL.NS",
-      "signal": "SELL",
-      "patterns": "bearish_harami, macd_bearish_crossover, ema_death_cross",
-      "rsi": 40.6
+      "ticker": "ADANIPORTS.NS",
+      "signal": "BUY",
+      "patterns": "adx_strong_trend_down, full_bearish_alignment, pivot_r1_breakout",
+      "rsi": 47.5
     },
-    "queued_at": "2026-09-02T09:45:46.293408"
+    "queued_at": "2026-09-02T10:11:19.199101"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of inside_bar, pivot_s1_breakdown, macd_bearish_crossover mean for a swing trade on GRASIM? Current RSI=50, MACD hist=-1.1196, Vol=0.7x average. Signal is BUY.",
+    "context": {
+      "ticker": "GRASIM.NS",
+      "signal": "BUY",
+      "patterns": "inside_bar, pivot_s1_breakdown, macd_bearish_crossover",
+      "rsi": 49.6
+    },
+    "queued_at": "2026-09-02T10:11:19.201860"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of shooting_star, stoch_rsi_overbought_reversal, doji mean for a swing trade on JSWSTEEL? Current RSI=63, MACD hist=+1.0904, Vol=0.7x average. Signal is BUY.",
+    "context": {
+      "ticker": "JSWSTEEL.NS",
+      "signal": "BUY",
+      "patterns": "shooting_star, stoch_rsi_overbought_reversal, doji",
+      "rsi": 63.3
+    },
+    "queued_at": "2026-09-02T10:11:19.204358"
   },
   {
     "question": "In Indian NSE markets, what does the combination of outside_bar, three_black_crows mean for a swing trade on SIEMENS? Current RSI=51, MACD hist=-4.4823, Vol=0.8x average. Signal is BUY.",
@@ -17,86 +37,66 @@
       "patterns": "outside_bar, three_black_crows",
       "rsi": 50.9
     },
-    "queued_at": "2026-09-02T09:45:46.294206"
+    "queued_at": "2026-09-02T10:12:26.582304"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of doji, spinning_top, rsi_bullish_divergence mean for a swing trade on JSWSTEEL? Current RSI=63, MACD hist=+1.0904, Vol=0.7x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of inside_bar, pivot_s1_breakdown, macd_bearish_crossover mean for a swing trade on GRASIM? Current RSI=50, MACD hist=-1.1196, Vol=0.7x average. Signal is BUY.",
+    "context": {
+      "ticker": "GRASIM.NS",
+      "signal": "BUY",
+      "patterns": "inside_bar, pivot_s1_breakdown, macd_bearish_crossover",
+      "rsi": 49.6
+    },
+    "queued_at": "2026-09-02T10:12:26.585936"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of adx_ranging_market, evening_star, low_volume_drift mean for a swing trade on LICI? Current RSI=45, MACD hist=+0.6864, Vol=0.2x average. Signal is BUY.",
+    "context": {
+      "ticker": "LICI.NS",
+      "signal": "BUY",
+      "patterns": "adx_ranging_market, evening_star, low_volume_drift",
+      "rsi": 45.4
+    },
+    "queued_at": "2026-09-02T10:12:26.587112"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of inverted_hammer, adx_strong_trend_down, full_bearish_alignment mean for a swing trade on VBL? Current RSI=31, MACD hist=-1.6586, Vol=0.8x average. Signal is BUY.",
+    "context": {
+      "ticker": "VBL.NS",
+      "signal": "BUY",
+      "patterns": "inverted_hammer, adx_strong_trend_down, full_bearish_alignment",
+      "rsi": 30.6
+    },
+    "queued_at": "2026-09-02T10:12:26.588706"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of shooting_star, stoch_rsi_overbought_reversal, doji mean for a swing trade on JSWSTEEL? Current RSI=63, MACD hist=+1.0904, Vol=0.7x average. Signal is BUY.",
     "context": {
       "ticker": "JSWSTEEL.NS",
       "signal": "BUY",
-      "patterns": "doji, spinning_top, rsi_bullish_divergence",
+      "patterns": "shooting_star, stoch_rsi_overbought_reversal, doji",
       "rsi": 63.3
     },
-    "queued_at": "2026-09-02T09:45:46.299107"
+    "queued_at": "2026-09-02T10:12:26.591038"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_down, supertrend_bullish, macd_bearish_crossover mean for a swing trade on ADANIPORTS? Current RSI=48, MACD hist=-0.7554, Vol=1.6x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_down, full_bearish_alignment, pivot_r1_breakout mean for a swing trade on ADANIPORTS? Current RSI=48, MACD hist=-0.7554, Vol=1.6x average. Signal is BUY.",
     "context": {
       "ticker": "ADANIPORTS.NS",
       "signal": "BUY",
-      "patterns": "adx_strong_trend_down, supertrend_bullish, macd_bearish_crossover",
+      "patterns": "adx_strong_trend_down, full_bearish_alignment, pivot_r1_breakout",
       "rsi": 47.5
     },
-    "queued_at": "2026-09-02T09:45:46.299885"
+    "queued_at": "2026-09-02T10:12:26.593559"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of bearish_harami, macd_bearish_crossover, ema_death_cross mean for a swing trade on GAIL? Current RSI=41, MACD hist=-0.0808, Vol=1.0x average. Signal is SELL.",
+    "question": "In Indian NSE markets, what does the combination of adx_ranging_market, macd_bullish_crossover, pivot_r1_breakout mean for a swing trade on ICICIBANK? Current RSI=58, MACD hist=+0.9133, Vol=1.6x average. Signal is BUY.",
     "context": {
-      "ticker": "GAIL.NS",
-      "signal": "SELL",
-      "patterns": "bearish_harami, macd_bearish_crossover, ema_death_cross",
-      "rsi": 40.6
-    },
-    "queued_at": "2026-09-02T09:45:46.303413"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of doji, spinning_top, rsi_bullish_divergence mean for a swing trade on JSWSTEEL? Current RSI=63, MACD hist=+1.0904, Vol=0.7x average. Signal is BUY.",
-    "context": {
-      "ticker": "JSWSTEEL.NS",
+      "ticker": "ICICIBANK.NS",
       "signal": "BUY",
-      "patterns": "doji, spinning_top, rsi_bullish_divergence",
-      "rsi": 63.3
+      "patterns": "adx_ranging_market, macd_bullish_crossover, pivot_r1_breakout",
+      "rsi": 57.9
     },
-    "queued_at": "2026-09-02T09:45:46.304300"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of bearish_harami, macd_bearish_crossover, ema_death_cross mean for a swing trade on GAIL? Current RSI=41, MACD hist=-0.0808, Vol=1.0x average. Signal is SELL.",
-    "context": {
-      "ticker": "GAIL.NS",
-      "signal": "SELL",
-      "patterns": "bearish_harami, macd_bearish_crossover, ema_death_cross",
-      "rsi": 40.6
-    },
-    "queued_at": "2026-09-02T09:45:46.402622"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of outside_bar, three_black_crows mean for a swing trade on SIEMENS? Current RSI=51, MACD hist=-4.4823, Vol=0.8x average. Signal is BUY.",
-    "context": {
-      "ticker": "SIEMENS.NS",
-      "signal": "BUY",
-      "patterns": "outside_bar, three_black_crows",
-      "rsi": 50.9
-    },
-    "queued_at": "2026-09-02T09:45:46.403584"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of doji, spinning_top, rsi_bullish_divergence mean for a swing trade on JSWSTEEL? Current RSI=63, MACD hist=+1.0904, Vol=0.7x average. Signal is BUY.",
-    "context": {
-      "ticker": "JSWSTEEL.NS",
-      "signal": "BUY",
-      "patterns": "doji, spinning_top, rsi_bullish_divergence",
-      "rsi": 63.3
-    },
-    "queued_at": "2026-09-02T09:45:46.409043"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_down, supertrend_bullish, macd_bearish_crossover mean for a swing trade on ADANIPORTS? Current RSI=48, MACD hist=-0.7554, Vol=1.6x average. Signal is BUY.",
-    "context": {
-      "ticker": "ADANIPORTS.NS",
-      "signal": "BUY",
-      "patterns": "adx_strong_trend_down, supertrend_bullish, macd_bearish_crossover",
-      "rsi": 47.5
-    },
-    "queued_at": "2026-09-02T09:45:46.412257"
+    "queued_at": "2026-09-02T10:12:26.594251"
   }
 ]

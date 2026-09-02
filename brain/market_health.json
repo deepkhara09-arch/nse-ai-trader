@@ -1,26 +1,26 @@
 {
   "date": "2026-09-02",
-  "session": "intraday_close",
+  "session": "preclose",
   "nifty": {
     "symbol": "^NSEI",
     "value": 24055.8,
     "day_change_pct": -0.1,
-    "trend_5d": "sideways",
+    "trend_5d": "down",
     "trend_20d": "down",
     "ath_pct_60d": -2.9
   },
   "vix": {
     "value": 11.49,
     "level": "normal",
-    "percentile_30d": 40.0,
-    "avg_30d": 11.82
+    "percentile_30d": 37.0,
+    "avg_30d": 11.88
   },
   "bank_nifty": {
     "symbol": "^NSEBANK",
     "value": 57409.6,
     "day_change_pct": -1.06,
     "trend_5d": "sideways",
-    "trend_20d": "sideways",
+    "trend_20d": "down",
     "ath_pct_60d": -2.03,
     "diverging": false
   },
@@ -60,7 +60,9 @@
   },
   "market_mood": "neutral",
   "trade_allowed": true,
-  "warnings": [],
+  "warnings": [
+    "Nifty in downtrend (down) \u2014 only high-confidence BUY signals"
+  ],
   "leading_sectors": [
     "IT"
   ],
@@ -322,15 +324,16 @@
   "flow_tailwind": true,
   "pcr": {
     "date": "2026-09-02",
-    "pcr": 0.863,
-    "reading": "neutral",
-    "total_pe_oi": 2753368,
-    "total_ce_oi": 3190445,
-    "spot": 24055.8,
-    "max_pain": 24050.0,
-    "max_pain_dist_pct": 0.02,
-    "oi_bias": "balanced",
+    "pcr": 0.727,
+    "reading": "bearish_bias",
+    "total_pe_oi": 1662365,
+    "total_ce_oi": 2285135,
+    "spot": 23914.45,
+    "max_pain": 23950.0,
+    "max_pain_dist_pct": -0.15,
+    "oi_bias": "call_heavy_resistance",
     "ok": true,
     "error": ""
-  }
+  },
+  "oi_note": "Heavy call OI above spot \u2014 option writers see a lid (bearish lean)"
 }

@@ -103,6 +103,15 @@
         "SHRIRAMFIN"
       ],
       "avg_loss_pct": 0.81
+    },
+    "clean_setup_still_lost": {
+      "count": 1,
+      "sum_loss_pct": 2.4,
+      "last": "2026-09-02",
+      "examples": [
+        "COALINDIA"
+      ],
+      "avg_loss_pct": 2.4
     }
   },
   "patterns": {
@@ -234,10 +243,10 @@
     },
     "pivot_s1_breakdown": {
       "wins": 1,
-      "losses": 4,
+      "losses": 5,
       "sum_win_pct": 7.93,
-      "sum_loss_pct": 3.95,
-      "edge": 0.265
+      "sum_loss_pct": 6.35,
+      "edge": 0.088
     },
     "stoch_rsi_overbought_reversal": {
       "wins": 1,
@@ -381,16 +390,16 @@
     },
     "full_bearish_alignment": {
       "wins": 0,
-      "losses": 1,
+      "losses": 2,
       "sum_win_pct": 0.0,
-      "sum_loss_pct": 1.17,
+      "sum_loss_pct": 3.57,
       "edge": 0.0
     },
     "three_black_crows": {
       "wins": 0,
-      "losses": 1,
+      "losses": 2,
       "sum_win_pct": 0.0,
-      "sum_loss_pct": 1.17,
+      "sum_loss_pct": 3.57,
       "edge": 0.0
     },
     "strong_bearish_marubozu": {
@@ -419,6 +428,27 @@
       "losses": 1,
       "sum_win_pct": 0.0,
       "sum_loss_pct": 3.48,
+      "edge": 0.0
+    },
+    "adx_strong_trend_down": {
+      "wins": 0,
+      "losses": 1,
+      "sum_win_pct": 0.0,
+      "sum_loss_pct": 2.4,
+      "edge": 0.0
+    },
+    "oversold_macd_reversal": {
+      "wins": 0,
+      "losses": 1,
+      "sum_win_pct": 0.0,
+      "sum_loss_pct": 2.4,
+      "edge": 0.0
+    },
+    "early_recovery": {
+      "wins": 0,
+      "losses": 1,
+      "sum_win_pct": 0.0,
+      "sum_loss_pct": 2.4,
       "edge": 0.0
     }
   },
@@ -613,6 +643,14 @@
       "causes": [
         "weak_pattern:adx_ranging_market",
         "no_market_tailwind"
+      ]
+    },
+    {
+      "date": "2026-09-02",
+      "ticker": "COALINDIA",
+      "loss_pct": 2.4,
+      "causes": [
+        "clean_setup_still_lost"
       ]
     }
   ]

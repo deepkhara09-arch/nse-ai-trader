@@ -1,16 +1,15 @@
 {
   "phase": "paper_trading",
-  "day": 52,
-  "session": "intraday_close",
+  "day": 53,
+  "session": "morning",
   "start_date": "2026-06-22",
   "phase_start_date": "2026-07-15",
-  "last_run_date": "2026-09-01",
-  "last_counted_date": "2026-09-01",
-  "cohort_last_tick_date": "2026-09-01",
-  "last_updated": "2026-09-02T09:45:46.325379",
+  "last_run_date": "2026-09-02",
+  "last_counted_date": "2026-09-02",
+  "cohort_last_tick_date": "2026-09-02",
+  "last_updated": "2026-09-02T10:12:26.506649",
   "focus_stocks": [
     "SBIN.NS",
-    "ABCAPITAL.NS",
     "PIDILITIND.NS",
     "GAIL.NS",
     "SIEMENS.NS",
@@ -23,39 +22,40 @@
     "HOMEFIRST.NS",
     "VBL.NS",
     "JSWSTEEL.NS",
-    "ADANIPORTS.NS"
+    "ADANIPORTS.NS",
+    "ICICIBANK.NS"
   ],
   "dropped_stocks": [
-    "INDUSINDBK.NS",
     "ADANIENT.NS",
-    "BHEL.NS",
-    "DRREDDY.NS",
     "HOMEFIRST.NS",
-    "GAIL.NS",
-    "RELIANCE.NS",
-    "SIEMENS.NS",
-    "NESTLEIND.NS",
-    "NHPC.NS",
     "IDFCFIRSTB.NS",
-    "POWERGRID.NS",
-    "NIACL.NS",
-    "KOTAKBANK.NS",
     "BANDHANBNK.NS",
+    "RECLTD.NS",
+    "SUNPHARMA.NS",
+    "DRREDDY.NS",
+    "NHPC.NS",
+    "NTPC.NS",
+    "SHRIRAMFIN.NS",
     "AXISBANK.NS",
+    "GRASIM.NS",
+    "NIACL.NS",
     "MARICO.NS",
     "DMART.NS",
-    "CHOLAFIN.NS",
-    "ICICIBANK.NS",
-    "LICI.NS",
-    "FEDERALBNK.NS",
-    "SUNPHARMA.NS",
-    "NTPC.NS",
-    "GRASIM.NS",
+    "ABCAPITAL.NS",
     "ASIANPAINT.NS",
-    "RECLTD.NS",
-    "BANKBARODA.NS",
+    "LICI.NS",
+    "RELIANCE.NS",
+    "SIEMENS.NS",
+    "FEDERALBNK.NS",
     "BAJFINANCE.NS",
-    "SHRIRAMFIN.NS"
+    "CHOLAFIN.NS",
+    "BANKBARODA.NS",
+    "BHEL.NS",
+    "POWERGRID.NS",
+    "GAIL.NS",
+    "ICICIBANK.NS",
+    "INDUSINDBK.NS",
+    "NESTLEIND.NS"
   ],
   "paper_trade_stats": {
     "total": 36,
@@ -68,7 +68,6 @@
     "expectancy": -52.38
   },
   "brain_notes": [
-    "[2026-07-02] Cohort batch #2 complete \u2014 30 candidates ready",
     "[2026-07-03] Pre-open macro: risk_on (+0.62)",
     "[2026-07-03] Cohort batch #3 complete \u2014 30 candidates ready",
     "[2026-07-06] Pre-open macro: neutral (+0.15)",
@@ -167,50 +166,12 @@
     "[2026-09-01] Pre-open macro: neutral (+0.00)",
     "[2026-09-01] Focus refresh \u2014 promoted: ['ADANIPORTS'] | demoted: ['AXISBANK']",
     "[2026-09-01] Cohort batch #33 complete \u2014 30 candidates ready",
-    "[2026-09-02] Pre-open macro: neutral (+0.15)"
+    "[2026-09-02] Pre-open macro: neutral (+0.15)",
+    "[2026-09-02] Focus refresh \u2014 promoted: ['ICICIBANK'] | demoted: ['ABCAPITAL']"
   ],
   "alert_sent": false,
   "schema_version": 11,
   "background_batches": [
-    {
-      "id": 30,
-      "day": 7,
-      "start_date": "2026-08-19",
-      "ready": true,
-      "candidates": [
-        "SIEMENS.NS",
-        "LT.NS",
-        "PIDILITIND.NS",
-        "VBL.NS",
-        "GRASIM.NS",
-        "ETERNAL.NS",
-        "HINDALCO.NS",
-        "GAIL.NS",
-        "JSWSTEEL.NS",
-        "LICI.NS",
-        "SHRIRAMFIN.NS",
-        "NYKAA.NS",
-        "UNIONBANK.NS",
-        "EMAMILTD.NS",
-        "DRREDDY.NS",
-        "BEL.NS",
-        "HOMEFIRST.NS",
-        "TATASTEEL.NS",
-        "COALINDIA.NS",
-        "HDFCLIFE.NS",
-        "ABCAPITAL.NS",
-        "ADANIENT.NS",
-        "GICRE.NS",
-        "IDFCFIRSTB.NS",
-        "POLICYBZR.NS",
-        "CHOLAFIN.NS",
-        "AXISBANK.NS",
-        "SBIN.NS",
-        "DMART.NS",
-        "SWIGGY.NS"
-      ],
-      "scored_date": "2026-08-27"
-    },
     {
       "id": 31,
       "day": 7,
@@ -330,29 +291,36 @@
     },
     {
       "id": 34,
-      "day": 4,
+      "day": 5,
       "start_date": "2026-08-27",
       "ready": false,
       "candidates": []
     },
     {
       "id": 35,
-      "day": 3,
+      "day": 4,
       "start_date": "2026-08-28",
       "ready": false,
       "candidates": []
     },
     {
       "id": 36,
-      "day": 2,
+      "day": 3,
       "start_date": "2026-08-31",
       "ready": false,
       "candidates": []
     },
     {
       "id": 37,
-      "day": 1,
+      "day": 2,
       "start_date": "2026-09-01",
+      "ready": false,
+      "candidates": []
+    },
+    {
+      "id": 38,
+      "day": 1,
+      "start_date": "2026-09-02",
       "ready": false,
       "candidates": []
     }
@@ -401,6 +369,7 @@
     "morning": "2026-09-02",
     "midday": "2026-09-02",
     "afternoon": "2026-09-02",
-    "intraday_close": "2026-09-02"
+    "intraday_close": "2026-09-02",
+    "preclose": "2026-09-02"
   }
 }

@@ -4029,6 +4029,61 @@
     "atr_stop_hits": 1,
     "atr_target_hits": 0,
     "atr_multiplier": 1.5,
-    "last_updated": "2026-09-02"
+    "last_updated": "2026-09-02",
+    "attribution": {
+      "by_pattern": {
+        "adx_strong_trend_down": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "oversold_macd_reversal": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "three_black_crows": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "pivot_s1_breakdown": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "full_bearish_alignment": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "early_recovery": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        }
+      },
+      "by_session": {
+        "midday": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        }
+      },
+      "by_mood": {
+        "neutral": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        }
+      },
+      "by_style": {
+        "swing": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        }
+      }
+    }
   }
 }

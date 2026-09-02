@@ -41,8 +41,8 @@
         "\u2713 Daily setup aligned with the higher-timeframe trend",
         "RSI bearish divergence \u2014 price higher but RSI lower"
       ],
-      "current_price": 3290.1,
-      "unrealized_pnl": 9.6,
+      "current_price": 3287.8,
+      "unrealized_pnl": 5.0,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -344,8 +344,8 @@
         "Candlestick: three black crows",
         "Broke below Pivot S1 support \u2014 bearish"
       ],
-      "current_price": 1305.6,
-      "unrealized_pnl": 11.1,
+      "current_price": 1305.4,
+      "unrealized_pnl": 10.5,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -361,6 +361,7 @@
         "hist_long_trend": "strong_uptrend"
       },
       "view_hist": [
+        0,
         0,
         0,
         0
@@ -2684,7 +2685,8 @@
       "costs": 15.79,
       "pnl_pct": -2.4,
       "won": false,
-      "open_days": 3
+      "open_days": 3,
+      "forensic_done": true
     }
   ],
   "daily_snapshots": [
@@ -2925,16 +2927,23 @@
       "capital": 65911.42,
       "open_positions": 6,
       "daily_pnl": -179.23
+    },
+    {
+      "date": "2026-09-02",
+      "portfolio_value": 98122.09,
+      "capital": 67090.61,
+      "open_positions": 6,
+      "daily_pnl": -124.86
     }
   ],
   "daily_pnl_today": -124.86285499999983,
-  "last_snapshot_date": "2026-09-01",
+  "last_snapshot_date": "2026-09-02",
   "lifetime_wins": 13,
   "lifetime_losses": 23,
   "lifetime_pnl": -1885.86,
   "last_pnl_reset_date": "2026-09-02",
-  "max_drawdown_pct": 2.89,
-  "current_drawdown_pct": 2.89,
+  "max_drawdown_pct": 3.05,
+  "current_drawdown_pct": 3.05,
   "portfolio_peak": 101210.28,
-  "sessions_since_peak": 31
+  "sessions_since_peak": 32
 }

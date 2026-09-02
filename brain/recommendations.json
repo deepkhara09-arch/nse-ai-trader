@@ -4,9 +4,9 @@
     "nse_code": "JSWSTEEL",
     "company_name": "JSW Steel Ltd",
     "date": "2026-09-02",
-    "generated_at": "2026-09-02 06:15 UTC",
-    "valid_until": "13:15 IST",
-    "session": "midday",
+    "generated_at": "2026-09-02 07:45 UTC",
+    "valid_until": "15:15 IST",
+    "session": "afternoon",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -21,17 +21,17 @@
     "exit_window": "Monitor at each daily open; trail stop as it moves in favour",
     "target_timeframe": "1\u20133 trading weeks",
     "action_urgency": "No rush \u2014 swing setups allow flexible entry within the zone",
-    "cmp": 1301.8,
-    "entry_low": 1299.2,
-    "entry_high": 1308.31,
-    "stop_loss": 1264.81,
-    "target1": 1375.78,
-    "target2": 1400.44,
+    "cmp": 1303.5,
+    "entry_low": 1300.89,
+    "entry_high": 1310.02,
+    "stop_loss": 1266.51,
+    "target1": 1377.48,
+    "target2": 1402.14,
     "risk_pct": 2.84,
     "rr_target1": 2.0,
     "rr_target2": 2.67,
     "recommended_qty": 9,
-    "capital_needed": 11716.2,
+    "capital_needed": 11731.5,
     "max_loss_if_sl": 332.91,
     "confidence": 65.8,
     "tech_score": 20.9,
@@ -96,11 +96,11 @@
       "History backtest: this kind of BUY setup worked 56% of the time over ~1 week on this stock (sample: 64)"
     ],
     "patterns_seen": [
+      "three_black_crows",
       "pivot_s1_breakdown",
-      "full_bullish_alignment",
-      "adx_strong_trend_up",
       "momentum_continuation",
-      "three_black_crows"
+      "adx_strong_trend_up",
+      "full_bullish_alignment"
     ],
     "reliable_patterns": [
       "full_bullish_alignment",
@@ -131,8 +131,6 @@
     "paper_pnl": -215.26,
     "paper_expectancy": -71.75,
     "market_mood": "neutral",
-    "market_warning": [
-      "Nifty choppy intraday \u2014 wait for cleaner setups"
-    ]
+    "market_warning": []
   }
 ]

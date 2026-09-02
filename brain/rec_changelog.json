@@ -1,16 +1,6 @@
 [
   {
     "type": "new",
-    "ticker": "MARICO.NS",
-    "nse_code": "MARICO",
-    "signal": "BUY",
-    "date": "2026-07-01",
-    "ts": "2026-07-01T10:12:52.592242",
-    "detail": "New BUY recommendation \u2014 confidence 66/100",
-    "confidence": 66.4
-  },
-  {
-    "type": "new",
     "ticker": "ICICIBANK.NS",
     "nse_code": "ICICIBANK",
     "signal": "BUY",
@@ -5998,5 +5988,15 @@
     "ts": "2026-09-02T04:05:45.442444",
     "detail": "Confidence \u25bc10 (76 \u2192 66) | Rank \u25b21 (#4 \u2192 #3) | Stop loss moved \u20b91277.01 \u2192 \u20b91264.91 | Target 1 moved \u20b91387.98 \u2192 \u20b91375.88",
     "confidence": 65.8
+  },
+  {
+    "type": "updated",
+    "ticker": "JSWSTEEL.NS",
+    "nse_code": "JSWSTEEL",
+    "signal": "BUY",
+    "date": "2026-09-02",
+    "ts": "2026-09-02T09:45:46.412790",
+    "detail": "Confidence \u25b28 (66 \u2192 73) | Rank \u25bc2 (#3 \u2192 #5)",
+    "confidence": 73.4
   }
 ]

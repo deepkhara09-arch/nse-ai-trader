@@ -1,86 +1,5 @@
 [
   {
-    "timestamp": "2026-07-30T06:07:23.606886",
-    "date": "2026-07-30",
-    "ticker": "NESTLEIND.NS",
-    "session": "midday",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 95,
-    "entry": 1518.7,
-    "stop_loss": 1467.34,
-    "target": 1621.43,
-    "reason": "paper midday",
-    "patterns": [
-      "full_bullish_alignment",
-      "pivot_r1_breakout",
-      "spinning_top",
-      "supertrend_bullish",
-      "bb_upper_rejection",
-      "near_52w_high"
-    ]
-  },
-  {
-    "timestamp": "2026-07-30T06:07:23.607610",
-    "date": "2026-07-30",
-    "ticker": "ICICIBANK.NS",
-    "session": "midday",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 95,
-    "entry": 1428.5,
-    "stop_loss": 1391.32,
-    "target": 1502.86,
-    "reason": "paper midday",
-    "patterns": [
-      "overbought_macd_divergence",
-      "rsi_bullish_divergence",
-      "pivot_point_test",
-      "stoch_rsi_overbought_reversal",
-      "full_bullish_alignment",
-      "adx_strong_trend_up"
-    ]
-  },
-  {
-    "timestamp": "2026-07-30T06:07:23.608307",
-    "date": "2026-07-30",
-    "ticker": "UNIONBANK.NS",
-    "session": "midday",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 56.7,
-    "entry": 168.96,
-    "stop_loss": 160.15,
-    "target": 186.59,
-    "reason": "paper midday",
-    "patterns": [
-      "adx_ranging_market",
-      "full_bullish_alignment",
-      "macd_bullish_crossover",
-      "pivot_point_test",
-      "supertrend_bullish"
-    ]
-  },
-  {
-    "timestamp": "2026-07-30T06:07:23.609473",
-    "date": "2026-07-30",
-    "ticker": "PFC.NS",
-    "session": "midday",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 66.4,
-    "entry": 426.25,
-    "stop_loss": 413.7,
-    "target": 451.35,
-    "reason": "paper midday",
-    "patterns": [
-      "ema_golden_cross",
-      "adx_ranging_market",
-      "pivot_r1_breakout",
-      "supertrend_bullish"
-    ]
-  },
-  {
     "timestamp": "2026-07-30T06:07:23.610156",
     "date": "2026-07-30",
     "ticker": "PIDILITIND.NS",
@@ -21251,6 +21170,100 @@
       "supertrend_bullish",
       "macd_bearish_crossover",
       "bullish_harami"
+    ]
+  },
+  {
+    "timestamp": "2026-09-02T09:45:46.293600",
+    "date": "2026-09-02",
+    "ticker": "GAIL.NS",
+    "session": "intraday_close",
+    "action": "SELL",
+    "signal": "SELL",
+    "confidence": 44.7,
+    "entry": 172.62,
+    "stop_loss": 177.18,
+    "target": 163.5,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "bearish_harami",
+      "rsi_bearish_divergence",
+      "macd_bearish_crossover",
+      "adx_ranging_market",
+      "pivot_s1_breakdown",
+      "ema_death_cross",
+      "gap_down_continuation",
+      "inside_bar"
+    ]
+  },
+  {
+    "timestamp": "2026-09-02T09:45:46.294375",
+    "date": "2026-09-02",
+    "ticker": "SIEMENS.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 65.2,
+    "entry": 4010.0,
+    "stop_loss": 3873.53,
+    "target": 4282.94,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "doji",
+      "spinning_top",
+      "pivot_point_test",
+      "pivot_s1_breakdown",
+      "outside_bar",
+      "full_bullish_alignment",
+      "three_black_crows",
+      "adx_strong_trend_up"
+    ]
+  },
+  {
+    "timestamp": "2026-09-02T09:45:46.299270",
+    "date": "2026-09-02",
+    "ticker": "JSWSTEEL.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 73.9,
+    "entry": 1305.6,
+    "stop_loss": 1268.59,
+    "target": 1379.61,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "doji",
+      "spinning_top",
+      "rsi_bullish_divergence",
+      "pivot_point_test",
+      "pivot_s1_breakdown",
+      "full_bullish_alignment",
+      "stoch_rsi_overbought_reversal",
+      "three_black_crows",
+      "shooting_star",
+      "adx_strong_trend_up"
+    ]
+  },
+  {
+    "timestamp": "2026-09-02T09:45:46.300056",
+    "date": "2026-09-02",
+    "ticker": "ADANIPORTS.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 34.6,
+    "entry": 1670.7,
+    "stop_loss": 1617.29,
+    "target": 1777.52,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "adx_strong_trend_down",
+      "supertrend_bullish",
+      "macd_bearish_crossover",
+      "bullish_harami",
+      "gap_up_continuation",
+      "full_bearish_alignment",
+      "inside_bar",
+      "pivot_r1_breakout"
     ]
   }
 ]

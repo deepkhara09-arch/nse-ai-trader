@@ -5,21 +5,21 @@
     "symbol": "^NSEI",
     "value": 23914.45,
     "day_change_pct": -0.59,
-    "trend_5d": "sideways",
+    "trend_5d": "down",
     "trend_20d": "down",
     "ath_pct_60d": -3.47
   },
   "vix": {
     "value": 11.59,
     "level": "normal",
-    "percentile_30d": 47.0,
-    "avg_30d": 11.76
+    "percentile_30d": 43.0,
+    "avg_30d": 11.85
   },
   "bank_nifty": {
     "symbol": "^NSEBANK",
     "value": 57172.0,
     "day_change_pct": -0.41,
-    "trend_5d": "sideways",
+    "trend_5d": "down",
     "trend_20d": "down",
     "ath_pct_60d": -2.43,
     "diverging": false
@@ -60,7 +60,9 @@
   },
   "market_mood": "neutral",
   "trade_allowed": true,
-  "warnings": [],
+  "warnings": [
+    "Nifty in downtrend (down) \u2014 only high-confidence BUY signals"
+  ],
   "leading_sectors": [
     "IT"
   ],
@@ -131,10 +133,10 @@
   "macro_risk_factor": 1.0,
   "fii_dii": {
     "date": "2026-09-03",
-    "fii_net_cr": 6688.37,
-    "dii_net_cr": 2812.98,
-    "combined_net_cr": 9501.35,
-    "signal": "strong_inflow",
+    "fii_net_cr": -2345.87,
+    "dii_net_cr": 4977.46,
+    "combined_net_cr": 2631.59,
+    "signal": "inflow",
     "ok": true,
     "error": "",
     "history": [
@@ -314,13 +316,12 @@
       },
       {
         "date": "2026-09-03",
-        "fii": 6688.37,
-        "dii": 2812.98,
-        "combined": 9501.35
+        "fii": -2345.87,
+        "dii": 4977.46,
+        "combined": 2631.59
       }
     ]
   },
-  "flow_tailwind": true,
   "pcr": {
     "date": "2026-09-03",
     "pcr": 0.655,

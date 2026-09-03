@@ -2724,8 +2724,8 @@
       "direction": 1,
       "score": 0.201,
       "price_at_call": 1043.0,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "wrong"
     },
     {
       "date": "2026-08-31",
@@ -2733,8 +2733,8 @@
       "direction": 1,
       "score": 0.259,
       "price_at_call": 4039.4,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "flat"
     },
     {
       "date": "2026-08-31",
@@ -2742,8 +2742,8 @@
       "direction": 1,
       "score": 0.302,
       "price_at_call": 2574.7,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "wrong"
     },
     {
       "date": "2026-08-31",
@@ -2751,8 +2751,8 @@
       "direction": 1,
       "score": 0.212,
       "price_at_call": 3318.5,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "flat"
     },
     {
       "date": "2026-08-31",
@@ -2760,8 +2760,8 @@
       "direction": 1,
       "score": 0.495,
       "price_at_call": 4020.0,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "flat"
     },
     {
       "date": "2026-09-01",
@@ -2906,6 +2906,78 @@
       "price_at_call": 1670.4,
       "evaluated": false,
       "outcome": ""
+    },
+    {
+      "date": "2026-09-03",
+      "ticker": "GAIL.NS",
+      "direction": 1,
+      "score": 0.384,
+      "price_at_call": 173.75,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-09-03",
+      "ticker": "SIEMENS.NS",
+      "direction": 1,
+      "score": 0.294,
+      "price_at_call": 4029.7,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-09-03",
+      "ticker": "LT.NS",
+      "direction": 1,
+      "score": 0.371,
+      "price_at_call": 3993.0,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-09-03",
+      "ticker": "LICI.NS",
+      "direction": 1,
+      "score": 0.368,
+      "price_at_call": 415.1,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-09-03",
+      "ticker": "COALINDIA.NS",
+      "direction": 1,
+      "score": 0.287,
+      "price_at_call": 418.65,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-09-03",
+      "ticker": "HOMEFIRST.NS",
+      "direction": -1,
+      "score": -0.24,
+      "price_at_call": 1201.4,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-09-03",
+      "ticker": "VBL.NS",
+      "direction": 1,
+      "score": 0.515,
+      "price_at_call": 407.8,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-09-03",
+      "ticker": "ADANIPORTS.NS",
+      "direction": 1,
+      "score": 0.329,
+      "price_at_call": 1700.4,
+      "evaluated": false,
+      "outcome": ""
     }
   ],
   "reliability": {
@@ -2970,10 +3042,10 @@
       "last_seen": "2026-07-21"
     },
     "SBIN.NS": {
-      "wins": 3.169,
-      "losses": 9.129,
-      "reliability": 0.258,
-      "last_seen": "2026-09-02"
+      "wins": 3.151,
+      "losses": 10.076,
+      "reliability": 0.238,
+      "last_seen": "2026-09-03"
     },
     "GAIL.NS": {
       "wins": 1.994,
@@ -3079,9 +3151,9 @@
     },
     "ASIANPAINT.NS": {
       "wins": 0.0,
-      "losses": 1.994,
-      "reliability": 0.168,
-      "last_seen": "2026-09-02"
+      "losses": 2.983,
+      "reliability": 0.003,
+      "last_seen": "2026-09-03"
     }
   }
 }

@@ -1,102 +1,102 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_up, volume_breakout_bullish, pivot_r2_breakout mean for a swing trade on COALINDIA? Current RSI=58, MACD hist=+1.3526, Vol=3.7x average. Signal is BUY.",
-    "context": {
-      "ticker": "COALINDIA.NS",
-      "signal": "BUY",
-      "patterns": "adx_strong_trend_up, volume_breakout_bullish, pivot_r2_breakout",
-      "rsi": 58.1
-    },
-    "queued_at": "2026-09-03T09:45:41.071757"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_up, rsi_bullish_divergence, pivot_s1_breakdown mean for a swing trade on JSWSTEEL? Current RSI=59, MACD hist=-0.3608, Vol=0.9x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of macd_bearish_crossover, adx_strong_trend_up, rsi_bullish_divergence mean for a swing trade on JSWSTEEL? Current RSI=59, MACD hist=-0.3608, Vol=0.9x average. Signal is BUY.",
     "context": {
       "ticker": "JSWSTEEL.NS",
       "signal": "BUY",
-      "patterns": "adx_strong_trend_up, rsi_bullish_divergence, pivot_s1_breakdown",
+      "patterns": "macd_bearish_crossover, adx_strong_trend_up, rsi_bullish_divergence",
       "rsi": 59.2
     },
-    "queued_at": "2026-09-03T09:45:41.074307"
+    "queued_at": "2026-09-03T10:11:14.690662"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of adx_ranging_market, momentum_continuation, bb_midline_support mean for a swing trade on ICICIBANK? Current RSI=56, MACD hist=+0.1308, Vol=0.9x average. Signal is BUY.",
-    "context": {
-      "ticker": "ICICIBANK.NS",
-      "signal": "BUY",
-      "patterns": "adx_ranging_market, momentum_continuation, bb_midline_support",
-      "rsi": 56.4
-    },
-    "queued_at": "2026-09-03T09:45:41.076153"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of doji, dragonfly_doji, pivot_point_test mean for a swing trade on GRASIM? Current RSI=55, MACD hist=-2.9295, Vol=0.9x average. Signal is BUY.",
-    "context": {
-      "ticker": "GRASIM.NS",
-      "signal": "BUY",
-      "patterns": "doji, dragonfly_doji, pivot_point_test",
-      "rsi": 55.4
-    },
-    "queued_at": "2026-09-03T09:45:41.077284"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_up, rsi_bullish_divergence, pivot_s1_breakdown mean for a swing trade on JSWSTEEL? Current RSI=59, MACD hist=-0.3608, Vol=0.9x average. Signal is BUY.",
-    "context": {
-      "ticker": "JSWSTEEL.NS",
-      "signal": "BUY",
-      "patterns": "adx_strong_trend_up, rsi_bullish_divergence, pivot_s1_breakdown",
-      "rsi": 59.2
-    },
-    "queued_at": "2026-09-03T09:45:41.081614"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of pivot_s1_bounce, gap_down_reversal, low_volume_drift mean for a swing trade on HINDALCO? Current RSI=39, MACD hist=-6.2412, Vol=0.4x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of bb_lower_bounce, pivot_s1_bounce, gap_down_reversal mean for a swing trade on HINDALCO? Current RSI=39, MACD hist=-6.2412, Vol=0.4x average. Signal is BUY.",
     "context": {
       "ticker": "HINDALCO.NS",
       "signal": "BUY",
-      "patterns": "pivot_s1_bounce, gap_down_reversal, low_volume_drift",
+      "patterns": "bb_lower_bounce, pivot_s1_bounce, gap_down_reversal",
       "rsi": 38.9
     },
-    "queued_at": "2026-09-03T09:45:41.194606"
+    "queued_at": "2026-09-03T10:12:18.229536"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of doji, dragonfly_doji, pivot_point_test mean for a swing trade on GRASIM? Current RSI=55, MACD hist=-2.9295, Vol=0.9x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of hammer, pivot_point_test, doji mean for a swing trade on GRASIM? Current RSI=55, MACD hist=-2.9295, Vol=0.9x average. Signal is BUY.",
     "context": {
       "ticker": "GRASIM.NS",
       "signal": "BUY",
-      "patterns": "doji, dragonfly_doji, pivot_point_test",
+      "patterns": "hammer, pivot_point_test, doji",
       "rsi": 55.4
     },
-    "queued_at": "2026-09-03T09:45:41.195744"
+    "queued_at": "2026-09-03T10:12:18.233381"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_up, volume_breakout_bullish, pivot_r2_breakout mean for a swing trade on COALINDIA? Current RSI=58, MACD hist=+1.3526, Vol=3.7x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of ema_death_cross, full_bearish_alignment, adx_ranging_market mean for a swing trade on LICI? Current RSI=46, MACD hist=+0.0436, Vol=0.2x average. Signal is BUY.",
+    "context": {
+      "ticker": "LICI.NS",
+      "signal": "BUY",
+      "patterns": "ema_death_cross, full_bearish_alignment, adx_ranging_market",
+      "rsi": 46.2
+    },
+    "queued_at": "2026-09-03T10:12:18.234584"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of pivot_r1_breakout, supertrend_bullish, gap_up_continuation mean for a swing trade on COALINDIA? Current RSI=58, MACD hist=+1.3526, Vol=3.7x average. Signal is BUY.",
     "context": {
       "ticker": "COALINDIA.NS",
       "signal": "BUY",
-      "patterns": "adx_strong_trend_up, volume_breakout_bullish, pivot_r2_breakout",
+      "patterns": "pivot_r1_breakout, supertrend_bullish, gap_up_continuation",
       "rsi": 58.1
     },
-    "queued_at": "2026-09-03T09:45:41.198334"
+    "queued_at": "2026-09-03T10:12:18.235764"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_up, rsi_bullish_divergence, pivot_s1_breakdown mean for a swing trade on JSWSTEEL? Current RSI=59, MACD hist=-0.3608, Vol=0.9x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of pivot_r1_breakout, supertrend_bullish, morning_star mean for a swing trade on VBL? Current RSI=37, MACD hist=-0.9912, Vol=1.3x average. Signal is BUY.",
+    "context": {
+      "ticker": "VBL.NS",
+      "signal": "BUY",
+      "patterns": "pivot_r1_breakout, supertrend_bullish, morning_star",
+      "rsi": 37.0
+    },
+    "queued_at": "2026-09-03T10:12:18.240092"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of macd_bearish_crossover, adx_strong_trend_up, rsi_bullish_divergence mean for a swing trade on JSWSTEEL? Current RSI=59, MACD hist=-0.3608, Vol=0.9x average. Signal is BUY.",
     "context": {
       "ticker": "JSWSTEEL.NS",
       "signal": "BUY",
-      "patterns": "adx_strong_trend_up, rsi_bullish_divergence, pivot_s1_breakdown",
+      "patterns": "macd_bearish_crossover, adx_strong_trend_up, rsi_bullish_divergence",
       "rsi": 59.2
     },
-    "queued_at": "2026-09-03T09:45:41.203334"
+    "queued_at": "2026-09-03T10:12:18.243647"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of adx_ranging_market, momentum_continuation, bb_midline_support mean for a swing trade on ICICIBANK? Current RSI=56, MACD hist=+0.1308, Vol=0.9x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of momentum_continuation, bb_midline_support, adx_ranging_market mean for a swing trade on ICICIBANK? Current RSI=56, MACD hist=+0.1308, Vol=0.9x average. Signal is BUY.",
     "context": {
       "ticker": "ICICIBANK.NS",
       "signal": "BUY",
-      "patterns": "adx_ranging_market, momentum_continuation, bb_midline_support",
+      "patterns": "momentum_continuation, bb_midline_support, adx_ranging_market",
       "rsi": 56.4
     },
-    "queued_at": "2026-09-03T09:45:41.208008"
+    "queued_at": "2026-09-03T10:12:18.248332"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of doji, spinning_top, bb_midline_support mean for a swing trade on UNIONBANK? Current RSI=46, MACD hist=-0.5100, Vol=0.6x average. Signal is BUY.",
+    "context": {
+      "ticker": "UNIONBANK.NS",
+      "signal": "BUY",
+      "patterns": "doji, spinning_top, bb_midline_support",
+      "rsi": 46.0
+    },
+    "queued_at": "2026-09-03T10:12:18.251942"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of momentum_continuation, full_bullish_alignment, adx_strong_trend_up mean for a swing trade on BHEL? Current RSI=53, MACD hist=+1.2931, Vol=0.9x average. Signal is BUY.",
+    "context": {
+      "ticker": "BHEL.NS",
+      "signal": "BUY",
+      "patterns": "momentum_continuation, full_bullish_alignment, adx_strong_trend_up",
+      "rsi": 53.4
+    },
+    "queued_at": "2026-09-03T10:12:18.253102"
   }
 ]

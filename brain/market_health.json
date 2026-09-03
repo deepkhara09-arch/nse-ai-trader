@@ -1,6 +1,6 @@
 {
   "date": "2026-09-03",
-  "session": "midday",
+  "session": "afternoon",
   "nifty": {
     "symbol": "^NSEI",
     "value": 23914.45,
@@ -58,11 +58,10 @@
       "ath_pct_60d": -2.39
     }
   },
-  "market_mood": "bearish",
+  "market_mood": "neutral",
   "trade_allowed": true,
   "warnings": [
-    "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
-    "Nifty choppy intraday \u2014 wait for cleaner setups"
+    "Nifty in downtrend (down) \u2014 only high-confidence BUY signals"
   ],
   "leading_sectors": [
     "IT"
@@ -72,7 +71,7 @@
   "lagging_sectors": [
     "Bank"
   ],
-  "intraday_regime": "choppy",
+  "intraday_regime": "mixed",
   "macro": {
     "date": "2026-09-03",
     "session": "midday",

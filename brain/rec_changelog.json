@@ -1,16 +1,6 @@
 [
   {
     "type": "new",
-    "ticker": "FEDERALBNK.NS",
-    "nse_code": "FEDERALBNK",
-    "signal": "BUY",
-    "date": "2026-07-02",
-    "ts": "2026-07-02T10:12:56.795334",
-    "detail": "New BUY recommendation \u2014 confidence 76/100",
-    "confidence": 76.1
-  },
-  {
-    "type": "new",
     "ticker": "ABCAPITAL.NS",
     "nse_code": "ABCAPITAL",
     "signal": "BUY",
@@ -5998,5 +5988,15 @@
     "ts": "2026-09-03T06:15:49.555573",
     "detail": "Confidence \u25bc18 (84 \u2192 66) | Stop loss moved \u20b91286.79 \u2192 \u20b91262.94 | Target 1 moved \u20b91397.22 \u2192 \u20b91374.72",
     "confidence": 65.7
+  },
+  {
+    "type": "updated",
+    "ticker": "SIEMENS.NS",
+    "nse_code": "SIEMENS",
+    "signal": "BUY",
+    "date": "2026-09-03",
+    "ts": "2026-09-03T07:45:46.893383",
+    "detail": "Confidence \u25bc7 (82 \u2192 76) | Stop loss moved \u20b93976.18 \u2192 \u20b93879.32",
+    "confidence": 75.9
   }
 ]

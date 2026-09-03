@@ -1,89 +1,5 @@
 [
   {
-    "timestamp": "2026-07-30T09:38:41.855654",
-    "date": "2026-07-30",
-    "ticker": "UNIONBANK.NS",
-    "session": "intraday_close",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 56.7,
-    "entry": 170.46,
-    "stop_loss": 161.65,
-    "target": 188.09,
-    "reason": "paper intraday_close",
-    "patterns": [
-      "adx_ranging_market",
-      "full_bullish_alignment",
-      "pivot_point_test",
-      "macd_bullish_crossover",
-      "supertrend_bullish"
-    ]
-  },
-  {
-    "timestamp": "2026-07-30T09:38:41.856459",
-    "date": "2026-07-30",
-    "ticker": "ABCAPITAL.NS",
-    "session": "intraday_close",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 87.8,
-    "entry": 394.65,
-    "stop_loss": 379.7,
-    "target": 424.54,
-    "reason": "paper intraday_close",
-    "patterns": [
-      "adx_ranging_market",
-      "rsi_bullish_divergence",
-      "bullish_harami",
-      "inside_bar",
-      "full_bullish_alignment",
-      "pivot_point_test",
-      "supertrend_bullish"
-    ]
-  },
-  {
-    "timestamp": "2026-07-30T09:38:41.857281",
-    "date": "2026-07-30",
-    "ticker": "PFC.NS",
-    "session": "intraday_close",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 66.4,
-    "entry": 426.45,
-    "stop_loss": 413.9,
-    "target": 451.55,
-    "reason": "paper intraday_close",
-    "patterns": [
-      "adx_ranging_market",
-      "pivot_r1_breakout",
-      "ema_golden_cross",
-      "supertrend_bullish"
-    ]
-  },
-  {
-    "timestamp": "2026-07-30T09:38:41.858061",
-    "date": "2026-07-30",
-    "ticker": "PIDILITIND.NS",
-    "session": "intraday_close",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 95,
-    "entry": 1631.0,
-    "stop_loss": 1577.24,
-    "target": 1738.53,
-    "reason": "paper intraday_close",
-    "patterns": [
-      "near_52w_high",
-      "adx_strong_trend_up",
-      "full_bullish_alignment",
-      "tweezer_bottom",
-      "pivot_point_test",
-      "supertrend_bullish",
-      "outside_bar",
-      "bb_upper_rejection"
-    ]
-  },
-  {
     "timestamp": "2026-07-30T09:38:41.860096",
     "date": "2026-07-30",
     "ticker": "POWERGRID.NS",
@@ -21303,6 +21219,88 @@
       "full_bullish_alignment",
       "doji",
       "tweezer_bottom"
+    ]
+  },
+  {
+    "timestamp": "2026-09-03T07:45:46.745156",
+    "date": "2026-09-03",
+    "ticker": "SIEMENS.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 94.3,
+    "entry": 4014.8,
+    "stop_loss": 3879.32,
+    "target": 4285.76,
+    "reason": "paper afternoon",
+    "patterns": [
+      "full_bullish_alignment",
+      "rsi_bullish_divergence",
+      "pivot_point_test",
+      "doji",
+      "dragonfly_doji",
+      "adx_strong_trend_up"
+    ]
+  },
+  {
+    "timestamp": "2026-09-03T07:45:46.746871",
+    "date": "2026-09-03",
+    "ticker": "HINDALCO.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 44.5,
+    "entry": 1004.0,
+    "stop_loss": 969.17,
+    "target": 1073.65,
+    "reason": "paper afternoon",
+    "patterns": [
+      "low_volume_drift",
+      "full_bullish_alignment",
+      "bb_lower_bounce"
+    ]
+  },
+  {
+    "timestamp": "2026-09-03T07:45:46.750021",
+    "date": "2026-09-03",
+    "ticker": "COALINDIA.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 43.4,
+    "entry": 418.45,
+    "stop_loss": 407.38,
+    "target": 440.6,
+    "reason": "paper afternoon",
+    "patterns": [
+      "full_bearish_alignment",
+      "volume_breakout_bullish",
+      "bb_upper_rejection",
+      "gap_up_continuation",
+      "pivot_r2_breakout",
+      "adx_strong_trend_up",
+      "supertrend_bullish",
+      "pivot_r1_breakout"
+    ]
+  },
+  {
+    "timestamp": "2026-09-03T07:45:46.752670",
+    "date": "2026-09-03",
+    "ticker": "JSWSTEEL.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 79.1,
+    "entry": 1297.2,
+    "stop_loss": 1259.94,
+    "target": 1371.73,
+    "reason": "paper afternoon",
+    "patterns": [
+      "full_bullish_alignment",
+      "rsi_bullish_divergence",
+      "macd_bearish_crossover",
+      "pivot_s1_breakdown",
+      "adx_strong_trend_up"
     ]
   }
 ]

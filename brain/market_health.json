@@ -1,25 +1,25 @@
 {
   "date": "2026-09-03",
-  "session": "morning",
+  "session": "midday",
   "nifty": {
     "symbol": "^NSEI",
     "value": 23914.45,
     "day_change_pct": -0.59,
-    "trend_5d": "sideways",
+    "trend_5d": "down",
     "trend_20d": "down",
     "ath_pct_60d": -3.47
   },
   "vix": {
     "value": 11.59,
     "level": "normal",
-    "percentile_30d": 47.0,
-    "avg_30d": 11.76
+    "percentile_30d": 43.0,
+    "avg_30d": 11.85
   },
   "bank_nifty": {
     "symbol": "^NSEBANK",
     "value": 57172.0,
     "day_change_pct": -0.41,
-    "trend_5d": "sideways",
+    "trend_5d": "down",
     "trend_20d": "down",
     "ath_pct_60d": -2.43,
     "diverging": false
@@ -58,9 +58,12 @@
       "ath_pct_60d": -2.39
     }
   },
-  "market_mood": "neutral",
+  "market_mood": "bearish",
   "trade_allowed": true,
-  "warnings": [],
+  "warnings": [
+    "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
+    "Nifty choppy intraday \u2014 wait for cleaner setups"
+  ],
   "leading_sectors": [
     "IT"
   ],
@@ -69,24 +72,24 @@
   "lagging_sectors": [
     "Bank"
   ],
-  "intraday_regime": "mixed",
+  "intraday_regime": "choppy",
   "macro": {
     "date": "2026-09-03",
-    "session": "preopen",
-    "generated_at": "2026-09-03T03:05:36.113682",
-    "global_score": 0.337,
+    "session": "midday",
+    "generated_at": "2026-09-03T06:15:41.423973",
+    "global_score": 0.32,
     "india_score": 1.0,
-    "overall_score": 0.635,
+    "overall_score": 0.626,
     "mood": "risk_on",
     "drivers": [
+      "There\u2019s a new record number of 401(k) millionaires as retirement savings hold at all-time highs",
       "Broadcom\u2019s stock falls despite upbeat earnings, extending a frustrating stretch for investors",
       "Snowflake\u2019s stock soars as the company blows away estimates with its AI-fueled forecast",
       "HPE follows in Dell\u2019s footsteps as it rides the AI server boom to a big earnings beat",
       "We\u2019re in our 60s. We earn $345,000 and have $1 million in 403(b)s. Is it too late for Roth conversions?",
       "Nvidia\u2019s stock is climbing as investors get more confidence in an expanding base of AI customers",
       "\u2018I currently give him $1,000 a month\u2019: My grandson has severe mental illness. How do I protect him after I\u2019m gone?",
-      "Palantir\u2019s stock is slumping. Why bond yields and Google may be to blame.",
-      "How Oracle\u2019s \u2018extremely controversial\u2019 stock could more than double from here"
+      "Palantir\u2019s stock is slumping. Why bond yields and Google may be to blame."
     ],
     "global_cues": {
       "dow": {
@@ -102,23 +105,23 @@
         "chg_pct": 0.46
       },
       "nikkei": {
-        "last": 64455.83,
-        "chg_pct": 0.2
+        "last": 64293.59,
+        "chg_pct": -0.05
       },
       "crude": {
-        "last": 91.04,
-        "chg_pct": 0.91
+        "last": 91.01,
+        "chg_pct": 0.88
       },
       "usdinr": {
-        "last": 94.96,
-        "chg_pct": 0.01
+        "last": 94.47,
+        "chg_pct": -0.51
       },
       "gold": {
-        "last": 4465.2,
-        "chg_pct": 2.7
+        "last": 4366.3,
+        "chg_pct": 0.42
       }
     },
-    "summary": "Overall macro mood is risk-on (+0.64). US Dow +0.6% overnight. Crude +0.9%. USD/INR +0.0%. Notable: US Fed rate hike / hawkish; Geopolitical conflict / war; Tariffs / trade war.",
+    "summary": "Overall macro mood is risk-on (+0.63). US Dow +0.6% overnight. Crude +0.9%. USD/INR -0.5%. Notable: US Fed rate hike / hawkish; Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
       "Hawkish Fed pressures Nifty via FII outflows and stronger USD.",
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",

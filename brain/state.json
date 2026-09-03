@@ -1,13 +1,13 @@
 {
   "phase": "paper_trading",
   "day": 53,
-  "session": "morning",
+  "session": "preopen",
   "start_date": "2026-06-22",
   "phase_start_date": "2026-07-15",
   "last_run_date": "2026-09-02",
   "last_counted_date": "2026-09-02",
   "cohort_last_tick_date": "2026-09-02",
-  "last_updated": "2026-09-02T10:12:26.506649",
+  "last_updated": "2026-09-03T03:05:37.487426",
   "focus_stocks": [
     "SBIN.NS",
     "PIDILITIND.NS",
@@ -68,7 +68,6 @@
     "expectancy": -52.38
   },
   "brain_notes": [
-    "[2026-07-03] Pre-open macro: risk_on (+0.62)",
     "[2026-07-03] Cohort batch #3 complete \u2014 30 candidates ready",
     "[2026-07-06] Pre-open macro: neutral (+0.15)",
     "[2026-07-07] Pre-open macro: neutral (+0.15)",
@@ -167,7 +166,8 @@
     "[2026-09-01] Focus refresh \u2014 promoted: ['ADANIPORTS'] | demoted: ['AXISBANK']",
     "[2026-09-01] Cohort batch #33 complete \u2014 30 candidates ready",
     "[2026-09-02] Pre-open macro: neutral (+0.15)",
-    "[2026-09-02] Focus refresh \u2014 promoted: ['ICICIBANK'] | demoted: ['ABCAPITAL']"
+    "[2026-09-02] Focus refresh \u2014 promoted: ['ICICIBANK'] | demoted: ['ABCAPITAL']",
+    "[2026-09-03] Pre-open macro: risk_on (+0.64)"
   ],
   "alert_sent": false,
   "schema_version": 11,
@@ -365,11 +365,6 @@
     "scored_date": "2026-09-01"
   },
   "sessions_done": {
-    "preopen": "2026-09-02",
-    "morning": "2026-09-02",
-    "midday": "2026-09-02",
-    "afternoon": "2026-09-02",
-    "intraday_close": "2026-09-02",
-    "preclose": "2026-09-02"
+    "preopen": "2026-09-03"
   }
 }

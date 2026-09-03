@@ -3,10 +3,10 @@
     "ticker": "JSWSTEEL.NS",
     "nse_code": "JSWSTEEL",
     "company_name": "JSW Steel Ltd",
-    "date": "2026-09-02",
-    "generated_at": "2026-09-02 10:12 UTC",
+    "date": "2026-09-03",
+    "generated_at": "2026-09-03 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -45,7 +45,7 @@
     "profit_probability": 0.097,
     "composite_score": 49.12,
     "focus_rank": 6,
-    "rank_delta": -1,
+    "rank_delta": 0,
     "intention": "BUY JSWSTEEL for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
     "confluence_count": 5,
     "confluence_families": [
@@ -101,16 +101,16 @@
       "History backtest: this kind of BUY setup worked 56% of the time over ~1 week on this stock (sample: 64)"
     ],
     "patterns_seen": [
-      "pivot_point_test",
-      "shooting_star",
-      "stoch_rsi_overbought_reversal",
-      "doji",
-      "spinning_top",
+      "rsi_bullish_divergence",
       "pivot_s1_breakdown",
-      "adx_strong_trend_up",
+      "shooting_star",
+      "pivot_point_test",
+      "doji",
       "three_black_crows",
       "full_bullish_alignment",
-      "rsi_bullish_divergence"
+      "stoch_rsi_overbought_reversal",
+      "adx_strong_trend_up",
+      "spinning_top"
     ],
     "reliable_patterns": [
       "full_bullish_alignment",
@@ -149,10 +149,10 @@
     "ticker": "SIEMENS.NS",
     "nse_code": "SIEMENS",
     "company_name": "SIEMENS.NS",
-    "date": "2026-09-02",
-    "generated_at": "2026-09-02 10:12 UTC",
+    "date": "2026-09-03",
+    "generated_at": "2026-09-03 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -246,14 +246,14 @@
       "History backtest: this kind of BUY setup worked 63% of the time over ~1 week on this stock (sample: 51)"
     ],
     "patterns_seen": [
-      "pivot_point_test",
-      "doji",
-      "spinning_top",
       "pivot_s1_breakdown",
-      "adx_strong_trend_up",
+      "pivot_point_test",
       "outside_bar",
+      "doji",
       "three_black_crows",
-      "full_bullish_alignment"
+      "full_bullish_alignment",
+      "adx_strong_trend_up",
+      "spinning_top"
     ],
     "reliable_patterns": [
       "full_bullish_alignment"
@@ -290,10 +290,10 @@
     "ticker": "VBL.NS",
     "nse_code": "VBL",
     "company_name": "VBL.NS",
-    "date": "2026-09-02",
-    "generated_at": "2026-09-02 10:12 UTC",
+    "date": "2026-09-03",
+    "generated_at": "2026-09-03 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -332,7 +332,7 @@
     "profit_probability": 0.284,
     "composite_score": 43.81,
     "focus_rank": 13,
-    "rank_delta": -1,
+    "rank_delta": 0,
     "intention": "BUY VBL for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
     "confluence_count": 5,
     "confluence_families": [
@@ -389,12 +389,12 @@
       "History backtest: this kind of BUY setup worked 45% of the time over ~1 week on this stock (sample: 47)"
     ],
     "patterns_seen": [
-      "inverted_hammer",
-      "adx_strong_trend_down",
-      "full_bearish_alignment",
+      "inside_bar",
       "supertrend_bullish",
+      "full_bearish_alignment",
       "bb_lower_bounce",
-      "inside_bar"
+      "adx_strong_trend_down",
+      "inverted_hammer"
     ],
     "reliable_patterns": [],
     "nearest_support": 400.34,

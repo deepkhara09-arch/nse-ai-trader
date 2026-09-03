@@ -1,130 +1,5 @@
 [
   {
-    "timestamp": "2026-07-30T09:38:41.860096",
-    "date": "2026-07-30",
-    "ticker": "POWERGRID.NS",
-    "session": "intraday_close",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 60.0,
-    "entry": 286.1,
-    "stop_loss": 278.81,
-    "target": 300.67,
-    "reason": "paper intraday_close",
-    "patterns": [
-      "adx_ranging_market",
-      "stoch_rsi_oversold_reversal",
-      "pivot_point_test",
-      "supertrend_bullish",
-      "ema_death_cross",
-      "full_bearish_alignment"
-    ]
-  },
-  {
-    "timestamp": "2026-07-30T09:38:41.860859",
-    "date": "2026-07-30",
-    "ticker": "NHPC.NS",
-    "session": "intraday_close",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 54.0,
-    "entry": 77.84,
-    "stop_loss": 75.45,
-    "target": 82.62,
-    "reason": "paper intraday_close",
-    "patterns": [
-      "shooting_star",
-      "full_bullish_alignment",
-      "pivot_s1_breakdown",
-      "bb_lower_bounce"
-    ]
-  },
-  {
-    "timestamp": "2026-07-30T09:38:41.861620",
-    "date": "2026-07-30",
-    "ticker": "IDFCFIRSTB.NS",
-    "session": "intraday_close",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 57.2,
-    "entry": 84.87,
-    "stop_loss": 81.73,
-    "target": 91.16,
-    "reason": "paper intraday_close",
-    "patterns": [
-      "adx_strong_trend_up",
-      "inside_bar",
-      "full_bullish_alignment",
-      "bb_upper_rejection",
-      "pivot_s1_breakdown"
-    ]
-  },
-  {
-    "timestamp": "2026-07-30T10:11:13.732783",
-    "date": "2026-07-30",
-    "ticker": "MARICO.NS",
-    "session": "preclose",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 95,
-    "entry": 885.65,
-    "stop_loss": 860.94,
-    "target": 935.08,
-    "reason": "paper preclose",
-    "patterns": [
-      "bb_upper_rejection",
-      "near_52w_high",
-      "supertrend_bullish",
-      "full_bullish_alignment",
-      "52w_breakout",
-      "strong_bullish_marubozu",
-      "adx_strong_trend_up",
-      "inside_bar"
-    ]
-  },
-  {
-    "timestamp": "2026-07-30T10:11:13.736815",
-    "date": "2026-07-30",
-    "ticker": "SBIN.NS",
-    "session": "preclose",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 71.3,
-    "entry": 1023.7,
-    "stop_loss": 995.31,
-    "target": 1080.49,
-    "reason": "paper preclose",
-    "patterns": [
-      "adx_ranging_market",
-      "supertrend_bullish",
-      "low_volume_drift",
-      "strong_bullish_marubozu",
-      "inside_bar",
-      "rsi_bullish_divergence"
-    ]
-  },
-  {
-    "timestamp": "2026-07-30T10:11:13.751992",
-    "date": "2026-07-30",
-    "ticker": "NESTLEIND.NS",
-    "session": "preclose",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 95,
-    "entry": 1520.0,
-    "stop_loss": 1468.64,
-    "target": 1622.73,
-    "reason": "paper preclose",
-    "patterns": [
-      "bb_upper_rejection",
-      "near_52w_high",
-      "supertrend_bullish",
-      "full_bullish_alignment",
-      "spinning_top",
-      "pivot_r1_breakout"
-    ]
-  },
-  {
     "timestamp": "2026-07-30T10:11:13.752630",
     "date": "2026-07-30",
     "ticker": "ICICIBANK.NS",
@@ -21301,6 +21176,139 @@
       "macd_bearish_crossover",
       "pivot_s1_breakdown",
       "adx_strong_trend_up"
+    ]
+  },
+  {
+    "timestamp": "2026-09-03T09:45:41.066441",
+    "date": "2026-09-03",
+    "ticker": "SIEMENS.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 93.4,
+    "entry": 4030.0,
+    "stop_loss": 3894.52,
+    "target": 4300.96,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "adx_strong_trend_up",
+      "rsi_bullish_divergence",
+      "full_bullish_alignment",
+      "doji",
+      "dragonfly_doji",
+      "supertrend_bullish",
+      "stoch_rsi_oversold_reversal",
+      "pivot_point_test",
+      "hammer"
+    ]
+  },
+  {
+    "timestamp": "2026-09-03T09:45:41.068274",
+    "date": "2026-09-03",
+    "ticker": "HINDALCO.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 85.1,
+    "entry": 1009.8,
+    "stop_loss": 974.97,
+    "target": 1079.45,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "pivot_s1_bounce",
+      "full_bullish_alignment",
+      "gap_down_reversal",
+      "supertrend_bullish",
+      "low_volume_drift",
+      "bb_lower_bounce"
+    ]
+  },
+  {
+    "timestamp": "2026-09-03T09:45:41.069357",
+    "date": "2026-09-03",
+    "ticker": "GRASIM.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 74.5,
+    "entry": 3305.0,
+    "stop_loss": 3208.68,
+    "target": 3497.64,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "full_bullish_alignment",
+      "doji",
+      "dragonfly_doji",
+      "supertrend_bullish",
+      "pivot_point_test",
+      "bb_midline_support",
+      "hammer"
+    ]
+  },
+  {
+    "timestamp": "2026-09-03T09:45:41.071987",
+    "date": "2026-09-03",
+    "ticker": "COALINDIA.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 43.4,
+    "entry": 418.45,
+    "stop_loss": 407.38,
+    "target": 440.6,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "adx_strong_trend_up",
+      "volume_breakout_bullish",
+      "pivot_r2_breakout",
+      "supertrend_bullish",
+      "gap_up_continuation",
+      "full_bearish_alignment",
+      "bb_upper_rejection",
+      "pivot_r1_breakout"
+    ]
+  },
+  {
+    "timestamp": "2026-09-03T09:45:41.074570",
+    "date": "2026-09-03",
+    "ticker": "JSWSTEEL.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 79.1,
+    "entry": 1298.3,
+    "stop_loss": 1261.04,
+    "target": 1372.83,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "adx_strong_trend_up",
+      "rsi_bullish_divergence",
+      "full_bullish_alignment",
+      "pivot_s1_breakdown",
+      "macd_bearish_crossover"
+    ]
+  },
+  {
+    "timestamp": "2026-09-03T09:45:41.076381",
+    "date": "2026-09-03",
+    "ticker": "ICICIBANK.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 69.3,
+    "entry": 1432.3,
+    "stop_loss": 1402.69,
+    "target": 1491.53,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "full_bullish_alignment",
+      "doji",
+      "supertrend_bullish",
+      "adx_ranging_market",
+      "momentum_continuation",
+      "pivot_point_test",
+      "bb_midline_support",
+      "tweezer_bottom"
     ]
   }
 ]

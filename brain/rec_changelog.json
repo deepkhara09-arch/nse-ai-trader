@@ -1,25 +1,5 @@
 [
   {
-    "type": "new",
-    "ticker": "ABCAPITAL.NS",
-    "nse_code": "ABCAPITAL",
-    "signal": "BUY",
-    "date": "2026-07-02",
-    "ts": "2026-07-02T10:12:56.795334",
-    "detail": "New BUY recommendation \u2014 confidence 72/100",
-    "confidence": 71.6
-  },
-  {
-    "type": "new",
-    "ticker": "PIDILITIND.NS",
-    "nse_code": "PIDILITIND",
-    "signal": "BUY",
-    "date": "2026-07-02",
-    "ts": "2026-07-02T10:12:56.795334",
-    "detail": "New BUY recommendation \u2014 confidence 66/100",
-    "confidence": 65.7
-  },
-  {
     "type": "updated",
     "ticker": "ICICIBANK.NS",
     "nse_code": "ICICIBANK",
@@ -5998,5 +5978,25 @@
     "ts": "2026-09-03T07:45:46.893383",
     "detail": "Confidence \u25bc7 (82 \u2192 76) | Stop loss moved \u20b93976.18 \u2192 \u20b93879.32",
     "confidence": 75.9
+  },
+  {
+    "type": "updated",
+    "ticker": "SIEMENS.NS",
+    "nse_code": "SIEMENS",
+    "signal": "BUY",
+    "date": "2026-09-03",
+    "ts": "2026-09-03T09:45:41.208903",
+    "detail": "Confidence \u25b26 (76 \u2192 82)",
+    "confidence": 81.5
+  },
+  {
+    "type": "updated",
+    "ticker": "JSWSTEEL.NS",
+    "nse_code": "JSWSTEEL",
+    "signal": "BUY",
+    "date": "2026-09-03",
+    "ts": "2026-09-03T09:45:41.208903",
+    "detail": "Rank \u25bc1 (#9 \u2192 #10)",
+    "confidence": 65.7
   }
 ]

@@ -1,13 +1,13 @@
 {
   "phase": "paper_trading",
   "day": 53,
-  "session": "afternoon",
+  "session": "intraday_close",
   "start_date": "2026-06-22",
   "phase_start_date": "2026-07-15",
   "last_run_date": "2026-09-02",
   "last_counted_date": "2026-09-02",
   "cohort_last_tick_date": "2026-09-02",
-  "last_updated": "2026-09-03T07:45:46.784963",
+  "last_updated": "2026-09-03T09:45:41.107113",
   "focus_stocks": [
     "SBIN.NS",
     "PIDILITIND.NS",
@@ -368,6 +368,7 @@
     "preopen": "2026-09-03",
     "morning": "2026-09-03",
     "midday": "2026-09-03",
-    "afternoon": "2026-09-03"
+    "afternoon": "2026-09-03",
+    "intraday_close": "2026-09-03"
   }
 }

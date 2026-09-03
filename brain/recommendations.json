@@ -4,9 +4,9 @@
     "nse_code": "SIEMENS",
     "company_name": "SIEMENS.NS",
     "date": "2026-09-03",
-    "generated_at": "2026-09-03 07:45 UTC",
-    "valid_until": "15:15 IST",
-    "session": "afternoon",
+    "generated_at": "2026-09-03 09:45 UTC",
+    "valid_until": "15:40 IST",
+    "session": "intraday_close",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -21,29 +21,29 @@
     "exit_window": "Monitor at each daily open; trail stop as it moves in favour",
     "target_timeframe": "1\u20133 trading weeks",
     "action_urgency": "No rush \u2014 swing setups allow flexible entry within the zone",
-    "cmp": 4014.8,
-    "entry_low": 4006.77,
-    "entry_high": 4034.87,
-    "stop_loss": 3879.32,
-    "target1": 4285.76,
-    "target2": 4376.08,
-    "risk_pct": 3.37,
+    "cmp": 4030.0,
+    "entry_low": 4021.94,
+    "entry_high": 4050.15,
+    "stop_loss": 3894.52,
+    "target1": 4300.96,
+    "target2": 4391.28,
+    "risk_pct": 3.36,
     "rr_target1": 2.0,
     "rr_target2": 2.67,
     "recommended_qty": 2,
-    "capital_needed": 8029.6,
+    "capital_needed": 8060.0,
     "max_loss_if_sl": 270.96,
-    "confidence": 75.9,
-    "tech_score": 35.4,
+    "confidence": 81.5,
+    "tech_score": 40,
     "fund_score": 15.2,
     "news_score": 14.3,
-    "pattern_score": 3.5,
+    "pattern_score": 4.5,
     "confluence_bonus": 2.5,
     "paper_bonus": 5.0,
     "success_probability": 0.591,
     "base_success_prob": 0.575,
     "profit_probability": 0.065,
-    "composite_score": 49.37,
+    "composite_score": 49.21,
     "focus_rank": 8,
     "rank_delta": 0,
     "intention": "BUY SIEMENS for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
@@ -65,7 +65,7 @@
     "data_confidence_key": "estimated",
     "data_confidence_note": "Only 3 paper trade(s) \u2014 probability is an indicator-based estimate, not yet proven",
     "expected_edge_r": 0.065,
-    "buy_score": 13.26,
+    "buy_score": 15.76,
     "sell_score": 1,
     "reasons": [
       "All EMAs stacked bullish",
@@ -75,8 +75,10 @@
       "Learned bullish pattern: full_bullish_alignment (rel=60%)",
       "Candlestick: dragonfly doji",
       "RSI bullish divergence \u2014 price lower but RSI higher",
+      "Supertrend bullish \u2014 price above trend band",
       "ADX strong trend \u2014 directional move confirmed",
       "Testing pivot point \u2014 decision zone",
+      "StochRSI oversold with bullish candle \u2014 reversal",
       "In a long-term strong uptrend (2yr) \u2014 trend on our side",
       "Clean trender aligned with its long-term uptrend",
       "\u2713 Daily setup aligned with the higher-timeframe trend",
@@ -100,12 +102,15 @@
       "History backtest: this kind of BUY setup worked 63% of the time over ~1 week on this stock (sample: 51)"
     ],
     "patterns_seen": [
-      "full_bullish_alignment",
+      "adx_strong_trend_up",
       "rsi_bullish_divergence",
-      "pivot_point_test",
+      "full_bullish_alignment",
       "doji",
       "dragonfly_doji",
-      "adx_strong_trend_up"
+      "supertrend_bullish",
+      "stoch_rsi_oversold_reversal",
+      "pivot_point_test",
+      "hammer"
     ],
     "reliable_patterns": [
       "full_bullish_alignment"
@@ -134,18 +139,16 @@
     "paper_pnl": 224.55,
     "paper_expectancy": 74.85,
     "market_mood": "neutral",
-    "market_warning": [
-      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals"
-    ]
+    "market_warning": []
   },
   {
     "ticker": "COALINDIA.NS",
     "nse_code": "COALINDIA",
     "company_name": "Coal India Ltd",
     "date": "2026-09-03",
-    "generated_at": "2026-09-03 07:45 UTC",
-    "valid_until": "15:15 IST",
-    "session": "afternoon",
+    "generated_at": "2026-09-03 09:45 UTC",
+    "valid_until": "15:40 IST",
+    "session": "intraday_close",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -238,13 +241,13 @@
       "History backtest: this kind of BUY setup worked 41% of the time over ~1 week on this stock (sample: 44)"
     ],
     "patterns_seen": [
-      "full_bearish_alignment",
-      "volume_breakout_bullish",
-      "bb_upper_rejection",
-      "gap_up_continuation",
-      "pivot_r2_breakout",
       "adx_strong_trend_up",
+      "volume_breakout_bullish",
+      "pivot_r2_breakout",
       "supertrend_bullish",
+      "gap_up_continuation",
+      "full_bearish_alignment",
+      "bb_upper_rejection",
       "pivot_r1_breakout"
     ],
     "reliable_patterns": [],
@@ -272,18 +275,16 @@
     "paper_pnl": -124.86,
     "paper_expectancy": -124.86,
     "market_mood": "neutral",
-    "market_warning": [
-      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals"
-    ]
+    "market_warning": []
   },
   {
     "ticker": "JSWSTEEL.NS",
     "nse_code": "JSWSTEEL",
     "company_name": "JSW Steel Ltd",
     "date": "2026-09-03",
-    "generated_at": "2026-09-03 07:45 UTC",
-    "valid_until": "15:15 IST",
-    "session": "afternoon",
+    "generated_at": "2026-09-03 09:45 UTC",
+    "valid_until": "15:40 IST",
+    "session": "intraday_close",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -298,17 +299,17 @@
     "exit_window": "Monitor at each daily open; trail stop as it moves in favour",
     "target_timeframe": "1\u20133 trading weeks",
     "action_urgency": "No rush \u2014 swing setups allow flexible entry within the zone",
-    "cmp": 1297.2,
-    "entry_low": 1294.61,
-    "entry_high": 1303.69,
-    "stop_loss": 1259.94,
-    "target1": 1371.72,
-    "target2": 1396.56,
+    "cmp": 1298.3,
+    "entry_low": 1295.7,
+    "entry_high": 1304.79,
+    "stop_loss": 1261.04,
+    "target1": 1372.82,
+    "target2": 1397.66,
     "risk_pct": 2.87,
     "rr_target1": 2.0,
     "rr_target2": 2.67,
     "recommended_qty": 9,
-    "capital_needed": 11674.8,
+    "capital_needed": 11684.7,
     "max_loss_if_sl": 335.34,
     "confidence": 65.7,
     "tech_score": 23.5,
@@ -321,8 +322,8 @@
     "base_success_prob": 0.605,
     "profit_probability": 0.085,
     "composite_score": 47.74,
-    "focus_rank": 9,
-    "rank_delta": 0,
+    "focus_rank": 10,
+    "rank_delta": -1,
     "intention": "BUY JSWSTEEL for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
     "confluence_count": 4,
     "confluence_families": [
@@ -372,11 +373,11 @@
       "History backtest: this kind of BUY setup worked 56% of the time over ~1 week on this stock (sample: 64)"
     ],
     "patterns_seen": [
-      "full_bullish_alignment",
+      "adx_strong_trend_up",
       "rsi_bullish_divergence",
-      "macd_bearish_crossover",
+      "full_bullish_alignment",
       "pivot_s1_breakdown",
-      "adx_strong_trend_up"
+      "macd_bearish_crossover"
     ],
     "reliable_patterns": [
       "full_bullish_alignment",
@@ -407,8 +408,6 @@
     "paper_pnl": -215.26,
     "paper_expectancy": -71.75,
     "market_mood": "neutral",
-    "market_warning": [
-      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals"
-    ]
+    "market_warning": []
   }
 ]

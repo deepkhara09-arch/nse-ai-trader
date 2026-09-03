@@ -1,45 +1,5 @@
 [
   {
-    "type": "removed",
-    "ticker": "RECLTD.NS",
-    "nse_code": "RECLTD",
-    "signal": "BUY",
-    "date": "2026-07-02",
-    "ts": "2026-07-02T04:05:41.644105",
-    "detail": "Dropped \u2014 no longer meets threshold (was 67/100)",
-    "confidence": 0
-  },
-  {
-    "type": "removed",
-    "ticker": "MARICO.NS",
-    "nse_code": "MARICO",
-    "signal": "BUY",
-    "date": "2026-07-02",
-    "ts": "2026-07-02T04:05:41.644105",
-    "detail": "Dropped \u2014 no longer meets threshold (was 66/100)",
-    "confidence": 0
-  },
-  {
-    "type": "updated",
-    "ticker": "BAJFINANCE.NS",
-    "nse_code": "BAJFINANCE",
-    "signal": "BUY",
-    "date": "2026-07-02",
-    "ts": "2026-07-02T04:05:41.644105",
-    "detail": "Confidence \u25bc5 (72 \u2192 67) | Rank \u25b23 (#12 \u2192 #9) | Stop loss moved \u20b9977.29 \u2192 \u20b9971.73",
-    "confidence": 66.9
-  },
-  {
-    "type": "updated",
-    "ticker": "BAJFINANCE.NS",
-    "nse_code": "BAJFINANCE",
-    "signal": "BUY",
-    "date": "2026-07-02",
-    "ts": "2026-07-02T06:15:58.470926",
-    "detail": "Stop loss moved \u20b9971.73 \u2192 \u20b9980.93 | Target 1 moved \u20b91087.14 \u2192 \u20b91096.34",
-    "confidence": 66.9
-  },
-  {
     "type": "updated",
     "ticker": "NESTLEIND.NS",
     "nse_code": "NESTLEIND",
@@ -5998,5 +5958,45 @@
     "ts": "2026-09-02T10:12:26.594790",
     "detail": "Confidence \u25bc4 (73 \u2192 70) | Rank \u25bc1 (#5 \u2192 #6)",
     "confidence": 69.6
+  },
+  {
+    "type": "new",
+    "ticker": "COALINDIA.NS",
+    "nse_code": "COALINDIA",
+    "signal": "BUY",
+    "date": "2026-09-03",
+    "ts": "2026-09-03T04:05:46.843328",
+    "detail": "New BUY recommendation \u2014 confidence 69/100",
+    "confidence": 69.3
+  },
+  {
+    "type": "removed",
+    "ticker": "VBL.NS",
+    "nse_code": "VBL",
+    "signal": "BUY",
+    "date": "2026-09-03",
+    "ts": "2026-09-03T04:05:46.843328",
+    "detail": "Dropped \u2014 no longer meets threshold (was 68/100)",
+    "confidence": 0
+  },
+  {
+    "type": "updated",
+    "ticker": "JSWSTEEL.NS",
+    "nse_code": "JSWSTEEL",
+    "signal": "BUY",
+    "date": "2026-09-03",
+    "ts": "2026-09-03T04:05:46.843328",
+    "detail": "Confidence \u25b214 (70 \u2192 84) | Rank \u25bc3 (#6 \u2192 #9) | Stop loss moved \u20b91268.39 \u2192 \u20b91286.79 | Target 1 moved \u20b91379.42 \u2192 \u20b91397.22",
+    "confidence": 83.7
+  },
+  {
+    "type": "updated",
+    "ticker": "SIEMENS.NS",
+    "nse_code": "SIEMENS",
+    "signal": "BUY",
+    "date": "2026-09-03",
+    "ts": "2026-09-03T04:05:46.843328",
+    "detail": "Confidence \u25b212 (69 \u2192 82) | Rank \u25bc4 (#4 \u2192 #8) | Stop loss moved \u20b93871.43 \u2192 \u20b93895.32",
+    "confidence": 81.5
   }
 ]

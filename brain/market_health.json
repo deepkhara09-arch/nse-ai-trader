@@ -5,21 +5,21 @@
     "symbol": "^NSEI",
     "value": 23914.45,
     "day_change_pct": -0.59,
-    "trend_5d": "down",
+    "trend_5d": "sideways",
     "trend_20d": "down",
     "ath_pct_60d": -3.47
   },
   "vix": {
     "value": 11.59,
     "level": "normal",
-    "percentile_30d": 43.0,
-    "avg_30d": 11.85
+    "percentile_30d": 47.0,
+    "avg_30d": 11.76
   },
   "bank_nifty": {
     "symbol": "^NSEBANK",
     "value": 57172.0,
     "day_change_pct": -0.41,
-    "trend_5d": "down",
+    "trend_5d": "sideways",
     "trend_20d": "down",
     "ath_pct_60d": -2.43,
     "diverging": false
@@ -60,9 +60,7 @@
   },
   "market_mood": "neutral",
   "trade_allowed": true,
-  "warnings": [
-    "Nifty in downtrend (down) \u2014 only high-confidence BUY signals"
-  ],
+  "warnings": [],
   "leading_sectors": [
     "IT"
   ],

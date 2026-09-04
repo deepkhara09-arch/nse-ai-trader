@@ -2769,8 +2769,8 @@
       "direction": 1,
       "score": 0.258,
       "price_at_call": 1029.9,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "wrong"
     },
     {
       "date": "2026-09-01",
@@ -2778,8 +2778,8 @@
       "direction": 1,
       "score": 0.31,
       "price_at_call": 172.46,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "flat"
     },
     {
       "date": "2026-09-01",
@@ -2787,8 +2787,8 @@
       "direction": 1,
       "score": 0.252,
       "price_at_call": 4030.0,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "flat"
     },
     {
       "date": "2026-09-01",
@@ -2796,8 +2796,8 @@
       "direction": 1,
       "score": 0.224,
       "price_at_call": 3300.0,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "flat"
     },
     {
       "date": "2026-09-01",
@@ -2805,8 +2805,8 @@
       "direction": 1,
       "score": 0.465,
       "price_at_call": 3992.5,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "flat"
     },
     {
       "date": "2026-09-01",
@@ -2814,8 +2814,8 @@
       "direction": 1,
       "score": 0.204,
       "price_at_call": 402.1,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "right"
     },
     {
       "date": "2026-09-01",
@@ -2823,8 +2823,8 @@
       "direction": 1,
       "score": 0.204,
       "price_at_call": 1314.0,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "flat"
     },
     {
       "date": "2026-09-02",
@@ -2978,6 +2978,87 @@
       "price_at_call": 1700.4,
       "evaluated": false,
       "outcome": ""
+    },
+    {
+      "date": "2026-09-04",
+      "ticker": "GAIL.NS",
+      "direction": 1,
+      "score": 0.399,
+      "price_at_call": 173.0,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-09-04",
+      "ticker": "SIEMENS.NS",
+      "direction": 1,
+      "score": 0.247,
+      "price_at_call": 4000.0,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-09-04",
+      "ticker": "HINDALCO.NS",
+      "direction": 1,
+      "score": 0.252,
+      "price_at_call": 1014.7,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-09-04",
+      "ticker": "LICI.NS",
+      "direction": 1,
+      "score": 0.33,
+      "price_at_call": 416.95,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-09-04",
+      "ticker": "COALINDIA.NS",
+      "direction": 1,
+      "score": 0.303,
+      "price_at_call": 414.0,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-09-04",
+      "ticker": "VBL.NS",
+      "direction": 1,
+      "score": 0.531,
+      "price_at_call": 407.7,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-09-04",
+      "ticker": "ADANIPORTS.NS",
+      "direction": 1,
+      "score": 0.383,
+      "price_at_call": 1706.7,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-09-04",
+      "ticker": "ICICIBANK.NS",
+      "direction": 1,
+      "score": 0.226,
+      "price_at_call": 1423.6,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-09-04",
+      "ticker": "BHEL.NS",
+      "direction": 1,
+      "score": 0.215,
+      "price_at_call": 433.25,
+      "evaluated": false,
+      "outcome": ""
     }
   ],
   "reliability": {
@@ -3042,10 +3123,10 @@
       "last_seen": "2026-07-21"
     },
     "SBIN.NS": {
-      "wins": 3.151,
-      "losses": 10.076,
-      "reliability": 0.238,
-      "last_seen": "2026-09-03"
+      "wins": 3.133,
+      "losses": 11.018,
+      "reliability": 0.221,
+      "last_seen": "2026-09-04"
     },
     "GAIL.NS": {
       "wins": 1.994,
@@ -3154,6 +3235,12 @@
       "losses": 2.983,
       "reliability": 0.003,
       "last_seen": "2026-09-03"
+    },
+    "COALINDIA.NS": {
+      "wins": 1.0,
+      "losses": 0.0,
+      "reliability": 0.667,
+      "last_seen": "2026-09-04"
     }
   }
 }

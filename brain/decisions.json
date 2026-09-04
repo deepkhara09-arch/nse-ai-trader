@@ -1,380 +1,5 @@
 [
   {
-    "timestamp": "2026-07-31T10:11:21.794111",
-    "date": "2026-07-31",
-    "ticker": "ICICIBANK.NS",
-    "session": "preclose",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 95,
-    "entry": 1435.4,
-    "stop_loss": 1399.07,
-    "target": 1508.06,
-    "reason": "paper preclose",
-    "patterns": [
-      "pivot_point_test",
-      "adx_strong_trend_up",
-      "rsi_bearish_divergence",
-      "spinning_top",
-      "full_bullish_alignment",
-      "supertrend_bullish"
-    ]
-  },
-  {
-    "timestamp": "2026-07-31T10:11:21.794797",
-    "date": "2026-07-31",
-    "ticker": "UNIONBANK.NS",
-    "session": "preclose",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 61.8,
-    "entry": 171.24,
-    "stop_loss": 162.97,
-    "target": 187.78,
-    "reason": "paper preclose",
-    "patterns": [
-      "adx_ranging_market",
-      "stoch_rsi_oversold_reversal",
-      "rsi_bearish_divergence",
-      "pivot_point_test",
-      "hammer",
-      "macd_bearish_crossover",
-      "low_volume_drift",
-      "full_bullish_alignment",
-      "supertrend_bullish"
-    ]
-  },
-  {
-    "timestamp": "2026-07-31T10:11:21.795546",
-    "date": "2026-07-31",
-    "ticker": "ABCAPITAL.NS",
-    "session": "preclose",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 65.0,
-    "entry": 404.3,
-    "stop_loss": 389.87,
-    "target": 433.15,
-    "reason": "paper preclose",
-    "patterns": [
-      "adx_ranging_market",
-      "stoch_rsi_oversold_reversal",
-      "rsi_bearish_divergence",
-      "near_52w_high",
-      "inside_bar",
-      "low_volume_drift",
-      "full_bullish_alignment",
-      "supertrend_bullish"
-    ]
-  },
-  {
-    "timestamp": "2026-07-31T10:11:21.796320",
-    "date": "2026-07-31",
-    "ticker": "PFC.NS",
-    "session": "preclose",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 87.9,
-    "entry": 424.3,
-    "stop_loss": 410.8,
-    "target": 451.29,
-    "reason": "paper preclose",
-    "patterns": [
-      "adx_ranging_market",
-      "stoch_rsi_overbought_reversal",
-      "strong_bearish_marubozu",
-      "inside_bar",
-      "pivot_point_test"
-    ]
-  },
-  {
-    "timestamp": "2026-07-31T10:11:21.797087",
-    "date": "2026-07-31",
-    "ticker": "PIDILITIND.NS",
-    "session": "preclose",
-    "action": "SELL",
-    "signal": "SELL",
-    "confidence": 73.5,
-    "entry": 1611.4,
-    "stop_loss": 1663.25,
-    "target": 1507.7,
-    "reason": "paper preclose",
-    "patterns": [
-      "stoch_rsi_overbought_reversal",
-      "rsi_bearish_divergence",
-      "near_52w_high",
-      "inside_bar",
-      "tweezer_top",
-      "pivot_s1_breakdown",
-      "bb_upper_rejection",
-      "full_bullish_alignment",
-      "engulfing_bearish",
-      "adx_strong_trend_up"
-    ]
-  },
-  {
-    "timestamp": "2026-07-31T10:11:21.797833",
-    "date": "2026-07-31",
-    "ticker": "SIEMENS.NS",
-    "session": "preclose",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 95,
-    "entry": 3742.6,
-    "stop_loss": 3592.68,
-    "target": 4042.44,
-    "reason": "paper preclose",
-    "patterns": [
-      "morning_star",
-      "doji",
-      "tweezer_bottom",
-      "dragonfly_doji",
-      "hammer",
-      "inside_bar",
-      "full_bullish_alignment",
-      "supertrend_bullish"
-    ]
-  },
-  {
-    "timestamp": "2026-07-31T10:11:21.798546",
-    "date": "2026-07-31",
-    "ticker": "JSWSTEEL.NS",
-    "session": "preclose",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 57.1,
-    "entry": 1269.0,
-    "stop_loss": 1230.69,
-    "target": 1345.63,
-    "reason": "paper preclose",
-    "patterns": [
-      "adx_ranging_market",
-      "shooting_star",
-      "rsi_bearish_divergence",
-      "momentum_continuation",
-      "pivot_point_test",
-      "full_bullish_alignment"
-    ]
-  },
-  {
-    "timestamp": "2026-07-31T10:11:21.799265",
-    "date": "2026-07-31",
-    "ticker": "LICI.NS",
-    "session": "preclose",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 73.5,
-    "entry": 424.7,
-    "stop_loss": 412.94,
-    "target": 448.23,
-    "reason": "paper preclose",
-    "patterns": [
-      "pivot_point_test",
-      "spinning_top",
-      "stoch_rsi_oversold_reversal",
-      "supertrend_bullish"
-    ]
-  },
-  {
-    "timestamp": "2026-07-31T10:11:21.799999",
-    "date": "2026-07-31",
-    "ticker": "POWERGRID.NS",
-    "session": "preclose",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 72.5,
-    "entry": 284.25,
-    "stop_loss": 276.77,
-    "target": 299.21,
-    "reason": "paper preclose",
-    "patterns": [
-      "adx_ranging_market",
-      "pivot_point_test",
-      "full_bearish_alignment",
-      "rsi_bearish_divergence",
-      "supertrend_bullish"
-    ]
-  },
-  {
-    "timestamp": "2026-07-31T10:11:21.801110",
-    "date": "2026-07-31",
-    "ticker": "IDFCFIRSTB.NS",
-    "session": "preclose",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 71.3,
-    "entry": 84.68,
-    "stop_loss": 81.6,
-    "target": 90.84,
-    "reason": "paper preclose",
-    "patterns": [
-      "pivot_point_test",
-      "adx_strong_trend_up",
-      "full_bullish_alignment",
-      "pivot_s1_breakdown"
-    ]
-  },
-  {
-    "timestamp": "2026-07-31T15:43:05.712362+05:30",
-    "date": "2026-07-31",
-    "ticker": "NESTLEIND.NS",
-    "session": "preclose",
-    "action": "RECOMMEND",
-    "signal": "BUY",
-    "confidence": 80.9,
-    "entry": 1509.66,
-    "stop_loss": 1454.69,
-    "target": 1612.82,
-    "reason": "rec snapshot (short_term)",
-    "patterns": [
-      "near_52w_high",
-      "pivot_point_test",
-      "pivot_r1_breakout",
-      "three_white_soldiers",
-      "bb_upper_rejection",
-      "full_bullish_alignment",
-      "supertrend_bullish"
-    ],
-    "dry_evaluated": true,
-    "dry_outcome": "flat"
-  },
-  {
-    "timestamp": "2026-07-31T15:43:05.712371+05:30",
-    "date": "2026-07-31",
-    "ticker": "SIEMENS.NS",
-    "session": "preclose",
-    "action": "RECOMMEND",
-    "signal": "BUY",
-    "confidence": 72.9,
-    "entry": 3748.21,
-    "stop_loss": 3610.59,
-    "target": 4006.62,
-    "reason": "rec snapshot (short_term)",
-    "patterns": [
-      "morning_star",
-      "doji",
-      "tweezer_bottom",
-      "dragonfly_doji",
-      "hammer",
-      "inside_bar",
-      "full_bullish_alignment",
-      "supertrend_bullish"
-    ],
-    "dry_evaluated": true,
-    "dry_outcome": "win"
-  },
-  {
-    "timestamp": "2026-07-31T15:43:05.712376+05:30",
-    "date": "2026-07-31",
-    "ticker": "ICICIBANK.NS",
-    "session": "preclose",
-    "action": "RECOMMEND",
-    "signal": "BUY",
-    "confidence": 72.5,
-    "entry": 1437.55,
-    "stop_loss": 1399.07,
-    "target": 1508.06,
-    "reason": "rec snapshot (short_term)",
-    "patterns": [
-      "pivot_point_test",
-      "adx_strong_trend_up",
-      "rsi_bearish_divergence",
-      "spinning_top",
-      "full_bullish_alignment",
-      "supertrend_bullish"
-    ],
-    "dry_evaluated": true,
-    "dry_outcome": "flat"
-  },
-  {
-    "timestamp": "2026-07-31T15:43:05.712380+05:30",
-    "date": "2026-07-31",
-    "ticker": "MARICO.NS",
-    "session": "preclose",
-    "action": "RECOMMEND",
-    "signal": "BUY",
-    "confidence": 71.1,
-    "entry": 871.95,
-    "stop_loss": 849.28,
-    "target": 913.39,
-    "reason": "rec snapshot (short_term)",
-    "patterns": [
-      "stoch_rsi_overbought_reversal",
-      "rsi_bearish_divergence",
-      "near_52w_high",
-      "pivot_s1_breakdown",
-      "bb_upper_rejection",
-      "full_bullish_alignment",
-      "adx_strong_trend_up"
-    ],
-    "dry_evaluated": true,
-    "dry_outcome": "flat"
-  },
-  {
-    "timestamp": "2026-08-03T04:05:51.144606",
-    "date": "2026-08-03",
-    "ticker": "NESTLEIND.NS",
-    "session": "morning",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 67.1,
-    "entry": 1519.3,
-    "stop_loss": 1466.97,
-    "target": 1623.96,
-    "reason": "paper morning",
-    "patterns": [
-      "bb_upper_rejection",
-      "full_bullish_alignment",
-      "near_52w_high",
-      "inside_bar",
-      "pivot_point_test",
-      "stoch_rsi_overbought_reversal"
-    ]
-  },
-  {
-    "timestamp": "2026-08-03T04:05:51.145166",
-    "date": "2026-08-03",
-    "ticker": "ICICIBANK.NS",
-    "session": "morning",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 95,
-    "entry": 1447.9,
-    "stop_loss": 1405.98,
-    "target": 1531.74,
-    "reason": "paper morning",
-    "patterns": [
-      "adx_strong_trend_up",
-      "full_bullish_alignment",
-      "inside_bar",
-      "strong_bullish_marubozu",
-      "stoch_rsi_oversold_reversal",
-      "supertrend_bullish"
-    ]
-  },
-  {
-    "timestamp": "2026-08-03T04:05:51.146896",
-    "date": "2026-08-03",
-    "ticker": "PFC.NS",
-    "session": "morning",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 61.8,
-    "entry": 426.3,
-    "stop_loss": 412.73,
-    "target": 453.44,
-    "reason": "paper morning",
-    "patterns": [
-      "bb_upper_rejection",
-      "doji",
-      "pivot_r1_breakout",
-      "pivot_point_test",
-      "spinning_top",
-      "supertrend_bullish",
-      "adx_ranging_market"
-    ]
-  },
-  {
     "timestamp": "2026-08-03T04:05:51.148205",
     "date": "2026-08-03",
     "ticker": "SIEMENS.NS",
@@ -17479,7 +17104,9 @@
       "stoch_rsi_oversold_reversal",
       "supertrend_bullish",
       "spinning_top"
-    ]
+    ],
+    "dry_evaluated": true,
+    "dry_outcome": "flat"
   },
   {
     "timestamp": "2026-08-28T00:46:30.173415+05:30",
@@ -17500,7 +17127,9 @@
       "supertrend_bullish",
       "adx_strong_trend_up",
       "near_52w_high"
-    ]
+    ],
+    "dry_evaluated": true,
+    "dry_outcome": "flat"
   },
   {
     "timestamp": "2026-08-28T00:46:30.173421+05:30",
@@ -17860,7 +17489,9 @@
       "bullish_harami",
       "full_bullish_alignment",
       "adx_strong_trend_up"
-    ]
+    ],
+    "dry_evaluated": true,
+    "dry_outcome": "loss"
   },
   {
     "timestamp": "2026-08-29T00:54:43.411144+05:30",
@@ -17883,7 +17514,9 @@
       "full_bullish_alignment",
       "pivot_s1_breakdown",
       "adx_strong_trend_up"
-    ]
+    ],
+    "dry_evaluated": true,
+    "dry_outcome": "flat"
   },
   {
     "timestamp": "2026-08-31T04:05:40.784251",
@@ -21292,6 +20925,359 @@
       "adx_strong_trend_up",
       "momentum_continuation",
       "supertrend_bullish"
+    ]
+  },
+  {
+    "timestamp": "2026-09-04T10:11:09.387718",
+    "date": "2026-09-04",
+    "ticker": "PIDILITIND.NS",
+    "session": "preclose",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 92.5,
+    "entry": 1636.0,
+    "stop_loss": 1590.46,
+    "target": 1727.07,
+    "reason": "paper preclose",
+    "patterns": [
+      "pivot_point_test",
+      "tweezer_bottom",
+      "rsi_bullish_divergence",
+      "supertrend_bullish",
+      "hammer",
+      "full_bullish_alignment",
+      "pivot_s1_bounce",
+      "adx_ranging_market"
+    ]
+  },
+  {
+    "timestamp": "2026-09-04T10:11:09.388932",
+    "date": "2026-09-04",
+    "ticker": "GAIL.NS",
+    "session": "preclose",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 85.5,
+    "entry": 173.0,
+    "stop_loss": 168.41,
+    "target": 182.19,
+    "reason": "paper preclose",
+    "patterns": [
+      "ema_golden_cross",
+      "pivot_point_test",
+      "macd_bullish_crossover",
+      "full_bullish_alignment",
+      "adx_ranging_market",
+      "momentum_continuation"
+    ]
+  },
+  {
+    "timestamp": "2026-09-04T10:11:09.390927",
+    "date": "2026-09-04",
+    "ticker": "HINDALCO.NS",
+    "session": "preclose",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 72.4,
+    "entry": 1014.7,
+    "stop_loss": 980.36,
+    "target": 1083.39,
+    "reason": "paper preclose",
+    "patterns": [
+      "spinning_top",
+      "low_volume_drift",
+      "rsi_bullish_divergence",
+      "supertrend_bullish",
+      "ema_death_cross"
+    ]
+  },
+  {
+    "timestamp": "2026-09-04T10:11:09.391811",
+    "date": "2026-09-04",
+    "ticker": "GRASIM.NS",
+    "session": "preclose",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 89.9,
+    "entry": 3320.0,
+    "stop_loss": 3223.0,
+    "target": 3513.99,
+    "reason": "paper preclose",
+    "patterns": [
+      "full_bullish_alignment",
+      "pivot_r2_breakout",
+      "pivot_r1_breakout",
+      "supertrend_bullish"
+    ]
+  },
+  {
+    "timestamp": "2026-09-04T10:11:09.393706",
+    "date": "2026-09-04",
+    "ticker": "COALINDIA.NS",
+    "session": "preclose",
+    "action": "SELL",
+    "signal": "SELL",
+    "confidence": 59.7,
+    "entry": 414.0,
+    "stop_loss": 429.73,
+    "target": 382.54,
+    "reason": "paper preclose",
+    "patterns": [
+      "adx_strong_trend_up",
+      "full_bearish_alignment",
+      "stoch_rsi_overbought_reversal",
+      "pivot_point_test",
+      "bb_upper_rejection",
+      "gap_up_reversal"
+    ]
+  },
+  {
+    "timestamp": "2026-09-04T10:11:09.394570",
+    "date": "2026-09-04",
+    "ticker": "HOMEFIRST.NS",
+    "session": "preclose",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 95,
+    "entry": 1208.7,
+    "stop_loss": 1168.24,
+    "target": 1289.61,
+    "reason": "paper preclose",
+    "patterns": [
+      "ema_golden_cross",
+      "three_white_soldiers",
+      "spinning_top",
+      "supertrend_bullish",
+      "full_bullish_alignment",
+      "adx_ranging_market"
+    ]
+  },
+  {
+    "timestamp": "2026-09-04T10:11:09.395670",
+    "date": "2026-09-04",
+    "ticker": "VBL.NS",
+    "session": "preclose",
+    "action": "SELL",
+    "signal": "SELL",
+    "confidence": 62.7,
+    "entry": 407.7,
+    "stop_loss": 425.19,
+    "target": 372.73,
+    "reason": "paper preclose",
+    "patterns": [
+      "full_bearish_alignment",
+      "stoch_rsi_overbought_reversal",
+      "pivot_point_test",
+      "inside_bar",
+      "adx_strong_trend_down",
+      "bearish_harami",
+      "strong_bearish_marubozu",
+      "pivot_s1_breakdown"
+    ]
+  },
+  {
+    "timestamp": "2026-09-04T10:11:09.396849",
+    "date": "2026-09-04",
+    "ticker": "JSWSTEEL.NS",
+    "session": "preclose",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 95,
+    "entry": 1325.0,
+    "stop_loss": 1286.28,
+    "target": 1402.44,
+    "reason": "paper preclose",
+    "patterns": [
+      "adx_strong_trend_up",
+      "near_52w_high",
+      "spinning_top",
+      "supertrend_bullish",
+      "full_bullish_alignment",
+      "outside_bar"
+    ]
+  },
+  {
+    "timestamp": "2026-09-04T10:11:09.398017",
+    "date": "2026-09-04",
+    "ticker": "ADANIPORTS.NS",
+    "session": "preclose",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 43.7,
+    "entry": 1706.7,
+    "stop_loss": 1652.1,
+    "target": 1815.9,
+    "reason": "paper preclose",
+    "patterns": [
+      "full_bearish_alignment",
+      "three_white_soldiers",
+      "adx_strong_trend_down",
+      "pivot_r1_breakout",
+      "supertrend_bullish"
+    ]
+  },
+  {
+    "timestamp": "2026-09-04T10:11:09.399629",
+    "date": "2026-09-04",
+    "ticker": "UNIONBANK.NS",
+    "session": "preclose",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 76.1,
+    "entry": 187.83,
+    "stop_loss": 180.99,
+    "target": 201.51,
+    "reason": "paper preclose",
+    "patterns": [
+      "adx_strong_trend_up",
+      "full_bullish_alignment",
+      "pivot_r1_breakout",
+      "supertrend_bullish"
+    ]
+  },
+  {
+    "timestamp": "2026-09-04T10:11:09.400707",
+    "date": "2026-09-04",
+    "ticker": "BHEL.NS",
+    "session": "preclose",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 83.1,
+    "entry": 433.25,
+    "stop_loss": 415.61,
+    "target": 468.52,
+    "reason": "paper preclose",
+    "patterns": [
+      "adx_strong_trend_up",
+      "stoch_rsi_oversold_reversal",
+      "supertrend_bullish",
+      "full_bullish_alignment",
+      "momentum_continuation"
+    ]
+  },
+  {
+    "timestamp": "2026-09-04T15:42:32.620276+05:30",
+    "date": "2026-09-04",
+    "ticker": "PIDILITIND.NS",
+    "session": "preclose",
+    "action": "RECOMMEND",
+    "signal": "BUY",
+    "confidence": 91.0,
+    "entry": 1638.45,
+    "stop_loss": 1597.81,
+    "target": 1712.38,
+    "reason": "rec snapshot (short_term)",
+    "patterns": [
+      "pivot_point_test",
+      "tweezer_bottom",
+      "rsi_bullish_divergence",
+      "supertrend_bullish",
+      "hammer",
+      "full_bullish_alignment",
+      "pivot_s1_bounce",
+      "adx_ranging_market"
+    ]
+  },
+  {
+    "timestamp": "2026-09-04T15:42:32.620287+05:30",
+    "date": "2026-09-04",
+    "ticker": "GAIL.NS",
+    "session": "preclose",
+    "action": "RECOMMEND",
+    "signal": "BUY",
+    "confidence": 74.5,
+    "entry": 173.25,
+    "stop_loss": 168.41,
+    "target": 182.18,
+    "reason": "rec snapshot (short_term)",
+    "patterns": [
+      "ema_golden_cross",
+      "pivot_point_test",
+      "macd_bullish_crossover",
+      "full_bullish_alignment",
+      "adx_ranging_market",
+      "momentum_continuation"
+    ]
+  },
+  {
+    "timestamp": "2026-09-04T15:42:32.620292+05:30",
+    "date": "2026-09-04",
+    "ticker": "GRASIM.NS",
+    "session": "preclose",
+    "action": "RECOMMEND",
+    "signal": "BUY",
+    "confidence": 70.5,
+    "entry": 3324.98,
+    "stop_loss": 3227.32,
+    "target": 3505.36,
+    "reason": "rec snapshot (short_term)",
+    "patterns": [
+      "full_bullish_alignment",
+      "pivot_r2_breakout",
+      "pivot_r1_breakout",
+      "supertrend_bullish"
+    ]
+  },
+  {
+    "timestamp": "2026-09-04T15:42:32.620297+05:30",
+    "date": "2026-09-04",
+    "ticker": "HINDALCO.NS",
+    "session": "preclose",
+    "action": "RECOMMEND",
+    "signal": "BUY",
+    "confidence": 69.5,
+    "entry": 1016.22,
+    "stop_loss": 980.36,
+    "target": 1083.38,
+    "reason": "rec snapshot (short_term)",
+    "patterns": [
+      "spinning_top",
+      "low_volume_drift",
+      "rsi_bullish_divergence",
+      "supertrend_bullish",
+      "ema_death_cross"
+    ]
+  },
+  {
+    "timestamp": "2026-09-04T15:42:32.620301+05:30",
+    "date": "2026-09-04",
+    "ticker": "JSWSTEEL.NS",
+    "session": "preclose",
+    "action": "RECOMMEND",
+    "signal": "BUY",
+    "confidence": 69.3,
+    "entry": 1326.98,
+    "stop_loss": 1286.79,
+    "target": 1401.42,
+    "reason": "rec snapshot (short_term)",
+    "patterns": [
+      "adx_strong_trend_up",
+      "near_52w_high",
+      "spinning_top",
+      "supertrend_bullish",
+      "full_bullish_alignment",
+      "outside_bar"
+    ]
+  },
+  {
+    "timestamp": "2026-09-04T15:42:32.620305+05:30",
+    "date": "2026-09-04",
+    "ticker": "HOMEFIRST.NS",
+    "session": "preclose",
+    "action": "RECOMMEND",
+    "signal": "BUY",
+    "confidence": 68.8,
+    "entry": 1210.51,
+    "stop_loss": 1168.24,
+    "target": 1289.62,
+    "reason": "rec snapshot (short_term)",
+    "patterns": [
+      "ema_golden_cross",
+      "three_white_soldiers",
+      "spinning_top",
+      "supertrend_bullish",
+      "full_bullish_alignment",
+      "adx_ranging_market"
     ]
   }
 ]

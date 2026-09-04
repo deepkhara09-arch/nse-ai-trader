@@ -3,10 +3,10 @@
     "ticker": "SIEMENS.NS",
     "nse_code": "SIEMENS",
     "company_name": "SIEMENS.NS",
-    "date": "2026-09-03",
-    "generated_at": "2026-09-03 10:12 UTC",
+    "date": "2026-09-04",
+    "generated_at": "2026-09-04 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -44,8 +44,8 @@
     "base_success_prob": 0.597,
     "profit_probability": 0.106,
     "composite_score": 51.88,
-    "focus_rank": 8,
-    "rank_delta": -1,
+    "focus_rank": 7,
+    "rank_delta": 0,
     "intention": "BUY SIEMENS for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
     "confluence_count": 4,
     "confluence_families": [
@@ -103,14 +103,14 @@
       "History backtest: this kind of BUY setup worked 63% of the time over ~1 week on this stock (sample: 51)"
     ],
     "patterns_seen": [
-      "hammer",
-      "supertrend_bullish",
-      "pivot_point_test",
       "doji",
-      "full_bullish_alignment",
+      "supertrend_bullish",
       "dragonfly_doji",
+      "hammer",
       "stoch_rsi_oversold_reversal",
       "adx_strong_trend_up",
+      "full_bullish_alignment",
+      "pivot_point_test",
       "rsi_bullish_divergence"
     ],
     "reliable_patterns": [
@@ -140,18 +140,16 @@
     "paper_pnl": 224.55,
     "paper_expectancy": 74.85,
     "market_mood": "neutral",
-    "market_warning": [
-      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals"
-    ]
+    "market_warning": []
   },
   {
     "ticker": "HINDALCO.NS",
     "nse_code": "HINDALCO",
     "company_name": "HINDALCO.NS",
-    "date": "2026-09-03",
-    "generated_at": "2026-09-03 10:12 UTC",
+    "date": "2026-09-04",
+    "generated_at": "2026-09-04 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -189,7 +187,7 @@
     "base_success_prob": 0.546,
     "profit_probability": 0.365,
     "composite_score": 56.73,
-    "focus_rank": 3,
+    "focus_rank": 2,
     "rank_delta": 0,
     "intention": "BUY HINDALCO for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
     "confluence_count": 5,
@@ -242,10 +240,10 @@
     ],
     "patterns_seen": [
       "supertrend_bullish",
-      "full_bullish_alignment",
       "bb_lower_bounce",
       "pivot_s1_bounce",
       "gap_down_reversal",
+      "full_bullish_alignment",
       "low_volume_drift"
     ],
     "reliable_patterns": [],
@@ -273,18 +271,16 @@
     "paper_pnl": -198.91,
     "paper_expectancy": -198.91,
     "market_mood": "neutral",
-    "market_warning": [
-      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals"
-    ]
+    "market_warning": []
   },
   {
     "ticker": "VBL.NS",
     "nse_code": "VBL",
     "company_name": "VBL.NS",
-    "date": "2026-09-03",
-    "generated_at": "2026-09-03 10:12 UTC",
+    "date": "2026-09-04",
+    "generated_at": "2026-09-04 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -318,12 +314,12 @@
     "pattern_score": 2.0,
     "confluence_bonus": 7.5,
     "paper_bonus": 0.0,
-    "success_probability": 0.448,
-    "base_success_prob": 0.449,
-    "profit_probability": 0.347,
-    "composite_score": 46.29,
-    "focus_rank": 13,
-    "rank_delta": -2,
+    "success_probability": 0.444,
+    "base_success_prob": 0.442,
+    "profit_probability": 0.326,
+    "composite_score": 45.32,
+    "focus_rank": 14,
+    "rank_delta": 0,
     "intention": "BUY VBL for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
     "confluence_count": 5,
     "confluence_families": [
@@ -344,7 +340,7 @@
     "data_confidence": "Estimated",
     "data_confidence_key": "estimated",
     "data_confidence_note": "Only 0 paper trade(s) \u2014 probability is an indicator-based estimate, not yet proven",
-    "expected_edge_r": 0.347,
+    "expected_edge_r": 0.326,
     "buy_score": 8.0,
     "sell_score": 4.0,
     "reasons": [
@@ -380,15 +376,15 @@
       "History backtest: this kind of BUY setup worked 45% of the time over ~1 week on this stock (sample: 47)"
     ],
     "patterns_seen": [
-      "pivot_r1_breakout",
-      "supertrend_bullish",
-      "morning_star",
-      "pivot_point_test",
-      "adx_strong_trend_down",
       "outside_bar",
+      "supertrend_bullish",
+      "pivot_r1_breakout",
+      "adx_strong_trend_down",
+      "full_bearish_alignment",
       "strong_bullish_marubozu",
       "gap_down_reversal",
-      "full_bearish_alignment"
+      "pivot_point_test",
+      "morning_star"
     ],
     "reliable_patterns": [],
     "nearest_support": 400,
@@ -415,18 +411,16 @@
     "paper_pnl": 0,
     "paper_expectancy": 0,
     "market_mood": "neutral",
-    "market_warning": [
-      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals"
-    ]
+    "market_warning": []
   },
   {
     "ticker": "PIDILITIND.NS",
     "nse_code": "PIDILITIND",
     "company_name": "Pidilite Industries",
-    "date": "2026-09-03",
-    "generated_at": "2026-09-03 10:12 UTC",
+    "date": "2026-09-04",
+    "generated_at": "2026-09-04 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -460,10 +454,10 @@
     "pattern_score": 10,
     "confluence_bonus": 7.5,
     "paper_bonus": 5.0,
-    "success_probability": 0.631,
-    "base_success_prob": 0.703,
-    "profit_probability": 0.258,
-    "composite_score": 56.53,
+    "success_probability": 0.624,
+    "base_success_prob": 0.697,
+    "profit_probability": 0.248,
+    "composite_score": 55.8,
     "focus_rank": 4,
     "rank_delta": 0,
     "intention": "BUY PIDILITIND for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
@@ -476,9 +470,9 @@
       "regime"
     ],
     "backtest_tested": true,
-    "backtest_hit_5d": 0.463,
-    "backtest_hit_10d": 0.444,
-    "backtest_sample": 54,
+    "backtest_hit_5d": 0.455,
+    "backtest_hit_10d": 0.436,
+    "backtest_sample": 55,
     "hist_long_trend": "strong_uptrend",
     "hist_52w_position": 85.8,
     "hist_personality": "mean_reverter",
@@ -486,7 +480,7 @@
     "data_confidence": "Estimated",
     "data_confidence_key": "estimated",
     "data_confidence_note": "Only 3 paper trade(s) \u2014 probability is an indicator-based estimate, not yet proven",
-    "expected_edge_r": 0.258,
+    "expected_edge_r": 0.248,
     "buy_score": 6.71,
     "sell_score": 2.25,
     "reasons": [
@@ -516,12 +510,12 @@
       "Latest news: 'Pidilite stock slips as investors weigh ?1,643.30 trade - AD HOC NEWS'",
       "Paper trade validation: 3 trades, 100% win rate, \u20b9+68/trade expectancy",
       "Confluence: 5 independent signal families agree (trend, volume, pattern, fundamentals, regime)",
-      "History backtest: this kind of BUY setup worked 46% of the time over ~1 week on this stock (sample: 54)"
+      "History backtest: this kind of BUY setup worked 46% of the time over ~1 week on this stock (sample: 55)"
     ],
     "patterns_seen": [
-      "full_bullish_alignment",
+      "pivot_s1_breakdown",
       "adx_ranging_market",
-      "pivot_s1_breakdown"
+      "full_bullish_alignment"
     ],
     "reliable_patterns": [
       "near_52w_high",
@@ -556,18 +550,16 @@
     "paper_pnl": 205.17,
     "paper_expectancy": 68.39,
     "market_mood": "neutral",
-    "market_warning": [
-      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals"
-    ]
+    "market_warning": []
   },
   {
     "ticker": "JSWSTEEL.NS",
     "nse_code": "JSWSTEEL",
     "company_name": "JSW Steel Ltd",
-    "date": "2026-09-03",
-    "generated_at": "2026-09-03 10:12 UTC",
+    "date": "2026-09-04",
+    "generated_at": "2026-09-04 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -601,12 +593,12 @@
     "pattern_score": 8.5,
     "confluence_bonus": 5.0,
     "paper_bonus": 5.0,
-    "success_probability": 0.603,
-    "base_success_prob": 0.621,
-    "profit_probability": 0.114,
-    "composite_score": 49.8,
-    "focus_rank": 10,
-    "rank_delta": -1,
+    "success_probability": 0.599,
+    "base_success_prob": 0.615,
+    "profit_probability": 0.103,
+    "composite_score": 49.05,
+    "focus_rank": 11,
+    "rank_delta": 0,
     "intention": "BUY JSWSTEEL for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
     "confluence_count": 4,
     "confluence_families": [
@@ -626,7 +618,7 @@
     "data_confidence": "Estimated",
     "data_confidence_key": "estimated",
     "data_confidence_note": "Only 3 paper trade(s) \u2014 probability is an indicator-based estimate, not yet proven",
-    "expected_edge_r": 0.114,
+    "expected_edge_r": 0.103,
     "buy_score": 11.02,
     "sell_score": 2.5,
     "reasons": [
@@ -655,11 +647,11 @@
       "History backtest: this kind of BUY setup worked 56% of the time over ~1 week on this stock (sample: 64)"
     ],
     "patterns_seen": [
+      "pivot_s1_breakdown",
       "macd_bearish_crossover",
-      "full_bullish_alignment",
       "adx_strong_trend_up",
-      "rsi_bullish_divergence",
-      "pivot_s1_breakdown"
+      "full_bullish_alignment",
+      "rsi_bullish_divergence"
     ],
     "reliable_patterns": [
       "full_bullish_alignment",
@@ -690,18 +682,16 @@
     "paper_pnl": -215.26,
     "paper_expectancy": -71.75,
     "market_mood": "neutral",
-    "market_warning": [
-      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals"
-    ]
+    "market_warning": []
   },
   {
     "ticker": "ICICIBANK.NS",
     "nse_code": "ICICIBANK",
     "company_name": "ICICI Bank Ltd",
-    "date": "2026-09-03",
-    "generated_at": "2026-09-03 10:12 UTC",
+    "date": "2026-09-04",
+    "generated_at": "2026-09-04 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -735,10 +725,10 @@
     "pattern_score": 1.0,
     "confluence_bonus": 10,
     "paper_bonus": 0.0,
-    "success_probability": 0.511,
-    "base_success_prob": 0.541,
-    "profit_probability": 0.353,
-    "composite_score": 55.19,
+    "success_probability": 0.503,
+    "base_success_prob": 0.534,
+    "profit_probability": 0.335,
+    "composite_score": 54.28,
     "focus_rank": 6,
     "rank_delta": 0,
     "intention": "BUY ICICIBANK for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
@@ -752,9 +742,9 @@
       "regime"
     ],
     "backtest_tested": true,
-    "backtest_hit_5d": 0.44,
-    "backtest_hit_10d": 0.46,
-    "backtest_sample": 50,
+    "backtest_hit_5d": 0.431,
+    "backtest_hit_10d": 0.471,
+    "backtest_sample": 51,
     "hist_long_trend": "strong_uptrend",
     "hist_52w_position": 87.6,
     "hist_personality": "choppy",
@@ -762,7 +752,7 @@
     "data_confidence": "Estimated",
     "data_confidence_key": "estimated",
     "data_confidence_note": "Only 1 paper trade(s) \u2014 probability is an indicator-based estimate, not yet proven",
-    "expected_edge_r": 0.353,
+    "expected_edge_r": 0.335,
     "buy_score": 10.11,
     "sell_score": 0.0,
     "reasons": [
@@ -792,17 +782,17 @@
       "Resistance at \u20b91456.36 is natural target",
       "Latest news: 'ICICI Bank Share Price August 31, 2026: Down 0.42% to Rs 1,284.60 - Th'",
       "Confluence: 6 independent signal families agree (trend, momentum, volume, pattern, news, regime)",
-      "History backtest: this kind of BUY setup worked 44% of the time over ~1 week on this stock (sample: 50)"
+      "History backtest: this kind of BUY setup worked 43% of the time over ~1 week on this stock (sample: 51)"
     ],
     "patterns_seen": [
-      "tweezer_bottom",
-      "supertrend_bullish",
-      "momentum_continuation",
-      "pivot_point_test",
       "doji",
-      "full_bullish_alignment",
+      "supertrend_bullish",
+      "tweezer_bottom",
+      "momentum_continuation",
       "bb_midline_support",
-      "adx_ranging_market"
+      "full_bullish_alignment",
+      "adx_ranging_market",
+      "pivot_point_test"
     ],
     "reliable_patterns": [],
     "nearest_support": 1401.0,
@@ -829,18 +819,16 @@
     "paper_pnl": -100.15,
     "paper_expectancy": -100.15,
     "market_mood": "neutral",
-    "market_warning": [
-      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals"
-    ]
+    "market_warning": []
   },
   {
     "ticker": "GAIL.NS",
     "nse_code": "GAIL",
     "company_name": "GAIL.NS",
-    "date": "2026-09-03",
-    "generated_at": "2026-09-03 10:12 UTC",
+    "date": "2026-09-04",
+    "generated_at": "2026-09-04 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -874,7 +862,7 @@
     "pattern_score": 1.0,
     "confluence_bonus": 7.5,
     "paper_bonus": 0.0,
-    "success_probability": 0.543,
+    "success_probability": 0.546,
     "base_success_prob": 0.575,
     "profit_probability": 0.437,
     "composite_score": 61.42,
@@ -890,9 +878,9 @@
       "fundamentals"
     ],
     "backtest_tested": true,
-    "backtest_hit_5d": 0.469,
-    "backtest_hit_10d": 0.408,
-    "backtest_sample": 49,
+    "backtest_hit_5d": 0.48,
+    "backtest_hit_10d": 0.42,
+    "backtest_sample": 50,
     "hist_long_trend": "strong_uptrend",
     "hist_52w_position": 42.4,
     "hist_personality": "trender",
@@ -931,11 +919,11 @@
       "Resistance at \u20b9177.19 is natural target",
       "Latest news: 'GAIL (India) vs Nifty 50: Share Price Performance Compared - Univest'",
       "Confluence: 5 independent signal families agree (trend, volume, pattern, news, fundamentals)",
-      "History backtest: this kind of BUY setup worked 47% of the time over ~1 week on this stock (sample: 49)"
+      "History backtest: this kind of BUY setup worked 48% of the time over ~1 week on this stock (sample: 50)"
     ],
     "patterns_seen": [
-      "supertrend_bullish",
       "adx_ranging_market",
+      "supertrend_bullish",
       "pivot_point_test",
       "hammer"
     ],
@@ -964,18 +952,16 @@
     "paper_pnl": -102.35,
     "paper_expectancy": -102.35,
     "market_mood": "neutral",
-    "market_warning": [
-      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals"
-    ]
+    "market_warning": []
   },
   {
     "ticker": "COALINDIA.NS",
     "nse_code": "COALINDIA",
     "company_name": "Coal India Ltd",
-    "date": "2026-09-03",
-    "generated_at": "2026-09-03 10:12 UTC",
+    "date": "2026-09-04",
+    "generated_at": "2026-09-04 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -1010,11 +996,11 @@
     "confluence_bonus": 7.5,
     "paper_bonus": 0.0,
     "success_probability": 0.473,
-    "base_success_prob": 0.501,
-    "profit_probability": 0.253,
-    "composite_score": 50.96,
+    "base_success_prob": 0.495,
+    "profit_probability": 0.237,
+    "composite_score": 50.13,
     "focus_rank": 9,
-    "rank_delta": -1,
+    "rank_delta": 0,
     "intention": "BUY COALINDIA for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
     "confluence_count": 5,
     "confluence_families": [
@@ -1025,9 +1011,9 @@
       "fundamentals"
     ],
     "backtest_tested": true,
-    "backtest_hit_5d": 0.409,
-    "backtest_hit_10d": 0.455,
-    "backtest_sample": 44,
+    "backtest_hit_5d": 0.422,
+    "backtest_hit_10d": 0.467,
+    "backtest_sample": 45,
     "hist_long_trend": "strong_downtrend",
     "hist_52w_position": 59.0,
     "hist_personality": "choppy",
@@ -1035,7 +1021,7 @@
     "data_confidence": "Estimated",
     "data_confidence_key": "estimated",
     "data_confidence_note": "Only 1 paper trade(s) \u2014 probability is an indicator-based estimate, not yet proven",
-    "expected_edge_r": 0.253,
+    "expected_edge_r": 0.237,
     "buy_score": 8.0,
     "sell_score": 4,
     "reasons": [
@@ -1066,17 +1052,17 @@
       "Resistance at \u20b9425.56 is natural target",
       "Latest news: 'Coal India stock jumps 4%, top Nifty gainer as Mahanadi Coalfields IPO'",
       "Confluence: 5 independent signal families agree (momentum, volume, pattern, news, fundamentals)",
-      "History backtest: this kind of BUY setup worked 41% of the time over ~1 week on this stock (sample: 44)"
+      "History backtest: this kind of BUY setup worked 42% of the time over ~1 week on this stock (sample: 45)"
     ],
     "patterns_seen": [
-      "pivot_r1_breakout",
       "supertrend_bullish",
-      "gap_up_continuation",
-      "bb_upper_rejection",
+      "pivot_r1_breakout",
       "volume_breakout_bullish",
       "pivot_r2_breakout",
+      "full_bearish_alignment",
       "adx_strong_trend_up",
-      "full_bearish_alignment"
+      "bb_upper_rejection",
+      "gap_up_continuation"
     ],
     "reliable_patterns": [],
     "nearest_support": 404.61,
@@ -1103,8 +1089,6 @@
     "paper_pnl": -124.86,
     "paper_expectancy": -124.86,
     "market_mood": "neutral",
-    "market_warning": [
-      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals"
-    ]
+    "market_warning": []
   }
 ]

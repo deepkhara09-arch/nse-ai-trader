@@ -1765,27 +1765,27 @@
   "HOMEFIRST.NS": {
     "reliable_patterns": {
       "pivot_point_test": {
-        "wins": 2.212,
+        "wins": 3.212,
         "losses": 0.313,
-        "reliability": 0.817,
+        "reliability": 0.911,
         "last_seen": "2026-09-04"
       },
       "spinning_top": {
-        "wins": 0.579,
+        "wins": 0.434,
         "losses": 0.0,
-        "reliability": 0.597,
+        "reliability": 0.572,
         "last_seen": "2026-07-16"
       },
       "rsi_bearish_divergence": {
-        "wins": 0.9,
-        "losses": 0.313,
-        "reliability": 0.598,
+        "wins": 0.698,
+        "losses": 0.243,
+        "reliability": 0.576,
         "last_seen": "2026-07-22"
       },
       "full_bullish_alignment": {
-        "wins": 2.501,
+        "wins": 3.501,
         "losses": 2.128,
-        "reliability": 0.54,
+        "reliability": 0.622,
         "last_seen": "2026-09-04"
       },
       "adx_strong_trend_up": {
@@ -1795,75 +1795,75 @@
         "last_seen": "2026-08-28"
       },
       "inside_bar": {
-        "wins": 1.746,
+        "wins": 2.746,
         "losses": 2.128,
-        "reliability": 0.451,
+        "reliability": 0.563,
         "last_seen": "2026-09-04"
       },
       "strong_bullish_marubozu": {
-        "wins": 1.276,
+        "wins": 2.276,
         "losses": 0.0,
-        "reliability": 0.713,
+        "reliability": 0.879,
         "last_seen": "2026-09-04"
       },
       "supertrend_bullish": {
-        "wins": 1.759,
+        "wins": 2.759,
         "losses": 1.74,
-        "reliability": 0.503,
+        "reliability": 0.613,
         "last_seen": "2026-09-04"
       },
       "stoch_rsi_oversold_reversal": {
-        "wins": 0.276,
+        "wins": 0.206,
         "losses": 0.0,
-        "reliability": 0.546,
+        "reliability": 0.534,
         "last_seen": "2026-07-15"
       },
       "bearish_harami": {
-        "wins": 0.292,
+        "wins": 0.219,
         "losses": 0.0,
-        "reliability": 0.549,
+        "reliability": 0.537,
         "last_seen": "2026-07-16"
       },
       "doji": {
-        "wins": 0.292,
+        "wins": 0.219,
         "losses": 0.0,
-        "reliability": 0.549,
+        "reliability": 0.537,
         "last_seen": "2026-07-16"
       },
       "pivot_s1_breakdown": {
-        "wins": 0.292,
+        "wins": 0.219,
         "losses": 0.0,
-        "reliability": 0.549,
+        "reliability": 0.537,
         "last_seen": "2026-07-16"
       },
       "volume_breakdown_bearish": {
-        "wins": 0.292,
+        "wins": 0.219,
         "losses": 0.0,
-        "reliability": 0.549,
+        "reliability": 0.537,
         "last_seen": "2026-07-16"
       },
       "three_white_soldiers": {
-        "wins": 0.309,
+        "wins": 0.238,
         "losses": 0.0,
-        "reliability": 0.551,
+        "reliability": 0.54,
         "last_seen": "2026-07-21"
       },
       "pivot_r1_breakout": {
-        "wins": 0.309,
+        "wins": 0.238,
         "losses": 0.0,
-        "reliability": 0.551,
+        "reliability": 0.54,
         "last_seen": "2026-07-21"
       },
       "bb_upper_rejection": {
-        "wins": 1.309,
+        "wins": 2.309,
         "losses": 0.0,
-        "reliability": 0.718,
+        "reliability": 0.885,
         "last_seen": "2026-09-04"
       },
       "strong_bearish_marubozu": {
         "wins": 0.0,
-        "losses": 0.313,
-        "reliability": 0.448,
+        "losses": 0.243,
+        "reliability": 0.46,
         "last_seen": "2026-07-22"
       },
       "low_volume_drift": {
@@ -1885,38 +1885,38 @@
         "last_seen": "2026-08-28"
       },
       "momentum_continuation": {
-        "wins": 1.0,
+        "wins": 2.0,
         "losses": 0.0,
-        "reliability": 0.667,
+        "reliability": 0.833,
         "last_seen": "2026-09-04"
       },
       "ema_golden_cross": {
-        "wins": 1.0,
+        "wins": 2.0,
         "losses": 0.0,
-        "reliability": 0.667,
+        "reliability": 0.833,
         "last_seen": "2026-09-04"
       },
       "adx_ranging_market": {
-        "wins": 1.0,
+        "wins": 2.0,
         "losses": 0.0,
-        "reliability": 0.667,
+        "reliability": 0.833,
         "last_seen": "2026-09-04"
       },
       "bullish_harami": {
-        "wins": 1.0,
+        "wins": 2.0,
         "losses": 0.0,
-        "reliability": 0.667,
+        "reliability": 0.833,
         "last_seen": "2026-09-04"
       }
     },
     "preferred_style": "swing",
-    "swing_wins": 1,
+    "swing_wins": 2,
     "swing_losses": 2,
     "intraday_wins": 0,
     "intraday_losses": 0,
     "long_term_wins": 0,
     "long_term_losses": 0,
-    "atr_stop_hits": 2,
+    "atr_stop_hits": 3,
     "atr_target_hits": 0,
     "atr_multiplier": 1.5,
     "last_updated": "2026-09-04",
@@ -3315,9 +3315,9 @@
   "__GLOBAL__": {
     "patterns": {
       "full_bullish_alignment": {
-        "wins": 11.586,
+        "wins": 12.586,
         "losses": 20.208,
-        "reliability": 0.364,
+        "reliability": 0.384,
         "last_seen": "2026-09-04"
       },
       "near_52w_high": {
@@ -3339,9 +3339,9 @@
         "last_seen": "2026-09-01"
       },
       "pivot_point_test": {
-        "wins": 12.547,
+        "wins": 13.547,
         "losses": 8.643,
-        "reliability": 0.592,
+        "reliability": 0.611,
         "last_seen": "2026-09-04"
       },
       "adx_strong_trend_up": {
@@ -3357,9 +3357,9 @@
         "last_seen": "2026-08-28"
       },
       "supertrend_bullish": {
-        "wins": 11.586,
+        "wins": 12.586,
         "losses": 16.365,
-        "reliability": 0.415,
+        "reliability": 0.435,
         "last_seen": "2026-09-04"
       },
       "engulfing_bullish": {
@@ -3375,9 +3375,9 @@
         "last_seen": "2026-08-28"
       },
       "inside_bar": {
-        "wins": 4.841,
+        "wins": 5.841,
         "losses": 2.898,
-        "reliability": 0.626,
+        "reliability": 0.668,
         "last_seen": "2026-09-04"
       },
       "pivot_s1_bounce": {
@@ -3405,15 +3405,15 @@
         "last_seen": "2026-08-28"
       },
       "momentum_continuation": {
-        "wins": 1.0,
+        "wins": 2.0,
         "losses": 0.96,
-        "reliability": 0.505,
+        "reliability": 0.63,
         "last_seen": "2026-09-04"
       },
       "adx_ranging_market": {
-        "wins": 2.92,
+        "wins": 3.92,
         "losses": 3.863,
-        "reliability": 0.43,
+        "reliability": 0.504,
         "last_seen": "2026-09-04"
       },
       "stoch_rsi_oversold_reversal": {
@@ -3435,9 +3435,9 @@
         "last_seen": "2026-08-28"
       },
       "bb_upper_rejection": {
-        "wins": 1.0,
+        "wins": 2.0,
         "losses": 3.841,
-        "reliability": 0.207,
+        "reliability": 0.342,
         "last_seen": "2026-09-04"
       },
       "hammer": {
@@ -3537,9 +3537,9 @@
         "last_seen": "2026-08-28"
       },
       "strong_bullish_marubozu": {
-        "wins": 1.0,
+        "wins": 2.0,
         "losses": 3.863,
-        "reliability": 0.206,
+        "reliability": 0.341,
         "last_seen": "2026-09-04"
       },
       "macd_bearish_crossover": {
@@ -3573,15 +3573,15 @@
         "last_seen": "2026-08-28"
       },
       "bullish_harami": {
-        "wins": 1.0,
+        "wins": 2.0,
         "losses": 0.96,
-        "reliability": 0.505,
+        "reliability": 0.63,
         "last_seen": "2026-09-04"
       },
       "ema_golden_cross": {
-        "wins": 1.0,
+        "wins": 2.0,
         "losses": 0.983,
-        "reliability": 0.502,
+        "reliability": 0.627,
         "last_seen": "2026-09-04"
       },
       "adx_strong_trend_down": {

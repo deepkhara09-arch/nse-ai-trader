@@ -1,5 +1,5 @@
 {
-  "capital": 69523.475135,
+  "capital": 71910.267425,
   "open_positions": [
     {
       "ticker": "GRASIM.NS",
@@ -41,8 +41,8 @@
         "\u2713 Daily setup aligned with the higher-timeframe trend",
         "RSI bearish divergence \u2014 price higher but RSI lower"
       ],
-      "current_price": 3321.1,
-      "unrealized_pnl": 71.6,
+      "current_price": 3320.3,
+      "unrealized_pnl": 70.0,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -58,7 +58,7 @@
         "hist_long_trend": "strong_uptrend"
       },
       "view_hist": [
-        1,
+        0,
         0,
         0,
         0
@@ -96,8 +96,8 @@
         "In a long-term strong downtrend (2yr)",
         "\u2713 Daily setup aligned with the higher-timeframe trend"
       ],
-      "current_price": 409.6,
-      "unrealized_pnl": 61.2,
+      "current_price": 407.7,
+      "unrealized_pnl": 84.0,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -113,78 +113,11 @@
         "hist_long_trend": "strong_downtrend"
       },
       "view_hist": [
-        0,
+        1,
         1,
         1,
         1
       ]
-    },
-    {
-      "ticker": "HOMEFIRST.NS",
-      "sector": "Infra Finance",
-      "open_date": "2026-08-31",
-      "open_session": "morning",
-      "action": "BUY",
-      "entry": 1185.6,
-      "qty": 2,
-      "invested": 2371.2,
-      "stop_loss": 1196.97,
-      "target": 1254.49,
-      "style": "swing",
-      "confidence": 65.5,
-      "patterns": [
-        "inside_bar",
-        "strong_bullish_marubozu",
-        "bb_upper_rejection",
-        "full_bullish_alignment",
-        "momentum_continuation",
-        "ema_golden_cross",
-        "adx_ranging_market",
-        "bullish_harami",
-        "supertrend_bullish",
-        "pivot_point_test"
-      ],
-      "buy_reasons": [
-        "All EMAs stacked bullish",
-        "RSI=54 in healthy buy zone",
-        "MACD histogram positive",
-        "Positive news sentiment (0.21, news 0.6x reliable here)",
-        "Candlestick: bullish harami",
-        "Sector headwind (momentum=-0.44)",
-        "Supertrend bullish \u2014 price above trend band",
-        "ADX low \u2014 market ranging, signals less reliable",
-        "Testing pivot point \u2014 decision zone",
-        "In a long-term uptrend (2yr) \u2014 trend on our side",
-        "Volatility compressed vs its norm \u2014 primed for an expansion move",
-        "\u2713 Daily setup aligned with the higher-timeframe trend",
-        "\u26a0 Sector momentum -0.44 \u2014 buying into a falling sector needs extra conviction",
-        "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
-        "Near upper Bollinger Band"
-      ],
-      "current_price": 1217.2,
-      "unrealized_pnl": 63.2,
-      "max_held_days": 10,
-      "vol_regime_pct": 0.12,
-      "entry_market": {
-        "nifty_trend": "sideways",
-        "vix": 10.68,
-        "mood": "bearish",
-        "regime": "choppy",
-        "sector_momentum": -0.444,
-        "delivery_signal": "neutral",
-        "rsi": 54.0,
-        "mtf_alignment": "aligned",
-        "opposing_ratio": 0.1,
-        "hist_long_trend": "uptrend"
-      },
-      "view_hist": [
-        0,
-        0,
-        0,
-        0
-      ],
-      "t1_booked": true,
-      "trailing_active": true
     },
     {
       "ticker": "PIDILITIND.NS",
@@ -225,8 +158,8 @@
         "Negative news sentiment (-0.18, news 1.2x reliable here)",
         "News sentiment worsening across sessions"
       ],
-      "current_price": 1631.9,
-      "unrealized_pnl": -45.3,
+      "current_price": 1634.1,
+      "unrealized_pnl": -38.7,
       "max_held_days": 10,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -245,7 +178,7 @@
         0,
         0,
         0,
-        0
+        1
       ]
     },
     {
@@ -290,8 +223,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "Near upper Bollinger Band"
       ],
-      "current_price": 172.61,
-      "unrealized_pnl": -18.7,
+      "current_price": 173.44,
+      "unrealized_pnl": 9.52,
       "max_held_days": 10,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -346,8 +279,8 @@
         "Candlestick: three black crows",
         "Broke below Pivot S1 support \u2014 bearish"
       ],
-      "current_price": 1311.5,
-      "unrealized_pnl": 28.8,
+      "current_price": 1325.0,
+      "unrealized_pnl": 69.3,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -363,9 +296,9 @@
         "hist_long_trend": "strong_uptrend"
       },
       "view_hist": [
+        0,
+        0,
         1,
-        0,
-        0,
         1
       ]
     }
@@ -2766,6 +2699,83 @@
       "pnl_pct": 2.6,
       "won": true,
       "open_days": 4
+    },
+    {
+      "ticker": "HOMEFIRST.NS",
+      "sector": "Infra Finance",
+      "open_date": "2026-08-31",
+      "open_session": "morning",
+      "action": "BUY",
+      "entry": 1185.6,
+      "qty": 2,
+      "invested": 2371.2,
+      "stop_loss": 1196.97,
+      "target": 1254.49,
+      "style": "swing",
+      "confidence": 65.5,
+      "patterns": [
+        "inside_bar",
+        "strong_bullish_marubozu",
+        "bb_upper_rejection",
+        "full_bullish_alignment",
+        "momentum_continuation",
+        "ema_golden_cross",
+        "adx_ranging_market",
+        "bullish_harami",
+        "supertrend_bullish",
+        "pivot_point_test"
+      ],
+      "buy_reasons": [
+        "All EMAs stacked bullish",
+        "RSI=54 in healthy buy zone",
+        "MACD histogram positive",
+        "Positive news sentiment (0.21, news 0.6x reliable here)",
+        "Candlestick: bullish harami",
+        "Sector headwind (momentum=-0.44)",
+        "Supertrend bullish \u2014 price above trend band",
+        "ADX low \u2014 market ranging, signals less reliable",
+        "Testing pivot point \u2014 decision zone",
+        "In a long-term uptrend (2yr) \u2014 trend on our side",
+        "Volatility compressed vs its norm \u2014 primed for an expansion move",
+        "\u2713 Daily setup aligned with the higher-timeframe trend",
+        "\u26a0 Sector momentum -0.44 \u2014 buying into a falling sector needs extra conviction",
+        "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
+        "Near upper Bollinger Band"
+      ],
+      "current_price": 1209.3,
+      "unrealized_pnl": 47.4,
+      "max_held_days": 10,
+      "vol_regime_pct": 0.12,
+      "entry_market": {
+        "nifty_trend": "sideways",
+        "vix": 10.68,
+        "mood": "bearish",
+        "regime": "choppy",
+        "sector_momentum": -0.444,
+        "delivery_signal": "neutral",
+        "rsi": 54.0,
+        "mtf_alignment": "aligned",
+        "opposing_ratio": 0.1,
+        "hist_long_trend": "uptrend"
+      },
+      "view_hist": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "t1_booked": true,
+      "trailing_active": true,
+      "close_date": "2026-09-04",
+      "close_session": "intraday_close",
+      "exit_price": 1196.97,
+      "exit_reason": "stop_hit",
+      "pnl": 15.59,
+      "pnl_gross": 22.74,
+      "costs": 7.15,
+      "pnl_pct": 0.66,
+      "won": true,
+      "open_days": 4
     }
   ],
   "daily_snapshots": [
@@ -3022,11 +3032,11 @@
       "daily_pnl": 0.0
     }
   ],
-  "daily_pnl_today": 61.67,
+  "daily_pnl_today": 77.26229000000023,
   "last_snapshot_date": "2026-09-03",
-  "lifetime_wins": 14,
+  "lifetime_wins": 15,
   "lifetime_losses": 23,
-  "lifetime_pnl": -1824.19,
+  "lifetime_pnl": -1808.6,
   "last_pnl_reset_date": "2026-09-04",
   "max_drawdown_pct": 3.05,
   "current_drawdown_pct": 2.87,

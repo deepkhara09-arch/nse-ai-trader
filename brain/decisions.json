@@ -1,177 +1,5 @@
 [
   {
-    "timestamp": "2026-07-31T07:45:49.197143",
-    "date": "2026-07-31",
-    "ticker": "ABCAPITAL.NS",
-    "session": "afternoon",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 65.0,
-    "entry": 410.25,
-    "stop_loss": 395.82,
-    "target": 439.1,
-    "reason": "paper afternoon",
-    "patterns": [
-      "inside_bar",
-      "full_bullish_alignment",
-      "supertrend_bullish",
-      "near_52w_high",
-      "stoch_rsi_oversold_reversal",
-      "low_volume_drift",
-      "rsi_bearish_divergence",
-      "adx_ranging_market"
-    ]
-  },
-  {
-    "timestamp": "2026-07-31T07:45:49.198336",
-    "date": "2026-07-31",
-    "ticker": "PIDILITIND.NS",
-    "session": "afternoon",
-    "action": "SELL",
-    "signal": "SELL",
-    "confidence": 73.5,
-    "entry": 1614.5,
-    "stop_loss": 1666.35,
-    "target": 1510.8,
-    "reason": "paper afternoon",
-    "patterns": [
-      "bb_upper_rejection",
-      "inside_bar",
-      "full_bullish_alignment",
-      "pivot_s1_breakdown",
-      "tweezer_top",
-      "near_52w_high",
-      "stoch_rsi_overbought_reversal",
-      "engulfing_bearish",
-      "rsi_bearish_divergence",
-      "adx_strong_trend_up"
-    ]
-  },
-  {
-    "timestamp": "2026-07-31T07:45:49.199105",
-    "date": "2026-07-31",
-    "ticker": "SIEMENS.NS",
-    "session": "afternoon",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 95,
-    "entry": 3804.0,
-    "stop_loss": 3654.06,
-    "target": 4103.89,
-    "reason": "paper afternoon",
-    "patterns": [
-      "full_bullish_alignment",
-      "supertrend_bullish",
-      "doji",
-      "engulfing_bullish",
-      "hammer"
-    ]
-  },
-  {
-    "timestamp": "2026-07-31T07:45:49.201006",
-    "date": "2026-07-31",
-    "ticker": "NHPC.NS",
-    "session": "afternoon",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 60.0,
-    "entry": 78.52,
-    "stop_loss": 76.16,
-    "target": 83.24,
-    "reason": "paper afternoon",
-    "patterns": [
-      "ema_death_cross",
-      "pivot_point_test",
-      "supertrend_bullish",
-      "hammer",
-      "low_volume_drift",
-      "stoch_rsi_oversold_reversal"
-    ]
-  },
-  {
-    "timestamp": "2026-07-31T07:45:49.201732",
-    "date": "2026-07-31",
-    "ticker": "IDFCFIRSTB.NS",
-    "session": "afternoon",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 87.5,
-    "entry": 85.19,
-    "stop_loss": 82.11,
-    "target": 91.35,
-    "reason": "paper afternoon",
-    "patterns": [
-      "pivot_point_test",
-      "full_bullish_alignment",
-      "supertrend_bullish",
-      "hammer",
-      "adx_strong_trend_up"
-    ]
-  },
-  {
-    "timestamp": "2026-07-31T09:45:49.972180",
-    "date": "2026-07-31",
-    "ticker": "SBIN.NS",
-    "session": "intraday_close",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 55.9,
-    "entry": 1027.4,
-    "stop_loss": 999.54,
-    "target": 1083.11,
-    "reason": "paper intraday_close",
-    "patterns": [
-      "rsi_bearish_divergence",
-      "supertrend_bullish",
-      "outside_bar",
-      "adx_ranging_market",
-      "engulfing_bullish"
-    ]
-  },
-  {
-    "timestamp": "2026-07-31T09:45:49.973151",
-    "date": "2026-07-31",
-    "ticker": "NESTLEIND.NS",
-    "session": "intraday_close",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 95,
-    "entry": 1510.3,
-    "stop_loss": 1457.59,
-    "target": 1615.73,
-    "reason": "paper intraday_close",
-    "patterns": [
-      "near_52w_high",
-      "pivot_r1_breakout",
-      "supertrend_bullish",
-      "full_bullish_alignment",
-      "three_white_soldiers",
-      "bb_upper_rejection",
-      "pivot_point_test"
-    ]
-  },
-  {
-    "timestamp": "2026-07-31T09:45:49.973608",
-    "date": "2026-07-31",
-    "ticker": "ICICIBANK.NS",
-    "session": "intraday_close",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 95,
-    "entry": 1437.1,
-    "stop_loss": 1400.77,
-    "target": 1509.76,
-    "reason": "paper intraday_close",
-    "patterns": [
-      "rsi_bearish_divergence",
-      "supertrend_bullish",
-      "full_bullish_alignment",
-      "spinning_top",
-      "pivot_point_test",
-      "adx_strong_trend_up"
-    ]
-  },
-  {
     "timestamp": "2026-07-31T09:45:49.974377",
     "date": "2026-07-31",
     "ticker": "UNIONBANK.NS",
@@ -21294,6 +21122,177 @@
       "adx_strong_trend_up",
       "momentum_continuation",
       "full_bullish_alignment",
+      "stoch_rsi_oversold_reversal"
+    ]
+  },
+  {
+    "timestamp": "2026-09-04T07:45:47.885459",
+    "date": "2026-09-04",
+    "ticker": "PIDILITIND.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 57.1,
+    "entry": 1631.9,
+    "stop_loss": 1586.36,
+    "target": 1722.97,
+    "reason": "paper afternoon",
+    "patterns": [
+      "three_black_crows",
+      "full_bullish_alignment",
+      "pivot_point_test",
+      "adx_ranging_market",
+      "pivot_s1_breakdown",
+      "rsi_bullish_divergence"
+    ]
+  },
+  {
+    "timestamp": "2026-09-04T07:45:47.886658",
+    "date": "2026-09-04",
+    "ticker": "SIEMENS.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 93.5,
+    "entry": 3985.0,
+    "stop_loss": 3849.52,
+    "target": 4255.96,
+    "reason": "paper afternoon",
+    "patterns": [
+      "adx_strong_trend_up",
+      "full_bullish_alignment",
+      "pivot_s1_breakdown",
+      "doji",
+      "dragonfly_doji",
+      "rsi_bullish_divergence"
+    ]
+  },
+  {
+    "timestamp": "2026-09-04T07:45:47.911211",
+    "date": "2026-09-04",
+    "ticker": "GRASIM.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 64.1,
+    "entry": 3321.1,
+    "stop_loss": 3224.78,
+    "target": 3513.74,
+    "reason": "paper afternoon",
+    "patterns": [
+      "hammer",
+      "bb_midline_support",
+      "full_bullish_alignment",
+      "pivot_point_test",
+      "doji",
+      "supertrend_bullish",
+      "dragonfly_doji"
+    ]
+  },
+  {
+    "timestamp": "2026-09-04T07:45:47.912658",
+    "date": "2026-09-04",
+    "ticker": "COALINDIA.NS",
+    "session": "afternoon",
+    "action": "SELL",
+    "signal": "SELL",
+    "confidence": 59.7,
+    "entry": 413.8,
+    "stop_loss": 429.53,
+    "target": 382.34,
+    "reason": "paper afternoon",
+    "patterns": [
+      "adx_strong_trend_up",
+      "gap_up_reversal",
+      "stoch_rsi_overbought_reversal",
+      "pivot_point_test",
+      "bb_upper_rejection",
+      "full_bearish_alignment"
+    ]
+  },
+  {
+    "timestamp": "2026-09-04T07:45:47.914033",
+    "date": "2026-09-04",
+    "ticker": "VBL.NS",
+    "session": "afternoon",
+    "action": "SELL",
+    "signal": "SELL",
+    "confidence": 71.8,
+    "entry": 409.6,
+    "stop_loss": 427.09,
+    "target": 374.63,
+    "reason": "paper afternoon",
+    "patterns": [
+      "inside_bar",
+      "strong_bearish_marubozu",
+      "adx_strong_trend_down",
+      "pivot_point_test",
+      "stoch_rsi_overbought_reversal",
+      "bearish_harami",
+      "full_bearish_alignment"
+    ]
+  },
+  {
+    "timestamp": "2026-09-04T07:45:47.914917",
+    "date": "2026-09-04",
+    "ticker": "JSWSTEEL.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 94.2,
+    "entry": 1311.5,
+    "stop_loss": 1274.24,
+    "target": 1386.03,
+    "reason": "paper afternoon",
+    "patterns": [
+      "macd_bearish_crossover",
+      "hammer",
+      "adx_strong_trend_up",
+      "full_bullish_alignment",
+      "pivot_point_test",
+      "supertrend_bullish",
+      "pivot_s1_bounce",
+      "rsi_bullish_divergence"
+    ]
+  },
+  {
+    "timestamp": "2026-09-04T07:45:47.917045",
+    "date": "2026-09-04",
+    "ticker": "UNIONBANK.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 73.0,
+    "entry": 189.39,
+    "stop_loss": 182.66,
+    "target": 202.84,
+    "reason": "paper afternoon",
+    "patterns": [
+      "adx_strong_trend_up",
+      "full_bullish_alignment",
+      "engulfing_bullish",
+      "outside_bar",
+      "supertrend_bullish",
+      "strong_bullish_marubozu"
+    ]
+  },
+  {
+    "timestamp": "2026-09-04T07:45:47.917789",
+    "date": "2026-09-04",
+    "ticker": "BHEL.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 78.6,
+    "entry": 431.4,
+    "stop_loss": 413.76,
+    "target": 466.67,
+    "reason": "paper afternoon",
+    "patterns": [
+      "momentum_continuation",
+      "adx_strong_trend_up",
+      "full_bullish_alignment",
+      "supertrend_bullish",
       "stoch_rsi_oversold_reversal"
     ]
   }

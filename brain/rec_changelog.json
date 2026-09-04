@@ -1,25 +1,5 @@
 [
   {
-    "type": "removed",
-    "ticker": "ICICIBANK.NS",
-    "nse_code": "ICICIBANK",
-    "signal": "BUY",
-    "date": "2026-07-06",
-    "ts": "2026-07-06T04:05:49.276296",
-    "detail": "Dropped \u2014 no longer meets threshold (was 70/100)",
-    "confidence": 0
-  },
-  {
-    "type": "removed",
-    "ticker": "MARICO.NS",
-    "nse_code": "MARICO",
-    "signal": "BUY",
-    "date": "2026-07-06",
-    "ts": "2026-07-06T04:05:49.276296",
-    "detail": "Dropped \u2014 no longer meets threshold (was 67/100)",
-    "confidence": 0
-  },
-  {
     "type": "updated",
     "ticker": "ABCAPITAL.NS",
     "nse_code": "ABCAPITAL",
@@ -5998,5 +5978,25 @@
     "ts": "2026-09-04T06:15:50.799174",
     "detail": "Dropped \u2014 no longer meets threshold (was 66/100)",
     "confidence": 0
+  },
+  {
+    "type": "new",
+    "ticker": "JSWSTEEL.NS",
+    "nse_code": "JSWSTEEL",
+    "signal": "BUY",
+    "date": "2026-09-04",
+    "ts": "2026-09-04T07:45:48.030651",
+    "detail": "New BUY recommendation \u2014 confidence 72/100",
+    "confidence": 72.3
+  },
+  {
+    "type": "updated",
+    "ticker": "SIEMENS.NS",
+    "nse_code": "SIEMENS",
+    "signal": "BUY",
+    "date": "2026-09-04",
+    "ts": "2026-09-04T07:45:48.030651",
+    "detail": "Target 1 moved \u20b94275.36 \u2192 \u20b94217.40",
+    "confidence": 75.1
   }
 ]

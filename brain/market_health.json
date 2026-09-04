@@ -3,25 +3,25 @@
   "session": "afternoon",
   "nifty": {
     "symbol": "^NSEI",
-    "value": 23873.45,
-    "day_change_pct": -0.17,
-    "trend_5d": "down",
+    "value": 23914.45,
+    "day_change_pct": -0.59,
+    "trend_5d": "sideways",
     "trend_20d": "down",
-    "ath_pct_60d": -3.64
+    "ath_pct_60d": -3.47
   },
   "vix": {
-    "value": 11.34,
+    "value": 11.59,
     "level": "normal",
-    "percentile_30d": 33.0,
-    "avg_30d": 11.69
+    "percentile_30d": 47.0,
+    "avg_30d": 11.76
   },
   "bank_nifty": {
     "symbol": "^NSEBANK",
-    "value": 57380.6,
-    "day_change_pct": 0.36,
+    "value": 57172.0,
+    "day_change_pct": -0.41,
     "trend_5d": "sideways",
-    "trend_20d": "sideways",
-    "ath_pct_60d": -2.08,
+    "trend_20d": "down",
+    "ath_pct_60d": -2.43,
     "diverging": false
   },
   "sectors": {
@@ -58,10 +58,9 @@
       "ath_pct_60d": -2.31
     }
   },
-  "market_mood": "bearish",
+  "market_mood": "neutral",
   "trade_allowed": true,
   "warnings": [
-    "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
     "Nifty choppy intraday \u2014 wait for cleaner setups"
   ],
   "leading_sectors": [

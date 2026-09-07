@@ -32,8 +32,8 @@
         "In a long-term strong downtrend (2yr)",
         "\u2713 Daily setup aligned with the higher-timeframe trend"
       ],
-      "current_price": 404.95,
-      "unrealized_pnl": 117.0,
+      "current_price": 404.25,
+      "unrealized_pnl": 125.4,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -97,8 +97,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "Near upper Bollinger Band"
       ],
-      "current_price": 176.09,
-      "unrealized_pnl": 99.62,
+      "current_price": 175.91,
+      "unrealized_pnl": 93.5,
       "max_held_days": 10,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -114,9 +114,9 @@
         "hist_long_trend": "strong_uptrend"
       },
       "view_hist": [
-        0,
         1,
         0,
+        1,
         1
       ]
     },
@@ -153,8 +153,8 @@
         "Candlestick: three black crows",
         "Broke below Pivot S1 support \u2014 bearish"
       ],
-      "current_price": 1308.9,
-      "unrealized_pnl": 21.0,
+      "current_price": 1306.8,
+      "unrealized_pnl": 14.7,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -213,8 +213,8 @@
         "Negative news sentiment (-0.16, news 0.6x reliable here)",
         "News sentiment worsening across sessions"
       ],
-      "current_price": 1224.6,
-      "unrealized_pnl": -81.6,
+      "current_price": 1225.0,
+      "unrealized_pnl": -79.2,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -230,6 +230,7 @@
         "hist_long_trend": "strong_uptrend"
       },
       "view_hist": [
+        1,
         1
       ]
     },
@@ -269,8 +270,8 @@
         "Candlestick: engulfing bearish",
         "Broke below Pivot S1 support \u2014 bearish"
       ],
-      "current_price": 3929.5,
-      "unrealized_pnl": -53.0,
+      "current_price": 3925.0,
+      "unrealized_pnl": -57.5,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -286,6 +287,7 @@
         "hist_long_trend": "strong_uptrend"
       },
       "view_hist": [
+        1,
         1
       ]
     },
@@ -322,8 +324,8 @@
         "\u2713 Daily setup aligned with the higher-timeframe trend",
         "MACD histogram negative"
       ],
-      "current_price": 3322.0,
-      "unrealized_pnl": 0.0,
+      "current_price": 3301.7,
+      "unrealized_pnl": -40.6,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -337,7 +339,10 @@
         "mtf_alignment": "aligned",
         "opposing_ratio": 0.12,
         "hist_long_trend": "strong_uptrend"
-      }
+      },
+      "view_hist": [
+        0
+      ]
     }
   ],
   "closed_trades": [

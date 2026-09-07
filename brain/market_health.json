@@ -1,6 +1,6 @@
 {
   "date": "2026-09-07",
-  "session": "morning",
+  "session": "midday",
   "nifty": {
     "symbol": "^NSEI",
     "value": 23897.7,
@@ -70,11 +70,11 @@
   "intraday_regime": "mixed",
   "macro": {
     "date": "2026-09-07",
-    "session": "preopen",
-    "generated_at": "2026-09-07T03:05:37.465970",
-    "global_score": 0.26,
+    "session": "midday",
+    "generated_at": "2026-09-07T06:15:41.940754",
+    "global_score": 0.303,
     "india_score": 0.0,
-    "overall_score": 0.143,
+    "overall_score": 0.167,
     "mood": "neutral",
     "drivers": [
       "\u2018I currently give him $1,000 a month\u2019: My grandson has severe mental illness. How do I protect him after I\u2019m gone?",
@@ -100,23 +100,23 @@
         "chg_pct": -0.38
       },
       "nikkei": {
-        "last": 66460.11,
-        "chg_pct": 2.21
+        "last": 66190.43,
+        "chg_pct": 1.8
       },
       "crude": {
         "last": 91.48,
         "chg_pct": 0.0
       },
       "usdinr": {
-        "last": 94.47,
-        "chg_pct": -0.02
+        "last": 94.44,
+        "chg_pct": -0.05
       },
       "gold": {
         "last": 4476.6,
         "chg_pct": 1.06
       }
     },
-    "summary": "Overall macro mood is neutral (+0.14). US Dow -0.5% overnight. Crude +0.0%. USD/INR -0.0%. Notable: US Fed rate hike / hawkish; Geopolitical conflict / war; Tariffs / trade war.",
+    "summary": "Overall macro mood is neutral (+0.17). US Dow -0.5% overnight. Crude +0.0%. USD/INR -0.1%. Notable: US Fed rate hike / hawkish; Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
       "Hawkish Fed pressures Nifty via FII outflows and stronger USD.",
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",

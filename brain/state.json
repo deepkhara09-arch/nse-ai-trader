@@ -1,13 +1,13 @@
 {
   "phase": "paper_trading",
   "day": 55,
-  "session": "morning",
+  "session": "midday",
   "start_date": "2026-06-22",
   "phase_start_date": "2026-07-15",
   "last_run_date": "2026-09-04",
   "last_counted_date": "2026-09-04",
   "cohort_last_tick_date": "2026-09-04",
-  "last_updated": "2026-09-07T04:05:41.253487",
+  "last_updated": "2026-09-07T06:15:49.954807",
   "focus_stocks": [
     "SBIN.NS",
     "PIDILITIND.NS",
@@ -58,14 +58,14 @@
     "INDUSINDBK.NS"
   ],
   "paper_trade_stats": {
-    "total": 39,
+    "total": 40,
     "wins": 16,
-    "losses": 23,
-    "win_rate": 0.41,
-    "total_pnl": -1775.99,
+    "losses": 24,
+    "win_rate": 0.4,
+    "total_pnl": -1920.7,
     "avg_win": 103.05,
-    "avg_loss": -148.91,
-    "expectancy": -45.54
+    "avg_loss": -148.73,
+    "expectancy": -48.02
   },
   "brain_notes": [
     "[2026-07-08] Cohort batch #4 complete \u2014 30 candidates ready",
@@ -398,6 +398,7 @@
   },
   "sessions_done": {
     "preopen": "2026-09-07",
-    "morning": "2026-09-07"
+    "morning": "2026-09-07",
+    "midday": "2026-09-07"
   }
 }

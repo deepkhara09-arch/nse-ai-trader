@@ -1,132 +1,5 @@
 [
   {
-    "timestamp": "2026-08-03T04:05:51.148205",
-    "date": "2026-08-03",
-    "ticker": "SIEMENS.NS",
-    "session": "morning",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 95,
-    "entry": 3800.0,
-    "stop_loss": 3650.08,
-    "target": 4099.84,
-    "reason": "paper morning",
-    "patterns": [
-      "doji",
-      "full_bullish_alignment",
-      "morning_star",
-      "tweezer_bottom",
-      "hammer",
-      "dragonfly_doji",
-      "inside_bar",
-      "supertrend_bullish"
-    ]
-  },
-  {
-    "timestamp": "2026-08-03T04:05:51.149027",
-    "date": "2026-08-03",
-    "ticker": "JSWSTEEL.NS",
-    "session": "morning",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 65.6,
-    "entry": 1282.6,
-    "stop_loss": 1244.8,
-    "target": 1358.2,
-    "reason": "paper morning",
-    "patterns": [
-      "full_bullish_alignment",
-      "tweezer_bottom",
-      "inside_bar",
-      "pivot_point_test",
-      "supertrend_bullish",
-      "adx_ranging_market"
-    ]
-  },
-  {
-    "timestamp": "2026-08-03T04:05:51.151137",
-    "date": "2026-08-03",
-    "ticker": "IDFCFIRSTB.NS",
-    "session": "morning",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 70.7,
-    "entry": 85.24,
-    "stop_loss": 82.13,
-    "target": 91.46,
-    "reason": "paper morning",
-    "patterns": [
-      "adx_strong_trend_up",
-      "doji",
-      "supertrend_bullish",
-      "full_bullish_alignment"
-    ]
-  },
-  {
-    "timestamp": "2026-08-03T06:15:58.295315",
-    "date": "2026-08-03",
-    "ticker": "MARICO.NS",
-    "session": "midday",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 65.2,
-    "entry": 876.4,
-    "stop_loss": 850.64,
-    "target": 927.92,
-    "reason": "paper midday",
-    "patterns": [
-      "tweezer_top",
-      "near_52w_high",
-      "pivot_s1_breakdown",
-      "full_bullish_alignment",
-      "strong_bearish_marubozu",
-      "adx_strong_trend_up",
-      "rsi_bullish_divergence"
-    ]
-  },
-  {
-    "timestamp": "2026-08-03T06:15:58.297096",
-    "date": "2026-08-03",
-    "ticker": "NESTLEIND.NS",
-    "session": "midday",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 67.1,
-    "entry": 1514.0,
-    "stop_loss": 1461.67,
-    "target": 1618.66,
-    "reason": "paper midday",
-    "patterns": [
-      "near_52w_high",
-      "bb_upper_rejection",
-      "full_bullish_alignment",
-      "stoch_rsi_overbought_reversal",
-      "pivot_point_test",
-      "inside_bar"
-    ]
-  },
-  {
-    "timestamp": "2026-08-03T06:15:58.297600",
-    "date": "2026-08-03",
-    "ticker": "ICICIBANK.NS",
-    "session": "midday",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 95,
-    "entry": 1444.5,
-    "stop_loss": 1402.58,
-    "target": 1528.34,
-    "reason": "paper midday",
-    "patterns": [
-      "supertrend_bullish",
-      "full_bullish_alignment",
-      "strong_bullish_marubozu",
-      "stoch_rsi_oversold_reversal",
-      "inside_bar",
-      "adx_strong_trend_up"
-    ]
-  },
-  {
     "timestamp": "2026-08-03T06:15:58.298853",
     "date": "2026-08-03",
     "ticker": "ABCAPITAL.NS",
@@ -21278,6 +21151,128 @@
       "supertrend_bullish",
       "full_bullish_alignment",
       "adx_ranging_market"
+    ]
+  },
+  {
+    "timestamp": "2026-09-07T04:05:41.212860",
+    "date": "2026-09-07",
+    "ticker": "SIEMENS.NS",
+    "session": "morning",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 80.6,
+    "entry": 3982.5,
+    "stop_loss": 3848.32,
+    "target": 4250.85,
+    "reason": "paper morning",
+    "patterns": [
+      "pivot_s1_breakdown",
+      "full_bullish_alignment",
+      "engulfing_bearish",
+      "strong_bearish_marubozu",
+      "low_volume_drift",
+      "adx_strong_trend_up",
+      "rsi_bullish_divergence"
+    ]
+  },
+  {
+    "timestamp": "2026-09-07T04:05:41.216831",
+    "date": "2026-09-07",
+    "ticker": "HOMEFIRST.NS",
+    "session": "morning",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 84.0,
+    "entry": 1238.2,
+    "stop_loss": 1196.01,
+    "target": 1322.59,
+    "reason": "paper morning",
+    "patterns": [
+      "three_white_soldiers",
+      "full_bullish_alignment",
+      "bb_upper_rejection",
+      "supertrend_bullish",
+      "adx_ranging_market"
+    ]
+  },
+  {
+    "timestamp": "2026-09-07T04:05:41.217895",
+    "date": "2026-09-07",
+    "ticker": "VBL.NS",
+    "session": "morning",
+    "action": "SELL",
+    "signal": "SELL",
+    "confidence": 66.1,
+    "entry": 404.8,
+    "stop_loss": 422.29,
+    "target": 369.83,
+    "reason": "paper morning",
+    "patterns": [
+      "pivot_s1_breakdown",
+      "full_bearish_alignment",
+      "adx_strong_trend_down",
+      "shooting_star",
+      "stoch_rsi_overbought_reversal",
+      "doji"
+    ]
+  },
+  {
+    "timestamp": "2026-09-07T04:05:41.219007",
+    "date": "2026-09-07",
+    "ticker": "JSWSTEEL.NS",
+    "session": "morning",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 94.4,
+    "entry": 1318.2,
+    "stop_loss": 1281.09,
+    "target": 1392.43,
+    "reason": "paper morning",
+    "patterns": [
+      "full_bullish_alignment",
+      "adx_strong_trend_up",
+      "engulfing_bullish",
+      "supertrend_bullish"
+    ]
+  },
+  {
+    "timestamp": "2026-09-07T04:05:41.220083",
+    "date": "2026-09-07",
+    "ticker": "ADANIPORTS.NS",
+    "session": "morning",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 71.2,
+    "entry": 1707.0,
+    "stop_loss": 1652.55,
+    "target": 1815.9,
+    "reason": "paper morning",
+    "patterns": [
+      "three_white_soldiers",
+      "full_bearish_alignment",
+      "pivot_point_test",
+      "supertrend_bullish"
+    ]
+  },
+  {
+    "timestamp": "2026-09-07T04:05:41.222679",
+    "date": "2026-09-07",
+    "ticker": "BHEL.NS",
+    "session": "morning",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 71.0,
+    "entry": 431.7,
+    "stop_loss": 414.52,
+    "target": 466.06,
+    "reason": "paper morning",
+    "patterns": [
+      "full_bullish_alignment",
+      "adx_strong_trend_up",
+      "shooting_star",
+      "momentum_continuation",
+      "rsi_bearish_divergence",
+      "pivot_point_test"
     ]
   }
 ]

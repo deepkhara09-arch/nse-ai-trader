@@ -1,70 +1,6 @@
 {
-  "capital": 71910.267425,
+  "capital": 67101.777025,
   "open_positions": [
-    {
-      "ticker": "GRASIM.NS",
-      "sector": "Metals",
-      "open_date": "2026-08-24",
-      "open_session": "midday",
-      "action": "BUY",
-      "entry": 3285.3,
-      "qty": 2,
-      "invested": 6570.6,
-      "stop_loss": 3224.58,
-      "target": 3551.77,
-      "style": "swing",
-      "confidence": 95,
-      "patterns": [
-        "pivot_s1_bounce",
-        "rsi_bearish_divergence",
-        "adx_strong_trend_up",
-        "momentum_continuation",
-        "pivot_point_test",
-        "supertrend_bullish",
-        "stoch_rsi_oversold_reversal",
-        "full_bullish_alignment"
-      ],
-      "buy_reasons": [
-        "All EMAs stacked bullish",
-        "RSI=55 in healthy buy zone",
-        "MACD histogram positive",
-        "High volume confirmation (1.6x avg)",
-        "Positive news sentiment (0.38, news 0.6x reliable here)",
-        "News sentiment improving across sessions",
-        "Supertrend bullish \u2014 price above trend band",
-        "ADX strong trend \u2014 directional move confirmed",
-        "Bounced off Pivot S1 support",
-        "Testing pivot point \u2014 decision zone",
-        "StochRSI oversold with bullish candle \u2014 reversal",
-        "In a long-term strong uptrend (2yr) \u2014 trend on our side",
-        "Near 52-week high (99% of range) \u2014 breakout zone",
-        "\u2713 Daily setup aligned with the higher-timeframe trend",
-        "RSI bearish divergence \u2014 price higher but RSI lower"
-      ],
-      "current_price": 3320.0,
-      "unrealized_pnl": 69.4,
-      "max_held_days": 10,
-      "vol_regime_pct": 0.12,
-      "entry_market": {
-        "nifty_trend": "sideways",
-        "vix": 11.2,
-        "mood": "neutral",
-        "regime": "mixed",
-        "sector_momentum": 0.3,
-        "delivery_signal": "neutral",
-        "rsi": 54.9,
-        "mtf_alignment": "aligned",
-        "opposing_ratio": 0.16,
-        "hist_long_trend": "strong_uptrend"
-      },
-      "view_hist": [
-        0,
-        0,
-        0,
-        1
-      ],
-      "stale_tightened": true
-    },
     {
       "ticker": "VBL.NS",
       "sector": "FMCG",
@@ -96,8 +32,8 @@
         "In a long-term strong downtrend (2yr)",
         "\u2713 Daily setup aligned with the higher-timeframe trend"
       ],
-      "current_price": 407.7,
-      "unrealized_pnl": 84.0,
+      "current_price": 404.8,
+      "unrealized_pnl": 118.8,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -158,8 +94,8 @@
         "Negative news sentiment (-0.18, news 1.2x reliable here)",
         "News sentiment worsening across sessions"
       ],
-      "current_price": 1636.0,
-      "unrealized_pnl": -33.0,
+      "current_price": 1612.0,
+      "unrealized_pnl": -105.0,
       "max_held_days": 10,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -176,9 +112,9 @@
       },
       "view_hist": [
         0,
-        0,
         1,
-        1
+        1,
+        0
       ]
     },
     {
@@ -223,8 +159,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "Near upper Bollinger Band"
       ],
-      "current_price": 173.0,
-      "unrealized_pnl": -5.44,
+      "current_price": 173.6,
+      "unrealized_pnl": 14.96,
       "max_held_days": 10,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -242,8 +178,8 @@
       "view_hist": [
         0,
         0,
-        0,
-        1
+        1,
+        0
       ]
     },
     {
@@ -279,8 +215,8 @@
         "Candlestick: three black crows",
         "Broke below Pivot S1 support \u2014 bearish"
       ],
-      "current_price": 1325.0,
-      "unrealized_pnl": 69.3,
+      "current_price": 1318.2,
+      "unrealized_pnl": 48.9,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -296,11 +232,118 @@
         "hist_long_trend": "strong_uptrend"
       },
       "view_hist": [
-        0,
+        1,
         1,
         1,
         1
       ]
+    },
+    {
+      "ticker": "HOMEFIRST.NS",
+      "sector": "Infra Finance",
+      "open_date": "2026-09-07",
+      "open_session": "morning",
+      "action": "BUY",
+      "entry": 1238.2,
+      "qty": 6,
+      "invested": 7429.2,
+      "stop_loss": 1196.01,
+      "target": 1322.59,
+      "style": "swing",
+      "confidence": 84.0,
+      "patterns": [
+        "three_white_soldiers",
+        "full_bullish_alignment",
+        "bb_upper_rejection",
+        "supertrend_bullish",
+        "adx_ranging_market"
+      ],
+      "buy_reasons": [
+        "All EMAs stacked bullish",
+        "MACD histogram positive",
+        "Learned bullish pattern: full_bullish_alignment (rel=62%)",
+        "Learned bullish pattern: supertrend_bullish (rel=61%)",
+        "Candlestick: three white soldiers",
+        "Sector headwind (momentum=-0.38)",
+        "Supertrend bullish \u2014 price above trend band",
+        "ADX low \u2014 market ranging, signals less reliable",
+        "In a long-term strong uptrend (2yr) \u2014 trend on our side",
+        "Volatility compressed vs its norm \u2014 primed for an expansion move",
+        "\u2713 Daily setup aligned with the higher-timeframe trend",
+        "\u26a0 Sector momentum -0.38 \u2014 buying into a falling sector needs extra conviction",
+        "Near upper Bollinger Band",
+        "Negative news sentiment (-0.16, news 0.6x reliable here)",
+        "News sentiment worsening across sessions"
+      ],
+      "current_price": 1238.2,
+      "unrealized_pnl": 0.0,
+      "max_held_days": 10,
+      "vol_regime_pct": 0.12,
+      "entry_market": {
+        "nifty_trend": "sideways",
+        "vix": 10.68,
+        "mood": "neutral",
+        "regime": "mixed",
+        "sector_momentum": -0.381,
+        "delivery_signal": "neutral",
+        "rsi": 61.9,
+        "mtf_alignment": "aligned",
+        "opposing_ratio": 0.12,
+        "hist_long_trend": "strong_uptrend"
+      }
+    },
+    {
+      "ticker": "SIEMENS.NS",
+      "sector": "Infra",
+      "open_date": "2026-09-07",
+      "open_session": "morning",
+      "action": "BUY",
+      "entry": 3982.5,
+      "qty": 1,
+      "invested": 3982.5,
+      "stop_loss": 3848.32,
+      "target": 4250.85,
+      "style": "swing",
+      "confidence": 80.6,
+      "patterns": [
+        "pivot_s1_breakdown",
+        "full_bullish_alignment",
+        "engulfing_bearish",
+        "strong_bearish_marubozu",
+        "low_volume_drift",
+        "adx_strong_trend_up",
+        "rsi_bullish_divergence"
+      ],
+      "buy_reasons": [
+        "All EMAs stacked bullish",
+        "RSI=53 in healthy buy zone",
+        "Positive news sentiment (0.25, news 1.3x reliable here)",
+        "Learned bullish pattern: full_bullish_alignment (rel=60%)",
+        "RSI bullish divergence \u2014 price lower but RSI higher",
+        "ADX strong trend \u2014 directional move confirmed",
+        "In a long-term strong uptrend (2yr) \u2014 trend on our side",
+        "Clean trender aligned with its long-term uptrend",
+        "\u2713 Daily setup aligned with the higher-timeframe trend",
+        "MACD histogram negative",
+        "Candlestick: engulfing bearish",
+        "Broke below Pivot S1 support \u2014 bearish"
+      ],
+      "current_price": 3982.5,
+      "unrealized_pnl": 0.0,
+      "max_held_days": 10,
+      "vol_regime_pct": 0.12,
+      "entry_market": {
+        "nifty_trend": "sideways",
+        "vix": 10.68,
+        "mood": "neutral",
+        "regime": "mixed",
+        "sector_momentum": -0.231,
+        "delivery_signal": "neutral",
+        "rsi": 52.9,
+        "mtf_alignment": "aligned",
+        "opposing_ratio": 0.51,
+        "hist_long_trend": "strong_uptrend"
+      }
     }
   ],
   "closed_trades": [
@@ -2778,6 +2821,80 @@
       "won": true,
       "open_days": 4,
       "forensic_done": true
+    },
+    {
+      "ticker": "GRASIM.NS",
+      "sector": "Metals",
+      "open_date": "2026-08-24",
+      "open_session": "midday",
+      "action": "BUY",
+      "entry": 3285.3,
+      "qty": 2,
+      "invested": 6570.6,
+      "stop_loss": 3224.58,
+      "target": 3551.77,
+      "style": "swing",
+      "confidence": 95,
+      "patterns": [
+        "pivot_s1_bounce",
+        "rsi_bearish_divergence",
+        "adx_strong_trend_up",
+        "momentum_continuation",
+        "pivot_point_test",
+        "supertrend_bullish",
+        "stoch_rsi_oversold_reversal",
+        "full_bullish_alignment"
+      ],
+      "buy_reasons": [
+        "All EMAs stacked bullish",
+        "RSI=55 in healthy buy zone",
+        "MACD histogram positive",
+        "High volume confirmation (1.6x avg)",
+        "Positive news sentiment (0.38, news 0.6x reliable here)",
+        "News sentiment improving across sessions",
+        "Supertrend bullish \u2014 price above trend band",
+        "ADX strong trend \u2014 directional move confirmed",
+        "Bounced off Pivot S1 support",
+        "Testing pivot point \u2014 decision zone",
+        "StochRSI oversold with bullish candle \u2014 reversal",
+        "In a long-term strong uptrend (2yr) \u2014 trend on our side",
+        "Near 52-week high (99% of range) \u2014 breakout zone",
+        "\u2713 Daily setup aligned with the higher-timeframe trend",
+        "RSI bearish divergence \u2014 price higher but RSI lower"
+      ],
+      "current_price": 3311.5,
+      "unrealized_pnl": 52.4,
+      "max_held_days": 10,
+      "vol_regime_pct": 0.12,
+      "entry_market": {
+        "nifty_trend": "sideways",
+        "vix": 11.2,
+        "mood": "neutral",
+        "regime": "mixed",
+        "sector_momentum": 0.3,
+        "delivery_signal": "neutral",
+        "rsi": 54.9,
+        "mtf_alignment": "aligned",
+        "opposing_ratio": 0.16,
+        "hist_long_trend": "strong_uptrend"
+      },
+      "view_hist": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "stale_tightened": true,
+      "close_date": "2026-09-07",
+      "close_session": "morning",
+      "exit_price": 3311.5,
+      "exit_reason": "time_exit",
+      "pnl": 32.61,
+      "pnl_gross": 52.4,
+      "costs": 19.79,
+      "pnl_pct": 0.5,
+      "won": true,
+      "open_days": 10
     }
   ],
   "daily_snapshots": [
@@ -3041,12 +3158,12 @@
       "daily_pnl": 77.26
     }
   ],
-  "daily_pnl_today": 77.26229000000023,
+  "daily_pnl_today": 32.60959999999963,
   "last_snapshot_date": "2026-09-04",
-  "lifetime_wins": 15,
+  "lifetime_wins": 16,
   "lifetime_losses": 23,
-  "lifetime_pnl": -1808.6,
-  "last_pnl_reset_date": "2026-09-04",
+  "lifetime_pnl": -1775.99,
+  "last_pnl_reset_date": "2026-09-07",
   "max_drawdown_pct": 3.05,
   "current_drawdown_pct": 2.8,
   "portfolio_peak": 101210.28,

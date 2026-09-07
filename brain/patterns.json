@@ -1295,8 +1295,8 @@
         },
         "supertrend_bullish": {
           "wins": 3,
-          "losses": 0,
-          "total": 3
+          "losses": 1,
+          "total": 4
         },
         "stoch_rsi_oversold_reversal": {
           "wins": 1,
@@ -1305,8 +1305,8 @@
         },
         "full_bullish_alignment": {
           "wins": 3,
-          "losses": 0,
-          "total": 3
+          "losses": 1,
+          "total": 4
         },
         "adx_strong_trend_up": {
           "wins": 3,
@@ -1315,8 +1315,8 @@
         },
         "pivot_r1_breakout": {
           "wins": 3,
-          "losses": 0,
-          "total": 3
+          "losses": 1,
+          "total": 4
         },
         "pivot_point_test": {
           "wins": 2,
@@ -1325,8 +1325,8 @@
         },
         "outside_bar": {
           "wins": 2,
-          "losses": 0,
-          "total": 2
+          "losses": 1,
+          "total": 3
         },
         "near_52w_high": {
           "wins": 2,
@@ -1337,27 +1337,37 @@
           "wins": 2,
           "losses": 0,
           "total": 2
+        },
+        "strong_bullish_marubozu": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "adx_ranging_market": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
         }
       },
       "by_session": {
         "morning": {
           "wins": 3,
-          "losses": 0,
-          "total": 3
+          "losses": 1,
+          "total": 4
         }
       },
       "by_mood": {
         "neutral": {
           "wins": 3,
-          "losses": 0,
-          "total": 3
+          "losses": 1,
+          "total": 4
         }
       },
       "by_style": {
         "swing": {
           "wins": 3,
-          "losses": 0,
-          "total": 3
+          "losses": 1,
+          "total": 4
         }
       }
     }
@@ -3221,9 +3231,9 @@
     "attribution": {
       "by_pattern": {
         "supertrend_bullish": {
-          "wins": 0,
+          "wins": 1,
           "losses": 1,
-          "total": 1
+          "total": 2
         },
         "pivot_r2_breakout": {
           "wins": 0,
@@ -3251,9 +3261,9 @@
           "total": 1
         },
         "full_bullish_alignment": {
-          "wins": 0,
+          "wins": 1,
           "losses": 1,
-          "total": 1
+          "total": 2
         },
         "outside_bar": {
           "wins": 0,
@@ -3264,6 +3274,36 @@
           "wins": 0,
           "losses": 1,
           "total": 1
+        },
+        "pivot_s1_bounce": {
+          "wins": 1,
+          "losses": 0,
+          "total": 1
+        },
+        "rsi_bearish_divergence": {
+          "wins": 1,
+          "losses": 0,
+          "total": 1
+        },
+        "adx_strong_trend_up": {
+          "wins": 1,
+          "losses": 0,
+          "total": 1
+        },
+        "momentum_continuation": {
+          "wins": 1,
+          "losses": 0,
+          "total": 1
+        },
+        "pivot_point_test": {
+          "wins": 1,
+          "losses": 0,
+          "total": 1
+        },
+        "stoch_rsi_oversold_reversal": {
+          "wins": 1,
+          "losses": 0,
+          "total": 1
         }
       },
       "by_session": {
@@ -3271,20 +3311,25 @@
           "wins": 0,
           "losses": 1,
           "total": 1
+        },
+        "midday": {
+          "wins": 1,
+          "losses": 0,
+          "total": 1
         }
       },
       "by_mood": {
         "neutral": {
-          "wins": 0,
+          "wins": 1,
           "losses": 1,
-          "total": 1
+          "total": 2
         }
       },
       "by_style": {
         "swing": {
-          "wins": 0,
+          "wins": 1,
           "losses": 1,
-          "total": 1
+          "total": 2
         }
       }
     }

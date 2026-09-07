@@ -32,8 +32,8 @@
         "In a long-term strong downtrend (2yr)",
         "\u2713 Daily setup aligned with the higher-timeframe trend"
       ],
-      "current_price": 405.55,
-      "unrealized_pnl": 109.8,
+      "current_price": 406.95,
+      "unrealized_pnl": 93.0,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -52,7 +52,7 @@
         1,
         1,
         1,
-        1
+        0
       ]
     },
     {
@@ -97,8 +97,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "Near upper Bollinger Band"
       ],
-      "current_price": 175.31,
-      "unrealized_pnl": 73.1,
+      "current_price": 175.5,
+      "unrealized_pnl": 79.56,
       "max_held_days": 10,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -114,7 +114,7 @@
         "hist_long_trend": "strong_uptrend"
       },
       "view_hist": [
-        0,
+        1,
         1,
         1,
         1
@@ -153,8 +153,8 @@
         "Candlestick: three black crows",
         "Broke below Pivot S1 support \u2014 bearish"
       ],
-      "current_price": 1303.2,
-      "unrealized_pnl": 3.9,
+      "current_price": 1302.4,
+      "unrealized_pnl": 1.5,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -172,8 +172,8 @@
       "view_hist": [
         1,
         1,
-        1,
-        0
+        0,
+        1
       ]
     },
     {
@@ -213,8 +213,8 @@
         "Negative news sentiment (-0.16, news 0.6x reliable here)",
         "News sentiment worsening across sessions"
       ],
-      "current_price": 1239.1,
-      "unrealized_pnl": 5.4,
+      "current_price": 1229.1,
+      "unrealized_pnl": -54.6,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -230,6 +230,7 @@
         "hist_long_trend": "strong_uptrend"
       },
       "view_hist": [
+        1,
         1,
         1,
         1
@@ -271,8 +272,8 @@
         "Candlestick: engulfing bearish",
         "Broke below Pivot S1 support \u2014 bearish"
       ],
-      "current_price": 3911.3,
-      "unrealized_pnl": -71.2,
+      "current_price": 3923.8,
+      "unrealized_pnl": -58.7,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -288,6 +289,7 @@
         "hist_long_trend": "strong_uptrend"
       },
       "view_hist": [
+        1,
         1,
         1,
         1
@@ -326,8 +328,8 @@
         "\u2713 Daily setup aligned with the higher-timeframe trend",
         "MACD histogram negative"
       ],
-      "current_price": 3294.0,
-      "unrealized_pnl": -56.0,
+      "current_price": 3295.2,
+      "unrealized_pnl": -53.6,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -343,6 +345,7 @@
         "hist_long_trend": "strong_uptrend"
       },
       "view_hist": [
+        0,
         0,
         0
       ]
@@ -2896,7 +2899,8 @@
       "costs": 19.79,
       "pnl_pct": 0.5,
       "won": true,
-      "open_days": 10
+      "open_days": 10,
+      "forensic_done": true
     },
     {
       "ticker": "PIDILITIND.NS",
@@ -2968,7 +2972,8 @@
       "costs": 14.63,
       "pnl_pct": -2.93,
       "won": false,
-      "open_days": 4
+      "open_days": 4,
+      "forensic_done": true
     }
   ],
   "daily_snapshots": [
@@ -3230,16 +3235,23 @@
       "capital": 71910.27,
       "open_positions": 5,
       "daily_pnl": 77.26
+    },
+    {
+      "date": "2026-09-07",
+      "portfolio_value": 98086.47,
+      "capital": 65254.07,
+      "open_positions": 6,
+      "daily_pnl": -112.1
     }
   ],
   "daily_pnl_today": -112.09828000000007,
-  "last_snapshot_date": "2026-09-04",
+  "last_snapshot_date": "2026-09-07",
   "lifetime_wins": 16,
   "lifetime_losses": 24,
   "lifetime_pnl": -1920.7,
   "last_pnl_reset_date": "2026-09-07",
-  "max_drawdown_pct": 3.05,
-  "current_drawdown_pct": 2.8,
+  "max_drawdown_pct": 3.09,
+  "current_drawdown_pct": 3.09,
   "portfolio_peak": 101210.28,
-  "sessions_since_peak": 34
+  "sessions_since_peak": 35
 }

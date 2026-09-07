@@ -1,6 +1,6 @@
 {
   "date": "2026-09-07",
-  "session": "intraday_close",
+  "session": "preclose",
   "nifty": {
     "symbol": "^NSEI",
     "value": 23897.7,
@@ -60,7 +60,9 @@
   },
   "market_mood": "neutral",
   "trade_allowed": true,
-  "warnings": [],
+  "warnings": [
+    "PCR low (0.56) \u2014 market complacent, caution"
+  ],
   "leading_sectors": [],
   "market_regime": "normal",
   "sector_breadth": 0.0,
@@ -320,13 +322,13 @@
   "flow_tailwind": true,
   "pcr": {
     "date": "2026-09-07",
-    "pcr": 0.844,
-    "reading": "neutral",
-    "total_pe_oi": 2499286,
-    "total_ce_oi": 2960091,
-    "spot": 23897.7,
-    "max_pain": 24000.0,
-    "max_pain_dist_pct": -0.43,
+    "pcr": 0.564,
+    "reading": "complacent_caution",
+    "total_pe_oi": 2293715,
+    "total_ce_oi": 4066959,
+    "spot": 23779.15,
+    "max_pain": 23800.0,
+    "max_pain_dist_pct": -0.09,
     "oi_bias": "call_heavy_resistance",
     "ok": true,
     "error": ""

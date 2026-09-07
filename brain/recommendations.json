@@ -3,10 +3,10 @@
     "ticker": "PIDILITIND.NS",
     "nse_code": "PIDILITIND",
     "company_name": "Pidilite Industries",
-    "date": "2026-09-04",
-    "generated_at": "2026-09-04 10:12 UTC",
+    "date": "2026-09-07",
+    "generated_at": "2026-09-07 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -40,10 +40,10 @@
     "pattern_score": 10,
     "confluence_bonus": 7.5,
     "paper_bonus": 5.0,
-    "success_probability": 0.661,
-    "base_success_prob": 0.747,
-    "profit_probability": 0.337,
-    "composite_score": 62.28,
+    "success_probability": 0.666,
+    "base_success_prob": 0.753,
+    "profit_probability": 0.348,
+    "composite_score": 63.02,
     "focus_rank": 2,
     "rank_delta": 0,
     "intention": "BUY PIDILITIND for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
@@ -66,15 +66,15 @@
     "data_confidence": "Estimated",
     "data_confidence_key": "estimated",
     "data_confidence_note": "Only 3 paper trade(s) \u2014 probability is an indicator-based estimate, not yet proven",
-    "expected_edge_r": 0.337,
+    "expected_edge_r": 0.348,
     "buy_score": 17.24,
     "sell_score": 0.75,
     "reasons": [
       "All EMAs stacked bullish",
       "RSI=38 in healthy buy zone",
-      "Learned bullish pattern: pivot_point_test (rel=100%)",
       "Learned bullish pattern: supertrend_bullish (rel=87%)",
       "Learned bullish pattern: full_bullish_alignment (rel=79%)",
+      "Learned bullish pattern: pivot_point_test (rel=100%)",
       "Candlestick: tweezer bottom",
       "RSI bullish divergence \u2014 price lower but RSI higher",
       "Sector headwind (momentum=-0.46)",
@@ -86,7 +86,6 @@
       "In a long-term strong uptrend (2yr) \u2014 trend on our side",
       "\u2713 Daily setup aligned with the higher-timeframe trend",
       "\u26a0 Sector momentum -0.46 \u2014 buying into a falling sector needs extra conviction",
-      "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
       "Valuation: P/E 62.5x",
       "ROCE: 33.0%",
       "Revenue growing 21.3% YoY",
@@ -108,13 +107,13 @@
       "History backtest: this kind of BUY setup worked 46% of the time over ~1 week on this stock (sample: 52)"
     ],
     "patterns_seen": [
-      "pivot_point_test",
-      "tweezer_bottom",
-      "rsi_bullish_divergence",
       "supertrend_bullish",
-      "hammer",
       "full_bullish_alignment",
+      "rsi_bullish_divergence",
+      "tweezer_bottom",
+      "hammer",
       "pivot_s1_bounce",
+      "pivot_point_test",
       "adx_ranging_market"
     ],
     "reliable_patterns": [
@@ -149,20 +148,17 @@
     "paper_win_rate": 1.0,
     "paper_pnl": 205.17,
     "paper_expectancy": 68.39,
-    "market_mood": "bearish",
-    "market_warning": [
-      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
-      "Nifty choppy intraday \u2014 wait for cleaner setups"
-    ]
+    "market_mood": "neutral",
+    "market_warning": []
   },
   {
     "ticker": "GAIL.NS",
     "nse_code": "GAIL",
     "company_name": "GAIL.NS",
-    "date": "2026-09-04",
-    "generated_at": "2026-09-04 10:12 UTC",
+    "date": "2026-09-07",
+    "generated_at": "2026-09-07 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -238,7 +234,6 @@
       "In a long-term strong uptrend (2yr) \u2014 trend on our side",
       "Clean trender aligned with its long-term uptrend",
       "\u2713 Daily setup aligned with the higher-timeframe trend",
-      "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
       "Valuation: P/E 11.5x",
       "ROCE: 19.2%",
       "Revenue growing 16.7% YoY",
@@ -258,12 +253,12 @@
       "History backtest: this kind of BUY setup worked 46% of the time over ~1 week on this stock (sample: 48)"
     ],
     "patterns_seen": [
-      "ema_golden_cross",
-      "pivot_point_test",
       "macd_bullish_crossover",
       "full_bullish_alignment",
+      "pivot_point_test",
+      "momentum_continuation",
       "adx_ranging_market",
-      "momentum_continuation"
+      "ema_golden_cross"
     ],
     "reliable_patterns": [],
     "nearest_support": 169.43,
@@ -289,20 +284,17 @@
     "paper_win_rate": 0.0,
     "paper_pnl": -102.35,
     "paper_expectancy": -102.35,
-    "market_mood": "bearish",
-    "market_warning": [
-      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
-      "Nifty choppy intraday \u2014 wait for cleaner setups"
-    ]
+    "market_mood": "neutral",
+    "market_warning": []
   },
   {
     "ticker": "GRASIM.NS",
     "nse_code": "GRASIM",
     "company_name": "Grasim Industries Ltd",
-    "date": "2026-09-04",
-    "generated_at": "2026-09-04 10:12 UTC",
+    "date": "2026-09-07",
+    "generated_at": "2026-09-07 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -336,12 +328,12 @@
     "pattern_score": 2.0,
     "confluence_bonus": 7.5,
     "paper_bonus": 0.0,
-    "success_probability": 0.474,
-    "base_success_prob": 0.467,
-    "profit_probability": 0.168,
-    "composite_score": 44.01,
+    "success_probability": 0.482,
+    "base_success_prob": 0.474,
+    "profit_probability": 0.185,
+    "composite_score": 44.91,
     "focus_rank": 14,
-    "rank_delta": 1,
+    "rank_delta": 0,
     "intention": "BUY GRASIM for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
     "confluence_count": 5,
     "confluence_families": [
@@ -352,9 +344,9 @@
       "regime"
     ],
     "backtest_tested": true,
-    "backtest_hit_5d": 0.49,
-    "backtest_hit_10d": 0.469,
-    "backtest_sample": 49,
+    "backtest_hit_5d": 0.5,
+    "backtest_hit_10d": 0.48,
+    "backtest_sample": 50,
     "hist_long_trend": "strong_uptrend",
     "hist_52w_position": 99.2,
     "hist_personality": "mean_reverter",
@@ -362,7 +354,7 @@
     "data_confidence": "Estimated",
     "data_confidence_key": "estimated",
     "data_confidence_note": "Only 1 paper trade(s) \u2014 probability is an indicator-based estimate, not yet proven",
-    "expected_edge_r": 0.168,
+    "expected_edge_r": 0.185,
     "buy_score": 12.61,
     "sell_score": 1,
     "reasons": [
@@ -376,7 +368,6 @@
       "In a long-term strong uptrend (2yr) \u2014 trend on our side",
       "Near 52-week high (99% of range) \u2014 breakout zone",
       "\u2713 Daily setup aligned with the higher-timeframe trend",
-      "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
       "Valuation: P/E 39.7x",
       "ROCE: 10.4%",
       "Revenue growing 21.4% YoY",
@@ -391,13 +382,13 @@
       "Resistance at \u20b93380.50 is natural target",
       "Latest news: 'Grasim Industries FY26 Results: Revenue up 18%, PAT rises 33% to \u20b95,20'",
       "Confluence: 5 independent signal families agree (trend, volume, pattern, news, regime)",
-      "History backtest: this kind of BUY setup worked 49% of the time over ~1 week on this stock (sample: 49)"
+      "History backtest: this kind of BUY setup worked 50% of the time over ~1 week on this stock (sample: 50)"
     ],
     "patterns_seen": [
-      "full_bullish_alignment",
+      "supertrend_bullish",
       "pivot_r2_breakout",
-      "pivot_r1_breakout",
-      "supertrend_bullish"
+      "full_bullish_alignment",
+      "pivot_r1_breakout"
     ],
     "reliable_patterns": [],
     "nearest_support": 3253.35,
@@ -423,20 +414,17 @@
     "paper_win_rate": 0.0,
     "paper_pnl": -242.3,
     "paper_expectancy": -242.3,
-    "market_mood": "bearish",
-    "market_warning": [
-      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
-      "Nifty choppy intraday \u2014 wait for cleaner setups"
-    ]
+    "market_mood": "neutral",
+    "market_warning": []
   },
   {
     "ticker": "HINDALCO.NS",
     "nse_code": "HINDALCO",
     "company_name": "HINDALCO.NS",
-    "date": "2026-09-04",
-    "generated_at": "2026-09-04 10:12 UTC",
+    "date": "2026-09-07",
+    "generated_at": "2026-09-07 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -470,7 +458,7 @@
     "pattern_score": 2.0,
     "confluence_bonus": 7.5,
     "paper_bonus": 0.0,
-    "success_probability": 0.563,
+    "success_probability": 0.56,
     "base_success_prob": 0.549,
     "profit_probability": 0.373,
     "composite_score": 58.06,
@@ -486,9 +474,9 @@
       "fundamentals"
     ],
     "backtest_tested": true,
-    "backtest_hit_5d": 0.596,
-    "backtest_hit_10d": 0.561,
-    "backtest_sample": 57,
+    "backtest_hit_5d": 0.586,
+    "backtest_hit_10d": 0.552,
+    "backtest_sample": 58,
     "hist_long_trend": "strong_uptrend",
     "hist_52w_position": 79.9,
     "hist_personality": "choppy",
@@ -509,7 +497,6 @@
       "Delivery 46% above avg \u2014 institutional buying",
       "In a long-term strong uptrend (2yr) \u2014 trend on our side",
       "\u2713 Daily setup aligned with the higher-timeframe trend",
-      "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
       "Valuation: P/E 13.7x",
       "ROCE: 17.1%",
       "Revenue growing 32.1% YoY",
@@ -524,14 +511,14 @@
       "Resistance at \u20b91046.25 is natural target",
       "Latest news: 'F&O Strategy: Buy Hindalco futures - BusinessLine'",
       "Confluence: 5 independent signal families agree (trend, volume, pattern, news, fundamentals)",
-      "History backtest: this kind of BUY setup worked 60% of the time over ~1 week on this stock (sample: 57)"
+      "History backtest: this kind of BUY setup worked 59% of the time over ~1 week on this stock (sample: 58)"
     ],
     "patterns_seen": [
-      "spinning_top",
-      "low_volume_drift",
-      "rsi_bullish_divergence",
       "supertrend_bullish",
-      "ema_death_cross"
+      "ema_death_cross",
+      "rsi_bullish_divergence",
+      "low_volume_drift",
+      "spinning_top"
     ],
     "reliable_patterns": [],
     "nearest_support": 974.97,
@@ -557,20 +544,17 @@
     "paper_win_rate": 0.0,
     "paper_pnl": -198.91,
     "paper_expectancy": -198.91,
-    "market_mood": "bearish",
-    "market_warning": [
-      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
-      "Nifty choppy intraday \u2014 wait for cleaner setups"
-    ]
+    "market_mood": "neutral",
+    "market_warning": []
   },
   {
     "ticker": "JSWSTEEL.NS",
     "nse_code": "JSWSTEEL",
     "company_name": "JSW Steel Ltd",
-    "date": "2026-09-04",
-    "generated_at": "2026-09-04 10:12 UTC",
+    "date": "2026-09-07",
+    "generated_at": "2026-09-07 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -604,10 +588,10 @@
     "pattern_score": 7.5,
     "confluence_bonus": 5.0,
     "paper_bonus": 5.0,
-    "success_probability": 0.605,
-    "base_success_prob": 0.615,
-    "profit_probability": 0.103,
-    "composite_score": 49.45,
+    "success_probability": 0.606,
+    "base_success_prob": 0.621,
+    "profit_probability": 0.114,
+    "composite_score": 50.2,
     "focus_rank": 7,
     "rank_delta": 0,
     "intention": "BUY JSWSTEEL for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
@@ -619,9 +603,9 @@
       "regime"
     ],
     "backtest_tested": true,
-    "backtest_hit_5d": 0.581,
-    "backtest_hit_10d": 0.613,
-    "backtest_sample": 62,
+    "backtest_hit_5d": 0.571,
+    "backtest_hit_10d": 0.603,
+    "backtest_sample": 63,
     "hist_long_trend": "strong_uptrend",
     "hist_52w_position": 92.5,
     "hist_personality": "mean_reverter",
@@ -629,7 +613,7 @@
     "data_confidence": "Estimated",
     "data_confidence_key": "estimated",
     "data_confidence_note": "Only 3 paper trade(s) \u2014 probability is an indicator-based estimate, not yet proven",
-    "expected_edge_r": 0.103,
+    "expected_edge_r": 0.114,
     "buy_score": 11.55,
     "sell_score": 1,
     "reasons": [
@@ -643,7 +627,6 @@
       "In a long-term strong uptrend (2yr) \u2014 trend on our side",
       "Near 52-week high (92% of range) \u2014 breakout zone",
       "\u2713 Daily setup aligned with the higher-timeframe trend",
-      "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
       "Valuation: P/E 13.1x",
       "ROCE: 14.5%",
       "Revenue growing 9.8% YoY",
@@ -657,15 +640,15 @@
       "Resistance at \u20b91400.00 is natural target",
       "Paper trade validation: 3 trades, 67% win rate, \u20b9-72/trade expectancy",
       "Confluence: 4 independent signal families agree (trend, volume, pattern, regime)",
-      "History backtest: this kind of BUY setup worked 58% of the time over ~1 week on this stock (sample: 62)"
+      "History backtest: this kind of BUY setup worked 57% of the time over ~1 week on this stock (sample: 63)"
     ],
     "patterns_seen": [
-      "adx_strong_trend_up",
-      "near_52w_high",
-      "spinning_top",
       "supertrend_bullish",
+      "adx_strong_trend_up",
       "full_bullish_alignment",
-      "outside_bar"
+      "outside_bar",
+      "near_52w_high",
+      "spinning_top"
     ],
     "reliable_patterns": [
       "full_bullish_alignment",
@@ -695,20 +678,17 @@
     "paper_win_rate": 0.667,
     "paper_pnl": -215.26,
     "paper_expectancy": -71.75,
-    "market_mood": "bearish",
-    "market_warning": [
-      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
-      "Nifty choppy intraday \u2014 wait for cleaner setups"
-    ]
+    "market_mood": "neutral",
+    "market_warning": []
   },
   {
     "ticker": "HOMEFIRST.NS",
     "nse_code": "HOMEFIRST",
     "company_name": "HOMEFIRST.NS",
-    "date": "2026-09-04",
-    "generated_at": "2026-09-04 10:12 UTC",
+    "date": "2026-09-07",
+    "generated_at": "2026-09-07 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -784,7 +764,6 @@
       "Volatility compressed vs its norm \u2014 primed for an expansion move",
       "\u2713 Daily setup aligned with the higher-timeframe trend",
       "\u26a0 Sector momentum -0.41 \u2014 buying into a falling sector needs extra conviction",
-      "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
       "Valuation: P/E 21.9x",
       "ROCE: 5.0%",
       "Revenue growing 29.7% YoY",
@@ -803,12 +782,12 @@
       "History backtest: this kind of BUY setup worked 48% of the time over ~1 week on this stock (sample: 48)"
     ],
     "patterns_seen": [
-      "ema_golden_cross",
-      "three_white_soldiers",
-      "spinning_top",
       "supertrend_bullish",
       "full_bullish_alignment",
-      "adx_ranging_market"
+      "three_white_soldiers",
+      "spinning_top",
+      "adx_ranging_market",
+      "ema_golden_cross"
     ],
     "reliable_patterns": [
       "pivot_point_test",
@@ -839,10 +818,7 @@
     "paper_win_rate": 0.667,
     "paper_pnl": -309.82,
     "paper_expectancy": -103.27,
-    "market_mood": "bearish",
-    "market_warning": [
-      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
-      "Nifty choppy intraday \u2014 wait for cleaner setups"
-    ]
+    "market_mood": "neutral",
+    "market_warning": []
   }
 ]

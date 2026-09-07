@@ -1,138 +1,132 @@
 {
-  "date": "2026-09-04",
-  "session": "preclose",
+  "date": "2026-09-07",
+  "session": "preopen",
   "nifty": {
     "symbol": "^NSEI",
-    "value": 23873.45,
-    "day_change_pct": -0.17,
-    "trend_5d": "down",
+    "value": 23897.7,
+    "day_change_pct": 0.1,
+    "trend_5d": "sideways",
     "trend_20d": "down",
-    "ath_pct_60d": -3.64
+    "ath_pct_60d": -3.54
   },
   "vix": {
-    "value": 11.34,
+    "value": 10.68,
     "level": "normal",
-    "percentile_30d": 33.0,
-    "avg_30d": 11.69
+    "percentile_30d": 3.0,
+    "avg_30d": 11.58
   },
   "bank_nifty": {
     "symbol": "^NSEBANK",
-    "value": 57380.6,
-    "day_change_pct": 0.36,
-    "trend_5d": "sideways",
+    "value": 57369.65,
+    "day_change_pct": -0.02,
+    "trend_5d": "down",
     "trend_20d": "sideways",
-    "ath_pct_60d": -2.08,
+    "ath_pct_60d": -2.09,
     "diverging": false
   },
   "sectors": {
     "IT": {
       "symbol": "ITBEES.NS",
-      "value": 34.39,
-      "day_change_pct": -1.15,
-      "trend_5d": "up",
-      "trend_20d": "sideways",
-      "ath_pct_60d": -7.0
+      "value": 34.09,
+      "day_change_pct": -0.58,
+      "trend_5d": "sideways",
+      "trend_20d": "down",
+      "ath_pct_60d": -7.82
     },
     "Pharma": {
       "symbol": "PHARMABEES.NS",
-      "value": 27.37,
-      "day_change_pct": -0.69,
+      "value": 27.32,
+      "day_change_pct": -0.18,
       "trend_5d": "down",
       "trend_20d": "sideways",
-      "ath_pct_60d": -3.49
+      "ath_pct_60d": -3.67
     },
     "Bank": {
       "symbol": "BANKBEES.NS",
-      "value": 592.76,
-      "day_change_pct": -0.17,
+      "value": 596.2,
+      "day_change_pct": 0.03,
       "trend_5d": "sideways",
-      "trend_20d": "down",
-      "ath_pct_60d": -2.5
+      "trend_20d": "sideways",
+      "ath_pct_60d": -1.94
     },
     "Infra": {
       "symbol": "INFRABEES.NS",
-      "value": 954.28,
-      "day_change_pct": 0.08,
+      "value": 956.45,
+      "day_change_pct": 0.23,
       "trend_5d": "sideways",
       "trend_20d": "unknown",
-      "ath_pct_60d": -2.31
+      "ath_pct_60d": -2.09
     }
   },
-  "market_mood": "bearish",
+  "market_mood": "neutral",
   "trade_allowed": true,
-  "warnings": [
-    "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
-    "Nifty choppy intraday \u2014 wait for cleaner setups"
-  ],
-  "leading_sectors": [
-    "IT"
-  ],
+  "warnings": [],
+  "leading_sectors": [],
   "market_regime": "normal",
-  "sector_breadth": 0.25,
+  "sector_breadth": 0.0,
   "lagging_sectors": [
     "Pharma"
   ],
-  "intraday_regime": "choppy",
   "macro": {
-    "date": "2026-09-04",
-    "session": "midday",
-    "generated_at": "2026-09-04T06:15:41.412804",
-    "global_score": 0.312,
-    "india_score": 1.0,
-    "overall_score": 0.622,
-    "mood": "risk_on",
+    "date": "2026-09-07",
+    "session": "preopen",
+    "generated_at": "2026-09-07T03:05:37.465970",
+    "global_score": 0.26,
+    "india_score": 0.0,
+    "overall_score": 0.143,
+    "mood": "neutral",
     "drivers": [
-      "Snowflake has a secret weapon that\u2019s powering its stock toward a huge gain",
       "\u2018I currently give him $1,000 a month\u2019: My grandson has severe mental illness. How do I protect him after I\u2019m gone?",
-      "Adobe just announced its next CEO. Here\u2019s why its stock is dropping.",
-      "Lululemon bets on \u2018away from body\u2019 pants as customers sour on form-fitting leggings",
-      "\u2018Please don\u2019t let this happen to you\u2019: My best friend died without a will \u2014 her neglectful family gets everything",
-      "Tesla investors await updates on Cybercab robotaxi touted as the \u2018future of transport\u2019",
+      "\u2018It\u2019s not fair\u2019: My twin brother and I were left houses by our parents. Can I make him pay his share for taxes and upkeep?",
       "My wife and I are in our 70s. Should we move to California and take on a bigger mortgage to be near our kids?",
-      "Goldfish crackers are getting a makeover as new health trends reshape the snack aisle"
+      "\u2018Poverty doesn\u2019t have to be my reality\u2019: I thought I\u2019d have to rely on Social Security. Then I taught myself how to invest.",
+      "Why does almost nobody want to befriend older people like me \u2014 except scammers?",
+      "\u2018I\u2019m leaving money on the table\u2019: I\u2019m 64 and my husband is 70. Should I take spousal benefits or wait for my own?",
+      "Is the U.S. losing its safe-haven status? Why global central banks are pulling gold out of New York.",
+      "We\u2019re in our 60s. We earn $345,000 and have $1 million in 403(b)s. Is it too late for Roth conversions?"
     ],
     "global_cues": {
       "dow": {
-        "last": 53686.11,
-        "chg_pct": 1.18
+        "last": 53414.25,
+        "chg_pct": -0.51
       },
       "nasdaq": {
-        "last": 26584.06,
-        "chg_pct": 1.4
+        "last": 26506.99,
+        "chg_pct": -0.29
       },
       "sp500": {
-        "last": 7747.71,
-        "chg_pct": 1.06
+        "last": 7718.6,
+        "chg_pct": -0.38
       },
       "nikkei": {
-        "last": 65063.87,
-        "chg_pct": 1.32
+        "last": 66460.11,
+        "chg_pct": 2.21
       },
       "crude": {
-        "last": 91.3,
-        "chg_pct": 0.32
+        "last": 91.48,
+        "chg_pct": 0.0
       },
       "usdinr": {
-        "last": 94.48,
-        "chg_pct": -0.01
+        "last": 94.47,
+        "chg_pct": -0.02
       },
       "gold": {
-        "last": 4491.7,
-        "chg_pct": 2.87
+        "last": 4476.6,
+        "chg_pct": 1.06
       }
     },
-    "summary": "Overall macro mood is risk-on (+0.62). US Dow +1.2% overnight. Crude +0.3%. USD/INR -0.0%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
+    "summary": "Overall macro mood is neutral (+0.14). US Dow -0.5% overnight. Crude +0.0%. USD/INR -0.0%. Notable: US Fed rate hike / hawkish; Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
+      "Hawkish Fed pressures Nifty via FII outflows and stronger USD.",
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
       "Trade-war headlines spook global markets; IT & export names react most."
     ],
     "playbook_bias": "risk_off",
     "article_count": 60
   },
-  "macro_tailwind": true,
   "macro_risk_factor": 1.0,
   "fii_dii": {
-    "date": "2026-09-04",
+    "date": "2026-09-07",
     "fii_net_cr": -3111.94,
     "dii_net_cr": 8930.12,
     "combined_net_cr": 5818.18,
@@ -140,12 +134,6 @@
     "ok": true,
     "error": "",
     "history": [
-      {
-        "date": "2026-07-28",
-        "fii": -1688.23,
-        "dii": 2329.14,
-        "combined": 640.91
-      },
       {
         "date": "2026-07-29",
         "fii": 2981.87,
@@ -319,12 +307,18 @@
         "fii": -3111.94,
         "dii": 8930.12,
         "combined": 5818.18
+      },
+      {
+        "date": "2026-09-07",
+        "fii": -3111.94,
+        "dii": 8930.12,
+        "combined": 5818.18
       }
     ]
   },
   "flow_tailwind": true,
   "pcr": {
-    "date": "2026-09-04",
+    "date": "2026-09-07",
     "pcr": 0.844,
     "reading": "neutral",
     "total_pe_oi": 2499286,

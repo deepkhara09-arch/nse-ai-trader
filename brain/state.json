@@ -1,13 +1,13 @@
 {
   "phase": "paper_trading",
   "day": 55,
-  "session": "morning",
+  "session": "preopen",
   "start_date": "2026-06-22",
   "phase_start_date": "2026-07-15",
   "last_run_date": "2026-09-04",
   "last_counted_date": "2026-09-04",
   "cohort_last_tick_date": "2026-09-04",
-  "last_updated": "2026-09-04T10:12:32.502004",
+  "last_updated": "2026-09-07T03:05:38.823275",
   "focus_stocks": [
     "SBIN.NS",
     "PIDILITIND.NS",
@@ -68,7 +68,6 @@
     "expectancy": -47.59
   },
   "brain_notes": [
-    "[2026-07-08] Pre-open macro: neutral (-0.05)",
     "[2026-07-08] Cohort batch #4 complete \u2014 30 candidates ready",
     "[2026-07-09] Pre-open macro: neutral (+0.06)",
     "[2026-07-09] Cohort batch #5 complete \u2014 30 candidates ready",
@@ -167,7 +166,8 @@
     "[2026-09-03] Pre-open macro: risk_on (+0.64)",
     "[2026-09-03] Focus refresh \u2014 promoted: ['UNIONBANK', 'BHEL'] | demoted: ['LT', 'ASIANPAINT']",
     "[2026-09-04] Pre-open macro: neutral (+0.16)",
-    "[2026-09-04] Cohort batch #34 complete \u2014 30 candidates ready"
+    "[2026-09-04] Cohort batch #34 complete \u2014 30 candidates ready",
+    "[2026-09-07] Pre-open macro: neutral (+0.14)"
   ],
   "alert_sent": false,
   "schema_version": 11,
@@ -397,11 +397,6 @@
     "scored_date": "2026-09-04"
   },
   "sessions_done": {
-    "preopen": "2026-09-04",
-    "morning": "2026-09-04",
-    "midday": "2026-09-04",
-    "afternoon": "2026-09-04",
-    "intraday_close": "2026-09-04",
-    "preclose": "2026-09-04"
+    "preopen": "2026-09-07"
   }
 }

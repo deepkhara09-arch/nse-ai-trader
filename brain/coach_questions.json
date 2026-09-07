@@ -1,102 +1,102 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of strong_bearish_marubozu, rsi_bullish_divergence, low_volume_drift mean for a swing trade on SIEMENS? Current RSI=53, MACD hist=-14.8888, Vol=0.4x average. Signal is BUY.",
-    "context": {
-      "ticker": "SIEMENS.NS",
-      "signal": "BUY",
-      "patterns": "strong_bearish_marubozu, rsi_bullish_divergence, low_volume_drift",
-      "rsi": 52.9
-    },
-    "queued_at": "2026-09-07T07:45:57.431786"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_down, shooting_star, stoch_rsi_overbought_reversal mean for a swing trade on VBL? Current RSI=37, MACD hist=-0.6868, Vol=0.7x average. Signal is SELL.",
-    "context": {
-      "ticker": "VBL.NS",
-      "signal": "SELL",
-      "patterns": "adx_strong_trend_down, shooting_star, stoch_rsi_overbought_reversal",
-      "rsi": 36.9
-    },
-    "queued_at": "2026-09-07T07:45:57.439950"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of pivot_point_test, full_bearish_alignment, supertrend_bullish mean for a swing trade on ADANIPORTS? Current RSI=52, MACD hist=+5.7301, Vol=0.5x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of pivot_s1_breakdown, stoch_rsi_overbought_reversal, full_bearish_alignment mean for a swing trade on ADANIPORTS? Current RSI=52, MACD hist=+5.7301, Vol=0.5x average. Signal is SELL.",
     "context": {
       "ticker": "ADANIPORTS.NS",
-      "signal": "BUY",
-      "patterns": "pivot_point_test, full_bearish_alignment, supertrend_bullish",
+      "signal": "SELL",
+      "patterns": "pivot_s1_breakdown, stoch_rsi_overbought_reversal, full_bearish_alignment",
       "rsi": 52.3
     },
-    "queued_at": "2026-09-07T07:45:57.441200"
+    "queued_at": "2026-09-07T09:34:43.615459"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_down, shooting_star, stoch_rsi_overbought_reversal mean for a swing trade on VBL? Current RSI=37, MACD hist=-0.6868, Vol=0.7x average. Signal is SELL.",
+    "question": "In Indian NSE markets, what does the combination of pivot_s1_breakdown, stoch_rsi_overbought_reversal, shooting_star mean for a swing trade on VBL? Current RSI=37, MACD hist=-0.6868, Vol=0.7x average. Signal is SELL.",
     "context": {
       "ticker": "VBL.NS",
       "signal": "SELL",
-      "patterns": "adx_strong_trend_down, shooting_star, stoch_rsi_overbought_reversal",
+      "patterns": "pivot_s1_breakdown, stoch_rsi_overbought_reversal, shooting_star",
       "rsi": 36.9
     },
-    "queued_at": "2026-09-07T07:45:57.443475"
+    "queued_at": "2026-09-07T09:34:43.618986"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of bb_midline_support, three_white_soldiers, momentum_continuation mean for a swing trade on GAIL? Current RSI=53, MACD hist=+0.0110, Vol=0.5x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of momentum_continuation, bb_midline_support, three_white_soldiers mean for a swing trade on GAIL? Current RSI=53, MACD hist=+0.0110, Vol=0.5x average. Signal is BUY.",
     "context": {
       "ticker": "GAIL.NS",
       "signal": "BUY",
-      "patterns": "bb_midline_support, three_white_soldiers, momentum_continuation",
+      "patterns": "momentum_continuation, bb_midline_support, three_white_soldiers",
       "rsi": 53.5
     },
-    "queued_at": "2026-09-07T07:45:57.444212"
+    "queued_at": "2026-09-07T09:34:43.620157"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of strong_bearish_marubozu, rsi_bullish_divergence, low_volume_drift mean for a swing trade on SIEMENS? Current RSI=53, MACD hist=-14.8888, Vol=0.4x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_up, stoch_rsi_overbought_reversal mean for a swing trade on JSWSTEEL? Current RSI=64, MACD hist=-0.7995, Vol=0.7x average. Signal is BUY.",
+    "context": {
+      "ticker": "JSWSTEEL.NS",
+      "signal": "BUY",
+      "patterns": "adx_strong_trend_up, stoch_rsi_overbought_reversal",
+      "rsi": 63.5
+    },
+    "queued_at": "2026-09-07T09:34:43.621325"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of engulfing_bearish, strong_bearish_marubozu, low_volume_drift mean for a swing trade on SIEMENS? Current RSI=53, MACD hist=-14.8888, Vol=0.4x average. Signal is BUY.",
     "context": {
       "ticker": "SIEMENS.NS",
       "signal": "BUY",
-      "patterns": "strong_bearish_marubozu, rsi_bullish_divergence, low_volume_drift",
+      "patterns": "engulfing_bearish, strong_bearish_marubozu, low_volume_drift",
       "rsi": 52.9
     },
-    "queued_at": "2026-09-07T07:45:57.445943"
+    "queued_at": "2026-09-07T09:34:43.623299"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of bb_midline_support, three_white_soldiers, momentum_continuation mean for a swing trade on GAIL? Current RSI=53, MACD hist=+0.0110, Vol=0.5x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of momentum_continuation, bb_midline_support, three_white_soldiers mean for a swing trade on GAIL? Current RSI=53, MACD hist=+0.0110, Vol=0.5x average. Signal is BUY.",
     "context": {
       "ticker": "GAIL.NS",
       "signal": "BUY",
-      "patterns": "bb_midline_support, three_white_soldiers, momentum_continuation",
+      "patterns": "momentum_continuation, bb_midline_support, three_white_soldiers",
       "rsi": 53.5
     },
-    "queued_at": "2026-09-07T07:45:57.532392"
+    "queued_at": "2026-09-07T09:34:43.736457"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of strong_bearish_marubozu, rsi_bullish_divergence, low_volume_drift mean for a swing trade on SIEMENS? Current RSI=53, MACD hist=-14.8888, Vol=0.4x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of engulfing_bearish, strong_bearish_marubozu, low_volume_drift mean for a swing trade on SIEMENS? Current RSI=53, MACD hist=-14.8888, Vol=0.4x average. Signal is BUY.",
     "context": {
       "ticker": "SIEMENS.NS",
       "signal": "BUY",
-      "patterns": "strong_bearish_marubozu, rsi_bullish_divergence, low_volume_drift",
+      "patterns": "engulfing_bearish, strong_bearish_marubozu, low_volume_drift",
       "rsi": 52.9
     },
-    "queued_at": "2026-09-07T07:45:57.535113"
+    "queued_at": "2026-09-07T09:34:43.740462"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_down, shooting_star, stoch_rsi_overbought_reversal mean for a swing trade on VBL? Current RSI=37, MACD hist=-0.6868, Vol=0.7x average. Signal is SELL.",
+    "question": "In Indian NSE markets, what does the combination of pivot_s1_breakdown, stoch_rsi_overbought_reversal, shooting_star mean for a swing trade on VBL? Current RSI=37, MACD hist=-0.6868, Vol=0.7x average. Signal is SELL.",
     "context": {
       "ticker": "VBL.NS",
       "signal": "SELL",
-      "patterns": "adx_strong_trend_down, shooting_star, stoch_rsi_overbought_reversal",
+      "patterns": "pivot_s1_breakdown, stoch_rsi_overbought_reversal, shooting_star",
       "rsi": 36.9
     },
-    "queued_at": "2026-09-07T07:45:57.539935"
+    "queued_at": "2026-09-07T09:34:43.748150"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of pivot_point_test, full_bearish_alignment, supertrend_bullish mean for a swing trade on ADANIPORTS? Current RSI=52, MACD hist=+5.7301, Vol=0.5x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_up, stoch_rsi_overbought_reversal mean for a swing trade on JSWSTEEL? Current RSI=64, MACD hist=-0.7995, Vol=0.7x average. Signal is BUY.",
+    "context": {
+      "ticker": "JSWSTEEL.NS",
+      "signal": "BUY",
+      "patterns": "adx_strong_trend_up, stoch_rsi_overbought_reversal",
+      "rsi": 63.5
+    },
+    "queued_at": "2026-09-07T09:34:43.749337"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of pivot_s1_breakdown, stoch_rsi_overbought_reversal, full_bearish_alignment mean for a swing trade on ADANIPORTS? Current RSI=52, MACD hist=+5.7301, Vol=0.5x average. Signal is SELL.",
     "context": {
       "ticker": "ADANIPORTS.NS",
-      "signal": "BUY",
-      "patterns": "pivot_point_test, full_bearish_alignment, supertrend_bullish",
+      "signal": "SELL",
+      "patterns": "pivot_s1_breakdown, stoch_rsi_overbought_reversal, full_bearish_alignment",
       "rsi": 52.3
     },
-    "queued_at": "2026-09-07T07:45:57.541188"
+    "queued_at": "2026-09-07T09:34:43.750489"
   }
 ]

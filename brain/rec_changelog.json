@@ -1,15 +1,5 @@
 [
   {
-    "type": "new",
-    "ticker": "MARICO.NS",
-    "nse_code": "MARICO",
-    "signal": "BUY",
-    "date": "2026-07-09",
-    "ts": "2026-07-09T07:07:20.681807",
-    "detail": "New BUY recommendation \u2014 confidence 69/100",
-    "confidence": 69.2
-  },
-  {
     "type": "updated",
     "ticker": "NESTLEIND.NS",
     "nse_code": "NESTLEIND",
@@ -5998,5 +5988,15 @@
     "ts": "2026-09-08T04:05:42.548431",
     "detail": "Confidence \u25bc7 (79 \u2192 72) | Target 1 moved \u20b9184.74 \u2192 \u20b9183.63",
     "confidence": 71.8
+  },
+  {
+    "type": "updated",
+    "ticker": "COALINDIA.NS",
+    "nse_code": "COALINDIA",
+    "signal": "BUY",
+    "date": "2026-09-08",
+    "ts": "2026-09-08T06:16:00.754332",
+    "detail": "Rank \u25bc1 (#11 \u2192 #12) | Stop loss moved \u20b9411.48 \u2192 \u20b9404.18",
+    "confidence": 67.0
   }
 ]

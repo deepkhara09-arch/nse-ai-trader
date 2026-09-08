@@ -62,14 +62,13 @@
   "trade_allowed": true,
   "warnings": [
     "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
-    "Nifty choppy intraday \u2014 wait for cleaner setups",
     "PCR low (0.56) \u2014 market complacent, caution"
   ],
   "leading_sectors": [],
   "market_regime": "normal",
   "sector_breadth": 0.0,
   "lagging_sectors": [],
-  "intraday_regime": "choppy",
+  "intraday_regime": "mixed",
   "macro": {
     "date": "2026-09-08",
     "session": "midday",

@@ -1,13 +1,13 @@
 {
   "phase": "paper_trading",
   "day": 56,
-  "session": "morning",
+  "session": "preopen",
   "start_date": "2026-06-22",
   "phase_start_date": "2026-07-15",
   "last_run_date": "2026-09-07",
   "last_counted_date": "2026-09-07",
   "cohort_last_tick_date": "2026-09-07",
-  "last_updated": "2026-09-07T10:12:03.608419",
+  "last_updated": "2026-09-08T03:05:39.711442",
   "focus_stocks": [
     "PIDILITIND.NS",
     "GAIL.NS",
@@ -68,7 +68,6 @@
     "expectancy": -48.02
   },
   "brain_notes": [
-    "[2026-07-09] Cohort batch #5 complete \u2014 30 candidates ready",
     "[2026-07-10] Pre-open macro: neutral (-0.07)",
     "[2026-07-10] Cohort batch #6 complete \u2014 30 candidates ready",
     "[2026-07-13] Pre-open macro: neutral (+0.10)",
@@ -167,7 +166,8 @@
     "[2026-09-04] Cohort batch #34 complete \u2014 30 candidates ready",
     "[2026-09-07] Pre-open macro: neutral (+0.14)",
     "[2026-09-07] Focus refresh \u2014 promoted: ['POWERGRID'] | demoted: ['SBIN']",
-    "[2026-09-07] Cohort batch #35 complete \u2014 30 candidates ready"
+    "[2026-09-07] Cohort batch #35 complete \u2014 30 candidates ready",
+    "[2026-09-08] Pre-open macro: risk_on (+0.45)"
   ],
   "alert_sent": false,
   "schema_version": 11,
@@ -397,11 +397,6 @@
     "scored_date": "2026-09-07"
   },
   "sessions_done": {
-    "preopen": "2026-09-07",
-    "morning": "2026-09-07",
-    "midday": "2026-09-07",
-    "afternoon": "2026-09-07",
-    "intraday_close": "2026-09-07",
-    "preclose": "2026-09-07"
+    "preopen": "2026-09-08"
   }
 }

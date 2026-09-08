@@ -3,10 +3,10 @@
     "ticker": "GAIL.NS",
     "nse_code": "GAIL",
     "company_name": "GAIL.NS",
-    "date": "2026-09-07",
-    "generated_at": "2026-09-07 10:12 UTC",
+    "date": "2026-09-08",
+    "generated_at": "2026-09-08 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -40,10 +40,10 @@
     "pattern_score": 1.0,
     "confluence_bonus": 10,
     "paper_bonus": 0.0,
-    "success_probability": 0.581,
-    "base_success_prob": 0.634,
-    "profit_probability": 0.585,
-    "composite_score": 69.37,
+    "success_probability": 0.575,
+    "base_success_prob": 0.629,
+    "profit_probability": 0.573,
+    "composite_score": 68.73,
     "focus_rank": 1,
     "rank_delta": 0,
     "intention": "BUY GAIL for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
@@ -57,9 +57,9 @@
       "fundamentals"
     ],
     "backtest_tested": true,
-    "backtest_hit_5d": 0.458,
-    "backtest_hit_10d": 0.396,
-    "backtest_sample": 48,
+    "backtest_hit_5d": 0.449,
+    "backtest_hit_10d": 0.408,
+    "backtest_sample": 49,
     "hist_long_trend": "strong_uptrend",
     "hist_52w_position": 43.4,
     "hist_personality": "trender",
@@ -67,7 +67,7 @@
     "data_confidence": "Estimated",
     "data_confidence_key": "estimated",
     "data_confidence_note": "Only 1 paper trade(s) \u2014 probability is an indicator-based estimate, not yet proven",
-    "expected_edge_r": 0.585,
+    "expected_edge_r": 0.573,
     "buy_score": 9.84,
     "sell_score": 0.0,
     "reasons": [
@@ -83,6 +83,7 @@
       "In a long-term strong uptrend (2yr) \u2014 trend on our side",
       "Clean trender aligned with its long-term uptrend",
       "\u2713 Daily setup aligned with the higher-timeframe trend",
+      "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
       "Valuation: P/E 11.5x",
       "ROCE: 19.2%",
       "Revenue growing 16.7% YoY",
@@ -99,15 +100,15 @@
       "Resistance at \u20b9180.00 is natural target",
       "Latest news: 'GAIL Share Price - Upstox'",
       "Confluence: 6 independent signal families agree (trend, momentum, volume, pattern, news, fundamentals)",
-      "History backtest: this kind of BUY setup worked 46% of the time over ~1 week on this stock (sample: 48)"
+      "History backtest: this kind of BUY setup worked 45% of the time over ~1 week on this stock (sample: 49)"
     ],
     "patterns_seen": [
       "three_white_soldiers",
-      "bb_midline_support",
-      "supertrend_bullish",
       "adx_ranging_market",
       "momentum_continuation",
-      "full_bullish_alignment"
+      "full_bullish_alignment",
+      "supertrend_bullish",
+      "bb_midline_support"
     ],
     "reliable_patterns": [],
     "nearest_support": 171.96,
@@ -133,8 +134,9 @@
     "paper_win_rate": 0.0,
     "paper_pnl": -102.35,
     "paper_expectancy": -102.35,
-    "market_mood": "neutral",
+    "market_mood": "bearish",
     "market_warning": [
+      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
       "PCR low (0.56) \u2014 market complacent, caution"
     ]
   },
@@ -142,10 +144,10 @@
     "ticker": "SIEMENS.NS",
     "nse_code": "SIEMENS",
     "company_name": "SIEMENS.NS",
-    "date": "2026-09-07",
-    "generated_at": "2026-09-07 10:12 UTC",
+    "date": "2026-09-08",
+    "generated_at": "2026-09-08 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -179,12 +181,12 @@
     "pattern_score": 4.5,
     "confluence_bonus": 5.0,
     "paper_bonus": 5.0,
-    "success_probability": 0.6,
-    "base_success_prob": 0.589,
-    "profit_probability": 0.091,
-    "composite_score": 51.12,
+    "success_probability": 0.597,
+    "base_success_prob": 0.584,
+    "profit_probability": 0.082,
+    "composite_score": 50.53,
     "focus_rank": 8,
-    "rank_delta": -1,
+    "rank_delta": 0,
     "intention": "BUY SIEMENS for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
     "confluence_count": 4,
     "confluence_families": [
@@ -204,7 +206,7 @@
     "data_confidence": "Estimated",
     "data_confidence_key": "estimated",
     "data_confidence_note": "Only 3 paper trade(s) \u2014 probability is an indicator-based estimate, not yet proven",
-    "expected_edge_r": 0.091,
+    "expected_edge_r": 0.082,
     "buy_score": 11.33,
     "sell_score": 5.0,
     "reasons": [
@@ -218,6 +220,7 @@
       "In a long-term strong uptrend (2yr) \u2014 trend on our side",
       "Clean trender aligned with its long-term uptrend",
       "\u2713 Daily setup aligned with the higher-timeframe trend",
+      "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
       "Valuation: P/E 83.6x",
       "ROCE: 9.2%",
       "Revenue growing 14.8% YoY",
@@ -238,13 +241,13 @@
       "History backtest: this kind of BUY setup worked 63% of the time over ~1 week on this stock (sample: 51)"
     ],
     "patterns_seen": [
-      "pivot_s1_breakdown",
-      "engulfing_bearish",
+      "rsi_bullish_divergence",
       "adx_strong_trend_up",
       "low_volume_drift",
       "strong_bearish_marubozu",
-      "full_bullish_alignment",
-      "rsi_bullish_divergence"
+      "pivot_s1_breakdown",
+      "engulfing_bearish",
+      "full_bullish_alignment"
     ],
     "reliable_patterns": [
       "full_bullish_alignment"
@@ -272,8 +275,9 @@
     "paper_win_rate": 0.667,
     "paper_pnl": 224.55,
     "paper_expectancy": 74.85,
-    "market_mood": "neutral",
+    "market_mood": "bearish",
     "market_warning": [
+      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
       "PCR low (0.56) \u2014 market complacent, caution"
     ]
   },
@@ -281,10 +285,10 @@
     "ticker": "JSWSTEEL.NS",
     "nse_code": "JSWSTEEL",
     "company_name": "JSW Steel Ltd",
-    "date": "2026-09-07",
-    "generated_at": "2026-09-07 10:12 UTC",
+    "date": "2026-09-08",
+    "generated_at": "2026-09-08 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -318,12 +322,12 @@
     "pattern_score": 7.5,
     "confluence_bonus": 7.5,
     "paper_bonus": 5.0,
-    "success_probability": 0.586,
-    "base_success_prob": 0.593,
-    "profit_probability": 0.063,
-    "composite_score": 46.36,
-    "focus_rank": 13,
-    "rank_delta": -1,
+    "success_probability": 0.579,
+    "base_success_prob": 0.587,
+    "profit_probability": 0.053,
+    "composite_score": 45.63,
+    "focus_rank": 12,
+    "rank_delta": 0,
     "intention": "BUY JSWSTEEL for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
     "confluence_count": 5,
     "confluence_families": [
@@ -334,9 +338,9 @@
       "regime"
     ],
     "backtest_tested": true,
-    "backtest_hit_5d": 0.571,
-    "backtest_hit_10d": 0.603,
-    "backtest_sample": 63,
+    "backtest_hit_5d": 0.562,
+    "backtest_hit_10d": 0.594,
+    "backtest_sample": 64,
     "hist_long_trend": "strong_uptrend",
     "hist_52w_position": 97.8,
     "hist_personality": "mean_reverter",
@@ -344,7 +348,7 @@
     "data_confidence": "Estimated",
     "data_confidence_key": "estimated",
     "data_confidence_note": "Only 3 paper trade(s) \u2014 probability is an indicator-based estimate, not yet proven",
-    "expected_edge_r": 0.063,
+    "expected_edge_r": 0.053,
     "buy_score": 8.52,
     "sell_score": 2.5,
     "reasons": [
@@ -357,6 +361,7 @@
       "In a long-term strong uptrend (2yr) \u2014 trend on our side",
       "Near 52-week high (98% of range) \u2014 breakout zone",
       "\u2713 Daily setup aligned with the higher-timeframe trend",
+      "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
       "Valuation: P/E 13.1x",
       "ROCE: 14.5%",
       "Revenue growing 9.8% YoY",
@@ -371,13 +376,13 @@
       "Latest news: 'JSW Steel Ltd Share/Stock Price Live Today | The HinduBusinessLine - t'",
       "Paper trade validation: 3 trades, 67% win rate, \u20b9-72/trade expectancy",
       "Confluence: 5 independent signal families agree (trend, volume, pattern, news, regime)",
-      "History backtest: this kind of BUY setup worked 57% of the time over ~1 week on this stock (sample: 63)"
+      "History backtest: this kind of BUY setup worked 56% of the time over ~1 week on this stock (sample: 64)"
     ],
     "patterns_seen": [
-      "stoch_rsi_overbought_reversal",
       "pivot_point_test",
-      "full_bullish_alignment",
-      "adx_strong_trend_up"
+      "stoch_rsi_overbought_reversal",
+      "adx_strong_trend_up",
+      "full_bullish_alignment"
     ],
     "reliable_patterns": [
       "full_bullish_alignment",
@@ -407,8 +412,9 @@
     "paper_win_rate": 0.667,
     "paper_pnl": -215.26,
     "paper_expectancy": -71.75,
-    "market_mood": "neutral",
+    "market_mood": "bearish",
     "market_warning": [
+      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
       "PCR low (0.56) \u2014 market complacent, caution"
     ]
   },
@@ -416,10 +422,10 @@
     "ticker": "HOMEFIRST.NS",
     "nse_code": "HOMEFIRST",
     "company_name": "HOMEFIRST.NS",
-    "date": "2026-09-07",
-    "generated_at": "2026-09-07 10:12 UTC",
+    "date": "2026-09-08",
+    "generated_at": "2026-09-08 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -453,11 +459,11 @@
     "pattern_score": 10,
     "confluence_bonus": 5.0,
     "paper_bonus": 5.0,
-    "success_probability": 0.638,
+    "success_probability": 0.635,
     "base_success_prob": 0.706,
     "profit_probability": 0.264,
     "composite_score": 57.9,
-    "focus_rank": 4,
+    "focus_rank": 3,
     "rank_delta": 0,
     "intention": "BUY HOMEFIRST for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
     "confluence_count": 4,
@@ -468,9 +474,9 @@
       "pattern"
     ],
     "backtest_tested": true,
-    "backtest_hit_5d": 0.479,
-    "backtest_hit_10d": 0.438,
-    "backtest_sample": 48,
+    "backtest_hit_5d": 0.469,
+    "backtest_hit_10d": 0.449,
+    "backtest_sample": 49,
     "hist_long_trend": "strong_uptrend",
     "hist_52w_position": 61.0,
     "hist_personality": "choppy",
@@ -484,8 +490,8 @@
     "reasons": [
       "All EMAs stacked bullish",
       "MACD histogram positive",
-      "Learned bullish pattern: supertrend_bullish (rel=61%)",
       "Learned bullish pattern: full_bullish_alignment (rel=62%)",
+      "Learned bullish pattern: supertrend_bullish (rel=61%)",
       "Candlestick: three white soldiers",
       "Sector headwind (momentum=-0.38)",
       "Supertrend bullish \u2014 price above trend band",
@@ -495,6 +501,7 @@
       "Volatility compressed vs its norm \u2014 primed for an expansion move",
       "\u2713 Daily setup aligned with the higher-timeframe trend",
       "\u26a0 Sector momentum -0.38 \u2014 buying into a falling sector needs extra conviction",
+      "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
       "Valuation: P/E 21.9x",
       "ROCE: 5.0%",
       "Revenue growing 29.7% YoY",
@@ -510,14 +517,14 @@
       "Latest news: 'Home First Finance Company India Share: Bull Case vs Bear Case for 202'",
       "Paper trade validation: 3 trades, 67% win rate, \u20b9-103/trade expectancy",
       "Confluence: 4 independent signal families agree (trend, momentum, volume, pattern)",
-      "History backtest: this kind of BUY setup worked 48% of the time over ~1 week on this stock (sample: 48)"
+      "History backtest: this kind of BUY setup worked 47% of the time over ~1 week on this stock (sample: 49)"
     ],
     "patterns_seen": [
       "three_white_soldiers",
-      "supertrend_bullish",
       "bb_upper_rejection",
       "adx_ranging_market",
-      "full_bullish_alignment"
+      "full_bullish_alignment",
+      "supertrend_bullish"
     ],
     "reliable_patterns": [
       "pivot_point_test",
@@ -548,8 +555,9 @@
     "paper_win_rate": 0.667,
     "paper_pnl": -309.82,
     "paper_expectancy": -103.27,
-    "market_mood": "neutral",
+    "market_mood": "bearish",
     "market_warning": [
+      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
       "PCR low (0.56) \u2014 market complacent, caution"
     ]
   }

@@ -1,45 +1,5 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of pivot_s1_breakdown, macd_bearish_crossover, adx_strong_trend_up mean for a swing trade on BHEL? Current RSI=48, MACD hist=-0.1184, Vol=0.5x average. Signal is BUY.",
-    "context": {
-      "ticker": "BHEL.NS",
-      "signal": "BUY",
-      "patterns": "pivot_s1_breakdown, macd_bearish_crossover, adx_strong_trend_up",
-      "rsi": 47.9
-    },
-    "queued_at": "2026-09-08T10:11:18.199663"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of pivot_r1_breakout, momentum_continuation mean for a swing trade on GAIL? Current RSI=56, MACD hist=+0.1670, Vol=1.4x average. Signal is BUY.",
-    "context": {
-      "ticker": "GAIL.NS",
-      "signal": "BUY",
-      "patterns": "pivot_r1_breakout, momentum_continuation",
-      "rsi": 55.6
-    },
-    "queued_at": "2026-09-08T10:11:18.202613"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of pivot_r1_breakout, momentum_continuation mean for a swing trade on GAIL? Current RSI=56, MACD hist=+0.1670, Vol=1.4x average. Signal is BUY.",
-    "context": {
-      "ticker": "GAIL.NS",
-      "signal": "BUY",
-      "patterns": "pivot_r1_breakout, momentum_continuation",
-      "rsi": 55.6
-    },
-    "queued_at": "2026-09-08T10:12:23.649985"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of stoch_rsi_overbought_reversal, pivot_s1_breakdown, doji mean for a swing trade on GRASIM? Current RSI=60, MACD hist=-2.8744, Vol=0.7x average. Signal is BUY.",
-    "context": {
-      "ticker": "GRASIM.NS",
-      "signal": "BUY",
-      "patterns": "stoch_rsi_overbought_reversal, pivot_s1_breakdown, doji",
-      "rsi": 59.8
-    },
-    "queued_at": "2026-09-08T10:12:23.658252"
-  },
-  {
     "question": "In Indian NSE markets, what does the combination of tweezer_bottom, bb_upper_rejection, adx_strong_trend_up mean for a swing trade on COALINDIA? Current RSI=69, MACD hist=+3.0219, Vol=1.3x average. Signal is BUY.",
     "context": {
       "ticker": "COALINDIA.NS",
@@ -98,5 +58,45 @@
       "rsi": 52.3
     },
     "queued_at": "2026-09-09T03:05:40.484805"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of shooting_star, outside_bar, full_bearish_alignment mean for a swing trade on VBL? Current RSI=35, MACD hist=-0.2700, Vol=0.6x average. Signal is SELL.",
+    "context": {
+      "ticker": "VBL.NS",
+      "signal": "SELL",
+      "patterns": "shooting_star, outside_bar, full_bearish_alignment",
+      "rsi": 35.3
+    },
+    "queued_at": "2026-09-09T04:05:39.373215"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of full_bearish_alignment, supertrend_bullish, pivot_point_test mean for a swing trade on ADANIPORTS? Current RSI=54, MACD hist=+6.9954, Vol=0.5x average. Signal is BUY.",
+    "context": {
+      "ticker": "ADANIPORTS.NS",
+      "signal": "BUY",
+      "patterns": "full_bearish_alignment, supertrend_bullish, pivot_point_test",
+      "rsi": 54.0
+    },
+    "queued_at": "2026-09-09T04:05:39.375158"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of shooting_star, outside_bar mean for a swing trade on VBL? Current RSI=35, MACD hist=-0.2700, Vol=0.6x average. Signal is SELL.",
+    "context": {
+      "ticker": "VBL.NS",
+      "signal": "SELL",
+      "patterns": "shooting_star, outside_bar",
+      "rsi": 35.3
+    },
+    "queued_at": "2026-09-09T04:05:39.501646"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of full_bearish_alignment, supertrend_bullish, pivot_point_test mean for a swing trade on ADANIPORTS? Current RSI=54, MACD hist=+6.9954, Vol=0.5x average. Signal is BUY.",
+    "context": {
+      "ticker": "ADANIPORTS.NS",
+      "signal": "BUY",
+      "patterns": "full_bearish_alignment, supertrend_bullish, pivot_point_test",
+      "rsi": 54.0
+    },
+    "queued_at": "2026-09-09T04:05:39.503686"
   }
 ]

@@ -1,56 +1,6 @@
 [
   {
     "type": "new",
-    "ticker": "BAJFINANCE.NS",
-    "nse_code": "BAJFINANCE",
-    "signal": "BUY",
-    "date": "2026-07-10",
-    "ts": "2026-07-10T07:45:53.235826",
-    "detail": "New BUY recommendation \u2014 confidence 68/100",
-    "confidence": 68.2
-  },
-  {
-    "type": "new",
-    "ticker": "UNIONBANK.NS",
-    "nse_code": "UNIONBANK",
-    "signal": "BUY",
-    "date": "2026-07-10",
-    "ts": "2026-07-10T07:45:53.235826",
-    "detail": "New BUY recommendation \u2014 confidence 65/100",
-    "confidence": 65.4
-  },
-  {
-    "type": "removed",
-    "ticker": "FEDERALBNK.NS",
-    "nse_code": "FEDERALBNK",
-    "signal": "BUY",
-    "date": "2026-07-10",
-    "ts": "2026-07-10T07:45:53.235826",
-    "detail": "Dropped \u2014 no longer meets threshold (was 66/100)",
-    "confidence": 0
-  },
-  {
-    "type": "new",
-    "ticker": "NESTLEIND.NS",
-    "nse_code": "NESTLEIND",
-    "signal": "BUY",
-    "date": "2026-07-10",
-    "ts": "2026-07-10T10:12:33.200360",
-    "detail": "New BUY recommendation \u2014 confidence 89/100",
-    "confidence": 89.2
-  },
-  {
-    "type": "new",
-    "ticker": "ICICIBANK.NS",
-    "nse_code": "ICICIBANK",
-    "signal": "BUY",
-    "date": "2026-07-10",
-    "ts": "2026-07-10T10:12:33.200360",
-    "detail": "New BUY recommendation \u2014 confidence 71/100",
-    "confidence": 71.3
-  },
-  {
-    "type": "new",
     "ticker": "FEDERALBNK.NS",
     "nse_code": "FEDERALBNK",
     "signal": "BUY",
@@ -5998,5 +5948,55 @@
     "ts": "2026-09-08T10:12:23.675884",
     "detail": "Confidence \u25b29 (67 \u2192 76)",
     "confidence": 76.0
+  },
+  {
+    "type": "removed",
+    "ticker": "COALINDIA.NS",
+    "nse_code": "COALINDIA",
+    "signal": "BUY",
+    "date": "2026-09-09",
+    "ts": "2026-09-09T04:05:39.507529",
+    "detail": "Dropped \u2014 no longer meets threshold (was 76/100)",
+    "confidence": 0
+  },
+  {
+    "type": "removed",
+    "ticker": "GAIL.NS",
+    "nse_code": "GAIL",
+    "signal": "BUY",
+    "date": "2026-09-09",
+    "ts": "2026-09-09T04:05:39.507529",
+    "detail": "Dropped \u2014 no longer meets threshold (was 74/100)",
+    "confidence": 0
+  },
+  {
+    "type": "removed",
+    "ticker": "ADANIPORTS.NS",
+    "nse_code": "ADANIPORTS",
+    "signal": "BUY",
+    "date": "2026-09-09",
+    "ts": "2026-09-09T04:05:39.507529",
+    "detail": "Dropped \u2014 no longer meets threshold (was 73/100)",
+    "confidence": 0
+  },
+  {
+    "type": "removed",
+    "ticker": "SIEMENS.NS",
+    "nse_code": "SIEMENS",
+    "signal": "BUY",
+    "date": "2026-09-09",
+    "ts": "2026-09-09T04:05:39.507529",
+    "detail": "Dropped \u2014 no longer meets threshold (was 68/100)",
+    "confidence": 0
+  },
+  {
+    "type": "updated",
+    "ticker": "HOMEFIRST.NS",
+    "nse_code": "HOMEFIRST",
+    "signal": "BUY",
+    "date": "2026-09-09",
+    "ts": "2026-09-09T04:05:39.507529",
+    "detail": "Confidence \u25bc6 (70 \u2192 65) | Rank \u25bc1 (#3 \u2192 #4) | Stop loss moved \u20b91200.42 \u2192 \u20b91183.82",
+    "confidence": 65.0
   }
 ]

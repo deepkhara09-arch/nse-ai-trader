@@ -1,13 +1,13 @@
 {
   "phase": "paper_trading",
   "day": 57,
-  "session": "midday",
+  "session": "afternoon",
   "start_date": "2026-06-22",
   "phase_start_date": "2026-07-15",
   "last_run_date": "2026-09-08",
   "last_counted_date": "2026-09-08",
   "cohort_last_tick_date": "2026-09-08",
-  "last_updated": "2026-09-09T06:15:59.423418",
+  "last_updated": "2026-09-09T07:46:26.424436",
   "focus_stocks": [
     "PIDILITIND.NS",
     "GAIL.NS",
@@ -58,14 +58,14 @@
     "NESTLEIND.NS"
   ],
   "paper_trade_stats": {
-    "total": 41,
+    "total": 42,
     "wins": 17,
-    "losses": 24,
-    "win_rate": 0.415,
-    "total_pnl": -1833.1,
+    "losses": 25,
+    "win_rate": 0.405,
+    "total_pnl": -2108.15,
     "avg_win": 102.15,
-    "avg_loss": -148.73,
-    "expectancy": -44.71
+    "avg_loss": -153.78,
+    "expectancy": -50.19
   },
   "brain_notes": [
     "[2026-07-13] Cohort batch #7 complete \u2014 30 candidates ready",
@@ -399,6 +399,7 @@
   "sessions_done": {
     "preopen": "2026-09-09",
     "morning": "2026-09-09",
-    "midday": "2026-09-09"
+    "midday": "2026-09-09",
+    "afternoon": "2026-09-09"
   }
 }

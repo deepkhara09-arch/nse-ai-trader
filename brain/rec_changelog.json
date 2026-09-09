@@ -1,15 +1,5 @@
 [
   {
-    "type": "new",
-    "ticker": "MARICO.NS",
-    "nse_code": "MARICO",
-    "signal": "BUY",
-    "date": "2026-07-10",
-    "ts": "2026-07-10T10:12:33.200360",
-    "detail": "New BUY recommendation \u2014 confidence 70/100",
-    "confidence": 69.7
-  },
-  {
     "type": "removed",
     "ticker": "UNIONBANK.NS",
     "nse_code": "UNIONBANK",
@@ -5998,5 +5988,15 @@
     "ts": "2026-09-09T06:15:59.516009",
     "detail": "Dropped \u2014 no longer meets threshold (was 65/100)",
     "confidence": 0
+  },
+  {
+    "type": "new",
+    "ticker": "JSWSTEEL.NS",
+    "nse_code": "JSWSTEEL",
+    "signal": "BUY",
+    "date": "2026-09-09",
+    "ts": "2026-09-09T07:46:26.528502",
+    "detail": "New BUY recommendation \u2014 confidence 83/100",
+    "confidence": 83.3
   }
 ]

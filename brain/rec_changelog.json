@@ -1,16 +1,6 @@
 [
   {
     "type": "new",
-    "ticker": "FEDERALBNK.NS",
-    "nse_code": "FEDERALBNK",
-    "signal": "BUY",
-    "date": "2026-07-10",
-    "ts": "2026-07-10T10:12:33.200360",
-    "detail": "New BUY recommendation \u2014 confidence 70/100",
-    "confidence": 70.5
-  },
-  {
-    "type": "new",
     "ticker": "MARICO.NS",
     "nse_code": "MARICO",
     "signal": "BUY",
@@ -5998,5 +5988,15 @@
     "ts": "2026-09-09T04:05:39.507529",
     "detail": "Confidence \u25bc6 (70 \u2192 65) | Rank \u25bc1 (#3 \u2192 #4) | Stop loss moved \u20b91200.42 \u2192 \u20b91183.82",
     "confidence": 65.0
+  },
+  {
+    "type": "removed",
+    "ticker": "HOMEFIRST.NS",
+    "nse_code": "HOMEFIRST",
+    "signal": "BUY",
+    "date": "2026-09-09",
+    "ts": "2026-09-09T06:15:59.516009",
+    "detail": "Dropped \u2014 no longer meets threshold (was 65/100)",
+    "confidence": 0
   }
 ]

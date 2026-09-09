@@ -11,18 +11,18 @@
       "avg_loss_pct": 3.95
     },
     "no_market_tailwind": {
-      "count": 13,
-      "sum_loss_pct": 28.499999999999996,
-      "last": "2026-09-07",
+      "count": 14,
+      "sum_loss_pct": 32.199999999999996,
+      "last": "2026-09-09",
       "examples": [
-        "MARICO",
         "BAJFINANCE",
         "GAIL",
         "HINDALCO",
         "ABCAPITAL",
-        "PIDILITIND"
+        "PIDILITIND",
+        "HOMEFIRST"
       ],
-      "avg_loss_pct": 2.19
+      "avg_loss_pct": 2.3
     },
     "weak_pattern:pivot_point_test": {
       "count": 6,
@@ -39,17 +39,18 @@
       "avg_loss_pct": 1.51
     },
     "weak_pattern:adx_ranging_market": {
-      "count": 5,
-      "sum_loss_pct": 12.8,
-      "last": "2026-09-07",
+      "count": 6,
+      "sum_loss_pct": 16.5,
+      "last": "2026-09-09",
       "examples": [
         "SBIN",
         "JSWSTEEL",
         "GAIL",
         "ABCAPITAL",
-        "PIDILITIND"
+        "PIDILITIND",
+        "HOMEFIRST"
       ],
-      "avg_loss_pct": 2.56
+      "avg_loss_pct": 2.75
     },
     "weak_pattern:spinning_top": {
       "count": 1,
@@ -118,10 +119,10 @@
   "patterns": {
     "full_bullish_alignment": {
       "wins": 14,
-      "losses": 22,
+      "losses": 23,
       "sum_win_pct": 34.07,
-      "sum_loss_pct": 49.19,
-      "edge": -0.14
+      "sum_loss_pct": 52.89,
+      "edge": -0.17
     },
     "near_52w_high": {
       "wins": 3,
@@ -167,10 +168,10 @@
     },
     "supertrend_bullish": {
       "wins": 14,
-      "losses": 18,
+      "losses": 19,
       "sum_win_pct": 24.260000000000005,
-      "sum_loss_pct": 45.239999999999995,
-      "edge": -0.219
+      "sum_loss_pct": 48.94,
+      "edge": -0.249
     },
     "engulfing_bullish": {
       "wins": 0,
@@ -216,10 +217,10 @@
     },
     "three_white_soldiers": {
       "wins": 0,
-      "losses": 3,
+      "losses": 4,
       "sum_win_pct": 0.0,
-      "sum_loss_pct": 5.7299999999999995,
-      "edge": 0.0
+      "sum_loss_pct": 9.43,
+      "edge": -0.786
     },
     "momentum_continuation": {
       "wins": 3,
@@ -230,10 +231,10 @@
     },
     "adx_ranging_market": {
       "wins": 4,
-      "losses": 5,
+      "losses": 6,
       "sum_win_pct": 6.57,
-      "sum_loss_pct": 12.8,
-      "edge": -0.231
+      "sum_loss_pct": 16.5,
+      "edge": -0.331
     },
     "stoch_rsi_oversold_reversal": {
       "wins": 5,
@@ -243,11 +244,11 @@
       "edge": -0.142
     },
     "pivot_s1_breakdown": {
-      "wins": 1,
+      "wins": 2,
       "losses": 5,
-      "sum_win_pct": 7.93,
+      "sum_win_pct": 11.45,
       "sum_loss_pct": 6.35,
-      "edge": 0.088
+      "edge": 0.243
     },
     "stoch_rsi_overbought_reversal": {
       "wins": 1,
@@ -258,10 +259,10 @@
     },
     "bb_upper_rejection": {
       "wins": 2,
-      "losses": 4,
+      "losses": 5,
       "sum_win_pct": 3.2600000000000002,
-      "sum_loss_pct": 11.38,
-      "edge": -0.451
+      "sum_loss_pct": 15.080000000000002,
+      "edge": -0.563
     },
     "hammer": {
       "wins": 0,
@@ -299,11 +300,11 @@
       "edge": -0.258
     },
     "bb_lower_bounce": {
-      "wins": 2,
+      "wins": 3,
       "losses": 1,
-      "sum_win_pct": 3.3000000000000003,
+      "sum_win_pct": 6.82,
       "sum_loss_pct": 1.17,
-      "edge": 0.0
+      "edge": 0.471
     },
     "gravestone_doji": {
       "wins": 2,
@@ -390,9 +391,9 @@
       "edge": 0.0
     },
     "full_bearish_alignment": {
-      "wins": 0,
+      "wins": 1,
       "losses": 2,
-      "sum_win_pct": 0.0,
+      "sum_win_pct": 3.52,
       "sum_loss_pct": 3.57,
       "edge": 0.0
     },
@@ -432,9 +433,9 @@
       "edge": 0.0
     },
     "adx_strong_trend_down": {
-      "wins": 0,
+      "wins": 1,
       "losses": 1,
-      "sum_win_pct": 0.0,
+      "sum_win_pct": 3.52,
       "sum_loss_pct": 2.4,
       "edge": 0.0
     },
@@ -446,10 +447,17 @@
       "edge": 0.0
     },
     "early_recovery": {
-      "wins": 0,
+      "wins": 1,
       "losses": 1,
-      "sum_win_pct": 0.0,
+      "sum_win_pct": 3.52,
       "sum_loss_pct": 2.4,
+      "edge": 0.0
+    },
+    "volume_breakdown_bearish": {
+      "wins": 1,
+      "losses": 0,
+      "sum_win_pct": 3.52,
+      "sum_loss_pct": 0.0,
       "edge": 0.0
     }
   },
@@ -658,6 +666,15 @@
       "date": "2026-09-07",
       "ticker": "PIDILITIND",
       "loss_pct": 2.93,
+      "causes": [
+        "weak_pattern:adx_ranging_market",
+        "no_market_tailwind"
+      ]
+    },
+    {
+      "date": "2026-09-09",
+      "ticker": "HOMEFIRST",
+      "loss_pct": 3.7,
       "causes": [
         "weak_pattern:adx_ranging_market",
         "no_market_tailwind"

@@ -32,8 +32,8 @@
         "In a long-term strong downtrend (2yr)",
         "\u2713 Daily setup aligned with the higher-timeframe trend"
       ],
-      "current_price": 405.45,
-      "unrealized_pnl": 55.5,
+      "current_price": 406.0,
+      "unrealized_pnl": 52.2,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -99,8 +99,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "Near upper Bollinger Band"
       ],
-      "current_price": 174.1,
-      "unrealized_pnl": 31.96,
+      "current_price": 174.16,
+      "unrealized_pnl": 34.0,
       "max_held_days": 10,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -155,8 +155,8 @@
         "Candlestick: three black crows",
         "Broke below Pivot S1 support \u2014 bearish"
       ],
-      "current_price": 1309.0,
-      "unrealized_pnl": 21.3,
+      "current_price": 1305.1,
+      "unrealized_pnl": 9.6,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -173,7 +173,7 @@
       },
       "view_hist": [
         0,
-        0,
+        1,
         1,
         1
       ]
@@ -214,8 +214,8 @@
         "Candlestick: engulfing bearish",
         "Broke below Pivot S1 support \u2014 bearish"
       ],
-      "current_price": 3947.7,
-      "unrealized_pnl": -34.8,
+      "current_price": 3957.9,
+      "unrealized_pnl": -24.6,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -231,9 +231,9 @@
         "hist_long_trend": "strong_uptrend"
       },
       "view_hist": [
+        0,
+        0,
         1,
-        0,
-        0,
         1
       ]
     },
@@ -270,8 +270,8 @@
         "\u2713 Daily setup aligned with the higher-timeframe trend",
         "MACD histogram negative"
       ],
-      "current_price": 3295.0,
-      "unrealized_pnl": -54.0,
+      "current_price": 3300.8,
+      "unrealized_pnl": -42.4,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -330,8 +330,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "Near upper Bollinger Band"
       ],
-      "current_price": 1201.3,
-      "unrealized_pnl": -9.0,
+      "current_price": 1202.3,
+      "unrealized_pnl": -4.0,
       "max_held_days": 10,
       "vol_regime_pct": 0.08399999999999999,
       "entry_market": {
@@ -347,6 +347,7 @@
         "hist_long_trend": "strong_uptrend"
       },
       "view_hist": [
+        0,
         0
       ]
     }
@@ -3039,7 +3040,8 @@
       "costs": 7.32,
       "pnl_pct": 3.52,
       "won": true,
-      "open_days": 8
+      "open_days": 8,
+      "forensic_done": true
     },
     {
       "ticker": "HOMEFIRST.NS",
@@ -3109,7 +3111,8 @@
       "costs": 21.91,
       "pnl_pct": -3.7,
       "won": false,
-      "open_days": 2
+      "open_days": 2,
+      "forensic_done": true
     }
   ],
   "daily_snapshots": [
@@ -3385,16 +3388,23 @@
       "capital": 65254.07,
       "open_positions": 6,
       "daily_pnl": 0.0
+    },
+    {
+      "date": "2026-09-09",
+      "portfolio_value": 97916.66,
+      "capital": 68968.52,
+      "open_positions": 6,
+      "daily_pnl": -187.45
     }
   ],
   "daily_pnl_today": -187.44789000000034,
-  "last_snapshot_date": "2026-09-08",
+  "last_snapshot_date": "2026-09-09",
   "lifetime_wins": 17,
   "lifetime_losses": 25,
   "lifetime_pnl": -2108.15,
   "last_pnl_reset_date": "2026-09-09",
-  "max_drawdown_pct": 3.09,
-  "current_drawdown_pct": 3.07,
+  "max_drawdown_pct": 3.25,
+  "current_drawdown_pct": 3.25,
   "portfolio_peak": 101210.28,
-  "sessions_since_peak": 36
+  "sessions_since_peak": 37
 }

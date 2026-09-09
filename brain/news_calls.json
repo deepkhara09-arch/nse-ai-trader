@@ -2985,8 +2985,8 @@
       "direction": 1,
       "score": 0.399,
       "price_at_call": 173.0,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "flat"
     },
     {
       "date": "2026-09-04",
@@ -2994,8 +2994,8 @@
       "direction": 1,
       "score": 0.247,
       "price_at_call": 4000.0,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "wrong"
     },
     {
       "date": "2026-09-04",
@@ -3003,8 +3003,8 @@
       "direction": 1,
       "score": 0.252,
       "price_at_call": 1014.7,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "flat"
     },
     {
       "date": "2026-09-04",
@@ -3012,8 +3012,8 @@
       "direction": 1,
       "score": 0.33,
       "price_at_call": 416.95,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "wrong"
     },
     {
       "date": "2026-09-04",
@@ -3021,8 +3021,8 @@
       "direction": 1,
       "score": 0.303,
       "price_at_call": 414.0,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "right"
     },
     {
       "date": "2026-09-04",
@@ -3030,8 +3030,8 @@
       "direction": 1,
       "score": 0.531,
       "price_at_call": 407.7,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "flat"
     },
     {
       "date": "2026-09-04",
@@ -3039,8 +3039,8 @@
       "direction": 1,
       "score": 0.383,
       "price_at_call": 1706.7,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "right"
     },
     {
       "date": "2026-09-04",
@@ -3048,8 +3048,8 @@
       "direction": 1,
       "score": 0.226,
       "price_at_call": 1423.6,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "wrong"
     },
     {
       "date": "2026-09-04",
@@ -3057,8 +3057,8 @@
       "direction": 1,
       "score": 0.215,
       "price_at_call": 433.25,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "wrong"
     },
     {
       "date": "2026-09-07",
@@ -3212,6 +3212,69 @@
       "price_at_call": 1710.4,
       "evaluated": false,
       "outcome": ""
+    },
+    {
+      "date": "2026-09-09",
+      "ticker": "GRASIM.NS",
+      "direction": 1,
+      "score": 0.317,
+      "price_at_call": 3300.8,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-09-09",
+      "ticker": "COALINDIA.NS",
+      "direction": 1,
+      "score": 0.395,
+      "price_at_call": 430.55,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-09-09",
+      "ticker": "VBL.NS",
+      "direction": 1,
+      "score": 0.23,
+      "price_at_call": 406.0,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-09-09",
+      "ticker": "JSWSTEEL.NS",
+      "direction": 1,
+      "score": 0.264,
+      "price_at_call": 1305.1,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-09-09",
+      "ticker": "ADANIPORTS.NS",
+      "direction": 1,
+      "score": 0.577,
+      "price_at_call": 1765.2,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-09-09",
+      "ticker": "ICICIBANK.NS",
+      "direction": 1,
+      "score": 0.207,
+      "price_at_call": 1392.1,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-09-09",
+      "ticker": "UNIONBANK.NS",
+      "direction": 1,
+      "score": 0.439,
+      "price_at_call": 182.37,
+      "evaluated": false,
+      "outcome": ""
     }
   ],
   "reliability": {
@@ -3222,10 +3285,10 @@
       "last_seen": "2026-08-27"
     },
     "ICICIBANK.NS": {
-      "wins": 5.184,
-      "losses": 5.531,
-      "reliability": 0.484,
-      "last_seen": "2026-08-11"
+      "wins": 4.384,
+      "losses": 5.678,
+      "reliability": 0.436,
+      "last_seen": "2026-09-09"
     },
     "BAJFINANCE.NS": {
       "wins": 1.0,
@@ -3312,10 +3375,10 @@
       "last_seen": "2026-07-29"
     },
     "SIEMENS.NS": {
-      "wins": 9.41,
-      "losses": 6.327,
-      "reliability": 0.598,
-      "last_seen": "2026-09-08"
+      "wins": 9.356,
+      "losses": 7.291,
+      "reliability": 0.562,
+      "last_seen": "2026-09-09"
     },
     "POWERGRID.NS": {
       "wins": 0.0,
@@ -3336,10 +3399,10 @@
       "last_seen": "2026-08-04"
     },
     "LICI.NS": {
-      "wins": 2.582,
-      "losses": 1.0,
-      "reliability": 0.721,
-      "last_seen": "2026-09-08"
+      "wins": 2.567,
+      "losses": 1.994,
+      "reliability": 0.563,
+      "last_seen": "2026-09-09"
     },
     "GRASIM.NS": {
       "wins": 1.0,
@@ -3390,10 +3453,10 @@
       "last_seen": "2026-09-03"
     },
     "COALINDIA.NS": {
-      "wins": 1.0,
+      "wins": 1.972,
       "losses": 0.0,
-      "reliability": 0.667,
-      "last_seen": "2026-09-04"
+      "reliability": 0.829,
+      "last_seen": "2026-09-09"
     },
     "VBL.NS": {
       "wins": 0.0,
@@ -3402,10 +3465,16 @@
       "last_seen": "2026-09-07"
     },
     "ADANIPORTS.NS": {
-      "wins": 1.0,
+      "wins": 1.989,
       "losses": 0.0,
-      "reliability": 0.667,
-      "last_seen": "2026-09-07"
+      "reliability": 0.832,
+      "last_seen": "2026-09-09"
+    },
+    "BHEL.NS": {
+      "wins": 0.0,
+      "losses": 1.0,
+      "reliability": 0.333,
+      "last_seen": "2026-09-09"
     }
   }
 }

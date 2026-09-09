@@ -1,6 +1,6 @@
 {
   "date": "2026-09-09",
-  "session": "intraday_close",
+  "session": "preclose",
   "nifty": {
     "symbol": "^NSEI",
     "value": 23635.1,
@@ -62,7 +62,8 @@
   "trade_allowed": true,
   "warnings": [
     "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
-    "Global macro risk-off (-0.35) \u2014 Overall macro mood is risk-off (-0.35). US Dow -1.2% overnight. Crude +1.7%. USD/INR +0.8%. Notable: US Fed rate cut / d"
+    "Global macro risk-off (-0.35) \u2014 Overall macro mood is risk-off (-0.35). US Dow -1.2% overnight. Crude +1.7%. USD/INR +0.8%. Notable: US Fed rate cut / d",
+    "PCR low (0.60) \u2014 market complacent, caution"
   ],
   "leading_sectors": [],
   "market_regime": "normal",
@@ -323,13 +324,13 @@
   },
   "pcr": {
     "date": "2026-09-09",
-    "pcr": 0.612,
-    "reading": "bearish_bias",
-    "total_pe_oi": 2207917,
-    "total_ce_oi": 3609065,
-    "spot": 23635.1,
-    "max_pain": 23650.0,
-    "max_pain_dist_pct": -0.06,
+    "pcr": 0.596,
+    "reading": "complacent_caution",
+    "total_pe_oi": 1569017,
+    "total_ce_oi": 2632879,
+    "spot": 23431.5,
+    "max_pain": 23600.0,
+    "max_pain_dist_pct": -0.72,
     "oi_bias": "call_heavy_resistance",
     "ok": true,
     "error": ""

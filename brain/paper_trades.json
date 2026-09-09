@@ -32,8 +32,8 @@
         "In a long-term strong downtrend (2yr)",
         "\u2713 Daily setup aligned with the higher-timeframe trend"
       ],
-      "current_price": 402.3,
-      "unrealized_pnl": 74.4,
+      "current_price": 405.45,
+      "unrealized_pnl": 55.5,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -99,8 +99,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "Near upper Bollinger Band"
       ],
-      "current_price": 174.84,
-      "unrealized_pnl": 57.12,
+      "current_price": 174.1,
+      "unrealized_pnl": 31.96,
       "max_held_days": 10,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -116,7 +116,7 @@
         "hist_long_trend": "strong_uptrend"
       },
       "view_hist": [
-        1,
+        0,
         0,
         0,
         0
@@ -155,8 +155,8 @@
         "Candlestick: three black crows",
         "Broke below Pivot S1 support \u2014 bearish"
       ],
-      "current_price": 1310.5,
-      "unrealized_pnl": 25.8,
+      "current_price": 1309.0,
+      "unrealized_pnl": 21.3,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -174,7 +174,7 @@
       "view_hist": [
         0,
         0,
-        0,
+        1,
         1
       ]
     },
@@ -214,8 +214,8 @@
         "Candlestick: engulfing bearish",
         "Broke below Pivot S1 support \u2014 bearish"
       ],
-      "current_price": 3969.7,
-      "unrealized_pnl": -12.8,
+      "current_price": 3947.7,
+      "unrealized_pnl": -34.8,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -232,9 +232,9 @@
       },
       "view_hist": [
         1,
-        1,
         0,
-        0
+        0,
+        1
       ]
     },
     {
@@ -270,8 +270,8 @@
         "\u2713 Daily setup aligned with the higher-timeframe trend",
         "MACD histogram negative"
       ],
-      "current_price": 3293.8,
-      "unrealized_pnl": -56.4,
+      "current_price": 3295.0,
+      "unrealized_pnl": -54.0,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -330,8 +330,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "Near upper Bollinger Band"
       ],
-      "current_price": 1203.1,
-      "unrealized_pnl": 0.0,
+      "current_price": 1201.3,
+      "unrealized_pnl": -9.0,
       "max_held_days": 10,
       "vol_regime_pct": 0.08399999999999999,
       "entry_market": {
@@ -345,7 +345,10 @@
         "mtf_alignment": "aligned",
         "opposing_ratio": 0.07,
         "hist_long_trend": "strong_uptrend"
-      }
+      },
+      "view_hist": [
+        0
+      ]
     }
   ],
   "closed_trades": [

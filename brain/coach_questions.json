@@ -1,102 +1,102 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of shooting_star, stoch_rsi_overbought_reversal mean for a swing trade on HOMEFIRST? Current RSI=62, MACD hist=+2.2022, Vol=1.1x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of stoch_rsi_overbought_reversal, gap_up_reversal, volume_climax_top mean for a swing trade on HOMEFIRST? Current RSI=70, MACD hist=+4.4336, Vol=3.9x average. Signal is SELL.",
     "context": {
       "ticker": "HOMEFIRST.NS",
-      "signal": "BUY",
-      "patterns": "shooting_star, stoch_rsi_overbought_reversal",
-      "rsi": 61.9
+      "signal": "SELL",
+      "patterns": "stoch_rsi_overbought_reversal, gap_up_reversal, volume_climax_top",
+      "rsi": 69.9
     },
-    "queued_at": "2026-09-09T06:15:59.509131"
+    "queued_at": "2026-09-09T09:45:44.681452"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of shooting_star, outside_bar mean for a swing trade on VBL? Current RSI=35, MACD hist=-0.2700, Vol=0.6x average. Signal is SELL.",
+    "question": "In Indian NSE markets, what does the combination of pivot_point_test, outside_bar, pivot_s1_bounce mean for a swing trade on VBL? Current RSI=35, MACD hist=-0.2700, Vol=0.6x average. Signal is BUY.",
     "context": {
       "ticker": "VBL.NS",
-      "signal": "SELL",
-      "patterns": "shooting_star, outside_bar",
-      "rsi": 35.3
-    },
-    "queued_at": "2026-09-09T06:15:59.510285"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of three_white_soldiers, supertrend_bullish, full_bearish_alignment mean for a swing trade on ADANIPORTS? Current RSI=54, MACD hist=+6.9954, Vol=0.5x average. Signal is BUY.",
-    "context": {
-      "ticker": "ADANIPORTS.NS",
       "signal": "BUY",
-      "patterns": "three_white_soldiers, supertrend_bullish, full_bearish_alignment",
-      "rsi": 54.0
-    },
-    "queued_at": "2026-09-09T06:15:59.512284"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of outside_bar, shooting_star mean for a swing trade on VBL? Current RSI=35, MACD hist=-0.2700, Vol=0.6x average. Signal is SELL.",
-    "context": {
-      "ticker": "VBL.NS",
-      "signal": "SELL",
-      "patterns": "outside_bar, shooting_star",
+      "patterns": "pivot_point_test, outside_bar, pivot_s1_bounce",
       "rsi": 35.3
     },
-    "queued_at": "2026-09-09T07:46:26.388493"
+    "queued_at": "2026-09-09T09:45:44.682628"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of bullish_harami, adx_strong_trend_up, stoch_rsi_oversold_reversal mean for a swing trade on JSWSTEEL? Current RSI=53, MACD hist=-3.1542, Vol=0.8x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of bullish_harami, stoch_rsi_oversold_reversal, adx_strong_trend_up mean for a swing trade on JSWSTEEL? Current RSI=53, MACD hist=-3.1542, Vol=0.8x average. Signal is BUY.",
     "context": {
       "ticker": "JSWSTEEL.NS",
       "signal": "BUY",
-      "patterns": "bullish_harami, adx_strong_trend_up, stoch_rsi_oversold_reversal",
+      "patterns": "bullish_harami, stoch_rsi_oversold_reversal, adx_strong_trend_up",
       "rsi": 53.3
     },
-    "queued_at": "2026-09-09T07:46:26.389746"
+    "queued_at": "2026-09-09T09:45:44.683768"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of full_bearish_alignment, supertrend_bullish, three_white_soldiers mean for a swing trade on ADANIPORTS? Current RSI=54, MACD hist=+6.9954, Vol=0.5x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of supertrend_bullish, full_bearish_alignment, three_white_soldiers mean for a swing trade on ADANIPORTS? Current RSI=54, MACD hist=+6.9954, Vol=0.5x average. Signal is BUY.",
     "context": {
       "ticker": "ADANIPORTS.NS",
       "signal": "BUY",
-      "patterns": "full_bearish_alignment, supertrend_bullish, three_white_soldiers",
+      "patterns": "supertrend_bullish, full_bearish_alignment, three_white_soldiers",
       "rsi": 54.0
     },
-    "queued_at": "2026-09-09T07:46:26.390873"
+    "queued_at": "2026-09-09T09:45:44.684873"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of bullish_harami, adx_strong_trend_up, stoch_rsi_oversold_reversal mean for a swing trade on JSWSTEEL? Current RSI=53, MACD hist=-3.1542, Vol=0.8x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of bullish_harami, stoch_rsi_oversold_reversal, adx_strong_trend_up mean for a swing trade on JSWSTEEL? Current RSI=53, MACD hist=-3.1542, Vol=0.8x average. Signal is BUY.",
     "context": {
       "ticker": "JSWSTEEL.NS",
       "signal": "BUY",
-      "patterns": "bullish_harami, adx_strong_trend_up, stoch_rsi_oversold_reversal",
+      "patterns": "bullish_harami, stoch_rsi_oversold_reversal, adx_strong_trend_up",
       "rsi": 53.3
     },
-    "queued_at": "2026-09-09T07:46:26.396258"
+    "queued_at": "2026-09-09T09:45:44.690065"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of outside_bar, shooting_star mean for a swing trade on VBL? Current RSI=35, MACD hist=-0.2700, Vol=0.6x average. Signal is SELL.",
+    "question": "In Indian NSE markets, what does the combination of stoch_rsi_overbought_reversal, gap_up_reversal, volume_climax_top mean for a swing trade on HOMEFIRST? Current RSI=70, MACD hist=+4.4336, Vol=3.9x average. Signal is SELL.",
+    "context": {
+      "ticker": "HOMEFIRST.NS",
+      "signal": "SELL",
+      "patterns": "stoch_rsi_overbought_reversal, gap_up_reversal, volume_climax_top",
+      "rsi": 69.9
+    },
+    "queued_at": "2026-09-09T09:45:44.692882"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of stoch_rsi_overbought_reversal, gap_up_reversal, volume_climax_top mean for a swing trade on HOMEFIRST? Current RSI=70, MACD hist=+4.4336, Vol=3.9x average. Signal is SELL.",
+    "context": {
+      "ticker": "HOMEFIRST.NS",
+      "signal": "SELL",
+      "patterns": "stoch_rsi_overbought_reversal, gap_up_reversal, volume_climax_top",
+      "rsi": 69.9
+    },
+    "queued_at": "2026-09-09T09:45:44.807263"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of pivot_point_test, outside_bar, pivot_s1_bounce mean for a swing trade on VBL? Current RSI=35, MACD hist=-0.2700, Vol=0.6x average. Signal is BUY.",
     "context": {
       "ticker": "VBL.NS",
-      "signal": "SELL",
-      "patterns": "outside_bar, shooting_star",
+      "signal": "BUY",
+      "patterns": "pivot_point_test, outside_bar, pivot_s1_bounce",
       "rsi": 35.3
     },
-    "queued_at": "2026-09-09T07:46:26.518949"
+    "queued_at": "2026-09-09T09:45:44.808444"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of bullish_harami, adx_strong_trend_up, stoch_rsi_oversold_reversal mean for a swing trade on JSWSTEEL? Current RSI=53, MACD hist=-3.1542, Vol=0.8x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of bullish_harami, stoch_rsi_oversold_reversal, adx_strong_trend_up mean for a swing trade on JSWSTEEL? Current RSI=53, MACD hist=-3.1542, Vol=0.8x average. Signal is BUY.",
     "context": {
       "ticker": "JSWSTEEL.NS",
       "signal": "BUY",
-      "patterns": "bullish_harami, adx_strong_trend_up, stoch_rsi_oversold_reversal",
+      "patterns": "bullish_harami, stoch_rsi_oversold_reversal, adx_strong_trend_up",
       "rsi": 53.3
     },
-    "queued_at": "2026-09-09T07:46:26.520181"
+    "queued_at": "2026-09-09T09:45:44.809596"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of full_bearish_alignment, supertrend_bullish, three_white_soldiers mean for a swing trade on ADANIPORTS? Current RSI=54, MACD hist=+6.9954, Vol=0.5x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of supertrend_bullish, full_bearish_alignment, three_white_soldiers mean for a swing trade on ADANIPORTS? Current RSI=54, MACD hist=+6.9954, Vol=0.5x average. Signal is BUY.",
     "context": {
       "ticker": "ADANIPORTS.NS",
       "signal": "BUY",
-      "patterns": "full_bearish_alignment, supertrend_bullish, three_white_soldiers",
+      "patterns": "supertrend_bullish, full_bearish_alignment, three_white_soldiers",
       "rsi": 54.0
     },
-    "queued_at": "2026-09-09T07:46:26.524542"
+    "queued_at": "2026-09-09T09:45:44.813492"
   }
 ]

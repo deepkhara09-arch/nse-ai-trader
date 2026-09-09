@@ -62,6 +62,7 @@
   "trade_allowed": true,
   "warnings": [
     "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
+    "Nifty choppy intraday \u2014 wait for cleaner setups",
     "Global macro risk-off (-0.35) \u2014 Overall macro mood is risk-off (-0.35). US Dow -1.2% overnight. Crude +1.7%. USD/INR +0.8%. Notable: US Fed rate cut / d"
   ],
   "leading_sectors": [],
@@ -70,7 +71,7 @@
   "lagging_sectors": [
     "IT"
   ],
-  "intraday_regime": "mixed",
+  "intraday_regime": "choppy",
   "macro": {
     "date": "2026-09-09",
     "session": "midday",

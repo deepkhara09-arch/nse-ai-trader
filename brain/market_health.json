@@ -133,10 +133,10 @@
   "macro_risk_factor": 0.7,
   "fii_dii": {
     "date": "2026-09-09",
-    "fii_net_cr": -123.19,
-    "dii_net_cr": 1349.64,
-    "combined_net_cr": 1226.45,
-    "signal": "inflow",
+    "fii_net_cr": -582.99,
+    "dii_net_cr": 1509.04,
+    "combined_net_cr": 926.05,
+    "signal": "neutral",
     "ok": true,
     "error": "",
     "history": [
@@ -316,18 +316,18 @@
       },
       {
         "date": "2026-09-09",
-        "fii": -123.19,
-        "dii": 1349.64,
-        "combined": 1226.45
+        "fii": -582.99,
+        "dii": 1509.04,
+        "combined": 926.05
       }
     ]
   },
   "pcr": {
     "date": "2026-09-09",
-    "pcr": 0.593,
+    "pcr": 0.591,
     "reading": "complacent_caution",
-    "total_pe_oi": 1564262,
-    "total_ce_oi": 2638331,
+    "total_pe_oi": 1551389,
+    "total_ce_oi": 2623737,
     "spot": 23431.5,
     "max_pain": 23600.0,
     "max_pain_dist_pct": -0.72,

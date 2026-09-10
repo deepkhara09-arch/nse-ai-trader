@@ -18,10 +18,6 @@
         "momentum": -0.273
       },
       {
-        "date": "2026-09-02",
-        "momentum": -0.273
-      },
-      {
         "date": "2026-09-03",
         "momentum": -0.257
       },
@@ -120,13 +116,17 @@
       {
         "date": "2026-09-09",
         "momentum": 0.11
+      },
+      {
+        "date": "2026-09-10",
+        "momentum": 0.167
       }
     ],
     "latest": {
-      "momentum": 0.11,
-      "avg_rsi": 47.5,
-      "avg_macd": 0.6469,
-      "avg_vol_rel": 0.72,
+      "momentum": 0.167,
+      "avg_rsi": 48.6,
+      "avg_macd": 0.6066,
+      "avg_vol_rel": 0.96,
       "stock_count": 13,
       "stocks": [
         "RELIANCE",
@@ -143,7 +143,7 @@
         "IOC",
         "HINDPETRO"
       ],
-      "date": "2026-09-09"
+      "date": "2026-09-10"
     }
   },
   "IT": {
@@ -165,10 +165,6 @@
         "momentum": -0.187
       },
       {
-        "date": "2026-09-02",
-        "momentum": -0.187
-      },
-      {
         "date": "2026-09-03",
         "momentum": -0.143
       },
@@ -267,13 +263,17 @@
       {
         "date": "2026-09-09",
         "momentum": -0.287
+      },
+      {
+        "date": "2026-09-10",
+        "momentum": -0.355
       }
     ],
     "latest": {
-      "momentum": -0.287,
-      "avg_rsi": 44.8,
-      "avg_macd": -5.4904,
-      "avg_vol_rel": 1.03,
+      "momentum": -0.355,
+      "avg_rsi": 41.2,
+      "avg_macd": -6.9843,
+      "avg_vol_rel": 0.88,
       "stock_count": 5,
       "stocks": [
         "TCS",
@@ -282,15 +282,11 @@
         "WIPRO",
         "TECHM"
       ],
-      "date": "2026-09-09"
+      "date": "2026-09-10"
     }
   },
   "Banking": {
     "history": [
-      {
-        "date": "2026-09-02",
-        "momentum": 0.276
-      },
       {
         "date": "2026-09-02",
         "momentum": 0.276
@@ -406,13 +402,17 @@
       {
         "date": "2026-09-09",
         "momentum": -0.287
+      },
+      {
+        "date": "2026-09-10",
+        "momentum": -0.248
       }
     ],
     "latest": {
-      "momentum": -0.287,
-      "avg_rsi": 45.6,
-      "avg_macd": -0.5951,
-      "avg_vol_rel": 0.89,
+      "momentum": -0.248,
+      "avg_rsi": 44.7,
+      "avg_macd": -0.8887,
+      "avg_vol_rel": 1.13,
       "stock_count": 13,
       "stocks": [
         "HDFCBANK",
@@ -429,7 +429,7 @@
         "UNIONBANK",
         "FEDERALBNK"
       ],
-      "date": "2026-09-09"
+      "date": "2026-09-10"
     }
   },
   "Telecom": {
@@ -451,10 +451,6 @@
         "momentum": -0.322
       },
       {
-        "date": "2026-09-02",
-        "momentum": -0.322
-      },
-      {
         "date": "2026-09-03",
         "momentum": -0.251
       },
@@ -553,18 +549,22 @@
       {
         "date": "2026-09-09",
         "momentum": -0.378
+      },
+      {
+        "date": "2026-09-10",
+        "momentum": -0.427
       }
     ],
     "latest": {
-      "momentum": -0.378,
-      "avg_rsi": 37.9,
-      "avg_macd": -9.2529,
-      "avg_vol_rel": 0.86,
+      "momentum": -0.427,
+      "avg_rsi": 38.2,
+      "avg_macd": -8.4201,
+      "avg_vol_rel": 0.61,
       "stock_count": 1,
       "stocks": [
         "BHARTIARTL"
       ],
-      "date": "2026-09-09"
+      "date": "2026-09-10"
     }
   },
   "FMCG": {
@@ -586,10 +586,6 @@
         "momentum": -0.361
       },
       {
-        "date": "2026-09-02",
-        "momentum": -0.361
-      },
-      {
         "date": "2026-09-03",
         "momentum": -0.342
       },
@@ -688,13 +684,17 @@
       {
         "date": "2026-09-09",
         "momentum": -0.449
+      },
+      {
+        "date": "2026-09-10",
+        "momentum": -0.439
       }
     ],
     "latest": {
-      "momentum": -0.449,
-      "avg_rsi": 29.6,
-      "avg_macd": -6.5521,
-      "avg_vol_rel": 0.96,
+      "momentum": -0.439,
+      "avg_rsi": 31.3,
+      "avg_macd": -5.857,
+      "avg_vol_rel": 0.91,
       "stock_count": 11,
       "stocks": [
         "HINDUNILVR",
@@ -709,15 +709,11 @@
         "EMAMILTD",
         "VBL"
       ],
-      "date": "2026-09-09"
+      "date": "2026-09-10"
     }
   },
   "Infra": {
     "history": [
-      {
-        "date": "2026-09-02",
-        "momentum": -0.09
-      },
       {
         "date": "2026-09-02",
         "momentum": -0.09
@@ -833,13 +829,17 @@
       {
         "date": "2026-09-09",
         "momentum": -0.261
+      },
+      {
+        "date": "2026-09-10",
+        "momentum": -0.215
       }
     ],
     "latest": {
-      "momentum": -0.261,
-      "avg_rsi": 41.1,
-      "avg_macd": -16.0136,
-      "avg_vol_rel": 1.22,
+      "momentum": -0.215,
+      "avg_rsi": 43.5,
+      "avg_macd": -14.5091,
+      "avg_vol_rel": 1.29,
       "stock_count": 12,
       "stocks": [
         "LT",
@@ -855,7 +855,7 @@
         "ANANTRAJ",
         "BHEL"
       ],
-      "date": "2026-09-09"
+      "date": "2026-09-10"
     }
   },
   "NBFC": {
@@ -877,10 +877,6 @@
         "momentum": -0.314
       },
       {
-        "date": "2026-09-02",
-        "momentum": -0.314
-      },
-      {
         "date": "2026-09-03",
         "momentum": -0.422
       },
@@ -979,13 +975,17 @@
       {
         "date": "2026-09-09",
         "momentum": -0.418
+      },
+      {
+        "date": "2026-09-10",
+        "momentum": -0.373
       }
     ],
     "latest": {
-      "momentum": -0.418,
-      "avg_rsi": 37.1,
-      "avg_macd": -8.4591,
-      "avg_vol_rel": 0.73,
+      "momentum": -0.373,
+      "avg_rsi": 37.2,
+      "avg_macd": -8.5298,
+      "avg_vol_rel": 0.95,
       "stock_count": 7,
       "stocks": [
         "BAJFINANCE",
@@ -996,7 +996,7 @@
         "M&MFIN",
         "JIOFIN"
       ],
-      "date": "2026-09-09"
+      "date": "2026-09-10"
     }
   },
   "Consumer": {
@@ -1011,10 +1011,6 @@
       },
       {
         "date": "2026-09-02",
-        "momentum": -0.3
-      },
-      {
-        "date": "2026-09-02",
         "momentum": -0.332
       },
       {
@@ -1120,13 +1116,17 @@
       {
         "date": "2026-09-09",
         "momentum": -0.462
+      },
+      {
+        "date": "2026-09-10",
+        "momentum": -0.439
       }
     ],
     "latest": {
-      "momentum": -0.462,
-      "avg_rsi": 31.1,
-      "avg_macd": -25.8665,
-      "avg_vol_rel": 0.87,
+      "momentum": -0.439,
+      "avg_rsi": 31.0,
+      "avg_macd": -25.0539,
+      "avg_vol_rel": 0.97,
       "stock_count": 7,
       "stocks": [
         "ASIANPAINT",
@@ -1137,7 +1137,7 @@
         "BAJAJHLDNG",
         "PGHH"
       ],
-      "date": "2026-09-09"
+      "date": "2026-09-10"
     }
   },
   "Auto": {
@@ -1159,10 +1159,6 @@
         "momentum": -0.344
       },
       {
-        "date": "2026-09-02",
-        "momentum": -0.344
-      },
-      {
         "date": "2026-09-03",
         "momentum": -0.331
       },
@@ -1261,13 +1257,17 @@
       {
         "date": "2026-09-09",
         "momentum": -0.494
+      },
+      {
+        "date": "2026-09-10",
+        "momentum": -0.457
       }
     ],
     "latest": {
-      "momentum": -0.494,
-      "avg_rsi": 27.2,
-      "avg_macd": -49.5944,
-      "avg_vol_rel": 0.88,
+      "momentum": -0.457,
+      "avg_rsi": 31.4,
+      "avg_macd": -46.4076,
+      "avg_vol_rel": 0.82,
       "stock_count": 5,
       "stocks": [
         "MARUTI",
@@ -1276,7 +1276,7 @@
         "ASHOKLEY",
         "TMPV"
       ],
-      "date": "2026-09-09"
+      "date": "2026-09-10"
     }
   },
   "Cement": {
@@ -1298,10 +1298,6 @@
         "momentum": -0.252
       },
       {
-        "date": "2026-09-02",
-        "momentum": -0.252
-      },
-      {
         "date": "2026-09-03",
         "momentum": -0.476
       },
@@ -1400,18 +1396,22 @@
       {
         "date": "2026-09-09",
         "momentum": -0.403
+      },
+      {
+        "date": "2026-09-10",
+        "momentum": -0.349
       }
     ],
     "latest": {
-      "momentum": -0.403,
-      "avg_rsi": 37.2,
-      "avg_macd": -46.9563,
-      "avg_vol_rel": 0.89,
+      "momentum": -0.349,
+      "avg_rsi": 34.1,
+      "avg_macd": -59.9263,
+      "avg_vol_rel": 1.36,
       "stock_count": 1,
       "stocks": [
         "ULTRACEMCO"
       ],
-      "date": "2026-09-09"
+      "date": "2026-09-10"
     }
   },
   "Pharma": {
@@ -1433,10 +1433,6 @@
         "momentum": 0.285
       },
       {
-        "date": "2026-09-02",
-        "momentum": 0.285
-      },
-      {
         "date": "2026-09-03",
         "momentum": 0.2
       },
@@ -1535,13 +1531,17 @@
       {
         "date": "2026-09-09",
         "momentum": -0.252
+      },
+      {
+        "date": "2026-09-10",
+        "momentum": -0.204
       }
     ],
     "latest": {
-      "momentum": -0.252,
-      "avg_rsi": 46.9,
-      "avg_macd": -6.4344,
-      "avg_vol_rel": 1.01,
+      "momentum": -0.204,
+      "avg_rsi": 49.9,
+      "avg_macd": -2.2267,
+      "avg_vol_rel": 1.02,
       "stock_count": 5,
       "stocks": [
         "SUNPHARMA",
@@ -1550,15 +1550,11 @@
         "DIVISLAB",
         "APOLLOHOSP"
       ],
-      "date": "2026-09-09"
+      "date": "2026-09-10"
     }
   },
   "Metals": {
     "history": [
-      {
-        "date": "2026-09-02",
-        "momentum": -0.231
-      },
       {
         "date": "2026-09-02",
         "momentum": -0.231
@@ -1674,13 +1670,17 @@
       {
         "date": "2026-09-09",
         "momentum": -0.256
+      },
+      {
+        "date": "2026-09-10",
+        "momentum": -0.222
       }
     ],
     "latest": {
-      "momentum": -0.256,
-      "avg_rsi": 48.6,
-      "avg_macd": -3.2186,
-      "avg_vol_rel": 0.83,
+      "momentum": -0.222,
+      "avg_rsi": 50.8,
+      "avg_macd": -2.7997,
+      "avg_vol_rel": 0.86,
       "stock_count": 4,
       "stocks": [
         "TATASTEEL",
@@ -1688,7 +1688,7 @@
         "GRASIM",
         "HINDALCO"
       ],
-      "date": "2026-09-09"
+      "date": "2026-09-10"
     }
   },
   "Insurance": {
@@ -1710,10 +1710,6 @@
         "momentum": -0.172
       },
       {
-        "date": "2026-09-02",
-        "momentum": -0.172
-      },
-      {
         "date": "2026-09-03",
         "momentum": -0.35
       },
@@ -1812,13 +1808,17 @@
       {
         "date": "2026-09-09",
         "momentum": -0.1
+      },
+      {
+        "date": "2026-09-10",
+        "momentum": -0.246
       }
     ],
     "latest": {
-      "momentum": -0.1,
-      "avg_rsi": 49.8,
-      "avg_macd": -0.6641,
-      "avg_vol_rel": 1.75,
+      "momentum": -0.246,
+      "avg_rsi": 40.6,
+      "avg_macd": -1.5401,
+      "avg_vol_rel": 1.34,
       "stock_count": 6,
       "stocks": [
         "SBILIFE",
@@ -1828,7 +1828,7 @@
         "NIACL",
         "ICICIGI"
       ],
-      "date": "2026-09-09"
+      "date": "2026-09-10"
     }
   },
   "Digital": {
@@ -1850,10 +1850,6 @@
         "momentum": 0.401
       },
       {
-        "date": "2026-09-02",
-        "momentum": 0.401
-      },
-      {
         "date": "2026-09-03",
         "momentum": -0.222
       },
@@ -1952,13 +1948,17 @@
       {
         "date": "2026-09-09",
         "momentum": -0.238
+      },
+      {
+        "date": "2026-09-10",
+        "momentum": -0.192
       }
     ],
     "latest": {
-      "momentum": -0.238,
-      "avg_rsi": 52.3,
-      "avg_macd": -2.7114,
-      "avg_vol_rel": 0.7,
+      "momentum": -0.192,
+      "avg_rsi": 55.0,
+      "avg_macd": -3.1187,
+      "avg_vol_rel": 0.79,
       "stock_count": 6,
       "stocks": [
         "IRCTC",
@@ -1968,15 +1968,11 @@
         "ETERNAL",
         "SWIGGY"
       ],
-      "date": "2026-09-09"
+      "date": "2026-09-10"
     }
   },
   "Infra Finance": {
     "history": [
-      {
-        "date": "2026-09-02",
-        "momentum": -0.387
-      },
       {
         "date": "2026-09-02",
         "momentum": -0.387
@@ -2092,13 +2088,17 @@
       {
         "date": "2026-09-09",
         "momentum": 0.159
+      },
+      {
+        "date": "2026-09-10",
+        "momentum": 0.155
       }
     ],
     "latest": {
-      "momentum": 0.159,
-      "avg_rsi": 38.8,
-      "avg_macd": 0.4926,
-      "avg_vol_rel": 1.36,
+      "momentum": 0.155,
+      "avg_rsi": 39.3,
+      "avg_macd": 1.1077,
+      "avg_vol_rel": 1.32,
       "stock_count": 5,
       "stocks": [
         "IRFC",
@@ -2107,7 +2107,7 @@
         "RECLTD",
         "PFC"
       ],
-      "date": "2026-09-09"
+      "date": "2026-09-10"
     }
   },
   "Asset Management": {
@@ -2129,10 +2129,6 @@
         "momentum": 0.198
       },
       {
-        "date": "2026-09-02",
-        "momentum": 0.198
-      },
-      {
         "date": "2026-09-03",
         "momentum": 0.122
       },
@@ -2231,20 +2227,24 @@
       {
         "date": "2026-09-09",
         "momentum": -0.27
+      },
+      {
+        "date": "2026-09-10",
+        "momentum": -0.347
       }
     ],
     "latest": {
-      "momentum": -0.27,
-      "avg_rsi": 48.3,
-      "avg_macd": -4.8749,
-      "avg_vol_rel": 0.81,
+      "momentum": -0.347,
+      "avg_rsi": 42.1,
+      "avg_macd": -7.0657,
+      "avg_vol_rel": 0.85,
       "stock_count": 3,
       "stocks": [
         "ABCAPITAL",
         "MFSL",
         "HDFCAMC"
       ],
-      "date": "2026-09-09"
+      "date": "2026-09-10"
     }
   }
 }

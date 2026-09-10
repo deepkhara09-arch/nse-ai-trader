@@ -1,85 +1,5 @@
 [
   {
-    "type": "new",
-    "ticker": "ICICIBANK.NS",
-    "nse_code": "ICICIBANK",
-    "signal": "BUY",
-    "date": "2026-07-13",
-    "ts": "2026-07-13T06:15:51.946128",
-    "detail": "New BUY recommendation \u2014 confidence 67/100",
-    "confidence": 67.1
-  },
-  {
-    "type": "new",
-    "ticker": "BAJFINANCE.NS",
-    "nse_code": "BAJFINANCE",
-    "signal": "BUY",
-    "date": "2026-07-13",
-    "ts": "2026-07-13T07:45:56.977640",
-    "detail": "New BUY recommendation \u2014 confidence 67/100",
-    "confidence": 67.3
-  },
-  {
-    "type": "updated",
-    "ticker": "ICICIBANK.NS",
-    "nse_code": "ICICIBANK",
-    "signal": "BUY",
-    "date": "2026-07-13",
-    "ts": "2026-07-13T07:45:56.977640",
-    "detail": "Target 1 moved \u20b91469.90 \u2192 \u20b91482.84",
-    "confidence": 67.1
-  },
-  {
-    "type": "new",
-    "ticker": "NESTLEIND.NS",
-    "nse_code": "NESTLEIND",
-    "signal": "BUY",
-    "date": "2026-07-13",
-    "ts": "2026-07-13T10:13:31.979396",
-    "detail": "New BUY recommendation \u2014 confidence 71/100",
-    "confidence": 71.4
-  },
-  {
-    "type": "new",
-    "ticker": "FEDERALBNK.NS",
-    "nse_code": "FEDERALBNK",
-    "signal": "BUY",
-    "date": "2026-07-13",
-    "ts": "2026-07-13T10:13:31.979396",
-    "detail": "New BUY recommendation \u2014 confidence 70/100",
-    "confidence": 70.0
-  },
-  {
-    "type": "updated",
-    "ticker": "ICICIBANK.NS",
-    "nse_code": "ICICIBANK",
-    "signal": "BUY",
-    "date": "2026-07-13",
-    "ts": "2026-07-13T10:13:31.979396",
-    "detail": "Confidence \u25b28 (67 \u2192 75) | Rank \u25bc1 (#6 \u2192 #7) | Stop loss moved \u20b91364.88 \u2192 \u20b91376.40",
-    "confidence": 75.0
-  },
-  {
-    "type": "updated",
-    "ticker": "BAJFINANCE.NS",
-    "nse_code": "BAJFINANCE",
-    "signal": "BUY",
-    "date": "2026-07-13",
-    "ts": "2026-07-13T10:13:31.979396",
-    "detail": "Confidence \u25b23 (67 \u2192 70) | Rank \u25bc1 (#8 \u2192 #9) | Stop loss moved \u20b9981.86 \u2192 \u20b9995.53 | Target 1 moved \u20b91093.58 \u2192 \u20b91084.67",
-    "confidence": 70.3
-  },
-  {
-    "type": "updated",
-    "ticker": "UNIONBANK.NS",
-    "nse_code": "UNIONBANK",
-    "signal": "BUY",
-    "date": "2026-07-13",
-    "ts": "2026-07-13T10:13:31.979396",
-    "detail": "Rank \u25bc1 (#1 \u2192 #2) | Stop loss moved \u20b9162.13 \u2192 \u20b9163.19 | Target 1 moved \u20b9181.30 \u2192 \u20b9184.99",
-    "confidence": 65.1
-  },
-  {
     "type": "updated",
     "ticker": "BAJFINANCE.NS",
     "nse_code": "BAJFINANCE",
@@ -5998,5 +5918,85 @@
     "ts": "2026-09-10T03:05:41.721388",
     "detail": "Rank \u25b22 (#9 \u2192 #7)",
     "confidence": 66.6
+  },
+  {
+    "type": "new",
+    "ticker": "COALINDIA.NS",
+    "nse_code": "COALINDIA",
+    "signal": "BUY",
+    "date": "2026-09-10",
+    "ts": "2026-09-10T04:05:40.217795",
+    "detail": "New BUY recommendation \u2014 confidence 76/100",
+    "confidence": 75.9
+  },
+  {
+    "type": "new",
+    "ticker": "IDFCFIRSTB.NS",
+    "nse_code": "IDFCFIRSTB",
+    "signal": "BUY",
+    "date": "2026-09-10",
+    "ts": "2026-09-10T04:05:40.217795",
+    "detail": "New BUY recommendation \u2014 confidence 72/100",
+    "confidence": 72.4
+  },
+  {
+    "type": "new",
+    "ticker": "VBL.NS",
+    "nse_code": "VBL",
+    "signal": "BUY",
+    "date": "2026-09-10",
+    "ts": "2026-09-10T04:05:40.217795",
+    "detail": "New BUY recommendation \u2014 confidence 70/100",
+    "confidence": 70.4
+  },
+  {
+    "type": "removed",
+    "ticker": "UNIONBANK.NS",
+    "nse_code": "UNIONBANK",
+    "signal": "BUY",
+    "date": "2026-09-10",
+    "ts": "2026-09-10T04:05:40.217795",
+    "detail": "Dropped \u2014 no longer meets threshold (was 71/100)",
+    "confidence": 0
+  },
+  {
+    "type": "removed",
+    "ticker": "HOMEFIRST.NS",
+    "nse_code": "HOMEFIRST",
+    "signal": "BUY",
+    "date": "2026-09-10",
+    "ts": "2026-09-10T04:05:40.217795",
+    "detail": "Dropped \u2014 no longer meets threshold (was 67/100)",
+    "confidence": 0
+  },
+  {
+    "type": "updated",
+    "ticker": "ADANIPORTS.NS",
+    "nse_code": "ADANIPORTS",
+    "signal": "BUY",
+    "date": "2026-09-10",
+    "ts": "2026-09-10T04:05:40.217795",
+    "detail": "Confidence \u25b28 (72 \u2192 79) | Stop loss moved \u20b91710.62 \u2192 \u20b91695.68",
+    "confidence": 79.3
+  },
+  {
+    "type": "updated",
+    "ticker": "SIEMENS.NS",
+    "nse_code": "SIEMENS",
+    "signal": "BUY",
+    "date": "2026-09-10",
+    "ts": "2026-09-10T04:05:40.217795",
+    "detail": "Confidence \u25bc4 (82 \u2192 78) | Rank \u25bc1 (#5 \u2192 #6) | Stop loss moved \u20b93848.96 \u2192 \u20b93792.78",
+    "confidence": 78.1
+  },
+  {
+    "type": "updated",
+    "ticker": "JSWSTEEL.NS",
+    "nse_code": "JSWSTEEL",
+    "signal": "BUY",
+    "date": "2026-09-10",
+    "ts": "2026-09-10T04:05:40.217795",
+    "detail": "Confidence \u25b26 (72 \u2192 77) | Rank \u25bc2 (#6 \u2192 #8)",
+    "confidence": 77.4
   }
 ]

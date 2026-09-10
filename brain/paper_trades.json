@@ -1,62 +1,6 @@
 {
-  "capital": 68968.521255,
+  "capital": 62956.583634999995,
   "open_positions": [
-    {
-      "ticker": "VBL.NS",
-      "sector": "FMCG",
-      "open_date": "2026-08-28",
-      "open_session": "midday",
-      "action": "SELL",
-      "entry": 414.7,
-      "qty": 6,
-      "invested": 2488.2,
-      "stop_loss": 409.48,
-      "target": 383.06,
-      "style": "swing",
-      "confidence": 56.6,
-      "patterns": [
-        "adx_strong_trend_down",
-        "bb_lower_bounce",
-        "volume_breakdown_bearish",
-        "pivot_s1_breakdown",
-        "full_bearish_alignment",
-        "early_recovery"
-      ],
-      "buy_reasons": [
-        "MACD histogram positive",
-        "Near lower Bollinger Band",
-        "All EMAs stacked bearish",
-        "High volume confirmation (2.2x avg)",
-        "ADX strong trend \u2014 downside momentum confirmed",
-        "Broke below Pivot S1 support \u2014 bearish",
-        "In a long-term strong downtrend (2yr)",
-        "\u2713 Daily setup aligned with the higher-timeframe trend"
-      ],
-      "current_price": 406.0,
-      "unrealized_pnl": 52.2,
-      "max_held_days": 10,
-      "vol_regime_pct": 0.12,
-      "entry_market": {
-        "nifty_trend": "sideways",
-        "vix": 11.07,
-        "mood": "bearish",
-        "regime": "choppy",
-        "sector_momentum": -0.443,
-        "delivery_signal": "neutral",
-        "rsi": 35.7,
-        "mtf_alignment": "aligned",
-        "opposing_ratio": 0.31,
-        "hist_long_trend": "strong_downtrend"
-      },
-      "view_hist": [
-        0,
-        0,
-        0,
-        0
-      ],
-      "t1_booked": true,
-      "trailing_active": true
-    },
     {
       "ticker": "GAIL.NS",
       "sector": "Energy",
@@ -99,8 +43,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "Near upper Bollinger Band"
       ],
-      "current_price": 174.16,
-      "unrealized_pnl": 34.0,
+      "current_price": 175.23,
+      "unrealized_pnl": 70.38,
       "max_held_days": 10,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -155,8 +99,8 @@
         "Candlestick: three black crows",
         "Broke below Pivot S1 support \u2014 bearish"
       ],
-      "current_price": 1305.1,
-      "unrealized_pnl": 9.6,
+      "current_price": 1307.6,
+      "unrealized_pnl": 17.1,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -172,7 +116,7 @@
         "hist_long_trend": "strong_uptrend"
       },
       "view_hist": [
-        0,
+        1,
         1,
         1,
         1
@@ -214,8 +158,8 @@
         "Candlestick: engulfing bearish",
         "Broke below Pivot S1 support \u2014 bearish"
       ],
-      "current_price": 3957.9,
-      "unrealized_pnl": -24.6,
+      "current_price": 3932.1,
+      "unrealized_pnl": -50.4,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -232,7 +176,7 @@
       },
       "view_hist": [
         0,
-        0,
+        1,
         1,
         1
       ]
@@ -270,8 +214,8 @@
         "\u2713 Daily setup aligned with the higher-timeframe trend",
         "MACD histogram negative"
       ],
-      "current_price": 3300.8,
-      "unrealized_pnl": -42.4,
+      "current_price": 3288.9,
+      "unrealized_pnl": -66.2,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -330,8 +274,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "Near upper Bollinger Band"
       ],
-      "current_price": 1202.3,
-      "unrealized_pnl": -4.0,
+      "current_price": 1203.0,
+      "unrealized_pnl": -0.5,
       "max_held_days": 10,
       "vol_regime_pct": 0.08399999999999999,
       "entry_market": {
@@ -348,8 +292,64 @@
       },
       "view_hist": [
         0,
+        0,
         0
       ]
+    },
+    {
+      "ticker": "IDFCFIRSTB.NS",
+      "sector": "Banking",
+      "open_date": "2026-09-10",
+      "open_session": "morning",
+      "action": "BUY",
+      "entry": 86.98,
+      "qty": 98,
+      "invested": 8524.04,
+      "stop_loss": 84.52,
+      "target": 91.9,
+      "style": "swing",
+      "confidence": 91.8,
+      "patterns": [
+        "full_bullish_alignment",
+        "pivot_r1_breakout",
+        "stoch_rsi_oversold_reversal",
+        "three_white_soldiers",
+        "pivot_point_test",
+        "adx_strong_trend_up",
+        "supertrend_bullish"
+      ],
+      "buy_reasons": [
+        "All EMAs stacked bullish",
+        "RSI=51 in healthy buy zone",
+        "High volume confirmation (1.4x avg)",
+        "Candlestick: three white soldiers",
+        "Supertrend bullish \u2014 price above trend band",
+        "ADX strong trend \u2014 directional move confirmed",
+        "Broke above Pivot R1 with volume \u2014 bullish",
+        "Testing pivot point \u2014 decision zone",
+        "StochRSI oversold with bullish candle \u2014 reversal",
+        "In a long-term strong uptrend (2yr) \u2014 trend on our side",
+        "Near 52-week high (98% of range) \u2014 breakout zone",
+        "\u2713 Daily setup aligned with the higher-timeframe trend",
+        "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
+        "MACD histogram negative"
+      ],
+      "current_price": 86.98,
+      "unrealized_pnl": 0.0,
+      "max_held_days": 10,
+      "vol_regime_pct": 0.12,
+      "entry_market": {
+        "nifty_trend": "down",
+        "vix": 11.92,
+        "mood": "bearish",
+        "regime": "mixed",
+        "sector_momentum": -0.248,
+        "delivery_signal": "neutral",
+        "rsi": 50.6,
+        "mtf_alignment": "aligned",
+        "opposing_ratio": 0.08,
+        "hist_long_trend": "strong_uptrend"
+      }
     }
   ],
   "closed_trades": [
@@ -3113,6 +3113,72 @@
       "won": false,
       "open_days": 2,
       "forensic_done": true
+    },
+    {
+      "ticker": "VBL.NS",
+      "sector": "FMCG",
+      "open_date": "2026-08-28",
+      "open_session": "midday",
+      "action": "SELL",
+      "entry": 414.7,
+      "qty": 6,
+      "invested": 2488.2,
+      "stop_loss": 409.48,
+      "target": 383.06,
+      "style": "swing",
+      "confidence": 56.6,
+      "patterns": [
+        "adx_strong_trend_down",
+        "bb_lower_bounce",
+        "volume_breakdown_bearish",
+        "pivot_s1_breakdown",
+        "full_bearish_alignment",
+        "early_recovery"
+      ],
+      "buy_reasons": [
+        "MACD histogram positive",
+        "Near lower Bollinger Band",
+        "All EMAs stacked bearish",
+        "High volume confirmation (2.2x avg)",
+        "ADX strong trend \u2014 downside momentum confirmed",
+        "Broke below Pivot S1 support \u2014 bearish",
+        "In a long-term strong downtrend (2yr)",
+        "\u2713 Daily setup aligned with the higher-timeframe trend"
+      ],
+      "current_price": 410.05,
+      "unrealized_pnl": 27.9,
+      "max_held_days": 10,
+      "vol_regime_pct": 0.12,
+      "entry_market": {
+        "nifty_trend": "sideways",
+        "vix": 11.07,
+        "mood": "bearish",
+        "regime": "choppy",
+        "sector_momentum": -0.443,
+        "delivery_signal": "neutral",
+        "rsi": 35.7,
+        "mtf_alignment": "aligned",
+        "opposing_ratio": 0.31,
+        "hist_long_trend": "strong_downtrend"
+      },
+      "view_hist": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "t1_booked": true,
+      "trailing_active": true,
+      "close_date": "2026-09-10",
+      "close_session": "morning",
+      "exit_price": 409.48,
+      "exit_reason": "stop_hit",
+      "pnl": 23.9,
+      "pnl_gross": 31.32,
+      "costs": 7.42,
+      "pnl_pct": 0.96,
+      "won": true,
+      "open_days": 9
     }
   ],
   "daily_snapshots": [
@@ -3397,12 +3463,12 @@
       "daily_pnl": -187.45
     }
   ],
-  "daily_pnl_today": -187.44789000000034,
+  "daily_pnl_today": 23.902379999999823,
   "last_snapshot_date": "2026-09-09",
-  "lifetime_wins": 17,
+  "lifetime_wins": 18,
   "lifetime_losses": 25,
-  "lifetime_pnl": -2108.15,
-  "last_pnl_reset_date": "2026-09-09",
+  "lifetime_pnl": -2084.25,
+  "last_pnl_reset_date": "2026-09-10",
   "max_drawdown_pct": 3.25,
   "current_drawdown_pct": 3.25,
   "portfolio_peak": 101210.28,

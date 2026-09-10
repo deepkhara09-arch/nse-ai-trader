@@ -1,25 +1,5 @@
 [
   {
-    "type": "removed",
-    "ticker": "BAJFINANCE.NS",
-    "nse_code": "BAJFINANCE",
-    "signal": "BUY",
-    "date": "2026-07-14",
-    "ts": "2026-07-14T04:05:52.367169",
-    "detail": "Dropped \u2014 no longer meets threshold (was 70/100)",
-    "confidence": 0
-  },
-  {
-    "type": "updated",
-    "ticker": "FEDERALBNK.NS",
-    "nse_code": "FEDERALBNK",
-    "signal": "BUY",
-    "date": "2026-07-14",
-    "ts": "2026-07-14T04:05:52.367169",
-    "detail": "Confidence \u25b25 (70 \u2192 75) | Rank \u25bc5 (#6 \u2192 #11) | Target 1 moved \u20b9349.88 \u2192 \u20b9347.05",
-    "confidence": 75.1
-  },
-  {
     "type": "updated",
     "ticker": "UNIONBANK.NS",
     "nse_code": "UNIONBANK",
@@ -5998,5 +5978,25 @@
     "ts": "2026-09-10T06:15:51.972971",
     "detail": "Confidence \u25bc11 (77 \u2192 66) | Rank \u25b21 (#8 \u2192 #7)",
     "confidence": 66.1
+  },
+  {
+    "type": "removed",
+    "ticker": "JSWSTEEL.NS",
+    "nse_code": "JSWSTEEL",
+    "signal": "BUY",
+    "date": "2026-09-10",
+    "ts": "2026-09-10T07:45:46.120062",
+    "detail": "Dropped \u2014 no longer meets threshold (was 66/100)",
+    "confidence": 0
+  },
+  {
+    "type": "updated",
+    "ticker": "VBL.NS",
+    "nse_code": "VBL",
+    "signal": "BUY",
+    "date": "2026-09-10",
+    "ts": "2026-09-10T07:45:46.120062",
+    "detail": "Stop loss moved \u20b9389.27 \u2192 \u20b9397.03",
+    "confidence": 70.4
   }
 ]

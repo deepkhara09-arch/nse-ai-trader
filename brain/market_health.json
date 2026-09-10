@@ -1,6 +1,6 @@
 {
   "date": "2026-09-10",
-  "session": "midday",
+  "session": "afternoon",
   "nifty": {
     "symbol": "^NSEI",
     "value": 23431.5,
@@ -62,6 +62,7 @@
   "trade_allowed": true,
   "warnings": [
     "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
+    "Nifty choppy intraday \u2014 wait for cleaner setups",
     "PCR low (0.59) \u2014 market complacent, caution"
   ],
   "leading_sectors": [],
@@ -71,7 +72,7 @@
     "IT",
     "Infra"
   ],
-  "intraday_regime": "mixed",
+  "intraday_regime": "choppy",
   "macro": {
     "date": "2026-09-10",
     "session": "midday",

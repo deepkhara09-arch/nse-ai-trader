@@ -1,15 +1,5 @@
 [
   {
-    "type": "updated",
-    "ticker": "UNIONBANK.NS",
-    "nse_code": "UNIONBANK",
-    "signal": "BUY",
-    "date": "2026-07-14",
-    "ts": "2026-07-14T04:05:52.367169",
-    "detail": "Rank \u25b21 (#2 \u2192 #1) | Target 1 moved \u20b9184.99 \u2192 \u20b9183.99",
-    "confidence": 67.2
-  },
-  {
     "type": "removed",
     "ticker": "FEDERALBNK.NS",
     "nse_code": "FEDERALBNK",
@@ -5998,5 +5988,15 @@
     "ts": "2026-09-10T07:45:46.120062",
     "detail": "Stop loss moved \u20b9389.27 \u2192 \u20b9397.03",
     "confidence": 70.4
+  },
+  {
+    "type": "removed",
+    "ticker": "SIEMENS.NS",
+    "nse_code": "SIEMENS",
+    "signal": "BUY",
+    "date": "2026-09-10",
+    "ts": "2026-09-10T09:45:36.646848",
+    "detail": "Dropped \u2014 no longer meets threshold (was 78/100)",
+    "confidence": 0
   }
 ]

@@ -1,35 +1,5 @@
 [
   {
-    "type": "updated",
-    "ticker": "BAJFINANCE.NS",
-    "nse_code": "BAJFINANCE",
-    "signal": "BUY",
-    "date": "2026-07-14",
-    "ts": "2026-07-14T03:05:44.256270",
-    "detail": "Rank \u25bc2 (#9 \u2192 #11)",
-    "confidence": 70.3
-  },
-  {
-    "type": "removed",
-    "ticker": "ICICIBANK.NS",
-    "nse_code": "ICICIBANK",
-    "signal": "BUY",
-    "date": "2026-07-14",
-    "ts": "2026-07-14T04:05:52.367169",
-    "detail": "Dropped \u2014 no longer meets threshold (was 75/100)",
-    "confidence": 0
-  },
-  {
-    "type": "removed",
-    "ticker": "NESTLEIND.NS",
-    "nse_code": "NESTLEIND",
-    "signal": "BUY",
-    "date": "2026-07-14",
-    "ts": "2026-07-14T04:05:52.367169",
-    "detail": "Dropped \u2014 no longer meets threshold (was 71/100)",
-    "confidence": 0
-  },
-  {
     "type": "removed",
     "ticker": "BAJFINANCE.NS",
     "nse_code": "BAJFINANCE",
@@ -5998,5 +5968,35 @@
     "ts": "2026-09-10T04:05:40.217795",
     "detail": "Confidence \u25b26 (72 \u2192 77) | Rank \u25bc2 (#6 \u2192 #8)",
     "confidence": 77.4
+  },
+  {
+    "type": "updated",
+    "ticker": "ADANIPORTS.NS",
+    "nse_code": "ADANIPORTS",
+    "signal": "BUY",
+    "date": "2026-09-10",
+    "ts": "2026-09-10T06:15:51.972971",
+    "detail": "Stop loss moved \u20b91695.68 \u2192 \u20b91710.18 | Target 1 moved \u20b91879.64 \u2192 \u20b91894.14",
+    "confidence": 79.3
+  },
+  {
+    "type": "updated",
+    "ticker": "VBL.NS",
+    "nse_code": "VBL",
+    "signal": "BUY",
+    "date": "2026-09-10",
+    "ts": "2026-09-10T06:15:51.972971",
+    "detail": "Stop loss moved \u20b9397.03 \u2192 \u20b9389.27",
+    "confidence": 69.4
+  },
+  {
+    "type": "updated",
+    "ticker": "JSWSTEEL.NS",
+    "nse_code": "JSWSTEEL",
+    "signal": "BUY",
+    "date": "2026-09-10",
+    "ts": "2026-09-10T06:15:51.972971",
+    "detail": "Confidence \u25bc11 (77 \u2192 66) | Rank \u25b21 (#8 \u2192 #7)",
+    "confidence": 66.1
   }
 ]

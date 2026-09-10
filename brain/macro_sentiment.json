@@ -1,55 +1,53 @@
 {
-  "date": "2026-09-09",
-  "session": "midday",
-  "generated_at": "2026-09-09T06:15:50.287341",
-  "global_score": 0.189,
-  "india_score": -1.0,
-  "overall_score": -0.346,
-  "mood": "risk_off",
+  "date": "2026-09-10",
+  "session": "preopen",
+  "generated_at": "2026-09-10T03:05:39.662520",
+  "global_score": 0.209,
+  "india_score": 0.0,
+  "overall_score": 0.115,
+  "mood": "neutral",
   "drivers": [
-    "How to create a \u2018forever paycheck\u2019 without paying for an annuity",
-    "Bombardier\u2019s stock drops as the U.S.-Canada trade war intensifies. Here\u2019s what Trump is targeting next.",
-    "How to invest in a booming stock market that\u2019s way cheaper than the S&P 500",
-    "\u2018I\u2019m the executor\u2019: My two siblings and I inherited an IRA. Can we just cash it out?",
-    "Memory chips have come to rule the AI boom. Why Micron\u2019s reign could be here to stay.",
-    "Oracle\u2019s stock gets a boost as the OpenAI ecosystem comes back into favor",
-    "Qualcomm\u2019s stock climbs as Amazon chip deal offers investors much-needed good news",
-    "Why does almost nobody want to befriend older people like me \u2014 except scammers?"
+    "Trump promises $5,000 checks if Republicans win the midterms. But he also promised tariff dividends last year that never came.",
+    "Hunter Biden memecoin $LAPTOP loses 95% of market value just hours after launch",
+    "Diesel prices hit another record high. If you\u2019re shocked, wait until you see your grocery bill.",
+    "I\u2019m a single 58-year-old veteran in California with $1.5 million and a VA pension. Can I retire?",
+    "Home-insurance premiums just hit a record high. Here\u2019s where they spiked the most.",
+    "\u2018We fear financial exploitation\u2019: Who will manage our finances if my wife and I become incapacitated?",
+    "The bull market\u2019s biggest enemy right now could be Bessent\u2019s interventions",
+    "\u2018I\u2019m the executor\u2019: My two siblings and I inherited an IRA. Can we just cash it out?"
   ],
   "global_cues": {
     "dow": {
-      "last": 52786.07,
-      "chg_pct": -1.18
+      "last": 52380.66,
+      "chg_pct": -0.77
     },
     "nasdaq": {
-      "last": 26421.41,
-      "chg_pct": -0.32
+      "last": 26253.34,
+      "chg_pct": -0.64
     },
     "sp500": {
-      "last": 7673.52,
-      "chg_pct": -0.58
+      "last": 7636.36,
+      "chg_pct": -0.48
     },
     "nikkei": {
-      "last": 65163.56,
-      "chg_pct": -0.16
+      "last": 64597.46,
+      "chg_pct": -0.84
     },
     "crude": {
-      "last": 93.03,
-      "chg_pct": 1.69
+      "last": 96.19,
+      "chg_pct": 0.15
     },
     "usdinr": {
-      "last": 95.22,
-      "chg_pct": 0.77
+      "last": 95.09,
+      "chg_pct": 0.28
     },
     "gold": {
-      "last": 4393.9,
-      "chg_pct": -0.81
+      "last": 4463.2,
+      "chg_pct": 1.07
     }
   },
-  "summary": "Overall macro mood is risk-off (-0.35). US Dow -1.2% overnight. Crude +1.7%. USD/INR +0.8%. Notable: US Fed rate cut / dovish; US Fed rate hike / hawkish; Geopolitical conflict / war; Tariffs / trade war.",
+  "summary": "Overall macro mood is neutral (+0.12). US Dow -0.8% overnight. Crude +0.1%. USD/INR +0.3%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
   "playbook": [
-    "Dovish Fed usually lifts EM equities incl. Nifty; FIIs tend to buy.",
-    "Hawkish Fed pressures Nifty via FII outflows and stronger USD.",
     "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
     "Trade-war headlines spook global markets; IT & export names react most."
   ],

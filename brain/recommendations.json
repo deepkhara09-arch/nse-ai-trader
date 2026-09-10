@@ -3,10 +3,10 @@
     "ticker": "SIEMENS.NS",
     "nse_code": "SIEMENS",
     "company_name": "SIEMENS.NS",
-    "date": "2026-09-09",
-    "generated_at": "2026-09-09 10:12 UTC",
+    "date": "2026-09-10",
+    "generated_at": "2026-09-10 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -40,10 +40,10 @@
     "pattern_score": 4.5,
     "confluence_bonus": 5.0,
     "paper_bonus": 5.0,
-    "success_probability": 0.595,
-    "base_success_prob": 0.582,
-    "profit_probability": 0.078,
-    "composite_score": 50.26,
+    "success_probability": 0.591,
+    "base_success_prob": 0.575,
+    "profit_probability": 0.065,
+    "composite_score": 49.44,
     "focus_rank": 5,
     "rank_delta": 0,
     "intention": "BUY SIEMENS for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
@@ -65,7 +65,7 @@
     "data_confidence": "Estimated",
     "data_confidence_key": "estimated",
     "data_confidence_note": "Only 3 paper trade(s) \u2014 probability is an indicator-based estimate, not yet proven",
-    "expected_edge_r": 0.078,
+    "expected_edge_r": 0.065,
     "buy_score": 15.77,
     "sell_score": 1,
     "reasons": [
@@ -104,12 +104,12 @@
       "History backtest: this kind of BUY setup worked 63% of the time over ~1 week on this stock (sample: 51)"
     ],
     "patterns_seen": [
+      "full_bullish_alignment",
       "rsi_bullish_divergence",
-      "pivot_point_test",
       "tweezer_bottom",
       "adx_strong_trend_up",
-      "supertrend_bullish",
-      "full_bullish_alignment"
+      "pivot_point_test",
+      "supertrend_bullish"
     ],
     "reliable_patterns": [
       "full_bullish_alignment"
@@ -140,18 +140,17 @@
     "market_mood": "bearish",
     "market_warning": [
       "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
-      "Global macro risk-off (-0.35) \u2014 Overall macro mood is risk-off (-0.35). US Dow -1.2% overnight. Crude +1.7%. USD/INR +0.8%. Notable: US Fed rate cut / d",
-      "PCR low (0.60) \u2014 market complacent, caution"
+      "PCR low (0.59) \u2014 market complacent, caution"
     ]
   },
   {
     "ticker": "ADANIPORTS.NS",
     "nse_code": "ADANIPORTS",
     "company_name": "Adani Ports & SEZ",
-    "date": "2026-09-09",
-    "generated_at": "2026-09-09 10:12 UTC",
+    "date": "2026-09-10",
+    "generated_at": "2026-09-10 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -185,10 +184,10 @@
     "pattern_score": 1.0,
     "confluence_bonus": 7.5,
     "paper_bonus": 0.0,
-    "success_probability": 0.568,
-    "base_success_prob": 0.583,
-    "profit_probability": 0.749,
-    "composite_score": 63.2,
+    "success_probability": 0.563,
+    "base_success_prob": 0.576,
+    "profit_probability": 0.728,
+    "composite_score": 62.24,
     "focus_rank": 2,
     "rank_delta": 0,
     "intention": "BUY ADANIPORTS for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
@@ -211,7 +210,7 @@
     "data_confidence": "Estimated",
     "data_confidence_key": "estimated",
     "data_confidence_note": "Only 0 paper trade(s) \u2014 probability is an indicator-based estimate, not yet proven",
-    "expected_edge_r": 0.749,
+    "expected_edge_r": 0.728,
     "buy_score": 11.12,
     "sell_score": 2,
     "reasons": [
@@ -276,18 +275,17 @@
     "market_mood": "bearish",
     "market_warning": [
       "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
-      "Global macro risk-off (-0.35) \u2014 Overall macro mood is risk-off (-0.35). US Dow -1.2% overnight. Crude +1.7%. USD/INR +0.8%. Notable: US Fed rate cut / d",
-      "PCR low (0.60) \u2014 market complacent, caution"
+      "PCR low (0.59) \u2014 market complacent, caution"
     ]
   },
   {
     "ticker": "JSWSTEEL.NS",
     "nse_code": "JSWSTEEL",
     "company_name": "JSW Steel Ltd",
-    "date": "2026-09-09",
-    "generated_at": "2026-09-09 10:12 UTC",
+    "date": "2026-09-10",
+    "generated_at": "2026-09-10 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -321,10 +319,10 @@
     "pattern_score": 7.5,
     "confluence_bonus": 7.5,
     "paper_bonus": 5.0,
-    "success_probability": 0.598,
-    "base_success_prob": 0.613,
-    "profit_probability": 0.099,
-    "composite_score": 49.16,
+    "success_probability": 0.593,
+    "base_success_prob": 0.606,
+    "profit_probability": 0.087,
+    "composite_score": 48.36,
     "focus_rank": 6,
     "rank_delta": 0,
     "intention": "BUY JSWSTEEL for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
@@ -347,7 +345,7 @@
     "data_confidence": "Estimated",
     "data_confidence_key": "estimated",
     "data_confidence_note": "Only 3 paper trade(s) \u2014 probability is an indicator-based estimate, not yet proven",
-    "expected_edge_r": 0.099,
+    "expected_edge_r": 0.087,
     "buy_score": 9.82,
     "sell_score": 1,
     "reasons": [
@@ -381,9 +379,9 @@
       "History backtest: this kind of BUY setup worked 56% of the time over ~1 week on this stock (sample: 64)"
     ],
     "patterns_seen": [
-      "full_bullish_alignment",
+      "adx_strong_trend_up",
       "pivot_point_test",
-      "adx_strong_trend_up"
+      "full_bullish_alignment"
     ],
     "reliable_patterns": [
       "full_bullish_alignment",
@@ -416,18 +414,17 @@
     "market_mood": "bearish",
     "market_warning": [
       "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
-      "Global macro risk-off (-0.35) \u2014 Overall macro mood is risk-off (-0.35). US Dow -1.2% overnight. Crude +1.7%. USD/INR +0.8%. Notable: US Fed rate cut / d",
-      "PCR low (0.60) \u2014 market complacent, caution"
+      "PCR low (0.59) \u2014 market complacent, caution"
     ]
   },
   {
     "ticker": "UNIONBANK.NS",
     "nse_code": "UNIONBANK",
     "company_name": "UNIONBANK.NS",
-    "date": "2026-09-09",
-    "generated_at": "2026-09-09 10:12 UTC",
+    "date": "2026-09-10",
+    "generated_at": "2026-09-10 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -461,10 +458,10 @@
     "pattern_score": 0.0,
     "confluence_bonus": 10,
     "paper_bonus": 0.0,
-    "success_probability": 0.523,
-    "base_success_prob": 0.514,
-    "profit_probability": 0.285,
-    "composite_score": 54.49,
+    "success_probability": 0.518,
+    "base_success_prob": 0.507,
+    "profit_probability": 0.267,
+    "composite_score": 53.58,
     "focus_rank": 4,
     "rank_delta": 0,
     "intention": "BUY UNIONBANK for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
@@ -488,7 +485,7 @@
     "data_confidence": "Estimated",
     "data_confidence_key": "estimated",
     "data_confidence_note": "Only 2 paper trade(s) \u2014 probability is an indicator-based estimate, not yet proven",
-    "expected_edge_r": 0.285,
+    "expected_edge_r": 0.267,
     "buy_score": 8.52,
     "sell_score": 5.0,
     "reasons": [
@@ -520,10 +517,10 @@
     ],
     "patterns_seen": [
       "pivot_s1_breakdown",
-      "bb_lower_bounce",
-      "adx_strong_trend_up",
       "three_black_crows",
-      "full_bullish_alignment"
+      "bb_lower_bounce",
+      "full_bullish_alignment",
+      "adx_strong_trend_up"
     ],
     "reliable_patterns": [],
     "nearest_support": 169.91,
@@ -552,18 +549,17 @@
     "market_mood": "bearish",
     "market_warning": [
       "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
-      "Global macro risk-off (-0.35) \u2014 Overall macro mood is risk-off (-0.35). US Dow -1.2% overnight. Crude +1.7%. USD/INR +0.8%. Notable: US Fed rate cut / d",
-      "PCR low (0.60) \u2014 market complacent, caution"
+      "PCR low (0.59) \u2014 market complacent, caution"
     ]
   },
   {
     "ticker": "HOMEFIRST.NS",
     "nse_code": "HOMEFIRST",
     "company_name": "HOMEFIRST.NS",
-    "date": "2026-09-09",
-    "generated_at": "2026-09-09 10:12 UTC",
+    "date": "2026-09-10",
+    "generated_at": "2026-09-10 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -597,11 +593,11 @@
     "pattern_score": 8.5,
     "confluence_bonus": 7.5,
     "paper_bonus": 0.0,
-    "success_probability": 0.565,
-    "base_success_prob": 0.601,
-    "profit_probability": 0.076,
-    "composite_score": 48.52,
-    "focus_rank": 9,
+    "success_probability": 0.566,
+    "base_success_prob": 0.598,
+    "profit_probability": 0.071,
+    "composite_score": 48.16,
+    "focus_rank": 7,
     "rank_delta": 0,
     "intention": "BUY HOMEFIRST for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
     "confluence_count": 5,
@@ -613,9 +609,9 @@
       "news"
     ],
     "backtest_tested": true,
-    "backtest_hit_5d": 0.48,
-    "backtest_hit_10d": 0.46,
-    "backtest_sample": 50,
+    "backtest_hit_5d": 0.49,
+    "backtest_hit_10d": 0.451,
+    "backtest_sample": 51,
     "hist_long_trend": "strong_uptrend",
     "hist_52w_position": 66.3,
     "hist_personality": "choppy",
@@ -623,7 +619,7 @@
     "data_confidence": "Estimated",
     "data_confidence_key": "estimated",
     "data_confidence_note": "Only 4 paper trade(s) \u2014 probability is an indicator-based estimate, not yet proven",
-    "expected_edge_r": 0.076,
+    "expected_edge_r": 0.071,
     "buy_score": 10.3,
     "sell_score": 6.5,
     "reasons": [
@@ -651,16 +647,16 @@
       "Resistance at \u20b91237.10 is natural target",
       "Latest news: 'Home First Finance Company India Share: Bull Case vs Bear Case for 202'",
       "Confluence: 5 independent signal families agree (trend, momentum, volume, pattern, news)",
-      "History backtest: this kind of BUY setup worked 48% of the time over ~1 week on this stock (sample: 50)"
+      "History backtest: this kind of BUY setup worked 49% of the time over ~1 week on this stock (sample: 51)"
     ],
     "patterns_seen": [
       "volume_climax_top",
-      "gap_up_reversal",
-      "full_bullish_alignment",
       "pivot_s1_breakdown",
-      "stoch_rsi_overbought_reversal",
+      "full_bullish_alignment",
       "bb_upper_rejection",
-      "volume_breakdown_bearish"
+      "gap_up_reversal",
+      "volume_breakdown_bearish",
+      "stoch_rsi_overbought_reversal"
     ],
     "reliable_patterns": [
       "pivot_point_test",
@@ -693,8 +689,7 @@
     "market_mood": "bearish",
     "market_warning": [
       "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
-      "Global macro risk-off (-0.35) \u2014 Overall macro mood is risk-off (-0.35). US Dow -1.2% overnight. Crude +1.7%. USD/INR +0.8%. Notable: US Fed rate cut / d",
-      "PCR low (0.60) \u2014 market complacent, caution"
+      "PCR low (0.59) \u2014 market complacent, caution"
     ]
   }
 ]

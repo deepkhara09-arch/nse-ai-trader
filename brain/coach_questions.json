@@ -1,55 +1,5 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of outside_bar, pivot_point_test, pivot_s1_bounce mean for a swing trade on VBL? Current RSI=35, MACD hist=-0.2700, Vol=0.6x average. Signal is BUY.",
-    "context": {
-      "ticker": "VBL.NS",
-      "signal": "BUY",
-      "patterns": "outside_bar, pivot_point_test, pivot_s1_bounce",
-      "rsi": 35.3
-    },
-    "queued_at": "2026-09-09T10:11:17.036708"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of three_white_soldiers, full_bearish_alignment, supertrend_bullish mean for a swing trade on ADANIPORTS? Current RSI=54, MACD hist=+6.9954, Vol=0.5x average. Signal is BUY.",
-    "context": {
-      "ticker": "ADANIPORTS.NS",
-      "signal": "BUY",
-      "patterns": "three_white_soldiers, full_bearish_alignment, supertrend_bullish",
-      "rsi": 54.0
-    },
-    "queued_at": "2026-09-09T10:11:17.039394"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of pivot_s1_breakdown, adx_strong_trend_up, three_black_crows mean for a swing trade on UNIONBANK? Current RSI=43, MACD hist=-0.7808, Vol=0.6x average. Signal is BUY.",
-    "context": {
-      "ticker": "UNIONBANK.NS",
-      "signal": "BUY",
-      "patterns": "pivot_s1_breakdown, adx_strong_trend_up, three_black_crows",
-      "rsi": 43.5
-    },
-    "queued_at": "2026-09-09T10:11:17.041019"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of inside_bar, pivot_s1_breakdown, doji mean for a swing trade on GRASIM? Current RSI=54, MACD hist=-3.8291, Vol=0.7x average. Signal is BUY.",
-    "context": {
-      "ticker": "GRASIM.NS",
-      "signal": "BUY",
-      "patterns": "inside_bar, pivot_s1_breakdown, doji",
-      "rsi": 54.0
-    },
-    "queued_at": "2026-09-09T10:11:17.045859"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of volume_climax_top, gap_up_reversal, stoch_rsi_overbought_reversal mean for a swing trade on HOMEFIRST? Current RSI=70, MACD hist=+4.4336, Vol=3.9x average. Signal is BUY.",
-    "context": {
-      "ticker": "HOMEFIRST.NS",
-      "signal": "BUY",
-      "patterns": "volume_climax_top, gap_up_reversal, stoch_rsi_overbought_reversal",
-      "rsi": 69.9
-    },
-    "queued_at": "2026-09-09T10:11:17.046956"
-  },
-  {
     "question": "In Indian NSE markets, what does the combination of inside_bar, pivot_s1_breakdown, doji mean for a swing trade on GRASIM? Current RSI=54, MACD hist=-3.8291, Vol=0.7x average. Signal is BUY.",
     "context": {
       "ticker": "GRASIM.NS",
@@ -98,5 +48,55 @@
       "rsi": 43.5
     },
     "queued_at": "2026-09-09T10:12:32.233094"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of inside_bar, pivot_s1_breakdown, doji mean for a swing trade on GRASIM? Current RSI=54, MACD hist=-3.8291, Vol=0.7x average. Signal is BUY.",
+    "context": {
+      "ticker": "GRASIM.NS",
+      "signal": "BUY",
+      "patterns": "inside_bar, pivot_s1_breakdown, doji",
+      "rsi": 54.0
+    },
+    "queued_at": "2026-09-10T03:05:41.443489"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of volume_climax_top, gap_up_reversal, stoch_rsi_overbought_reversal mean for a swing trade on HOMEFIRST? Current RSI=70, MACD hist=+4.4336, Vol=3.9x average. Signal is BUY.",
+    "context": {
+      "ticker": "HOMEFIRST.NS",
+      "signal": "BUY",
+      "patterns": "volume_climax_top, gap_up_reversal, stoch_rsi_overbought_reversal",
+      "rsi": 69.9
+    },
+    "queued_at": "2026-09-10T03:05:41.555675"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of outside_bar, pivot_s1_bounce, pivot_point_test mean for a swing trade on VBL? Current RSI=35, MACD hist=-0.2700, Vol=0.6x average. Signal is BUY.",
+    "context": {
+      "ticker": "VBL.NS",
+      "signal": "BUY",
+      "patterns": "outside_bar, pivot_s1_bounce, pivot_point_test",
+      "rsi": 35.3
+    },
+    "queued_at": "2026-09-10T03:05:41.654689"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of three_white_soldiers, full_bearish_alignment, supertrend_bullish mean for a swing trade on ADANIPORTS? Current RSI=54, MACD hist=+6.9954, Vol=0.5x average. Signal is BUY.",
+    "context": {
+      "ticker": "ADANIPORTS.NS",
+      "signal": "BUY",
+      "patterns": "three_white_soldiers, full_bearish_alignment, supertrend_bullish",
+      "rsi": 54.0
+    },
+    "queued_at": "2026-09-10T03:05:41.675473"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of pivot_s1_breakdown, three_black_crows, adx_strong_trend_up mean for a swing trade on UNIONBANK? Current RSI=43, MACD hist=-0.7808, Vol=0.6x average. Signal is BUY.",
+    "context": {
+      "ticker": "UNIONBANK.NS",
+      "signal": "BUY",
+      "patterns": "pivot_s1_breakdown, three_black_crows, adx_strong_trend_up",
+      "rsi": 43.5
+    },
+    "queued_at": "2026-09-10T03:05:41.695342"
   }
 ]

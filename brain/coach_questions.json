@@ -1,102 +1,102 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of pivot_point_test, three_white_soldiers, stoch_rsi_oversold_reversal mean for a swing trade on IDFCFIRSTB? Current RSI=51, MACD hist=-0.0441, Vol=1.4x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_up, pivot_s1_breakdown, rsi_bearish_divergence mean for a swing trade on JSWSTEEL? Current RSI=53, MACD hist=-2.9589, Vol=0.9x average. Signal is BUY.",
     "context": {
-      "ticker": "IDFCFIRSTB.NS",
+      "ticker": "JSWSTEEL.NS",
       "signal": "BUY",
-      "patterns": "pivot_point_test, three_white_soldiers, stoch_rsi_oversold_reversal",
-      "rsi": 50.6
+      "patterns": "adx_strong_trend_up, pivot_s1_breakdown, rsi_bearish_divergence",
+      "rsi": 53.0
     },
-    "queued_at": "2026-09-10T07:45:46.116440"
+    "queued_at": "2026-09-10T10:11:12.871647"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of bb_upper_rejection, three_white_soldiers, supertrend_bullish mean for a swing trade on COALINDIA? Current RSI=85, MACD hist=+3.9021, Vol=2.1x average. Signal is BUY.",
-    "context": {
-      "ticker": "COALINDIA.NS",
-      "signal": "BUY",
-      "patterns": "bb_upper_rejection, three_white_soldiers, supertrend_bullish",
-      "rsi": 85.3
-    },
-    "queued_at": "2026-09-10T09:45:36.504032"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of oversold_macd_reversal, strong_bullish_marubozu, macd_bullish_crossover mean for a swing trade on VBL? Current RSI=31, MACD hist=+0.0884, Vol=1.7x average. Signal is BUY.",
-    "context": {
-      "ticker": "VBL.NS",
-      "signal": "BUY",
-      "patterns": "oversold_macd_reversal, strong_bullish_marubozu, macd_bullish_crossover",
-      "rsi": 31.3
-    },
-    "queued_at": "2026-09-10T09:45:36.506027"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of bb_upper_rejection, supertrend_bullish, volume_breakout_bullish mean for a swing trade on ADANIPORTS? Current RSI=61, MACD hist=+11.8029, Vol=2.3x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of ema_golden_cross, supertrend_bullish, bb_upper_rejection mean for a swing trade on ADANIPORTS? Current RSI=61, MACD hist=+11.8029, Vol=2.3x average. Signal is BUY.",
     "context": {
       "ticker": "ADANIPORTS.NS",
       "signal": "BUY",
-      "patterns": "bb_upper_rejection, supertrend_bullish, volume_breakout_bullish",
+      "patterns": "ema_golden_cross, supertrend_bullish, bb_upper_rejection",
       "rsi": 61.3
     },
-    "queued_at": "2026-09-10T09:45:36.507983"
+    "queued_at": "2026-09-10T10:11:12.872503"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of pivot_point_test, three_white_soldiers, stoch_rsi_oversold_reversal mean for a swing trade on IDFCFIRSTB? Current RSI=51, MACD hist=-0.0441, Vol=1.4x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of rsi_bullish_divergence, morning_star, supertrend_bullish mean for a swing trade on POWERGRID? Current RSI=55, MACD hist=+0.5753, Vol=1.4x average. Signal is BUY.",
+    "context": {
+      "ticker": "POWERGRID.NS",
+      "signal": "BUY",
+      "patterns": "rsi_bullish_divergence, morning_star, supertrend_bullish",
+      "rsi": 54.7
+    },
+    "queued_at": "2026-09-10T10:11:12.874502"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of tweezer_top, pivot_s1_breakdown, pivot_point_test mean for a swing trade on IDFCFIRSTB? Current RSI=51, MACD hist=-0.0441, Vol=1.4x average. Signal is BUY.",
     "context": {
       "ticker": "IDFCFIRSTB.NS",
       "signal": "BUY",
-      "patterns": "pivot_point_test, three_white_soldiers, stoch_rsi_oversold_reversal",
+      "patterns": "tweezer_top, pivot_s1_breakdown, pivot_point_test",
       "rsi": 50.6
     },
-    "queued_at": "2026-09-10T09:45:36.511523"
+    "queued_at": "2026-09-10T10:11:12.875359"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of pivot_point_test, three_white_soldiers, stoch_rsi_oversold_reversal mean for a swing trade on IDFCFIRSTB? Current RSI=51, MACD hist=-0.0441, Vol=1.4x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of tweezer_top, pivot_s1_breakdown, pivot_point_test mean for a swing trade on IDFCFIRSTB? Current RSI=51, MACD hist=-0.0441, Vol=1.4x average. Signal is BUY.",
     "context": {
       "ticker": "IDFCFIRSTB.NS",
       "signal": "BUY",
-      "patterns": "pivot_point_test, three_white_soldiers, stoch_rsi_oversold_reversal",
+      "patterns": "tweezer_top, pivot_s1_breakdown, pivot_point_test",
       "rsi": 50.6
     },
-    "queued_at": "2026-09-10T09:45:36.516940"
+    "queued_at": "2026-09-10T10:11:12.879385"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of bb_upper_rejection, three_white_soldiers, supertrend_bullish mean for a swing trade on COALINDIA? Current RSI=85, MACD hist=+3.9021, Vol=2.1x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_up, pivot_s1_breakdown, rsi_bearish_divergence mean for a swing trade on JSWSTEEL? Current RSI=53, MACD hist=-2.9589, Vol=0.9x average. Signal is BUY.",
     "context": {
-      "ticker": "COALINDIA.NS",
+      "ticker": "JSWSTEEL.NS",
       "signal": "BUY",
-      "patterns": "bb_upper_rejection, three_white_soldiers, supertrend_bullish",
-      "rsi": 85.3
+      "patterns": "adx_strong_trend_up, pivot_s1_breakdown, rsi_bearish_divergence",
+      "rsi": 53.0
     },
-    "queued_at": "2026-09-10T09:45:36.628147"
+    "queued_at": "2026-09-10T10:12:19.021427"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of oversold_macd_reversal, strong_bullish_marubozu, macd_bullish_crossover mean for a swing trade on VBL? Current RSI=31, MACD hist=+0.0884, Vol=1.7x average. Signal is BUY.",
-    "context": {
-      "ticker": "VBL.NS",
-      "signal": "BUY",
-      "patterns": "oversold_macd_reversal, strong_bullish_marubozu, macd_bullish_crossover",
-      "rsi": 31.3
-    },
-    "queued_at": "2026-09-10T09:45:36.632961"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of bb_upper_rejection, supertrend_bullish, volume_breakout_bullish mean for a swing trade on ADANIPORTS? Current RSI=61, MACD hist=+11.8029, Vol=2.3x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of ema_golden_cross, supertrend_bullish, bb_upper_rejection mean for a swing trade on ADANIPORTS? Current RSI=61, MACD hist=+11.8029, Vol=2.3x average. Signal is BUY.",
     "context": {
       "ticker": "ADANIPORTS.NS",
       "signal": "BUY",
-      "patterns": "bb_upper_rejection, supertrend_bullish, volume_breakout_bullish",
+      "patterns": "ema_golden_cross, supertrend_bullish, bb_upper_rejection",
       "rsi": 61.3
     },
-    "queued_at": "2026-09-10T09:45:36.637368"
+    "queued_at": "2026-09-10T10:12:19.024764"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of pivot_point_test, three_white_soldiers, stoch_rsi_oversold_reversal mean for a swing trade on IDFCFIRSTB? Current RSI=51, MACD hist=-0.0441, Vol=1.4x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of rsi_bullish_divergence, morning_star, supertrend_bullish mean for a swing trade on POWERGRID? Current RSI=55, MACD hist=+0.5753, Vol=1.4x average. Signal is BUY.",
+    "context": {
+      "ticker": "POWERGRID.NS",
+      "signal": "BUY",
+      "patterns": "rsi_bullish_divergence, morning_star, supertrend_bullish",
+      "rsi": 54.7
+    },
+    "queued_at": "2026-09-10T10:12:19.028759"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of tweezer_top, pivot_s1_breakdown, pivot_point_test mean for a swing trade on IDFCFIRSTB? Current RSI=51, MACD hist=-0.0441, Vol=1.4x average. Signal is BUY.",
     "context": {
       "ticker": "IDFCFIRSTB.NS",
       "signal": "BUY",
-      "patterns": "pivot_point_test, three_white_soldiers, stoch_rsi_oversold_reversal",
+      "patterns": "tweezer_top, pivot_s1_breakdown, pivot_point_test",
       "rsi": 50.6
     },
-    "queued_at": "2026-09-10T09:45:36.643346"
+    "queued_at": "2026-09-10T10:12:19.029666"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of near_52w_high, supertrend_bullish, bb_lower_bounce mean for a swing trade on TITAN? Current RSI=40, MACD hist=-31.8733, Vol=0.8x average. Signal is BUY.",
+    "context": {
+      "ticker": "TITAN.NS",
+      "signal": "BUY",
+      "patterns": "near_52w_high, supertrend_bullish, bb_lower_bounce",
+      "rsi": 39.8
+    },
+    "queued_at": "2026-09-10T10:12:19.032582"
   }
 ]

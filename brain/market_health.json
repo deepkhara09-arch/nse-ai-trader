@@ -1,6 +1,6 @@
 {
   "date": "2026-09-10",
-  "session": "intraday_close",
+  "session": "preclose",
   "nifty": {
     "symbol": "^NSEI",
     "value": 23431.5,
@@ -62,8 +62,7 @@
   "trade_allowed": true,
   "warnings": [
     "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
-    "Nifty in intraday downtrend \u2014 avoid new longs this session",
-    "PCR low (0.59) \u2014 market complacent, caution"
+    "Nifty choppy intraday \u2014 wait for cleaner setups"
   ],
   "leading_sectors": [],
   "market_regime": "normal",
@@ -72,7 +71,7 @@
     "IT",
     "Infra"
   ],
-  "intraday_regime": "trending_down",
+  "intraday_regime": "choppy",
   "macro": {
     "date": "2026-09-10",
     "session": "midday",
@@ -324,13 +323,13 @@
   },
   "pcr": {
     "date": "2026-09-10",
-    "pcr": 0.591,
-    "reading": "complacent_caution",
-    "total_pe_oi": 1551389,
-    "total_ce_oi": 2623737,
-    "spot": 23431.5,
-    "max_pain": 23600.0,
-    "max_pain_dist_pct": -0.72,
+    "pcr": 0.638,
+    "reading": "bearish_bias",
+    "total_pe_oi": 1929927,
+    "total_ce_oi": 3023759,
+    "spot": 23477.8,
+    "max_pain": 23500.0,
+    "max_pain_dist_pct": -0.09,
     "oi_bias": "call_heavy_resistance",
     "ok": true,
     "error": ""

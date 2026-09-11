@@ -1,16 +1,6 @@
 [
   {
     "type": "new",
-    "ticker": "ICICIBANK.NS",
-    "nse_code": "ICICIBANK",
-    "signal": "BUY",
-    "date": "2026-07-15",
-    "ts": "2026-07-15T10:12:31.541415",
-    "detail": "New BUY recommendation \u2014 confidence 67/100",
-    "confidence": 66.8
-  },
-  {
-    "type": "new",
     "ticker": "MARICO.NS",
     "nse_code": "MARICO",
     "signal": "BUY",
@@ -5997,6 +5987,16 @@
     "date": "2026-09-11",
     "ts": "2026-09-11T06:15:48.637193",
     "detail": "New BUY recommendation \u2014 confidence 67/100",
+    "confidence": 67.4
+  },
+  {
+    "type": "updated",
+    "ticker": "IDFCFIRSTB.NS",
+    "nse_code": "IDFCFIRSTB",
+    "signal": "BUY",
+    "date": "2026-09-11",
+    "ts": "2026-09-11T09:45:39.718951",
+    "detail": "Stop loss moved \u20b984.41 \u2192 \u20b983.75 | Target 1 moved \u20b990.57 \u2192 \u20b991.25",
     "confidence": 67.4
   }
 ]

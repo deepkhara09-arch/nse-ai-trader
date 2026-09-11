@@ -1,6 +1,6 @@
 {
   "date": "2026-09-11",
-  "session": "morning",
+  "session": "midday",
   "nifty": {
     "symbol": "^NSEI",
     "value": 23477.8,
@@ -58,11 +58,10 @@
       "ath_pct_60d": -3.27
     }
   },
-  "market_mood": "bearish",
+  "market_mood": "neutral",
   "trade_allowed": true,
   "warnings": [
-    "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
-    "Nifty choppy intraday \u2014 wait for cleaner setups"
+    "Nifty in downtrend (down) \u2014 only high-confidence BUY signals"
   ],
   "leading_sectors": [],
   "market_regime": "normal",
@@ -72,15 +71,15 @@
     "Bank",
     "Infra"
   ],
-  "intraday_regime": "choppy",
+  "intraday_regime": "mixed",
   "macro": {
     "date": "2026-09-11",
-    "session": "preopen",
-    "generated_at": "2026-09-11T03:05:43.128818",
-    "global_score": 0.159,
-    "india_score": 0.0,
-    "overall_score": 0.087,
-    "mood": "neutral",
+    "session": "midday",
+    "generated_at": "2026-09-11T06:15:40.636754",
+    "global_score": 0.16,
+    "india_score": 1.0,
+    "overall_score": 0.538,
+    "mood": "risk_on",
     "drivers": [
       "Oracle\u2019s AI bet pays off as cloud momentum helps drive a rosier forecast",
       "Adobe\u2019s latest earnings leave Wall Street wanting more",
@@ -105,23 +104,23 @@
         "chg_pct": -0.58
       },
       "nikkei": {
-        "last": 63469.39,
-        "chg_pct": -2.76
+        "last": 63931.86,
+        "chg_pct": -2.05
       },
       "crude": {
-        "last": 102.79,
-        "chg_pct": 7.02
+        "last": 102.48,
+        "chg_pct": 6.69
       },
       "usdinr": {
-        "last": 95.43,
-        "chg_pct": 0.33
+        "last": 95.72,
+        "chg_pct": 0.64
       },
       "gold": {
-        "last": 4362.5,
-        "chg_pct": -1.21
+        "last": 4364.5,
+        "chg_pct": -1.17
       }
     },
-    "summary": "Overall macro mood is neutral (+0.09). US Dow -0.6% overnight. Crude +7.0%. USD/INR +0.3%. Notable: US Fed rate hike / hawkish; Geopolitical conflict / war; Tariffs / trade war.",
+    "summary": "Overall macro mood is risk-on (+0.54). US Dow -0.6% overnight. Crude +6.7%. USD/INR +0.6%. Notable: US Fed rate hike / hawkish; Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
       "Hawkish Fed pressures Nifty via FII outflows and stronger USD.",
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
@@ -130,6 +129,7 @@
     "playbook_bias": "risk_off",
     "article_count": 60
   },
+  "macro_tailwind": true,
   "macro_risk_factor": 1.0,
   "fii_dii": {
     "date": "2026-09-11",

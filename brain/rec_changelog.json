@@ -1,16 +1,6 @@
 [
   {
     "type": "new",
-    "ticker": "PIDILITIND.NS",
-    "nse_code": "PIDILITIND",
-    "signal": "BUY",
-    "date": "2026-07-15",
-    "ts": "2026-07-15T10:12:31.541415",
-    "detail": "New BUY recommendation \u2014 confidence 71/100",
-    "confidence": 71.4
-  },
-  {
-    "type": "new",
     "ticker": "ICICIBANK.NS",
     "nse_code": "ICICIBANK",
     "signal": "BUY",
@@ -5998,5 +5988,15 @@
     "ts": "2026-09-11T04:05:42.822138",
     "detail": "Dropped \u2014 no longer meets threshold (was 65/100)",
     "confidence": 0
+  },
+  {
+    "type": "new",
+    "ticker": "IDFCFIRSTB.NS",
+    "nse_code": "IDFCFIRSTB",
+    "signal": "BUY",
+    "date": "2026-09-11",
+    "ts": "2026-09-11T06:15:48.637193",
+    "detail": "New BUY recommendation \u2014 confidence 67/100",
+    "confidence": 67.4
   }
 ]

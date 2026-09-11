@@ -1,66 +1,5 @@
 [
   {
-    "timestamp": "2026-08-06T09:45:38.386123",
-    "date": "2026-08-06",
-    "ticker": "IDFCFIRSTB.NS",
-    "session": "intraday_close",
-    "action": "SELL",
-    "signal": "SELL",
-    "confidence": 56.0,
-    "entry": 84.8,
-    "stop_loss": 88.08,
-    "target": 78.23,
-    "reason": "paper intraday_close",
-    "patterns": [
-      "adx_strong_trend_up",
-      "tweezer_top",
-      "full_bullish_alignment",
-      "evening_star",
-      "pivot_s1_breakdown"
-    ]
-  },
-  {
-    "timestamp": "2026-08-06T09:45:38.387415",
-    "date": "2026-08-06",
-    "ticker": "CIPLA.NS",
-    "session": "intraday_close",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 64.8,
-    "entry": 1474.0,
-    "stop_loss": 1422.56,
-    "target": 1576.88,
-    "reason": "paper intraday_close",
-    "patterns": [
-      "hammer",
-      "full_bullish_alignment",
-      "momentum_continuation",
-      "supertrend_bullish",
-      "doji"
-    ]
-  },
-  {
-    "timestamp": "2026-08-06T10:11:27.103142",
-    "date": "2026-08-06",
-    "ticker": "MARICO.NS",
-    "session": "preclose",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 60.7,
-    "entry": 858.5,
-    "stop_loss": 828.46,
-    "target": 918.59,
-    "reason": "paper preclose",
-    "patterns": [
-      "adx_strong_trend_up",
-      "full_bullish_alignment",
-      "pivot_s1_breakdown",
-      "strong_bearish_marubozu",
-      "momentum_continuation",
-      "volume_breakdown_bearish"
-    ]
-  },
-  {
     "timestamp": "2026-08-06T10:11:27.121970",
     "date": "2026-08-06",
     "ticker": "SBIN.NS",
@@ -21106,6 +21045,70 @@
       "doji",
       "rsi_bearish_divergence",
       "tweezer_top"
+    ]
+  },
+  {
+    "timestamp": "2026-09-11T06:15:48.498506",
+    "date": "2026-09-11",
+    "ticker": "GAIL.NS",
+    "session": "midday",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 78.5,
+    "entry": 174.6,
+    "stop_loss": 169.77,
+    "target": 184.26,
+    "reason": "paper midday",
+    "patterns": [
+      "pivot_point_test",
+      "full_bullish_alignment",
+      "pivot_s1_bounce",
+      "adx_ranging_market",
+      "momentum_continuation",
+      "supertrend_bullish"
+    ]
+  },
+  {
+    "timestamp": "2026-09-11T06:15:48.499375",
+    "date": "2026-09-11",
+    "ticker": "SIEMENS.NS",
+    "session": "midday",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 44.9,
+    "entry": 3924.6,
+    "stop_loss": 3783.25,
+    "target": 4207.31,
+    "reason": "paper midday",
+    "patterns": [
+      "doji",
+      "pivot_s1_breakdown",
+      "full_bullish_alignment",
+      "spinning_top",
+      "rsi_bearish_divergence"
+    ]
+  },
+  {
+    "timestamp": "2026-09-11T06:15:48.508512",
+    "date": "2026-09-11",
+    "ticker": "IDFCFIRSTB.NS",
+    "session": "midday",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 93.2,
+    "entry": 86.45,
+    "stop_loss": 83.95,
+    "target": 91.46,
+    "reason": "paper midday",
+    "patterns": [
+      "pivot_point_test",
+      "tweezer_bottom",
+      "outside_bar",
+      "full_bullish_alignment",
+      "rsi_bearish_divergence",
+      "stoch_rsi_oversold_reversal",
+      "adx_strong_trend_up",
+      "supertrend_bullish"
     ]
   }
 ]

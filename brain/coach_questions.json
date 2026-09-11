@@ -1,35 +1,5 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of rsi_bullish_divergence, morning_star, supertrend_bullish mean for a swing trade on POWERGRID? Current RSI=55, MACD hist=+0.5753, Vol=1.4x average. Signal is BUY.",
-    "context": {
-      "ticker": "POWERGRID.NS",
-      "signal": "BUY",
-      "patterns": "rsi_bullish_divergence, morning_star, supertrend_bullish",
-      "rsi": 54.7
-    },
-    "queued_at": "2026-09-10T10:12:19.028759"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of tweezer_top, pivot_s1_breakdown, pivot_point_test mean for a swing trade on IDFCFIRSTB? Current RSI=51, MACD hist=-0.0441, Vol=1.4x average. Signal is BUY.",
-    "context": {
-      "ticker": "IDFCFIRSTB.NS",
-      "signal": "BUY",
-      "patterns": "tweezer_top, pivot_s1_breakdown, pivot_point_test",
-      "rsi": 50.6
-    },
-    "queued_at": "2026-09-10T10:12:19.029666"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of near_52w_high, supertrend_bullish, bb_lower_bounce mean for a swing trade on TITAN? Current RSI=40, MACD hist=-31.8733, Vol=0.8x average. Signal is BUY.",
-    "context": {
-      "ticker": "TITAN.NS",
-      "signal": "BUY",
-      "patterns": "near_52w_high, supertrend_bullish, bb_lower_bounce",
-      "rsi": 39.8
-    },
-    "queued_at": "2026-09-10T10:12:19.032582"
-  },
-  {
     "question": "In Indian NSE markets, what does the combination of pivot_s1_breakdown, three_black_crows, rsi_bearish_divergence mean for a swing trade on JSWSTEEL? Current RSI=53, MACD hist=-2.9589, Vol=0.9x average. Signal is BUY.",
     "context": {
       "ticker": "JSWSTEEL.NS",
@@ -98,5 +68,35 @@
       "rsi": 42.4
     },
     "queued_at": "2026-09-11T04:05:42.820717"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of pivot_point_test, tweezer_bottom, outside_bar mean for a swing trade on IDFCFIRSTB? Current RSI=50, MACD hist=-0.0166, Vol=1.0x average. Signal is BUY.",
+    "context": {
+      "ticker": "IDFCFIRSTB.NS",
+      "signal": "BUY",
+      "patterns": "pivot_point_test, tweezer_bottom, outside_bar",
+      "rsi": 50.4
+    },
+    "queued_at": "2026-09-11T06:15:48.508138"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of pivot_point_test, tweezer_bottom, outside_bar mean for a swing trade on IDFCFIRSTB? Current RSI=50, MACD hist=-0.0166, Vol=1.0x average. Signal is BUY.",
+    "context": {
+      "ticker": "IDFCFIRSTB.NS",
+      "signal": "BUY",
+      "patterns": "pivot_point_test, tweezer_bottom, outside_bar",
+      "rsi": 50.4
+    },
+    "queued_at": "2026-09-11T06:15:48.515734"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of pivot_point_test, tweezer_bottom, outside_bar mean for a swing trade on IDFCFIRSTB? Current RSI=50, MACD hist=-0.0166, Vol=1.0x average. Signal is BUY.",
+    "context": {
+      "ticker": "IDFCFIRSTB.NS",
+      "signal": "BUY",
+      "patterns": "pivot_point_test, tweezer_bottom, outside_bar",
+      "rsi": 50.4
+    },
+    "queued_at": "2026-09-11T06:15:48.631935"
   }
 ]

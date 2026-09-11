@@ -1,13 +1,13 @@
 {
   "phase": "paper_trading",
   "day": 59,
-  "session": "morning",
+  "session": "preopen",
   "start_date": "2026-06-22",
   "phase_start_date": "2026-07-15",
   "last_run_date": "2026-09-10",
   "last_counted_date": "2026-09-10",
   "cohort_last_tick_date": "2026-09-10",
-  "last_updated": "2026-09-10T10:12:18.926008",
+  "last_updated": "2026-09-11T03:05:44.591990",
   "focus_stocks": [
     "PIDILITIND.NS",
     "GAIL.NS",
@@ -68,7 +68,6 @@
     "expectancy": -48.47
   },
   "brain_notes": [
-    "Phase \u2192 paper_trading on day 18 (2026-07-15) | Analysis done \u2014 starting paper trades",
     "[2026-07-16] Pre-open macro: neutral (+0.04)",
     "[2026-07-17] Pre-open macro: risk_off (-0.46)",
     "[2026-07-17] Focus refresh \u2014 promoted: ['SUNPHARMA', 'ADANIENT', 'INDUSINDBK'] | demoted: ['KOTAKBANK', 'BAJFINANCE', 'AXISBANK']",
@@ -167,7 +166,8 @@
     "[2026-09-09] Cohort batch #37 complete \u2014 30 candidates ready",
     "[2026-09-10] Pre-open macro: neutral (+0.12)",
     "[2026-09-10] Focus refresh \u2014 promoted: ['TITAN', 'NIACL'] | demoted: ['VBL', 'COALINDIA']",
-    "[2026-09-10] Cohort batch #38 complete \u2014 30 candidates ready"
+    "[2026-09-10] Cohort batch #38 complete \u2014 30 candidates ready",
+    "[2026-09-11] Pre-open macro: neutral (+0.09)"
   ],
   "alert_sent": false,
   "schema_version": 11,
@@ -397,11 +397,6 @@
     "scored_date": "2026-09-10"
   },
   "sessions_done": {
-    "preopen": "2026-09-10",
-    "morning": "2026-09-10",
-    "midday": "2026-09-10",
-    "afternoon": "2026-09-10",
-    "intraday_close": "2026-09-10",
-    "preclose": "2026-09-10"
+    "preopen": "2026-09-11"
   }
 }

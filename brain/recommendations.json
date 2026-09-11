@@ -3,10 +3,10 @@
     "ticker": "ADANIPORTS.NS",
     "nse_code": "ADANIPORTS",
     "company_name": "Adani Ports & SEZ",
-    "date": "2026-09-10",
-    "generated_at": "2026-09-10 10:12 UTC",
+    "date": "2026-09-11",
+    "generated_at": "2026-09-11 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -40,7 +40,7 @@
     "pattern_score": 2.0,
     "confluence_bonus": 10,
     "paper_bonus": 0.0,
-    "success_probability": 0.556,
+    "success_probability": 0.559,
     "base_success_prob": 0.567,
     "profit_probability": 0.701,
     "composite_score": 61.55,
@@ -57,9 +57,9 @@
       "regime"
     ],
     "backtest_tested": true,
-    "backtest_hit_5d": 0.532,
-    "backtest_hit_10d": 0.532,
-    "backtest_sample": 47,
+    "backtest_hit_5d": 0.542,
+    "backtest_hit_10d": 0.542,
+    "backtest_sample": 48,
     "hist_long_trend": "uptrend",
     "hist_52w_position": 86.8,
     "hist_personality": "mean_reverter",
@@ -99,15 +99,15 @@
       "Resistance at \u20b91800.00 is natural target",
       "Latest news: 'Adani Power, Adani Enterprises to Adani Ports \u2014 Why are Gautam Adani's'",
       "Confluence: 6 independent signal families agree (trend, momentum, volume, pattern, news, regime)",
-      "History backtest: this kind of BUY setup worked 53% of the time over ~1 week on this stock (sample: 47)"
+      "History backtest: this kind of BUY setup worked 54% of the time over ~1 week on this stock (sample: 48)"
     ],
     "patterns_seen": [
-      "ema_golden_cross",
-      "supertrend_bullish",
       "bb_upper_rejection",
-      "volume_breakout_bullish",
       "pivot_r1_breakout",
       "pivot_r2_breakout",
+      "ema_golden_cross",
+      "supertrend_bullish",
+      "volume_breakout_bullish",
       "three_white_soldiers"
     ],
     "reliable_patterns": [],
@@ -144,10 +144,10 @@
     "ticker": "JSWSTEEL.NS",
     "nse_code": "JSWSTEEL",
     "company_name": "JSW Steel Ltd",
-    "date": "2026-09-10",
-    "generated_at": "2026-09-10 10:12 UTC",
+    "date": "2026-09-11",
+    "generated_at": "2026-09-11 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -186,7 +186,7 @@
     "profit_probability": 0.112,
     "composite_score": 49.48,
     "focus_rank": 8,
-    "rank_delta": -1,
+    "rank_delta": 0,
     "intention": "BUY JSWSTEEL for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
     "confluence_count": 5,
     "confluence_families": [
@@ -240,11 +240,11 @@
       "History backtest: this kind of BUY setup worked 56% of the time over ~1 week on this stock (sample: 64)"
     ],
     "patterns_seen": [
-      "adx_strong_trend_up",
       "pivot_s1_breakdown",
+      "three_black_crows",
       "full_bullish_alignment",
       "rsi_bearish_divergence",
-      "three_black_crows"
+      "adx_strong_trend_up"
     ],
     "reliable_patterns": [
       "full_bullish_alignment",
@@ -284,10 +284,10 @@
     "ticker": "SIEMENS.NS",
     "nse_code": "SIEMENS",
     "company_name": "SIEMENS.NS",
-    "date": "2026-09-10",
-    "generated_at": "2026-09-10 10:12 UTC",
+    "date": "2026-09-11",
+    "generated_at": "2026-09-11 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -326,7 +326,7 @@
     "profit_probability": 0.074,
     "composite_score": 50.3,
     "focus_rank": 7,
-    "rank_delta": -1,
+    "rank_delta": 0,
     "intention": "BUY SIEMENS for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
     "confluence_count": 4,
     "confluence_families": [
@@ -381,10 +381,10 @@
       "History backtest: this kind of BUY setup worked 63% of the time over ~1 week on this stock (sample: 51)"
     ],
     "patterns_seen": [
-      "full_bullish_alignment",
-      "supertrend_bullish",
+      "adx_strong_trend_up",
       "pivot_point_test",
-      "adx_strong_trend_up"
+      "full_bullish_alignment",
+      "supertrend_bullish"
     ],
     "reliable_patterns": [
       "full_bullish_alignment"
@@ -422,10 +422,10 @@
     "ticker": "IDFCFIRSTB.NS",
     "nse_code": "IDFCFIRSTB",
     "company_name": "IDFC First Bank Ltd",
-    "date": "2026-09-10",
-    "generated_at": "2026-09-10 10:12 UTC",
+    "date": "2026-09-11",
+    "generated_at": "2026-09-11 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -459,12 +459,12 @@
     "pattern_score": 0.0,
     "confluence_bonus": 7.5,
     "paper_bonus": 0.0,
-    "success_probability": 0.489,
+    "success_probability": 0.487,
     "base_success_prob": 0.485,
     "profit_probability": 0.213,
     "composite_score": 48.6,
     "focus_rank": 9,
-    "rank_delta": -1,
+    "rank_delta": 0,
     "intention": "BUY IDFCFIRSTB for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
     "confluence_count": 5,
     "confluence_families": [
@@ -475,9 +475,9 @@
       "regime"
     ],
     "backtest_tested": true,
-    "backtest_hit_5d": 0.5,
-    "backtest_hit_10d": 0.519,
-    "backtest_sample": 52,
+    "backtest_hit_5d": 0.491,
+    "backtest_hit_10d": 0.509,
+    "backtest_sample": 53,
     "hist_long_trend": "strong_uptrend",
     "hist_52w_position": 98.5,
     "hist_personality": "mean_reverter",
@@ -512,14 +512,14 @@
       "Resistance at \u20b990.00 is natural target",
       "Latest news: 'IDFC First Bank Q4 FY26: Net Profit \u20b9319 Cr, Normalized PAT \u20b9746 Cr - '",
       "Confluence: 5 independent signal families agree (trend, volume, pattern, news, regime)",
-      "History backtest: this kind of BUY setup worked 50% of the time over ~1 week on this stock (sample: 52)"
+      "History backtest: this kind of BUY setup worked 49% of the time over ~1 week on this stock (sample: 53)"
     ],
     "patterns_seen": [
-      "tweezer_top",
-      "adx_strong_trend_up",
       "pivot_s1_breakdown",
+      "pivot_point_test",
       "full_bullish_alignment",
-      "pivot_point_test"
+      "tweezer_top",
+      "adx_strong_trend_up"
     ],
     "reliable_patterns": [],
     "nearest_support": 80.9,

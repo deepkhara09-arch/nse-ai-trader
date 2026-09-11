@@ -60,7 +60,7 @@
         "hist_long_trend": "strong_uptrend"
       },
       "view_hist": [
-        0,
+        1,
         1,
         1,
         1
@@ -99,8 +99,8 @@
         "Candlestick: three black crows",
         "Broke below Pivot S1 support \u2014 bearish"
       ],
-      "current_price": 1269.3,
-      "unrealized_pnl": -97.8,
+      "current_price": 1268.4,
+      "unrealized_pnl": -100.5,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -158,8 +158,8 @@
         "Candlestick: engulfing bearish",
         "Broke below Pivot S1 support \u2014 bearish"
       ],
-      "current_price": 3931.0,
-      "unrealized_pnl": -51.5,
+      "current_price": 3935.3,
+      "unrealized_pnl": -47.2,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -178,7 +178,7 @@
         0,
         0,
         0,
-        0
+        1
       ]
     },
     {
@@ -214,8 +214,8 @@
         "\u2713 Daily setup aligned with the higher-timeframe trend",
         "MACD histogram negative"
       ],
-      "current_price": 3283.6,
-      "unrealized_pnl": -76.8,
+      "current_price": 3283.0,
+      "unrealized_pnl": -78.0,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -274,8 +274,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "Near upper Bollinger Band"
       ],
-      "current_price": 1187.9,
-      "unrealized_pnl": -76.0,
+      "current_price": 1185.0,
+      "unrealized_pnl": -90.5,
       "max_held_days": 10,
       "vol_regime_pct": 0.08399999999999999,
       "entry_market": {
@@ -294,7 +294,7 @@
         0,
         0,
         0,
-        0
+        1
       ]
     },
     {
@@ -352,7 +352,7 @@
         "hist_long_trend": "strong_uptrend"
       },
       "view_hist": [
-        0,
+        1,
         1,
         1,
         1
@@ -3476,16 +3476,23 @@
       "capital": 62956.58,
       "open_positions": 6,
       "daily_pnl": 23.9
+    },
+    {
+      "date": "2026-09-11",
+      "portfolio_value": 97559.98,
+      "capital": 62956.58,
+      "open_positions": 6,
+      "daily_pnl": 0.0
     }
   ],
   "daily_pnl_today": 0.0,
-  "last_snapshot_date": "2026-09-10",
+  "last_snapshot_date": "2026-09-11",
   "lifetime_wins": 18,
   "lifetime_losses": 25,
   "lifetime_pnl": -2084.25,
   "last_pnl_reset_date": "2026-09-11",
-  "max_drawdown_pct": 3.33,
-  "current_drawdown_pct": 3.33,
+  "max_drawdown_pct": 3.61,
+  "current_drawdown_pct": 3.61,
   "portfolio_peak": 101210.28,
-  "sessions_since_peak": 38
+  "sessions_since_peak": 39
 }

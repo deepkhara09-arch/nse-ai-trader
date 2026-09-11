@@ -3147,8 +3147,8 @@
       "direction": 1,
       "score": 0.377,
       "price_at_call": 174.05,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "flat"
     },
     {
       "date": "2026-09-08",
@@ -3156,8 +3156,8 @@
       "direction": 1,
       "score": 0.23,
       "price_at_call": 3952.0,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "flat"
     },
     {
       "date": "2026-09-08",
@@ -3165,8 +3165,8 @@
       "direction": 1,
       "score": 0.38,
       "price_at_call": 3300.0,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "flat"
     },
     {
       "date": "2026-09-08",
@@ -3174,8 +3174,8 @@
       "direction": 1,
       "score": 0.286,
       "price_at_call": 409.8,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "wrong"
     },
     {
       "date": "2026-09-08",
@@ -3183,8 +3183,8 @@
       "direction": 1,
       "score": 0.353,
       "price_at_call": 419.45,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "right"
     },
     {
       "date": "2026-09-08",
@@ -3192,8 +3192,8 @@
       "direction": 1,
       "score": 0.369,
       "price_at_call": 406.65,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "flat"
     },
     {
       "date": "2026-09-08",
@@ -3201,8 +3201,8 @@
       "direction": 1,
       "score": 0.242,
       "price_at_call": 1299.6,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "wrong"
     },
     {
       "date": "2026-09-08",
@@ -3210,8 +3210,8 @@
       "direction": 1,
       "score": 0.466,
       "price_at_call": 1710.4,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "right"
     },
     {
       "date": "2026-09-09",
@@ -3338,6 +3338,42 @@
       "price_at_call": 86.41,
       "evaluated": false,
       "outcome": ""
+    },
+    {
+      "date": "2026-09-11",
+      "ticker": "JSWSTEEL.NS",
+      "direction": 1,
+      "score": 0.206,
+      "price_at_call": 1268.4,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-09-11",
+      "ticker": "ADANIPORTS.NS",
+      "direction": 1,
+      "score": 0.397,
+      "price_at_call": 1766.7,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-09-11",
+      "ticker": "UNIONBANK.NS",
+      "direction": 1,
+      "score": 0.289,
+      "price_at_call": 179.28,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-09-11",
+      "ticker": "TITAN.NS",
+      "direction": 1,
+      "score": 0.305,
+      "price_at_call": 5000.0,
+      "evaluated": false,
+      "outcome": ""
     }
   ],
   "reliability": {
@@ -3432,10 +3468,10 @@
       "last_seen": "2026-09-02"
     },
     "JSWSTEEL.NS": {
-      "wins": 1.0,
-      "losses": 0.989,
-      "reliability": 0.502,
-      "last_seen": "2026-07-29"
+      "wins": 0.776,
+      "losses": 1.767,
+      "reliability": 0.335,
+      "last_seen": "2026-09-11"
     },
     "SIEMENS.NS": {
       "wins": 9.356,
@@ -3462,10 +3498,10 @@
       "last_seen": "2026-08-04"
     },
     "LICI.NS": {
-      "wins": 2.552,
-      "losses": 2.983,
-      "reliability": 0.461,
-      "last_seen": "2026-09-10"
+      "wins": 2.537,
+      "losses": 3.966,
+      "reliability": 0.39,
+      "last_seen": "2026-09-11"
     },
     "GRASIM.NS": {
       "wins": 1.0,
@@ -3516,10 +3552,10 @@
       "last_seen": "2026-09-03"
     },
     "COALINDIA.NS": {
-      "wins": 2.961,
+      "wins": 3.944,
       "losses": 0.0,
-      "reliability": 0.994,
-      "last_seen": "2026-09-10"
+      "reliability": 1.0,
+      "last_seen": "2026-09-11"
     },
     "VBL.NS": {
       "wins": 0.0,
@@ -3528,10 +3564,10 @@
       "last_seen": "2026-09-07"
     },
     "ADANIPORTS.NS": {
-      "wins": 2.978,
+      "wins": 3.961,
       "losses": 0.0,
-      "reliability": 0.996,
-      "last_seen": "2026-09-10"
+      "reliability": 1.0,
+      "last_seen": "2026-09-11"
     },
     "BHEL.NS": {
       "wins": 0.0,

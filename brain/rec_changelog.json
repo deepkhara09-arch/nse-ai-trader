@@ -1,15 +1,5 @@
 [
   {
-    "type": "new",
-    "ticker": "MARICO.NS",
-    "nse_code": "MARICO",
-    "signal": "BUY",
-    "date": "2026-07-16",
-    "ts": "2026-07-16T04:05:50.855004",
-    "detail": "New BUY recommendation \u2014 confidence 70/100",
-    "confidence": 69.8
-  },
-  {
     "type": "removed",
     "ticker": "PIDILITIND.NS",
     "nse_code": "PIDILITIND",
@@ -5998,5 +5988,15 @@
     "ts": "2026-09-11T09:45:39.718951",
     "detail": "Stop loss moved \u20b984.41 \u2192 \u20b983.75 | Target 1 moved \u20b990.57 \u2192 \u20b991.25",
     "confidence": 67.4
+  },
+  {
+    "type": "updated",
+    "ticker": "IDFCFIRSTB.NS",
+    "nse_code": "IDFCFIRSTB",
+    "signal": "BUY",
+    "date": "2026-09-11",
+    "ts": "2026-09-11T10:12:45.220533",
+    "detail": "Confidence \u25b24 (67 \u2192 71) | Rank \u25bc1 (#12 \u2192 #13)",
+    "confidence": 71.4
   }
 ]

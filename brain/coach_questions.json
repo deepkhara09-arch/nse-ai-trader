@@ -1,102 +1,102 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of outside_bar, rsi_bearish_divergence, tweezer_bottom mean for a swing trade on IDFCFIRSTB? Current RSI=50, MACD hist=-0.0166, Vol=1.0x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of three_white_soldiers, strong_bullish_marubozu, supertrend_bullish mean for a swing trade on POWERGRID? Current RSI=62, MACD hist=+0.9832, Vol=1.4x average. Signal is BUY.",
+    "context": {
+      "ticker": "POWERGRID.NS",
+      "signal": "BUY",
+      "patterns": "three_white_soldiers, strong_bullish_marubozu, supertrend_bullish",
+      "rsi": 61.6
+    },
+    "queued_at": "2026-09-11T10:11:12.061093"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of pivot_point_test, outside_bar, rsi_bearish_divergence mean for a swing trade on IDFCFIRSTB? Current RSI=50, MACD hist=-0.0166, Vol=1.0x average. Signal is BUY.",
     "context": {
       "ticker": "IDFCFIRSTB.NS",
       "signal": "BUY",
-      "patterns": "outside_bar, rsi_bearish_divergence, tweezer_bottom",
+      "patterns": "pivot_point_test, outside_bar, rsi_bearish_divergence",
       "rsi": 50.4
     },
-    "queued_at": "2026-09-11T07:45:44.746143"
+    "queued_at": "2026-09-11T10:11:12.090230"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of tweezer_top, outside_bar, doji mean for a swing trade on TITAN? Current RSI=42, MACD hist=-30.4497, Vol=1.0x average. Signal is SELL.",
-    "context": {
-      "ticker": "TITAN.NS",
-      "signal": "SELL",
-      "patterns": "tweezer_top, outside_bar, doji",
-      "rsi": 42.4
-    },
-    "queued_at": "2026-09-11T07:45:44.750154"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of momentum_continuation, outside_bar mean for a swing trade on GAIL? Current RSI=56, MACD hist=+0.1514, Vol=0.7x average. Signal is BUY.",
-    "context": {
-      "ticker": "GAIL.NS",
-      "signal": "BUY",
-      "patterns": "momentum_continuation, outside_bar",
-      "rsi": 55.6
-    },
-    "queued_at": "2026-09-11T09:45:39.571555"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of pivot_point_test, outside_bar, stoch_rsi_oversold_reversal mean for a swing trade on IDFCFIRSTB? Current RSI=50, MACD hist=-0.0166, Vol=1.0x average. Signal is BUY.",
-    "context": {
-      "ticker": "IDFCFIRSTB.NS",
-      "signal": "BUY",
-      "patterns": "pivot_point_test, outside_bar, stoch_rsi_oversold_reversal",
-      "rsi": 50.4
-    },
-    "queued_at": "2026-09-11T09:45:39.581087"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of pivot_point_test, supertrend_bullish, full_bullish_alignment mean for a swing trade on TITAN? Current RSI=42, MACD hist=-27.5783, Vol=0.7x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_down, pivot_point_test, full_bullish_alignment mean for a swing trade on TITAN? Current RSI=42, MACD hist=-27.5783, Vol=0.7x average. Signal is BUY.",
     "context": {
       "ticker": "TITAN.NS",
       "signal": "BUY",
-      "patterns": "pivot_point_test, supertrend_bullish, full_bullish_alignment",
+      "patterns": "adx_strong_trend_down, pivot_point_test, full_bullish_alignment",
       "rsi": 42.1
     },
-    "queued_at": "2026-09-11T09:45:39.582226"
+    "queued_at": "2026-09-11T10:11:12.091057"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of momentum_continuation, outside_bar mean for a swing trade on GAIL? Current RSI=56, MACD hist=+0.1514, Vol=0.7x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of outside_bar, momentum_continuation mean for a swing trade on GAIL? Current RSI=56, MACD hist=+0.1514, Vol=0.7x average. Signal is BUY.",
     "context": {
       "ticker": "GAIL.NS",
       "signal": "BUY",
-      "patterns": "momentum_continuation, outside_bar",
+      "patterns": "outside_bar, momentum_continuation",
       "rsi": 55.6
     },
-    "queued_at": "2026-09-11T09:45:39.584237"
+    "queued_at": "2026-09-11T10:11:12.092525"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of pivot_point_test, outside_bar, stoch_rsi_oversold_reversal mean for a swing trade on IDFCFIRSTB? Current RSI=50, MACD hist=-0.0166, Vol=1.0x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of pivot_point_test, outside_bar, rsi_bearish_divergence mean for a swing trade on IDFCFIRSTB? Current RSI=50, MACD hist=-0.0166, Vol=1.0x average. Signal is BUY.",
     "context": {
       "ticker": "IDFCFIRSTB.NS",
       "signal": "BUY",
-      "patterns": "pivot_point_test, outside_bar, stoch_rsi_oversold_reversal",
+      "patterns": "pivot_point_test, outside_bar, rsi_bearish_divergence",
       "rsi": 50.4
     },
-    "queued_at": "2026-09-11T09:45:39.588905"
+    "queued_at": "2026-09-11T10:11:12.095752"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of momentum_continuation, outside_bar mean for a swing trade on GAIL? Current RSI=56, MACD hist=+0.1514, Vol=0.7x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of outside_bar, momentum_continuation mean for a swing trade on GAIL? Current RSI=56, MACD hist=+0.1514, Vol=0.7x average. Signal is BUY.",
     "context": {
       "ticker": "GAIL.NS",
       "signal": "BUY",
-      "patterns": "momentum_continuation, outside_bar",
+      "patterns": "outside_bar, momentum_continuation",
       "rsi": 55.6
     },
-    "queued_at": "2026-09-11T09:45:39.703765"
+    "queued_at": "2026-09-11T10:12:45.209240"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of pivot_point_test, outside_bar, stoch_rsi_oversold_reversal mean for a swing trade on IDFCFIRSTB? Current RSI=50, MACD hist=-0.0166, Vol=1.0x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of inside_bar, pivot_point_test, bb_upper_rejection mean for a swing trade on ADANIPORTS? Current RSI=59, MACD hist=+13.8898, Vol=1.1x average. Signal is BUY.",
+    "context": {
+      "ticker": "ADANIPORTS.NS",
+      "signal": "BUY",
+      "patterns": "inside_bar, pivot_point_test, bb_upper_rejection",
+      "rsi": 58.9
+    },
+    "queued_at": "2026-09-11T10:12:45.213039"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of three_white_soldiers, strong_bullish_marubozu, supertrend_bullish mean for a swing trade on POWERGRID? Current RSI=62, MACD hist=+0.9832, Vol=1.4x average. Signal is BUY.",
+    "context": {
+      "ticker": "POWERGRID.NS",
+      "signal": "BUY",
+      "patterns": "three_white_soldiers, strong_bullish_marubozu, supertrend_bullish",
+      "rsi": 61.6
+    },
+    "queued_at": "2026-09-11T10:12:45.214959"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of pivot_point_test, outside_bar, rsi_bearish_divergence mean for a swing trade on IDFCFIRSTB? Current RSI=50, MACD hist=-0.0166, Vol=1.0x average. Signal is BUY.",
     "context": {
       "ticker": "IDFCFIRSTB.NS",
       "signal": "BUY",
-      "patterns": "pivot_point_test, outside_bar, stoch_rsi_oversold_reversal",
+      "patterns": "pivot_point_test, outside_bar, rsi_bearish_divergence",
       "rsi": 50.4
     },
-    "queued_at": "2026-09-11T09:45:39.713190"
+    "queued_at": "2026-09-11T10:12:45.215800"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of pivot_point_test, supertrend_bullish, full_bullish_alignment mean for a swing trade on TITAN? Current RSI=42, MACD hist=-27.5783, Vol=0.7x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_down, pivot_point_test, full_bullish_alignment mean for a swing trade on TITAN? Current RSI=42, MACD hist=-27.5783, Vol=0.7x average. Signal is BUY.",
     "context": {
       "ticker": "TITAN.NS",
       "signal": "BUY",
-      "patterns": "pivot_point_test, supertrend_bullish, full_bullish_alignment",
+      "patterns": "adx_strong_trend_down, pivot_point_test, full_bullish_alignment",
       "rsi": 42.1
     },
-    "queued_at": "2026-09-11T09:45:39.717348"
+    "queued_at": "2026-09-11T10:12:45.218801"
   }
 ]

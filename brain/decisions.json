@@ -1,85 +1,5 @@
 [
   {
-    "timestamp": "2026-08-06T10:11:27.121970",
-    "date": "2026-08-06",
-    "ticker": "SBIN.NS",
-    "session": "preclose",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 66.4,
-    "entry": 1069.2,
-    "stop_loss": 1042.53,
-    "target": 1122.54,
-    "reason": "paper preclose",
-    "patterns": [
-      "strong_bullish_marubozu",
-      "rsi_bearish_divergence",
-      "full_bullish_alignment",
-      "supertrend_bullish",
-      "adx_ranging_market",
-      "bb_upper_rejection"
-    ]
-  },
-  {
-    "timestamp": "2026-08-06T10:11:27.122429",
-    "date": "2026-08-06",
-    "ticker": "ICICIBANK.NS",
-    "session": "preclose",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 95,
-    "entry": 1454.6,
-    "stop_loss": 1410.75,
-    "target": 1542.3,
-    "reason": "paper preclose",
-    "patterns": [
-      "pivot_point_test",
-      "adx_strong_trend_up",
-      "full_bullish_alignment"
-    ]
-  },
-  {
-    "timestamp": "2026-08-06T10:11:27.123001",
-    "date": "2026-08-06",
-    "ticker": "UNIONBANK.NS",
-    "session": "preclose",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 58.1,
-    "entry": 179.0,
-    "stop_loss": 171.69,
-    "target": 193.62,
-    "reason": "paper preclose",
-    "patterns": [
-      "rsi_bearish_divergence",
-      "full_bullish_alignment",
-      "momentum_continuation",
-      "supertrend_bullish",
-      "adx_ranging_market",
-      "stoch_rsi_oversold_reversal"
-    ]
-  },
-  {
-    "timestamp": "2026-08-06T10:11:27.123954",
-    "date": "2026-08-06",
-    "ticker": "PFC.NS",
-    "session": "preclose",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 67.8,
-    "entry": 414.15,
-    "stop_loss": 400.44,
-    "target": 441.57,
-    "reason": "paper preclose",
-    "patterns": [
-      "pivot_s1_breakdown",
-      "rsi_bullish_divergence",
-      "adx_ranging_market",
-      "outside_bar",
-      "stoch_rsi_overbought_reversal"
-    ]
-  },
-  {
     "timestamp": "2026-08-06T10:11:27.124528",
     "date": "2026-08-06",
     "ticker": "PIDILITIND.NS",
@@ -21109,6 +21029,94 @@
       "stoch_rsi_oversold_reversal",
       "adx_strong_trend_up",
       "supertrend_bullish"
+    ]
+  },
+  {
+    "timestamp": "2026-09-11T07:45:44.617180",
+    "date": "2026-09-11",
+    "ticker": "GAIL.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 78.5,
+    "entry": 174.52,
+    "stop_loss": 169.69,
+    "target": 184.18,
+    "reason": "paper afternoon",
+    "patterns": [
+      "momentum_continuation",
+      "full_bullish_alignment",
+      "supertrend_bullish",
+      "pivot_s1_bounce",
+      "pivot_point_test",
+      "adx_ranging_market"
+    ]
+  },
+  {
+    "timestamp": "2026-09-11T07:45:44.617986",
+    "date": "2026-09-11",
+    "ticker": "SIEMENS.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 51.9,
+    "entry": 3932.0,
+    "stop_loss": 3790.65,
+    "target": 4214.71,
+    "reason": "paper afternoon",
+    "patterns": [
+      "spinning_top",
+      "doji",
+      "rsi_bearish_divergence",
+      "full_bullish_alignment",
+      "pivot_s1_breakdown",
+      "pivot_point_test"
+    ]
+  },
+  {
+    "timestamp": "2026-09-11T07:45:44.625766",
+    "date": "2026-09-11",
+    "ticker": "IDFCFIRSTB.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 93.2,
+    "entry": 86.4,
+    "stop_loss": 83.9,
+    "target": 91.41,
+    "reason": "paper afternoon",
+    "patterns": [
+      "outside_bar",
+      "adx_strong_trend_up",
+      "rsi_bearish_divergence",
+      "full_bullish_alignment",
+      "supertrend_bullish",
+      "tweezer_bottom",
+      "pivot_point_test",
+      "stoch_rsi_oversold_reversal"
+    ]
+  },
+  {
+    "timestamp": "2026-09-11T07:45:44.626857",
+    "date": "2026-09-11",
+    "ticker": "TITAN.NS",
+    "session": "afternoon",
+    "action": "SELL",
+    "signal": "SELL",
+    "confidence": 41.6,
+    "entry": 4983.0,
+    "stop_loss": 5096.42,
+    "target": 4756.16,
+    "reason": "paper afternoon",
+    "patterns": [
+      "tweezer_top",
+      "outside_bar",
+      "doji",
+      "rsi_bearish_divergence",
+      "adx_strong_trend_down",
+      "full_bullish_alignment",
+      "pivot_s1_breakdown",
+      "pivot_point_test"
     ]
   }
 ]

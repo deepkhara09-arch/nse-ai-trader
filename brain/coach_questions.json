@@ -1,25 +1,5 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_up, pivot_s1_breakdown, rsi_bearish_divergence mean for a swing trade on JSWSTEEL? Current RSI=53, MACD hist=-2.9589, Vol=0.9x average. Signal is BUY.",
-    "context": {
-      "ticker": "JSWSTEEL.NS",
-      "signal": "BUY",
-      "patterns": "adx_strong_trend_up, pivot_s1_breakdown, rsi_bearish_divergence",
-      "rsi": 53.0
-    },
-    "queued_at": "2026-09-10T10:12:19.021427"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of ema_golden_cross, supertrend_bullish, bb_upper_rejection mean for a swing trade on ADANIPORTS? Current RSI=61, MACD hist=+11.8029, Vol=2.3x average. Signal is BUY.",
-    "context": {
-      "ticker": "ADANIPORTS.NS",
-      "signal": "BUY",
-      "patterns": "ema_golden_cross, supertrend_bullish, bb_upper_rejection",
-      "rsi": 61.3
-    },
-    "queued_at": "2026-09-10T10:12:19.024764"
-  },
-  {
     "question": "In Indian NSE markets, what does the combination of rsi_bullish_divergence, morning_star, supertrend_bullish mean for a swing trade on POWERGRID? Current RSI=55, MACD hist=+0.5753, Vol=1.4x average. Signal is BUY.",
     "context": {
       "ticker": "POWERGRID.NS",
@@ -98,5 +78,25 @@
       "rsi": 39.8
     },
     "queued_at": "2026-09-11T03:05:44.716876"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of pivot_s1_breakdown, full_bullish_alignment, engulfing_bearish mean for a swing trade on TITAN? Current RSI=42, MACD hist=-30.4497, Vol=1.0x average. Signal is SELL.",
+    "context": {
+      "ticker": "TITAN.NS",
+      "signal": "SELL",
+      "patterns": "pivot_s1_breakdown, full_bullish_alignment, engulfing_bearish",
+      "rsi": 42.4
+    },
+    "queued_at": "2026-09-11T04:05:42.698897"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of pivot_s1_breakdown, full_bullish_alignment, engulfing_bearish mean for a swing trade on TITAN? Current RSI=42, MACD hist=-30.4497, Vol=1.0x average. Signal is SELL.",
+    "context": {
+      "ticker": "TITAN.NS",
+      "signal": "SELL",
+      "patterns": "pivot_s1_breakdown, full_bullish_alignment, engulfing_bearish",
+      "rsi": 42.4
+    },
+    "queued_at": "2026-09-11T04:05:42.820717"
   }
 ]

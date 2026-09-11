@@ -1,45 +1,5 @@
 [
   {
-    "type": "removed",
-    "ticker": "NESTLEIND.NS",
-    "nse_code": "NESTLEIND",
-    "signal": "BUY",
-    "date": "2026-07-15",
-    "ts": "2026-07-15T04:05:49.570774",
-    "detail": "Dropped \u2014 no longer meets threshold (was 69/100)",
-    "confidence": 0
-  },
-  {
-    "type": "removed",
-    "ticker": "UNIONBANK.NS",
-    "nse_code": "UNIONBANK",
-    "signal": "BUY",
-    "date": "2026-07-15",
-    "ts": "2026-07-15T04:05:49.570774",
-    "detail": "Dropped \u2014 no longer meets threshold (was 68/100)",
-    "confidence": 0
-  },
-  {
-    "type": "removed",
-    "ticker": "FEDERALBNK.NS",
-    "nse_code": "FEDERALBNK",
-    "signal": "BUY",
-    "date": "2026-07-15",
-    "ts": "2026-07-15T05:53:46.007387",
-    "detail": "Dropped \u2014 no longer meets threshold (was 67/100)",
-    "confidence": 0
-  },
-  {
-    "type": "new",
-    "ticker": "NESTLEIND.NS",
-    "nse_code": "NESTLEIND",
-    "signal": "BUY",
-    "date": "2026-07-15",
-    "ts": "2026-07-15T10:12:31.541415",
-    "detail": "New BUY recommendation \u2014 confidence 78/100",
-    "confidence": 78.0
-  },
-  {
     "type": "new",
     "ticker": "PIDILITIND.NS",
     "nse_code": "PIDILITIND",
@@ -5998,5 +5958,45 @@
     "ts": "2026-09-10T10:12:19.034097",
     "detail": "Confidence \u25bc7 (72 \u2192 65) | Rank \u25b21 (#10 \u2192 #9)",
     "confidence": 65.3
+  },
+  {
+    "type": "removed",
+    "ticker": "ADANIPORTS.NS",
+    "nse_code": "ADANIPORTS",
+    "signal": "BUY",
+    "date": "2026-09-11",
+    "ts": "2026-09-11T04:05:42.822138",
+    "detail": "Dropped \u2014 no longer meets threshold (was 81/100)",
+    "confidence": 0
+  },
+  {
+    "type": "removed",
+    "ticker": "JSWSTEEL.NS",
+    "nse_code": "JSWSTEEL",
+    "signal": "BUY",
+    "date": "2026-09-11",
+    "ts": "2026-09-11T04:05:42.822138",
+    "detail": "Dropped \u2014 no longer meets threshold (was 71/100)",
+    "confidence": 0
+  },
+  {
+    "type": "removed",
+    "ticker": "SIEMENS.NS",
+    "nse_code": "SIEMENS",
+    "signal": "BUY",
+    "date": "2026-09-11",
+    "ts": "2026-09-11T04:05:42.822138",
+    "detail": "Dropped \u2014 no longer meets threshold (was 68/100)",
+    "confidence": 0
+  },
+  {
+    "type": "removed",
+    "ticker": "IDFCFIRSTB.NS",
+    "nse_code": "IDFCFIRSTB",
+    "signal": "BUY",
+    "date": "2026-09-11",
+    "ts": "2026-09-11T04:05:42.822138",
+    "detail": "Dropped \u2014 no longer meets threshold (was 65/100)",
+    "confidence": 0
   }
 ]

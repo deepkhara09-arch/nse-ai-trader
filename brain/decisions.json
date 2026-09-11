@@ -1,48 +1,5 @@
 [
   {
-    "timestamp": "2026-08-06T09:45:38.384072",
-    "date": "2026-08-06",
-    "ticker": "JSWSTEEL.NS",
-    "session": "intraday_close",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 95,
-    "entry": 1306.0,
-    "stop_loss": 1265.5,
-    "target": 1387.0,
-    "reason": "paper intraday_close",
-    "patterns": [
-      "near_52w_high",
-      "three_white_soldiers",
-      "pivot_r1_breakout",
-      "full_bullish_alignment",
-      "bb_upper_rejection",
-      "supertrend_bullish"
-    ]
-  },
-  {
-    "timestamp": "2026-08-06T09:45:38.384872",
-    "date": "2026-08-06",
-    "ticker": "LICI.NS",
-    "session": "intraday_close",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 95,
-    "entry": 387.5,
-    "stop_loss": 372.52,
-    "target": 417.47,
-    "reason": "paper intraday_close",
-    "patterns": [
-      "gap_down_reversal",
-      "volume_climax_bottom",
-      "bb_lower_bounce",
-      "pivot_s1_bounce",
-      "stoch_rsi_oversold_reversal",
-      "supertrend_bullish",
-      "volume_breakout_bullish"
-    ]
-  },
-  {
     "timestamp": "2026-08-06T09:45:38.386123",
     "date": "2026-08-06",
     "ticker": "IDFCFIRSTB.NS",
@@ -21106,6 +21063,49 @@
       "pivot_s1_breakdown",
       "full_bullish_alignment",
       "pivot_point_test"
+    ]
+  },
+  {
+    "timestamp": "2026-09-11T04:05:42.688839",
+    "date": "2026-09-11",
+    "ticker": "GAIL.NS",
+    "session": "morning",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 62.4,
+    "entry": 174.0,
+    "stop_loss": 169.17,
+    "target": 183.66,
+    "reason": "paper morning",
+    "patterns": [
+      "adx_ranging_market",
+      "supertrend_bullish",
+      "pivot_s1_bounce",
+      "full_bullish_alignment",
+      "momentum_continuation"
+    ]
+  },
+  {
+    "timestamp": "2026-09-11T04:05:42.699167",
+    "date": "2026-09-11",
+    "ticker": "TITAN.NS",
+    "session": "morning",
+    "action": "SELL",
+    "signal": "SELL",
+    "confidence": 56.9,
+    "entry": 4953.5,
+    "stop_loss": 5066.92,
+    "target": 4726.66,
+    "reason": "paper morning",
+    "patterns": [
+      "pivot_s1_breakdown",
+      "full_bullish_alignment",
+      "engulfing_bearish",
+      "outside_bar",
+      "adx_strong_trend_down",
+      "doji",
+      "rsi_bearish_divergence",
+      "tweezer_top"
     ]
   }
 ]

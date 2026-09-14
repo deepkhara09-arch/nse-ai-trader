@@ -1,35 +1,5 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of tweezer_bottom, outside_bar, pivot_point_test mean for a swing trade on IDFCFIRSTB? Current RSI=50, MACD hist=-0.0166, Vol=1.0x average. Signal is BUY.",
-    "context": {
-      "ticker": "IDFCFIRSTB.NS",
-      "signal": "BUY",
-      "patterns": "tweezer_bottom, outside_bar, pivot_point_test",
-      "rsi": 50.4
-    },
-    "queued_at": "2026-09-14T04:05:40.260083"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of momentum_continuation, outside_bar mean for a swing trade on GAIL? Current RSI=56, MACD hist=+0.1514, Vol=0.7x average. Signal is BUY.",
-    "context": {
-      "ticker": "GAIL.NS",
-      "signal": "BUY",
-      "patterns": "momentum_continuation, outside_bar",
-      "rsi": 55.6
-    },
-    "queued_at": "2026-09-14T06:15:57.780645"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of pivot_point_test, bb_upper_rejection, inside_bar mean for a swing trade on ADANIPORTS? Current RSI=59, MACD hist=+13.8898, Vol=1.1x average. Signal is BUY.",
-    "context": {
-      "ticker": "ADANIPORTS.NS",
-      "signal": "BUY",
-      "patterns": "pivot_point_test, bb_upper_rejection, inside_bar",
-      "rsi": 58.9
-    },
-    "queued_at": "2026-09-14T06:15:57.835092"
-  },
-  {
     "question": "In Indian NSE markets, what does the combination of rsi_bearish_divergence, outside_bar, tweezer_bottom mean for a swing trade on IDFCFIRSTB? Current RSI=50, MACD hist=-0.0166, Vol=1.0x average. Signal is BUY.",
     "context": {
       "ticker": "IDFCFIRSTB.NS",
@@ -98,5 +68,35 @@
       "rsi": 50.4
     },
     "queued_at": "2026-09-14T09:45:41.024041"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of momentum_continuation, outside_bar mean for a swing trade on GAIL? Current RSI=56, MACD hist=+0.1514, Vol=0.7x average. Signal is BUY.",
+    "context": {
+      "ticker": "GAIL.NS",
+      "signal": "BUY",
+      "patterns": "momentum_continuation, outside_bar",
+      "rsi": 55.6
+    },
+    "queued_at": "2026-09-14T10:10:39.651687"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of pivot_point_test, bb_upper_rejection, inside_bar mean for a swing trade on ADANIPORTS? Current RSI=59, MACD hist=+13.8898, Vol=1.1x average. Signal is BUY.",
+    "context": {
+      "ticker": "ADANIPORTS.NS",
+      "signal": "BUY",
+      "patterns": "pivot_point_test, bb_upper_rejection, inside_bar",
+      "rsi": 58.9
+    },
+    "queued_at": "2026-09-14T10:10:39.656851"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of rsi_bearish_divergence, tweezer_bottom, pivot_point_test mean for a swing trade on IDFCFIRSTB? Current RSI=50, MACD hist=-0.0166, Vol=1.0x average. Signal is BUY.",
+    "context": {
+      "ticker": "IDFCFIRSTB.NS",
+      "signal": "BUY",
+      "patterns": "rsi_bearish_divergence, tweezer_bottom, pivot_point_test",
+      "rsi": 50.4
+    },
+    "queued_at": "2026-09-14T10:10:39.660273"
   }
 ]

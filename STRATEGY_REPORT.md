@@ -1,5 +1,5 @@
 # NSE AI Trader — Strategy Report
-> Updated: 2026-09-11 &nbsp;|&nbsp; Day 60 &nbsp;|&nbsp; Phase: paper_trading
+> Updated: 2026-09-14 &nbsp;|&nbsp; Day 60 &nbsp;|&nbsp; Phase: paper_trading
 
 ---
 
@@ -46,6 +46,7 @@ BUY IDFC First Bank Ltd (IDFCFIRSTB)
      - Near 52-week high (100% of range) — breakout zone
      - ✓ Daily setup aligned with the higher-timeframe trend
      - ⚠ Sector momentum -0.28 — buying into a falling sector needs extra conviction
+     - ⚠ Market mood is bearish — buying against the tape needs extra conviction
      - Valuation: P/E 33.0x
      - Net profit up 247.2% QoQ
      - Sales up 13.4% QoQ
@@ -58,7 +59,7 @@ BUY IDFC First Bank Ltd (IDFCFIRSTB)
      - Latest news: 'Elevated food inflation means upside risks loom for FY27 inflation pro'
      - Confluence: 5 independent signal families agree (trend, volume, pattern, news, regime)
      - History backtest: this kind of BUY setup worked 57% of the time over ~1 week on this stock (sample: 51)
-   Market warnings: Nifty in downtrend (down) — only high-confidence BUY signals
+   Market warnings: VIX=12.3 at 97th percentile vs last 30d — unusually high stress | Nifty in downtrend (down) — only high-confidence BUY signals
 
 ---
 

@@ -4,9 +4,9 @@
     "nse_code": "IDFCFIRSTB",
     "company_name": "IDFC First Bank Ltd",
     "date": "2026-09-14",
-    "generated_at": "2026-09-14 09:45 UTC",
-    "valid_until": "15:40 IST",
-    "session": "intraday_close",
+    "generated_at": "2026-09-14 10:10 UTC",
+    "valid_until": "09:35 IST",
+    "session": "preclose",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -99,14 +99,14 @@
       "History backtest: this kind of BUY setup worked 57% of the time over ~1 week on this stock (sample: 51)"
     ],
     "patterns_seen": [
-      "outside_bar",
-      "tweezer_bottom",
-      "stoch_rsi_oversold_reversal",
       "rsi_bearish_divergence",
-      "full_bullish_alignment",
-      "pivot_point_test",
       "supertrend_bullish",
-      "adx_strong_trend_up"
+      "tweezer_bottom",
+      "adx_strong_trend_up",
+      "pivot_point_test",
+      "outside_bar",
+      "stoch_rsi_oversold_reversal",
+      "full_bullish_alignment"
     ],
     "reliable_patterns": [],
     "nearest_support": 80.9,

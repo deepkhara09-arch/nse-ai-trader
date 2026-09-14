@@ -1,13 +1,13 @@
 {
   "phase": "paper_trading",
   "day": 60,
-  "session": "intraday_close",
+  "session": "preclose",
   "start_date": "2026-06-22",
   "phase_start_date": "2026-07-15",
   "last_run_date": "2026-09-11",
   "last_counted_date": "2026-09-11",
   "cohort_last_tick_date": "2026-09-11",
-  "last_updated": "2026-09-14T09:45:40.942201",
+  "last_updated": "2026-09-14T10:10:39.557460",
   "focus_stocks": [
     "PIDILITIND.NS",
     "GAIL.NS",
@@ -369,6 +369,7 @@
     "morning": "2026-09-14",
     "midday": "2026-09-14",
     "afternoon": "2026-09-14",
-    "intraday_close": "2026-09-14"
+    "intraday_close": "2026-09-14",
+    "preclose": "2026-09-14"
   }
 }

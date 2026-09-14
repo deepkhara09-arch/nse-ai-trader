@@ -1,24 +1,5 @@
 [
   {
-    "timestamp": "2026-08-07T04:05:45.988333",
-    "date": "2026-08-07",
-    "ticker": "PFC.NS",
-    "session": "morning",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 66.2,
-    "entry": 416.05,
-    "stop_loss": 402.86,
-    "target": 442.43,
-    "reason": "paper morning",
-    "patterns": [
-      "adx_ranging_market",
-      "rsi_bullish_divergence",
-      "supertrend_bullish",
-      "pivot_s1_bounce"
-    ]
-  },
-  {
     "timestamp": "2026-08-07T04:05:45.989169",
     "date": "2026-08-07",
     "ticker": "PIDILITIND.NS",
@@ -21118,6 +21099,29 @@
       "full_bullish_alignment",
       "stoch_rsi_oversold_reversal",
       "tweezer_bottom"
+    ]
+  },
+  {
+    "timestamp": "2026-09-14T15:40:39.666807+05:30",
+    "date": "2026-09-14",
+    "ticker": "IDFCFIRSTB.NS",
+    "session": "preclose",
+    "action": "RECOMMEND",
+    "signal": "BUY",
+    "confidence": 71.4,
+    "entry": 86.38,
+    "stop_loss": 83.75,
+    "target": 91.25,
+    "reason": "rec snapshot (short_term)",
+    "patterns": [
+      "rsi_bearish_divergence",
+      "supertrend_bullish",
+      "tweezer_bottom",
+      "adx_strong_trend_up",
+      "pivot_point_test",
+      "outside_bar",
+      "stoch_rsi_oversold_reversal",
+      "full_bullish_alignment"
     ]
   }
 ]

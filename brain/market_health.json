@@ -1,6 +1,6 @@
 {
   "date": "2026-09-14",
-  "session": "morning",
+  "session": "midday",
   "nifty": {
     "symbol": "^NSEI",
     "value": 23398.1,
@@ -73,11 +73,11 @@
   ],
   "macro": {
     "date": "2026-09-14",
-    "session": "preopen",
-    "generated_at": "2026-09-14T03:05:38.104771",
-    "global_score": 0.051,
+    "session": "midday",
+    "generated_at": "2026-09-14T06:15:57.590721",
+    "global_score": 0.02,
     "india_score": 0.0,
-    "overall_score": 0.028,
+    "overall_score": 0.011,
     "mood": "neutral",
     "drivers": [
       "My 87-year-old mother wants to pay for my brother\u2019s kids\u2019 education. I don\u2019t have children. How is that fair?",
@@ -103,23 +103,23 @@
         "chg_pct": 0.86
       },
       "nikkei": {
-        "last": 63498.61,
-        "chg_pct": -0.8
+        "last": 63488.14,
+        "chg_pct": -0.82
       },
       "crude": {
-        "last": 102.88,
-        "chg_pct": 2.83
+        "last": 100.05,
+        "chg_pct": -2.37
       },
       "usdinr": {
         "last": 95.54,
         "chg_pct": -0.16
       },
       "gold": {
-        "last": 4378.8,
-        "chg_pct": 0.29
+        "last": 4366.2,
+        "chg_pct": 0.04
       }
     },
-    "summary": "Overall macro mood is neutral (+0.03). US Dow +1.0% overnight. Crude +2.8%. USD/INR -0.2%. Notable: US Fed rate hike / hawkish; Geopolitical conflict / war; Tariffs / trade war.",
+    "summary": "Overall macro mood is neutral (+0.01). US Dow +1.0% overnight. Crude -2.4%. USD/INR -0.2%. Notable: US Fed rate hike / hawkish; Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
       "Hawkish Fed pressures Nifty via FII outflows and stronger USD.",
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",

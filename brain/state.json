@@ -1,13 +1,13 @@
 {
   "phase": "paper_trading",
   "day": 60,
-  "session": "preclose",
+  "session": "preopen",
   "start_date": "2026-06-22",
   "phase_start_date": "2026-07-15",
   "last_run_date": "2026-09-11",
   "last_counted_date": "2026-09-11",
   "cohort_last_tick_date": "2026-09-11",
-  "last_updated": "2026-09-14T10:10:39.557460",
+  "last_updated": "2026-09-15T03:05:39.002376",
   "focus_stocks": [
     "PIDILITIND.NS",
     "GAIL.NS",
@@ -68,7 +68,6 @@
     "expectancy": -48.47
   },
   "brain_notes": [
-    "[2026-07-17] Pre-open macro: risk_off (-0.46)",
     "[2026-07-17] Focus refresh \u2014 promoted: ['SUNPHARMA', 'ADANIENT', 'INDUSINDBK'] | demoted: ['KOTAKBANK', 'BAJFINANCE', 'AXISBANK']",
     "[2026-07-17] Cohort batch #9 complete \u2014 30 candidates ready",
     "[2026-07-20] Pre-open macro: neutral (+0.03)",
@@ -167,7 +166,8 @@
     "[2026-09-10] Focus refresh \u2014 promoted: ['TITAN', 'NIACL'] | demoted: ['VBL', 'COALINDIA']",
     "[2026-09-10] Cohort batch #38 complete \u2014 30 candidates ready",
     "[2026-09-11] Pre-open macro: neutral (+0.09)",
-    "[2026-09-11] Focus refresh \u2014 promoted: ['BANDHANBNK'] | demoted: ['LICI']"
+    "[2026-09-11] Focus refresh \u2014 promoted: ['BANDHANBNK'] | demoted: ['LICI']",
+    "[2026-09-15] Pre-open macro: neutral (-0.12)"
   ],
   "alert_sent": false,
   "schema_version": 11,
@@ -365,11 +365,6 @@
     "scored_date": "2026-09-10"
   },
   "sessions_done": {
-    "preopen": "2026-09-14",
-    "morning": "2026-09-14",
-    "midday": "2026-09-14",
-    "afternoon": "2026-09-14",
-    "intraday_close": "2026-09-14",
-    "preclose": "2026-09-14"
+    "preopen": "2026-09-15"
   }
 }

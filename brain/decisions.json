@@ -1,66 +1,5 @@
 [
   {
-    "timestamp": "2026-08-07T05:56:27.095947",
-    "date": "2026-08-07",
-    "ticker": "CIPLA.NS",
-    "session": "midday",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 86.4,
-    "entry": 1465.9,
-    "stop_loss": 1414.54,
-    "target": 1568.63,
-    "reason": "paper midday",
-    "patterns": [
-      "morning_star",
-      "full_bullish_alignment",
-      "supertrend_bullish"
-    ]
-  },
-  {
-    "timestamp": "2026-08-07T05:56:27.096757",
-    "date": "2026-08-07",
-    "ticker": "NTPC.NS",
-    "session": "midday",
-    "action": "SELL",
-    "signal": "SELL",
-    "confidence": 83.7,
-    "entry": 344.75,
-    "stop_loss": 353.85,
-    "target": 326.55,
-    "reason": "paper midday",
-    "patterns": [
-      "full_bearish_alignment",
-      "tweezer_top",
-      "inside_bar",
-      "bearish_harami",
-      "pivot_s1_breakdown",
-      "adx_ranging_market"
-    ]
-  },
-  {
-    "timestamp": "2026-08-07T07:45:53.872968",
-    "date": "2026-08-07",
-    "ticker": "MARICO.NS",
-    "session": "afternoon",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 95,
-    "entry": 857.3,
-    "stop_loss": 827.39,
-    "target": 917.13,
-    "reason": "paper afternoon",
-    "patterns": [
-      "supertrend_bullish",
-      "adx_strong_trend_up",
-      "tweezer_bottom",
-      "inside_bar",
-      "pivot_point_test",
-      "full_bullish_alignment",
-      "stoch_rsi_oversold_reversal"
-    ]
-  },
-  {
     "timestamp": "2026-08-07T07:45:53.873582",
     "date": "2026-08-07",
     "ticker": "SBIN.NS",
@@ -21118,6 +21057,67 @@
       "gap_down_reversal",
       "supertrend_bullish",
       "volume_breakout_bullish"
+    ]
+  },
+  {
+    "timestamp": "2026-09-15T09:32:48.604943",
+    "date": "2026-09-15",
+    "ticker": "HOMEFIRST.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 53.1,
+    "entry": 1175.8,
+    "stop_loss": 1121.31,
+    "target": 1284.79,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "full_bullish_alignment",
+      "momentum_continuation",
+      "doji",
+      "pivot_s1_breakdown",
+      "volume_breakdown_bearish"
+    ]
+  },
+  {
+    "timestamp": "2026-09-15T09:32:48.609098",
+    "date": "2026-09-15",
+    "ticker": "POWERGRID.NS",
+    "session": "intraday_close",
+    "action": "SELL",
+    "signal": "SELL",
+    "confidence": 44.8,
+    "entry": 264.2,
+    "stop_loss": 270.87,
+    "target": 250.86,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "full_bearish_alignment",
+      "rsi_bearish_divergence",
+      "pivot_s1_breakdown",
+      "early_recovery",
+      "adx_ranging_market",
+      "shooting_star"
+    ]
+  },
+  {
+    "timestamp": "2026-09-15T09:32:48.610935",
+    "date": "2026-09-15",
+    "ticker": "TITAN.NS",
+    "session": "intraday_close",
+    "action": "SELL",
+    "signal": "SELL",
+    "confidence": 38.7,
+    "entry": 4884.0,
+    "stop_loss": 4997.6,
+    "target": 4656.79,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "full_bullish_alignment",
+      "tweezer_top",
+      "adx_strong_trend_down",
+      "rsi_bearish_divergence",
+      "pivot_s1_breakdown"
     ]
   }
 ]

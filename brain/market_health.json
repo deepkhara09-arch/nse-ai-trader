@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "session": "afternoon",
+  "session": "intraday_close",
   "nifty": {
     "symbol": "^NSEI",
     "value": 23398.1,
@@ -62,8 +62,7 @@
   "trade_allowed": true,
   "warnings": [
     "VIX=12.3 at 97th percentile vs last 30d \u2014 unusually high stress",
-    "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
-    "Nifty in intraday downtrend \u2014 avoid new longs this session"
+    "Nifty in downtrend (down) \u2014 only high-confidence BUY signals"
   ],
   "leading_sectors": [],
   "market_regime": "normal",
@@ -72,7 +71,7 @@
     "IT",
     "Bank"
   ],
-  "intraday_regime": "trending_down",
+  "intraday_regime": "mixed",
   "macro": {
     "date": "2026-09-15",
     "session": "midday",

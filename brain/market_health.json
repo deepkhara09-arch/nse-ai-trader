@@ -28,7 +28,7 @@
     "IT": {
       "symbol": "ITBEES.NS",
       "value": 32.17,
-      "day_change_pct": 0.34,
+      "day_change_pct": 0.0,
       "trend_5d": "strong_down",
       "trend_20d": "strong_down",
       "ath_pct_60d": -13.01
@@ -44,8 +44,8 @@
     "Bank": {
       "symbol": "BANKBEES.NS",
       "value": 586.35,
-      "day_change_pct": 0.48,
-      "trend_5d": "down",
+      "day_change_pct": 0.0,
+      "trend_5d": "sideways",
       "trend_20d": "down",
       "ath_pct_60d": -3.56
     },
@@ -69,8 +69,7 @@
   "market_regime": "normal",
   "sector_breadth": 0.0,
   "lagging_sectors": [
-    "IT",
-    "Bank"
+    "IT"
   ],
   "intraday_regime": "mixed",
   "macro": {
@@ -324,10 +323,10 @@
   },
   "pcr": {
     "date": "2026-09-15",
-    "pcr": 0.536,
+    "pcr": 0.537,
     "reading": "complacent_caution",
-    "total_pe_oi": 2145473,
-    "total_ce_oi": 4000183,
+    "total_pe_oi": 2141919,
+    "total_ce_oi": 3990900,
     "spot": 23118.6,
     "max_pain": 23150.0,
     "max_pain_dist_pct": -0.14,

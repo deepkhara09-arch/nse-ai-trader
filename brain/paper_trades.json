@@ -43,8 +43,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "Near upper Bollinger Band"
       ],
-      "current_price": 171.24,
-      "unrealized_pnl": -65.28,
+      "current_price": 170.77,
+      "unrealized_pnl": -81.26,
       "max_held_days": 10,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -61,7 +61,7 @@
       },
       "view_hist": [
         1,
-        1,
+        0,
         0,
         0
       ]
@@ -103,8 +103,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "Near upper Bollinger Band"
       ],
-      "current_price": 1177.9,
-      "unrealized_pnl": -126.0,
+      "current_price": 1175.4,
+      "unrealized_pnl": -138.5,
       "max_held_days": 10,
       "vol_regime_pct": 0.08399999999999999,
       "entry_market": {
@@ -120,8 +120,8 @@
         "hist_long_trend": "strong_uptrend"
       },
       "view_hist": [
-        0,
         1,
+        0,
         0,
         0
       ]
@@ -164,8 +164,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "MACD histogram negative"
       ],
-      "current_price": 85.91,
-      "unrealized_pnl": -104.86,
+      "current_price": 85.9,
+      "unrealized_pnl": -105.84,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -182,7 +182,7 @@
       },
       "view_hist": [
         1,
-        1,
+        0,
         0,
         0
       ]
@@ -226,8 +226,8 @@
         "Short EMA below long EMA",
         "MACD histogram negative"
       ],
-      "current_price": 1544.3,
-      "unrealized_pnl": -95.5,
+      "current_price": 1546.4,
+      "unrealized_pnl": -85.0,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -243,6 +243,7 @@
         "hist_long_trend": "uptrend"
       },
       "view_hist": [
+        0,
         0
       ]
     },
@@ -283,8 +284,8 @@
         "Near upper Bollinger Band",
         "High volume confirmation (3.2x avg)"
       ],
-      "current_price": 176.54,
-      "unrealized_pnl": 0.0,
+      "current_price": 174.88,
+      "unrealized_pnl": -63.08,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -298,7 +299,10 @@
         "mtf_alignment": "aligned",
         "opposing_ratio": 0.35,
         "hist_long_trend": "uptrend"
-      }
+      },
+      "view_hist": [
+        0
+      ]
     },
     {
       "ticker": "POWERGRID.NS",
@@ -333,8 +337,8 @@
         "In a long-term strong downtrend (2yr)",
         "\u2713 Daily setup aligned with the higher-timeframe trend"
       ],
-      "current_price": 265.75,
-      "unrealized_pnl": 0.0,
+      "current_price": 265.3,
+      "unrealized_pnl": 7.2,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -348,7 +352,10 @@
         "mtf_alignment": "aligned",
         "opposing_ratio": 0.34,
         "hist_long_trend": "strong_downtrend"
-      }
+      },
+      "view_hist": [
+        0
+      ]
     }
   ],
   "closed_trades": [

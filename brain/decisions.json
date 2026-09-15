@@ -1,132 +1,5 @@
 [
   {
-    "timestamp": "2026-08-07T04:05:45.989169",
-    "date": "2026-08-07",
-    "ticker": "PIDILITIND.NS",
-    "session": "morning",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 67.1,
-    "entry": 1667.9,
-    "stop_loss": 1610.38,
-    "target": 1782.95,
-    "reason": "paper morning",
-    "patterns": [
-      "bb_upper_rejection",
-      "supertrend_bullish",
-      "strong_bullish_marubozu",
-      "near_52w_high",
-      "full_bullish_alignment"
-    ]
-  },
-  {
-    "timestamp": "2026-08-07T04:05:45.989714",
-    "date": "2026-08-07",
-    "ticker": "SIEMENS.NS",
-    "session": "morning",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 69.8,
-    "entry": 3937.3,
-    "stop_loss": 3778.5,
-    "target": 4254.9,
-    "reason": "paper morning",
-    "patterns": [
-      "adx_strong_trend_up",
-      "pivot_s1_breakdown",
-      "full_bullish_alignment",
-      "near_52w_high"
-    ]
-  },
-  {
-    "timestamp": "2026-08-07T04:05:45.991023",
-    "date": "2026-08-07",
-    "ticker": "LICI.NS",
-    "session": "morning",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 95,
-    "entry": 394.5,
-    "stop_loss": 380.55,
-    "target": 422.4,
-    "reason": "paper morning",
-    "patterns": [
-      "volume_breakout_bullish",
-      "pivot_point_test",
-      "gravestone_doji",
-      "inverted_hammer",
-      "bb_lower_bounce",
-      "supertrend_bullish",
-      "stoch_rsi_oversold_reversal",
-      "rsi_bullish_divergence",
-      "doji",
-      "gap_down_reversal",
-      "inside_bar",
-      "volume_climax_bottom"
-    ]
-  },
-  {
-    "timestamp": "2026-08-07T04:05:45.993257",
-    "date": "2026-08-07",
-    "ticker": "CIPLA.NS",
-    "session": "morning",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 74.4,
-    "entry": 1467.8,
-    "stop_loss": 1416.44,
-    "target": 1570.53,
-    "reason": "paper morning",
-    "patterns": [
-      "supertrend_bullish",
-      "full_bullish_alignment",
-      "morning_star"
-    ]
-  },
-  {
-    "timestamp": "2026-08-07T04:05:45.994053",
-    "date": "2026-08-07",
-    "ticker": "NTPC.NS",
-    "session": "morning",
-    "action": "SELL",
-    "signal": "SELL",
-    "confidence": 83.7,
-    "entry": 345.5,
-    "stop_loss": 354.6,
-    "target": 327.3,
-    "reason": "paper morning",
-    "patterns": [
-      "adx_ranging_market",
-      "inside_bar",
-      "pivot_s1_breakdown",
-      "bearish_harami",
-      "tweezer_top",
-      "full_bearish_alignment"
-    ]
-  },
-  {
-    "timestamp": "2026-08-07T05:56:27.086639",
-    "date": "2026-08-07",
-    "ticker": "MARICO.NS",
-    "session": "midday",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 86.4,
-    "entry": 856.0,
-    "stop_loss": 825.44,
-    "target": 917.13,
-    "reason": "paper midday",
-    "patterns": [
-      "adx_strong_trend_up",
-      "full_bullish_alignment",
-      "pivot_point_test",
-      "inside_bar",
-      "macd_bearish_crossover",
-      "supertrend_bullish",
-      "tweezer_bottom"
-    ]
-  },
-  {
     "timestamp": "2026-08-07T05:56:27.087539",
     "date": "2026-08-07",
     "ticker": "SBIN.NS",
@@ -21122,6 +20995,131 @@
       "outside_bar",
       "stoch_rsi_oversold_reversal",
       "full_bullish_alignment"
+    ]
+  },
+  {
+    "timestamp": "2026-09-15T04:05:42.550043",
+    "date": "2026-09-15",
+    "ticker": "PIDILITIND.NS",
+    "session": "morning",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 95,
+    "entry": 1563.4,
+    "stop_loss": 1514.14,
+    "target": 1661.93,
+    "reason": "paper morning",
+    "patterns": [
+      "stoch_rsi_oversold_reversal",
+      "pivot_point_test",
+      "pivot_s1_bounce",
+      "gap_down_reversal",
+      "supertrend_bullish",
+      "bb_lower_bounce"
+    ]
+  },
+  {
+    "timestamp": "2026-09-15T04:05:42.553937",
+    "date": "2026-09-15",
+    "ticker": "HOMEFIRST.NS",
+    "session": "morning",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 53.1,
+    "entry": 1193.7,
+    "stop_loss": 1139.21,
+    "target": 1302.69,
+    "reason": "paper morning",
+    "patterns": [
+      "momentum_continuation",
+      "pivot_s1_breakdown",
+      "volume_breakdown_bearish",
+      "doji",
+      "full_bullish_alignment"
+    ]
+  },
+  {
+    "timestamp": "2026-09-15T04:05:42.557312",
+    "date": "2026-09-15",
+    "ticker": "UNIONBANK.NS",
+    "session": "morning",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 53.1,
+    "entry": 178.09,
+    "stop_loss": 170.97,
+    "target": 192.32,
+    "reason": "paper morning",
+    "patterns": [
+      "ema_death_cross",
+      "adx_strong_trend_down",
+      "stoch_rsi_oversold_reversal",
+      "gap_down_reversal",
+      "spinning_top",
+      "supertrend_bullish",
+      "bb_lower_bounce"
+    ]
+  },
+  {
+    "timestamp": "2026-09-15T04:05:42.558375",
+    "date": "2026-09-15",
+    "ticker": "POWERGRID.NS",
+    "session": "morning",
+    "action": "SELL",
+    "signal": "SELL",
+    "confidence": 44.8,
+    "entry": 265.75,
+    "stop_loss": 272.42,
+    "target": 252.41,
+    "reason": "paper morning",
+    "patterns": [
+      "pivot_s1_breakdown",
+      "full_bearish_alignment",
+      "rsi_bearish_divergence",
+      "adx_ranging_market",
+      "early_recovery",
+      "shooting_star"
+    ]
+  },
+  {
+    "timestamp": "2026-09-15T04:05:42.560197",
+    "date": "2026-09-15",
+    "ticker": "TITAN.NS",
+    "session": "morning",
+    "action": "SELL",
+    "signal": "SELL",
+    "confidence": 38.7,
+    "entry": 4950.0,
+    "stop_loss": 5063.6,
+    "target": 4722.79,
+    "reason": "paper morning",
+    "patterns": [
+      "pivot_s1_breakdown",
+      "adx_strong_trend_down",
+      "rsi_bearish_divergence",
+      "tweezer_top",
+      "full_bullish_alignment"
+    ]
+  },
+  {
+    "timestamp": "2026-09-15T04:05:42.561992",
+    "date": "2026-09-15",
+    "ticker": "BANDHANBNK.NS",
+    "session": "morning",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 61.7,
+    "entry": 175.09,
+    "stop_loss": 167.79,
+    "target": 189.69,
+    "reason": "paper morning",
+    "patterns": [
+      "pivot_r1_breakout",
+      "full_bearish_alignment",
+      "volume_breakout_bullish",
+      "gap_down_reversal",
+      "three_white_soldiers",
+      "supertrend_bullish"
     ]
   }
 ]

@@ -1,5 +1,5 @@
 {
-  "capital": 62956.583634999995,
+  "capital": 58922.76298999999,
   "open_positions": [
     {
       "ticker": "GAIL.NS",
@@ -43,8 +43,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "Near upper Bollinger Band"
       ],
-      "current_price": 174.1,
-      "unrealized_pnl": 31.96,
+      "current_price": 172.63,
+      "unrealized_pnl": -18.02,
       "max_held_days": 10,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -63,62 +63,6 @@
         1,
         1,
         1,
-        1
-      ]
-    },
-    {
-      "ticker": "JSWSTEEL.NS",
-      "sector": "Metals",
-      "open_date": "2026-09-02",
-      "open_session": "morning",
-      "action": "BUY",
-      "entry": 1301.9,
-      "qty": 3,
-      "invested": 3905.7,
-      "stop_loss": 1264.91,
-      "target": 1375.87,
-      "style": "swing",
-      "confidence": 62.1,
-      "patterns": [
-        "momentum_continuation",
-        "adx_strong_trend_up",
-        "three_black_crows",
-        "full_bullish_alignment",
-        "pivot_s1_breakdown"
-      ],
-      "buy_reasons": [
-        "All EMAs stacked bullish",
-        "MACD histogram positive",
-        "Positive news sentiment (0.20)",
-        "News sentiment improving across sessions",
-        "Learned bullish pattern: full_bullish_alignment (rel=60%)",
-        "ADX strong trend \u2014 directional move confirmed",
-        "In a long-term strong uptrend (2yr) \u2014 trend on our side",
-        "Near 52-week high (95% of range) \u2014 breakout zone",
-        "\u2713 Daily setup aligned with the higher-timeframe trend",
-        "Candlestick: three black crows",
-        "Broke below Pivot S1 support \u2014 bearish"
-      ],
-      "current_price": 1268.4,
-      "unrealized_pnl": -100.5,
-      "max_held_days": 10,
-      "vol_regime_pct": 0.12,
-      "entry_market": {
-        "nifty_trend": "sideways",
-        "vix": 11.49,
-        "mood": "neutral",
-        "regime": "choppy",
-        "sector_momentum": -0.231,
-        "delivery_signal": "neutral",
-        "rsi": 56.9,
-        "mtf_alignment": "aligned",
-        "opposing_ratio": 0.51,
-        "hist_long_trend": "strong_uptrend"
-      },
-      "view_hist": [
-        0,
-        0,
-        0,
         0
       ]
     },
@@ -158,8 +102,8 @@
         "Candlestick: engulfing bearish",
         "Broke below Pivot S1 support \u2014 bearish"
       ],
-      "current_price": 3935.3,
-      "unrealized_pnl": -47.2,
+      "current_price": 3901.3,
+      "unrealized_pnl": -81.2,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -177,8 +121,8 @@
       "view_hist": [
         0,
         0,
-        0,
-        1
+        1,
+        0
       ]
     },
     {
@@ -214,8 +158,8 @@
         "\u2713 Daily setup aligned with the higher-timeframe trend",
         "MACD histogram negative"
       ],
-      "current_price": 3283.0,
-      "unrealized_pnl": -78.0,
+      "current_price": 3235.1,
+      "unrealized_pnl": -173.8,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -274,8 +218,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "Near upper Bollinger Band"
       ],
-      "current_price": 1185.0,
-      "unrealized_pnl": -90.5,
+      "current_price": 1193.7,
+      "unrealized_pnl": -47.0,
       "max_held_days": 10,
       "vol_regime_pct": 0.08399999999999999,
       "entry_market": {
@@ -293,8 +237,8 @@
       "view_hist": [
         0,
         0,
-        0,
-        1
+        1,
+        0
       ]
     },
     {
@@ -335,8 +279,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "MACD histogram negative"
       ],
-      "current_price": 86.25,
-      "unrealized_pnl": -71.54,
+      "current_price": 85.75,
+      "unrealized_pnl": -120.54,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -355,8 +299,64 @@
         1,
         1,
         1,
-        1
+        0
       ]
+    },
+    {
+      "ticker": "PIDILITIND.NS",
+      "sector": "Consumer",
+      "open_date": "2026-09-15",
+      "open_session": "morning",
+      "action": "BUY",
+      "entry": 1563.4,
+      "qty": 5,
+      "invested": 7817.0,
+      "stop_loss": 1514.14,
+      "target": 1661.93,
+      "style": "swing",
+      "confidence": 95,
+      "patterns": [
+        "stoch_rsi_oversold_reversal",
+        "pivot_point_test",
+        "pivot_s1_bounce",
+        "gap_down_reversal",
+        "supertrend_bullish",
+        "bb_lower_bounce"
+      ],
+      "buy_reasons": [
+        "Near lower Bollinger Band",
+        "Learned bullish pattern: pivot_point_test (rel=100%)",
+        "Learned bullish pattern: supertrend_bullish (rel=74%)",
+        "Sector headwind (momentum=-0.48)",
+        "Supertrend bullish \u2014 price above trend band",
+        "Bounced off Pivot S1 support",
+        "Testing pivot point \u2014 decision zone",
+        "StochRSI oversold with bullish candle \u2014 reversal",
+        "Gap down reversal \u2014 buyers stepping in at lower open",
+        "In a long-term uptrend (2yr) \u2014 trend on our side",
+        "Mean-reverting stock at oversold extreme \u2014 fade the dip",
+        "\u2713 Daily setup aligned with the higher-timeframe trend",
+        "\u26a0 Sector momentum -0.48 \u2014 buying into a falling sector needs extra conviction",
+        "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
+        "Short EMA below long EMA",
+        "MACD histogram negative"
+      ],
+      "current_price": 1563.4,
+      "unrealized_pnl": 0.0,
+      "max_held_days": 10,
+      "vol_regime_pct": 0.12,
+      "entry_market": {
+        "nifty_trend": "down",
+        "vix": 12.29,
+        "mood": "bearish",
+        "regime": "choppy",
+        "sector_momentum": -0.484,
+        "delivery_signal": "neutral",
+        "rsi": 32.1,
+        "mtf_alignment": "aligned",
+        "opposing_ratio": 0.17,
+        "hist_long_trend": "uptrend"
+      }
     }
   ],
   "closed_trades": [
@@ -3187,6 +3187,72 @@
       "won": true,
       "open_days": 9,
       "forensic_done": true
+    },
+    {
+      "ticker": "JSWSTEEL.NS",
+      "sector": "Metals",
+      "open_date": "2026-09-02",
+      "open_session": "morning",
+      "action": "BUY",
+      "entry": 1301.9,
+      "qty": 3,
+      "invested": 3905.7,
+      "stop_loss": 1264.91,
+      "target": 1375.87,
+      "style": "swing",
+      "confidence": 62.1,
+      "patterns": [
+        "momentum_continuation",
+        "adx_strong_trend_up",
+        "three_black_crows",
+        "full_bullish_alignment",
+        "pivot_s1_breakdown"
+      ],
+      "buy_reasons": [
+        "All EMAs stacked bullish",
+        "MACD histogram positive",
+        "Positive news sentiment (0.20)",
+        "News sentiment improving across sessions",
+        "Learned bullish pattern: full_bullish_alignment (rel=60%)",
+        "ADX strong trend \u2014 directional move confirmed",
+        "In a long-term strong uptrend (2yr) \u2014 trend on our side",
+        "Near 52-week high (95% of range) \u2014 breakout zone",
+        "\u2713 Daily setup aligned with the higher-timeframe trend",
+        "Candlestick: three black crows",
+        "Broke below Pivot S1 support \u2014 bearish"
+      ],
+      "current_price": 1258.2,
+      "unrealized_pnl": -131.1,
+      "max_held_days": 10,
+      "vol_regime_pct": 0.12,
+      "entry_market": {
+        "nifty_trend": "sideways",
+        "vix": 11.49,
+        "mood": "neutral",
+        "regime": "choppy",
+        "sector_momentum": -0.231,
+        "delivery_signal": "neutral",
+        "rsi": 56.9,
+        "mtf_alignment": "aligned",
+        "opposing_ratio": 0.51,
+        "hist_long_trend": "strong_uptrend"
+      },
+      "view_hist": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "close_date": "2026-09-15",
+      "close_session": "morning",
+      "exit_price": 1264.91,
+      "exit_reason": "stop_hit",
+      "pnl": -122.52,
+      "pnl_gross": -110.97,
+      "costs": 11.55,
+      "pnl_pct": -3.14,
+      "won": false,
+      "open_days": 8
     }
   ],
   "daily_snapshots": [
@@ -3485,12 +3551,12 @@
       "daily_pnl": 0.0
     }
   ],
-  "daily_pnl_today": 0.0,
+  "daily_pnl_today": -122.52064500000003,
   "last_snapshot_date": "2026-09-11",
   "lifetime_wins": 18,
-  "lifetime_losses": 25,
-  "lifetime_pnl": -2084.25,
-  "last_pnl_reset_date": "2026-09-11",
+  "lifetime_losses": 26,
+  "lifetime_pnl": -2206.77,
+  "last_pnl_reset_date": "2026-09-15",
   "max_drawdown_pct": 3.61,
   "current_drawdown_pct": 3.61,
   "portfolio_peak": 101210.28,

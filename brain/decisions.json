@@ -1,88 +1,5 @@
 [
   {
-    "timestamp": "2026-08-07T05:56:27.087539",
-    "date": "2026-08-07",
-    "ticker": "SBIN.NS",
-    "session": "midday",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 63.5,
-    "entry": 1093.0,
-    "stop_loss": 1064.63,
-    "target": 1149.74,
-    "reason": "paper midday",
-    "patterns": [
-      "full_bullish_alignment",
-      "strong_bullish_marubozu",
-      "supertrend_bullish",
-      "adx_ranging_market",
-      "bb_upper_rejection",
-      "pivot_r1_breakout"
-    ]
-  },
-  {
-    "timestamp": "2026-08-07T05:56:27.088132",
-    "date": "2026-08-07",
-    "ticker": "ICICIBANK.NS",
-    "session": "midday",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 95,
-    "entry": 1441.6,
-    "stop_loss": 1401.72,
-    "target": 1521.36,
-    "reason": "paper midday",
-    "patterns": [
-      "adx_strong_trend_up",
-      "full_bullish_alignment",
-      "pivot_point_test",
-      "rsi_bearish_divergence",
-      "pivot_s1_breakdown"
-    ]
-  },
-  {
-    "timestamp": "2026-08-07T05:56:27.089903",
-    "date": "2026-08-07",
-    "ticker": "PFC.NS",
-    "session": "midday",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 66.1,
-    "entry": 419.75,
-    "stop_loss": 406.56,
-    "target": 446.13,
-    "reason": "paper midday",
-    "patterns": [
-      "adx_ranging_market",
-      "pivot_point_test",
-      "supertrend_bullish",
-      "rsi_bullish_divergence"
-    ]
-  },
-  {
-    "timestamp": "2026-08-07T05:56:27.090762",
-    "date": "2026-08-07",
-    "ticker": "PIDILITIND.NS",
-    "session": "midday",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 74.0,
-    "entry": 1655.0,
-    "stop_loss": 1599.9,
-    "target": 1765.19,
-    "reason": "paper midday",
-    "patterns": [
-      "adx_strong_trend_up",
-      "full_bullish_alignment",
-      "pivot_point_test",
-      "near_52w_high",
-      "bearish_harami",
-      "strong_bearish_marubozu",
-      "stoch_rsi_overbought_reversal",
-      "bb_upper_rejection"
-    ]
-  },
-  {
     "timestamp": "2026-08-07T05:56:27.091642",
     "date": "2026-08-07",
     "ticker": "SIEMENS.NS",
@@ -21120,6 +21037,89 @@
       "gap_down_reversal",
       "three_white_soldiers",
       "supertrend_bullish"
+    ]
+  },
+  {
+    "timestamp": "2026-09-15T06:15:48.626492",
+    "date": "2026-09-15",
+    "ticker": "HOMEFIRST.NS",
+    "session": "midday",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 53.1,
+    "entry": 1177.9,
+    "stop_loss": 1123.41,
+    "target": 1286.89,
+    "reason": "paper midday",
+    "patterns": [
+      "pivot_s1_breakdown",
+      "volume_breakdown_bearish",
+      "full_bullish_alignment",
+      "momentum_continuation",
+      "doji"
+    ]
+  },
+  {
+    "timestamp": "2026-09-15T06:15:48.630971",
+    "date": "2026-09-15",
+    "ticker": "POWERGRID.NS",
+    "session": "midday",
+    "action": "SELL",
+    "signal": "SELL",
+    "confidence": 44.8,
+    "entry": 265.75,
+    "stop_loss": 272.42,
+    "target": 252.41,
+    "reason": "paper midday",
+    "patterns": [
+      "pivot_s1_breakdown",
+      "rsi_bearish_divergence",
+      "early_recovery",
+      "adx_ranging_market",
+      "shooting_star",
+      "full_bearish_alignment"
+    ]
+  },
+  {
+    "timestamp": "2026-09-15T06:15:48.632989",
+    "date": "2026-09-15",
+    "ticker": "TITAN.NS",
+    "session": "midday",
+    "action": "SELL",
+    "signal": "SELL",
+    "confidence": 38.7,
+    "entry": 4897.5,
+    "stop_loss": 5011.1,
+    "target": 4670.29,
+    "reason": "paper midday",
+    "patterns": [
+      "pivot_s1_breakdown",
+      "tweezer_top",
+      "rsi_bearish_divergence",
+      "full_bullish_alignment",
+      "adx_strong_trend_down"
+    ]
+  },
+  {
+    "timestamp": "2026-09-15T06:15:48.634956",
+    "date": "2026-09-15",
+    "ticker": "BANDHANBNK.NS",
+    "session": "midday",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 78.2,
+    "entry": 176.54,
+    "stop_loss": 169.24,
+    "target": 191.14,
+    "reason": "paper midday",
+    "patterns": [
+      "gap_down_reversal",
+      "pivot_r1_breakout",
+      "three_white_soldiers",
+      "full_bearish_alignment",
+      "supertrend_bullish",
+      "pivot_r2_breakout",
+      "volume_breakout_bullish"
     ]
   }
 ]

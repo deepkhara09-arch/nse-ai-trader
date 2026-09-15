@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "session": "morning",
+  "session": "midday",
   "nifty": {
     "symbol": "^NSEI",
     "value": 23398.1,
@@ -62,8 +62,7 @@
   "trade_allowed": true,
   "warnings": [
     "VIX=12.3 at 97th percentile vs last 30d \u2014 unusually high stress",
-    "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
-    "Nifty choppy intraday \u2014 wait for cleaner setups"
+    "Nifty in downtrend (down) \u2014 only high-confidence BUY signals"
   ],
   "leading_sectors": [],
   "market_regime": "normal",
@@ -72,14 +71,14 @@
     "IT",
     "Bank"
   ],
-  "intraday_regime": "choppy",
+  "intraday_regime": "mixed",
   "macro": {
     "date": "2026-09-15",
-    "session": "preopen",
-    "generated_at": "2026-09-15T03:05:37.926696",
-    "global_score": -0.22,
+    "session": "midday",
+    "generated_at": "2026-09-15T06:15:40.696937",
+    "global_score": -0.219,
     "india_score": 0.0,
-    "overall_score": -0.121,
+    "overall_score": -0.12,
     "mood": "neutral",
     "drivers": [
       "\u2018He does not have a spouse or children\u2019: My son has a serious genetic disease. What should I do with my $1.3 million estate?",
@@ -105,23 +104,23 @@
         "chg_pct": -0.48
       },
       "nikkei": {
-        "last": 64082.36,
-        "chg_pct": 0.93
+        "last": 63642.24,
+        "chg_pct": 0.24
       },
       "crude": {
-        "last": 102.94,
-        "chg_pct": 2.89
+        "last": 101.39,
+        "chg_pct": 1.34
       },
       "usdinr": {
-        "last": 95.54,
-        "chg_pct": 0.53
+        "last": 95.94,
+        "chg_pct": 0.95
       },
       "gold": {
-        "last": 4352.8,
-        "chg_pct": -1.27
+        "last": 4351.9,
+        "chg_pct": -1.29
       }
     },
-    "summary": "Overall macro mood is neutral (-0.12). US Dow -0.3% overnight. Crude +2.9%. USD/INR +0.5%. Notable: US Fed rate hike / hawkish; Geopolitical conflict / war; Tariffs / trade war.",
+    "summary": "Overall macro mood is neutral (-0.12). US Dow -0.3% overnight. Crude +1.3%. USD/INR +0.9%. Notable: US Fed rate hike / hawkish; Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
       "Hawkish Fed pressures Nifty via FII outflows and stronger USD.",
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",

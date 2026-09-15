@@ -1,5 +1,5 @@
 {
-  "capital": 58922.76298999999,
+  "capital": 58225.80082999999,
   "open_positions": [
     {
       "ticker": "GAIL.NS",
@@ -43,8 +43,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "Near upper Bollinger Band"
       ],
-      "current_price": 172.63,
-      "unrealized_pnl": -18.02,
+      "current_price": 171.24,
+      "unrealized_pnl": -65.28,
       "max_held_days": 10,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -62,121 +62,6 @@
       "view_hist": [
         1,
         1,
-        1,
-        0
-      ]
-    },
-    {
-      "ticker": "SIEMENS.NS",
-      "sector": "Infra",
-      "open_date": "2026-09-07",
-      "open_session": "morning",
-      "action": "BUY",
-      "entry": 3982.5,
-      "qty": 1,
-      "invested": 3982.5,
-      "stop_loss": 3848.32,
-      "target": 4250.85,
-      "style": "swing",
-      "confidence": 80.6,
-      "patterns": [
-        "pivot_s1_breakdown",
-        "full_bullish_alignment",
-        "engulfing_bearish",
-        "strong_bearish_marubozu",
-        "low_volume_drift",
-        "adx_strong_trend_up",
-        "rsi_bullish_divergence"
-      ],
-      "buy_reasons": [
-        "All EMAs stacked bullish",
-        "RSI=53 in healthy buy zone",
-        "Positive news sentiment (0.25, news 1.3x reliable here)",
-        "Learned bullish pattern: full_bullish_alignment (rel=60%)",
-        "RSI bullish divergence \u2014 price lower but RSI higher",
-        "ADX strong trend \u2014 directional move confirmed",
-        "In a long-term strong uptrend (2yr) \u2014 trend on our side",
-        "Clean trender aligned with its long-term uptrend",
-        "\u2713 Daily setup aligned with the higher-timeframe trend",
-        "MACD histogram negative",
-        "Candlestick: engulfing bearish",
-        "Broke below Pivot S1 support \u2014 bearish"
-      ],
-      "current_price": 3901.3,
-      "unrealized_pnl": -81.2,
-      "max_held_days": 10,
-      "vol_regime_pct": 0.12,
-      "entry_market": {
-        "nifty_trend": "sideways",
-        "vix": 10.68,
-        "mood": "neutral",
-        "regime": "mixed",
-        "sector_momentum": -0.231,
-        "delivery_signal": "neutral",
-        "rsi": 52.9,
-        "mtf_alignment": "aligned",
-        "opposing_ratio": 0.51,
-        "hist_long_trend": "strong_uptrend"
-      },
-      "view_hist": [
-        0,
-        0,
-        1,
-        0
-      ]
-    },
-    {
-      "ticker": "GRASIM.NS",
-      "sector": "Metals",
-      "open_date": "2026-09-07",
-      "open_session": "midday",
-      "action": "BUY",
-      "entry": 3322.0,
-      "qty": 2,
-      "invested": 6644.0,
-      "stop_loss": 3223.31,
-      "target": 3519.38,
-      "style": "swing",
-      "confidence": 78.1,
-      "patterns": [
-        "outside_bar",
-        "doji",
-        "three_white_soldiers",
-        "hammer",
-        "pivot_point_test",
-        "full_bullish_alignment",
-        "supertrend_bullish"
-      ],
-      "buy_reasons": [
-        "All EMAs stacked bullish",
-        "Positive news sentiment (0.19, news 0.6x reliable here)",
-        "Candlestick: three white soldiers",
-        "Supertrend bullish \u2014 price above trend band",
-        "Testing pivot point \u2014 decision zone",
-        "In a long-term strong uptrend (2yr) \u2014 trend on our side",
-        "Near 52-week high (100% of range) \u2014 breakout zone",
-        "\u2713 Daily setup aligned with the higher-timeframe trend",
-        "MACD histogram negative"
-      ],
-      "current_price": 3235.1,
-      "unrealized_pnl": -173.8,
-      "max_held_days": 10,
-      "vol_regime_pct": 0.12,
-      "entry_market": {
-        "nifty_trend": "sideways",
-        "vix": 10.68,
-        "mood": "neutral",
-        "regime": "mixed",
-        "sector_momentum": -0.218,
-        "delivery_signal": "neutral",
-        "rsi": 59.8,
-        "mtf_alignment": "aligned",
-        "opposing_ratio": 0.12,
-        "hist_long_trend": "strong_uptrend"
-      },
-      "view_hist": [
-        0,
-        0,
         0,
         0
       ]
@@ -218,8 +103,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "Near upper Bollinger Band"
       ],
-      "current_price": 1193.7,
-      "unrealized_pnl": -47.0,
+      "current_price": 1177.9,
+      "unrealized_pnl": -126.0,
       "max_held_days": 10,
       "vol_regime_pct": 0.08399999999999999,
       "entry_market": {
@@ -236,8 +121,8 @@
       },
       "view_hist": [
         0,
-        0,
         1,
+        0,
         0
       ]
     },
@@ -279,8 +164,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "MACD histogram negative"
       ],
-      "current_price": 85.75,
-      "unrealized_pnl": -120.54,
+      "current_price": 85.91,
+      "unrealized_pnl": -104.86,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -298,7 +183,7 @@
       "view_hist": [
         1,
         1,
-        1,
+        0,
         0
       ]
     },
@@ -341,8 +226,8 @@
         "Short EMA below long EMA",
         "MACD histogram negative"
       ],
-      "current_price": 1563.4,
-      "unrealized_pnl": 0.0,
+      "current_price": 1544.3,
+      "unrealized_pnl": -95.5,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -356,6 +241,113 @@
         "mtf_alignment": "aligned",
         "opposing_ratio": 0.17,
         "hist_long_trend": "uptrend"
+      },
+      "view_hist": [
+        0
+      ]
+    },
+    {
+      "ticker": "BANDHANBNK.NS",
+      "sector": "Banking",
+      "open_date": "2026-09-15",
+      "open_session": "midday",
+      "action": "BUY",
+      "entry": 176.54,
+      "qty": 38,
+      "invested": 6708.52,
+      "stop_loss": 169.24,
+      "target": 191.14,
+      "style": "swing",
+      "confidence": 78.2,
+      "patterns": [
+        "gap_down_reversal",
+        "pivot_r1_breakout",
+        "three_white_soldiers",
+        "full_bearish_alignment",
+        "supertrend_bullish",
+        "pivot_r2_breakout",
+        "volume_breakout_bullish"
+      ],
+      "buy_reasons": [
+        "RSI=55 in healthy buy zone",
+        "MACD histogram positive",
+        "Candlestick: three white soldiers",
+        "Supertrend bullish \u2014 price above trend band",
+        "Broke above Pivot R1 with volume \u2014 bullish",
+        "Broke above Pivot R2 \u2014 strong momentum",
+        "Gap down reversal \u2014 buyers stepping in at lower open",
+        "In a long-term uptrend (2yr) \u2014 trend on our side",
+        "\u2713 Daily setup aligned with the higher-timeframe trend",
+        "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
+        "All EMAs stacked bearish",
+        "Near upper Bollinger Band",
+        "High volume confirmation (3.2x avg)"
+      ],
+      "current_price": 176.54,
+      "unrealized_pnl": 0.0,
+      "max_held_days": 10,
+      "vol_regime_pct": 0.12,
+      "entry_market": {
+        "nifty_trend": "down",
+        "vix": 12.29,
+        "mood": "bearish",
+        "regime": "mixed",
+        "sector_momentum": -0.245,
+        "delivery_signal": "neutral",
+        "rsi": 54.7,
+        "mtf_alignment": "aligned",
+        "opposing_ratio": 0.35,
+        "hist_long_trend": "uptrend"
+      }
+    },
+    {
+      "ticker": "POWERGRID.NS",
+      "sector": "Energy",
+      "open_date": "2026-09-15",
+      "open_session": "midday",
+      "action": "SELL",
+      "entry": 265.75,
+      "qty": 16,
+      "invested": 4252.0,
+      "stop_loss": 272.42,
+      "target": 252.41,
+      "style": "swing",
+      "confidence": 44.8,
+      "patterns": [
+        "pivot_s1_breakdown",
+        "rsi_bearish_divergence",
+        "early_recovery",
+        "adx_ranging_market",
+        "shooting_star",
+        "full_bearish_alignment"
+      ],
+      "buy_reasons": [
+        "RSI=43 in healthy buy zone",
+        "MACD histogram positive",
+        "Positive news sentiment (0.17, news 0.6x reliable here)",
+        "News sentiment improving across sessions",
+        "ADX low \u2014 market ranging, signals less reliable",
+        "All EMAs stacked bearish",
+        "RSI bearish divergence \u2014 price higher but RSI lower",
+        "Broke below Pivot S1 support \u2014 bearish",
+        "In a long-term strong downtrend (2yr)",
+        "\u2713 Daily setup aligned with the higher-timeframe trend"
+      ],
+      "current_price": 265.75,
+      "unrealized_pnl": 0.0,
+      "max_held_days": 10,
+      "vol_regime_pct": 0.12,
+      "entry_market": {
+        "nifty_trend": "down",
+        "vix": 12.29,
+        "mood": "bearish",
+        "regime": "mixed",
+        "sector_momentum": 0.197,
+        "delivery_signal": "neutral",
+        "rsi": 43.4,
+        "mtf_alignment": "aligned",
+        "opposing_ratio": 0.34,
+        "hist_long_trend": "strong_downtrend"
       }
     }
   ],
@@ -3253,6 +3245,141 @@
       "pnl_pct": -3.14,
       "won": false,
       "open_days": 8
+    },
+    {
+      "ticker": "SIEMENS.NS",
+      "sector": "Infra",
+      "open_date": "2026-09-07",
+      "open_session": "morning",
+      "action": "BUY",
+      "entry": 3982.5,
+      "qty": 1,
+      "invested": 3982.5,
+      "stop_loss": 3848.32,
+      "target": 4250.85,
+      "style": "swing",
+      "confidence": 80.6,
+      "patterns": [
+        "pivot_s1_breakdown",
+        "full_bullish_alignment",
+        "engulfing_bearish",
+        "strong_bearish_marubozu",
+        "low_volume_drift",
+        "adx_strong_trend_up",
+        "rsi_bullish_divergence"
+      ],
+      "buy_reasons": [
+        "All EMAs stacked bullish",
+        "RSI=53 in healthy buy zone",
+        "Positive news sentiment (0.25, news 1.3x reliable here)",
+        "Learned bullish pattern: full_bullish_alignment (rel=60%)",
+        "RSI bullish divergence \u2014 price lower but RSI higher",
+        "ADX strong trend \u2014 directional move confirmed",
+        "In a long-term strong uptrend (2yr) \u2014 trend on our side",
+        "Clean trender aligned with its long-term uptrend",
+        "\u2713 Daily setup aligned with the higher-timeframe trend",
+        "MACD histogram negative",
+        "Candlestick: engulfing bearish",
+        "Broke below Pivot S1 support \u2014 bearish"
+      ],
+      "current_price": 3847.0,
+      "unrealized_pnl": -135.5,
+      "max_held_days": 10,
+      "vol_regime_pct": 0.12,
+      "entry_market": {
+        "nifty_trend": "sideways",
+        "vix": 10.68,
+        "mood": "neutral",
+        "regime": "mixed",
+        "sector_momentum": -0.231,
+        "delivery_signal": "neutral",
+        "rsi": 52.9,
+        "mtf_alignment": "aligned",
+        "opposing_ratio": 0.51,
+        "hist_long_trend": "strong_uptrend"
+      },
+      "view_hist": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "close_date": "2026-09-15",
+      "close_session": "midday",
+      "exit_price": 3848.32,
+      "exit_reason": "stop_hit",
+      "pnl": -145.93,
+      "pnl_gross": -134.18,
+      "costs": 11.75,
+      "pnl_pct": -3.66,
+      "won": false,
+      "open_days": 5
+    },
+    {
+      "ticker": "GRASIM.NS",
+      "sector": "Metals",
+      "open_date": "2026-09-07",
+      "open_session": "midday",
+      "action": "BUY",
+      "entry": 3322.0,
+      "qty": 2,
+      "invested": 6644.0,
+      "stop_loss": 3223.31,
+      "target": 3519.38,
+      "style": "swing",
+      "confidence": 78.1,
+      "patterns": [
+        "outside_bar",
+        "doji",
+        "three_white_soldiers",
+        "hammer",
+        "pivot_point_test",
+        "full_bullish_alignment",
+        "supertrend_bullish"
+      ],
+      "buy_reasons": [
+        "All EMAs stacked bullish",
+        "Positive news sentiment (0.19, news 0.6x reliable here)",
+        "Candlestick: three white soldiers",
+        "Supertrend bullish \u2014 price above trend band",
+        "Testing pivot point \u2014 decision zone",
+        "In a long-term strong uptrend (2yr) \u2014 trend on our side",
+        "Near 52-week high (100% of range) \u2014 breakout zone",
+        "\u2713 Daily setup aligned with the higher-timeframe trend",
+        "MACD histogram negative"
+      ],
+      "current_price": 3198.4,
+      "unrealized_pnl": -247.2,
+      "max_held_days": 10,
+      "vol_regime_pct": 0.12,
+      "entry_market": {
+        "nifty_trend": "sideways",
+        "vix": 10.68,
+        "mood": "neutral",
+        "regime": "mixed",
+        "sector_momentum": -0.218,
+        "delivery_signal": "neutral",
+        "rsi": 59.8,
+        "mtf_alignment": "aligned",
+        "opposing_ratio": 0.12,
+        "hist_long_trend": "strong_uptrend"
+      },
+      "view_hist": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "close_date": "2026-09-15",
+      "close_session": "midday",
+      "exit_price": 3223.31,
+      "exit_reason": "stop_hit",
+      "pnl": -217.02,
+      "pnl_gross": -197.38,
+      "costs": 19.64,
+      "pnl_pct": -3.27,
+      "won": false,
+      "open_days": 5
     }
   ],
   "daily_snapshots": [
@@ -3551,11 +3678,11 @@
       "daily_pnl": 0.0
     }
   ],
-  "daily_pnl_today": -122.52064500000003,
+  "daily_pnl_today": -485.462805,
   "last_snapshot_date": "2026-09-11",
   "lifetime_wins": 18,
-  "lifetime_losses": 26,
-  "lifetime_pnl": -2206.77,
+  "lifetime_losses": 28,
+  "lifetime_pnl": -2569.72,
   "last_pnl_reset_date": "2026-09-15",
   "max_drawdown_pct": 3.61,
   "current_drawdown_pct": 3.61,

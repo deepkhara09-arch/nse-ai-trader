@@ -1,13 +1,13 @@
 {
   "phase": "paper_trading",
   "day": 60,
-  "session": "morning",
+  "session": "midday",
   "start_date": "2026-06-22",
   "phase_start_date": "2026-07-15",
   "last_run_date": "2026-09-11",
   "last_counted_date": "2026-09-11",
   "cohort_last_tick_date": "2026-09-11",
-  "last_updated": "2026-09-15T04:05:42.591890",
+  "last_updated": "2026-09-15T06:15:48.664644",
   "focus_stocks": [
     "PIDILITIND.NS",
     "GAIL.NS",
@@ -58,14 +58,14 @@
     "HOMEFIRST.NS"
   ],
   "paper_trade_stats": {
-    "total": 44,
+    "total": 46,
     "wins": 18,
-    "losses": 26,
-    "win_rate": 0.409,
-    "total_pnl": -2206.77,
+    "losses": 28,
+    "win_rate": 0.391,
+    "total_pnl": -2569.72,
     "avg_win": 97.8,
-    "avg_loss": -152.58,
-    "expectancy": -50.15
+    "avg_loss": -154.65,
+    "expectancy": -55.86
   },
   "brain_notes": [
     "[2026-07-17] Focus refresh \u2014 promoted: ['SUNPHARMA', 'ADANIENT', 'INDUSINDBK'] | demoted: ['KOTAKBANK', 'BAJFINANCE', 'AXISBANK']",
@@ -366,6 +366,7 @@
   },
   "sessions_done": {
     "preopen": "2026-09-15",
-    "morning": "2026-09-15"
+    "morning": "2026-09-15",
+    "midday": "2026-09-15"
   }
 }

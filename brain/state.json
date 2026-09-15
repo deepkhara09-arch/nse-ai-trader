@@ -1,21 +1,18 @@
 {
   "phase": "paper_trading",
-  "day": 60,
-  "session": "intraday_close",
+  "day": 61,
+  "session": "morning",
   "start_date": "2026-06-22",
   "phase_start_date": "2026-07-15",
-  "last_run_date": "2026-09-11",
-  "last_counted_date": "2026-09-11",
-  "cohort_last_tick_date": "2026-09-11",
-  "last_updated": "2026-09-15T09:32:48.645614",
+  "last_run_date": "2026-09-15",
+  "last_counted_date": "2026-09-15",
+  "cohort_last_tick_date": "2026-09-15",
+  "last_updated": "2026-09-15T10:12:26.592546",
   "focus_stocks": [
     "PIDILITIND.NS",
     "GAIL.NS",
-    "SIEMENS.NS",
     "HINDALCO.NS",
-    "GRASIM.NS",
     "HOMEFIRST.NS",
-    "JSWSTEEL.NS",
     "ADANIPORTS.NS",
     "ICICIBANK.NS",
     "UNIONBANK.NS",
@@ -23,39 +20,42 @@
     "IDFCFIRSTB.NS",
     "TITAN.NS",
     "NIACL.NS",
-    "BANDHANBNK.NS"
+    "BANDHANBNK.NS",
+    "LICI.NS",
+    "NYKAA.NS",
+    "NHPC.NS"
   ],
   "dropped_stocks": [
-    "NIACL.NS",
     "DMART.NS",
+    "HOMEFIRST.NS",
+    "SBIN.NS",
+    "GAIL.NS",
+    "ASIANPAINT.NS",
+    "NESTLEIND.NS",
+    "AXISBANK.NS",
     "ADANIENT.NS",
+    "JSWSTEEL.NS",
+    "DRREDDY.NS",
+    "INDUSINDBK.NS",
+    "COALINDIA.NS",
     "BAJFINANCE.NS",
+    "IDFCFIRSTB.NS",
+    "LT.NS",
+    "BANKBARODA.NS",
+    "BANDHANBNK.NS",
+    "SHRIRAMFIN.NS",
+    "POWERGRID.NS",
+    "GRASIM.NS",
+    "RELIANCE.NS",
+    "FEDERALBNK.NS",
+    "SIEMENS.NS",
     "VBL.NS",
     "ABCAPITAL.NS",
-    "BANKBARODA.NS",
-    "BHEL.NS",
-    "IDFCFIRSTB.NS",
-    "SHRIRAMFIN.NS",
-    "NESTLEIND.NS",
-    "LICI.NS",
-    "SUNPHARMA.NS",
-    "COALINDIA.NS",
-    "FEDERALBNK.NS",
+    "NIACL.NS",
     "RECLTD.NS",
-    "GAIL.NS",
-    "DRREDDY.NS",
-    "SBIN.NS",
-    "BANDHANBNK.NS",
-    "CHOLAFIN.NS",
-    "ASIANPAINT.NS",
-    "POWERGRID.NS",
-    "RELIANCE.NS",
+    "LICI.NS",
     "NTPC.NS",
-    "AXISBANK.NS",
-    "LT.NS",
-    "INDUSINDBK.NS",
-    "GRASIM.NS",
-    "HOMEFIRST.NS"
+    "SUNPHARMA.NS"
   ],
   "paper_trade_stats": {
     "total": 46,
@@ -68,7 +68,6 @@
     "expectancy": -55.86
   },
   "brain_notes": [
-    "[2026-07-17] Focus refresh \u2014 promoted: ['SUNPHARMA', 'ADANIENT', 'INDUSINDBK'] | demoted: ['KOTAKBANK', 'BAJFINANCE', 'AXISBANK']",
     "[2026-07-17] Cohort batch #9 complete \u2014 30 candidates ready",
     "[2026-07-20] Pre-open macro: neutral (+0.03)",
     "[2026-07-20] Focus refresh \u2014 promoted: ['SIEMENS', 'BANDHANBNK', 'NYKAA'] | demoted: ['ADANIENT', 'RECLTD', 'FEDERALBNK']",
@@ -167,7 +166,8 @@
     "[2026-09-10] Cohort batch #38 complete \u2014 30 candidates ready",
     "[2026-09-11] Pre-open macro: neutral (+0.09)",
     "[2026-09-11] Focus refresh \u2014 promoted: ['BANDHANBNK'] | demoted: ['LICI']",
-    "[2026-09-15] Pre-open macro: neutral (-0.12)"
+    "[2026-09-15] Pre-open macro: neutral (-0.12)",
+    "[2026-09-15] Focus refresh \u2014 promoted: ['LICI', 'NYKAA', 'NHPC'] | demoted: ['GRASIM', 'SIEMENS', 'JSWSTEEL']"
   ],
   "alert_sent": false,
   "schema_version": 11,
@@ -291,35 +291,35 @@
     },
     {
       "id": 39,
-      "day": 5,
+      "day": 6,
       "start_date": "2026-09-07",
       "ready": false,
       "candidates": []
     },
     {
       "id": 40,
-      "day": 4,
+      "day": 5,
       "start_date": "2026-09-08",
       "ready": false,
       "candidates": []
     },
     {
       "id": 41,
-      "day": 3,
+      "day": 4,
       "start_date": "2026-09-09",
       "ready": false,
       "candidates": []
     },
     {
       "id": 42,
-      "day": 2,
+      "day": 3,
       "start_date": "2026-09-10",
       "ready": false,
       "candidates": []
     },
     {
       "id": 43,
-      "day": 1,
+      "day": 2,
       "start_date": "2026-09-11",
       "ready": false,
       "candidates": []
@@ -369,6 +369,7 @@
     "morning": "2026-09-15",
     "midday": "2026-09-15",
     "afternoon": "2026-09-15",
-    "intraday_close": "2026-09-15"
+    "intraday_close": "2026-09-15",
+    "preclose": "2026-09-15"
   }
 }

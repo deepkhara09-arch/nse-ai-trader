@@ -11,18 +11,18 @@
       "avg_loss_pct": 3.95
     },
     "no_market_tailwind": {
-      "count": 14,
-      "sum_loss_pct": 32.199999999999996,
-      "last": "2026-09-09",
+      "count": 17,
+      "sum_loss_pct": 42.27,
+      "last": "2026-09-15",
       "examples": [
-        "BAJFINANCE",
-        "GAIL",
-        "HINDALCO",
         "ABCAPITAL",
         "PIDILITIND",
-        "HOMEFIRST"
+        "HOMEFIRST",
+        "JSWSTEEL",
+        "SIEMENS",
+        "GRASIM"
       ],
-      "avg_loss_pct": 2.3
+      "avg_loss_pct": 2.49
     },
     "weak_pattern:pivot_point_test": {
       "count": 6,
@@ -62,17 +62,18 @@
       "avg_loss_pct": 3.66
     },
     "weak_pattern:doji": {
-      "count": 5,
-      "sum_loss_pct": 9.51,
-      "last": "2026-08-24",
+      "count": 6,
+      "sum_loss_pct": 12.78,
+      "last": "2026-09-15",
       "examples": [
         "ASIANPAINT",
         "SIEMENS",
         "IDFCFIRSTB",
         "MARICO",
-        "BAJFINANCE"
+        "BAJFINANCE",
+        "GRASIM"
       ],
-      "avg_loss_pct": 1.9
+      "avg_loss_pct": 2.13
     },
     "bought_bearish_tape": {
       "count": 5,
@@ -114,15 +115,24 @@
         "COALINDIA"
       ],
       "avg_loss_pct": 2.4
+    },
+    "weak_pattern:low_volume_drift": {
+      "count": 1,
+      "sum_loss_pct": 3.66,
+      "last": "2026-09-15",
+      "examples": [
+        "SIEMENS"
+      ],
+      "avg_loss_pct": 3.66
     }
   },
   "patterns": {
     "full_bullish_alignment": {
       "wins": 14,
-      "losses": 23,
+      "losses": 26,
       "sum_win_pct": 34.07,
-      "sum_loss_pct": 52.89,
-      "edge": -0.17
+      "sum_loss_pct": 62.96,
+      "edge": -0.241
     },
     "near_52w_high": {
       "wins": 3,
@@ -133,10 +143,10 @@
     },
     "low_volume_drift": {
       "wins": 1,
-      "losses": 2,
+      "losses": 3,
       "sum_win_pct": 5.18,
-      "sum_loss_pct": 6.49,
-      "edge": 0.0
+      "sum_loss_pct": 10.15,
+      "edge": -0.414
     },
     "spinning_top": {
       "wins": 3,
@@ -147,17 +157,17 @@
     },
     "pivot_point_test": {
       "wins": 15,
-      "losses": 9,
+      "losses": 10,
       "sum_win_pct": 36.5,
-      "sum_loss_pct": 12.36,
-      "edge": 0.335
+      "sum_loss_pct": 15.629999999999999,
+      "edge": 0.278
     },
     "adx_strong_trend_up": {
       "wins": 9,
-      "losses": 7,
+      "losses": 9,
       "sum_win_pct": 24.46,
-      "sum_loss_pct": 14.23,
-      "edge": 0.213
+      "sum_loss_pct": 21.03,
+      "edge": 0.064
     },
     "tweezer_bottom": {
       "wins": 5,
@@ -168,10 +178,10 @@
     },
     "supertrend_bullish": {
       "wins": 14,
-      "losses": 19,
+      "losses": 20,
       "sum_win_pct": 24.260000000000005,
-      "sum_loss_pct": 48.94,
-      "edge": -0.249
+      "sum_loss_pct": 52.21,
+      "edge": -0.274
     },
     "engulfing_bullish": {
       "wins": 0,
@@ -182,10 +192,10 @@
     },
     "rsi_bullish_divergence": {
       "wins": 2,
-      "losses": 4,
+      "losses": 5,
       "sum_win_pct": 3.3000000000000003,
-      "sum_loss_pct": 9.66,
-      "edge": -0.353
+      "sum_loss_pct": 13.32,
+      "edge": -0.477
     },
     "inside_bar": {
       "wins": 6,
@@ -217,17 +227,17 @@
     },
     "three_white_soldiers": {
       "wins": 0,
-      "losses": 4,
+      "losses": 5,
       "sum_win_pct": 0.0,
-      "sum_loss_pct": 9.43,
-      "edge": -0.786
+      "sum_loss_pct": 12.7,
+      "edge": -0.847
     },
     "momentum_continuation": {
       "wins": 3,
-      "losses": 1,
+      "losses": 2,
       "sum_win_pct": 3.7600000000000002,
-      "sum_loss_pct": 1.44,
-      "edge": 0.193
+      "sum_loss_pct": 4.58,
+      "edge": -0.055
     },
     "adx_ranging_market": {
       "wins": 4,
@@ -245,10 +255,10 @@
     },
     "pivot_s1_breakdown": {
       "wins": 3,
-      "losses": 5,
+      "losses": 7,
       "sum_win_pct": 12.41,
-      "sum_loss_pct": 6.35,
-      "edge": 0.253
+      "sum_loss_pct": 13.15,
+      "edge": -0.025
     },
     "stoch_rsi_overbought_reversal": {
       "wins": 1,
@@ -266,9 +276,9 @@
     },
     "hammer": {
       "wins": 0,
-      "losses": 2,
+      "losses": 3,
       "sum_win_pct": 0.0,
-      "sum_loss_pct": 5.93,
+      "sum_loss_pct": 9.2,
       "edge": 0.0
     },
     "rsi_bearish_divergence": {
@@ -280,10 +290,10 @@
     },
     "doji": {
       "wins": 3,
-      "losses": 5,
+      "losses": 6,
       "sum_win_pct": 4.17,
-      "sum_loss_pct": 9.51,
-      "edge": -0.223
+      "sum_loss_pct": 12.78,
+      "edge": -0.319
     },
     "pivot_r2_breakout": {
       "wins": 0,
@@ -357,10 +367,10 @@
     },
     "outside_bar": {
       "wins": 2,
-      "losses": 3,
+      "losses": 4,
       "sum_win_pct": 3.75,
-      "sum_loss_pct": 7.42,
-      "edge": -0.245
+      "sum_loss_pct": 10.69,
+      "edge": -0.386
     },
     "tweezer_top": {
       "wins": 0,
@@ -371,9 +381,9 @@
     },
     "engulfing_bearish": {
       "wins": 0,
-      "losses": 2,
+      "losses": 3,
       "sum_win_pct": 0.0,
-      "sum_loss_pct": 1.61,
+      "sum_loss_pct": 5.2700000000000005,
       "edge": 0.0
     },
     "strong_bullish_marubozu": {
@@ -399,16 +409,16 @@
     },
     "three_black_crows": {
       "wins": 0,
-      "losses": 2,
+      "losses": 3,
       "sum_win_pct": 0.0,
-      "sum_loss_pct": 3.57,
+      "sum_loss_pct": 6.71,
       "edge": 0.0
     },
     "strong_bearish_marubozu": {
       "wins": 0,
-      "losses": 1,
+      "losses": 2,
       "sum_win_pct": 0.0,
-      "sum_loss_pct": 0.8,
+      "sum_loss_pct": 4.46,
       "edge": 0.0
     },
     "gap_up_reversal": {
@@ -677,6 +687,32 @@
       "loss_pct": 3.7,
       "causes": [
         "weak_pattern:adx_ranging_market",
+        "no_market_tailwind"
+      ]
+    },
+    {
+      "date": "2026-09-15",
+      "ticker": "JSWSTEEL",
+      "loss_pct": 3.14,
+      "causes": [
+        "no_market_tailwind"
+      ]
+    },
+    {
+      "date": "2026-09-15",
+      "ticker": "SIEMENS",
+      "loss_pct": 3.66,
+      "causes": [
+        "weak_pattern:low_volume_drift",
+        "no_market_tailwind"
+      ]
+    },
+    {
+      "date": "2026-09-15",
+      "ticker": "GRASIM",
+      "loss_pct": 3.27,
+      "causes": [
+        "weak_pattern:doji",
         "no_market_tailwind"
       ]
     }

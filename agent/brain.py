@@ -998,6 +998,26 @@ def analyse_stock(
     else:
         signal = "WATCH"   # no trade — keep monitoring
 
+    # ── Long-bias gate: don't short against the market's structural up-drift ─────
+    # Nifty-100 drifts UP over time, so shorting an individual stock is fighting a
+    # tailwind. Live data proved it: SELLs went 2/6 (−₹177) and every short but one
+    # lost. So a SELL is only allowed when the BROAD MARKET is itself in a confirmed
+    # downtrend — i.e. we short WITH a market-wide bear move, never against a rising
+    # or sideways tape. Otherwise the short setup is demoted to WATCH.
+    if signal == "SELL":
+        try:
+            from agent.market_health import load_market_health
+            _mh = load_market_health()
+            _mood = _mh.get("market_mood", "neutral")
+            _ntrend = (_mh.get("nifty", {}) or {}).get("trend_5d", "")
+            market_is_bearish = (_mood == "bearish") or (_ntrend in ("down", "strong_down"))
+            if not market_is_bearish:
+                sell_reasons.append("⚠ Short suppressed — market isn't in a confirmed "
+                                    "downtrend; shorting against Nifty's up-drift loses")
+                signal = "WATCH"
+        except Exception:
+            signal = "WATCH"   # if we can't confirm a bear market, don't short
+
     # ── Price-sanity guard: never act on a suspect bar ─────────────────────────
     # An >18% single-day move is usually a corporate action (split/bonus the feed
     # hasn't adjusted yet) or a data glitch — an entry/stop anchored to it would
@@ -1027,7 +1047,13 @@ def analyse_stock(
     min_dist  = close * MIN_STOP_DISTANCE_PCT
     if stop_dist < min_dist:
         stop_dist = min_dist
-    target_dist = max(atr * atr_target, stop_dist * 2.0)   # keep ≥2:1 R:R
+    # Target is deliberately CLOSE and reachable (see config redesign). Do NOT force
+    # a wide "≥2:1" floor here — that was the core losing flaw: a far target that
+    # multi-day noise never reached while the stop got clipped. The target tracks
+    # ATR_TARGET_MULTIPLIER directly; we only guard that it clears trading costs.
+    from agent.config import TRADE_COST_PCT_SIDE
+    min_profit_dist = close * TRADE_COST_PCT_SIDE.get("swing", 0.0015) * 3   # >2x round-trip cost
+    target_dist = max(atr * atr_target, min_profit_dist)
 
     if signal == "BUY":
         entry     = close

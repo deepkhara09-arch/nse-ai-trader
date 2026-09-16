@@ -128,10 +128,19 @@ TRADE_COST_PCT_SIDE = {
 }
 
 # ATR-based stop/target (overrides flat % when ATR is available)
-ATR_STOP_MULTIPLIER    = 1.5       # stop = entry ± 1.5x ATR
-ATR_TARGET_MULTIPLIER  = 3.0       # target = entry ± 3.0x ATR (2:1 R:R minimum)
-FLAT_STOP_PCT          = 0.035     # fallback if ATR unavailable
-FLAT_TARGET_PCT        = 0.07
+# ── REDESIGNED after 48 trades of data (Sep 2026) ──────────────────────────────
+# The old 1.5x stop / 3.0x target (1:2 R:R) was mathematically near-unwinnable on
+# multi-day swings: over several days, normal ±2% daily volatility CLIPS a 2% stop
+# long before a 6.8% target is ever approached. Result: 30 stop-hits vs 2
+# target-hits. Yet the tool DOES catch small quick moves — nearly every winner was
+# booked at the halfway point (~+2.5%). So: put the target where profit actually
+# appears, and give the stop enough room that noise doesn't take it out first.
+#   stop  = 2.0x ATR  (wider — survives normal daily noise)
+#   target= 2.4x ATR  (~1.2:1, and CLOSE enough to actually be reached)
+ATR_STOP_MULTIPLIER    = 2.0       # stop = entry ± 2.0x ATR (room to breathe)
+ATR_TARGET_MULTIPLIER  = 2.4       # target = entry ± 2.4x ATR (reachable ~1.2:1)
+FLAT_STOP_PCT          = 0.04      # fallback if ATR unavailable
+FLAT_TARGET_PCT        = 0.05
 # Minimum stop DISTANCE as a fraction of price. Low-ATR (quiet) stocks were getting
 # stops just 0.1% from entry — inside normal intraday noise, so they were clipped on
 # a random tick before the thesis could play out. Floor it so every trade has real
@@ -216,9 +225,16 @@ MIN_PATTERN_SAMPLES    = 3         # minimum trades before trusting a pattern
 CONFIDENCE_FLOOR       = 0.40      # patterns below this are ignored
 
 # Signal scoring thresholds
-BUY_SIGNAL_MIN_SCORE   = 5         # out of ~10 possible points
-SELL_SIGNAL_MIN_SCORE  = 5
-SIGNAL_SCORE_GAP       = 2         # buy and sell scores must differ by at least this
+# ── Selectivity (redesigned Sep 2026) ──────────────────────────────────────────
+# 42% of the universe was "actionable" — far too trigger-happy for a tool whose
+# edge is weak. A low-edge system must trade only its STRONGEST few setups, not
+# half the market. Raised the bar substantially; combined with the far-fewer-but-
+# closer-target geometry, the tool now takes fewer, higher-conviction trades.
+BUY_SIGNAL_MIN_SCORE   = 7         # was 5 — demand a genuinely strong setup
+SELL_SIGNAL_MIN_SCORE  = 8         # shorts are structurally hard on up-drifting
+                                   # Nifty-100 (live: SELLs went 2/6, −₹177) — hold
+                                   # them to an even higher bar than longs
+SIGNAL_SCORE_GAP       = 2.5       # winning side must clearly beat the other
 
 # ── Re-analysis early-exit (thesis-break) — HIGH-STAKES, so CONFIRMED not hasty ─
 # An open position is cut early ONLY when the tool has leaned against it across

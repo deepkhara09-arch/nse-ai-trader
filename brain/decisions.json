@@ -1,90 +1,5 @@
 [
   {
-    "timestamp": "2026-08-07T07:45:53.887461",
-    "date": "2026-08-07",
-    "ticker": "LICI.NS",
-    "session": "afternoon",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 95,
-    "entry": 393.7,
-    "stop_loss": 379.75,
-    "target": 421.6,
-    "reason": "paper afternoon",
-    "patterns": [
-      "supertrend_bullish",
-      "inverted_hammer",
-      "doji",
-      "volume_breakout_bullish",
-      "gravestone_doji",
-      "bb_lower_bounce",
-      "inside_bar",
-      "pivot_point_test",
-      "rsi_bullish_divergence",
-      "gap_down_reversal",
-      "volume_climax_bottom",
-      "stoch_rsi_oversold_reversal"
-    ]
-  },
-  {
-    "timestamp": "2026-08-07T07:45:53.888626",
-    "date": "2026-08-07",
-    "ticker": "ASIANPAINT.NS",
-    "session": "afternoon",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 59.4,
-    "entry": 2713.5,
-    "stop_loss": 2622.86,
-    "target": 2894.79,
-    "reason": "paper afternoon",
-    "patterns": [
-      "gap_up_reversal",
-      "outside_bar",
-      "full_bullish_alignment",
-      "pivot_s1_breakdown"
-    ]
-  },
-  {
-    "timestamp": "2026-08-07T07:45:53.889111",
-    "date": "2026-08-07",
-    "ticker": "CIPLA.NS",
-    "session": "afternoon",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 64.8,
-    "entry": 1463.0,
-    "stop_loss": 1411.64,
-    "target": 1565.73,
-    "reason": "paper afternoon",
-    "patterns": [
-      "supertrend_bullish",
-      "full_bullish_alignment",
-      "pivot_point_test"
-    ]
-  },
-  {
-    "timestamp": "2026-08-07T07:45:53.889587",
-    "date": "2026-08-07",
-    "ticker": "NTPC.NS",
-    "session": "afternoon",
-    "action": "SELL",
-    "signal": "SELL",
-    "confidence": 72.1,
-    "entry": 344.8,
-    "stop_loss": 353.9,
-    "target": 326.6,
-    "reason": "paper afternoon",
-    "patterns": [
-      "tweezer_top",
-      "pivot_s1_breakdown",
-      "full_bearish_alignment",
-      "inside_bar",
-      "bearish_harami",
-      "adx_ranging_market"
-    ]
-  },
-  {
     "timestamp": "2026-08-07T09:35:16.600327",
     "date": "2026-08-07",
     "ticker": "MARICO.NS",
@@ -21132,6 +21047,91 @@
       "rsi_bearish_divergence",
       "supertrend_bullish",
       "spinning_top"
+    ]
+  },
+  {
+    "timestamp": "2026-09-16T04:05:41.464064",
+    "date": "2026-09-16",
+    "ticker": "HOMEFIRST.NS",
+    "session": "morning",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 51.5,
+    "entry": 1163.3,
+    "stop_loss": 1108.81,
+    "target": 1272.29,
+    "reason": "paper morning",
+    "patterns": [
+      "doji",
+      "full_bullish_alignment",
+      "momentum_continuation",
+      "pivot_s1_breakdown",
+      "volume_breakdown_bearish"
+    ]
+  },
+  {
+    "timestamp": "2026-09-16T04:05:41.466093",
+    "date": "2026-09-16",
+    "ticker": "UNIONBANK.NS",
+    "session": "morning",
+    "action": "SELL",
+    "signal": "SELL",
+    "confidence": 37.4,
+    "entry": 176.22,
+    "stop_loss": 182.66,
+    "target": 163.34,
+    "reason": "paper morning",
+    "patterns": [
+      "adx_strong_trend_down",
+      "outside_bar",
+      "bb_lower_bounce",
+      "pivot_s1_breakdown",
+      "strong_bearish_marubozu",
+      "evening_star"
+    ]
+  },
+  {
+    "timestamp": "2026-09-16T04:05:41.471707",
+    "date": "2026-09-16",
+    "ticker": "IDFCFIRSTB.NS",
+    "session": "morning",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 49.1,
+    "entry": 85.05,
+    "stop_loss": 82.72,
+    "target": 89.71,
+    "reason": "paper morning",
+    "patterns": [
+      "adx_strong_trend_up",
+      "rsi_bullish_divergence",
+      "outside_bar",
+      "full_bullish_alignment",
+      "pivot_s1_breakdown",
+      "strong_bearish_marubozu",
+      "evening_star"
+    ]
+  },
+  {
+    "timestamp": "2026-09-16T04:05:41.474643",
+    "date": "2026-09-16",
+    "ticker": "LICI.NS",
+    "session": "morning",
+    "action": "SELL",
+    "signal": "SELL",
+    "confidence": 44.8,
+    "entry": 388.6,
+    "stop_loss": 399.65,
+    "target": 366.51,
+    "reason": "paper morning",
+    "patterns": [
+      "bb_lower_bounce",
+      "outside_bar",
+      "pivot_s1_breakdown",
+      "strong_bearish_marubozu",
+      "adx_ranging_market",
+      "full_bearish_alignment",
+      "evening_star"
     ]
   }
 ]

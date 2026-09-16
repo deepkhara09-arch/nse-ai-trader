@@ -1,75 +1,5 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of shooting_star, momentum_continuation mean for a swing trade on GAIL? Current RSI=51, MACD hist=+0.0586, Vol=1.1x average. Signal is BUY.",
-    "context": {
-      "ticker": "GAIL.NS",
-      "signal": "BUY",
-      "patterns": "shooting_star, momentum_continuation",
-      "rsi": 50.7
-    },
-    "queued_at": "2026-09-15T10:11:15.383633"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of pivot_s1_breakdown, spinning_top mean for a swing trade on IDFCFIRSTB? Current RSI=51, MACD hist=-0.0467, Vol=1.0x average. Signal is BUY.",
-    "context": {
-      "ticker": "IDFCFIRSTB.NS",
-      "signal": "BUY",
-      "patterns": "pivot_s1_breakdown, spinning_top",
-      "rsi": 51.3
-    },
-    "queued_at": "2026-09-15T10:11:15.385163"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of shooting_star, momentum_continuation mean for a swing trade on GAIL? Current RSI=51, MACD hist=+0.0586, Vol=1.1x average. Signal is BUY.",
-    "context": {
-      "ticker": "GAIL.NS",
-      "signal": "BUY",
-      "patterns": "shooting_star, momentum_continuation",
-      "rsi": 50.7
-    },
-    "queued_at": "2026-09-15T10:12:26.696332"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of pivot_s1_breakdown, spinning_top mean for a swing trade on IDFCFIRSTB? Current RSI=51, MACD hist=-0.0467, Vol=1.0x average. Signal is BUY.",
-    "context": {
-      "ticker": "IDFCFIRSTB.NS",
-      "signal": "BUY",
-      "patterns": "pivot_s1_breakdown, spinning_top",
-      "rsi": 51.3
-    },
-    "queued_at": "2026-09-15T10:12:26.701090"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of tweezer_top, adx_strong_trend_down, pivot_s1_breakdown mean for a swing trade on TITAN? Current RSI=42, MACD hist=-25.5851, Vol=0.8x average. Signal is SELL.",
-    "context": {
-      "ticker": "TITAN.NS",
-      "signal": "SELL",
-      "patterns": "tweezer_top, adx_strong_trend_down, pivot_s1_breakdown",
-      "rsi": 41.6
-    },
-    "queued_at": "2026-09-15T10:12:26.702056"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_up, three_white_soldiers, near_52w_high mean for a swing trade on NYKAA? Current RSI=59, MACD hist=+0.0899, Vol=0.7x average. Signal is BUY.",
-    "context": {
-      "ticker": "NYKAA.NS",
-      "signal": "BUY",
-      "patterns": "adx_strong_trend_up, three_white_soldiers, near_52w_high",
-      "rsi": 59.1
-    },
-    "queued_at": "2026-09-15T10:12:26.704758"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of shooting_star, momentum_continuation mean for a swing trade on GAIL? Current RSI=51, MACD hist=+0.0586, Vol=1.1x average. Signal is BUY.",
-    "context": {
-      "ticker": "GAIL.NS",
-      "signal": "BUY",
-      "patterns": "shooting_star, momentum_continuation",
-      "rsi": 50.7
-    },
-    "queued_at": "2026-09-16T03:05:42.065025"
-  },
-  {
     "question": "In Indian NSE markets, what does the combination of spinning_top, pivot_s1_breakdown mean for a swing trade on IDFCFIRSTB? Current RSI=51, MACD hist=-0.0467, Vol=1.0x average. Signal is BUY.",
     "context": {
       "ticker": "IDFCFIRSTB.NS",
@@ -98,5 +28,75 @@
       "rsi": 59.1
     },
     "queued_at": "2026-09-16T03:05:42.237954"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_down, pivot_s1_breakdown, strong_bearish_marubozu mean for a swing trade on UNIONBANK? Current RSI=29, MACD hist=-1.7672, Vol=0.6x average. Signal is SELL.",
+    "context": {
+      "ticker": "UNIONBANK.NS",
+      "signal": "SELL",
+      "patterns": "adx_strong_trend_down, pivot_s1_breakdown, strong_bearish_marubozu",
+      "rsi": 29.4
+    },
+    "queued_at": "2026-09-16T04:05:41.465877"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of rsi_bullish_divergence, outside_bar, pivot_s1_breakdown mean for a swing trade on IDFCFIRSTB? Current RSI=52, MACD hist=-0.1779, Vol=1.7x average. Signal is BUY.",
+    "context": {
+      "ticker": "IDFCFIRSTB.NS",
+      "signal": "BUY",
+      "patterns": "rsi_bullish_divergence, outside_bar, pivot_s1_breakdown",
+      "rsi": 51.6
+    },
+    "queued_at": "2026-09-16T04:05:41.467382"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of outside_bar, pivot_s1_breakdown, strong_bearish_marubozu mean for a swing trade on LICI? Current RSI=29, MACD hist=-1.9283, Vol=1.5x average. Signal is SELL.",
+    "context": {
+      "ticker": "LICI.NS",
+      "signal": "SELL",
+      "patterns": "outside_bar, pivot_s1_breakdown, strong_bearish_marubozu",
+      "rsi": 29.2
+    },
+    "queued_at": "2026-09-16T04:05:41.474462"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of rsi_bullish_divergence, outside_bar, pivot_s1_breakdown mean for a swing trade on IDFCFIRSTB? Current RSI=52, MACD hist=-0.1779, Vol=1.7x average. Signal is BUY.",
+    "context": {
+      "ticker": "IDFCFIRSTB.NS",
+      "signal": "BUY",
+      "patterns": "rsi_bullish_divergence, outside_bar, pivot_s1_breakdown",
+      "rsi": 51.6
+    },
+    "queued_at": "2026-09-16T04:05:41.477445"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_down, pivot_s1_breakdown, strong_bearish_marubozu mean for a swing trade on UNIONBANK? Current RSI=29, MACD hist=-1.7672, Vol=0.6x average. Signal is SELL.",
+    "context": {
+      "ticker": "UNIONBANK.NS",
+      "signal": "SELL",
+      "patterns": "adx_strong_trend_down, pivot_s1_breakdown, strong_bearish_marubozu",
+      "rsi": 29.4
+    },
+    "queued_at": "2026-09-16T04:05:41.569473"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of rsi_bullish_divergence, outside_bar, pivot_s1_breakdown mean for a swing trade on IDFCFIRSTB? Current RSI=52, MACD hist=-0.1779, Vol=1.7x average. Signal is BUY.",
+    "context": {
+      "ticker": "IDFCFIRSTB.NS",
+      "signal": "BUY",
+      "patterns": "rsi_bullish_divergence, outside_bar, pivot_s1_breakdown",
+      "rsi": 51.6
+    },
+    "queued_at": "2026-09-16T04:05:41.570973"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of outside_bar, pivot_s1_breakdown, strong_bearish_marubozu mean for a swing trade on LICI? Current RSI=29, MACD hist=-1.9283, Vol=1.5x average. Signal is SELL.",
+    "context": {
+      "ticker": "LICI.NS",
+      "signal": "SELL",
+      "patterns": "outside_bar, pivot_s1_breakdown, strong_bearish_marubozu",
+      "rsi": 29.2
+    },
+    "queued_at": "2026-09-16T04:05:41.573568"
   }
 ]

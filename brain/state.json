@@ -1,13 +1,13 @@
 {
   "phase": "paper_trading",
   "day": 61,
-  "session": "preopen",
+  "session": "morning",
   "start_date": "2026-06-22",
   "phase_start_date": "2026-07-15",
   "last_run_date": "2026-09-15",
   "last_counted_date": "2026-09-15",
   "cohort_last_tick_date": "2026-09-15",
-  "last_updated": "2026-09-16T03:05:41.962746",
+  "last_updated": "2026-09-16T04:05:41.500956",
   "focus_stocks": [
     "PIDILITIND.NS",
     "GAIL.NS",
@@ -58,14 +58,14 @@
     "SUNPHARMA.NS"
   ],
   "paper_trade_stats": {
-    "total": 46,
+    "total": 48,
     "wins": 18,
-    "losses": 28,
-    "win_rate": 0.391,
-    "total_pnl": -2569.72,
+    "losses": 30,
+    "win_rate": 0.375,
+    "total_pnl": -2936.58,
     "avg_win": 97.8,
-    "avg_loss": -154.65,
-    "expectancy": -55.86
+    "avg_loss": -156.57,
+    "expectancy": -61.18
   },
   "brain_notes": [
     "[2026-07-20] Pre-open macro: neutral (+0.03)",
@@ -365,6 +365,7 @@
     "scored_date": "2026-09-10"
   },
   "sessions_done": {
-    "preopen": "2026-09-16"
+    "preopen": "2026-09-16",
+    "morning": "2026-09-16"
   }
 }

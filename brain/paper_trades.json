@@ -39,8 +39,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "MACD histogram negative"
       ],
-      "current_price": 85.05,
-      "unrealized_pnl": -189.14,
+      "current_price": 85.22,
+      "unrealized_pnl": -172.48,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -101,8 +101,8 @@
         "Short EMA below long EMA",
         "MACD histogram negative"
       ],
-      "current_price": 1531.9,
-      "unrealized_pnl": -157.5,
+      "current_price": 1541.1,
+      "unrealized_pnl": -111.5,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -161,8 +161,8 @@
         "Near upper Bollinger Band",
         "High volume confirmation (3.2x avg)"
       ],
-      "current_price": 171.53,
-      "unrealized_pnl": -190.38,
+      "current_price": 171.1,
+      "unrealized_pnl": -206.72,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -217,8 +217,8 @@
         "In a long-term strong downtrend (2yr)",
         "\u2713 Daily setup aligned with the higher-timeframe trend"
       ],
-      "current_price": 264.55,
-      "unrealized_pnl": 19.2,
+      "current_price": 264.9,
+      "unrealized_pnl": 13.6,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -271,8 +271,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "Broke below Pivot S1 support \u2014 bearish"
       ],
-      "current_price": 1163.3,
-      "unrealized_pnl": 0.0,
+      "current_price": 1168.6,
+      "unrealized_pnl": 21.2,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -286,7 +286,10 @@
         "mtf_alignment": "aligned",
         "opposing_ratio": 0.23,
         "hist_long_trend": "strong_uptrend"
-      }
+      },
+      "view_hist": [
+        0
+      ]
     },
     {
       "ticker": "LICI.NS",
@@ -322,8 +325,8 @@
         "In a long-term downtrend (2yr)",
         "\u26a0 Daily sell fights the higher-timeframe uptrend \u2014 needs extra conviction"
       ],
-      "current_price": 388.6,
-      "unrealized_pnl": 0.0,
+      "current_price": 392.35,
+      "unrealized_pnl": -45.0,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -337,7 +340,10 @@
         "mtf_alignment": "conflict",
         "opposing_ratio": 0.25,
         "hist_long_trend": "downtrend"
-      }
+      },
+      "view_hist": [
+        0
+      ]
     }
   ],
   "closed_trades": [

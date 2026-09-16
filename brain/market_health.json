@@ -1,6 +1,6 @@
 {
   "date": "2026-09-16",
-  "session": "morning",
+  "session": "midday",
   "nifty": {
     "symbol": "^NSEI",
     "value": 23118.6,
@@ -63,6 +63,7 @@
   "warnings": [
     "VIX=13.4 at 97th percentile vs last 30d \u2014 unusually high stress",
     "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
+    "Nifty choppy intraday \u2014 wait for cleaner setups",
     "Net institutional outflow (\u20b9-292 Cr)",
     "PCR low (0.54) \u2014 market complacent, caution"
   ],
@@ -74,14 +75,14 @@
     "Pharma",
     "Infra"
   ],
-  "intraday_regime": "mixed",
+  "intraday_regime": "choppy",
   "macro": {
     "date": "2026-09-16",
-    "session": "preopen",
-    "generated_at": "2026-09-16T03:05:40.647418",
-    "global_score": -0.131,
+    "session": "midday",
+    "generated_at": "2026-09-16T06:15:43.410556",
+    "global_score": -0.162,
     "india_score": 0.0,
-    "overall_score": -0.072,
+    "overall_score": -0.089,
     "mood": "neutral",
     "drivers": [
       "Medicare is using AI to approve claims. The result has been \u2018alarmingly high denial rates.\u2019",
@@ -107,23 +108,23 @@
         "chg_pct": -0.45
       },
       "nikkei": {
-        "last": 63396.0,
-        "chg_pct": -0.14
+        "last": 63727.3,
+        "chg_pct": 0.38
       },
       "crude": {
-        "last": 104.66,
-        "chg_pct": 3.23
+        "last": 105.83,
+        "chg_pct": 4.38
       },
       "usdinr": {
-        "last": 95.94,
-        "chg_pct": 0.11
+        "last": 95.93,
+        "chg_pct": 0.1
       },
       "gold": {
-        "last": 4356.6,
-        "chg_pct": 0.11
+        "last": 4332.8,
+        "chg_pct": -0.44
       }
     },
-    "summary": "Overall macro mood is neutral (-0.07). US Dow -0.6% overnight. Crude +3.2%. USD/INR +0.1%. Notable: US Fed rate hike / hawkish; Geopolitical conflict / war; Tariffs / trade war.",
+    "summary": "Overall macro mood is neutral (-0.09). US Dow -0.6% overnight. Crude +4.4%. USD/INR +0.1%. Notable: US Fed rate hike / hawkish; Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
       "Hawkish Fed pressures Nifty via FII outflows and stronger USD.",
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",

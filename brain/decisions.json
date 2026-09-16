@@ -1,67 +1,5 @@
 [
   {
-    "timestamp": "2026-08-07T09:35:16.600327",
-    "date": "2026-08-07",
-    "ticker": "MARICO.NS",
-    "session": "intraday_close",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 95,
-    "entry": 855.35,
-    "stop_loss": 825.44,
-    "target": 915.18,
-    "reason": "paper intraday_close",
-    "patterns": [
-      "supertrend_bullish",
-      "inside_bar",
-      "adx_strong_trend_up",
-      "full_bullish_alignment",
-      "tweezer_bottom",
-      "pivot_point_test",
-      "stoch_rsi_oversold_reversal"
-    ]
-  },
-  {
-    "timestamp": "2026-08-07T09:35:16.601183",
-    "date": "2026-08-07",
-    "ticker": "SBIN.NS",
-    "session": "intraday_close",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 63.5,
-    "entry": 1098.2,
-    "stop_loss": 1069.83,
-    "target": 1154.94,
-    "reason": "paper intraday_close",
-    "patterns": [
-      "supertrend_bullish",
-      "bb_upper_rejection",
-      "pivot_r1_breakout",
-      "adx_ranging_market",
-      "strong_bullish_marubozu",
-      "full_bullish_alignment"
-    ]
-  },
-  {
-    "timestamp": "2026-08-07T09:35:16.601800",
-    "date": "2026-08-07",
-    "ticker": "ICICIBANK.NS",
-    "session": "intraday_close",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 95,
-    "entry": 1419.9,
-    "stop_loss": 1380.02,
-    "target": 1499.66,
-    "reason": "paper intraday_close",
-    "patterns": [
-      "rsi_bearish_divergence",
-      "pivot_s1_breakdown",
-      "full_bullish_alignment",
-      "adx_strong_trend_up"
-    ]
-  },
-  {
     "timestamp": "2026-08-07T09:35:16.603584",
     "date": "2026-08-07",
     "ticker": "PFC.NS",
@@ -21132,6 +21070,70 @@
       "adx_ranging_market",
       "full_bearish_alignment",
       "evening_star"
+    ]
+  },
+  {
+    "timestamp": "2026-09-16T06:15:52.795305",
+    "date": "2026-09-16",
+    "ticker": "HOMEFIRST.NS",
+    "session": "midday",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 48.8,
+    "entry": 1168.6,
+    "stop_loss": 1110.47,
+    "target": 1284.85,
+    "reason": "paper midday",
+    "patterns": [
+      "volume_breakdown_bearish",
+      "pivot_s1_breakdown",
+      "full_bullish_alignment",
+      "momentum_continuation",
+      "doji"
+    ]
+  },
+  {
+    "timestamp": "2026-09-16T06:15:52.798595",
+    "date": "2026-09-16",
+    "ticker": "IDFCFIRSTB.NS",
+    "session": "midday",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 49.1,
+    "entry": 85.22,
+    "stop_loss": 82.89,
+    "target": 89.88,
+    "reason": "paper midday",
+    "patterns": [
+      "outside_bar",
+      "rsi_bullish_divergence",
+      "adx_strong_trend_up",
+      "strong_bearish_marubozu",
+      "pivot_s1_breakdown",
+      "full_bullish_alignment",
+      "evening_star"
+    ]
+  },
+  {
+    "timestamp": "2026-09-16T06:15:52.801372",
+    "date": "2026-09-16",
+    "ticker": "LICI.NS",
+    "session": "midday",
+    "action": "SELL",
+    "signal": "SELL",
+    "confidence": 44.8,
+    "entry": 392.35,
+    "stop_loss": 403.4,
+    "target": 370.26,
+    "reason": "paper midday",
+    "patterns": [
+      "bb_lower_bounce",
+      "outside_bar",
+      "strong_bearish_marubozu",
+      "pivot_s1_breakdown",
+      "full_bearish_alignment",
+      "evening_star",
+      "adx_ranging_market"
     ]
   }
 ]

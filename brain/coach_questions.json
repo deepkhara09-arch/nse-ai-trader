@@ -1,35 +1,5 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of rsi_bullish_divergence, outside_bar, pivot_s1_breakdown mean for a swing trade on IDFCFIRSTB? Current RSI=52, MACD hist=-0.1779, Vol=1.7x average. Signal is BUY.",
-    "context": {
-      "ticker": "IDFCFIRSTB.NS",
-      "signal": "BUY",
-      "patterns": "rsi_bullish_divergence, outside_bar, pivot_s1_breakdown",
-      "rsi": 51.6
-    },
-    "queued_at": "2026-09-16T04:05:41.477445"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_down, pivot_s1_breakdown, strong_bearish_marubozu mean for a swing trade on UNIONBANK? Current RSI=29, MACD hist=-1.7672, Vol=0.6x average. Signal is SELL.",
-    "context": {
-      "ticker": "UNIONBANK.NS",
-      "signal": "SELL",
-      "patterns": "adx_strong_trend_down, pivot_s1_breakdown, strong_bearish_marubozu",
-      "rsi": 29.4
-    },
-    "queued_at": "2026-09-16T04:05:41.569473"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of rsi_bullish_divergence, outside_bar, pivot_s1_breakdown mean for a swing trade on IDFCFIRSTB? Current RSI=52, MACD hist=-0.1779, Vol=1.7x average. Signal is BUY.",
-    "context": {
-      "ticker": "IDFCFIRSTB.NS",
-      "signal": "BUY",
-      "patterns": "rsi_bullish_divergence, outside_bar, pivot_s1_breakdown",
-      "rsi": 51.6
-    },
-    "queued_at": "2026-09-16T04:05:41.570973"
-  },
-  {
     "question": "In Indian NSE markets, what does the combination of outside_bar, pivot_s1_breakdown, strong_bearish_marubozu mean for a swing trade on LICI? Current RSI=29, MACD hist=-1.9283, Vol=1.5x average. Signal is SELL.",
     "context": {
       "ticker": "LICI.NS",
@@ -98,5 +68,35 @@
       "rsi": 29.2
     },
     "queued_at": "2026-09-16T06:15:52.908125"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of outside_bar, evening_star, strong_bearish_marubozu mean for a swing trade on IDFCFIRSTB? Current RSI=52, MACD hist=-0.1779, Vol=1.7x average. Signal is BUY.",
+    "context": {
+      "ticker": "IDFCFIRSTB.NS",
+      "signal": "BUY",
+      "patterns": "outside_bar, evening_star, strong_bearish_marubozu",
+      "rsi": 51.6
+    },
+    "queued_at": "2026-09-16T10:11:08.292225"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of outside_bar, evening_star, strong_bearish_marubozu mean for a swing trade on IDFCFIRSTB? Current RSI=52, MACD hist=-0.1779, Vol=1.7x average. Signal is BUY.",
+    "context": {
+      "ticker": "IDFCFIRSTB.NS",
+      "signal": "BUY",
+      "patterns": "outside_bar, evening_star, strong_bearish_marubozu",
+      "rsi": 51.6
+    },
+    "queued_at": "2026-09-16T10:11:08.296760"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of outside_bar, evening_star, strong_bearish_marubozu mean for a swing trade on IDFCFIRSTB? Current RSI=52, MACD hist=-0.1779, Vol=1.7x average. Signal is BUY.",
+    "context": {
+      "ticker": "IDFCFIRSTB.NS",
+      "signal": "BUY",
+      "patterns": "outside_bar, evening_star, strong_bearish_marubozu",
+      "rsi": 51.6
+    },
+    "queued_at": "2026-09-16T10:12:15.539233"
   }
 ]

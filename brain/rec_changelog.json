@@ -1,15 +1,5 @@
 [
   {
-    "type": "updated",
-    "ticker": "MARICO.NS",
-    "nse_code": "MARICO",
-    "signal": "BUY",
-    "date": "2026-07-16",
-    "ts": "2026-07-16T05:59:59.864640",
-    "detail": "Confidence \u25bc4 (70 \u2192 66)",
-    "confidence": 65.8
-  },
-  {
     "type": "removed",
     "ticker": "FEDERALBNK.NS",
     "nse_code": "FEDERALBNK",
@@ -5998,5 +5988,15 @@
     "ts": "2026-09-16T04:05:41.575276",
     "detail": "Dropped \u2014 no longer meets threshold (was 66/100)",
     "confidence": 0
+  },
+  {
+    "type": "new",
+    "ticker": "PIDILITIND.NS",
+    "nse_code": "PIDILITIND",
+    "signal": "BUY",
+    "date": "2026-09-16",
+    "ts": "2026-09-16T10:12:15.543376",
+    "detail": "New BUY recommendation \u2014 confidence 85/100",
+    "confidence": 85.4
   }
 ]

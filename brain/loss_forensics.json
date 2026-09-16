@@ -11,18 +11,18 @@
       "avg_loss_pct": 3.95
     },
     "no_market_tailwind": {
-      "count": 17,
-      "sum_loss_pct": 42.27,
-      "last": "2026-09-15",
+      "count": 19,
+      "sum_loss_pct": 48.42,
+      "last": "2026-09-16",
       "examples": [
-        "ABCAPITAL",
         "PIDILITIND",
         "HOMEFIRST",
         "JSWSTEEL",
         "SIEMENS",
-        "GRASIM"
+        "GRASIM",
+        "GAIL"
       ],
-      "avg_loss_pct": 2.49
+      "avg_loss_pct": 2.55
     },
     "weak_pattern:pivot_point_test": {
       "count": 6,
@@ -39,9 +39,9 @@
       "avg_loss_pct": 1.51
     },
     "weak_pattern:adx_ranging_market": {
-      "count": 6,
-      "sum_loss_pct": 16.5,
-      "last": "2026-09-09",
+      "count": 8,
+      "sum_loss_pct": 22.650000000000002,
+      "last": "2026-09-16",
       "examples": [
         "SBIN",
         "JSWSTEEL",
@@ -50,7 +50,7 @@
         "PIDILITIND",
         "HOMEFIRST"
       ],
-      "avg_loss_pct": 2.75
+      "avg_loss_pct": 2.83
     },
     "weak_pattern:spinning_top": {
       "count": 1,
@@ -76,17 +76,18 @@
       "avg_loss_pct": 2.13
     },
     "bought_bearish_tape": {
-      "count": 5,
-      "sum_loss_pct": 11.93,
-      "last": "2026-08-24",
+      "count": 7,
+      "sum_loss_pct": 18.08,
+      "last": "2026-09-16",
       "examples": [
-        "ASIANPAINT",
         "JSWSTEEL",
         "SIEMENS",
         "IDFCFIRSTB",
-        "BAJFINANCE"
+        "BAJFINANCE",
+        "GAIL",
+        "HOMEFIRST"
       ],
-      "avg_loss_pct": 2.39
+      "avg_loss_pct": 2.58
     },
     "failed_immediately": {
       "count": 1,
@@ -129,10 +130,10 @@
   "patterns": {
     "full_bullish_alignment": {
       "wins": 14,
-      "losses": 26,
+      "losses": 28,
       "sum_win_pct": 34.07,
-      "sum_loss_pct": 62.96,
-      "edge": -0.241
+      "sum_loss_pct": 69.11,
+      "edge": -0.278
     },
     "near_52w_high": {
       "wins": 3,
@@ -157,10 +158,10 @@
     },
     "pivot_point_test": {
       "wins": 15,
-      "losses": 10,
+      "losses": 11,
       "sum_win_pct": 36.5,
-      "sum_loss_pct": 15.629999999999999,
-      "edge": 0.278
+      "sum_loss_pct": 19.43,
+      "edge": 0.219
     },
     "adx_strong_trend_up": {
       "wins": 9,
@@ -171,17 +172,17 @@
     },
     "tweezer_bottom": {
       "wins": 5,
-      "losses": 6,
+      "losses": 7,
       "sum_win_pct": 11.71,
-      "sum_loss_pct": 13.290000000000001,
-      "edge": -0.048
+      "sum_loss_pct": 15.64,
+      "edge": -0.109
     },
     "supertrend_bullish": {
       "wins": 14,
-      "losses": 20,
+      "losses": 22,
       "sum_win_pct": 24.260000000000005,
-      "sum_loss_pct": 52.21,
-      "edge": -0.274
+      "sum_loss_pct": 58.36,
+      "edge": -0.316
     },
     "engulfing_bullish": {
       "wins": 0,
@@ -213,10 +214,10 @@
     },
     "pivot_r1_breakout": {
       "wins": 3,
-      "losses": 7,
+      "losses": 8,
       "sum_win_pct": 4.62,
-      "sum_loss_pct": 20.189999999999998,
-      "edge": -0.519
+      "sum_loss_pct": 22.54,
+      "edge": -0.543
     },
     "volume_breakout_bullish": {
       "wins": 5,
@@ -227,24 +228,24 @@
     },
     "three_white_soldiers": {
       "wins": 0,
-      "losses": 5,
+      "losses": 6,
       "sum_win_pct": 0.0,
-      "sum_loss_pct": 12.7,
-      "edge": -0.847
+      "sum_loss_pct": 16.5,
+      "edge": -0.917
     },
     "momentum_continuation": {
       "wins": 3,
-      "losses": 2,
+      "losses": 3,
       "sum_win_pct": 3.7600000000000002,
-      "sum_loss_pct": 4.58,
-      "edge": -0.055
+      "sum_loss_pct": 6.93,
+      "edge": -0.176
     },
     "adx_ranging_market": {
       "wins": 4,
-      "losses": 6,
+      "losses": 8,
       "sum_win_pct": 6.57,
-      "sum_loss_pct": 16.5,
-      "edge": -0.331
+      "sum_loss_pct": 22.650000000000002,
+      "edge": -0.447
     },
     "stoch_rsi_oversold_reversal": {
       "wins": 5,
@@ -269,10 +270,10 @@
     },
     "bb_upper_rejection": {
       "wins": 2,
-      "losses": 5,
+      "losses": 6,
       "sum_win_pct": 3.2600000000000002,
-      "sum_loss_pct": 15.080000000000002,
-      "edge": -0.563
+      "sum_loss_pct": 18.880000000000003,
+      "edge": -0.651
     },
     "hammer": {
       "wins": 0,
@@ -437,10 +438,10 @@
     },
     "ema_golden_cross": {
       "wins": 2,
-      "losses": 1,
+      "losses": 2,
       "sum_win_pct": 3.2600000000000002,
-      "sum_loss_pct": 3.48,
-      "edge": 0.0
+      "sum_loss_pct": 5.83,
+      "edge": -0.214
     },
     "adx_strong_trend_down": {
       "wins": 2,
@@ -468,6 +469,13 @@
       "losses": 0,
       "sum_win_pct": 4.48,
       "sum_loss_pct": 0.0,
+      "edge": 0.0
+    },
+    "macd_bullish_crossover": {
+      "wins": 0,
+      "losses": 1,
+      "sum_win_pct": 0.0,
+      "sum_loss_pct": 2.35,
       "edge": 0.0
     }
   },
@@ -713,6 +721,26 @@
       "loss_pct": 3.27,
       "causes": [
         "weak_pattern:doji",
+        "no_market_tailwind"
+      ]
+    },
+    {
+      "date": "2026-09-16",
+      "ticker": "GAIL",
+      "loss_pct": 2.35,
+      "causes": [
+        "weak_pattern:adx_ranging_market",
+        "bought_bearish_tape",
+        "no_market_tailwind"
+      ]
+    },
+    {
+      "date": "2026-09-16",
+      "ticker": "HOMEFIRST",
+      "loss_pct": 3.8,
+      "causes": [
+        "weak_pattern:adx_ranging_market",
+        "bought_bearish_tape",
         "no_market_tailwind"
       ]
     }

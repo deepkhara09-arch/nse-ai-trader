@@ -640,13 +640,13 @@
         },
         "adx_ranging_market": {
           "wins": 0,
-          "losses": 1,
-          "total": 1
+          "losses": 2,
+          "total": 2
         },
         "full_bullish_alignment": {
           "wins": 0,
-          "losses": 1,
-          "total": 1
+          "losses": 2,
+          "total": 2
         },
         "stoch_rsi_oversold_reversal": {
           "wins": 0,
@@ -655,8 +655,8 @@
         },
         "tweezer_bottom": {
           "wins": 0,
-          "losses": 1,
-          "total": 1
+          "losses": 2,
+          "total": 2
         },
         "low_volume_drift": {
           "wins": 0,
@@ -664,6 +664,26 @@
           "total": 1
         },
         "supertrend_bullish": {
+          "wins": 0,
+          "losses": 2,
+          "total": 2
+        },
+        "macd_bullish_crossover": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "momentum_continuation": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "pivot_r1_breakout": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
+        },
+        "ema_golden_cross": {
           "wins": 0,
           "losses": 1,
           "total": 1
@@ -674,20 +694,25 @@
           "wins": 0,
           "losses": 1,
           "total": 1
+        },
+        "midday": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
         }
       },
       "by_mood": {
         "neutral": {
           "wins": 0,
-          "losses": 1,
-          "total": 1
+          "losses": 2,
+          "total": 2
         }
       },
       "by_style": {
         "swing": {
           "wins": 0,
-          "losses": 1,
-          "total": 1
+          "losses": 2,
+          "total": 2
         }
       }
     }
@@ -1980,8 +2005,8 @@
         },
         "full_bullish_alignment": {
           "wins": 2,
-          "losses": 2,
-          "total": 4
+          "losses": 3,
+          "total": 5
         },
         "adx_strong_trend_up": {
           "wins": 0,
@@ -1995,8 +2020,8 @@
         },
         "supertrend_bullish": {
           "wins": 2,
-          "losses": 2,
-          "total": 4
+          "losses": 3,
+          "total": 5
         },
         "inside_bar": {
           "wins": 2,
@@ -2010,8 +2035,8 @@
         },
         "bb_upper_rejection": {
           "wins": 2,
-          "losses": 1,
-          "total": 3
+          "losses": 2,
+          "total": 4
         },
         "momentum_continuation": {
           "wins": 2,
@@ -2025,8 +2050,8 @@
         },
         "adx_ranging_market": {
           "wins": 2,
-          "losses": 1,
-          "total": 3
+          "losses": 2,
+          "total": 4
         },
         "bullish_harami": {
           "wins": 2,
@@ -2035,13 +2060,13 @@
         },
         "pivot_point_test": {
           "wins": 2,
-          "losses": 0,
-          "total": 2
+          "losses": 1,
+          "total": 3
         },
         "three_white_soldiers": {
           "wins": 0,
-          "losses": 1,
-          "total": 1
+          "losses": 2,
+          "total": 2
         }
       },
       "by_session": {
@@ -2049,20 +2074,25 @@
           "wins": 2,
           "losses": 2,
           "total": 4
+        },
+        "midday": {
+          "wins": 0,
+          "losses": 1,
+          "total": 1
         }
       },
       "by_mood": {
         "neutral": {
           "wins": 2,
-          "losses": 2,
-          "total": 4
+          "losses": 3,
+          "total": 5
         }
       },
       "by_style": {
         "swing": {
           "wins": 2,
-          "losses": 2,
-          "total": 4
+          "losses": 3,
+          "total": 5
         }
       }
     }

@@ -1,6 +1,6 @@
 {
   "date": "2026-09-16",
-  "session": "intraday_close",
+  "session": "preclose",
   "nifty": {
     "symbol": "^NSEI",
     "value": 23118.6,
@@ -64,8 +64,7 @@
     "VIX=13.4 at 97th percentile vs last 30d \u2014 unusually high stress",
     "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
     "Nifty choppy intraday \u2014 wait for cleaner setups",
-    "Net institutional outflow (\u20b9-292 Cr)",
-    "PCR low (0.54) \u2014 market complacent, caution"
+    "Net institutional outflow (\u20b9-292 Cr)"
   ],
   "leading_sectors": [],
   "market_regime": "normal",
@@ -327,16 +326,15 @@
   },
   "pcr": {
     "date": "2026-09-16",
-    "pcr": 0.537,
-    "reading": "complacent_caution",
-    "total_pe_oi": 2141919,
-    "total_ce_oi": 3990900,
-    "spot": 23118.6,
-    "max_pain": 23150.0,
-    "max_pain_dist_pct": -0.14,
-    "oi_bias": "call_heavy_resistance",
+    "pcr": 0.936,
+    "reading": "neutral",
+    "total_pe_oi": 1766051,
+    "total_ce_oi": 1886034,
+    "spot": 23217.6,
+    "max_pain": 23300.0,
+    "max_pain_dist_pct": -0.35,
+    "oi_bias": "balanced",
     "ok": true,
     "error": ""
-  },
-  "oi_note": "Heavy call OI above spot \u2014 option writers see a lid (bearish lean)"
+  }
 }

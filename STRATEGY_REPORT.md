@@ -1,5 +1,5 @@
 # NSE AI Trader — Strategy Report
-> Updated: 2026-09-15 &nbsp;|&nbsp; Day 61 &nbsp;|&nbsp; Phase: paper_trading
+> Updated: 2026-09-16 &nbsp;|&nbsp; Day 62 &nbsp;|&nbsp; Phase: paper_trading
 
 ---
 
@@ -7,12 +7,12 @@
 
 | Metric | Value |
 |--------|-------|
-| Trades | 46 (18 wins / 28 losses) |
-| Win Rate | 39.1% |
-| Total P&L | ₹-2,570 |
+| Trades | 48 (18 wins / 30 losses) |
+| Win Rate | 37.5% |
+| Total P&L | ₹-2,937 |
 | Avg Win | ₹+98 |
-| Avg Loss | ₹-155 |
-| Expectancy / trade | ₹-56 |
+| Avg Loss | ₹-157 |
+| Expectancy / trade | ₹-61 |
 
 ---
 
@@ -21,46 +21,50 @@
 > **Important:** These are paper trade signals based on the agent's learned patterns.
 > Not financial advice. Always use your own judgement and consult a SEBI advisor.
 
-BUY NYKAA.NS (NYKAA)
-   CMP:           Rs.343.90
-   Entry Zone:    Rs.343.21 - Rs.345.62
-   Stop Loss:     Rs.335.79  (2.4% risk)
-   Target 1:      Rs.362.69  (R:R 1:2.3)
-   Target 2:      Rs.370.21  (R:R 1:3.2)
+BUY Pidilite Industries (PIDILITIND)
+   CMP:           Rs.1,544.00
+   Entry Zone:    Rs.1,540.91 - Rs.1,551.72
+   Stop Loss:     Rs.1,488.00  (3.6% risk)
+   Target 1:      Rs.1,656.00  (R:R 1:2.0)
+   Target 2:      Rs.1,689.03  (R:R 1:2.6)
    Hold:          5–15 trading days (swing)
-   Qty (2% risk): 34 shares -> Rs.11,693 invested
-   Max loss:      Rs.276 if SL hit
-   Confidence:    66/100  (Tech:29 Fund:8 News:20 Pat:2)
+   Qty (2% risk): 7 shares -> Rs.10,808 invested
+   Max loss:      Rs.392 if SL hit
+   Confidence:    85/100  (Tech:25 Fund:21 News:17 Pat:10)
    Reasons:
-     - All EMAs stacked bullish
-     - MACD histogram positive
-     - Positive news sentiment (0.25)
+     - RSI=28 oversold — reversal watch
+     - Near lower Bollinger Band
+     - Positive news sentiment (0.37, news 1.3x reliable here)
      - News sentiment improving across sessions
-     - Candlestick: three white soldiers
-     - Near 52-week high — potential breakout zone
-     - Sector headwind (momentum=-0.31)
-     - Supertrend bullish — price above trend band
-     - ADX strong trend — directional move confirmed
-     - In a long-term strong uptrend (2yr) — trend on our side
-     - Near 52-week high (100% of range) — breakout zone
+     - Learned bullish pattern: outside_bar (rel=73%)
+     - Sector headwind (momentum=-0.43)
+     - High delivery 62% — strong institutional accumulation
+     - In a long-term uptrend (2yr) — trend on our side
+     - Mean-reverting stock at oversold extreme — fade the dip
      - ✓ Daily setup aligned with the higher-timeframe trend
-     - ⚠ Sector momentum -0.31 — buying into a falling sector needs extra conviction
+     - ⚠ Sector momentum -0.43 — buying into a falling sector needs extra conviction
      - ⚠ Market mood is bearish — buying against the tape needs extra conviction
-     - Valuation: P/E 373.6x
-     - ROCE: 20.9%
-     - Revenue growing 29.1% YoY
-     - Net profit up 2.1% QoQ
-     - Sales up 5.1% QoQ
-     - Latest quarter NP: ₹80 Cr
-     - Latest quarter Sales: ₹2,782 Cr
-     - Market Cap: ₹96,330 Cr
-     - Promoter holding: 56.1%
-     - Support at ₹338.50 cushions downside
-     - Resistance at ₹349.64 is natural target
-     - Latest news: 'Nykaa Stock Leads 3 Indian Growth Shares With High Insider Ownership -'
-     - Confluence: 5 independent signal families agree (trend, momentum, pattern, news, regime)
-     - History backtest: this kind of BUY setup worked 52% of the time over ~1 week on this stock (sample: 54)
-   Market warnings: VIX=12.3 at 97th percentile vs last 30d — unusually high stress | Nifty in downtrend (down) — only high-confidence BUY signals | PCR low (0.54) — market complacent, caution
+     - ⚠ Strong opposing signals present (opposing evidence 74% of the leading side) — conflicted setup, needs extra conviction
+     - Valuation: P/E 60.5x
+     - ROCE: 33.0%
+     - Revenue growing 21.3% YoY
+     - Net profit up 50.6% QoQ
+     - Sales up 27.0% QoQ
+     - Latest quarter NP: ₹872 Cr
+     - Latest quarter Sales: ₹4,552 Cr
+     - Market Cap: ₹159,492 Cr
+     - Analyst target: +14.0% upside
+     - Promoter holding: 69.3%
+     - Dividend yield: 73.0%
+     - Low debt: D/E 0.04
+     - Reliable patterns on this stock: near_52w_high, full_bullish_alignment, adx_strong_trend_up, supertrend_bullish
+     - Support at ₹1500.00 cushions downside
+     - Resistance at ₹1594.75 is natural target
+     - Latest news: 'Nestle, Hindustan Zinc, Marico, Jindal Steel and Pidilite bounce back '
+     - Paper trade validation: 4 trades, 75% win rate, ₹+15/trade expectancy
+     - Confluence: 5 independent signal families agree (trend, volume, pattern, news, fundamentals)
+     - History backtest: this kind of BUY setup worked 46% of the time over ~1 week on this stock (sample: 52)
+   Market warnings: VIX=13.4 at 97th percentile vs last 30d — unusually high stress | Nifty in downtrend (down) — only high-confidence BUY signals | Nifty choppy intraday — wait for cleaner setups | Net institutional outflow (₹-292 Cr)
 
 ---
 
@@ -76,11 +80,11 @@ BUY NYKAA.NS (NYKAA)
 - POWERGRID.NS
 - IDFCFIRSTB.NS
 - TITAN.NS
-- NIACL.NS
 - BANDHANBNK.NS
 - LICI.NS
 - NYKAA.NS
 - NHPC.NS
+- VBL.NS
 
 ---
 

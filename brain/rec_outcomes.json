@@ -1,0 +1,25 @@
+{
+  "calls": [
+    {
+      "date": "2026-09-16",
+      "ticker": "PIDILITIND.NS",
+      "direction": 1,
+      "entry": 1546.32,
+      "stop": 1488.0,
+      "target": 1656.0,
+      "confidence": 85.4,
+      "horizon_days": 10,
+      "evaluated": false,
+      "outcome": ""
+    }
+  ],
+  "record": {
+    "overall": {
+      "hit": 0,
+      "miss": 0,
+      "open": 0,
+      "flat": 0
+    },
+    "by_conf": {}
+  }
+}

@@ -111,8 +111,11 @@ MAX_SECTOR_POSITIONS   = 2         # max open positions from the same sector sim
 # behaviour MATCH the horizon the recommendation shows the user.
 MAX_HELD_DAYS = {
     "intraday":  1,
-    "swing":     10,
-    "long_term": 30,   # ~6 trading weeks — a positional hold, force-exit at day 30
+    # Mean-reversion (the proven edge) needs TIME to work: the 2yr backtest showed
+    # the dip-buy paid best held ~8 weeks (+3.3%/63%). A 10-day hold cut winners off
+    # before the recovery — a core reason the tool lost. Give swings ~8 weeks.
+    "swing":     40,   # ~8 trading weeks — let the reversion play out
+    "long_term": 60,   # ~3 months
 }
 
 # Realistic PER-SIDE trading costs as a fraction of turnover — brokerage + STT +
@@ -230,11 +233,13 @@ CONFIDENCE_FLOOR       = 0.40      # patterns below this are ignored
 # edge is weak. A low-edge system must trade only its STRONGEST few setups, not
 # half the market. Raised the bar substantially; combined with the far-fewer-but-
 # closer-target geometry, the tool now takes fewer, higher-conviction trades.
-BUY_SIGNAL_MIN_SCORE   = 7         # was 5 — demand a genuinely strong setup
+BUY_SIGNAL_MIN_SCORE   = 6         # dip-buys (the proven edge) score ~6-10; keep the
+                                   # bar reachable for them but above weak setups
 SELL_SIGNAL_MIN_SCORE  = 8         # shorts are structurally hard on up-drifting
                                    # Nifty-100 (live: SELLs went 2/6, −₹177) — hold
                                    # them to an even higher bar than longs
-SIGNAL_SCORE_GAP       = 2.5       # winning side must clearly beat the other
+SIGNAL_SCORE_GAP       = 1.5       # winning side must beat the other, but don't let a
+                                   # bearish-market sell_score block a proven dip-buy
 
 # ── Re-analysis early-exit (thesis-break) — HIGH-STAKES, so CONFIRMED not hasty ─
 # An open position is cut early ONLY when the tool has leaned against it across

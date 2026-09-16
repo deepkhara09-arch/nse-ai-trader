@@ -63,8 +63,7 @@
   "warnings": [
     "VIX=13.4 at 97th percentile vs last 30d \u2014 unusually high stress",
     "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
-    "Nifty choppy intraday \u2014 wait for cleaner setups",
-    "Net institutional outflow (\u20b9-292 Cr)"
+    "Nifty choppy intraday \u2014 wait for cleaner setups"
   ],
   "leading_sectors": [],
   "market_regime": "normal",
@@ -135,10 +134,10 @@
   "macro_risk_factor": 1.0,
   "fii_dii": {
     "date": "2026-09-16",
-    "fii_net_cr": -2977.86,
-    "dii_net_cr": 2686.05,
-    "combined_net_cr": -291.81,
-    "signal": "outflow",
+    "fii_net_cr": -2032.61,
+    "dii_net_cr": 3908.23,
+    "combined_net_cr": 1875.62,
+    "signal": "inflow",
     "ok": true,
     "error": "",
     "history": [
@@ -318,18 +317,18 @@
       },
       {
         "date": "2026-09-16",
-        "fii": -2977.86,
-        "dii": 2686.05,
-        "combined": -291.81
+        "fii": -2032.61,
+        "dii": 3908.23,
+        "combined": 1875.62
       }
     ]
   },
   "pcr": {
     "date": "2026-09-16",
-    "pcr": 0.936,
+    "pcr": 0.938,
     "reading": "neutral",
-    "total_pe_oi": 1766051,
-    "total_ce_oi": 1886034,
+    "total_pe_oi": 1754409,
+    "total_ce_oi": 1870281,
     "spot": 23217.6,
     "max_pain": 23300.0,
     "max_pain_dist_pct": -0.35,

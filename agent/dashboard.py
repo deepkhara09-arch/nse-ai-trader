@@ -2223,6 +2223,49 @@ def _section_recommendations(recs, validated: bool = False, stats: dict = None,
         )
     else:
         track_html = ""
+
+    # ── Dedicated recommendation hit-rate, broken down by CONFIDENCE band ───────
+    # This is the number to trust when deciding which calls to replicate: at higher
+    # confidence the hit-rate should be higher. Built by rec_tracker (records each
+    # rec, scores it target-first vs stop-first days later). Shown as its own card.
+    try:
+        from agent.rec_tracker import accuracy as _rec_acc
+        acc = _rec_acc()
+        ov = acc.get("overall", {})
+        if ov.get("decided", 0) >= 3:
+            def _band_row(label, b):
+                if not b or b.get("decided", 0) == 0:
+                    return (f'<div style="display:flex;justify-content:space-between;padding:3px 0">'
+                            f'<span class="muted">{label}</span><span class="muted">no calls yet</span></div>')
+                hr = b["hit_rate"] * 100
+                col = "var(--green)" if hr >= 55 else ("#e6a93a" if hr >= 45 else "var(--red)")
+                return (f'<div style="display:flex;justify-content:space-between;padding:3px 0">'
+                        f'<span class="muted">{label}</span>'
+                        f'<span style="color:{col};font-weight:600">{b["hit"]}/{b["decided"]} '
+                        f'({hr:.0f}%)</span></div>')
+            byc = acc.get("by_conf", {})
+            ovhr = ov["hit_rate"] * 100
+            ovcol = "var(--green)" if ovhr >= 55 else ("#e6a93a" if ovhr >= 45 else "var(--red)")
+            track_html += (
+                '<div class="card" style="margin-bottom:12px">'
+                '<h3 style="margin-bottom:8px">Recommendation accuracy '
+                '<span style="font-weight:400;color:var(--muted);font-size:.72rem">'
+                '— target-first vs stop-first, by confidence</span></h3>'
+                f'<div style="display:flex;justify-content:space-between;padding:4px 0;'
+                f'border-bottom:0.5px solid var(--border);margin-bottom:4px">'
+                f'<span><b>Overall</b></span>'
+                f'<span style="color:{ovcol};font-weight:700">{ov["hit"]}/{ov["decided"]} '
+                f'({ovhr:.0f}%)</span></div>'
+                + _band_row("High conviction (80+)", byc.get("80+"))
+                + _band_row("Medium (70–80)",        byc.get("70-80"))
+                + _band_row("Lower (&lt;70)",        byc.get("<70"))
+                + '<div class="muted" style="font-size:.66rem;margin-top:7px">'
+                  'Replicate the higher-confidence band — that is where the edge should '
+                  'concentrate as the tool learns.</div>'
+                '</div>'
+            )
+    except Exception:
+        pass
     if validated:
         section_sub = "High-confidence setups with full trade details"
         practice_banner = ""

@@ -952,6 +952,18 @@ def _refresh_outputs(state: dict, market_health: dict, session: str, read_only: 
                 if added:
                     save_decisions(decs)
                     decs = load_decisions()
+                # ── Recommendation accuracy tracker ────────────────────────────
+                # Score PAST recommendations against the real price, then record
+                # today's — building an honest, replicable hit-rate (overall and by
+                # confidence band) so the dashboard can show how accurate the calls
+                # you'd actually copy have been. Free, non-fatal.
+                try:
+                    from agent.rec_tracker import (record_recommendations,
+                                                   evaluate_recommendations)
+                    evaluate_recommendations(sd)
+                    record_recommendations(recs, sd)
+                except Exception as e:
+                    print(f"[rec-track] skipped (non-fatal): {e}")
         else:
             recs = load_recommendations()
 

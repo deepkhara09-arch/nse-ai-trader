@@ -3,10 +3,10 @@
     "ticker": "NYKAA.NS",
     "nse_code": "NYKAA",
     "company_name": "NYKAA.NS",
-    "date": "2026-09-15",
-    "generated_at": "2026-09-15 10:12 UTC",
+    "date": "2026-09-16",
+    "generated_at": "2026-09-16 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -40,10 +40,10 @@
     "pattern_score": 2.0,
     "confluence_bonus": 7.5,
     "paper_bonus": 0.0,
-    "success_probability": 0.504,
-    "base_success_prob": 0.497,
-    "profit_probability": 0.491,
-    "composite_score": 51.2,
+    "success_probability": 0.5,
+    "base_success_prob": 0.489,
+    "profit_probability": 0.467,
+    "composite_score": 50.14,
     "focus_rank": 6,
     "rank_delta": 0,
     "intention": "BUY NYKAA for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
@@ -56,9 +56,9 @@
       "regime"
     ],
     "backtest_tested": true,
-    "backtest_hit_5d": 0.519,
-    "backtest_hit_10d": 0.556,
-    "backtest_sample": 54,
+    "backtest_hit_5d": 0.527,
+    "backtest_hit_10d": 0.564,
+    "backtest_sample": 55,
     "hist_long_trend": "strong_uptrend",
     "hist_52w_position": 100.0,
     "hist_personality": "choppy",
@@ -66,7 +66,7 @@
     "data_confidence": "Estimated",
     "data_confidence_key": "estimated",
     "data_confidence_note": "Only 0 paper trade(s) \u2014 probability is an indicator-based estimate, not yet proven",
-    "expected_edge_r": 0.491,
+    "expected_edge_r": 0.467,
     "buy_score": 10.9,
     "sell_score": 2.0,
     "reasons": [
@@ -97,16 +97,16 @@
       "Resistance at \u20b9349.64 is natural target",
       "Latest news: 'Nykaa Stock Leads 3 Indian Growth Shares With High Insider Ownership -'",
       "Confluence: 5 independent signal families agree (trend, momentum, pattern, news, regime)",
-      "History backtest: this kind of BUY setup worked 52% of the time over ~1 week on this stock (sample: 54)"
+      "History backtest: this kind of BUY setup worked 53% of the time over ~1 week on this stock (sample: 55)"
     ],
     "patterns_seen": [
-      "adx_strong_trend_up",
-      "three_white_soldiers",
+      "spinning_top",
       "near_52w_high",
       "full_bullish_alignment",
-      "rsi_bearish_divergence",
+      "adx_strong_trend_up",
       "supertrend_bullish",
-      "spinning_top"
+      "rsi_bearish_divergence",
+      "three_white_soldiers"
     ],
     "reliable_patterns": [],
     "nearest_support": 338.5,
@@ -134,8 +134,9 @@
     "paper_expectancy": 0,
     "market_mood": "bearish",
     "market_warning": [
-      "VIX=12.3 at 97th percentile vs last 30d \u2014 unusually high stress",
+      "VIX=13.4 at 97th percentile vs last 30d \u2014 unusually high stress",
       "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
+      "Net institutional outflow (\u20b9-292 Cr)",
       "PCR low (0.54) \u2014 market complacent, caution"
     ]
   }

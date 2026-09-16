@@ -1,45 +1,5 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of full_bullish_alignment, tweezer_top, adx_strong_trend_down mean for a swing trade on TITAN? Current RSI=42, MACD hist=-25.5851, Vol=0.8x average. Signal is SELL.",
-    "context": {
-      "ticker": "TITAN.NS",
-      "signal": "SELL",
-      "patterns": "full_bullish_alignment, tweezer_top, adx_strong_trend_down",
-      "rsi": 41.6
-    },
-    "queued_at": "2026-09-15T09:32:48.744569"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of shooting_star, momentum_continuation mean for a swing trade on GAIL? Current RSI=51, MACD hist=+0.0586, Vol=1.1x average. Signal is BUY.",
-    "context": {
-      "ticker": "GAIL.NS",
-      "signal": "BUY",
-      "patterns": "shooting_star, momentum_continuation",
-      "rsi": 50.7
-    },
-    "queued_at": "2026-09-15T10:11:15.374279"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of pivot_s1_breakdown, spinning_top mean for a swing trade on IDFCFIRSTB? Current RSI=51, MACD hist=-0.0467, Vol=1.0x average. Signal is BUY.",
-    "context": {
-      "ticker": "IDFCFIRSTB.NS",
-      "signal": "BUY",
-      "patterns": "pivot_s1_breakdown, spinning_top",
-      "rsi": 51.3
-    },
-    "queued_at": "2026-09-15T10:11:15.380582"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of tweezer_top, adx_strong_trend_down, pivot_s1_breakdown mean for a swing trade on TITAN? Current RSI=42, MACD hist=-25.5851, Vol=0.8x average. Signal is SELL.",
-    "context": {
-      "ticker": "TITAN.NS",
-      "signal": "SELL",
-      "patterns": "tweezer_top, adx_strong_trend_down, pivot_s1_breakdown",
-      "rsi": 41.6
-    },
-    "queued_at": "2026-09-15T10:11:15.381479"
-  },
-  {
     "question": "In Indian NSE markets, what does the combination of shooting_star, momentum_continuation mean for a swing trade on GAIL? Current RSI=51, MACD hist=+0.0586, Vol=1.1x average. Signal is BUY.",
     "context": {
       "ticker": "GAIL.NS",
@@ -98,5 +58,45 @@
       "rsi": 59.1
     },
     "queued_at": "2026-09-15T10:12:26.704758"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of shooting_star, momentum_continuation mean for a swing trade on GAIL? Current RSI=51, MACD hist=+0.0586, Vol=1.1x average. Signal is BUY.",
+    "context": {
+      "ticker": "GAIL.NS",
+      "signal": "BUY",
+      "patterns": "shooting_star, momentum_continuation",
+      "rsi": 50.7
+    },
+    "queued_at": "2026-09-16T03:05:42.065025"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of spinning_top, pivot_s1_breakdown mean for a swing trade on IDFCFIRSTB? Current RSI=51, MACD hist=-0.0467, Vol=1.0x average. Signal is BUY.",
+    "context": {
+      "ticker": "IDFCFIRSTB.NS",
+      "signal": "BUY",
+      "patterns": "spinning_top, pivot_s1_breakdown",
+      "rsi": 51.3
+    },
+    "queued_at": "2026-09-16T03:05:42.071202"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of pivot_s1_breakdown, full_bullish_alignment, rsi_bearish_divergence mean for a swing trade on TITAN? Current RSI=42, MACD hist=-25.5851, Vol=0.8x average. Signal is SELL.",
+    "context": {
+      "ticker": "TITAN.NS",
+      "signal": "SELL",
+      "patterns": "pivot_s1_breakdown, full_bullish_alignment, rsi_bearish_divergence",
+      "rsi": 41.6
+    },
+    "queued_at": "2026-09-16T03:05:42.189250"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of spinning_top, near_52w_high, full_bullish_alignment mean for a swing trade on NYKAA? Current RSI=59, MACD hist=+0.0899, Vol=0.7x average. Signal is BUY.",
+    "context": {
+      "ticker": "NYKAA.NS",
+      "signal": "BUY",
+      "patterns": "spinning_top, near_52w_high, full_bullish_alignment",
+      "rsi": 59.1
+    },
+    "queued_at": "2026-09-16T03:05:42.237954"
   }
 ]

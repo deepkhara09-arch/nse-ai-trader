@@ -1,27 +1,27 @@
 {
-  "date": "2026-09-15",
-  "session": "preclose",
+  "date": "2026-09-16",
+  "session": "preopen",
   "nifty": {
     "symbol": "^NSEI",
-    "value": 23398.1,
-    "day_change_pct": -0.34,
+    "value": 23118.6,
+    "day_change_pct": -1.19,
     "trend_5d": "down",
     "trend_20d": "strong_down",
-    "ath_pct_60d": -5.55
+    "ath_pct_60d": -6.68
   },
   "vix": {
-    "value": 12.29,
+    "value": 13.43,
     "level": "normal",
     "percentile_30d": 97.0,
-    "avg_30d": 11.49
+    "avg_30d": 11.54
   },
   "bank_nifty": {
     "symbol": "^NSEBANK",
-    "value": 56606.55,
-    "day_change_pct": 0.24,
+    "value": 55794.75,
+    "day_change_pct": -1.43,
     "trend_5d": "down",
     "trend_20d": "down",
-    "ath_pct_60d": -3.4,
+    "ath_pct_60d": -4.21,
     "diverging": false
   },
   "sectors": {
@@ -35,11 +35,11 @@
     },
     "Pharma": {
       "symbol": "PHARMABEES.NS",
-      "value": 27.29,
-      "day_change_pct": 0.07,
-      "trend_5d": "sideways",
-      "trend_20d": "sideways",
-      "ath_pct_60d": -3.91
+      "value": 26.94,
+      "day_change_pct": -1.28,
+      "trend_5d": "down",
+      "trend_20d": "down",
+      "ath_pct_60d": -5.14
     },
     "Bank": {
       "symbol": "BANKBEES.NS",
@@ -51,17 +51,17 @@
     },
     "Infra": {
       "symbol": "INFRABEES.NS",
-      "value": 943.65,
-      "day_change_pct": -0.13,
-      "trend_5d": "sideways",
+      "value": 925.85,
+      "day_change_pct": -1.89,
+      "trend_5d": "down",
       "trend_20d": "unknown",
-      "ath_pct_60d": -3.4
+      "ath_pct_60d": -5.22
     }
   },
   "market_mood": "bearish",
   "trade_allowed": true,
   "warnings": [
-    "VIX=12.3 at 97th percentile vs last 30d \u2014 unusually high stress",
+    "VIX=13.4 at 97th percentile vs last 30d \u2014 unusually high stress",
     "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
     "Net institutional outflow (\u20b9-292 Cr)",
     "PCR low (0.54) \u2014 market complacent, caution"
@@ -70,58 +70,60 @@
   "market_regime": "normal",
   "sector_breadth": 0.0,
   "lagging_sectors": [
-    "IT"
+    "IT",
+    "Pharma",
+    "Infra"
   ],
   "intraday_regime": "mixed",
   "macro": {
-    "date": "2026-09-15",
-    "session": "midday",
-    "generated_at": "2026-09-15T06:15:40.696937",
-    "global_score": -0.219,
+    "date": "2026-09-16",
+    "session": "preopen",
+    "generated_at": "2026-09-16T03:05:40.647418",
+    "global_score": -0.131,
     "india_score": 0.0,
-    "overall_score": -0.12,
+    "overall_score": -0.072,
     "mood": "neutral",
     "drivers": [
-      "\u2018He does not have a spouse or children\u2019: My son has a serious genetic disease. What should I do with my $1.3 million estate?",
+      "Medicare is using AI to approve claims. The result has been \u2018alarmingly high denial rates.\u2019",
       "\u2018My total balance should be $20 million\u2019: I invested $1.1 million in a crypto platform. Have I lost it all?",
-      "AI doomsday fears are arriving at the worst possible time for the stock market",
-      "The murky AI milestone that has some of the industry\u2019s leading voices increasingly on edge",
-      "The oil market is sending an increasingly loud warning about gas prices at the pump",
-      "CrowdStrike and Palo Alto Networks lead software stocks to a never-before-seen feat",
-      "Chip stocks were a safe AI play. Now they\u2019ve turned into the market\u2019s pain trade.",
-      "I want to pay for every customer at my late husband\u2019s favorite restaurant on his birthday. Am I crazy to do this?"
+      "\u2018There might be a silver lining\u2019: My friend\u2019s wife died at 60 after a high-earning career. Can he claim her Social Security?",
+      "These 4 stocks could benefit most from a $3.2 trillion semiconductor opportunity",
+      "How the Iran war is transforming the relationship between stocks, bonds and oil",
+      "AI stocks are rebounding. One analyst says there\u2019s no spending slowdown in sight.",
+      "Inflation killed the penny. Now it\u2019s coming for your dollar.",
+      "Why a Federal Reserve rate hike could be a \u2018rare win\u2019 for your retirement money"
     ],
     "global_cues": {
       "dow": {
-        "last": 52421.2,
-        "chg_pct": -0.29
+        "last": 52093.11,
+        "chg_pct": -0.63
       },
       "nasdaq": {
-        "last": 26186.41,
-        "chg_pct": -0.56
+        "last": 25981.57,
+        "chg_pct": -0.78
       },
       "sp500": {
-        "last": 7619.98,
-        "chg_pct": -0.48
+        "last": 7585.73,
+        "chg_pct": -0.45
       },
       "nikkei": {
-        "last": 63642.24,
-        "chg_pct": 0.24
+        "last": 63396.0,
+        "chg_pct": -0.14
       },
       "crude": {
-        "last": 101.39,
-        "chg_pct": 1.34
+        "last": 104.66,
+        "chg_pct": 3.23
       },
       "usdinr": {
         "last": 95.94,
-        "chg_pct": 0.95
+        "chg_pct": 0.11
       },
       "gold": {
-        "last": 4351.9,
-        "chg_pct": -1.29
+        "last": 4356.6,
+        "chg_pct": 0.11
       }
     },
-    "summary": "Overall macro mood is neutral (-0.12). US Dow -0.3% overnight. Crude +1.3%. USD/INR +0.9%. Notable: US Fed rate hike / hawkish; Geopolitical conflict / war; Tariffs / trade war.",
+    "summary": "Overall macro mood is neutral (-0.07). US Dow -0.6% overnight. Crude +3.2%. USD/INR +0.1%. Notable: US Fed rate hike / hawkish; Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
       "Hawkish Fed pressures Nifty via FII outflows and stronger USD.",
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
@@ -132,7 +134,7 @@
   },
   "macro_risk_factor": 1.0,
   "fii_dii": {
-    "date": "2026-09-15",
+    "date": "2026-09-16",
     "fii_net_cr": -2977.86,
     "dii_net_cr": 2686.05,
     "combined_net_cr": -291.81,
@@ -140,12 +142,6 @@
     "ok": true,
     "error": "",
     "history": [
-      {
-        "date": "2026-08-06",
-        "fii": -943.42,
-        "dii": 2883.17,
-        "combined": 1939.75
-      },
       {
         "date": "2026-08-07",
         "fii": -17.86,
@@ -319,11 +315,17 @@
         "fii": -2977.86,
         "dii": 2686.05,
         "combined": -291.81
+      },
+      {
+        "date": "2026-09-16",
+        "fii": -2977.86,
+        "dii": 2686.05,
+        "combined": -291.81
       }
     ]
   },
   "pcr": {
-    "date": "2026-09-15",
+    "date": "2026-09-16",
     "pcr": 0.537,
     "reading": "complacent_caution",
     "total_pe_oi": 2141919,

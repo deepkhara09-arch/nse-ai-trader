@@ -3,10 +3,10 @@
     "ticker": "PIDILITIND.NS",
     "nse_code": "PIDILITIND",
     "company_name": "Pidilite Industries",
-    "date": "2026-09-16",
-    "generated_at": "2026-09-16 10:12 UTC",
+    "date": "2026-09-17",
+    "generated_at": "2026-09-17 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -40,11 +40,11 @@
     "pattern_score": 10,
     "confluence_bonus": 7.5,
     "paper_bonus": 5.0,
-    "success_probability": 0.636,
-    "base_success_prob": 0.71,
-    "profit_probability": 0.271,
-    "composite_score": 59.94,
-    "focus_rank": 1,
+    "success_probability": 0.64,
+    "base_success_prob": 0.716,
+    "profit_probability": 0.282,
+    "composite_score": 60.68,
+    "focus_rank": 2,
     "rank_delta": 0,
     "intention": "BUY PIDILITIND for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
     "confluence_count": 5,
@@ -66,7 +66,7 @@
     "data_confidence": "Estimated",
     "data_confidence_key": "estimated",
     "data_confidence_note": "Only 4 paper trade(s) \u2014 probability is an indicator-based estimate, not yet proven",
-    "expected_edge_r": 0.271,
+    "expected_edge_r": 0.282,
     "buy_score": 9.48,
     "sell_score": 7.0,
     "reasons": [
@@ -105,11 +105,11 @@
     ],
     "patterns_seen": [
       "outside_bar",
-      "bb_lower_bounce",
-      "evening_star",
-      "strong_bearish_marubozu",
       "pivot_s1_breakdown",
-      "adx_strong_trend_down"
+      "evening_star",
+      "adx_strong_trend_down",
+      "strong_bearish_marubozu",
+      "bb_lower_bounce"
     ],
     "reliable_patterns": [
       "near_52w_high",
@@ -146,10 +146,9 @@
     "paper_expectancy": 15.12,
     "market_mood": "bearish",
     "market_warning": [
-      "VIX=13.4 at 97th percentile vs last 30d \u2014 unusually high stress",
+      "VIX=13.2 at 93th percentile vs last 30d \u2014 unusually high stress",
       "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
-      "Nifty choppy intraday \u2014 wait for cleaner setups",
-      "Net institutional outflow (\u20b9-292 Cr)"
+      "Nifty choppy intraday \u2014 wait for cleaner setups"
     ]
   }
 ]

@@ -1,13 +1,13 @@
 {
   "phase": "paper_trading",
   "day": 62,
-  "session": "morning",
+  "session": "preopen",
   "start_date": "2026-06-22",
   "phase_start_date": "2026-07-15",
   "last_run_date": "2026-09-16",
   "last_counted_date": "2026-09-16",
   "cohort_last_tick_date": "2026-09-16",
-  "last_updated": "2026-09-16T10:12:15.455002",
+  "last_updated": "2026-09-17T03:05:43.347578",
   "focus_stocks": [
     "PIDILITIND.NS",
     "GAIL.NS",
@@ -68,7 +68,6 @@
     "expectancy": -61.18
   },
   "brain_notes": [
-    "[2026-07-20] Cohort batch #10 complete \u2014 30 candidates ready",
     "[2026-07-21] Pre-open macro: neutral (+0.10)",
     "[2026-07-21] Focus refresh \u2014 promoted: ['BHEL', 'JSWSTEEL', 'LICI'] | demoted: ['NYKAA', 'INDUSINDBK', 'SUNPHARMA']",
     "[2026-07-21] Cohort batch #11 complete \u2014 30 candidates ready",
@@ -167,7 +166,8 @@
     "[2026-09-15] Focus refresh \u2014 promoted: ['LICI', 'NYKAA', 'NHPC'] | demoted: ['GRASIM', 'SIEMENS', 'JSWSTEEL']",
     "[2026-09-16] Pre-open macro: neutral (-0.07)",
     "[2026-09-16] Focus refresh \u2014 promoted: ['VBL'] | demoted: ['NIACL']",
-    "[2026-09-16] Cohort batch #39 complete \u2014 30 candidates ready"
+    "[2026-09-16] Cohort batch #39 complete \u2014 30 candidates ready",
+    "[2026-09-17] Pre-open macro: neutral (-0.13)"
   ],
   "alert_sent": false,
   "schema_version": 11,
@@ -397,11 +397,6 @@
     "scored_date": "2026-09-16"
   },
   "sessions_done": {
-    "preopen": "2026-09-16",
-    "morning": "2026-09-16",
-    "midday": "2026-09-16",
-    "afternoon": "2026-09-16",
-    "intraday_close": "2026-09-16",
-    "preclose": "2026-09-16"
+    "preopen": "2026-09-17"
   }
 }

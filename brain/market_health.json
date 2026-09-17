@@ -1,128 +1,130 @@
 {
-  "date": "2026-09-16",
-  "session": "preclose",
+  "date": "2026-09-17",
+  "session": "preopen",
   "nifty": {
     "symbol": "^NSEI",
-    "value": 23118.6,
-    "day_change_pct": -1.19,
+    "value": 23217.6,
+    "day_change_pct": 0.43,
     "trend_5d": "down",
     "trend_20d": "strong_down",
-    "ath_pct_60d": -6.68
+    "ath_pct_60d": -6.28
   },
   "vix": {
-    "value": 13.43,
+    "value": 13.17,
     "level": "normal",
-    "percentile_30d": 97.0,
-    "avg_30d": 11.54
+    "percentile_30d": 93.0,
+    "avg_30d": 11.57
   },
   "bank_nifty": {
     "symbol": "^NSEBANK",
-    "value": 55794.75,
-    "day_change_pct": -1.43,
-    "trend_5d": "down",
+    "value": 56292.45,
+    "day_change_pct": 0.89,
+    "trend_5d": "sideways",
     "trend_20d": "down",
-    "ath_pct_60d": -4.21,
+    "ath_pct_60d": -3.36,
     "diverging": false
   },
   "sectors": {
     "IT": {
       "symbol": "ITBEES.NS",
-      "value": 32.17,
-      "day_change_pct": 0.0,
-      "trend_5d": "strong_down",
-      "trend_20d": "strong_down",
-      "ath_pct_60d": -13.01
+      "value": 32.87,
+      "day_change_pct": 2.18,
+      "trend_5d": "up",
+      "trend_20d": "down",
+      "ath_pct_60d": -11.11
     },
     "Pharma": {
       "symbol": "PHARMABEES.NS",
-      "value": 26.94,
-      "day_change_pct": -1.28,
+      "value": 26.95,
+      "day_change_pct": 0.04,
       "trend_5d": "down",
-      "trend_20d": "down",
-      "ath_pct_60d": -5.14
+      "trend_20d": "sideways",
+      "ath_pct_60d": -5.11
     },
     "Bank": {
       "symbol": "BANKBEES.NS",
-      "value": 586.35,
-      "day_change_pct": 0.0,
-      "trend_5d": "sideways",
+      "value": 579.33,
+      "day_change_pct": -1.2,
+      "trend_5d": "down",
       "trend_20d": "down",
-      "ath_pct_60d": -3.56
+      "ath_pct_60d": -4.71
     },
     "Infra": {
       "symbol": "INFRABEES.NS",
-      "value": 925.85,
-      "day_change_pct": -1.89,
+      "value": 926.01,
+      "day_change_pct": 0.02,
       "trend_5d": "down",
       "trend_20d": "unknown",
-      "ath_pct_60d": -5.22
+      "ath_pct_60d": -5.21
     }
   },
   "market_mood": "bearish",
   "trade_allowed": true,
   "warnings": [
-    "VIX=13.4 at 97th percentile vs last 30d \u2014 unusually high stress",
+    "VIX=13.2 at 93th percentile vs last 30d \u2014 unusually high stress",
     "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
     "Nifty choppy intraday \u2014 wait for cleaner setups"
   ],
-  "leading_sectors": [],
+  "leading_sectors": [
+    "IT"
+  ],
   "market_regime": "normal",
-  "sector_breadth": 0.0,
+  "sector_breadth": 0.25,
   "lagging_sectors": [
-    "IT",
     "Pharma",
+    "Bank",
     "Infra"
   ],
   "intraday_regime": "choppy",
   "macro": {
-    "date": "2026-09-16",
-    "session": "midday",
-    "generated_at": "2026-09-16T06:15:43.410556",
-    "global_score": -0.162,
+    "date": "2026-09-17",
+    "session": "preopen",
+    "generated_at": "2026-09-17T03:05:42.167252",
+    "global_score": -0.24,
     "india_score": 0.0,
-    "overall_score": -0.089,
+    "overall_score": -0.132,
     "mood": "neutral",
     "drivers": [
-      "Medicare is using AI to approve claims. The result has been \u2018alarmingly high denial rates.\u2019",
-      "\u2018My total balance should be $20 million\u2019: I invested $1.1 million in a crypto platform. Have I lost it all?",
+      "Intel\u2019s stock rises as investors hope memory chips can mark the next step in its turnaround",
+      "As Fed rolls out its first interest-rate hike in 3 years, market braces for more increases",
+      "My rental property is paid off, but I need cash. Is this a bad time to take out a $50,000 HELOC?",
       "\u2018There might be a silver lining\u2019: My friend\u2019s wife died at 60 after a high-earning career. Can he claim her Social Security?",
-      "These 4 stocks could benefit most from a $3.2 trillion semiconductor opportunity",
-      "How the Iran war is transforming the relationship between stocks, bonds and oil",
-      "AI stocks are rebounding. One analyst says there\u2019s no spending slowdown in sight.",
-      "Inflation killed the penny. Now it\u2019s coming for your dollar.",
-      "Why a Federal Reserve rate hike could be a \u2018rare win\u2019 for your retirement money"
+      "Generac\u2019s stock soars more than 30% after Amazon deal cements company\u2019s status as an AI power player",
+      "Fed rate hike fails to calm troubled markets as Dow falls 600 points. Expect more sharp swings in stocks and bonds.",
+      "Why optical stocks Lumentum and Coherent were the day\u2019s biggest S&P 500 gainers",
+      "Here\u2019s a sneaky way to play the Fed\u2019s rate increase"
     ],
     "global_cues": {
       "dow": {
-        "last": 52093.11,
-        "chg_pct": -0.63
+        "last": 51461.9,
+        "chg_pct": -1.21
       },
       "nasdaq": {
-        "last": 25981.57,
-        "chg_pct": -0.78
+        "last": 25978.42,
+        "chg_pct": -0.01
       },
       "sp500": {
-        "last": 7585.73,
+        "last": 7551.81,
         "chg_pct": -0.45
       },
       "nikkei": {
-        "last": 63727.3,
-        "chg_pct": 0.38
+        "last": 63966.87,
+        "chg_pct": 0.07
       },
       "crude": {
-        "last": 105.83,
-        "chg_pct": 4.38
+        "last": 102.37,
+        "chg_pct": -0.06
       },
       "usdinr": {
-        "last": 95.93,
-        "chg_pct": 0.1
+        "last": 95.94,
+        "chg_pct": -0.05
       },
       "gold": {
-        "last": 4332.8,
-        "chg_pct": -0.44
+        "last": 4315.2,
+        "chg_pct": -1.65
       }
     },
-    "summary": "Overall macro mood is neutral (-0.09). US Dow -0.6% overnight. Crude +4.4%. USD/INR +0.1%. Notable: US Fed rate hike / hawkish; Geopolitical conflict / war; Tariffs / trade war.",
+    "summary": "Overall macro mood is neutral (-0.13). US Dow -1.2% overnight. Crude -0.1%. USD/INR -0.1%. Notable: US Fed rate hike / hawkish; Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
       "Hawkish Fed pressures Nifty via FII outflows and stronger USD.",
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
@@ -133,7 +135,7 @@
   },
   "macro_risk_factor": 1.0,
   "fii_dii": {
-    "date": "2026-09-16",
+    "date": "2026-09-17",
     "fii_net_cr": -2032.61,
     "dii_net_cr": 3908.23,
     "combined_net_cr": 1875.62,
@@ -141,12 +143,6 @@
     "ok": true,
     "error": "",
     "history": [
-      {
-        "date": "2026-08-07",
-        "fii": -17.86,
-        "dii": 4013.6,
-        "combined": 3995.74
-      },
       {
         "date": "2026-08-10",
         "fii": 480.24,
@@ -320,11 +316,17 @@
         "fii": -2032.61,
         "dii": 3908.23,
         "combined": 1875.62
+      },
+      {
+        "date": "2026-09-17",
+        "fii": -2032.61,
+        "dii": 3908.23,
+        "combined": 1875.62
       }
     ]
   },
   "pcr": {
-    "date": "2026-09-16",
+    "date": "2026-09-17",
     "pcr": 0.938,
     "reading": "neutral",
     "total_pe_oi": 1754409,

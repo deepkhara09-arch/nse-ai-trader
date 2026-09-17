@@ -1,5 +1,5 @@
 {
-  "capital": 60445.479485,
+  "capital": 60038.390985000005,
   "open_positions": [
     {
       "ticker": "IDFCFIRSTB.NS",
@@ -39,8 +39,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "MACD histogram negative"
       ],
-      "current_price": 85.37,
-      "unrealized_pnl": -157.78,
+      "current_price": 85.6,
+      "unrealized_pnl": -135.24,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -101,8 +101,8 @@
         "Short EMA below long EMA",
         "MACD histogram negative"
       ],
-      "current_price": 1547.5,
-      "unrealized_pnl": -79.5,
+      "current_price": 1540.2,
+      "unrealized_pnl": -116.0,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -120,7 +120,7 @@
       "view_hist": [
         0,
         0,
-        0,
+        1,
         1
       ]
     },
@@ -161,8 +161,8 @@
         "Near upper Bollinger Band",
         "High volume confirmation (3.2x avg)"
       ],
-      "current_price": 174.45,
-      "unrealized_pnl": -79.42,
+      "current_price": 172.54,
+      "unrealized_pnl": -152.0,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -217,8 +217,8 @@
         "In a long-term strong downtrend (2yr)",
         "\u2713 Daily setup aligned with the higher-timeframe trend"
       ],
-      "current_price": 264.75,
-      "unrealized_pnl": 16.0,
+      "current_price": 265.05,
+      "unrealized_pnl": 11.2,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -271,8 +271,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "Broke below Pivot S1 support \u2014 bearish"
       ],
-      "current_price": 1172.8,
-      "unrealized_pnl": 38.0,
+      "current_price": 1173.6,
+      "unrealized_pnl": 41.2,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -289,67 +289,62 @@
       },
       "view_hist": [
         0,
-        0,
         1,
+        0,
         0
       ]
     },
     {
-      "ticker": "LICI.NS",
-      "sector": "Insurance",
-      "open_date": "2026-09-16",
-      "open_session": "morning",
-      "action": "SELL",
-      "entry": 388.6,
-      "qty": 12,
-      "invested": 4663.2,
-      "stop_loss": 399.65,
-      "target": 366.51,
+      "ticker": "HINDALCO.NS",
+      "sector": "Metals",
+      "open_date": "2026-09-17",
+      "open_session": "midday",
+      "action": "BUY",
+      "entry": 984.7,
+      "qty": 5,
+      "invested": 4923.5,
+      "stop_loss": 951.32,
+      "target": 1038.11,
       "style": "swing",
-      "confidence": 44.8,
+      "confidence": 68.8,
       "patterns": [
-        "bb_lower_bounce",
-        "outside_bar",
-        "pivot_s1_breakdown",
-        "strong_bearish_marubozu",
-        "adx_ranging_market",
+        "supertrend_bullish",
         "full_bearish_alignment",
-        "evening_star"
+        "rsi_bullish_divergence",
+        "engulfing_bullish"
       ],
       "buy_reasons": [
-        "RSI=29 oversold \u2014 reversal watch",
+        "RSI=27 oversold \u2014 reversal watch",
         "Near lower Bollinger Band",
-        "ADX low \u2014 market ranging, signals less reliable",
+        "Positive news sentiment (0.24)",
+        "News sentiment improving across sessions",
+        "Candlestick: engulfing bullish",
+        "RSI bullish divergence \u2014 price lower but RSI higher",
+        "Sector headwind (momentum=-0.43)",
+        "Supertrend bullish \u2014 price above trend band",
+        "In a long-term strong uptrend (2yr) \u2014 trend on our side",
+        "\u2713 Daily setup aligned with the higher-timeframe trend",
+        "\u26a0 Sector momentum -0.43 \u2014 buying into a falling sector needs extra conviction",
+        "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "All EMAs stacked bearish",
-        "MACD histogram negative",
-        "High volume confirmation (1.5x avg)",
-        "Candlestick: evening star",
-        "Broke below Pivot S1 support \u2014 bearish",
-        "In a long-term downtrend (2yr)",
-        "\u26a0 Daily sell fights the higher-timeframe uptrend \u2014 needs extra conviction"
+        "MACD histogram negative"
       ],
-      "current_price": 397.85,
-      "unrealized_pnl": -111.0,
-      "max_held_days": 10,
+      "current_price": 984.7,
+      "unrealized_pnl": 0.0,
+      "max_held_days": 40,
       "vol_regime_pct": 0.12,
       "entry_market": {
         "nifty_trend": "down",
-        "vix": 13.43,
+        "vix": 13.17,
         "mood": "bearish",
-        "regime": "mixed",
-        "sector_momentum": -0.414,
+        "regime": "choppy",
+        "sector_momentum": -0.434,
         "delivery_signal": "neutral",
-        "rsi": 29.2,
-        "mtf_alignment": "conflict",
-        "opposing_ratio": 0.25,
-        "hist_long_trend": "downtrend"
-      },
-      "view_hist": [
-        0,
-        0,
-        0,
-        0
-      ]
+        "rsi": 26.9,
+        "mtf_alignment": "aligned",
+        "opposing_ratio": 0.31,
+        "hist_long_trend": "strong_uptrend"
+      }
     }
   ],
   "closed_trades": [
@@ -3531,6 +3526,73 @@
       "won": false,
       "open_days": 4,
       "forensic_done": true
+    },
+    {
+      "ticker": "LICI.NS",
+      "sector": "Insurance",
+      "open_date": "2026-09-16",
+      "open_session": "morning",
+      "action": "SELL",
+      "entry": 388.6,
+      "qty": 12,
+      "invested": 4663.2,
+      "stop_loss": 399.65,
+      "target": 366.51,
+      "style": "swing",
+      "confidence": 44.8,
+      "patterns": [
+        "bb_lower_bounce",
+        "outside_bar",
+        "pivot_s1_breakdown",
+        "strong_bearish_marubozu",
+        "adx_ranging_market",
+        "full_bearish_alignment",
+        "evening_star"
+      ],
+      "buy_reasons": [
+        "RSI=29 oversold \u2014 reversal watch",
+        "Near lower Bollinger Band",
+        "ADX low \u2014 market ranging, signals less reliable",
+        "All EMAs stacked bearish",
+        "MACD histogram negative",
+        "High volume confirmation (1.5x avg)",
+        "Candlestick: evening star",
+        "Broke below Pivot S1 support \u2014 bearish",
+        "In a long-term downtrend (2yr)",
+        "\u26a0 Daily sell fights the higher-timeframe uptrend \u2014 needs extra conviction"
+      ],
+      "current_price": 399.0,
+      "unrealized_pnl": -124.8,
+      "max_held_days": 10,
+      "vol_regime_pct": 0.12,
+      "entry_market": {
+        "nifty_trend": "down",
+        "vix": 13.43,
+        "mood": "bearish",
+        "regime": "mixed",
+        "sector_momentum": -0.414,
+        "delivery_signal": "neutral",
+        "rsi": 29.2,
+        "mtf_alignment": "conflict",
+        "opposing_ratio": 0.25,
+        "hist_long_trend": "downtrend"
+      },
+      "view_hist": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "close_date": "2026-09-17",
+      "close_session": "midday",
+      "exit_price": 399.65,
+      "exit_reason": "stop_hit",
+      "pnl": -146.79,
+      "pnl_gross": -132.6,
+      "costs": 14.19,
+      "pnl_pct": -3.15,
+      "won": false,
+      "open_days": 1
     }
   ],
   "daily_snapshots": [
@@ -3843,11 +3905,11 @@
       "daily_pnl": -366.86
     }
   ],
-  "daily_pnl_today": 0.0,
+  "daily_pnl_today": -146.78849999999946,
   "last_snapshot_date": "2026-09-16",
   "lifetime_wins": 18,
-  "lifetime_losses": 30,
-  "lifetime_pnl": -2936.58,
+  "lifetime_losses": 31,
+  "lifetime_pnl": -3083.37,
   "last_pnl_reset_date": "2026-09-17",
   "max_drawdown_pct": 4.47,
   "current_drawdown_pct": 4.47,

@@ -1,26 +1,6 @@
 [
   {
     "type": "new",
-    "ticker": "FEDERALBNK.NS",
-    "nse_code": "FEDERALBNK",
-    "signal": "BUY",
-    "date": "2026-07-16",
-    "ts": "2026-07-16T10:13:11.025522",
-    "detail": "New BUY recommendation \u2014 confidence 78/100",
-    "confidence": 77.9
-  },
-  {
-    "type": "new",
-    "ticker": "MARICO.NS",
-    "nse_code": "MARICO",
-    "signal": "BUY",
-    "date": "2026-07-16",
-    "ts": "2026-07-16T10:13:11.025522",
-    "detail": "New BUY recommendation \u2014 confidence 67/100",
-    "confidence": 66.6
-  },
-  {
-    "type": "new",
     "ticker": "ICICIBANK.NS",
     "nse_code": "ICICIBANK",
     "signal": "BUY",
@@ -5998,5 +5978,25 @@
     "ts": "2026-09-17T04:05:46.524611",
     "detail": "Confidence \u25b24 (85 \u2192 89) | Rank \u25b21 (#2 \u2192 #1) | Target 1 moved \u20b91656.00 \u2192 \u20b91666.50",
     "confidence": 89.0
+  },
+  {
+    "type": "updated",
+    "ticker": "PIDILITIND.NS",
+    "nse_code": "PIDILITIND",
+    "signal": "BUY",
+    "date": "2026-09-17",
+    "ts": "2026-09-17T06:15:51.810857",
+    "detail": "Confidence \u25b27 (89 \u2192 96) | Target 1 moved \u20b91666.50 \u2192 \u20b91644.60",
+    "confidence": 95.7
+  },
+  {
+    "type": "updated",
+    "ticker": "HINDALCO.NS",
+    "nse_code": "HINDALCO",
+    "signal": "BUY",
+    "date": "2026-09-17",
+    "ts": "2026-09-17T06:15:51.810857",
+    "detail": "Rank \u25bc1 (#6 \u2192 #7) | Stop loss moved \u20b9934.19 \u2192 \u20b9940.19 | Target 1 moved \u20b91067.72 \u2192 \u20b91073.72",
+    "confidence": 69.7
   }
 ]

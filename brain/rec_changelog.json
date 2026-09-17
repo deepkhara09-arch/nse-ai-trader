@@ -1,25 +1,5 @@
 [
   {
-    "type": "removed",
-    "ticker": "MARICO.NS",
-    "nse_code": "MARICO",
-    "signal": "BUY",
-    "date": "2026-07-16",
-    "ts": "2026-07-16T07:45:50.757432",
-    "detail": "Dropped \u2014 no longer meets threshold (was 66/100)",
-    "confidence": 0
-  },
-  {
-    "type": "removed",
-    "ticker": "NESTLEIND.NS",
-    "nse_code": "NESTLEIND",
-    "signal": "BUY",
-    "date": "2026-07-16",
-    "ts": "2026-07-16T09:25:25.050756",
-    "detail": "Dropped \u2014 no longer meets threshold (was 74/100)",
-    "confidence": 0
-  },
-  {
     "type": "new",
     "ticker": "FEDERALBNK.NS",
     "nse_code": "FEDERALBNK",
@@ -5998,5 +5978,25 @@
     "ts": "2026-09-17T03:05:43.465885",
     "detail": "Rank \u25bc1 (#1 \u2192 #2)",
     "confidence": 85.4
+  },
+  {
+    "type": "new",
+    "ticker": "HINDALCO.NS",
+    "nse_code": "HINDALCO",
+    "signal": "BUY",
+    "date": "2026-09-17",
+    "ts": "2026-09-17T04:05:46.524611",
+    "detail": "New BUY recommendation \u2014 confidence 69/100",
+    "confidence": 68.7
+  },
+  {
+    "type": "updated",
+    "ticker": "PIDILITIND.NS",
+    "nse_code": "PIDILITIND",
+    "signal": "BUY",
+    "date": "2026-09-17",
+    "ts": "2026-09-17T04:05:46.524611",
+    "detail": "Confidence \u25b24 (85 \u2192 89) | Rank \u25b21 (#2 \u2192 #1) | Target 1 moved \u20b91656.00 \u2192 \u20b91666.50",
+    "confidence": 89.0
   }
 ]

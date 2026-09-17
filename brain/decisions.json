@@ -1,64 +1,5 @@
 [
   {
-    "timestamp": "2026-08-07T09:35:16.608075",
-    "date": "2026-08-07",
-    "ticker": "ASIANPAINT.NS",
-    "session": "intraday_close",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 59.4,
-    "entry": 2714.3,
-    "stop_loss": 2623.66,
-    "target": 2895.59,
-    "reason": "paper intraday_close",
-    "patterns": [
-      "outside_bar",
-      "pivot_s1_breakdown",
-      "full_bullish_alignment",
-      "gap_up_reversal"
-    ]
-  },
-  {
-    "timestamp": "2026-08-07T09:35:16.608913",
-    "date": "2026-08-07",
-    "ticker": "CIPLA.NS",
-    "session": "intraday_close",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 86.4,
-    "entry": 1470.1,
-    "stop_loss": 1418.74,
-    "target": 1572.83,
-    "reason": "paper intraday_close",
-    "patterns": [
-      "supertrend_bullish",
-      "morning_star",
-      "full_bullish_alignment"
-    ]
-  },
-  {
-    "timestamp": "2026-08-07T10:11:11.099362",
-    "date": "2026-08-07",
-    "ticker": "MARICO.NS",
-    "session": "preclose",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 95,
-    "entry": 860.0,
-    "stop_loss": 830.09,
-    "target": 919.83,
-    "reason": "paper preclose",
-    "patterns": [
-      "pivot_point_test",
-      "supertrend_bullish",
-      "tweezer_bottom",
-      "stoch_rsi_oversold_reversal",
-      "adx_strong_trend_up",
-      "inside_bar",
-      "full_bullish_alignment"
-    ]
-  },
-  {
     "timestamp": "2026-08-07T10:11:11.100250",
     "date": "2026-08-07",
     "ticker": "SBIN.NS",
@@ -21141,6 +21082,70 @@
       "strong_bearish_marubozu",
       "pivot_s1_breakdown",
       "adx_strong_trend_down"
+    ]
+  },
+  {
+    "timestamp": "2026-09-17T04:05:46.374469",
+    "date": "2026-09-17",
+    "ticker": "PIDILITIND.NS",
+    "session": "morning",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 92.0,
+    "entry": 1547.5,
+    "stop_loss": 1498.25,
+    "target": 1626.31,
+    "reason": "paper morning",
+    "patterns": [
+      "supertrend_bullish",
+      "adx_strong_trend_down",
+      "strong_bullish_marubozu",
+      "full_bearish_alignment",
+      "tweezer_bottom",
+      "inside_bar",
+      "pivot_point_test"
+    ]
+  },
+  {
+    "timestamp": "2026-09-17T04:05:46.376630",
+    "date": "2026-09-17",
+    "ticker": "HINDALCO.NS",
+    "session": "morning",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 68.8,
+    "entry": 978.7,
+    "stop_loss": 945.32,
+    "target": 1032.11,
+    "reason": "paper morning",
+    "patterns": [
+      "piercing_line",
+      "supertrend_bullish",
+      "rsi_bullish_divergence",
+      "full_bearish_alignment"
+    ]
+  },
+  {
+    "timestamp": "2026-09-17T04:05:46.379755",
+    "date": "2026-09-17",
+    "ticker": "ICICIBANK.NS",
+    "session": "morning",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 92.3,
+    "entry": 1362.2,
+    "stop_loss": 1329.68,
+    "target": 1414.23,
+    "reason": "paper morning",
+    "patterns": [
+      "supertrend_bullish",
+      "bb_lower_bounce",
+      "tweezer_bottom",
+      "bullish_harami",
+      "doji",
+      "hammer",
+      "stoch_rsi_oversold_reversal",
+      "pivot_point_test"
     ]
   }
 ]

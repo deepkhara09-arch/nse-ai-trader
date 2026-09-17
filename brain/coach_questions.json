@@ -1,75 +1,5 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of outside_bar, rsi_bullish_divergence, strong_bearish_marubozu mean for a swing trade on IDFCFIRSTB? Current RSI=52, MACD hist=-0.1779, Vol=1.7x average. Signal is BUY.",
-    "context": {
-      "ticker": "IDFCFIRSTB.NS",
-      "signal": "BUY",
-      "patterns": "outside_bar, rsi_bullish_divergence, strong_bearish_marubozu",
-      "rsi": 51.6
-    },
-    "queued_at": "2026-09-16T06:15:52.798357"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of outside_bar, strong_bearish_marubozu, pivot_s1_breakdown mean for a swing trade on LICI? Current RSI=29, MACD hist=-1.9283, Vol=1.5x average. Signal is SELL.",
-    "context": {
-      "ticker": "LICI.NS",
-      "signal": "SELL",
-      "patterns": "outside_bar, strong_bearish_marubozu, pivot_s1_breakdown",
-      "rsi": 29.2
-    },
-    "queued_at": "2026-09-16T06:15:52.801146"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of outside_bar, rsi_bullish_divergence, strong_bearish_marubozu mean for a swing trade on IDFCFIRSTB? Current RSI=52, MACD hist=-0.1779, Vol=1.7x average. Signal is BUY.",
-    "context": {
-      "ticker": "IDFCFIRSTB.NS",
-      "signal": "BUY",
-      "patterns": "outside_bar, rsi_bullish_divergence, strong_bearish_marubozu",
-      "rsi": 51.6
-    },
-    "queued_at": "2026-09-16T06:15:52.803289"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of outside_bar, strong_bearish_marubozu, pivot_s1_breakdown mean for a swing trade on LICI? Current RSI=29, MACD hist=-1.9283, Vol=1.5x average. Signal is SELL.",
-    "context": {
-      "ticker": "LICI.NS",
-      "signal": "SELL",
-      "patterns": "outside_bar, strong_bearish_marubozu, pivot_s1_breakdown",
-      "rsi": 29.2
-    },
-    "queued_at": "2026-09-16T06:15:52.806633"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of outside_bar, rsi_bullish_divergence, strong_bearish_marubozu mean for a swing trade on IDFCFIRSTB? Current RSI=52, MACD hist=-0.1779, Vol=1.7x average. Signal is BUY.",
-    "context": {
-      "ticker": "IDFCFIRSTB.NS",
-      "signal": "BUY",
-      "patterns": "outside_bar, rsi_bullish_divergence, strong_bearish_marubozu",
-      "rsi": 51.6
-    },
-    "queued_at": "2026-09-16T06:15:52.905504"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of outside_bar, strong_bearish_marubozu, pivot_s1_breakdown mean for a swing trade on LICI? Current RSI=29, MACD hist=-1.9283, Vol=1.5x average. Signal is SELL.",
-    "context": {
-      "ticker": "LICI.NS",
-      "signal": "SELL",
-      "patterns": "outside_bar, strong_bearish_marubozu, pivot_s1_breakdown",
-      "rsi": 29.2
-    },
-    "queued_at": "2026-09-16T06:15:52.908125"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of outside_bar, evening_star, strong_bearish_marubozu mean for a swing trade on IDFCFIRSTB? Current RSI=52, MACD hist=-0.1779, Vol=1.7x average. Signal is BUY.",
-    "context": {
-      "ticker": "IDFCFIRSTB.NS",
-      "signal": "BUY",
-      "patterns": "outside_bar, evening_star, strong_bearish_marubozu",
-      "rsi": 51.6
-    },
-    "queued_at": "2026-09-16T10:11:08.292225"
-  },
-  {
     "question": "In Indian NSE markets, what does the combination of outside_bar, evening_star, strong_bearish_marubozu mean for a swing trade on IDFCFIRSTB? Current RSI=52, MACD hist=-0.1779, Vol=1.7x average. Signal is BUY.",
     "context": {
       "ticker": "IDFCFIRSTB.NS",
@@ -98,5 +28,75 @@
       "rsi": 51.6
     },
     "queued_at": "2026-09-17T03:05:43.460523"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_down, full_bearish_alignment mean for a swing trade on PIDILITIND? Current RSI=32, MACD hist=-11.8176, Vol=0.9x average. Signal is BUY.",
+    "context": {
+      "ticker": "PIDILITIND.NS",
+      "signal": "BUY",
+      "patterns": "adx_strong_trend_down, full_bearish_alignment",
+      "rsi": 32.1
+    },
+    "queued_at": "2026-09-17T04:05:46.374189"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of piercing_line, rsi_bullish_divergence, full_bearish_alignment mean for a swing trade on HINDALCO? Current RSI=27, MACD hist=-7.9614, Vol=1.2x average. Signal is BUY.",
+    "context": {
+      "ticker": "HINDALCO.NS",
+      "signal": "BUY",
+      "patterns": "piercing_line, rsi_bullish_divergence, full_bearish_alignment",
+      "rsi": 26.9
+    },
+    "queued_at": "2026-09-17T04:05:46.376368"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of bb_lower_bounce, bullish_harami, hammer mean for a swing trade on ICICIBANK? Current RSI=26, MACD hist=-8.3204, Vol=1.1x average. Signal is BUY.",
+    "context": {
+      "ticker": "ICICIBANK.NS",
+      "signal": "BUY",
+      "patterns": "bb_lower_bounce, bullish_harami, hammer",
+      "rsi": 26.5
+    },
+    "queued_at": "2026-09-17T04:05:46.379479"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_down, full_bearish_alignment mean for a swing trade on PIDILITIND? Current RSI=32, MACD hist=-11.8176, Vol=0.9x average. Signal is BUY.",
+    "context": {
+      "ticker": "PIDILITIND.NS",
+      "signal": "BUY",
+      "patterns": "adx_strong_trend_down, full_bearish_alignment",
+      "rsi": 32.1
+    },
+    "queued_at": "2026-09-17T04:05:46.389224"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_down, full_bearish_alignment mean for a swing trade on PIDILITIND? Current RSI=32, MACD hist=-11.8176, Vol=0.9x average. Signal is BUY.",
+    "context": {
+      "ticker": "PIDILITIND.NS",
+      "signal": "BUY",
+      "patterns": "adx_strong_trend_down, full_bearish_alignment",
+      "rsi": 32.1
+    },
+    "queued_at": "2026-09-17T04:05:46.505635"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of piercing_line, rsi_bullish_divergence, full_bearish_alignment mean for a swing trade on HINDALCO? Current RSI=27, MACD hist=-7.9614, Vol=1.2x average. Signal is BUY.",
+    "context": {
+      "ticker": "HINDALCO.NS",
+      "signal": "BUY",
+      "patterns": "piercing_line, rsi_bullish_divergence, full_bearish_alignment",
+      "rsi": 26.9
+    },
+    "queued_at": "2026-09-17T04:05:46.510704"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of bb_lower_bounce, bullish_harami, hammer mean for a swing trade on ICICIBANK? Current RSI=26, MACD hist=-8.3204, Vol=1.1x average. Signal is BUY.",
+    "context": {
+      "ticker": "ICICIBANK.NS",
+      "signal": "BUY",
+      "patterns": "bb_lower_bounce, bullish_harami, hammer",
+      "rsi": 26.5
+    },
+    "queued_at": "2026-09-17T04:05:46.516289"
   }
 ]

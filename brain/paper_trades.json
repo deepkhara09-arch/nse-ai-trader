@@ -39,8 +39,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "MACD histogram negative"
       ],
-      "current_price": 86.32,
-      "unrealized_pnl": -64.68,
+      "current_price": 86.24,
+      "unrealized_pnl": -72.52,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -59,7 +59,7 @@
         0,
         0,
         0,
-        0
+        1
       ]
     },
     {
@@ -101,8 +101,8 @@
         "Short EMA below long EMA",
         "MACD histogram negative"
       ],
-      "current_price": 1558.5,
-      "unrealized_pnl": -24.5,
+      "current_price": 1558.7,
+      "unrealized_pnl": -23.5,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -119,9 +119,9 @@
       },
       "view_hist": [
         1,
-        1,
         0,
-        0
+        0,
+        1
       ]
     },
     {
@@ -161,8 +161,8 @@
         "Near upper Bollinger Band",
         "High volume confirmation (3.2x avg)"
       ],
-      "current_price": 171.77,
-      "unrealized_pnl": -181.26,
+      "current_price": 171.54,
+      "unrealized_pnl": -190.0,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -217,8 +217,8 @@
         "In a long-term strong downtrend (2yr)",
         "\u2713 Daily setup aligned with the higher-timeframe trend"
       ],
-      "current_price": 264.0,
-      "unrealized_pnl": 28.0,
+      "current_price": 264.7,
+      "unrealized_pnl": 16.8,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -271,8 +271,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "Broke below Pivot S1 support \u2014 bearish"
       ],
-      "current_price": 1171.9,
-      "unrealized_pnl": 34.4,
+      "current_price": 1173.3,
+      "unrealized_pnl": 40.0,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -329,8 +329,8 @@
         "All EMAs stacked bearish",
         "MACD histogram negative"
       ],
-      "current_price": 980.7,
-      "unrealized_pnl": -20.0,
+      "current_price": 984.9,
+      "unrealized_pnl": 1.0,
       "max_held_days": 40,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -347,7 +347,8 @@
       },
       "view_hist": [
         0,
-        0
+        0,
+        1
       ]
     }
   ],
@@ -3596,7 +3597,8 @@
       "costs": 14.19,
       "pnl_pct": -3.15,
       "won": false,
-      "open_days": 1
+      "open_days": 1,
+      "forensic_done": true
     }
   ],
   "daily_snapshots": [
@@ -3907,10 +3909,17 @@
       "capital": 60445.48,
       "open_positions": 6,
       "daily_pnl": -366.86
+    },
+    {
+      "date": "2026-09-17",
+      "portfolio_value": 96688.43,
+      "capital": 60038.39,
+      "open_positions": 6,
+      "daily_pnl": -146.79
     }
   ],
   "daily_pnl_today": -146.78849999999946,
-  "last_snapshot_date": "2026-09-16",
+  "last_snapshot_date": "2026-09-17",
   "lifetime_wins": 18,
   "lifetime_losses": 31,
   "lifetime_pnl": -3083.37,
@@ -3918,5 +3927,5 @@
   "max_drawdown_pct": 4.47,
   "current_drawdown_pct": 4.47,
   "portfolio_peak": 101210.28,
-  "sessions_since_peak": 41
+  "sessions_since_peak": 42
 }

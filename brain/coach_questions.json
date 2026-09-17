@@ -1,5 +1,35 @@
 [
   {
+    "question": "In Indian NSE markets, what does the combination of full_bearish_alignment, adx_strong_trend_down mean for a swing trade on PIDILITIND? Current RSI=32, MACD hist=-11.8176, Vol=0.9x average. Signal is BUY.",
+    "context": {
+      "ticker": "PIDILITIND.NS",
+      "signal": "BUY",
+      "patterns": "full_bearish_alignment, adx_strong_trend_down",
+      "rsi": 32.1
+    },
+    "queued_at": "2026-09-17T10:11:14.783688"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of full_bearish_alignment, rsi_bullish_divergence mean for a swing trade on HINDALCO? Current RSI=27, MACD hist=-7.9614, Vol=1.2x average. Signal is BUY.",
+    "context": {
+      "ticker": "HINDALCO.NS",
+      "signal": "BUY",
+      "patterns": "full_bearish_alignment, rsi_bullish_divergence",
+      "rsi": 26.9
+    },
+    "queued_at": "2026-09-17T10:11:14.785866"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of pivot_point_test, bullish_harami, low_volume_drift mean for a swing trade on ADANIPORTS? Current RSI=54, MACD hist=+7.2976, Vol=0.4x average. Signal is BUY.",
+    "context": {
+      "ticker": "ADANIPORTS.NS",
+      "signal": "BUY",
+      "patterns": "pivot_point_test, bullish_harami, low_volume_drift",
+      "rsi": 54.1
+    },
+    "queued_at": "2026-09-17T10:11:14.787941"
+  },
+  {
     "question": "In Indian NSE markets, what does the combination of tweezer_bottom, adx_strong_trend_down mean for a swing trade on UNIONBANK? Current RSI=40, MACD hist=-1.6044, Vol=1.2x average. Signal is BUY.",
     "context": {
       "ticker": "UNIONBANK.NS",
@@ -7,7 +37,7 @@
       "patterns": "tweezer_bottom, adx_strong_trend_down",
       "rsi": 39.7
     },
-    "queued_at": "2026-09-17T07:46:05.156995"
+    "queued_at": "2026-09-17T10:11:14.790062"
   },
   {
     "question": "In Indian NSE markets, what does the combination of full_bearish_alignment, adx_strong_trend_down mean for a swing trade on PIDILITIND? Current RSI=32, MACD hist=-11.8176, Vol=0.9x average. Signal is BUY.",
@@ -17,7 +47,7 @@
       "patterns": "full_bearish_alignment, adx_strong_trend_down",
       "rsi": 32.1
     },
-    "queued_at": "2026-09-17T09:35:15.818985"
+    "queued_at": "2026-09-17T10:11:14.799023"
   },
   {
     "question": "In Indian NSE markets, what does the combination of full_bearish_alignment, rsi_bullish_divergence mean for a swing trade on HINDALCO? Current RSI=27, MACD hist=-7.9614, Vol=1.2x average. Signal is BUY.",
@@ -27,37 +57,7 @@
       "patterns": "full_bearish_alignment, rsi_bullish_divergence",
       "rsi": 26.9
     },
-    "queued_at": "2026-09-17T09:35:15.821010"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of spinning_top, doji, bullish_harami mean for a swing trade on ADANIPORTS? Current RSI=54, MACD hist=+7.2976, Vol=0.4x average. Signal is BUY.",
-    "context": {
-      "ticker": "ADANIPORTS.NS",
-      "signal": "BUY",
-      "patterns": "spinning_top, doji, bullish_harami",
-      "rsi": 54.1
-    },
-    "queued_at": "2026-09-17T09:35:15.822919"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of tweezer_bottom, adx_strong_trend_down mean for a swing trade on UNIONBANK? Current RSI=40, MACD hist=-1.6044, Vol=1.2x average. Signal is BUY.",
-    "context": {
-      "ticker": "UNIONBANK.NS",
-      "signal": "BUY",
-      "patterns": "tweezer_bottom, adx_strong_trend_down",
-      "rsi": 39.7
-    },
-    "queued_at": "2026-09-17T09:35:15.824820"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of full_bearish_alignment, rsi_bullish_divergence mean for a swing trade on HINDALCO? Current RSI=27, MACD hist=-7.9614, Vol=1.2x average. Signal is BUY.",
-    "context": {
-      "ticker": "HINDALCO.NS",
-      "signal": "BUY",
-      "patterns": "full_bearish_alignment, rsi_bullish_divergence",
-      "rsi": 26.9
-    },
-    "queued_at": "2026-09-17T09:35:15.836046"
+    "queued_at": "2026-09-17T10:11:14.802856"
   },
   {
     "question": "In Indian NSE markets, what does the combination of full_bearish_alignment, adx_strong_trend_down mean for a swing trade on PIDILITIND? Current RSI=32, MACD hist=-11.8176, Vol=0.9x average. Signal is BUY.",
@@ -67,7 +67,7 @@
       "patterns": "full_bearish_alignment, adx_strong_trend_down",
       "rsi": 32.1
     },
-    "queued_at": "2026-09-17T09:35:15.946940"
+    "queued_at": "2026-09-17T10:12:19.797555"
   },
   {
     "question": "In Indian NSE markets, what does the combination of full_bearish_alignment, rsi_bullish_divergence mean for a swing trade on HINDALCO? Current RSI=27, MACD hist=-7.9614, Vol=1.2x average. Signal is BUY.",
@@ -77,17 +77,17 @@
       "patterns": "full_bearish_alignment, rsi_bullish_divergence",
       "rsi": 26.9
     },
-    "queued_at": "2026-09-17T09:35:15.951744"
+    "queued_at": "2026-09-17T10:12:19.802653"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of spinning_top, doji, bullish_harami mean for a swing trade on ADANIPORTS? Current RSI=54, MACD hist=+7.2976, Vol=0.4x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of pivot_point_test, bullish_harami, low_volume_drift mean for a swing trade on ADANIPORTS? Current RSI=54, MACD hist=+7.2976, Vol=0.4x average. Signal is BUY.",
     "context": {
       "ticker": "ADANIPORTS.NS",
       "signal": "BUY",
-      "patterns": "spinning_top, doji, bullish_harami",
+      "patterns": "pivot_point_test, bullish_harami, low_volume_drift",
       "rsi": 54.1
     },
-    "queued_at": "2026-09-17T09:35:15.956263"
+    "queued_at": "2026-09-17T10:12:19.807448"
   },
   {
     "question": "In Indian NSE markets, what does the combination of tweezer_bottom, adx_strong_trend_down mean for a swing trade on UNIONBANK? Current RSI=40, MACD hist=-1.6044, Vol=1.2x average. Signal is BUY.",
@@ -97,6 +97,6 @@
       "patterns": "tweezer_bottom, adx_strong_trend_down",
       "rsi": 39.7
     },
-    "queued_at": "2026-09-17T09:35:15.958140"
+    "queued_at": "2026-09-17T10:12:19.809507"
   }
 ]

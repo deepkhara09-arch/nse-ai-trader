@@ -3345,8 +3345,8 @@
       "direction": 1,
       "score": 0.206,
       "price_at_call": 1268.4,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "wrong"
     },
     {
       "date": "2026-09-11",
@@ -3354,8 +3354,8 @@
       "direction": 1,
       "score": 0.397,
       "price_at_call": 1766.7,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "wrong"
     },
     {
       "date": "2026-09-11",
@@ -3363,8 +3363,8 @@
       "direction": 1,
       "score": 0.289,
       "price_at_call": 179.28,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "flat"
     },
     {
       "date": "2026-09-11",
@@ -3372,8 +3372,8 @@
       "direction": 1,
       "score": 0.305,
       "price_at_call": 5000.0,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "wrong"
     },
     {
       "date": "2026-09-15",
@@ -3462,6 +3462,60 @@
       "direction": 1,
       "score": 0.301,
       "price_at_call": 327.85,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-09-17",
+      "ticker": "PIDILITIND.NS",
+      "direction": 1,
+      "score": 0.408,
+      "price_at_call": 1558.7,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-09-17",
+      "ticker": "HINDALCO.NS",
+      "direction": 1,
+      "score": 0.318,
+      "price_at_call": 984.9,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-09-17",
+      "ticker": "POWERGRID.NS",
+      "direction": 1,
+      "score": 0.482,
+      "price_at_call": 264.7,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-09-17",
+      "ticker": "TITAN.NS",
+      "direction": 1,
+      "score": 0.376,
+      "price_at_call": 4845.5,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-09-17",
+      "ticker": "LICI.NS",
+      "direction": 1,
+      "score": 0.341,
+      "price_at_call": 398.1,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-09-17",
+      "ticker": "NYKAA.NS",
+      "direction": 1,
+      "score": 0.259,
+      "price_at_call": 323.9,
       "evaluated": false,
       "outcome": ""
     }
@@ -3558,10 +3612,10 @@
       "last_seen": "2026-09-02"
     },
     "JSWSTEEL.NS": {
-      "wins": 0.754,
-      "losses": 3.711,
-      "reliability": 0.169,
-      "last_seen": "2026-09-16"
+      "wins": 0.75,
+      "losses": 4.69,
+      "reliability": 0.138,
+      "last_seen": "2026-09-17"
     },
     "SIEMENS.NS": {
       "wins": 9.356,
@@ -3654,16 +3708,22 @@
       "last_seen": "2026-09-15"
     },
     "ADANIPORTS.NS": {
-      "wins": 3.849,
-      "losses": 1.994,
-      "reliability": 0.659,
-      "last_seen": "2026-09-16"
+      "wins": 3.827,
+      "losses": 2.983,
+      "reliability": 0.562,
+      "last_seen": "2026-09-17"
     },
     "BHEL.NS": {
       "wins": 0.0,
       "losses": 1.0,
       "reliability": 0.333,
       "last_seen": "2026-09-09"
+    },
+    "TITAN.NS": {
+      "wins": 0.0,
+      "losses": 1.0,
+      "reliability": 0.333,
+      "last_seen": "2026-09-17"
     }
   }
 }

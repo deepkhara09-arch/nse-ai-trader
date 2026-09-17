@@ -1,36 +1,6 @@
 [
   {
     "type": "removed",
-    "ticker": "NESTLEIND.NS",
-    "nse_code": "NESTLEIND",
-    "signal": "BUY",
-    "date": "2026-07-17",
-    "ts": "2026-07-17T03:05:47.452739",
-    "detail": "Dropped \u2014 no longer meets threshold (was 65/100)",
-    "confidence": 0
-  },
-  {
-    "type": "removed",
-    "ticker": "FEDERALBNK.NS",
-    "nse_code": "FEDERALBNK",
-    "signal": "BUY",
-    "date": "2026-07-17",
-    "ts": "2026-07-17T04:05:45.930761",
-    "detail": "Dropped \u2014 no longer meets threshold (was 78/100)",
-    "confidence": 0
-  },
-  {
-    "type": "removed",
-    "ticker": "MARICO.NS",
-    "nse_code": "MARICO",
-    "signal": "BUY",
-    "date": "2026-07-17",
-    "ts": "2026-07-17T04:05:45.930761",
-    "detail": "Dropped \u2014 no longer meets threshold (was 67/100)",
-    "confidence": 0
-  },
-  {
-    "type": "removed",
     "ticker": "ICICIBANK.NS",
     "nse_code": "ICICIBANK",
     "signal": "BUY",
@@ -5998,5 +5968,35 @@
     "ts": "2026-09-17T09:35:15.965015",
     "detail": "Rank \u25b21 (#7 \u2192 #6)",
     "confidence": 69.7
+  },
+  {
+    "type": "new",
+    "ticker": "UNIONBANK.NS",
+    "nse_code": "UNIONBANK",
+    "signal": "BUY",
+    "date": "2026-09-17",
+    "ts": "2026-09-17T10:12:19.819820",
+    "detail": "New BUY recommendation \u2014 confidence 73/100",
+    "confidence": 73.1
+  },
+  {
+    "type": "updated",
+    "ticker": "PIDILITIND.NS",
+    "nse_code": "PIDILITIND",
+    "signal": "BUY",
+    "date": "2026-09-17",
+    "ts": "2026-09-17T10:12:19.819820",
+    "detail": "Confidence \u25b210 (82 \u2192 92) | Rank \u25bc1 (#1 \u2192 #2)",
+    "confidence": 92.4
+  },
+  {
+    "type": "updated",
+    "ticker": "HINDALCO.NS",
+    "nse_code": "HINDALCO",
+    "signal": "BUY",
+    "date": "2026-09-17",
+    "ts": "2026-09-17T10:12:19.819820",
+    "detail": "Confidence \u25b211 (70 \u2192 81) | Rank \u25bc3 (#6 \u2192 #9)",
+    "confidence": 80.9
   }
 ]

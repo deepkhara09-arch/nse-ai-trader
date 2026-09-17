@@ -63,7 +63,8 @@
   "warnings": [
     "VIX=13.2 at 93th percentile vs last 30d \u2014 unusually high stress",
     "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
-    "Nifty choppy intraday \u2014 wait for cleaner setups"
+    "Nifty choppy intraday \u2014 wait for cleaner setups",
+    "Net institutional outflow (\u20b9+409 Cr)"
   ],
   "leading_sectors": [
     "IT"
@@ -136,10 +137,10 @@
   "macro_risk_factor": 1.0,
   "fii_dii": {
     "date": "2026-09-17",
-    "fii_net_cr": -2032.61,
-    "dii_net_cr": 3908.23,
-    "combined_net_cr": 1875.62,
-    "signal": "inflow",
+    "fii_net_cr": -3208.76,
+    "dii_net_cr": 3617.75,
+    "combined_net_cr": 408.99,
+    "signal": "outflow",
     "ok": true,
     "error": "",
     "history": [
@@ -319,9 +320,9 @@
       },
       {
         "date": "2026-09-17",
-        "fii": -2032.61,
-        "dii": 3908.23,
-        "combined": 1875.62
+        "fii": -3208.76,
+        "dii": 3617.75,
+        "combined": 408.99
       }
     ]
   },

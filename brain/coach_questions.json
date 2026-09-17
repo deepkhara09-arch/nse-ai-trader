@@ -1,75 +1,5 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_down, full_bearish_alignment mean for a swing trade on PIDILITIND? Current RSI=32, MACD hist=-11.8176, Vol=0.9x average. Signal is BUY.",
-    "context": {
-      "ticker": "PIDILITIND.NS",
-      "signal": "BUY",
-      "patterns": "adx_strong_trend_down, full_bearish_alignment",
-      "rsi": 32.1
-    },
-    "queued_at": "2026-09-17T04:05:46.505635"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of piercing_line, rsi_bullish_divergence, full_bearish_alignment mean for a swing trade on HINDALCO? Current RSI=27, MACD hist=-7.9614, Vol=1.2x average. Signal is BUY.",
-    "context": {
-      "ticker": "HINDALCO.NS",
-      "signal": "BUY",
-      "patterns": "piercing_line, rsi_bullish_divergence, full_bearish_alignment",
-      "rsi": 26.9
-    },
-    "queued_at": "2026-09-17T04:05:46.510704"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of bb_lower_bounce, bullish_harami, hammer mean for a swing trade on ICICIBANK? Current RSI=26, MACD hist=-8.3204, Vol=1.1x average. Signal is BUY.",
-    "context": {
-      "ticker": "ICICIBANK.NS",
-      "signal": "BUY",
-      "patterns": "bb_lower_bounce, bullish_harami, hammer",
-      "rsi": 26.5
-    },
-    "queued_at": "2026-09-17T04:05:46.516289"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of full_bearish_alignment, adx_strong_trend_down mean for a swing trade on PIDILITIND? Current RSI=32, MACD hist=-11.8176, Vol=0.9x average. Signal is BUY.",
-    "context": {
-      "ticker": "PIDILITIND.NS",
-      "signal": "BUY",
-      "patterns": "full_bearish_alignment, adx_strong_trend_down",
-      "rsi": 32.1
-    },
-    "queued_at": "2026-09-17T06:15:51.667647"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of full_bearish_alignment, rsi_bullish_divergence mean for a swing trade on HINDALCO? Current RSI=27, MACD hist=-7.9614, Vol=1.2x average. Signal is BUY.",
-    "context": {
-      "ticker": "HINDALCO.NS",
-      "signal": "BUY",
-      "patterns": "full_bearish_alignment, rsi_bullish_divergence",
-      "rsi": 26.9
-    },
-    "queued_at": "2026-09-17T06:15:51.669604"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of tweezer_bottom, adx_strong_trend_down mean for a swing trade on UNIONBANK? Current RSI=40, MACD hist=-1.6044, Vol=1.2x average. Signal is BUY.",
-    "context": {
-      "ticker": "UNIONBANK.NS",
-      "signal": "BUY",
-      "patterns": "tweezer_bottom, adx_strong_trend_down",
-      "rsi": 39.7
-    },
-    "queued_at": "2026-09-17T06:15:51.672988"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of full_bearish_alignment, adx_strong_trend_down mean for a swing trade on PIDILITIND? Current RSI=32, MACD hist=-11.8176, Vol=0.9x average. Signal is BUY.",
-    "context": {
-      "ticker": "PIDILITIND.NS",
-      "signal": "BUY",
-      "patterns": "full_bearish_alignment, adx_strong_trend_down",
-      "rsi": 32.1
-    },
-    "queued_at": "2026-09-17T06:15:51.681101"
-  },
-  {
     "question": "In Indian NSE markets, what does the combination of full_bearish_alignment, adx_strong_trend_down mean for a swing trade on PIDILITIND? Current RSI=32, MACD hist=-11.8176, Vol=0.9x average. Signal is BUY.",
     "context": {
       "ticker": "PIDILITIND.NS",
@@ -98,5 +28,75 @@
       "rsi": 39.7
     },
     "queued_at": "2026-09-17T06:15:51.804044"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_down, full_bearish_alignment mean for a swing trade on PIDILITIND? Current RSI=32, MACD hist=-11.8176, Vol=0.9x average. Signal is BUY.",
+    "context": {
+      "ticker": "PIDILITIND.NS",
+      "signal": "BUY",
+      "patterns": "adx_strong_trend_down, full_bearish_alignment",
+      "rsi": 32.1
+    },
+    "queued_at": "2026-09-17T07:46:05.014863"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of rsi_bullish_divergence, full_bearish_alignment mean for a swing trade on HINDALCO? Current RSI=27, MACD hist=-7.9614, Vol=1.2x average. Signal is BUY.",
+    "context": {
+      "ticker": "HINDALCO.NS",
+      "signal": "BUY",
+      "patterns": "rsi_bullish_divergence, full_bearish_alignment",
+      "rsi": 26.9
+    },
+    "queued_at": "2026-09-17T07:46:05.016896"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of tweezer_bottom, adx_strong_trend_down mean for a swing trade on UNIONBANK? Current RSI=40, MACD hist=-1.6044, Vol=1.2x average. Signal is BUY.",
+    "context": {
+      "ticker": "UNIONBANK.NS",
+      "signal": "BUY",
+      "patterns": "tweezer_bottom, adx_strong_trend_down",
+      "rsi": 39.7
+    },
+    "queued_at": "2026-09-17T07:46:05.020408"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of rsi_bullish_divergence, full_bearish_alignment mean for a swing trade on HINDALCO? Current RSI=27, MACD hist=-7.9614, Vol=1.2x average. Signal is BUY.",
+    "context": {
+      "ticker": "HINDALCO.NS",
+      "signal": "BUY",
+      "patterns": "rsi_bullish_divergence, full_bearish_alignment",
+      "rsi": 26.9
+    },
+    "queued_at": "2026-09-17T07:46:05.031903"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_down, full_bearish_alignment mean for a swing trade on PIDILITIND? Current RSI=32, MACD hist=-11.8176, Vol=0.9x average. Signal is BUY.",
+    "context": {
+      "ticker": "PIDILITIND.NS",
+      "signal": "BUY",
+      "patterns": "adx_strong_trend_down, full_bearish_alignment",
+      "rsi": 32.1
+    },
+    "queued_at": "2026-09-17T07:46:05.145972"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of rsi_bullish_divergence, full_bearish_alignment mean for a swing trade on HINDALCO? Current RSI=27, MACD hist=-7.9614, Vol=1.2x average. Signal is BUY.",
+    "context": {
+      "ticker": "HINDALCO.NS",
+      "signal": "BUY",
+      "patterns": "rsi_bullish_divergence, full_bearish_alignment",
+      "rsi": 26.9
+    },
+    "queued_at": "2026-09-17T07:46:05.150827"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of tweezer_bottom, adx_strong_trend_down mean for a swing trade on UNIONBANK? Current RSI=40, MACD hist=-1.6044, Vol=1.2x average. Signal is BUY.",
+    "context": {
+      "ticker": "UNIONBANK.NS",
+      "signal": "BUY",
+      "patterns": "tweezer_bottom, adx_strong_trend_down",
+      "rsi": 39.7
+    },
+    "queued_at": "2026-09-17T07:46:05.156995"
   }
 ]

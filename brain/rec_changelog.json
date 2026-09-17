@@ -1,16 +1,6 @@
 [
   {
     "type": "new",
-    "ticker": "ICICIBANK.NS",
-    "nse_code": "ICICIBANK",
-    "signal": "BUY",
-    "date": "2026-07-16",
-    "ts": "2026-07-16T10:13:11.025522",
-    "detail": "New BUY recommendation \u2014 confidence 66/100",
-    "confidence": 65.5
-  },
-  {
-    "type": "new",
     "ticker": "NESTLEIND.NS",
     "nse_code": "NESTLEIND",
     "signal": "BUY",
@@ -5998,5 +5988,15 @@
     "ts": "2026-09-17T06:15:51.810857",
     "detail": "Rank \u25bc1 (#6 \u2192 #7) | Stop loss moved \u20b9934.19 \u2192 \u20b9940.19 | Target 1 moved \u20b91067.72 \u2192 \u20b91073.72",
     "confidence": 69.7
+  },
+  {
+    "type": "updated",
+    "ticker": "PIDILITIND.NS",
+    "nse_code": "PIDILITIND",
+    "signal": "BUY",
+    "date": "2026-09-17",
+    "ts": "2026-09-17T07:46:05.164037",
+    "detail": "Confidence \u25bc14 (96 \u2192 82) | Target 1 moved \u20b91644.60 \u2192 \u20b91683.60",
+    "confidence": 81.9
   }
 ]

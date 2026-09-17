@@ -4,9 +4,9 @@
     "nse_code": "PIDILITIND",
     "company_name": "Pidilite Industries",
     "date": "2026-09-17",
-    "generated_at": "2026-09-17 07:46 UTC",
-    "valid_until": "15:15 IST",
-    "session": "afternoon",
+    "generated_at": "2026-09-17 09:35 UTC",
+    "valid_until": "15:40 IST",
+    "session": "intraday_close",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -21,18 +21,18 @@
     "exit_window": "Monitor at each daily open; trail stop as it moves in favour",
     "target_timeframe": "1\u20133 trading weeks",
     "action_urgency": "No rush \u2014 swing setups allow flexible entry within the zone",
-    "cmp": 1553.2,
-    "entry_low": 1550.09,
-    "entry_high": 1560.97,
-    "stop_loss": 1488.0,
-    "target1": 1683.6,
-    "target2": 1716.44,
-    "risk_pct": 4.2,
+    "cmp": 1558.5,
+    "entry_low": 1555.38,
+    "entry_high": 1566.29,
+    "stop_loss": 1492.83,
+    "target1": 1689.84,
+    "target2": 1722.68,
+    "risk_pct": 4.21,
     "rr_target1": 2.0,
     "rr_target2": 2.5,
     "recommended_qty": 7,
-    "capital_needed": 10872.4,
-    "max_loss_if_sl": 456.4,
+    "capital_needed": 10909.5,
+    "max_loss_if_sl": 459.69,
     "confidence": 81.9,
     "tech_score": 24.3,
     "fund_score": 20.8,
@@ -102,12 +102,12 @@
       "History backtest: this kind of BUY setup worked 46% of the time over ~1 week on this stock (sample: 52)"
     ],
     "patterns_seen": [
+      "inside_bar",
+      "full_bearish_alignment",
+      "strong_bullish_marubozu",
       "tweezer_bottom",
       "supertrend_bullish",
-      "adx_strong_trend_down",
-      "strong_bullish_marubozu",
-      "full_bearish_alignment",
-      "inside_bar"
+      "adx_strong_trend_down"
     ],
     "reliable_patterns": [
       "near_52w_high",
@@ -145,7 +145,8 @@
     "market_mood": "bearish",
     "market_warning": [
       "VIX=13.2 at 93th percentile vs last 30d \u2014 unusually high stress",
-      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals"
+      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
+      "Nifty choppy intraday \u2014 wait for cleaner setups"
     ]
   },
   {
@@ -153,9 +154,9 @@
     "nse_code": "HINDALCO",
     "company_name": "HINDALCO.NS",
     "date": "2026-09-17",
-    "generated_at": "2026-09-17 07:46 UTC",
-    "valid_until": "15:15 IST",
-    "session": "afternoon",
+    "generated_at": "2026-09-17 09:35 UTC",
+    "valid_until": "15:40 IST",
+    "session": "intraday_close",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -170,17 +171,17 @@
     "exit_window": "Monitor at each daily open; trail stop as it moves in favour",
     "target_timeframe": "1\u20133 trading weeks",
     "action_urgency": "No rush \u2014 swing setups allow flexible entry within the zone",
-    "cmp": 982.2,
-    "entry_low": 980.24,
-    "entry_high": 987.11,
-    "stop_loss": 937.69,
-    "target1": 1071.22,
-    "target2": 1093.47,
-    "risk_pct": 4.53,
+    "cmp": 980.7,
+    "entry_low": 978.74,
+    "entry_high": 985.6,
+    "stop_loss": 936.19,
+    "target1": 1069.72,
+    "target2": 1091.97,
+    "risk_pct": 4.54,
     "rr_target1": 2.0,
     "rr_target2": 2.5,
     "recommended_qty": 12,
-    "capital_needed": 11786.4,
+    "capital_needed": 11768.4,
     "max_loss_if_sl": 534.12,
     "confidence": 69.7,
     "tech_score": 26.1,
@@ -193,8 +194,8 @@
     "base_success_prob": 0.48,
     "profit_probability": 0.2,
     "composite_score": 47.82,
-    "focus_rank": 7,
-    "rank_delta": 0,
+    "focus_rank": 6,
+    "rank_delta": 1,
     "intention": "BUY HINDALCO for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
     "confluence_count": 4,
     "confluence_families": [
@@ -247,9 +248,9 @@
       "History backtest: this kind of BUY setup worked 58% of the time over ~1 week on this stock (sample: 57)"
     ],
     "patterns_seen": [
-      "rsi_bullish_divergence",
       "full_bearish_alignment",
       "supertrend_bullish",
+      "rsi_bullish_divergence",
       "engulfing_bullish"
     ],
     "reliable_patterns": [],
@@ -279,7 +280,8 @@
     "market_mood": "bearish",
     "market_warning": [
       "VIX=13.2 at 93th percentile vs last 30d \u2014 unusually high stress",
-      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals"
+      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
+      "Nifty choppy intraday \u2014 wait for cleaner setups"
     ]
   }
 ]

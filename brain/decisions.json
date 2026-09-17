@@ -1,98 +1,5 @@
 [
   {
-    "timestamp": "2026-08-07T10:11:11.105472",
-    "date": "2026-08-07",
-    "ticker": "LICI.NS",
-    "session": "preclose",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 95,
-    "entry": 392.7,
-    "stop_loss": 378.75,
-    "target": 420.6,
-    "reason": "paper preclose",
-    "patterns": [
-      "supertrend_bullish",
-      "pivot_point_test",
-      "gap_down_reversal",
-      "volume_breakout_bullish",
-      "doji",
-      "volume_climax_bottom",
-      "stoch_rsi_oversold_reversal",
-      "rsi_bullish_divergence",
-      "inverted_hammer",
-      "gravestone_doji",
-      "bb_lower_bounce",
-      "inside_bar"
-    ]
-  },
-  {
-    "timestamp": "2026-08-07T10:11:11.107272",
-    "date": "2026-08-07",
-    "ticker": "ASIANPAINT.NS",
-    "session": "preclose",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 79.1,
-    "entry": 2713.6,
-    "stop_loss": 2622.96,
-    "target": 2894.89,
-    "reason": "paper preclose",
-    "patterns": [
-      "pivot_s1_breakdown",
-      "full_bullish_alignment",
-      "gap_up_reversal",
-      "outside_bar"
-    ]
-  },
-  {
-    "timestamp": "2026-08-07T10:11:11.108102",
-    "date": "2026-08-07",
-    "ticker": "CIPLA.NS",
-    "session": "preclose",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 95,
-    "entry": 1469.8,
-    "stop_loss": 1418.44,
-    "target": 1572.53,
-    "reason": "paper preclose",
-    "patterns": [
-      "morning_star",
-      "supertrend_bullish",
-      "full_bullish_alignment"
-    ]
-  },
-  {
-    "timestamp": "2026-08-07T15:42:33.618958+05:30",
-    "date": "2026-08-07",
-    "ticker": "LICI.NS",
-    "session": "preclose",
-    "action": "RECOMMEND",
-    "signal": "BUY",
-    "confidence": 97.2,
-    "entry": 393.29,
-    "stop_loss": 381.12,
-    "target": 415.95,
-    "reason": "rec snapshot (short_term)",
-    "patterns": [
-      "supertrend_bullish",
-      "pivot_point_test",
-      "gap_down_reversal",
-      "volume_breakout_bullish",
-      "doji",
-      "volume_climax_bottom",
-      "stoch_rsi_oversold_reversal",
-      "rsi_bullish_divergence",
-      "inverted_hammer",
-      "gravestone_doji",
-      "bb_lower_bounce",
-      "inside_bar"
-    ],
-    "dry_evaluated": true,
-    "dry_outcome": "win"
-  },
-  {
     "timestamp": "2026-08-07T15:42:33.618968+05:30",
     "date": "2026-08-07",
     "ticker": "MARICO.NS",
@@ -21154,6 +21061,89 @@
       "bullish_harami",
       "adx_strong_trend_down",
       "inside_bar"
+    ]
+  },
+  {
+    "timestamp": "2026-09-17T09:35:15.819267",
+    "date": "2026-09-17",
+    "ticker": "PIDILITIND.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 62.8,
+    "entry": 1558.5,
+    "stop_loss": 1509.25,
+    "target": 1637.31,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "inside_bar",
+      "full_bearish_alignment",
+      "strong_bullish_marubozu",
+      "tweezer_bottom",
+      "supertrend_bullish",
+      "adx_strong_trend_down"
+    ]
+  },
+  {
+    "timestamp": "2026-09-17T09:35:15.821247",
+    "date": "2026-09-17",
+    "ticker": "HINDALCO.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 68.8,
+    "entry": 980.7,
+    "stop_loss": 947.32,
+    "target": 1034.11,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "full_bearish_alignment",
+      "supertrend_bullish",
+      "rsi_bullish_divergence",
+      "engulfing_bullish"
+    ]
+  },
+  {
+    "timestamp": "2026-09-17T09:35:15.823153",
+    "date": "2026-09-17",
+    "ticker": "ADANIPORTS.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 79.8,
+    "entry": 1732.8,
+    "stop_loss": 1646.01,
+    "target": 1836.94,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "spinning_top",
+      "doji",
+      "bullish_harami",
+      "supertrend_bullish",
+      "momentum_continuation",
+      "low_volume_drift",
+      "pivot_point_test"
+    ]
+  },
+  {
+    "timestamp": "2026-09-17T09:35:15.825049",
+    "date": "2026-09-17",
+    "ticker": "UNIONBANK.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 66.2,
+    "entry": 177.85,
+    "stop_loss": 171.54,
+    "target": 187.94,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "inside_bar",
+      "pivot_r1_breakout",
+      "tweezer_bottom",
+      "bullish_harami",
+      "supertrend_bullish",
+      "adx_strong_trend_down"
     ]
   }
 ]

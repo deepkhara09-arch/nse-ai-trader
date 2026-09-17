@@ -1,15 +1,5 @@
 [
   {
-    "type": "new",
-    "ticker": "NESTLEIND.NS",
-    "nse_code": "NESTLEIND",
-    "signal": "BUY",
-    "date": "2026-07-16",
-    "ts": "2026-07-16T10:13:11.025522",
-    "detail": "New BUY recommendation \u2014 confidence 65/100",
-    "confidence": 65.3
-  },
-  {
     "type": "removed",
     "ticker": "NESTLEIND.NS",
     "nse_code": "NESTLEIND",
@@ -5998,5 +5988,15 @@
     "ts": "2026-09-17T07:46:05.164037",
     "detail": "Confidence \u25bc14 (96 \u2192 82) | Target 1 moved \u20b91644.60 \u2192 \u20b91683.60",
     "confidence": 81.9
+  },
+  {
+    "type": "updated",
+    "ticker": "HINDALCO.NS",
+    "nse_code": "HINDALCO",
+    "signal": "BUY",
+    "date": "2026-09-17",
+    "ts": "2026-09-17T09:35:15.965015",
+    "detail": "Rank \u25b21 (#7 \u2192 #6)",
+    "confidence": 69.7
   }
 ]

@@ -3,10 +3,10 @@
     "ticker": "PIDILITIND.NS",
     "nse_code": "PIDILITIND",
     "company_name": "Pidilite Industries",
-    "date": "2026-09-17",
-    "generated_at": "2026-09-17 10:12 UTC",
+    "date": "2026-09-18",
+    "generated_at": "2026-09-18 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -40,12 +40,12 @@
     "pattern_score": 10,
     "confluence_bonus": 7.5,
     "paper_bonus": 5.0,
-    "success_probability": 0.64,
-    "base_success_prob": 0.716,
-    "profit_probability": 0.282,
-    "composite_score": 60.0,
+    "success_probability": 0.636,
+    "base_success_prob": 0.71,
+    "profit_probability": 0.271,
+    "composite_score": 59.26,
     "focus_rank": 2,
-    "rank_delta": -1,
+    "rank_delta": 0,
     "intention": "BUY PIDILITIND for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
     "confluence_count": 5,
     "confluence_families": [
@@ -66,7 +66,7 @@
     "data_confidence": "Estimated",
     "data_confidence_key": "estimated",
     "data_confidence_note": "Only 4 paper trade(s) \u2014 probability is an indicator-based estimate, not yet proven",
-    "expected_edge_r": 0.282,
+    "expected_edge_r": 0.271,
     "buy_score": 12.11,
     "sell_score": 4.0,
     "reasons": [
@@ -104,12 +104,12 @@
       "History backtest: this kind of BUY setup worked 46% of the time over ~1 week on this stock (sample: 52)"
     ],
     "patterns_seen": [
-      "full_bearish_alignment",
+      "adx_strong_trend_down",
       "inside_bar",
       "strong_bullish_marubozu",
-      "supertrend_bullish",
       "tweezer_bottom",
-      "adx_strong_trend_down"
+      "supertrend_bullish",
+      "full_bearish_alignment"
     ],
     "reliable_patterns": [
       "near_52w_high",
@@ -146,19 +146,20 @@
     "paper_expectancy": 15.12,
     "market_mood": "bearish",
     "market_warning": [
-      "VIX=13.2 at 93th percentile vs last 30d \u2014 unusually high stress",
+      "VIX=12.3 at 87th percentile vs last 30d \u2014 unusually high stress",
       "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
-      "Nifty choppy intraday \u2014 wait for cleaner setups"
+      "Nifty choppy intraday \u2014 wait for cleaner setups",
+      "Net institutional outflow (\u20b9+409 Cr)"
     ]
   },
   {
     "ticker": "HINDALCO.NS",
     "nse_code": "HINDALCO",
     "company_name": "HINDALCO.NS",
-    "date": "2026-09-17",
-    "generated_at": "2026-09-17 10:12 UTC",
+    "date": "2026-09-18",
+    "generated_at": "2026-09-18 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -192,12 +193,12 @@
     "pattern_score": 3.0,
     "confluence_bonus": 7.5,
     "paper_bonus": 0.0,
-    "success_probability": 0.524,
-    "base_success_prob": 0.501,
-    "profit_probability": 0.253,
-    "composite_score": 50.3,
-    "focus_rank": 9,
-    "rank_delta": -1,
+    "success_probability": 0.519,
+    "base_success_prob": 0.494,
+    "profit_probability": 0.235,
+    "composite_score": 49.39,
+    "focus_rank": 8,
+    "rank_delta": 0,
     "intention": "BUY HINDALCO for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
     "confluence_count": 5,
     "confluence_families": [
@@ -218,7 +219,7 @@
     "data_confidence": "Estimated",
     "data_confidence_key": "estimated",
     "data_confidence_note": "Only 1 paper trade(s) \u2014 probability is an indicator-based estimate, not yet proven",
-    "expected_edge_r": 0.253,
+    "expected_edge_r": 0.235,
     "buy_score": 12.8,
     "sell_score": 3,
     "reasons": [
@@ -252,10 +253,10 @@
       "History backtest: this kind of BUY setup worked 58% of the time over ~1 week on this stock (sample: 57)"
     ],
     "patterns_seen": [
-      "full_bearish_alignment",
       "rsi_bullish_divergence",
+      "engulfing_bullish",
       "supertrend_bullish",
-      "engulfing_bullish"
+      "full_bearish_alignment"
     ],
     "reliable_patterns": [],
     "nearest_support": 935.61,
@@ -283,19 +284,20 @@
     "paper_expectancy": -198.91,
     "market_mood": "bearish",
     "market_warning": [
-      "VIX=13.2 at 93th percentile vs last 30d \u2014 unusually high stress",
+      "VIX=12.3 at 87th percentile vs last 30d \u2014 unusually high stress",
       "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
-      "Nifty choppy intraday \u2014 wait for cleaner setups"
+      "Nifty choppy intraday \u2014 wait for cleaner setups",
+      "Net institutional outflow (\u20b9+409 Cr)"
     ]
   },
   {
     "ticker": "UNIONBANK.NS",
     "nse_code": "UNIONBANK",
     "company_name": "UNIONBANK.NS",
-    "date": "2026-09-17",
-    "generated_at": "2026-09-17 10:12 UTC",
+    "date": "2026-09-18",
+    "generated_at": "2026-09-18 03:05 UTC",
     "valid_until": "09:35 IST",
-    "session": "preclose",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -329,12 +331,12 @@
     "pattern_score": 1.0,
     "confluence_bonus": 7.5,
     "paper_bonus": 0.0,
-    "success_probability": 0.515,
-    "base_success_prob": 0.502,
-    "profit_probability": 0.255,
-    "composite_score": 52.51,
+    "success_probability": 0.506,
+    "base_success_prob": 0.49,
+    "profit_probability": 0.225,
+    "composite_score": 50.87,
     "focus_rank": 7,
-    "rank_delta": -1,
+    "rank_delta": 0,
     "intention": "BUY UNIONBANK for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
     "confluence_count": 5,
     "confluence_families": [
@@ -355,13 +357,13 @@
     "data_confidence": "Estimated",
     "data_confidence_key": "estimated",
     "data_confidence_note": "Only 2 paper trade(s) \u2014 probability is an indicator-based estimate, not yet proven",
-    "expected_edge_r": 0.255,
+    "expected_edge_r": 0.225,
     "buy_score": 11.5,
     "sell_score": 3.0,
     "reasons": [
       "RSI=40 in healthy buy zone",
-      "Candlestick: bullish harami",
       "Candlestick: tweezer bottom",
+      "Candlestick: bullish harami",
       "Sector headwind (momentum=-0.31)",
       "Supertrend bullish \u2014 price above trend band",
       "Broke above Pivot R1 with volume \u2014 bullish",
@@ -387,13 +389,13 @@
       "History backtest: this kind of BUY setup worked 55% of the time over ~1 week on this stock (sample: 55)"
     ],
     "patterns_seen": [
-      "inside_bar",
-      "pivot_point_test",
-      "bullish_harami",
       "pivot_r1_breakout",
-      "supertrend_bullish",
+      "adx_strong_trend_down",
+      "inside_bar",
       "tweezer_bottom",
-      "adx_strong_trend_down"
+      "pivot_point_test",
+      "supertrend_bullish",
+      "bullish_harami"
     ],
     "reliable_patterns": [],
     "nearest_support": 170,
@@ -421,9 +423,10 @@
     "paper_expectancy": -70.66,
     "market_mood": "bearish",
     "market_warning": [
-      "VIX=13.2 at 93th percentile vs last 30d \u2014 unusually high stress",
+      "VIX=12.3 at 87th percentile vs last 30d \u2014 unusually high stress",
       "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
-      "Nifty choppy intraday \u2014 wait for cleaner setups"
+      "Nifty choppy intraday \u2014 wait for cleaner setups",
+      "Net institutional outflow (\u20b9+409 Cr)"
     ]
   }
 ]

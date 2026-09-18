@@ -1,15 +1,5 @@
 [
   {
-    "type": "removed",
-    "ticker": "ICICIBANK.NS",
-    "nse_code": "ICICIBANK",
-    "signal": "BUY",
-    "date": "2026-07-17",
-    "ts": "2026-07-17T04:05:45.930761",
-    "detail": "Dropped \u2014 no longer meets threshold (was 66/100)",
-    "confidence": 0
-  },
-  {
     "type": "new",
     "ticker": "FEDERALBNK.NS",
     "nse_code": "FEDERALBNK",
@@ -5997,6 +5987,16 @@
     "date": "2026-09-17",
     "ts": "2026-09-17T10:12:19.819820",
     "detail": "Confidence \u25b211 (70 \u2192 81) | Rank \u25bc3 (#6 \u2192 #9)",
+    "confidence": 80.9
+  },
+  {
+    "type": "updated",
+    "ticker": "HINDALCO.NS",
+    "nse_code": "HINDALCO",
+    "signal": "BUY",
+    "date": "2026-09-18",
+    "ts": "2026-09-18T03:05:41.802337",
+    "detail": "Rank \u25b21 (#9 \u2192 #8)",
     "confidence": 80.9
   }
 ]

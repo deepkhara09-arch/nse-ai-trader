@@ -1,5 +1,5 @@
 # NSE AI Trader — Strategy Report
-> Updated: 2026-09-17 &nbsp;|&nbsp; Day 63 &nbsp;|&nbsp; Phase: paper_trading
+> Updated: 2026-09-18 &nbsp;|&nbsp; Day 64 &nbsp;|&nbsp; Phase: paper_trading
 
 ---
 
@@ -7,12 +7,12 @@
 
 | Metric | Value |
 |--------|-------|
-| Trades | 49 (18 wins / 31 losses) |
-| Win Rate | 36.7% |
-| Total P&L | ₹-3,083 |
+| Trades | 51 (19 wins / 32 losses) |
+| Win Rate | 37.3% |
+| Total P&L | ₹-2,983 |
 | Avg Win | ₹+98 |
-| Avg Loss | ₹-156 |
-| Expectancy / trade | ₹-63 |
+| Avg Loss | ₹-151 |
+| Expectancy / trade | ₹-58 |
 
 ---
 
@@ -21,76 +21,29 @@
 > **Important:** These are paper trade signals based on the agent's learned patterns.
 > Not financial advice. Always use your own judgement and consult a SEBI advisor.
 
-BUY Pidilite Industries (PIDILITIND)
-   CMP:           Rs.1,558.70
-   Entry Zone:    Rs.1,555.58 - Rs.1,566.49
-   Stop Loss:     Rs.1,493.03  (4.2% risk)
-   Target 1:      Rs.1,690.04  (R:R 1:2.0)
-   Target 2:      Rs.1,722.88  (R:R 1:2.5)
-   Hold:          5–15 trading days (swing)
-   Qty (2% risk): 7 shares -> Rs.10,911 invested
-   Max loss:      Rs.460 if SL hit
-   Confidence:    92/100  (Tech:32 Fund:21 News:17 Pat:10)
-   Reasons:
-     - Near lower Bollinger Band
-     - Positive news sentiment (0.41, news 1.3x reliable here)
-     - News sentiment improving across sessions
-     - Learned bullish pattern: supertrend_bullish (rel=74%)
-     - Candlestick: tweezer bottom
-     - Sector headwind (momentum=-0.46)
-     - Supertrend bullish — price above trend band
-     - High delivery 63% — strong institutional accumulation
-     - In a long-term uptrend (2yr) — trend on our side
-     - Mean-reverting stock at oversold extreme — fade the dip
-     - ✓ Daily setup aligned with the higher-timeframe trend
-     - ⚠ Sector momentum -0.46 — buying into a falling sector needs extra conviction
-     - ⚠ Market mood is bearish — buying against the tape needs extra conviction
-     - Valuation: P/E 60.5x
-     - ROCE: 33.0%
-     - Revenue growing 21.3% YoY
-     - Net profit up 50.6% QoQ
-     - Sales up 27.0% QoQ
-     - Latest quarter NP: ₹872 Cr
-     - Latest quarter Sales: ₹4,552 Cr
-     - Market Cap: ₹159,492 Cr
-     - Analyst target: +14.0% upside
-     - Promoter holding: 69.3%
-     - Dividend yield: 73.0%
-     - Low debt: D/E 0.04
-     - Reliable patterns on this stock: near_52w_high, full_bullish_alignment, adx_strong_trend_up, supertrend_bullish
-     - Support at ₹1500.00 cushions downside
-     - Resistance at ₹1594.75 is natural target
-     - Latest news: 'Nestle, Hindustan Zinc, Marico, Jindal Steel and Pidilite bounce back '
-     - Paper trade validation: 4 trades, 75% win rate, ₹+15/trade expectancy
-     - Confluence: 5 independent signal families agree (trend, volume, pattern, news, fundamentals)
-     - History backtest: this kind of BUY setup worked 46% of the time over ~1 week on this stock (sample: 52)
-   Market warnings: VIX=13.2 at 93th percentile vs last 30d — unusually high stress | Nifty in downtrend (down) — only high-confidence BUY signals | Nifty choppy intraday — wait for cleaner setups
-
----
-
 BUY HINDALCO.NS (HINDALCO)
-   CMP:           Rs.984.90
-   Entry Zone:    Rs.982.93 - Rs.989.82
-   Stop Loss:     Rs.940.39  (4.5% risk)
-   Target 1:      Rs.1,073.92  (R:R 1:2.0)
-   Target 2:      Rs.1,096.17  (R:R 1:2.5)
+   CMP:           Rs.985.30
+   Entry Zone:    Rs.983.33 - Rs.990.23
+   Stop Loss:     Rs.940.79  (4.5% risk)
+   Target 1:      Rs.1,074.32  (R:R 1:2.0)
+   Target 2:      Rs.1,096.57  (R:R 1:2.5)
    Hold:          5–15 trading days (swing)
-   Qty (2% risk): 12 shares -> Rs.11,819 invested
+   Qty (2% risk): 12 shares -> Rs.11,824 invested
    Max loss:      Rs.534 if SL hit
-   Confidence:    81/100  (Tech:34 Fund:20 News:17 Pat:3)
+   Confidence:    80/100  (Tech:34 Fund:20 News:16 Pat:3)
    Reasons:
      - RSI=27 oversold — reversal watch
      - Near lower Bollinger Band
-     - Positive news sentiment (0.32)
+     - Positive news sentiment (0.29)
      - News sentiment improving across sessions
      - Candlestick: engulfing bullish
      - RSI bullish divergence — price lower but RSI higher
-     - Sector headwind (momentum=-0.43)
+     - Sector headwind (momentum=-0.40)
      - Supertrend bullish — price above trend band
-     - High delivery 61% — strong institutional accumulation
+     - High delivery 63% — strong institutional accumulation
      - In a long-term strong uptrend (2yr) — trend on our side
      - ✓ Daily setup aligned with the higher-timeframe trend
-     - ⚠ Sector momentum -0.43 — buying into a falling sector needs extra conviction
+     - ⚠ Sector momentum -0.40 — buying into a falling sector needs extra conviction
      - ⚠ Market mood is bearish — buying against the tape needs extra conviction
      - Valuation: P/E 13.5x
      - ROCE: 17.1%
@@ -104,51 +57,54 @@ BUY HINDALCO.NS (HINDALCO)
      - Dividend yield: 49.0%
      - Support at ₹935.61 cushions downside
      - Resistance at ₹1012.76 is natural target
-     - Latest news: 'Hindalco Industries Share Price Today (HINDALCO) | Live Chart, News & '
+     - Latest news: 'Hindalco Industries Stock Signals to Watch This Week - Univest'
      - Confluence: 5 independent signal families agree (trend, volume, pattern, news, fundamentals)
      - History backtest: this kind of BUY setup worked 58% of the time over ~1 week on this stock (sample: 57)
-   Market warnings: VIX=13.2 at 93th percentile vs last 30d — unusually high stress | Nifty in downtrend (down) — only high-confidence BUY signals | Nifty choppy intraday — wait for cleaner setups
+   Market warnings: VIX=12.3 at 87th percentile vs last 30d — unusually high stress | Nifty in downtrend (down) — only high-confidence BUY signals | Nifty choppy intraday — wait for cleaner setups | Net institutional outflow (₹+409 Cr)
 
 ---
 
-BUY UNIONBANK.NS (UNIONBANK)
-   CMP:           Rs.177.60
-   Entry Zone:    Rs.177.24 - Rs.178.49
-   Stop Loss:     Rs.169.19  (4.7% risk)
-   Target 1:      Rs.194.42  (R:R 1:2.0)
-   Target 2:      Rs.198.63  (R:R 1:2.5)
+BUY Adani Ports & SEZ (ADANIPORTS)
+   CMP:           Rs.1,767.50
+   Entry Zone:    Rs.1,763.96 - Rs.1,776.34
+   Stop Loss:     Rs.1,692.57  (4.2% risk)
+   Target 1:      Rs.1,917.36  (R:R 1:2.0)
+   Target 2:      Rs.1,959.84  (R:R 1:2.6)
    Hold:          5–15 trading days (swing)
-   Qty (2% risk): 67 shares -> Rs.11,899 invested
-   Max loss:      Rs.563 if SL hit
-   Confidence:    73/100  (Tech:31 Fund:19 News:14 Pat:1)
+   Qty (2% risk): 6 shares -> Rs.10,605 invested
+   Max loss:      Rs.450 if SL hit
+   Confidence:    66/100  (Tech:28 Fund:11 News:18 Pat:2)
    Reasons:
-     - RSI=40 in healthy buy zone
-     - Candlestick: bullish harami
-     - Candlestick: tweezer bottom
-     - Sector headwind (momentum=-0.31)
+     - Short EMA above long EMA
+     - RSI=53 in healthy buy zone
+     - MACD histogram positive
+     - Positive news sentiment (0.19, news 1.2x reliable here)
+     - Candlestick: morning star
+     - Sector headwind (momentum=-0.45)
      - Supertrend bullish — price above trend band
-     - Broke above Pivot R1 with volume — bullish
-     - Testing pivot point — decision zone
+     - StochRSI oversold with bullish candle — reversal
      - Delivery 52% above avg — institutional buying
      - In a long-term strong uptrend (2yr) — trend on our side
      - ✓ Daily setup aligned with the higher-timeframe trend
-     - ⚠ Sector momentum -0.31 — buying into a falling sector needs extra conviction
+     - ⚠ Sector momentum -0.45 — buying into a falling sector needs extra conviction
      - ⚠ Market mood is bearish — buying against the tape needs extra conviction
-     - Valuation: P/E 6.8x
-     - ROE: 15.8%
-     - Net profit up 2.5% QoQ
-     - Latest quarter NP: ₹5,642 Cr
-     - Latest quarter Sales: ₹15,455 Cr
-     - Market Cap: ₹135,955 Cr
-     - Analyst target: +10.5% upside
-     - Promoter holding: 74.8%
-     - Dividend yield: 279.0%
-     - Support at ₹170.00 cushions downside
-     - Resistance at ₹186.04 is natural target
-     - Latest news: 'Union Bank Of India Share Price Rise: Valuation and Peers - Univest'
-     - Confluence: 5 independent signal families agree (trend, volume, pattern, news, fundamentals)
-     - History backtest: this kind of BUY setup worked 55% of the time over ~1 week on this stock (sample: 55)
-   Market warnings: VIX=13.2 at 93th percentile vs last 30d — unusually high stress | Nifty in downtrend (down) — only high-confidence BUY signals | Nifty choppy intraday — wait for cleaner setups
+     - Valuation: P/E 30.1x
+     - ROCE: 11.3%
+     - Revenue growing 18.6% YoY
+     - Net profit up 8.8% QoQ
+     - Sales up 0.8% QoQ
+     - Latest quarter NP: ₹3,620 Cr
+     - Latest quarter Sales: ₹10,821 Cr
+     - Market Cap: ₹406,557 Cr
+     - Analyst target: +15.4% upside
+     - Promoter holding: 66.1%
+     - Dividend yield: 42.0%
+     - Support at ₹1706.22 cushions downside
+     - Resistance at ₹1800.00 is natural target
+     - Latest news: 'Adani Ports and Special Economic Zone Stock Signals to Watch This - Un'
+     - Confluence: 5 independent signal families agree (trend, momentum, volume, pattern, news)
+     - History backtest: this kind of BUY setup worked 53% of the time over ~1 week on this stock (sample: 49)
+   Market warnings: VIX=12.3 at 87th percentile vs last 30d — unusually high stress | Nifty in downtrend (down) — only high-confidence BUY signals | Nifty choppy intraday — wait for cleaner setups | Net institutional outflow (₹+409 Cr)
 
 ---
 
@@ -163,12 +119,12 @@ BUY UNIONBANK.NS (UNIONBANK)
 - UNIONBANK.NS
 - POWERGRID.NS
 - IDFCFIRSTB.NS
-- TITAN.NS
 - BANDHANBNK.NS
 - NYKAA.NS
 - NHPC.NS
 - VBL.NS
 - ADANIGREEN.NS
+- PAYTM.NS
 
 ---
 

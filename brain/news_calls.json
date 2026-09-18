@@ -3381,8 +3381,8 @@
       "direction": 1,
       "score": 0.295,
       "price_at_call": 1530.0,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "right"
     },
     {
       "date": "2026-09-15",
@@ -3390,8 +3390,8 @@
       "direction": 1,
       "score": 0.26,
       "price_at_call": 1721.4,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "right"
     },
     {
       "date": "2026-09-15",
@@ -3399,8 +3399,8 @@
       "direction": 1,
       "score": 0.349,
       "price_at_call": 264.1,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "right"
     },
     {
       "date": "2026-09-15",
@@ -3408,8 +3408,8 @@
       "direction": 1,
       "score": 0.355,
       "price_at_call": 4885.0,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "flat"
     },
     {
       "date": "2026-09-16",
@@ -3518,6 +3518,42 @@
       "price_at_call": 323.9,
       "evaluated": false,
       "outcome": ""
+    },
+    {
+      "date": "2026-09-18",
+      "ticker": "HINDALCO.NS",
+      "direction": 1,
+      "score": 0.294,
+      "price_at_call": 985.3,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-09-18",
+      "ticker": "POWERGRID.NS",
+      "direction": 1,
+      "score": 0.238,
+      "price_at_call": 266.8,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-09-18",
+      "ticker": "TITAN.NS",
+      "direction": 1,
+      "score": 0.275,
+      "price_at_call": 4839.0,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-09-18",
+      "ticker": "VBL.NS",
+      "direction": 1,
+      "score": 0.209,
+      "price_at_call": 425.0,
+      "evaluated": false,
+      "outcome": ""
     }
   ],
   "reliability": {
@@ -3606,10 +3642,10 @@
       "last_seen": "2026-07-23"
     },
     "PIDILITIND.NS": {
-      "wins": 8.676,
-      "losses": 4.479,
-      "reliability": 0.66,
-      "last_seen": "2026-09-02"
+      "wins": 8.91,
+      "losses": 4.084,
+      "reliability": 0.686,
+      "last_seen": "2026-09-18"
     },
     "JSWSTEEL.NS": {
       "wins": 0.75,
@@ -3624,10 +3660,10 @@
       "last_seen": "2026-09-09"
     },
     "POWERGRID.NS": {
-      "wins": 0.0,
-      "losses": 2.943,
-      "reliability": 0.009,
-      "last_seen": "2026-08-06"
+      "wins": 1.0,
+      "losses": 2.296,
+      "reliability": 0.303,
+      "last_seen": "2026-09-18"
     },
     "ABCAPITAL.NS": {
       "wins": 3.513,
@@ -3708,10 +3744,10 @@
       "last_seen": "2026-09-15"
     },
     "ADANIPORTS.NS": {
-      "wins": 3.827,
-      "losses": 2.983,
-      "reliability": 0.562,
-      "last_seen": "2026-09-17"
+      "wins": 4.805,
+      "losses": 2.966,
+      "reliability": 0.618,
+      "last_seen": "2026-09-18"
     },
     "BHEL.NS": {
       "wins": 0.0,

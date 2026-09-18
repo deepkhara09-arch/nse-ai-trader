@@ -1,13 +1,13 @@
 {
   "phase": "paper_trading",
   "day": 63,
-  "session": "afternoon",
+  "session": "intraday_close",
   "start_date": "2026-06-22",
   "phase_start_date": "2026-07-15",
   "last_run_date": "2026-09-17",
   "last_counted_date": "2026-09-17",
   "cohort_last_tick_date": "2026-09-17",
-  "last_updated": "2026-09-18T07:45:48.671015",
+  "last_updated": "2026-09-18T09:45:44.093344",
   "focus_stocks": [
     "PIDILITIND.NS",
     "GAIL.NS",
@@ -58,14 +58,14 @@
     "BAJFINANCE.NS"
   ],
   "paper_trade_stats": {
-    "total": 49,
-    "wins": 18,
+    "total": 50,
+    "wins": 19,
     "losses": 31,
-    "win_rate": 0.367,
-    "total_pnl": -3083.37,
-    "avg_win": 97.8,
+    "win_rate": 0.38,
+    "total_pnl": -2981.52,
+    "avg_win": 98.01,
     "avg_loss": -156.25,
-    "expectancy": -62.93
+    "expectancy": -59.63
   },
   "brain_notes": [
     "[2026-07-22] Pre-open macro: neutral (+0.14)",
@@ -400,6 +400,7 @@
     "preopen": "2026-09-18",
     "morning": "2026-09-18",
     "midday": "2026-09-18",
-    "afternoon": "2026-09-18"
+    "afternoon": "2026-09-18",
+    "intraday_close": "2026-09-18"
   }
 }

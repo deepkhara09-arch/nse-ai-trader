@@ -1,6 +1,6 @@
 {
   "date": "2026-09-18",
-  "session": "morning",
+  "session": "midday",
   "nifty": {
     "symbol": "^NSEI",
     "value": 23270.6,
@@ -63,6 +63,7 @@
   "warnings": [
     "VIX=12.3 at 87th percentile vs last 30d \u2014 unusually high stress",
     "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
+    "Nifty choppy intraday \u2014 wait for cleaner setups",
     "Net institutional outflow (\u20b9+409 Cr)"
   ],
   "leading_sectors": [],
@@ -71,14 +72,14 @@
   "lagging_sectors": [
     "Infra"
   ],
-  "intraday_regime": "mixed",
+  "intraday_regime": "choppy",
   "macro": {
     "date": "2026-09-18",
-    "session": "preopen",
-    "generated_at": "2026-09-18T03:05:40.233377",
-    "global_score": 0.165,
+    "session": "midday",
+    "generated_at": "2026-09-18T06:15:43.031957",
+    "global_score": 0.153,
     "india_score": 0.333,
-    "overall_score": 0.241,
+    "overall_score": 0.234,
     "mood": "risk_on",
     "drivers": [
       "The 10-year Treasury is having its worst run in over 100 years. Why investors are buying bonds anyway.",
@@ -104,23 +105,23 @@
         "chg_pct": 1.14
       },
       "nikkei": {
-        "last": 64662.11,
-        "chg_pct": 0.82
+        "last": 65057.63,
+        "chg_pct": 1.44
       },
       "crude": {
-        "last": 101.31,
-        "chg_pct": -0.59
+        "last": 101.91,
+        "chg_pct": -0.51
       },
       "usdinr": {
-        "last": 95.93,
-        "chg_pct": -0.21
+        "last": 95.78,
+        "chg_pct": -0.36
       },
       "gold": {
-        "last": 4387.3,
-        "chg_pct": -0.28
+        "last": 4399.7,
+        "chg_pct": 0.28
       }
     },
-    "summary": "Overall macro mood is risk-on (+0.24). US Dow +0.6% overnight. Crude -0.6%. USD/INR -0.2%. Notable: US Fed rate hike / hawkish; Geopolitical conflict / war; Tariffs / trade war.",
+    "summary": "Overall macro mood is risk-on (+0.23). US Dow +0.6% overnight. Crude -0.5%. USD/INR -0.4%. Notable: US Fed rate hike / hawkish; Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
       "Hawkish Fed pressures Nifty via FII outflows and stronger USD.",
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",

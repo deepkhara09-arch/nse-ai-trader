@@ -1,15 +1,5 @@
 [
   {
-    "type": "new",
-    "ticker": "NESTLEIND.NS",
-    "nse_code": "NESTLEIND",
-    "signal": "BUY",
-    "date": "2026-07-20",
-    "ts": "2026-07-20T03:36:52.411319",
-    "detail": "New BUY recommendation \u2014 confidence 65/100",
-    "confidence": 65.1
-  },
-  {
     "type": "updated",
     "ticker": "FEDERALBNK.NS",
     "nse_code": "FEDERALBNK",
@@ -5997,6 +5987,16 @@
     "date": "2026-09-18",
     "ts": "2026-09-18T04:06:14.766031",
     "detail": "Confidence \u25bc10 (81 \u2192 70) | Rank \u25b22 (#8 \u2192 #6)",
+    "confidence": 70.4
+  },
+  {
+    "type": "updated",
+    "ticker": "HINDALCO.NS",
+    "nse_code": "HINDALCO",
+    "signal": "BUY",
+    "date": "2026-09-18",
+    "ts": "2026-09-18T06:15:54.502654",
+    "detail": "Stop loss moved \u20b9943.39 \u2192 \u20b9965.94 | Target 1 moved \u20b91076.92 \u2192 \u20b91046.83",
     "confidence": 70.4
   }
 ]

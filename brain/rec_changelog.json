@@ -1,15 +1,5 @@
 [
   {
-    "type": "new",
-    "ticker": "HOMEFIRST.NS",
-    "nse_code": "HOMEFIRST",
-    "signal": "BUY",
-    "date": "2026-07-20",
-    "ts": "2026-07-20T04:05:53.406062",
-    "detail": "New BUY recommendation \u2014 confidence 66/100",
-    "confidence": 66.1
-  },
-  {
     "type": "removed",
     "ticker": "NESTLEIND.NS",
     "nse_code": "NESTLEIND",
@@ -5998,5 +5988,15 @@
     "ts": "2026-09-18T10:12:11.773386",
     "detail": "Confidence \u25b29 (70 \u2192 80)",
     "confidence": 79.8
+  },
+  {
+    "type": "updated",
+    "ticker": "ADANIPORTS.NS",
+    "nse_code": "ADANIPORTS",
+    "signal": "BUY",
+    "date": "2026-09-21",
+    "ts": "2026-09-21T03:05:43.161810",
+    "detail": "Rank \u25b21 (#3 \u2192 #2)",
+    "confidence": 66.5
   }
 ]

@@ -5,46 +5,6 @@
     "nse_code": "PIDILITIND",
     "signal": "BUY",
     "date": "2026-07-20",
-    "ts": "2026-07-20T06:16:04.138889",
-    "detail": "Confidence \u25bc4 (70 \u2192 66)",
-    "confidence": 65.7
-  },
-  {
-    "type": "new",
-    "ticker": "SUNPHARMA.NS",
-    "nse_code": "SUNPHARMA",
-    "signal": "BUY",
-    "date": "2026-07-20",
-    "ts": "2026-07-20T07:45:46.893753",
-    "detail": "New BUY recommendation \u2014 confidence 72/100",
-    "confidence": 72.5
-  },
-  {
-    "type": "updated",
-    "ticker": "PIDILITIND.NS",
-    "nse_code": "PIDILITIND",
-    "signal": "BUY",
-    "date": "2026-07-20",
-    "ts": "2026-07-20T07:45:46.893753",
-    "detail": "Confidence \u25b27 (66 \u2192 72)",
-    "confidence": 72.4
-  },
-  {
-    "type": "updated",
-    "ticker": "HOMEFIRST.NS",
-    "nse_code": "HOMEFIRST",
-    "signal": "BUY",
-    "date": "2026-07-20",
-    "ts": "2026-07-20T09:45:49.844699",
-    "detail": "Target 1 moved \u20b91351.23 \u2192 \u20b91397.52",
-    "confidence": 66.1
-  },
-  {
-    "type": "updated",
-    "ticker": "PIDILITIND.NS",
-    "nse_code": "PIDILITIND",
-    "signal": "BUY",
-    "date": "2026-07-20",
     "ts": "2026-07-20T09:45:49.844699",
     "detail": "Confidence \u25bc7 (72 \u2192 66)",
     "confidence": 65.7
@@ -5998,5 +5958,45 @@
     "ts": "2026-09-21T04:05:41.242425",
     "detail": "Rank \u25bc7 (#2 \u2192 #9) | Target 1 moved \u20b91917.36 \u2192 \u20b91938.86",
     "confidence": 69.0
+  },
+  {
+    "type": "new",
+    "ticker": "HINDALCO.NS",
+    "nse_code": "HINDALCO",
+    "signal": "BUY",
+    "date": "2026-09-21",
+    "ts": "2026-09-21T06:15:55.207648",
+    "detail": "New BUY recommendation \u2014 confidence 65/100",
+    "confidence": 65.3
+  },
+  {
+    "type": "removed",
+    "ticker": "PIDILITIND.NS",
+    "nse_code": "PIDILITIND",
+    "signal": "BUY",
+    "date": "2026-09-21",
+    "ts": "2026-09-21T06:15:55.207648",
+    "detail": "Dropped \u2014 no longer meets threshold (was 91/100)",
+    "confidence": 0
+  },
+  {
+    "type": "updated",
+    "ticker": "HOMEFIRST.NS",
+    "nse_code": "HOMEFIRST",
+    "signal": "BUY",
+    "date": "2026-09-21",
+    "ts": "2026-09-21T06:15:55.207648",
+    "detail": "Stop loss moved \u20b91227.44 \u2192 \u20b91184.18 | Target 1 moved \u20b91373.98 \u2192 \u20b91348.34",
+    "confidence": 70.5
+  },
+  {
+    "type": "updated",
+    "ticker": "ADANIGREEN.NS",
+    "nse_code": "ADANIGREEN",
+    "signal": "BUY",
+    "date": "2026-09-21",
+    "ts": "2026-09-21T06:15:55.207648",
+    "detail": "Stop loss moved \u20b91285.83 \u2192 \u20b91254.88",
+    "confidence": 66.7
   }
 ]

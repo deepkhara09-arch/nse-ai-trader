@@ -130,9 +130,9 @@
   "macro_risk_factor": 1.0,
   "fii_dii": {
     "date": "2026-09-21",
-    "fii_net_cr": 599.54,
-    "dii_net_cr": 1019.69,
-    "combined_net_cr": 1619.23,
+    "fii_net_cr": -576.2,
+    "dii_net_cr": 2797.27,
+    "combined_net_cr": 2221.07,
     "signal": "inflow",
     "ok": true,
     "error": "",
@@ -313,18 +313,18 @@
       },
       {
         "date": "2026-09-21",
-        "fii": 599.54,
-        "dii": 1019.69,
-        "combined": 1619.23
+        "fii": -576.2,
+        "dii": 2797.27,
+        "combined": 2221.07
       }
     ]
   },
   "pcr": {
     "date": "2026-09-21",
-    "pcr": 1.47,
+    "pcr": 1.465,
     "reading": "bullish_bias",
-    "total_pe_oi": 3481521,
-    "total_ce_oi": 2368635,
+    "total_pe_oi": 3384488,
+    "total_ce_oi": 2310810,
     "spot": 23414.3,
     "max_pain": 23400.0,
     "max_pain_dist_pct": 0.06,

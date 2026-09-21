@@ -39,8 +39,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "MACD histogram negative"
       ],
-      "current_price": 85.35,
-      "unrealized_pnl": -159.74,
+      "current_price": 85.6,
+      "unrealized_pnl": -135.24,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -56,7 +56,7 @@
         "hist_long_trend": "strong_uptrend"
       },
       "view_hist": [
-        1,
+        0,
         0,
         0,
         0
@@ -101,8 +101,8 @@
         "Short EMA below long EMA",
         "MACD histogram negative"
       ],
-      "current_price": 1582.7,
-      "unrealized_pnl": 96.5,
+      "current_price": 1577.0,
+      "unrealized_pnl": 68.0,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -118,10 +118,10 @@
         "hist_long_trend": "uptrend"
       },
       "view_hist": [
-        0,
         1,
         0,
-        1
+        1,
+        0
       ]
     },
     {
@@ -161,8 +161,8 @@
         "Near upper Bollinger Band",
         "High volume confirmation (3.2x avg)"
       ],
-      "current_price": 180.29,
-      "unrealized_pnl": 142.5,
+      "current_price": 178.81,
+      "unrealized_pnl": 86.26,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -178,7 +178,7 @@
         "hist_long_trend": "uptrend"
       },
       "view_hist": [
-        0,
+        1,
         1,
         1,
         1
@@ -217,8 +217,8 @@
         "In a long-term strong downtrend (2yr)",
         "\u2713 Daily setup aligned with the higher-timeframe trend"
       ],
-      "current_price": 268.4,
-      "unrealized_pnl": -42.4,
+      "current_price": 267.0,
+      "unrealized_pnl": -20.0,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -275,8 +275,8 @@
         "All EMAs stacked bearish",
         "MACD histogram negative"
       ],
-      "current_price": 980.8,
-      "unrealized_pnl": -19.5,
+      "current_price": 977.2,
+      "unrealized_pnl": -37.5,
       "max_held_days": 40,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -292,7 +292,7 @@
         "hist_long_trend": "strong_uptrend"
       },
       "view_hist": [
-        1,
+        0,
         0,
         0,
         0
@@ -335,8 +335,8 @@
         "\u2713 Daily setup aligned with the higher-timeframe trend",
         "Near upper Bollinger Band"
       ],
-      "current_price": 1247.0,
-      "unrealized_pnl": -92.0,
+      "current_price": 1260.0,
+      "unrealized_pnl": -40.0,
       "max_held_days": 40,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -352,6 +352,7 @@
         "hist_long_trend": "strong_uptrend"
       },
       "view_hist": [
+        1,
         1,
         1
       ]

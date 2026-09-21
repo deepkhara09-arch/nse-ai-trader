@@ -1,5 +1,5 @@
 {
-  "capital": 64792.052785,
+  "capital": 59712.052785,
   "open_positions": [
     {
       "ticker": "IDFCFIRSTB.NS",
@@ -39,8 +39,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "MACD histogram negative"
       ],
-      "current_price": 86.25,
-      "unrealized_pnl": -71.54,
+      "current_price": 85.84,
+      "unrealized_pnl": -111.72,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -58,8 +58,8 @@
       "view_hist": [
         0,
         0,
-        0,
-        1
+        1,
+        0
       ]
     },
     {
@@ -101,8 +101,8 @@
         "Short EMA below long EMA",
         "MACD histogram negative"
       ],
-      "current_price": 1589.9,
-      "unrealized_pnl": 132.5,
+      "current_price": 1592.5,
+      "unrealized_pnl": 145.5,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -121,7 +121,7 @@
         0,
         0,
         0,
-        0
+        1
       ]
     },
     {
@@ -161,8 +161,8 @@
         "Near upper Bollinger Band",
         "High volume confirmation (3.2x avg)"
       ],
-      "current_price": 177.53,
-      "unrealized_pnl": 37.62,
+      "current_price": 178.67,
+      "unrealized_pnl": 80.94,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -181,7 +181,7 @@
         0,
         0,
         0,
-        0
+        1
       ]
     },
     {
@@ -217,8 +217,8 @@
         "In a long-term strong downtrend (2yr)",
         "\u2713 Daily setup aligned with the higher-timeframe trend"
       ],
-      "current_price": 266.8,
-      "unrealized_pnl": -16.8,
+      "current_price": 268.0,
+      "unrealized_pnl": -36.0,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -275,8 +275,8 @@
         "All EMAs stacked bearish",
         "MACD histogram negative"
       ],
-      "current_price": 985.3,
-      "unrealized_pnl": 3.0,
+      "current_price": 989.4,
+      "unrealized_pnl": 23.5,
       "max_held_days": 40,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -294,9 +294,63 @@
       "view_hist": [
         0,
         0,
-        0,
-        1
+        1,
+        0
       ]
+    },
+    {
+      "ticker": "HOMEFIRST.NS",
+      "sector": "Infra Finance",
+      "open_date": "2026-09-21",
+      "open_session": "morning",
+      "action": "BUY",
+      "entry": 1270.0,
+      "qty": 4,
+      "invested": 5080.0,
+      "stop_loss": 1195.13,
+      "target": 1369.82,
+      "style": "swing",
+      "confidence": 89.8,
+      "patterns": [
+        "morning_star",
+        "supertrend_bullish",
+        "macd_bullish_crossover",
+        "full_bullish_alignment",
+        "bb_upper_rejection",
+        "ema_golden_cross",
+        "volume_breakout_bullish",
+        "pivot_r1_breakout",
+        "pivot_r2_breakout"
+      ],
+      "buy_reasons": [
+        "All EMAs stacked bullish",
+        "MACD histogram positive",
+        "High volume confirmation (4.1x avg)",
+        "Candlestick: morning star",
+        "Supertrend bullish \u2014 price above trend band",
+        "Broke above Pivot R1 with volume \u2014 bullish",
+        "Broke above Pivot R2 \u2014 strong momentum",
+        "In a long-term strong uptrend (2yr) \u2014 trend on our side",
+        "Volatility compressed vs its norm \u2014 primed for an expansion move",
+        "\u2713 Daily setup aligned with the higher-timeframe trend",
+        "Near upper Bollinger Band"
+      ],
+      "current_price": 1270.0,
+      "unrealized_pnl": 0.0,
+      "max_held_days": 40,
+      "vol_regime_pct": 0.12,
+      "entry_market": {
+        "nifty_trend": "sideways",
+        "vix": 11.39,
+        "mood": "neutral",
+        "regime": "choppy",
+        "sector_momentum": 0.178,
+        "delivery_signal": "neutral",
+        "rsi": 58.7,
+        "mtf_alignment": "aligned",
+        "opposing_ratio": 0.08,
+        "hist_long_trend": "strong_uptrend"
+      }
     }
   ],
   "closed_trades": [
@@ -4006,12 +4060,12 @@
       "daily_pnl": 100.46
     }
   ],
-  "daily_pnl_today": 100.4617999999999,
+  "daily_pnl_today": 0.0,
   "last_snapshot_date": "2026-09-18",
   "lifetime_wins": 19,
   "lifetime_losses": 32,
   "lifetime_pnl": -2982.91,
-  "last_pnl_reset_date": "2026-09-18",
+  "last_pnl_reset_date": "2026-09-21",
   "max_drawdown_pct": 4.47,
   "current_drawdown_pct": 4.06,
   "portfolio_peak": 101210.28,

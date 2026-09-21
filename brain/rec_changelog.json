@@ -1,55 +1,5 @@
 [
   {
-    "type": "removed",
-    "ticker": "NESTLEIND.NS",
-    "nse_code": "NESTLEIND",
-    "signal": "BUY",
-    "date": "2026-07-20",
-    "ts": "2026-07-20T04:05:53.406062",
-    "detail": "Dropped \u2014 no longer meets threshold (was 65/100)",
-    "confidence": 0
-  },
-  {
-    "type": "updated",
-    "ticker": "FEDERALBNK.NS",
-    "nse_code": "FEDERALBNK",
-    "signal": "BUY",
-    "date": "2026-07-20",
-    "ts": "2026-07-20T04:05:53.406062",
-    "detail": "Confidence \u25bc6 (86 \u2192 79) | Rank \u25bc2 (#10 \u2192 #12) | Stop loss moved \u20b9338.92 \u2192 \u20b9335.39 | Target 1 moved \u20b9367.81 \u2192 \u20b9371.57",
-    "confidence": 79.4
-  },
-  {
-    "type": "updated",
-    "ticker": "MARICO.NS",
-    "nse_code": "MARICO",
-    "signal": "BUY",
-    "date": "2026-07-20",
-    "ts": "2026-07-20T04:05:53.406062",
-    "detail": "Rank \u25b22 (#5 \u2192 #3)",
-    "confidence": 68.4
-  },
-  {
-    "type": "removed",
-    "ticker": "UNIONBANK.NS",
-    "nse_code": "UNIONBANK",
-    "signal": "BUY",
-    "date": "2026-07-20",
-    "ts": "2026-07-20T06:16:04.138889",
-    "detail": "Dropped \u2014 no longer meets threshold (was 69/100)",
-    "confidence": 0
-  },
-  {
-    "type": "removed",
-    "ticker": "MARICO.NS",
-    "nse_code": "MARICO",
-    "signal": "BUY",
-    "date": "2026-07-20",
-    "ts": "2026-07-20T06:16:04.138889",
-    "detail": "Dropped \u2014 no longer meets threshold (was 68/100)",
-    "confidence": 0
-  },
-  {
     "type": "updated",
     "ticker": "PIDILITIND.NS",
     "nse_code": "PIDILITIND",
@@ -5998,5 +5948,55 @@
     "ts": "2026-09-21T03:05:43.161810",
     "detail": "Rank \u25b21 (#3 \u2192 #2)",
     "confidence": 66.5
+  },
+  {
+    "type": "new",
+    "ticker": "PIDILITIND.NS",
+    "nse_code": "PIDILITIND",
+    "signal": "BUY",
+    "date": "2026-09-21",
+    "ts": "2026-09-21T04:05:41.242425",
+    "detail": "New BUY recommendation \u2014 confidence 91/100",
+    "confidence": 90.8
+  },
+  {
+    "type": "new",
+    "ticker": "HOMEFIRST.NS",
+    "nse_code": "HOMEFIRST",
+    "signal": "BUY",
+    "date": "2026-09-21",
+    "ts": "2026-09-21T04:05:41.242425",
+    "detail": "New BUY recommendation \u2014 confidence 70/100",
+    "confidence": 70.5
+  },
+  {
+    "type": "new",
+    "ticker": "ADANIGREEN.NS",
+    "nse_code": "ADANIGREEN",
+    "signal": "BUY",
+    "date": "2026-09-21",
+    "ts": "2026-09-21T04:05:41.242425",
+    "detail": "New BUY recommendation \u2014 confidence 67/100",
+    "confidence": 66.7
+  },
+  {
+    "type": "removed",
+    "ticker": "HINDALCO.NS",
+    "nse_code": "HINDALCO",
+    "signal": "BUY",
+    "date": "2026-09-21",
+    "ts": "2026-09-21T04:05:41.242425",
+    "detail": "Dropped \u2014 no longer meets threshold (was 80/100)",
+    "confidence": 0
+  },
+  {
+    "type": "updated",
+    "ticker": "ADANIPORTS.NS",
+    "nse_code": "ADANIPORTS",
+    "signal": "BUY",
+    "date": "2026-09-21",
+    "ts": "2026-09-21T04:05:41.242425",
+    "detail": "Rank \u25bc7 (#2 \u2192 #9) | Target 1 moved \u20b91917.36 \u2192 \u20b91938.86",
+    "confidence": 69.0
   }
 ]

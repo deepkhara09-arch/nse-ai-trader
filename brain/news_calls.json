@@ -3417,8 +3417,8 @@
       "direction": 1,
       "score": 0.374,
       "price_at_call": 1544.0,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "right"
     },
     {
       "date": "2026-09-16",
@@ -3426,8 +3426,8 @@
       "direction": 1,
       "score": 0.243,
       "price_at_call": 974.5,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "flat"
     },
     {
       "date": "2026-09-16",
@@ -3435,8 +3435,8 @@
       "direction": 1,
       "score": 0.45,
       "price_at_call": 264.25,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "right"
     },
     {
       "date": "2026-09-16",
@@ -3444,8 +3444,8 @@
       "direction": 1,
       "score": 0.334,
       "price_at_call": 4890.0,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "wrong"
     },
     {
       "date": "2026-09-16",
@@ -3453,8 +3453,8 @@
       "direction": -1,
       "score": -0.256,
       "price_at_call": 184.19,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "wrong"
     },
     {
       "date": "2026-09-16",
@@ -3462,8 +3462,8 @@
       "direction": 1,
       "score": 0.301,
       "price_at_call": 327.85,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "right"
     },
     {
       "date": "2026-09-17",
@@ -3554,6 +3554,51 @@
       "price_at_call": 425.0,
       "evaluated": false,
       "outcome": ""
+    },
+    {
+      "date": "2026-09-21",
+      "ticker": "HINDALCO.NS",
+      "direction": 1,
+      "score": 0.281,
+      "price_at_call": 977.2,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-09-21",
+      "ticker": "ADANIPORTS.NS",
+      "direction": 1,
+      "score": 0.268,
+      "price_at_call": 1788.5,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-09-21",
+      "ticker": "NHPC.NS",
+      "direction": 1,
+      "score": 0.294,
+      "price_at_call": 75.65,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-09-21",
+      "ticker": "VBL.NS",
+      "direction": 1,
+      "score": 0.246,
+      "price_at_call": 426.25,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-09-21",
+      "ticker": "ADANIGREEN.NS",
+      "direction": 1,
+      "score": 0.236,
+      "price_at_call": 1303.0,
+      "evaluated": false,
+      "outcome": ""
     }
   ],
   "reliability": {
@@ -3642,10 +3687,10 @@
       "last_seen": "2026-07-23"
     },
     "PIDILITIND.NS": {
-      "wins": 8.91,
-      "losses": 4.084,
-      "reliability": 0.686,
-      "last_seen": "2026-09-18"
+      "wins": 9.757,
+      "losses": 4.014,
+      "reliability": 0.709,
+      "last_seen": "2026-09-21"
     },
     "JSWSTEEL.NS": {
       "wins": 0.75,
@@ -3660,10 +3705,10 @@
       "last_seen": "2026-09-09"
     },
     "POWERGRID.NS": {
-      "wins": 1.0,
-      "losses": 2.296,
-      "reliability": 0.303,
-      "last_seen": "2026-09-18"
+      "wins": 1.983,
+      "losses": 2.257,
+      "reliability": 0.468,
+      "last_seen": "2026-09-21"
     },
     "ABCAPITAL.NS": {
       "wins": 3.513,
@@ -3690,10 +3735,10 @@
       "last_seen": "2026-09-16"
     },
     "NIACL.NS": {
-      "wins": 1.994,
-      "losses": 0.0,
-      "reliability": 0.832,
-      "last_seen": "2026-08-18"
+      "wins": 1.638,
+      "losses": 1.0,
+      "reliability": 0.606,
+      "last_seen": "2026-09-21"
     },
     "CHOLAFIN.NS": {
       "wins": 1.0,
@@ -3757,9 +3802,15 @@
     },
     "TITAN.NS": {
       "wins": 0.0,
-      "losses": 1.0,
-      "reliability": 0.333,
-      "last_seen": "2026-09-17"
+      "losses": 1.977,
+      "reliability": 0.17,
+      "last_seen": "2026-09-21"
+    },
+    "NYKAA.NS": {
+      "wins": 1.0,
+      "losses": 0.0,
+      "reliability": 0.667,
+      "last_seen": "2026-09-21"
     }
   }
 }

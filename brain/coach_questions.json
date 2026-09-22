@@ -1,102 +1,102 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_up, bb_upper_rejection, macd_bullish_crossover mean for a swing trade on PAYTM? Current RSI=62, MACD hist=+2.1051, Vol=1.0x average. Signal is BUY.",
-    "context": {
-      "ticker": "PAYTM.NS",
-      "signal": "BUY",
-      "patterns": "adx_strong_trend_up, bb_upper_rejection, macd_bullish_crossover",
-      "rsi": 61.8
-    },
-    "queued_at": "2026-09-22T06:15:51.867817"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_down, three_white_soldiers, full_bearish_alignment mean for a swing trade on PIDILITIND? Current RSI=27, MACD hist=-6.6745, Vol=1.8x average. Signal is BUY.",
-    "context": {
-      "ticker": "PIDILITIND.NS",
-      "signal": "BUY",
-      "patterns": "adx_strong_trend_down, three_white_soldiers, full_bearish_alignment",
-      "rsi": 27.4
-    },
-    "queued_at": "2026-09-22T06:15:51.870705"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of adx_ranging_market, pivot_r1_breakout, volume_breakout_bullish mean for a swing trade on BANDHANBNK? Current RSI=72, MACD hist=+1.1894, Vol=2.3x average. Signal is BUY.",
-    "context": {
-      "ticker": "BANDHANBNK.NS",
-      "signal": "BUY",
-      "patterns": "adx_ranging_market, pivot_r1_breakout, volume_breakout_bullish",
-      "rsi": 72.0
-    },
-    "queued_at": "2026-09-22T06:15:51.871560"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of outside_bar, volume_breakout_bullish, volume_climax_top mean for a swing trade on HOMEFIRST? Current RSI=67, MACD hist=+0.2664, Vol=4.2x average. Signal is BUY.",
-    "context": {
-      "ticker": "HOMEFIRST.NS",
-      "signal": "BUY",
-      "patterns": "outside_bar, volume_breakout_bullish, volume_climax_top",
-      "rsi": 67.4
-    },
-    "queued_at": "2026-09-22T06:15:51.873749"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_down, three_white_soldiers, full_bearish_alignment mean for a swing trade on PIDILITIND? Current RSI=27, MACD hist=-6.6745, Vol=1.8x average. Signal is BUY.",
-    "context": {
-      "ticker": "PIDILITIND.NS",
-      "signal": "BUY",
-      "patterns": "adx_strong_trend_down, three_white_soldiers, full_bearish_alignment",
-      "rsi": 27.4
-    },
-    "queued_at": "2026-09-22T06:15:51.963049"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of outside_bar, volume_breakout_bullish, volume_climax_top mean for a swing trade on HOMEFIRST? Current RSI=67, MACD hist=+0.2664, Vol=4.2x average. Signal is BUY.",
-    "context": {
-      "ticker": "HOMEFIRST.NS",
-      "signal": "BUY",
-      "patterns": "outside_bar, volume_breakout_bullish, volume_climax_top",
-      "rsi": 67.4
-    },
-    "queued_at": "2026-09-22T06:15:51.967383"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of pivot_r1_breakout, strong_bullish_marubozu, bb_upper_rejection mean for a swing trade on ADANIPORTS? Current RSI=80, MACD hist=+10.4445, Vol=1.7x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of bb_upper_rejection, pivot_r2_breakout, supertrend_bullish mean for a swing trade on ADANIPORTS? Current RSI=80, MACD hist=+10.4445, Vol=1.7x average. Signal is BUY.",
     "context": {
       "ticker": "ADANIPORTS.NS",
       "signal": "BUY",
-      "patterns": "pivot_r1_breakout, strong_bullish_marubozu, bb_upper_rejection",
+      "patterns": "bb_upper_rejection, pivot_r2_breakout, supertrend_bullish",
       "rsi": 80.4
     },
-    "queued_at": "2026-09-22T06:15:51.968309"
+    "queued_at": "2026-09-22T07:45:51.729400"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of adx_ranging_market, pivot_r1_breakout, volume_breakout_bullish mean for a swing trade on BANDHANBNK? Current RSI=72, MACD hist=+1.1894, Vol=2.3x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of pivot_r2_breakout, supertrend_bullish, adx_ranging_market mean for a swing trade on BANDHANBNK? Current RSI=72, MACD hist=+1.1894, Vol=2.3x average. Signal is BUY.",
     "context": {
       "ticker": "BANDHANBNK.NS",
       "signal": "BUY",
-      "patterns": "adx_ranging_market, pivot_r1_breakout, volume_breakout_bullish",
+      "patterns": "pivot_r2_breakout, supertrend_bullish, adx_ranging_market",
       "rsi": 72.0
     },
-    "queued_at": "2026-09-22T06:15:51.972878"
+    "queued_at": "2026-09-22T07:45:51.733266"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of pivot_r1_breakout, strong_bullish_marubozu, three_white_soldiers mean for a swing trade on ADANIGREEN? Current RSI=71, MACD hist=+6.8222, Vol=1.8x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of pivot_r2_breakout, supertrend_bullish, full_bearish_alignment mean for a swing trade on ADANIGREEN? Current RSI=71, MACD hist=+6.8222, Vol=1.8x average. Signal is BUY.",
     "context": {
       "ticker": "ADANIGREEN.NS",
       "signal": "BUY",
-      "patterns": "pivot_r1_breakout, strong_bullish_marubozu, three_white_soldiers",
+      "patterns": "pivot_r2_breakout, supertrend_bullish, full_bearish_alignment",
       "rsi": 70.5
     },
-    "queued_at": "2026-09-22T06:15:51.974967"
+    "queued_at": "2026-09-22T07:45:51.736224"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_up, bb_upper_rejection, macd_bullish_crossover mean for a swing trade on PAYTM? Current RSI=62, MACD hist=+2.1051, Vol=1.0x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of bb_upper_rejection, gap_up_continuation, supertrend_bullish mean for a swing trade on PAYTM? Current RSI=62, MACD hist=+2.1051, Vol=1.0x average. Signal is BUY.",
     "context": {
       "ticker": "PAYTM.NS",
       "signal": "BUY",
-      "patterns": "adx_strong_trend_up, bb_upper_rejection, macd_bullish_crossover",
+      "patterns": "bb_upper_rejection, gap_up_continuation, supertrend_bullish",
       "rsi": 61.8
     },
-    "queued_at": "2026-09-22T06:15:51.977643"
+    "queued_at": "2026-09-22T07:45:51.737410"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of pivot_r2_breakout, adx_strong_trend_down, full_bearish_alignment mean for a swing trade on PIDILITIND? Current RSI=27, MACD hist=-6.6745, Vol=1.8x average. Signal is BUY.",
+    "context": {
+      "ticker": "PIDILITIND.NS",
+      "signal": "BUY",
+      "patterns": "pivot_r2_breakout, adx_strong_trend_down, full_bearish_alignment",
+      "rsi": 27.4
+    },
+    "queued_at": "2026-09-22T07:45:51.741418"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of pivot_r2_breakout, adx_strong_trend_down, full_bearish_alignment mean for a swing trade on PIDILITIND? Current RSI=27, MACD hist=-6.6745, Vol=1.8x average. Signal is BUY.",
+    "context": {
+      "ticker": "PIDILITIND.NS",
+      "signal": "BUY",
+      "patterns": "pivot_r2_breakout, adx_strong_trend_down, full_bearish_alignment",
+      "rsi": 27.4
+    },
+    "queued_at": "2026-09-22T07:45:51.861486"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of outside_bar, volume_climax_top mean for a swing trade on HOMEFIRST? Current RSI=67, MACD hist=+0.2664, Vol=4.2x average. Signal is BUY.",
+    "context": {
+      "ticker": "HOMEFIRST.NS",
+      "signal": "BUY",
+      "patterns": "outside_bar, volume_climax_top",
+      "rsi": 67.4
+    },
+    "queued_at": "2026-09-22T07:45:51.867364"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of bb_upper_rejection, pivot_r2_breakout, supertrend_bullish mean for a swing trade on ADANIPORTS? Current RSI=80, MACD hist=+10.4445, Vol=1.7x average. Signal is BUY.",
+    "context": {
+      "ticker": "ADANIPORTS.NS",
+      "signal": "BUY",
+      "patterns": "bb_upper_rejection, pivot_r2_breakout, supertrend_bullish",
+      "rsi": 80.4
+    },
+    "queued_at": "2026-09-22T07:45:51.868612"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of pivot_r2_breakout, supertrend_bullish, full_bearish_alignment mean for a swing trade on ADANIGREEN? Current RSI=71, MACD hist=+6.8222, Vol=1.8x average. Signal is BUY.",
+    "context": {
+      "ticker": "ADANIGREEN.NS",
+      "signal": "BUY",
+      "patterns": "pivot_r2_breakout, supertrend_bullish, full_bearish_alignment",
+      "rsi": 70.5
+    },
+    "queued_at": "2026-09-22T07:45:51.877613"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of bb_upper_rejection, gap_up_continuation, supertrend_bullish mean for a swing trade on PAYTM? Current RSI=62, MACD hist=+2.1051, Vol=1.0x average. Signal is BUY.",
+    "context": {
+      "ticker": "PAYTM.NS",
+      "signal": "BUY",
+      "patterns": "bb_upper_rejection, gap_up_continuation, supertrend_bullish",
+      "rsi": 61.8
+    },
+    "queued_at": "2026-09-22T07:45:51.881269"
   }
 ]

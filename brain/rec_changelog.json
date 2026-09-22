@@ -1,35 +1,5 @@
 [
   {
-    "type": "updated",
-    "ticker": "SBIN.NS",
-    "nse_code": "SBIN",
-    "signal": "BUY",
-    "date": "2026-07-21",
-    "ts": "2026-07-21T09:36:57.320867",
-    "detail": "Stop loss moved \u20b91021.86 \u2192 \u20b91015.55",
-    "confidence": 65.5
-  },
-  {
-    "type": "new",
-    "ticker": "ICICIBANK.NS",
-    "nse_code": "ICICIBANK",
-    "signal": "BUY",
-    "date": "2026-07-21",
-    "ts": "2026-07-21T10:12:54.626820",
-    "detail": "New BUY recommendation \u2014 confidence 89/100",
-    "confidence": 88.8
-  },
-  {
-    "type": "new",
-    "ticker": "LICI.NS",
-    "nse_code": "LICI",
-    "signal": "BUY",
-    "date": "2026-07-21",
-    "ts": "2026-07-21T10:12:54.626820",
-    "detail": "New BUY recommendation \u2014 confidence 67/100",
-    "confidence": 67.3
-  },
-  {
     "type": "new",
     "ticker": "PIDILITIND.NS",
     "nse_code": "PIDILITIND",
@@ -5998,5 +5968,35 @@
     "ts": "2026-09-22T07:45:51.884007",
     "detail": "Target 1 moved \u20b91406.14 \u2192 \u20b91414.24",
     "confidence": 68.0
+  },
+  {
+    "type": "removed",
+    "ticker": "PIDILITIND.NS",
+    "nse_code": "PIDILITIND",
+    "signal": "BUY",
+    "date": "2026-09-22",
+    "ts": "2026-09-22T09:25:18.405475",
+    "detail": "Dropped \u2014 no longer meets threshold (was 91/100)",
+    "confidence": 0
+  },
+  {
+    "type": "removed",
+    "ticker": "ADANIPORTS.NS",
+    "nse_code": "ADANIPORTS",
+    "signal": "BUY",
+    "date": "2026-09-22",
+    "ts": "2026-09-22T09:25:18.405475",
+    "detail": "Dropped \u2014 no longer meets threshold (was 69/100)",
+    "confidence": 0
+  },
+  {
+    "type": "removed",
+    "ticker": "ADANIGREEN.NS",
+    "nse_code": "ADANIGREEN",
+    "signal": "BUY",
+    "date": "2026-09-22",
+    "ts": "2026-09-22T09:25:18.405475",
+    "detail": "Dropped \u2014 no longer meets threshold (was 68/100)",
+    "confidence": 0
   }
 ]

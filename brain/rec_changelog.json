@@ -1,15 +1,5 @@
 [
   {
-    "type": "updated",
-    "ticker": "PIDILITIND.NS",
-    "nse_code": "PIDILITIND",
-    "signal": "BUY",
-    "date": "2026-07-22",
-    "ts": "2026-07-22T03:05:49.549715",
-    "detail": "Rank \u25bc1 (#7 \u2192 #8)",
-    "confidence": 65.3
-  },
-  {
     "type": "removed",
     "ticker": "SBIN.NS",
     "nse_code": "SBIN",
@@ -5998,5 +5988,15 @@
     "ts": "2026-09-23T04:05:47.218682",
     "detail": "Signal flipped SELL \u2192 BUY | Stop loss moved \u20b91623.59 \u2192 \u20b91531.93 | Target 1 moved \u20b91471.22 \u2192 \u20b91688.44",
     "confidence": 75.7
+  },
+  {
+    "type": "removed",
+    "ticker": "COALINDIA.NS",
+    "nse_code": "COALINDIA",
+    "signal": "BUY",
+    "date": "2026-09-23",
+    "ts": "2026-09-23T07:45:49.094541",
+    "detail": "Dropped \u2014 no longer meets threshold (was 76/100)",
+    "confidence": 0
   }
 ]

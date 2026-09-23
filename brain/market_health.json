@@ -1,6 +1,6 @@
 {
   "date": "2026-09-23",
-  "session": "morning",
+  "session": "midday",
   "nifty": {
     "symbol": "^NSEI",
     "value": 23414.3,
@@ -75,11 +75,11 @@
   "intraday_regime": "mixed",
   "macro": {
     "date": "2026-09-23",
-    "session": "preopen",
-    "generated_at": "2026-09-23T03:05:43.528534",
-    "global_score": 0.24,
+    "session": "midday",
+    "generated_at": "2026-09-23T06:15:38.949106",
+    "global_score": 0.289,
     "india_score": 0.0,
-    "overall_score": 0.132,
+    "overall_score": 0.159,
     "mood": "neutral",
     "drivers": [
       "\u2018It doesn\u2019t seem fair\u2019: I\u2019m retired and have plenty of money. Why can\u2019t I qualify for a retail credit card?",
@@ -93,35 +93,35 @@
     ],
     "global_cues": {
       "dow": {
-        "last": 51863.69,
-        "chg_pct": -0.36
+        "last": 52048.83,
+        "chg_pct": 0.71
       },
       "nasdaq": {
-        "last": 27244.28,
-        "chg_pct": 0.45
+        "last": 27122.09,
+        "chg_pct": 2.26
       },
       "sp500": {
-        "last": 7764.64,
-        "chg_pct": -0.0
+        "last": 7764.7,
+        "chg_pct": 1.49
       },
       "nikkei": {
         "last": 65018.95,
         "chg_pct": 1.38
       },
       "crude": {
-        "last": 89.74,
-        "chg_pct": -5.13
+        "last": 94.59,
+        "chg_pct": -1.24
       },
       "usdinr": {
-        "last": 95.58,
-        "chg_pct": -0.14
+        "last": 95.68,
+        "chg_pct": -0.04
       },
       "gold": {
-        "last": 4371.3,
-        "chg_pct": -0.12
+        "last": 4376.4,
+        "chg_pct": -0.17
       }
     },
-    "summary": "Overall macro mood is neutral (+0.13). US Dow -0.4% overnight. Crude -5.1%. USD/INR -0.1%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
+    "summary": "Overall macro mood is neutral (+0.16). US Dow +0.7% overnight. Crude -1.2%. USD/INR -0.0%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
       "Trade-war headlines spook global markets; IT & export names react most."

@@ -1,26 +1,6 @@
 [
   {
     "type": "updated",
-    "ticker": "UNIONBANK.NS",
-    "nse_code": "UNIONBANK",
-    "signal": "BUY",
-    "date": "2026-07-21",
-    "ts": "2026-07-21T10:12:54.626820",
-    "detail": "Rank \u25bc2 (#1 \u2192 #3)",
-    "confidence": 90.7
-  },
-  {
-    "type": "updated",
-    "ticker": "SBIN.NS",
-    "nse_code": "SBIN",
-    "signal": "BUY",
-    "date": "2026-07-21",
-    "ts": "2026-07-21T10:12:54.626820",
-    "detail": "Confidence \u25b25 (66 \u2192 70) | Rank \u25bc2 (#2 \u2192 #4)",
-    "confidence": 70.3
-  },
-  {
-    "type": "updated",
     "ticker": "PIDILITIND.NS",
     "nse_code": "PIDILITIND",
     "signal": "BUY",
@@ -5998,5 +5978,25 @@
     "ts": "2026-09-23T03:05:44.763997",
     "detail": "New SELL recommendation \u2014 confidence 74/100",
     "confidence": 73.6
+  },
+  {
+    "type": "new",
+    "ticker": "COALINDIA.NS",
+    "nse_code": "COALINDIA",
+    "signal": "BUY",
+    "date": "2026-09-23",
+    "ts": "2026-09-23T04:05:47.218682",
+    "detail": "New BUY recommendation \u2014 confidence 76/100",
+    "confidence": 75.7
+  },
+  {
+    "type": "updated",
+    "ticker": "PIDILITIND.NS",
+    "nse_code": "PIDILITIND",
+    "signal": "BUY",
+    "date": "2026-09-23",
+    "ts": "2026-09-23T04:05:47.218682",
+    "detail": "Signal flipped SELL \u2192 BUY | Stop loss moved \u20b91623.59 \u2192 \u20b91531.93 | Target 1 moved \u20b91471.22 \u2192 \u20b91688.44",
+    "confidence": 75.7
   }
 ]

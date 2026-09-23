@@ -1,6 +1,6 @@
 {
   "date": "2026-09-23",
-  "session": "preopen",
+  "session": "morning",
   "nifty": {
     "symbol": "^NSEI",
     "value": 23414.3,
@@ -58,10 +58,9 @@
       "ath_pct_60d": -4.63
     }
   },
-  "market_mood": "bearish",
+  "market_mood": "neutral",
   "trade_allowed": true,
   "warnings": [
-    "Nifty in intraday downtrend \u2014 avoid new longs this session",
     "Net institutional outflow (\u20b9+310 Cr)"
   ],
   "leading_sectors": [
@@ -73,7 +72,7 @@
   "lagging_sectors": [
     "IT"
   ],
-  "intraday_regime": "trending_down",
+  "intraday_regime": "mixed",
   "macro": {
     "date": "2026-09-23",
     "session": "preopen",

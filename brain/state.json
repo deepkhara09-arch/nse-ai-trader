@@ -1,13 +1,13 @@
 {
   "phase": "paper_trading",
   "day": 65,
-  "session": "intraday_close",
+  "session": "preopen",
   "start_date": "2026-06-22",
   "phase_start_date": "2026-07-15",
   "last_run_date": "2026-09-21",
   "last_counted_date": "2026-09-21",
   "cohort_last_tick_date": "2026-09-21",
-  "last_updated": "2026-09-22T09:25:18.309357",
+  "last_updated": "2026-09-23T03:05:44.646654",
   "focus_stocks": [
     "PIDILITIND.NS",
     "GAIL.NS",
@@ -68,7 +68,6 @@
     "expectancy": -57.05
   },
   "brain_notes": [
-    "[2026-07-24] Pre-open macro: neutral (-0.14)",
     "[2026-07-27] Pre-open macro: neutral (+0.11)",
     "[2026-07-28] Pre-open macro: neutral (-0.07)",
     "[2026-07-28] Cohort batch #14 complete \u2014 30 candidates ready",
@@ -167,7 +166,8 @@
     "[2026-09-21] Pre-open macro: neutral (+0.03)",
     "[2026-09-21] Focus refresh \u2014 promoted: ['COALINDIA', 'ONGC'] | demoted: ['NYKAA', 'ICICIBANK']",
     "[2026-09-21] Cohort batch #42 complete \u2014 30 candidates ready",
-    "[2026-09-22] Pre-open macro: risk_on (+0.29)"
+    "[2026-09-22] Pre-open macro: risk_on (+0.29)",
+    "[2026-09-23] Pre-open macro: neutral (+0.13)"
   ],
   "alert_sent": false,
   "schema_version": 11,
@@ -397,10 +397,6 @@
     "scored_date": "2026-09-21"
   },
   "sessions_done": {
-    "preopen": "2026-09-22",
-    "morning": "2026-09-22",
-    "midday": "2026-09-22",
-    "afternoon": "2026-09-22",
-    "intraday_close": "2026-09-22"
+    "preopen": "2026-09-23"
   }
 }

@@ -1,6 +1,6 @@
 {
-  "date": "2026-09-22",
-  "session": "intraday_close",
+  "date": "2026-09-23",
+  "session": "preopen",
   "nifty": {
     "symbol": "^NSEI",
     "value": 23414.3,
@@ -27,97 +27,102 @@
   "sectors": {
     "IT": {
       "symbol": "ITBEES.NS",
-      "value": 31.94,
-      "day_change_pct": -1.39,
-      "trend_5d": "sideways",
+      "value": 32.12,
+      "day_change_pct": 0.56,
+      "trend_5d": "down",
       "trend_20d": "strong_down",
-      "ath_pct_60d": -13.63
+      "ath_pct_60d": -13.14
     },
     "Pharma": {
       "symbol": "PHARMABEES.NS",
-      "value": 27.76,
-      "day_change_pct": 0.95,
-      "trend_5d": "strong_up",
+      "value": 27.68,
+      "day_change_pct": -0.29,
+      "trend_5d": "up",
       "trend_20d": "up",
-      "ath_pct_60d": -2.25
+      "ath_pct_60d": -2.54
     },
     "Bank": {
       "symbol": "BANKBEES.NS",
-      "value": 583.58,
-      "day_change_pct": 0.33,
-      "trend_5d": "sideways",
+      "value": 585.29,
+      "day_change_pct": 0.29,
+      "trend_5d": "up",
       "trend_20d": "down",
-      "ath_pct_60d": -4.01
+      "ath_pct_60d": -3.73
     },
     "Infra": {
       "symbol": "INFRABEES.NS",
-      "value": 936.29,
-      "day_change_pct": 0.07,
-      "trend_5d": "up",
-      "trend_20d": "unknown",
-      "ath_pct_60d": -4.15
+      "value": 931.64,
+      "day_change_pct": -0.5,
+      "trend_5d": "sideways",
+      "trend_20d": "strong_down",
+      "ath_pct_60d": -4.63
     }
   },
-  "market_mood": "bullish",
+  "market_mood": "bearish",
   "trade_allowed": true,
-  "warnings": [],
+  "warnings": [
+    "Nifty in intraday downtrend \u2014 avoid new longs this session",
+    "Net institutional outflow (\u20b9+310 Cr)"
+  ],
   "leading_sectors": [
     "Pharma",
-    "Infra"
+    "Bank"
   ],
   "market_regime": "normal",
   "sector_breadth": 0.5,
-  "lagging_sectors": [],
-  "intraday_regime": "mixed",
+  "lagging_sectors": [
+    "IT"
+  ],
+  "intraday_regime": "trending_down",
   "macro": {
-    "date": "2026-09-22",
-    "session": "midday",
-    "generated_at": "2026-09-22T06:15:42.540360",
-    "global_score": 0.539,
-    "india_score": 1.0,
-    "overall_score": 0.746,
-    "mood": "risk_on",
+    "date": "2026-09-23",
+    "session": "preopen",
+    "generated_at": "2026-09-23T03:05:43.528534",
+    "global_score": 0.24,
+    "india_score": 0.0,
+    "overall_score": 0.132,
+    "mood": "neutral",
     "drivers": [
-      "Princeton\u2019s 15-year run as the nation\u2019s top college is over. MIT is now No. 1.",
-      "Meta\u2019s stock is enjoying its best month in 13 years thanks to the company\u2019s hot new AI assistant",
-      "AT&T\u2019s stock looks like the smartest bet in the wireless sector, analyst says",
-      "Bitcoin hits an 8-month high \u2014 and sends a clear message about risk appetite right now",
-      "My husband and I are in our 50s and have no kids. We have $2 million in IRAs and 401(k)s. Do we really need a will?",
-      "As the S&P 500 nears a new record high, there are signs of weakness below the surface",
-      "These beaten-down stocks could bounce back in January, if history is any guide",
-      "\u2018She says it\u2019s just money\u2019: My friend pays for everything. I should be grateful, but I can\u2019t stand her anymore."
+      "\u2018It doesn\u2019t seem fair\u2019: I\u2019m retired and have plenty of money. Why can\u2019t I qualify for a retail credit card?",
+      "\u2018She gave a neighbor $2,000\u2019: Social Security overpaid my mother, 82, by $20,000. What else is hiding in her finances?",
+      "The Nasdaq\u2019s rapid rise to a record is sending a message to investors: Don\u2019t wait for a pullback to buy",
+      "Sandisk\u2019s stock is rising: Why one analyst says AI could help it reach new heights",
+      "Want to bet on risky, high-beta stocks? Why you should wait for mid-October.",
+      "Could Meta\u2019s viral Muse app be the company\u2019s ChatGPT moment?",
+      "Why Apple could soon join Nvidia in the exclusive $5 trillion club",
+      "Want to retire with more money? Leave the U.S. early in your career \u2014 and then come back."
     ],
     "global_cues": {
       "dow": {
-        "last": 52048.83,
-        "chg_pct": 0.71
+        "last": 51863.69,
+        "chg_pct": -0.36
       },
       "nasdaq": {
-        "last": 27122.09,
-        "chg_pct": 2.26
+        "last": 27244.28,
+        "chg_pct": 0.45
       },
       "sp500": {
-        "last": 7764.7,
-        "chg_pct": 1.49
+        "last": 7764.64,
+        "chg_pct": -0.0
       },
       "nikkei": {
         "last": 65018.95,
         "chg_pct": 1.38
       },
       "crude": {
-        "last": 95.78,
-        "chg_pct": -4.51
+        "last": 89.74,
+        "chg_pct": -5.13
       },
       "usdinr": {
-        "last": 95.79,
-        "chg_pct": -0.23
+        "last": 95.58,
+        "chg_pct": -0.14
       },
       "gold": {
-        "last": 4383.9,
-        "chg_pct": -0.93
+        "last": 4371.3,
+        "chg_pct": -0.12
       }
     },
-    "summary": "Overall macro mood is risk-on (+0.75). US Dow +0.7% overnight. Crude -4.5%. USD/INR -0.2%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
+    "summary": "Overall macro mood is neutral (+0.13). US Dow -0.4% overnight. Crude -5.1%. USD/INR -0.1%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
       "Trade-war headlines spook global markets; IT & export names react most."
@@ -125,23 +130,16 @@
     "playbook_bias": "risk_off",
     "article_count": 60
   },
-  "macro_tailwind": true,
   "macro_risk_factor": 1.0,
   "fii_dii": {
-    "date": "2026-09-22",
-    "fii_net_cr": -576.2,
-    "dii_net_cr": 2797.27,
-    "combined_net_cr": 2221.07,
-    "signal": "inflow",
+    "date": "2026-09-23",
+    "fii_net_cr": -3809.99,
+    "dii_net_cr": 4120.07,
+    "combined_net_cr": 310.08,
+    "signal": "outflow",
     "ok": true,
     "error": "",
     "history": [
-      {
-        "date": "2026-08-13",
-        "fii": -1002.5,
-        "dii": 5841.66,
-        "combined": 4839.16
-      },
       {
         "date": "2026-08-14",
         "fii": -510.69,
@@ -315,21 +313,26 @@
         "fii": -576.2,
         "dii": 2797.27,
         "combined": 2221.07
+      },
+      {
+        "date": "2026-09-23",
+        "fii": -3809.99,
+        "dii": 4120.07,
+        "combined": 310.08
       }
     ]
   },
   "pcr": {
-    "date": "2026-09-22",
-    "pcr": 1.465,
-    "reading": "bullish_bias",
-    "total_pe_oi": 3384488,
-    "total_ce_oi": 2310810,
-    "spot": 23414.3,
-    "max_pain": 23400.0,
-    "max_pain_dist_pct": 0.06,
-    "oi_bias": "put_heavy_support",
+    "date": "2026-09-23",
+    "pcr": 0.877,
+    "reading": "neutral",
+    "total_pe_oi": 2635238,
+    "total_ce_oi": 3005394,
+    "spot": 23329.0,
+    "max_pain": 23350.0,
+    "max_pain_dist_pct": -0.09,
+    "oi_bias": "balanced",
     "ok": true,
     "error": ""
-  },
-  "oi_note": "Heavy put OI below spot \u2014 option writers see a floor (bullish lean)"
+  }
 }

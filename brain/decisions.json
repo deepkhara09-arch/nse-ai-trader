@@ -1,72 +1,5 @@
 [
   {
-    "timestamp": "2026-08-12T05:55:19.779653",
-    "date": "2026-08-12",
-    "ticker": "CHOLAFIN.NS",
-    "session": "midday",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 95,
-    "entry": 1893.7,
-    "stop_loss": 1793.85,
-    "target": 2093.39,
-    "reason": "paper midday",
-    "patterns": [
-      "tweezer_bottom",
-      "rsi_bullish_divergence",
-      "bullish_harami",
-      "supertrend_bullish",
-      "full_bullish_alignment",
-      "strong_bullish_marubozu",
-      "pivot_point_test"
-    ]
-  },
-  {
-    "timestamp": "2026-08-12T05:55:19.781000",
-    "date": "2026-08-12",
-    "ticker": "GAIL.NS",
-    "session": "midday",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 78.8,
-    "entry": 173.57,
-    "stop_loss": 166.75,
-    "target": 187.22,
-    "reason": "paper midday",
-    "patterns": [
-      "adx_ranging_market",
-      "supertrend_bullish",
-      "engulfing_bullish",
-      "pivot_r1_breakout",
-      "full_bullish_alignment",
-      "strong_bullish_marubozu"
-    ]
-  },
-  {
-    "timestamp": "2026-08-12T07:45:56.929734",
-    "date": "2026-08-12",
-    "ticker": "MARICO.NS",
-    "session": "afternoon",
-    "action": "SELL",
-    "signal": "SELL",
-    "confidence": 95,
-    "entry": 847.45,
-    "stop_loss": 875.84,
-    "target": 790.66,
-    "reason": "paper afternoon",
-    "patterns": [
-      "adx_strong_trend_up",
-      "full_bullish_alignment",
-      "tweezer_top",
-      "doji",
-      "pivot_s1_breakdown",
-      "engulfing_bearish",
-      "evening_star",
-      "rsi_bearish_divergence",
-      "dragonfly_doji"
-    ]
-  },
-  {
     "timestamp": "2026-08-12T07:45:56.930641",
     "date": "2026-08-12",
     "ticker": "SBIN.NS",
@@ -21156,6 +21089,73 @@
       "supertrend_bullish",
       "pivot_r2_breakout",
       "strong_bullish_marubozu"
+    ]
+  },
+  {
+    "timestamp": "2026-09-23T09:26:14.841322",
+    "date": "2026-09-23",
+    "ticker": "PIDILITIND.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 80.4,
+    "entry": 1583.3,
+    "stop_loss": 1540.76,
+    "target": 1651.36,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "adx_strong_trend_down",
+      "full_bearish_alignment",
+      "spinning_top",
+      "bullish_harami",
+      "supertrend_bullish",
+      "pivot_point_test"
+    ]
+  },
+  {
+    "timestamp": "2026-09-23T09:26:14.851729",
+    "date": "2026-09-23",
+    "ticker": "IDFCFIRSTB.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 92.8,
+    "entry": 87.88,
+    "stop_loss": 85.81,
+    "target": 91.19,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "full_bullish_alignment",
+      "low_volume_drift",
+      "near_52w_high",
+      "spinning_top",
+      "stoch_rsi_oversold_reversal",
+      "engulfing_bullish",
+      "rsi_bullish_divergence",
+      "supertrend_bullish"
+    ]
+  },
+  {
+    "timestamp": "2026-09-23T09:26:14.852701",
+    "date": "2026-09-23",
+    "ticker": "BANDHANBNK.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 61.1,
+    "entry": 190.94,
+    "stop_loss": 180.09,
+    "target": 203.96,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "volume_breakout_bullish",
+      "bb_upper_rejection",
+      "pivot_r2_breakout",
+      "strong_bullish_marubozu",
+      "three_white_soldiers",
+      "supertrend_bullish",
+      "pivot_r1_breakout",
+      "adx_ranging_market"
     ]
   }
 ]

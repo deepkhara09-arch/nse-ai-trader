@@ -40,8 +40,8 @@
         "Short EMA below long EMA",
         "MACD histogram negative"
       ],
-      "current_price": 1571.4,
-      "unrealized_pnl": 40.0,
+      "current_price": 1550.2,
+      "unrealized_pnl": -66.0,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -59,7 +59,7 @@
       "view_hist": [
         1,
         1,
-        1,
+        0,
         0
       ]
     },
@@ -96,8 +96,8 @@
         "In a long-term strong downtrend (2yr)",
         "\u2713 Daily setup aligned with the higher-timeframe trend"
       ],
-      "current_price": 268.35,
-      "unrealized_pnl": -41.6,
+      "current_price": 267.3,
+      "unrealized_pnl": -24.8,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -154,8 +154,8 @@
         "All EMAs stacked bearish",
         "MACD histogram negative"
       ],
-      "current_price": 988.7,
-      "unrealized_pnl": 20.0,
+      "current_price": 985.1,
+      "unrealized_pnl": 2.0,
       "max_held_days": 40,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -212,8 +212,8 @@
         "\u26a0 Buying against a long-term downtrend \u2014 lower conviction",
         "\u26a0 Daily buy fights the higher-timeframe trend \u2014 needs extra conviction"
       ],
-      "current_price": 420.85,
-      "unrealized_pnl": -62.25,
+      "current_price": 420.05,
+      "unrealized_pnl": -74.25,
       "max_held_days": 40,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -229,10 +229,10 @@
         "hist_long_trend": "strong_downtrend"
       },
       "view_hist": [
-        1,
         0,
         0,
-        0
+        0,
+        -1
       ]
     },
     {
@@ -272,8 +272,8 @@
         "Near upper Bollinger Band",
         "High volume confirmation (2.3x avg)"
       ],
-      "current_price": 188.32,
-      "unrealized_pnl": -104.44,
+      "current_price": 186.56,
+      "unrealized_pnl": -153.72,
       "max_held_days": 40,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -290,7 +290,7 @@
       },
       "view_hist": [
         1,
-        1,
+        0,
         0,
         0
       ]

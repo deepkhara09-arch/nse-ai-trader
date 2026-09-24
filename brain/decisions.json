@@ -1,26 +1,5 @@
 [
   {
-    "timestamp": "2026-08-12T07:45:56.932053",
-    "date": "2026-08-12",
-    "ticker": "UNIONBANK.NS",
-    "session": "afternoon",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 86.4,
-    "entry": 185.08,
-    "stop_loss": 178.07,
-    "target": 199.11,
-    "reason": "paper afternoon",
-    "patterns": [
-      "full_bullish_alignment",
-      "supertrend_bullish",
-      "doji",
-      "bb_upper_rejection",
-      "tweezer_bottom",
-      "spinning_top"
-    ]
-  },
-  {
     "timestamp": "2026-08-12T07:45:56.933994",
     "date": "2026-08-12",
     "ticker": "PIDILITIND.NS",
@@ -21160,6 +21139,27 @@
       "volume_breakout_bullish",
       "pivot_r2_breakout",
       "pivot_r1_breakout"
+    ]
+  },
+  {
+    "timestamp": "2026-09-24T06:15:56.448316",
+    "date": "2026-09-24",
+    "ticker": "COALINDIA.NS",
+    "session": "midday",
+    "action": "SELL",
+    "signal": "SELL",
+    "confidence": 74.6,
+    "entry": 420.05,
+    "stop_loss": 431.92,
+    "target": 401.06,
+    "reason": "paper midday",
+    "patterns": [
+      "full_bullish_alignment",
+      "rsi_bearish_divergence",
+      "tweezer_top",
+      "momentum_continuation",
+      "engulfing_bearish",
+      "pivot_s1_breakdown"
     ]
   }
 ]

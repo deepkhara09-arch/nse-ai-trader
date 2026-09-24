@@ -1,28 +1,5 @@
 [
   {
-    "timestamp": "2026-08-12T07:45:56.933994",
-    "date": "2026-08-12",
-    "ticker": "PIDILITIND.NS",
-    "session": "afternoon",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 95,
-    "entry": 1692.8,
-    "stop_loss": 1637.71,
-    "target": 1802.99,
-    "reason": "paper afternoon",
-    "patterns": [
-      "adx_strong_trend_up",
-      "full_bullish_alignment",
-      "stoch_rsi_oversold_reversal",
-      "supertrend_bullish",
-      "doji",
-      "hammer",
-      "dragonfly_doji",
-      "near_52w_high"
-    ]
-  },
-  {
     "timestamp": "2026-08-12T07:45:56.934849",
     "date": "2026-08-12",
     "ticker": "ASIANPAINT.NS",
@@ -21160,6 +21137,27 @@
       "momentum_continuation",
       "engulfing_bearish",
       "pivot_s1_breakdown"
+    ]
+  },
+  {
+    "timestamp": "2026-09-24T07:45:49.467735",
+    "date": "2026-09-24",
+    "ticker": "HINDALCO.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 60.2,
+    "entry": 981.7,
+    "stop_loss": 951.09,
+    "target": 1030.68,
+    "reason": "paper afternoon",
+    "patterns": [
+      "bullish_harami",
+      "full_bearish_alignment",
+      "pivot_point_test",
+      "pivot_r1_breakout",
+      "strong_bullish_marubozu",
+      "supertrend_bullish"
     ]
   }
 ]

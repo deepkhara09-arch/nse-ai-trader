@@ -1,35 +1,5 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of bb_upper_rejection, strong_bullish_marubozu, adx_ranging_market mean for a swing trade on BANDHANBNK? Current RSI=84, MACD hist=+1.8563, Vol=2.3x average. Signal is BUY.",
-    "context": {
-      "ticker": "BANDHANBNK.NS",
-      "signal": "BUY",
-      "patterns": "bb_upper_rejection, strong_bullish_marubozu, adx_ranging_market",
-      "rsi": 84.3
-    },
-    "queued_at": "2026-09-24T03:05:39.829714"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of adx_ranging_market, bb_upper_rejection, volume_climax_top mean for a swing trade on BANDHANBNK? Current RSI=86, MACD hist=+2.4716, Vol=3.6x average. Signal is BUY.",
-    "context": {
-      "ticker": "BANDHANBNK.NS",
-      "signal": "BUY",
-      "patterns": "adx_ranging_market, bb_upper_rejection, volume_climax_top",
-      "rsi": 85.9
-    },
-    "queued_at": "2026-09-24T04:05:43.582292"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of adx_ranging_market, bb_upper_rejection, volume_climax_top mean for a swing trade on BANDHANBNK? Current RSI=86, MACD hist=+2.4716, Vol=3.6x average. Signal is BUY.",
-    "context": {
-      "ticker": "BANDHANBNK.NS",
-      "signal": "BUY",
-      "patterns": "adx_ranging_market, bb_upper_rejection, volume_climax_top",
-      "rsi": 85.9
-    },
-    "queued_at": "2026-09-24T04:05:43.691191"
-  },
-  {
     "question": "In Indian NSE markets, what does the combination of adx_ranging_market, bb_upper_rejection, volume_climax_top mean for a swing trade on BANDHANBNK? Current RSI=86, MACD hist=+2.4716, Vol=3.6x average. Signal is BUY.",
     "context": {
       "ticker": "BANDHANBNK.NS",
@@ -98,5 +68,35 @@
       "rsi": 48.1
     },
     "queued_at": "2026-09-24T07:45:49.575228"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of strong_bullish_marubozu, bullish_harami, pivot_r1_breakout mean for a swing trade on HINDALCO? Current RSI=48, MACD hist=-1.2403, Vol=1.6x average. Signal is BUY.",
+    "context": {
+      "ticker": "HINDALCO.NS",
+      "signal": "BUY",
+      "patterns": "strong_bullish_marubozu, bullish_harami, pivot_r1_breakout",
+      "rsi": 48.1
+    },
+    "queued_at": "2026-09-24T09:26:28.411948"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of strong_bullish_marubozu, bullish_harami, pivot_r1_breakout mean for a swing trade on HINDALCO? Current RSI=48, MACD hist=-1.2403, Vol=1.6x average. Signal is BUY.",
+    "context": {
+      "ticker": "HINDALCO.NS",
+      "signal": "BUY",
+      "patterns": "strong_bullish_marubozu, bullish_harami, pivot_r1_breakout",
+      "rsi": 48.1
+    },
+    "queued_at": "2026-09-24T09:26:28.420633"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of strong_bullish_marubozu, bullish_harami, pivot_r1_breakout mean for a swing trade on HINDALCO? Current RSI=48, MACD hist=-1.2403, Vol=1.6x average. Signal is BUY.",
+    "context": {
+      "ticker": "HINDALCO.NS",
+      "signal": "BUY",
+      "patterns": "strong_bullish_marubozu, bullish_harami, pivot_r1_breakout",
+      "rsi": 48.1
+    },
+    "queued_at": "2026-09-24T09:26:28.513303"
   }
 ]

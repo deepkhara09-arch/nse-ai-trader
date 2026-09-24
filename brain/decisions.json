@@ -1,45 +1,5 @@
 [
   {
-    "timestamp": "2026-08-12T07:45:56.934849",
-    "date": "2026-08-12",
-    "ticker": "ASIANPAINT.NS",
-    "session": "afternoon",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 72.9,
-    "entry": 2729.9,
-    "stop_loss": 2636.6,
-    "target": 2916.5,
-    "reason": "paper afternoon",
-    "patterns": [
-      "stoch_rsi_oversold_reversal",
-      "full_bullish_alignment",
-      "pivot_point_test",
-      "supertrend_bullish",
-      "adx_ranging_market"
-    ]
-  },
-  {
-    "timestamp": "2026-08-12T07:45:56.936205",
-    "date": "2026-08-12",
-    "ticker": "NTPC.NS",
-    "session": "afternoon",
-    "action": "SELL",
-    "signal": "SELL",
-    "confidence": 70.2,
-    "entry": 338.95,
-    "stop_loss": 347.74,
-    "target": 321.38,
-    "reason": "paper afternoon",
-    "patterns": [
-      "pivot_point_test",
-      "full_bearish_alignment",
-      "three_black_crows",
-      "macd_bearish_crossover",
-      "bb_lower_bounce"
-    ]
-  },
-  {
     "timestamp": "2026-08-12T07:45:56.937049",
     "date": "2026-08-12",
     "ticker": "NIACL.NS",
@@ -21158,6 +21118,47 @@
       "pivot_r1_breakout",
       "strong_bullish_marubozu",
       "supertrend_bullish"
+    ]
+  },
+  {
+    "timestamp": "2026-09-24T09:26:28.412278",
+    "date": "2026-09-24",
+    "ticker": "HINDALCO.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 54.8,
+    "entry": 982.0,
+    "stop_loss": 951.39,
+    "target": 1030.98,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "supertrend_bullish",
+      "strong_bullish_marubozu",
+      "bullish_harami",
+      "pivot_r1_breakout",
+      "full_bearish_alignment"
+    ]
+  },
+  {
+    "timestamp": "2026-09-24T09:26:28.412866",
+    "date": "2026-09-24",
+    "ticker": "HOMEFIRST.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 66.5,
+    "entry": 1160.2,
+    "stop_loss": 1073.4,
+    "target": 1259.41,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "full_bullish_alignment",
+      "shooting_star",
+      "pivot_s1_breakdown",
+      "momentum_continuation",
+      "low_volume_drift",
+      "inside_bar"
     ]
   }
 ]

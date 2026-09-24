@@ -1,45 +1,5 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of adx_ranging_market, bb_upper_rejection, strong_bullish_marubozu mean for a swing trade on BANDHANBNK? Current RSI=84, MACD hist=+1.8563, Vol=2.3x average. Signal is BUY.",
-    "context": {
-      "ticker": "BANDHANBNK.NS",
-      "signal": "BUY",
-      "patterns": "adx_ranging_market, bb_upper_rejection, strong_bullish_marubozu",
-      "rsi": 84.3
-    },
-    "queued_at": "2026-09-23T07:45:49.090247"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_down, full_bearish_alignment, spinning_top mean for a swing trade on PIDILITIND? Current RSI=34, MACD hist=-2.1390, Vol=0.8x average. Signal is BUY.",
-    "context": {
-      "ticker": "PIDILITIND.NS",
-      "signal": "BUY",
-      "patterns": "adx_strong_trend_down, full_bearish_alignment, spinning_top",
-      "rsi": 34.5
-    },
-    "queued_at": "2026-09-23T09:26:14.841101"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of low_volume_drift, near_52w_high, spinning_top mean for a swing trade on IDFCFIRSTB? Current RSI=51, MACD hist=-0.1757, Vol=0.4x average. Signal is BUY.",
-    "context": {
-      "ticker": "IDFCFIRSTB.NS",
-      "signal": "BUY",
-      "patterns": "low_volume_drift, near_52w_high, spinning_top",
-      "rsi": 51.5
-    },
-    "queued_at": "2026-09-23T09:26:14.845742"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of bb_upper_rejection, strong_bullish_marubozu, adx_ranging_market mean for a swing trade on BANDHANBNK? Current RSI=84, MACD hist=+1.8563, Vol=2.3x average. Signal is BUY.",
-    "context": {
-      "ticker": "BANDHANBNK.NS",
-      "signal": "BUY",
-      "patterns": "bb_upper_rejection, strong_bullish_marubozu, adx_ranging_market",
-      "rsi": 84.3
-    },
-    "queued_at": "2026-09-23T09:26:14.852434"
-  },
-  {
     "question": "In Indian NSE markets, what does the combination of low_volume_drift, near_52w_high, spinning_top mean for a swing trade on IDFCFIRSTB? Current RSI=51, MACD hist=-0.1757, Vol=0.4x average. Signal is BUY.",
     "context": {
       "ticker": "IDFCFIRSTB.NS",
@@ -98,5 +58,45 @@
       "rsi": 84.3
     },
     "queued_at": "2026-09-23T09:26:14.960358"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of spinning_top, adx_strong_trend_down, full_bearish_alignment mean for a swing trade on PIDILITIND? Current RSI=34, MACD hist=-2.1390, Vol=0.8x average. Signal is BUY.",
+    "context": {
+      "ticker": "PIDILITIND.NS",
+      "signal": "BUY",
+      "patterns": "spinning_top, adx_strong_trend_down, full_bearish_alignment",
+      "rsi": 34.5
+    },
+    "queued_at": "2026-09-24T03:05:39.472809"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of spinning_top, low_volume_drift, full_bullish_alignment mean for a swing trade on ADANIPORTS? Current RSI=68, MACD hist=+10.1587, Vol=0.3x average. Signal is BUY.",
+    "context": {
+      "ticker": "ADANIPORTS.NS",
+      "signal": "BUY",
+      "patterns": "spinning_top, low_volume_drift, full_bullish_alignment",
+      "rsi": 67.8
+    },
+    "queued_at": "2026-09-24T03:05:39.593441"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of spinning_top, engulfing_bullish, low_volume_drift mean for a swing trade on IDFCFIRSTB? Current RSI=51, MACD hist=-0.1757, Vol=0.4x average. Signal is BUY.",
+    "context": {
+      "ticker": "IDFCFIRSTB.NS",
+      "signal": "BUY",
+      "patterns": "spinning_top, engulfing_bullish, low_volume_drift",
+      "rsi": 51.5
+    },
+    "queued_at": "2026-09-24T03:05:39.711977"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of bb_upper_rejection, strong_bullish_marubozu, adx_ranging_market mean for a swing trade on BANDHANBNK? Current RSI=84, MACD hist=+1.8563, Vol=2.3x average. Signal is BUY.",
+    "context": {
+      "ticker": "BANDHANBNK.NS",
+      "signal": "BUY",
+      "patterns": "bb_upper_rejection, strong_bullish_marubozu, adx_ranging_market",
+      "rsi": 84.3
+    },
+    "queued_at": "2026-09-24T03:05:39.829714"
   }
 ]

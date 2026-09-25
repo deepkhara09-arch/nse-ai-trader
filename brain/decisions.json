@@ -1,24 +1,5 @@
 [
   {
-    "timestamp": "2026-08-12T09:43:36.869331",
-    "date": "2026-08-12",
-    "ticker": "SBIN.NS",
-    "session": "intraday_close",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 71.4,
-    "entry": 1082.0,
-    "stop_loss": 1050.63,
-    "target": 1144.74,
-    "reason": "paper intraday_close",
-    "patterns": [
-      "pivot_point_test",
-      "full_bullish_alignment",
-      "supertrend_bullish",
-      "rsi_bullish_divergence"
-    ]
-  },
-  {
     "timestamp": "2026-08-12T09:43:36.870741",
     "date": "2026-08-12",
     "ticker": "UNIONBANK.NS",
@@ -21161,6 +21142,25 @@
       "pivot_s1_breakdown",
       "inside_bar",
       "full_bullish_alignment"
+    ]
+  },
+  {
+    "timestamp": "2026-09-25T09:44:06.538439",
+    "date": "2026-09-25",
+    "ticker": "BANDHANBNK.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 79.3,
+    "entry": 187.97,
+    "stop_loss": 175.99,
+    "target": 202.35,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "gap_down_reversal",
+      "supertrend_bullish",
+      "stoch_rsi_oversold_reversal",
+      "pivot_s1_bounce"
     ]
   }
 ]

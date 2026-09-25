@@ -1,26 +1,5 @@
 [
   {
-    "timestamp": "2026-08-12T07:45:56.940107",
-    "date": "2026-08-12",
-    "ticker": "GAIL.NS",
-    "session": "afternoon",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 78.8,
-    "entry": 174.33,
-    "stop_loss": 167.51,
-    "target": 187.98,
-    "reason": "paper afternoon",
-    "patterns": [
-      "full_bullish_alignment",
-      "supertrend_bullish",
-      "strong_bullish_marubozu",
-      "pivot_r1_breakout",
-      "engulfing_bullish",
-      "adx_ranging_market"
-    ]
-  },
-  {
     "timestamp": "2026-08-12T09:43:36.869331",
     "date": "2026-08-12",
     "ticker": "SBIN.NS",
@@ -21161,6 +21140,27 @@
       "momentum_continuation",
       "inside_bar",
       "pivot_s1_breakdown"
+    ]
+  },
+  {
+    "timestamp": "2026-09-25T07:45:49.589057",
+    "date": "2026-09-25",
+    "ticker": "HOMEFIRST.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 83.4,
+    "entry": 1127.2,
+    "stop_loss": 1040.4,
+    "target": 1226.41,
+    "reason": "paper afternoon",
+    "patterns": [
+      "low_volume_drift",
+      "momentum_continuation",
+      "shooting_star",
+      "pivot_s1_breakdown",
+      "inside_bar",
+      "full_bullish_alignment"
     ]
   }
 ]

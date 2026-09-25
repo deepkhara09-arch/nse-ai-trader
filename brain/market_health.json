@@ -1,6 +1,6 @@
 {
   "date": "2026-09-25",
-  "session": "midday",
+  "session": "afternoon",
   "nifty": {
     "symbol": "^NSEI",
     "value": 23063.1,
@@ -64,7 +64,6 @@
     "VIX=12.7 at 90th percentile vs last 30d \u2014 unusually high stress",
     "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
     "Nifty down -1.6% today \u2014 likely institutional selling",
-    "Nifty choppy intraday \u2014 wait for cleaner setups",
     "Heavy FII/DII outflow (\u20b9-726 Cr) \u2014 institutions selling"
   ],
   "leading_sectors": [
@@ -76,7 +75,7 @@
   "lagging_sectors": [
     "IT"
   ],
-  "intraday_regime": "choppy",
+  "intraday_regime": "mixed",
   "macro": {
     "date": "2026-09-25",
     "session": "midday",

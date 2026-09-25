@@ -1,46 +1,5 @@
 [
   {
-    "timestamp": "2026-08-12T07:45:56.937049",
-    "date": "2026-08-12",
-    "ticker": "NIACL.NS",
-    "session": "afternoon",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 63.0,
-    "entry": 179.85,
-    "stop_loss": 170.52,
-    "target": 198.51,
-    "reason": "paper afternoon",
-    "patterns": [
-      "momentum_continuation",
-      "full_bullish_alignment",
-      "low_volume_drift",
-      "pivot_point_test"
-    ]
-  },
-  {
-    "timestamp": "2026-08-12T07:45:56.937894",
-    "date": "2026-08-12",
-    "ticker": "GRASIM.NS",
-    "session": "afternoon",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 81.6,
-    "entry": 3364.7,
-    "stop_loss": 3243.82,
-    "target": 3606.45,
-    "reason": "paper afternoon",
-    "patterns": [
-      "full_bullish_alignment",
-      "stoch_rsi_oversold_reversal",
-      "pivot_point_test",
-      "supertrend_bullish",
-      "bb_upper_rejection",
-      "inside_bar",
-      "near_52w_high"
-    ]
-  },
-  {
     "timestamp": "2026-08-12T07:45:56.938730",
     "date": "2026-08-12",
     "ticker": "CHOLAFIN.NS",
@@ -21159,6 +21118,50 @@
       "momentum_continuation",
       "low_volume_drift",
       "inside_bar"
+    ]
+  },
+  {
+    "timestamp": "2026-09-25T04:05:42.004311",
+    "date": "2026-09-25",
+    "ticker": "HOMEFIRST.NS",
+    "session": "morning",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 83.4,
+    "entry": 1116.1,
+    "stop_loss": 1029.3,
+    "target": 1215.31,
+    "reason": "paper morning",
+    "patterns": [
+      "momentum_continuation",
+      "full_bullish_alignment",
+      "pivot_s1_breakdown",
+      "shooting_star",
+      "low_volume_drift",
+      "inside_bar"
+    ]
+  },
+  {
+    "timestamp": "2026-09-25T04:05:42.108901",
+    "date": "2026-09-25",
+    "ticker": "NHPC.NS",
+    "session": "morning",
+    "action": "SELL",
+    "signal": "SELL",
+    "confidence": 82.2,
+    "entry": 76.12,
+    "stop_loss": 78.54,
+    "target": 73.22,
+    "reason": "paper morning",
+    "patterns": [
+      "adx_ranging_market",
+      "full_bearish_alignment",
+      "pivot_s1_breakdown",
+      "rsi_bearish_divergence",
+      "spinning_top",
+      "doji",
+      "tweezer_top",
+      "bearish_harami"
     ]
   }
 ]

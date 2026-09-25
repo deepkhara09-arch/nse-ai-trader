@@ -7,26 +7,6 @@
       "patterns": "full_bullish_alignment, rsi_bearish_divergence, tweezer_top",
       "rsi": 57.3
     },
-    "queued_at": "2026-09-24T06:15:56.447925"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of full_bullish_alignment, rsi_bearish_divergence, tweezer_top mean for a swing trade on COALINDIA? Current RSI=57, MACD hist=+0.3572, Vol=0.7x average. Signal is SELL.",
-    "context": {
-      "ticker": "COALINDIA.NS",
-      "signal": "SELL",
-      "patterns": "full_bullish_alignment, rsi_bearish_divergence, tweezer_top",
-      "rsi": 57.3
-    },
-    "queued_at": "2026-09-24T06:15:56.453029"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of full_bullish_alignment, rsi_bearish_divergence, tweezer_top mean for a swing trade on COALINDIA? Current RSI=57, MACD hist=+0.3572, Vol=0.7x average. Signal is SELL.",
-    "context": {
-      "ticker": "COALINDIA.NS",
-      "signal": "SELL",
-      "patterns": "full_bullish_alignment, rsi_bearish_divergence, tweezer_top",
-      "rsi": 57.3
-    },
     "queued_at": "2026-09-24T06:15:56.575903"
   },
   {
@@ -98,5 +78,25 @@
       "rsi": 57.3
     },
     "queued_at": "2026-09-25T03:05:49.034427"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of adx_ranging_market, full_bearish_alignment, pivot_s1_breakdown mean for a swing trade on NHPC? Current RSI=50, MACD hist=+0.1015, Vol=0.8x average. Signal is SELL.",
+    "context": {
+      "ticker": "NHPC.NS",
+      "signal": "SELL",
+      "patterns": "adx_ranging_market, full_bearish_alignment, pivot_s1_breakdown",
+      "rsi": 50.0
+    },
+    "queued_at": "2026-09-25T04:05:42.008455"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of adx_ranging_market, full_bearish_alignment, pivot_s1_breakdown mean for a swing trade on NHPC? Current RSI=50, MACD hist=+0.1015, Vol=0.8x average. Signal is SELL.",
+    "context": {
+      "ticker": "NHPC.NS",
+      "signal": "SELL",
+      "patterns": "adx_ranging_market, full_bearish_alignment, pivot_s1_breakdown",
+      "rsi": 50.0
+    },
+    "queued_at": "2026-09-25T04:05:42.287276"
   }
 ]

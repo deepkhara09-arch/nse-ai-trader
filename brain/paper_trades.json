@@ -1,68 +1,6 @@
 {
-  "capital": 68187.870225,
+  "capital": 71271.088675,
   "open_positions": [
-    {
-      "ticker": "PIDILITIND.NS",
-      "sector": "Consumer",
-      "open_date": "2026-09-15",
-      "open_session": "morning",
-      "action": "BUY",
-      "entry": 1563.4,
-      "qty": 5,
-      "invested": 7817.0,
-      "stop_loss": 1514.14,
-      "target": 1661.93,
-      "style": "swing",
-      "confidence": 95,
-      "patterns": [
-        "stoch_rsi_oversold_reversal",
-        "pivot_point_test",
-        "pivot_s1_bounce",
-        "gap_down_reversal",
-        "supertrend_bullish",
-        "bb_lower_bounce"
-      ],
-      "buy_reasons": [
-        "Near lower Bollinger Band",
-        "Learned bullish pattern: pivot_point_test (rel=100%)",
-        "Learned bullish pattern: supertrend_bullish (rel=74%)",
-        "Sector headwind (momentum=-0.48)",
-        "Supertrend bullish \u2014 price above trend band",
-        "Bounced off Pivot S1 support",
-        "Testing pivot point \u2014 decision zone",
-        "StochRSI oversold with bullish candle \u2014 reversal",
-        "Gap down reversal \u2014 buyers stepping in at lower open",
-        "In a long-term uptrend (2yr) \u2014 trend on our side",
-        "Mean-reverting stock at oversold extreme \u2014 fade the dip",
-        "\u2713 Daily setup aligned with the higher-timeframe trend",
-        "\u26a0 Sector momentum -0.48 \u2014 buying into a falling sector needs extra conviction",
-        "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
-        "Short EMA below long EMA",
-        "MACD histogram negative"
-      ],
-      "current_price": 1533.5,
-      "unrealized_pnl": -149.5,
-      "max_held_days": 10,
-      "vol_regime_pct": 0.12,
-      "entry_market": {
-        "nifty_trend": "down",
-        "vix": 12.29,
-        "mood": "bearish",
-        "regime": "choppy",
-        "sector_momentum": -0.484,
-        "delivery_signal": "neutral",
-        "rsi": 32.1,
-        "mtf_alignment": "aligned",
-        "opposing_ratio": 0.17,
-        "hist_long_trend": "uptrend"
-      },
-      "view_hist": [
-        0,
-        0,
-        0,
-        0
-      ]
-    },
     {
       "ticker": "POWERGRID.NS",
       "sector": "Energy",
@@ -96,8 +34,8 @@
         "In a long-term strong downtrend (2yr)",
         "\u2713 Daily setup aligned with the higher-timeframe trend"
       ],
-      "current_price": 267.5,
-      "unrealized_pnl": -28.0,
+      "current_price": 269.2,
+      "unrealized_pnl": -55.2,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -154,8 +92,8 @@
         "All EMAs stacked bearish",
         "MACD histogram negative"
       ],
-      "current_price": 982.0,
-      "unrealized_pnl": -13.5,
+      "current_price": 983.1,
+      "unrealized_pnl": -8.0,
       "max_held_days": 40,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -212,8 +150,8 @@
         "\u26a0 Buying against a long-term downtrend \u2014 lower conviction",
         "\u26a0 Daily buy fights the higher-timeframe trend \u2014 needs extra conviction"
       ],
-      "current_price": 421.4,
-      "unrealized_pnl": -54.0,
+      "current_price": 424.4,
+      "unrealized_pnl": -9.0,
       "max_held_days": 40,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -229,8 +167,8 @@
         "hist_long_trend": "strong_downtrend"
       },
       "view_hist": [
-        0,
         -1,
+        0,
         0,
         0
       ]
@@ -272,8 +210,8 @@
         "Near upper Bollinger Band",
         "High volume confirmation (2.3x avg)"
       ],
-      "current_price": 183.6,
-      "unrealized_pnl": -236.6,
+      "current_price": 183.69,
+      "unrealized_pnl": -234.08,
       "max_held_days": 40,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -294,6 +232,55 @@
         0,
         0
       ]
+    },
+    {
+      "ticker": "HOMEFIRST.NS",
+      "sector": "Infra Finance",
+      "open_date": "2026-09-25",
+      "open_session": "morning",
+      "action": "BUY",
+      "entry": 1116.1,
+      "qty": 4,
+      "invested": 4464.4,
+      "stop_loss": 1029.3,
+      "target": 1215.31,
+      "style": "swing",
+      "confidence": 83.4,
+      "patterns": [
+        "momentum_continuation",
+        "full_bullish_alignment",
+        "pivot_s1_breakdown",
+        "shooting_star",
+        "low_volume_drift",
+        "inside_bar"
+      ],
+      "buy_reasons": [
+        "All EMAs stacked bullish",
+        "RSI=51 in healthy buy zone",
+        "MACD histogram positive",
+        "Learned bullish pattern: momentum_continuation (rel=73%)",
+        "In a long-term strong uptrend (2yr) \u2014 trend on our side",
+        "Mild pullback: 6% below trend average",
+        "\u2713 Daily setup aligned with the higher-timeframe trend",
+        "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
+        "Broke below Pivot S1 support \u2014 bearish"
+      ],
+      "current_price": 1116.1,
+      "unrealized_pnl": 0.0,
+      "max_held_days": 40,
+      "vol_regime_pct": 0.09,
+      "entry_market": {
+        "nifty_trend": "down",
+        "vix": 12.69,
+        "mood": "bearish",
+        "regime": "mixed",
+        "sector_momentum": 0.178,
+        "delivery_signal": "neutral",
+        "rsi": 50.9,
+        "mtf_alignment": "aligned",
+        "opposing_ratio": 0.18,
+        "hist_long_trend": "strong_uptrend"
+      }
     }
   ],
   "closed_trades": [
@@ -4096,6 +4083,78 @@
       "pnl_pct": -3.12,
       "won": false,
       "open_days": 9
+    },
+    {
+      "ticker": "PIDILITIND.NS",
+      "sector": "Consumer",
+      "open_date": "2026-09-15",
+      "open_session": "morning",
+      "action": "BUY",
+      "entry": 1563.4,
+      "qty": 5,
+      "invested": 7817.0,
+      "stop_loss": 1514.14,
+      "target": 1661.93,
+      "style": "swing",
+      "confidence": 95,
+      "patterns": [
+        "stoch_rsi_oversold_reversal",
+        "pivot_point_test",
+        "pivot_s1_bounce",
+        "gap_down_reversal",
+        "supertrend_bullish",
+        "bb_lower_bounce"
+      ],
+      "buy_reasons": [
+        "Near lower Bollinger Band",
+        "Learned bullish pattern: pivot_point_test (rel=100%)",
+        "Learned bullish pattern: supertrend_bullish (rel=74%)",
+        "Sector headwind (momentum=-0.48)",
+        "Supertrend bullish \u2014 price above trend band",
+        "Bounced off Pivot S1 support",
+        "Testing pivot point \u2014 decision zone",
+        "StochRSI oversold with bullish candle \u2014 reversal",
+        "Gap down reversal \u2014 buyers stepping in at lower open",
+        "In a long-term uptrend (2yr) \u2014 trend on our side",
+        "Mean-reverting stock at oversold extreme \u2014 fade the dip",
+        "\u2713 Daily setup aligned with the higher-timeframe trend",
+        "\u26a0 Sector momentum -0.48 \u2014 buying into a falling sector needs extra conviction",
+        "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
+        "Short EMA below long EMA",
+        "MACD histogram negative"
+      ],
+      "current_price": 1509.8,
+      "unrealized_pnl": -268.0,
+      "max_held_days": 10,
+      "vol_regime_pct": 0.12,
+      "entry_market": {
+        "nifty_trend": "down",
+        "vix": 12.29,
+        "mood": "bearish",
+        "regime": "choppy",
+        "sector_momentum": -0.484,
+        "delivery_signal": "neutral",
+        "rsi": 32.1,
+        "mtf_alignment": "aligned",
+        "opposing_ratio": 0.17,
+        "hist_long_trend": "uptrend"
+      },
+      "view_hist": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "close_date": "2026-09-25",
+      "close_session": "morning",
+      "exit_price": 1514.14,
+      "exit_reason": "stop_hit",
+      "pnl": -269.38,
+      "pnl_gross": -246.3,
+      "costs": 23.08,
+      "pnl_pct": -3.45,
+      "won": false,
+      "open_days": 8
     }
   ],
   "daily_snapshots": [
@@ -4429,12 +4488,12 @@
       "daily_pnl": 0.0
     }
   ],
-  "daily_pnl_today": -266.2905000000008,
+  "daily_pnl_today": -269.38154999999995,
   "last_snapshot_date": "2026-09-21",
   "lifetime_wins": 23,
-  "lifetime_losses": 34,
-  "lifetime_pnl": -3067.25,
-  "last_pnl_reset_date": "2026-09-24",
+  "lifetime_losses": 35,
+  "lifetime_pnl": -3336.63,
+  "last_pnl_reset_date": "2026-09-25",
   "max_drawdown_pct": 4.47,
   "current_drawdown_pct": 4.22,
   "portfolio_peak": 101210.28,

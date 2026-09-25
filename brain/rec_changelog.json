@@ -1,16 +1,6 @@
 [
   {
     "type": "updated",
-    "ticker": "UNIONBANK.NS",
-    "nse_code": "UNIONBANK",
-    "signal": "BUY",
-    "date": "2026-07-22",
-    "ts": "2026-07-22T04:05:56.385722",
-    "detail": "Rank \u25b21 (#3 \u2192 #2) | Stop loss moved \u20b9170.79 \u2192 \u20b9168.85 | Target 1 moved \u20b9191.69 \u2192 \u20b9189.17",
-    "confidence": 90.7
-  },
-  {
-    "type": "updated",
     "ticker": "ICICIBANK.NS",
     "nse_code": "ICICIBANK",
     "signal": "BUY",
@@ -5998,5 +5988,15 @@
     "ts": "2026-09-24T07:45:49.675326",
     "detail": "New BUY recommendation \u2014 confidence 68/100",
     "confidence": 68.3
+  },
+  {
+    "type": "removed",
+    "ticker": "HINDALCO.NS",
+    "nse_code": "HINDALCO",
+    "signal": "BUY",
+    "date": "2026-09-25",
+    "ts": "2026-09-25T03:05:49.036056",
+    "detail": "Dropped \u2014 no longer meets threshold (was 67/100)",
+    "confidence": 0
   }
 ]

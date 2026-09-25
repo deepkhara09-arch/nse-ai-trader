@@ -1,15 +1,5 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of adx_ranging_market, bb_upper_rejection, volume_climax_top mean for a swing trade on BANDHANBNK? Current RSI=86, MACD hist=+2.4716, Vol=3.6x average. Signal is BUY.",
-    "context": {
-      "ticker": "BANDHANBNK.NS",
-      "signal": "BUY",
-      "patterns": "adx_ranging_market, bb_upper_rejection, volume_climax_top",
-      "rsi": 85.9
-    },
-    "queued_at": "2026-09-24T04:05:44.491270"
-  },
-  {
     "question": "In Indian NSE markets, what does the combination of full_bullish_alignment, rsi_bearish_divergence, tweezer_top mean for a swing trade on COALINDIA? Current RSI=57, MACD hist=+0.3572, Vol=0.7x average. Signal is SELL.",
     "context": {
       "ticker": "COALINDIA.NS",
@@ -98,5 +88,15 @@
       "rsi": 48.1
     },
     "queued_at": "2026-09-24T09:26:28.513303"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of rsi_bearish_divergence, engulfing_bearish, momentum_continuation mean for a swing trade on COALINDIA? Current RSI=57, MACD hist=+0.3572, Vol=0.7x average. Signal is SELL.",
+    "context": {
+      "ticker": "COALINDIA.NS",
+      "signal": "SELL",
+      "patterns": "rsi_bearish_divergence, engulfing_bearish, momentum_continuation",
+      "rsi": 57.3
+    },
+    "queued_at": "2026-09-25T03:05:49.034427"
   }
 ]

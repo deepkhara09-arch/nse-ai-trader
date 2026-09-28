@@ -1,26 +1,5 @@
 [
   {
-    "timestamp": "2026-08-12T09:43:36.877117",
-    "date": "2026-08-12",
-    "ticker": "CHOLAFIN.NS",
-    "session": "intraday_close",
-    "action": "SELL",
-    "signal": "SELL",
-    "confidence": 45.5,
-    "entry": 1901.0,
-    "stop_loss": 1999.54,
-    "target": 1703.92,
-    "reason": "paper intraday_close",
-    "patterns": [
-      "pivot_point_test",
-      "full_bullish_alignment",
-      "bearish_harami",
-      "stoch_rsi_overbought_reversal",
-      "pivot_s1_breakdown",
-      "spinning_top"
-    ]
-  },
-  {
     "timestamp": "2026-08-12T09:43:36.877700",
     "date": "2026-08-12",
     "ticker": "HOMEFIRST.NS",
@@ -21160,6 +21139,26 @@
       "pivot_s1_breakdown",
       "gap_down_continuation",
       "bb_lower_bounce"
+    ]
+  },
+  {
+    "timestamp": "2026-09-28T09:45:41.991115",
+    "date": "2026-09-28",
+    "ticker": "HOMEFIRST.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 48.6,
+    "entry": 1093.5,
+    "stop_loss": 1000.35,
+    "target": 1199.96,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "pivot_s1_breakdown",
+      "volume_breakdown_bearish",
+      "gap_down_continuation",
+      "bb_lower_bounce",
+      "ema_death_cross"
     ]
   }
 ]

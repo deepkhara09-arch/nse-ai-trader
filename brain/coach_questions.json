@@ -1,65 +1,5 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of strong_bullish_marubozu, bullish_harami, pivot_r1_breakout mean for a swing trade on HINDALCO? Current RSI=48, MACD hist=-1.2403, Vol=1.6x average. Signal is BUY.",
-    "context": {
-      "ticker": "HINDALCO.NS",
-      "signal": "BUY",
-      "patterns": "strong_bullish_marubozu, bullish_harami, pivot_r1_breakout",
-      "rsi": 48.1
-    },
-    "queued_at": "2026-09-24T09:26:28.411948"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of strong_bullish_marubozu, bullish_harami, pivot_r1_breakout mean for a swing trade on HINDALCO? Current RSI=48, MACD hist=-1.2403, Vol=1.6x average. Signal is BUY.",
-    "context": {
-      "ticker": "HINDALCO.NS",
-      "signal": "BUY",
-      "patterns": "strong_bullish_marubozu, bullish_harami, pivot_r1_breakout",
-      "rsi": 48.1
-    },
-    "queued_at": "2026-09-24T09:26:28.420633"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of strong_bullish_marubozu, bullish_harami, pivot_r1_breakout mean for a swing trade on HINDALCO? Current RSI=48, MACD hist=-1.2403, Vol=1.6x average. Signal is BUY.",
-    "context": {
-      "ticker": "HINDALCO.NS",
-      "signal": "BUY",
-      "patterns": "strong_bullish_marubozu, bullish_harami, pivot_r1_breakout",
-      "rsi": 48.1
-    },
-    "queued_at": "2026-09-24T09:26:28.513303"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of rsi_bearish_divergence, engulfing_bearish, momentum_continuation mean for a swing trade on COALINDIA? Current RSI=57, MACD hist=+0.3572, Vol=0.7x average. Signal is SELL.",
-    "context": {
-      "ticker": "COALINDIA.NS",
-      "signal": "SELL",
-      "patterns": "rsi_bearish_divergence, engulfing_bearish, momentum_continuation",
-      "rsi": 57.3
-    },
-    "queued_at": "2026-09-25T03:05:49.034427"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of adx_ranging_market, full_bearish_alignment, pivot_s1_breakdown mean for a swing trade on NHPC? Current RSI=50, MACD hist=+0.1015, Vol=0.8x average. Signal is SELL.",
-    "context": {
-      "ticker": "NHPC.NS",
-      "signal": "SELL",
-      "patterns": "adx_ranging_market, full_bearish_alignment, pivot_s1_breakdown",
-      "rsi": 50.0
-    },
-    "queued_at": "2026-09-25T04:05:42.008455"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of adx_ranging_market, full_bearish_alignment, pivot_s1_breakdown mean for a swing trade on NHPC? Current RSI=50, MACD hist=+0.1015, Vol=0.8x average. Signal is SELL.",
-    "context": {
-      "ticker": "NHPC.NS",
-      "signal": "SELL",
-      "patterns": "adx_ranging_market, full_bearish_alignment, pivot_s1_breakdown",
-      "rsi": 50.0
-    },
-    "queued_at": "2026-09-25T04:05:42.287276"
-  },
-  {
     "question": "In Indian NSE markets, what does the combination of stoch_rsi_oversold_reversal, pivot_s1_bounce mean for a swing trade on BANDHANBNK? Current RSI=70, MACD hist=+2.1855, Vol=1.6x average. Signal is BUY.",
     "context": {
       "ticker": "BANDHANBNK.NS",
@@ -98,5 +38,65 @@
       "rsi": 69.7
     },
     "queued_at": "2026-09-28T03:05:43.595587"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of ema_death_cross, bb_lower_bounce, gap_down_continuation mean for a swing trade on HOMEFIRST? Current RSI=32, MACD hist=-6.6146, Vol=2.4x average. Signal is BUY.",
+    "context": {
+      "ticker": "HOMEFIRST.NS",
+      "signal": "BUY",
+      "patterns": "ema_death_cross, bb_lower_bounce, gap_down_continuation",
+      "rsi": 31.7
+    },
+    "queued_at": "2026-09-28T04:05:44.706006"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of pivot_point_test, strong_bullish_marubozu, tweezer_bottom mean for a swing trade on BANDHANBNK? Current RSI=73, MACD hist=+2.1949, Vol=0.8x average. Signal is BUY.",
+    "context": {
+      "ticker": "BANDHANBNK.NS",
+      "signal": "BUY",
+      "patterns": "pivot_point_test, strong_bullish_marubozu, tweezer_bottom",
+      "rsi": 73.0
+    },
+    "queued_at": "2026-09-28T04:05:44.756747"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of pivot_point_test, strong_bullish_marubozu, tweezer_bottom mean for a swing trade on BANDHANBNK? Current RSI=73, MACD hist=+2.1949, Vol=0.8x average. Signal is BUY.",
+    "context": {
+      "ticker": "BANDHANBNK.NS",
+      "signal": "BUY",
+      "patterns": "pivot_point_test, strong_bullish_marubozu, tweezer_bottom",
+      "rsi": 73.0
+    },
+    "queued_at": "2026-09-28T04:05:44.776243"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of ema_death_cross, bb_lower_bounce, gap_down_continuation mean for a swing trade on HOMEFIRST? Current RSI=32, MACD hist=-6.6146, Vol=2.4x average. Signal is BUY.",
+    "context": {
+      "ticker": "HOMEFIRST.NS",
+      "signal": "BUY",
+      "patterns": "ema_death_cross, bb_lower_bounce, gap_down_continuation",
+      "rsi": 31.7
+    },
+    "queued_at": "2026-09-28T04:05:44.843942"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of ema_death_cross, bb_lower_bounce, gap_down_continuation mean for a swing trade on HOMEFIRST? Current RSI=32, MACD hist=-6.6146, Vol=2.4x average. Signal is BUY.",
+    "context": {
+      "ticker": "HOMEFIRST.NS",
+      "signal": "BUY",
+      "patterns": "ema_death_cross, bb_lower_bounce, gap_down_continuation",
+      "rsi": 31.7
+    },
+    "queued_at": "2026-09-28T04:05:45.432881"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of pivot_point_test, strong_bullish_marubozu, tweezer_bottom mean for a swing trade on BANDHANBNK? Current RSI=73, MACD hist=+2.1949, Vol=0.8x average. Signal is BUY.",
+    "context": {
+      "ticker": "BANDHANBNK.NS",
+      "signal": "BUY",
+      "patterns": "pivot_point_test, strong_bullish_marubozu, tweezer_bottom",
+      "rsi": 73.0
+    },
+    "queued_at": "2026-09-28T04:05:45.463385"
   }
 ]

@@ -1,25 +1,5 @@
 [
   {
-    "timestamp": "2026-08-12T09:43:36.875731",
-    "date": "2026-08-12",
-    "ticker": "NIACL.NS",
-    "session": "intraday_close",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 73.0,
-    "entry": 180.3,
-    "stop_loss": 170.97,
-    "target": 198.96,
-    "reason": "paper intraday_close",
-    "patterns": [
-      "hammer",
-      "full_bullish_alignment",
-      "supertrend_bullish",
-      "low_volume_drift",
-      "momentum_continuation"
-    ]
-  },
-  {
     "timestamp": "2026-08-12T09:43:36.877117",
     "date": "2026-08-12",
     "ticker": "CHOLAFIN.NS",
@@ -21160,6 +21140,26 @@
       "pivot_point_test",
       "strong_bullish_marubozu",
       "bullish_harami"
+    ]
+  },
+  {
+    "timestamp": "2026-09-28T07:46:04.596681",
+    "date": "2026-09-28",
+    "ticker": "HOMEFIRST.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 48.6,
+    "entry": 1085.0,
+    "stop_loss": 991.85,
+    "target": 1191.46,
+    "reason": "paper afternoon",
+    "patterns": [
+      "volume_breakdown_bearish",
+      "ema_death_cross",
+      "pivot_s1_breakdown",
+      "gap_down_continuation",
+      "bb_lower_bounce"
     ]
   }
 ]

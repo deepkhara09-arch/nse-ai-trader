@@ -1,15 +1,5 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of bullish_harami, full_bearish_alignment, pivot_point_test mean for a swing trade on HINDALCO? Current RSI=48, MACD hist=-1.2403, Vol=1.6x average. Signal is BUY.",
-    "context": {
-      "ticker": "HINDALCO.NS",
-      "signal": "BUY",
-      "patterns": "bullish_harami, full_bearish_alignment, pivot_point_test",
-      "rsi": 48.1
-    },
-    "queued_at": "2026-09-24T07:45:49.575228"
-  },
-  {
     "question": "In Indian NSE markets, what does the combination of strong_bullish_marubozu, bullish_harami, pivot_r1_breakout mean for a swing trade on HINDALCO? Current RSI=48, MACD hist=-1.2403, Vol=1.6x average. Signal is BUY.",
     "context": {
       "ticker": "HINDALCO.NS",
@@ -98,5 +88,15 @@
       "rsi": 69.7
     },
     "queued_at": "2026-09-25T09:44:06.675718"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of stoch_rsi_oversold_reversal, pivot_s1_bounce mean for a swing trade on BANDHANBNK? Current RSI=70, MACD hist=+2.1855, Vol=1.6x average. Signal is BUY.",
+    "context": {
+      "ticker": "BANDHANBNK.NS",
+      "signal": "BUY",
+      "patterns": "stoch_rsi_oversold_reversal, pivot_s1_bounce",
+      "rsi": 69.7
+    },
+    "queued_at": "2026-09-28T03:05:43.595587"
   }
 ]

@@ -1,6 +1,6 @@
 {
   "date": "2026-09-28",
-  "session": "morning",
+  "session": "midday",
   "nifty": {
     "symbol": "^NSEI",
     "value": 23140.5,
@@ -63,7 +63,6 @@
   "warnings": [
     "VIX=12.2 at 80th percentile vs last 30d \u2014 unusually high stress",
     "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
-    "Global macro risk-off (-0.36) \u2014 Overall macro mood is risk-off (-0.36). US Dow +0.9% overnight. Crude +1.2%. USD/INR -0.4%. Notable: US Fed rate hike / ",
     "Net institutional outflow (\u20b9-856 Cr)"
   ],
   "leading_sectors": [],
@@ -76,12 +75,12 @@
   "intraday_regime": "mixed",
   "macro": {
     "date": "2026-09-28",
-    "session": "preopen",
-    "generated_at": "2026-09-28T03:05:42.267573",
-    "global_score": 0.162,
-    "india_score": -1.0,
-    "overall_score": -0.361,
-    "mood": "risk_off",
+    "session": "midday",
+    "generated_at": "2026-09-28T06:15:46.639196",
+    "global_score": 0.276,
+    "india_score": 0.0,
+    "overall_score": 0.152,
+    "mood": "neutral",
     "drivers": [
       "\u2018I want to make her proud\u2019: My mother, a divorc\u00e9e, died and I\u2019m her executor. Do I need to file for probate?",
       "\u2018We lived within our means\u2019: I earned $30,000 as a pastor and still retired comfortably. Why don\u2019t you tell people that?",
@@ -106,23 +105,23 @@
         "chg_pct": 0.51
       },
       "nikkei": {
-        "last": 66333.53,
-        "chg_pct": -0.05
+        "last": 66265.17,
+        "chg_pct": -0.15
       },
       "crude": {
-        "last": 93.55,
-        "chg_pct": 1.23
+        "last": 92.41,
+        "chg_pct": -2.33
       },
       "usdinr": {
-        "last": 95.8,
-        "chg_pct": -0.37
+        "last": 95.97,
+        "chg_pct": -0.2
       },
       "gold": {
-        "last": 4230.2,
-        "chg_pct": -2.11
+        "last": 4321.2,
+        "chg_pct": 0.54
       }
     },
-    "summary": "Overall macro mood is risk-off (-0.36). US Dow +0.9% overnight. Crude +1.2%. USD/INR -0.4%. Notable: US Fed rate hike / hawkish; Geopolitical conflict / war; Tariffs / trade war.",
+    "summary": "Overall macro mood is neutral (+0.15). US Dow +0.9% overnight. Crude -2.3%. USD/INR -0.2%. Notable: US Fed rate hike / hawkish; Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
       "Hawkish Fed pressures Nifty via FII outflows and stronger USD.",
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
@@ -131,7 +130,7 @@
     "playbook_bias": "risk_off",
     "article_count": 60
   },
-  "macro_risk_factor": 0.7,
+  "macro_risk_factor": 1.0,
   "fii_dii": {
     "date": "2026-09-28",
     "fii_net_cr": -3693.93,

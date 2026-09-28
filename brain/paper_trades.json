@@ -1,5 +1,5 @@
 {
-  "capital": 71271.088675,
+  "capital": 76013.168525,
   "open_positions": [
     {
       "ticker": "POWERGRID.NS",
@@ -34,8 +34,8 @@
         "In a long-term strong downtrend (2yr)",
         "\u2713 Daily setup aligned with the higher-timeframe trend"
       ],
-      "current_price": 266.35,
-      "unrealized_pnl": -9.6,
+      "current_price": 266.05,
+      "unrealized_pnl": -4.8,
       "max_held_days": 10,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -49,64 +49,6 @@
         "mtf_alignment": "aligned",
         "opposing_ratio": 0.34,
         "hist_long_trend": "strong_downtrend"
-      },
-      "view_hist": [
-        0,
-        0,
-        0,
-        0
-      ]
-    },
-    {
-      "ticker": "HINDALCO.NS",
-      "sector": "Metals",
-      "open_date": "2026-09-17",
-      "open_session": "midday",
-      "action": "BUY",
-      "entry": 984.7,
-      "qty": 5,
-      "invested": 4923.5,
-      "stop_loss": 951.32,
-      "target": 1038.11,
-      "style": "swing",
-      "confidence": 68.8,
-      "patterns": [
-        "supertrend_bullish",
-        "full_bearish_alignment",
-        "rsi_bullish_divergence",
-        "engulfing_bullish"
-      ],
-      "buy_reasons": [
-        "RSI=27 oversold \u2014 reversal watch",
-        "Near lower Bollinger Band",
-        "Positive news sentiment (0.24)",
-        "News sentiment improving across sessions",
-        "Candlestick: engulfing bullish",
-        "RSI bullish divergence \u2014 price lower but RSI higher",
-        "Sector headwind (momentum=-0.43)",
-        "Supertrend bullish \u2014 price above trend band",
-        "In a long-term strong uptrend (2yr) \u2014 trend on our side",
-        "\u2713 Daily setup aligned with the higher-timeframe trend",
-        "\u26a0 Sector momentum -0.43 \u2014 buying into a falling sector needs extra conviction",
-        "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
-        "All EMAs stacked bearish",
-        "MACD histogram negative"
-      ],
-      "current_price": 953.7,
-      "unrealized_pnl": -155.0,
-      "max_held_days": 40,
-      "vol_regime_pct": 0.12,
-      "entry_market": {
-        "nifty_trend": "down",
-        "vix": 13.17,
-        "mood": "bearish",
-        "regime": "choppy",
-        "sector_momentum": -0.434,
-        "delivery_signal": "neutral",
-        "rsi": 26.9,
-        "mtf_alignment": "aligned",
-        "opposing_ratio": 0.31,
-        "hist_long_trend": "strong_uptrend"
       },
       "view_hist": [
         0,
@@ -150,8 +92,8 @@
         "\u26a0 Buying against a long-term downtrend \u2014 lower conviction",
         "\u26a0 Daily buy fights the higher-timeframe trend \u2014 needs extra conviction"
       ],
-      "current_price": 426.7,
-      "unrealized_pnl": 25.5,
+      "current_price": 425.5,
+      "unrealized_pnl": 7.5,
       "max_held_days": 40,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -210,8 +152,8 @@
         "Near upper Bollinger Band",
         "High volume confirmation (2.3x avg)"
       ],
-      "current_price": 184.43,
-      "unrealized_pnl": -213.36,
+      "current_price": 184.03,
+      "unrealized_pnl": -224.56,
       "max_held_days": 40,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -228,7 +170,7 @@
       },
       "view_hist": [
         0,
-        0,
+        1,
         1,
         1
       ]
@@ -265,8 +207,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "Broke below Pivot S1 support \u2014 bearish"
       ],
-      "current_price": 1089.8,
-      "unrealized_pnl": -105.2,
+      "current_price": 1093.0,
+      "unrealized_pnl": -92.4,
       "max_held_days": 40,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -283,7 +225,7 @@
       },
       "view_hist": [
         1,
-        1,
+        0,
         0,
         0
       ]
@@ -4161,6 +4103,74 @@
       "pnl_pct": -3.45,
       "won": false,
       "open_days": 8
+    },
+    {
+      "ticker": "HINDALCO.NS",
+      "sector": "Metals",
+      "open_date": "2026-09-17",
+      "open_session": "midday",
+      "action": "BUY",
+      "entry": 984.7,
+      "qty": 5,
+      "invested": 4923.5,
+      "stop_loss": 951.32,
+      "target": 1038.11,
+      "style": "swing",
+      "confidence": 68.8,
+      "patterns": [
+        "supertrend_bullish",
+        "full_bearish_alignment",
+        "rsi_bullish_divergence",
+        "engulfing_bullish"
+      ],
+      "buy_reasons": [
+        "RSI=27 oversold \u2014 reversal watch",
+        "Near lower Bollinger Band",
+        "Positive news sentiment (0.24)",
+        "News sentiment improving across sessions",
+        "Candlestick: engulfing bullish",
+        "RSI bullish divergence \u2014 price lower but RSI higher",
+        "Sector headwind (momentum=-0.43)",
+        "Supertrend bullish \u2014 price above trend band",
+        "In a long-term strong uptrend (2yr) \u2014 trend on our side",
+        "\u2713 Daily setup aligned with the higher-timeframe trend",
+        "\u26a0 Sector momentum -0.43 \u2014 buying into a falling sector needs extra conviction",
+        "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
+        "All EMAs stacked bearish",
+        "MACD histogram negative"
+      ],
+      "current_price": 963.7,
+      "unrealized_pnl": -105.0,
+      "max_held_days": 40,
+      "vol_regime_pct": 0.12,
+      "entry_market": {
+        "nifty_trend": "down",
+        "vix": 13.17,
+        "mood": "bearish",
+        "regime": "choppy",
+        "sector_momentum": -0.434,
+        "delivery_signal": "neutral",
+        "rsi": 26.9,
+        "mtf_alignment": "aligned",
+        "opposing_ratio": 0.31,
+        "hist_long_trend": "strong_uptrend"
+      },
+      "view_hist": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "close_date": "2026-09-28",
+      "close_session": "midday",
+      "exit_price": 951.32,
+      "exit_reason": "stop_hit",
+      "pnl": -181.42,
+      "pnl_gross": -166.9,
+      "costs": 14.52,
+      "pnl_pct": -3.68,
+      "won": false,
+      "open_days": 7
     }
   ],
   "daily_snapshots": [
@@ -4494,11 +4504,11 @@
       "daily_pnl": 0.0
     }
   ],
-  "daily_pnl_today": 0.0,
+  "daily_pnl_today": -181.42014999999998,
   "last_snapshot_date": "2026-09-21",
   "lifetime_wins": 23,
-  "lifetime_losses": 35,
-  "lifetime_pnl": -3336.63,
+  "lifetime_losses": 36,
+  "lifetime_pnl": -3518.05,
   "last_pnl_reset_date": "2026-09-28",
   "max_drawdown_pct": 4.47,
   "current_drawdown_pct": 4.22,

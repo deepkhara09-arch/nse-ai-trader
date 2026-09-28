@@ -1,44 +1,5 @@
 [
   {
-    "timestamp": "2026-08-12T09:43:36.874044",
-    "date": "2026-08-12",
-    "ticker": "CIPLA.NS",
-    "session": "intraday_close",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 64.8,
-    "entry": 1460.0,
-    "stop_loss": 1415.64,
-    "target": 1548.71,
-    "reason": "paper intraday_close",
-    "patterns": [
-      "pivot_s1_breakdown",
-      "full_bullish_alignment",
-      "stoch_rsi_overbought_reversal",
-      "rsi_bullish_divergence"
-    ]
-  },
-  {
-    "timestamp": "2026-08-12T09:43:36.874885",
-    "date": "2026-08-12",
-    "ticker": "NTPC.NS",
-    "session": "intraday_close",
-    "action": "SELL",
-    "signal": "SELL",
-    "confidence": 86.4,
-    "entry": 338.3,
-    "stop_loss": 347.09,
-    "target": 320.73,
-    "reason": "paper intraday_close",
-    "patterns": [
-      "full_bearish_alignment",
-      "macd_bearish_crossover",
-      "three_black_crows",
-      "bb_lower_bounce",
-      "pivot_s1_breakdown"
-    ]
-  },
-  {
     "timestamp": "2026-08-12T09:43:36.875731",
     "date": "2026-08-12",
     "ticker": "NIACL.NS",
@@ -21157,6 +21118,47 @@
       "strong_bullish_marubozu",
       "tweezer_bottom",
       "inside_bar",
+      "bullish_harami"
+    ]
+  },
+  {
+    "timestamp": "2026-09-28T06:15:54.773209",
+    "date": "2026-09-28",
+    "ticker": "HOMEFIRST.NS",
+    "session": "midday",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 48.6,
+    "entry": 1093.0,
+    "stop_loss": 999.85,
+    "target": 1199.46,
+    "reason": "paper midday",
+    "patterns": [
+      "pivot_s1_breakdown",
+      "gap_down_continuation",
+      "ema_death_cross",
+      "volume_breakdown_bearish",
+      "bb_lower_bounce"
+    ]
+  },
+  {
+    "timestamp": "2026-09-28T06:15:54.778123",
+    "date": "2026-09-28",
+    "ticker": "BANDHANBNK.NS",
+    "session": "midday",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 74.3,
+    "entry": 184.03,
+    "stop_loss": 171.97,
+    "target": 198.51,
+    "reason": "paper midday",
+    "patterns": [
+      "supertrend_bullish",
+      "inside_bar",
+      "tweezer_bottom",
+      "pivot_point_test",
+      "strong_bullish_marubozu",
       "bullish_harami"
     ]
   }

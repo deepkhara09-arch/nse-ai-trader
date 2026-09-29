@@ -1,6 +1,6 @@
 {
   "date": "2026-09-29",
-  "session": "morning",
+  "session": "midday",
   "nifty": {
     "symbol": "^NSEI",
     "value": 22780.25,
@@ -64,6 +64,7 @@
     "VIX=13.6 at 97th percentile vs last 30d \u2014 unusually high stress",
     "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
     "Nifty down -1.6% today \u2014 likely institutional selling",
+    "Nifty choppy intraday \u2014 wait for cleaner setups",
     "Net institutional outflow (\u20b9-164 Cr)",
     "PCR low (0.60) \u2014 market complacent, caution"
   ],
@@ -74,15 +75,15 @@
     "IT",
     "Bank"
   ],
-  "intraday_regime": "mixed",
+  "intraday_regime": "choppy",
   "macro": {
     "date": "2026-09-29",
-    "session": "preopen",
-    "generated_at": "2026-09-29T03:05:43.021604",
-    "global_score": 0.186,
-    "india_score": 1.0,
-    "overall_score": 0.552,
-    "mood": "risk_on",
+    "session": "midday",
+    "generated_at": "2026-09-29T06:15:41.732486",
+    "global_score": 0.209,
+    "india_score": 0.0,
+    "overall_score": 0.115,
+    "mood": "neutral",
     "drivers": [
       "Anthropic\u2019s potential $2 trillion IPO comes with the following fine print",
       "AMD makes a big bet on the next era of AI with World Labs acquisition",
@@ -107,23 +108,23 @@
         "chg_pct": -0.77
       },
       "nikkei": {
-        "last": 65307.0,
-        "chg_pct": -0.87
+        "last": 64956.9,
+        "chg_pct": -1.4
       },
       "crude": {
-        "last": 93.91,
-        "chg_pct": 1.41
+        "last": 92.6,
+        "chg_pct": 0.21
       },
       "usdinr": {
-        "last": 95.97,
-        "chg_pct": 0.19
+        "last": 96.01,
+        "chg_pct": 0.24
       },
       "gold": {
-        "last": 4168.5,
-        "chg_pct": 0.0
+        "last": 4168.4,
+        "chg_pct": -3.54
       }
     },
-    "summary": "Overall macro mood is risk-on (+0.55). US Dow -0.7% overnight. Crude +1.4%. USD/INR +0.2%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
+    "summary": "Overall macro mood is neutral (+0.12). US Dow -0.7% overnight. Crude +0.2%. USD/INR +0.2%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
       "Trade-war headlines spook global markets; IT & export names react most."
@@ -131,7 +132,6 @@
     "playbook_bias": "risk_off",
     "article_count": 60
   },
-  "macro_tailwind": true,
   "macro_risk_factor": 1.0,
   "fii_dii": {
     "date": "2026-09-29",

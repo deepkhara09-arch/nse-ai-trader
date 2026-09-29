@@ -1,62 +1,6 @@
 {
-  "capital": 81071.092025,
+  "capital": 85393.660825,
   "open_positions": [
-    {
-      "ticker": "POWERGRID.NS",
-      "sector": "Energy",
-      "open_date": "2026-09-15",
-      "open_session": "midday",
-      "action": "SELL",
-      "entry": 265.75,
-      "qty": 16,
-      "invested": 4252.0,
-      "stop_loss": 272.42,
-      "target": 252.41,
-      "style": "swing",
-      "confidence": 44.8,
-      "patterns": [
-        "pivot_s1_breakdown",
-        "rsi_bearish_divergence",
-        "early_recovery",
-        "adx_ranging_market",
-        "shooting_star",
-        "full_bearish_alignment"
-      ],
-      "buy_reasons": [
-        "RSI=43 in healthy buy zone",
-        "MACD histogram positive",
-        "Positive news sentiment (0.17, news 0.6x reliable here)",
-        "News sentiment improving across sessions",
-        "ADX low \u2014 market ranging, signals less reliable",
-        "All EMAs stacked bearish",
-        "RSI bearish divergence \u2014 price higher but RSI lower",
-        "Broke below Pivot S1 support \u2014 bearish",
-        "In a long-term strong downtrend (2yr)",
-        "\u2713 Daily setup aligned with the higher-timeframe trend"
-      ],
-      "current_price": 262.1,
-      "unrealized_pnl": 58.4,
-      "max_held_days": 10,
-      "vol_regime_pct": 0.12,
-      "entry_market": {
-        "nifty_trend": "down",
-        "vix": 12.29,
-        "mood": "bearish",
-        "regime": "mixed",
-        "sector_momentum": 0.197,
-        "delivery_signal": "neutral",
-        "rsi": 43.4,
-        "mtf_alignment": "aligned",
-        "opposing_ratio": 0.34,
-        "hist_long_trend": "strong_downtrend"
-      },
-      "view_hist": [
-        0,
-        0,
-        0,
-        0
-      ]
-    },
     {
       "ticker": "COALINDIA.NS",
       "sector": "Energy",
@@ -92,8 +36,8 @@
         "\u26a0 Buying against a long-term downtrend \u2014 lower conviction",
         "\u26a0 Daily buy fights the higher-timeframe trend \u2014 needs extra conviction"
       ],
-      "current_price": 421.8,
-      "unrealized_pnl": -48.0,
+      "current_price": 422.35,
+      "unrealized_pnl": -39.75,
       "max_held_days": 40,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -147,8 +91,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "Broke below Pivot S1 support \u2014 bearish"
       ],
-      "current_price": 1093.5,
-      "unrealized_pnl": -90.4,
+      "current_price": 1094.2,
+      "unrealized_pnl": -87.6,
       "max_held_days": 40,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -4181,6 +4125,72 @@
       "pnl_pct": -5.94,
       "won": false,
       "open_days": 3
+    },
+    {
+      "ticker": "POWERGRID.NS",
+      "sector": "Energy",
+      "open_date": "2026-09-15",
+      "open_session": "midday",
+      "action": "SELL",
+      "entry": 265.75,
+      "qty": 16,
+      "invested": 4252.0,
+      "stop_loss": 272.42,
+      "target": 252.41,
+      "style": "swing",
+      "confidence": 44.8,
+      "patterns": [
+        "pivot_s1_breakdown",
+        "rsi_bearish_divergence",
+        "early_recovery",
+        "adx_ranging_market",
+        "shooting_star",
+        "full_bearish_alignment"
+      ],
+      "buy_reasons": [
+        "RSI=43 in healthy buy zone",
+        "MACD histogram positive",
+        "Positive news sentiment (0.17, news 0.6x reliable here)",
+        "News sentiment improving across sessions",
+        "ADX low \u2014 market ranging, signals less reliable",
+        "All EMAs stacked bearish",
+        "RSI bearish divergence \u2014 price higher but RSI lower",
+        "Broke below Pivot S1 support \u2014 bearish",
+        "In a long-term strong downtrend (2yr)",
+        "\u2713 Daily setup aligned with the higher-timeframe trend"
+      ],
+      "current_price": 260.55,
+      "unrealized_pnl": 83.2,
+      "max_held_days": 10,
+      "vol_regime_pct": 0.12,
+      "entry_market": {
+        "nifty_trend": "down",
+        "vix": 12.29,
+        "mood": "bearish",
+        "regime": "mixed",
+        "sector_momentum": 0.197,
+        "delivery_signal": "neutral",
+        "rsi": 43.4,
+        "mtf_alignment": "aligned",
+        "opposing_ratio": 0.34,
+        "hist_long_trend": "strong_downtrend"
+      },
+      "view_hist": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "close_date": "2026-09-29",
+      "close_session": "morning",
+      "exit_price": 260.55,
+      "exit_reason": "time_exit",
+      "pnl": 70.57,
+      "pnl_gross": 83.2,
+      "costs": 12.63,
+      "pnl_pct": 1.66,
+      "won": true,
+      "open_days": 10
     }
   ],
   "daily_snapshots": [
@@ -4514,12 +4524,12 @@
       "daily_pnl": 0.0
     }
   ],
-  "daily_pnl_today": -500.8966500000006,
+  "daily_pnl_today": 70.56879999999981,
   "last_snapshot_date": "2026-09-21",
-  "lifetime_wins": 23,
+  "lifetime_wins": 24,
   "lifetime_losses": 37,
-  "lifetime_pnl": -3837.53,
-  "last_pnl_reset_date": "2026-09-28",
+  "lifetime_pnl": -3766.96,
+  "last_pnl_reset_date": "2026-09-29",
   "max_drawdown_pct": 4.47,
   "current_drawdown_pct": 4.22,
   "portfolio_peak": 101210.28,

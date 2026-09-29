@@ -1,13 +1,13 @@
 {
   "phase": "paper_trading",
   "day": 65,
-  "session": "preopen",
+  "session": "morning",
   "start_date": "2026-06-22",
   "phase_start_date": "2026-07-15",
   "last_run_date": "2026-09-21",
   "last_counted_date": "2026-09-21",
   "cohort_last_tick_date": "2026-09-21",
-  "last_updated": "2026-09-29T03:05:44.200828",
+  "last_updated": "2026-09-29T04:05:42.280919",
   "focus_stocks": [
     "PIDILITIND.NS",
     "GAIL.NS",
@@ -58,14 +58,14 @@
     "BANDHANBNK.NS"
   ],
   "paper_trade_stats": {
-    "total": 60,
-    "wins": 23,
+    "total": 61,
+    "wins": 24,
     "losses": 37,
-    "win_rate": 0.383,
-    "total_pnl": -3837.53,
-    "avg_win": 102.54,
+    "win_rate": 0.393,
+    "total_pnl": -3766.96,
+    "avg_win": 101.21,
     "avg_loss": -167.46,
-    "expectancy": -63.96
+    "expectancy": -61.75
   },
   "brain_notes": [
     "[2026-07-29] Focus refresh \u2014 promoted: ['IDFCFIRSTB'] | demoted: ['FEDERALBNK']",
@@ -397,6 +397,7 @@
     "scored_date": "2026-09-21"
   },
   "sessions_done": {
-    "preopen": "2026-09-29"
+    "preopen": "2026-09-29",
+    "morning": "2026-09-29"
   }
 }

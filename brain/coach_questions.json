@@ -1,35 +1,5 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of gap_down_continuation, ema_death_cross, bb_lower_bounce mean for a swing trade on HOMEFIRST? Current RSI=32, MACD hist=-6.6146, Vol=2.4x average. Signal is BUY.",
-    "context": {
-      "ticker": "HOMEFIRST.NS",
-      "signal": "BUY",
-      "patterns": "gap_down_continuation, ema_death_cross, bb_lower_bounce",
-      "rsi": 31.7
-    },
-    "queued_at": "2026-09-28T06:15:54.787647"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of gap_down_continuation, ema_death_cross, bb_lower_bounce mean for a swing trade on HOMEFIRST? Current RSI=32, MACD hist=-6.6146, Vol=2.4x average. Signal is BUY.",
-    "context": {
-      "ticker": "HOMEFIRST.NS",
-      "signal": "BUY",
-      "patterns": "gap_down_continuation, ema_death_cross, bb_lower_bounce",
-      "rsi": 31.7
-    },
-    "queued_at": "2026-09-28T06:15:54.908454"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of inside_bar, tweezer_bottom, pivot_point_test mean for a swing trade on BANDHANBNK? Current RSI=73, MACD hist=+2.1949, Vol=0.8x average. Signal is BUY.",
-    "context": {
-      "ticker": "BANDHANBNK.NS",
-      "signal": "BUY",
-      "patterns": "inside_bar, tweezer_bottom, pivot_point_test",
-      "rsi": 73.0
-    },
-    "queued_at": "2026-09-28T06:15:54.913177"
-  },
-  {
     "question": "In Indian NSE markets, what does the combination of ema_death_cross, gap_down_continuation, bb_lower_bounce mean for a swing trade on HOMEFIRST? Current RSI=32, MACD hist=-6.6146, Vol=2.4x average. Signal is BUY.",
     "context": {
       "ticker": "HOMEFIRST.NS",
@@ -98,5 +68,35 @@
       "rsi": 31.7
     },
     "queued_at": "2026-09-29T03:05:44.318475"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of bb_lower_bounce, gap_down_continuation, ema_death_cross mean for a swing trade on HOMEFIRST? Current RSI=32, MACD hist=-6.6146, Vol=2.4x average. Signal is BUY.",
+    "context": {
+      "ticker": "HOMEFIRST.NS",
+      "signal": "BUY",
+      "patterns": "bb_lower_bounce, gap_down_continuation, ema_death_cross",
+      "rsi": 31.7
+    },
+    "queued_at": "2026-09-29T04:05:42.231603"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of bb_lower_bounce, gap_down_continuation, ema_death_cross mean for a swing trade on HOMEFIRST? Current RSI=32, MACD hist=-6.6146, Vol=2.4x average. Signal is BUY.",
+    "context": {
+      "ticker": "HOMEFIRST.NS",
+      "signal": "BUY",
+      "patterns": "bb_lower_bounce, gap_down_continuation, ema_death_cross",
+      "rsi": 31.7
+    },
+    "queued_at": "2026-09-29T04:05:42.247149"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of bb_lower_bounce, gap_down_continuation, ema_death_cross mean for a swing trade on HOMEFIRST? Current RSI=32, MACD hist=-6.6146, Vol=2.4x average. Signal is BUY.",
+    "context": {
+      "ticker": "HOMEFIRST.NS",
+      "signal": "BUY",
+      "patterns": "bb_lower_bounce, gap_down_continuation, ema_death_cross",
+      "rsi": 31.7
+    },
+    "queued_at": "2026-09-29T04:05:42.363150"
   }
 ]

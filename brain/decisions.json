@@ -1,26 +1,5 @@
 [
   {
-    "timestamp": "2026-08-12T09:43:36.878502",
-    "date": "2026-08-12",
-    "ticker": "GAIL.NS",
-    "session": "intraday_close",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 78.8,
-    "entry": 174.88,
-    "stop_loss": 168.06,
-    "target": 188.53,
-    "reason": "paper intraday_close",
-    "patterns": [
-      "engulfing_bullish",
-      "adx_ranging_market",
-      "full_bullish_alignment",
-      "supertrend_bullish",
-      "pivot_r1_breakout",
-      "strong_bullish_marubozu"
-    ]
-  },
-  {
     "timestamp": "2026-08-12T10:11:19.540552",
     "date": "2026-08-12",
     "ticker": "MARICO.NS",
@@ -21158,6 +21137,26 @@
       "volume_breakdown_bearish",
       "pivot_s1_breakdown",
       "ema_death_cross"
+    ]
+  },
+  {
+    "timestamp": "2026-09-29T07:45:47.767255",
+    "date": "2026-09-29",
+    "ticker": "HOMEFIRST.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 48.6,
+    "entry": 1102.5,
+    "stop_loss": 1009.35,
+    "target": 1208.96,
+    "reason": "paper afternoon",
+    "patterns": [
+      "pivot_s1_breakdown",
+      "ema_death_cross",
+      "gap_down_continuation",
+      "volume_breakdown_bearish",
+      "bb_lower_bounce"
     ]
   }
 ]

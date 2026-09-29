@@ -8318,5 +8318,25 @@
     "open": 3,
     "recs": 0,
     "summary": "Intraday square-off (3:15) \u00b7 Paper-trading trading-day 48 \u00b7 3 open \u00b7 60 closed (38% WR)."
+  },
+  {
+    "date": "2026-09-29",
+    "triggered_at": "2026-09-29 08:35 IST",
+    "session": "preopen",
+    "phase": "paper_trading",
+    "day": 65,
+    "stats": {
+      "total": 60,
+      "wins": 23,
+      "losses": 37,
+      "win_rate": 0.383,
+      "total_pnl": -3837.53,
+      "avg_win": 102.54,
+      "avg_loss": -167.46,
+      "expectancy": -63.96
+    },
+    "open": 3,
+    "recs": 0,
+    "summary": "Pre-open sweep \u2014 macro mood bearish; dashboard refreshed (no trading)."
   }
 ]

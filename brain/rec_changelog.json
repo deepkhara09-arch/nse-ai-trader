@@ -1,25 +1,5 @@
 [
   {
-    "type": "updated",
-    "ticker": "ICICIBANK.NS",
-    "nse_code": "ICICIBANK",
-    "signal": "BUY",
-    "date": "2026-07-22",
-    "ts": "2026-07-22T04:05:56.385722",
-    "detail": "Confidence \u25bc21 (89 \u2192 68) | Rank \u25bc1 (#2 \u2192 #3) | Stop loss moved \u20b91423.81 \u2192 \u20b91408.42 | Target 1 moved \u20b91541.68 \u2192 \u20b91526.26",
-    "confidence": 67.7
-  },
-  {
-    "type": "updated",
-    "ticker": "PIDILITIND.NS",
-    "nse_code": "PIDILITIND",
-    "signal": "BUY",
-    "date": "2026-07-22",
-    "ts": "2026-07-22T04:05:56.385722",
-    "detail": "Stop loss moved \u20b91553.72 \u2192 \u20b91527.97",
-    "confidence": 65.3
-  },
-  {
     "type": "removed",
     "ticker": "PIDILITIND.NS",
     "nse_code": "PIDILITIND",
@@ -5998,5 +5978,25 @@
     "ts": "2026-09-25T03:05:49.036056",
     "detail": "Dropped \u2014 no longer meets threshold (was 67/100)",
     "confidence": 0
+  },
+  {
+    "type": "new",
+    "ticker": "COALINDIA.NS",
+    "nse_code": "COALINDIA",
+    "signal": "BUY",
+    "date": "2026-09-30",
+    "ts": "2026-09-30T04:05:47.910372",
+    "detail": "New BUY recommendation \u2014 confidence 73/100",
+    "confidence": 73.2
+  },
+  {
+    "type": "new",
+    "ticker": "ADANIPORTS.NS",
+    "nse_code": "ADANIPORTS",
+    "signal": "BUY",
+    "date": "2026-09-30",
+    "ts": "2026-09-30T04:05:47.910372",
+    "detail": "New BUY recommendation \u2014 confidence 71/100",
+    "confidence": 70.9
   }
 ]

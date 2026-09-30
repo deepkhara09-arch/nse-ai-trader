@@ -1,102 +1,102 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of gap_down_continuation, bb_lower_bounce, ema_death_cross mean for a swing trade on HOMEFIRST? Current RSI=32, MACD hist=-6.6146, Vol=2.4x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of bullish_harami, pivot_point_test, stoch_rsi_oversold_reversal mean for a swing trade on BANDHANBNK? Current RSI=63, MACD hist=+1.4824, Vol=0.7x average. Signal is BUY.",
     "context": {
-      "ticker": "HOMEFIRST.NS",
+      "ticker": "BANDHANBNK.NS",
       "signal": "BUY",
-      "patterns": "gap_down_continuation, bb_lower_bounce, ema_death_cross",
-      "rsi": 31.7
+      "patterns": "bullish_harami, pivot_point_test, stoch_rsi_oversold_reversal",
+      "rsi": 62.6
     },
-    "queued_at": "2026-09-28T09:45:41.990698"
+    "queued_at": "2026-09-30T04:05:47.768145"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of gap_down_continuation, bb_lower_bounce, ema_death_cross mean for a swing trade on HOMEFIRST? Current RSI=32, MACD hist=-6.6146, Vol=2.4x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of adx_ranging_market, full_bearish_alignment, stoch_rsi_oversold_reversal mean for a swing trade on ADANIGREEN? Current RSI=41, MACD hist=+0.0686, Vol=1.3x average. Signal is BUY.",
     "context": {
-      "ticker": "HOMEFIRST.NS",
+      "ticker": "ADANIGREEN.NS",
       "signal": "BUY",
-      "patterns": "gap_down_continuation, bb_lower_bounce, ema_death_cross",
-      "rsi": 31.7
+      "patterns": "adx_ranging_market, full_bearish_alignment, stoch_rsi_oversold_reversal",
+      "rsi": 40.8
     },
-    "queued_at": "2026-09-28T09:45:42.003481"
+    "queued_at": "2026-09-30T04:05:47.771104"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of gap_down_continuation, bb_lower_bounce, ema_death_cross mean for a swing trade on HOMEFIRST? Current RSI=32, MACD hist=-6.6146, Vol=2.4x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of stoch_rsi_oversold_reversal, full_bullish_alignment, outside_bar mean for a swing trade on PAYTM? Current RSI=44, MACD hist=-23.9364, Vol=0.9x average. Signal is BUY.",
     "context": {
-      "ticker": "HOMEFIRST.NS",
+      "ticker": "PAYTM.NS",
       "signal": "BUY",
-      "patterns": "gap_down_continuation, bb_lower_bounce, ema_death_cross",
-      "rsi": 31.7
+      "patterns": "stoch_rsi_oversold_reversal, full_bullish_alignment, outside_bar",
+      "rsi": 44.3
     },
-    "queued_at": "2026-09-28T09:45:42.120602"
+    "queued_at": "2026-09-30T04:05:47.772377"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of ema_death_cross, bb_lower_bounce, gap_down_continuation mean for a swing trade on HOMEFIRST? Current RSI=32, MACD hist=-6.6146, Vol=2.4x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of engulfing_bullish, strong_bullish_marubozu, stoch_rsi_oversold_reversal mean for a swing trade on COALINDIA? Current RSI=45, MACD hist=+0.1458, Vol=0.8x average. Signal is BUY.",
     "context": {
-      "ticker": "HOMEFIRST.NS",
+      "ticker": "COALINDIA.NS",
       "signal": "BUY",
-      "patterns": "ema_death_cross, bb_lower_bounce, gap_down_continuation",
-      "rsi": 31.7
+      "patterns": "engulfing_bullish, strong_bullish_marubozu, stoch_rsi_oversold_reversal",
+      "rsi": 45.3
     },
-    "queued_at": "2026-09-29T03:05:44.318475"
+    "queued_at": "2026-09-30T04:05:47.773685"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of bb_lower_bounce, gap_down_continuation, ema_death_cross mean for a swing trade on HOMEFIRST? Current RSI=32, MACD hist=-6.6146, Vol=2.4x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of engulfing_bullish, strong_bullish_marubozu, stoch_rsi_oversold_reversal mean for a swing trade on COALINDIA? Current RSI=45, MACD hist=+0.1458, Vol=0.8x average. Signal is BUY.",
     "context": {
-      "ticker": "HOMEFIRST.NS",
+      "ticker": "COALINDIA.NS",
       "signal": "BUY",
-      "patterns": "bb_lower_bounce, gap_down_continuation, ema_death_cross",
-      "rsi": 31.7
+      "patterns": "engulfing_bullish, strong_bullish_marubozu, stoch_rsi_oversold_reversal",
+      "rsi": 45.3
     },
-    "queued_at": "2026-09-29T04:05:42.231603"
+    "queued_at": "2026-09-30T04:05:47.775879"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of bb_lower_bounce, gap_down_continuation, ema_death_cross mean for a swing trade on HOMEFIRST? Current RSI=32, MACD hist=-6.6146, Vol=2.4x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of strong_bullish_marubozu, stoch_rsi_oversold_reversal, full_bullish_alignment mean for a swing trade on ADANIPORTS? Current RSI=56, MACD hist=+4.1897, Vol=2.1x average. Signal is BUY.",
     "context": {
-      "ticker": "HOMEFIRST.NS",
+      "ticker": "ADANIPORTS.NS",
       "signal": "BUY",
-      "patterns": "bb_lower_bounce, gap_down_continuation, ema_death_cross",
-      "rsi": 31.7
+      "patterns": "strong_bullish_marubozu, stoch_rsi_oversold_reversal, full_bullish_alignment",
+      "rsi": 56.3
     },
-    "queued_at": "2026-09-29T04:05:42.247149"
+    "queued_at": "2026-09-30T04:05:47.893709"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of bb_lower_bounce, gap_down_continuation, ema_death_cross mean for a swing trade on HOMEFIRST? Current RSI=32, MACD hist=-6.6146, Vol=2.4x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of bullish_harami, pivot_point_test, stoch_rsi_oversold_reversal mean for a swing trade on BANDHANBNK? Current RSI=63, MACD hist=+1.4824, Vol=0.7x average. Signal is BUY.",
     "context": {
-      "ticker": "HOMEFIRST.NS",
+      "ticker": "BANDHANBNK.NS",
       "signal": "BUY",
-      "patterns": "bb_lower_bounce, gap_down_continuation, ema_death_cross",
-      "rsi": 31.7
+      "patterns": "bullish_harami, pivot_point_test, stoch_rsi_oversold_reversal",
+      "rsi": 62.6
     },
-    "queued_at": "2026-09-29T04:05:42.363150"
+    "queued_at": "2026-09-30T04:05:47.900378"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of ema_death_cross, gap_down_continuation, bb_lower_bounce mean for a swing trade on HOMEFIRST? Current RSI=32, MACD hist=-6.6146, Vol=2.4x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of adx_ranging_market, full_bearish_alignment, stoch_rsi_oversold_reversal mean for a swing trade on ADANIGREEN? Current RSI=41, MACD hist=+0.0686, Vol=1.3x average. Signal is BUY.",
     "context": {
-      "ticker": "HOMEFIRST.NS",
+      "ticker": "ADANIGREEN.NS",
       "signal": "BUY",
-      "patterns": "ema_death_cross, gap_down_continuation, bb_lower_bounce",
-      "rsi": 31.7
+      "patterns": "adx_ranging_market, full_bearish_alignment, stoch_rsi_oversold_reversal",
+      "rsi": 40.8
     },
-    "queued_at": "2026-09-29T07:45:47.766890"
+    "queued_at": "2026-09-30T04:05:47.903500"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of ema_death_cross, gap_down_continuation, bb_lower_bounce mean for a swing trade on HOMEFIRST? Current RSI=32, MACD hist=-6.6146, Vol=2.4x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of stoch_rsi_oversold_reversal, full_bullish_alignment, outside_bar mean for a swing trade on PAYTM? Current RSI=44, MACD hist=-23.9364, Vol=0.9x average. Signal is BUY.",
     "context": {
-      "ticker": "HOMEFIRST.NS",
+      "ticker": "PAYTM.NS",
       "signal": "BUY",
-      "patterns": "ema_death_cross, gap_down_continuation, bb_lower_bounce",
-      "rsi": 31.7
+      "patterns": "stoch_rsi_oversold_reversal, full_bullish_alignment, outside_bar",
+      "rsi": 44.3
     },
-    "queued_at": "2026-09-29T07:45:47.775214"
+    "queued_at": "2026-09-30T04:05:47.904824"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of ema_death_cross, gap_down_continuation, bb_lower_bounce mean for a swing trade on HOMEFIRST? Current RSI=32, MACD hist=-6.6146, Vol=2.4x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of engulfing_bullish, strong_bullish_marubozu, stoch_rsi_oversold_reversal mean for a swing trade on COALINDIA? Current RSI=45, MACD hist=+0.1458, Vol=0.8x average. Signal is BUY.",
     "context": {
-      "ticker": "HOMEFIRST.NS",
+      "ticker": "COALINDIA.NS",
       "signal": "BUY",
-      "patterns": "ema_death_cross, gap_down_continuation, bb_lower_bounce",
-      "rsi": 31.7
+      "patterns": "engulfing_bullish, strong_bullish_marubozu, stoch_rsi_oversold_reversal",
+      "rsi": 45.3
     },
-    "queued_at": "2026-09-29T07:45:47.869163"
+    "queued_at": "2026-09-30T04:05:47.906099"
   }
 ]

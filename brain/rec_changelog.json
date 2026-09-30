@@ -1,25 +1,5 @@
 [
   {
-    "type": "removed",
-    "ticker": "PIDILITIND.NS",
-    "nse_code": "PIDILITIND",
-    "signal": "BUY",
-    "date": "2026-07-22",
-    "ts": "2026-07-22T06:10:47.973142",
-    "detail": "Dropped \u2014 no longer meets threshold (was 65/100)",
-    "confidence": 0
-  },
-  {
-    "type": "updated",
-    "ticker": "UNIONBANK.NS",
-    "nse_code": "UNIONBANK",
-    "signal": "BUY",
-    "date": "2026-07-22",
-    "ts": "2026-07-22T06:10:47.973142",
-    "detail": "Confidence \u25bc5 (91 \u2192 86) | Stop loss moved \u20b9168.85 \u2192 \u20b9163.19",
-    "confidence": 85.7
-  },
-  {
     "type": "new",
     "ticker": "PIDILITIND.NS",
     "nse_code": "PIDILITIND",
@@ -5998,5 +5978,25 @@
     "ts": "2026-09-30T04:05:47.910372",
     "detail": "New BUY recommendation \u2014 confidence 71/100",
     "confidence": 70.9
+  },
+  {
+    "type": "new",
+    "ticker": "VBL.NS",
+    "nse_code": "VBL",
+    "signal": "BUY",
+    "date": "2026-09-30",
+    "ts": "2026-09-30T06:15:50.681003",
+    "detail": "New BUY recommendation \u2014 confidence 75/100",
+    "confidence": 74.9
+  },
+  {
+    "type": "updated",
+    "ticker": "COALINDIA.NS",
+    "nse_code": "COALINDIA",
+    "signal": "BUY",
+    "date": "2026-09-30",
+    "ts": "2026-09-30T06:15:50.681003",
+    "detail": "Target 1 moved \u20b9452.13 \u2192 \u20b9458.13",
+    "confidence": 73.2
   }
 ]

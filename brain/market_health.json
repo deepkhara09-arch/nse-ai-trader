@@ -1,6 +1,6 @@
 {
   "date": "2026-09-30",
-  "session": "morning",
+  "session": "midday",
   "nifty": {
     "symbol": "^NSEI",
     "value": 22716.2,
@@ -64,7 +64,7 @@
     "VIX=13.4 at 90th percentile vs last 30d \u2014 unusually high stress",
     "Nifty in downtrend (strong_down) \u2014 only high-confidence BUY signals",
     "Nifty choppy intraday \u2014 wait for cleaner setups",
-    "Global macro risk-off (-0.37) \u2014 Overall macro mood is risk-off (-0.37). US Dow -0.3% overnight. Crude +0.2%. USD/INR -0.0%. Notable: Geopolitical confli",
+    "Global macro risk-off (-0.33) \u2014 Overall macro mood is risk-off (-0.33). US Dow -0.3% overnight. Crude -3.5%. USD/INR -0.0%. Notable: Geopolitical confli",
     "Heavy FII/DII outflow (\u20b9-3,028 Cr) \u2014 institutions selling"
   ],
   "leading_sectors": [],
@@ -78,11 +78,11 @@
   "intraday_regime": "choppy",
   "macro": {
     "date": "2026-09-30",
-    "session": "preopen",
-    "generated_at": "2026-09-30T03:05:44.649343",
-    "global_score": 0.14,
+    "session": "midday",
+    "generated_at": "2026-09-30T06:15:42.607483",
+    "global_score": 0.228,
     "india_score": -1.0,
-    "overall_score": -0.373,
+    "overall_score": -0.325,
     "mood": "risk_off",
     "drivers": [
       "\u2018I have $400,000 in equity\u2019: I\u2019m 80. Should I sell my house because of dangerous stairs \u2014 or spend thousands renovating?",
@@ -108,23 +108,23 @@
         "chg_pct": -0.17
       },
       "nikkei": {
-        "last": 66318.81,
-        "chg_pct": 1.28
+        "last": 66836.95,
+        "chg_pct": 2.07
       },
       "crude": {
-        "last": 89.55,
-        "chg_pct": 0.19
+        "last": 89.38,
+        "chg_pct": -3.48
       },
       "usdinr": {
-        "last": 95.97,
-        "chg_pct": -0.01
+        "last": 95.96,
+        "chg_pct": -0.02
       },
       "gold": {
-        "last": 4212.3,
-        "chg_pct": 0.78
+        "last": 4179.7,
+        "chg_pct": 0.27
       }
     },
-    "summary": "Overall macro mood is risk-off (-0.37). US Dow -0.3% overnight. Crude +0.2%. USD/INR -0.0%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
+    "summary": "Overall macro mood is risk-off (-0.33). US Dow -0.3% overnight. Crude -3.5%. USD/INR -0.0%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
       "Trade-war headlines spook global markets; IT & export names react most."

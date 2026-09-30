@@ -1,6 +1,6 @@
 {
   "date": "2026-09-30",
-  "session": "midday",
+  "session": "afternoon",
   "nifty": {
     "symbol": "^NSEI",
     "value": 22716.2,
@@ -63,7 +63,6 @@
   "warnings": [
     "VIX=13.4 at 90th percentile vs last 30d \u2014 unusually high stress",
     "Nifty in downtrend (strong_down) \u2014 only high-confidence BUY signals",
-    "Nifty choppy intraday \u2014 wait for cleaner setups",
     "Global macro risk-off (-0.33) \u2014 Overall macro mood is risk-off (-0.33). US Dow -0.3% overnight. Crude -3.5%. USD/INR -0.0%. Notable: Geopolitical confli",
     "Heavy FII/DII outflow (\u20b9-3,028 Cr) \u2014 institutions selling"
   ],
@@ -75,7 +74,7 @@
     "Bank",
     "Infra"
   ],
-  "intraday_regime": "choppy",
+  "intraday_regime": "mixed",
   "macro": {
     "date": "2026-09-30",
     "session": "midday",

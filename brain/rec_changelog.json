@@ -1,15 +1,5 @@
 [
   {
-    "type": "new",
-    "ticker": "PIDILITIND.NS",
-    "nse_code": "PIDILITIND",
-    "signal": "BUY",
-    "date": "2026-07-22",
-    "ts": "2026-07-22T07:45:58.427190",
-    "detail": "New BUY recommendation \u2014 confidence 70/100",
-    "confidence": 70.3
-  },
-  {
     "type": "removed",
     "ticker": "ICICIBANK.NS",
     "nse_code": "ICICIBANK",
@@ -5998,5 +5988,15 @@
     "ts": "2026-09-30T06:15:50.681003",
     "detail": "Target 1 moved \u20b9452.13 \u2192 \u20b9458.13",
     "confidence": 73.2
+  },
+  {
+    "type": "updated",
+    "ticker": "VBL.NS",
+    "nse_code": "VBL",
+    "signal": "BUY",
+    "date": "2026-09-30",
+    "ts": "2026-09-30T07:45:46.237031",
+    "detail": "Confidence \u25bc6 (75 \u2192 69)",
+    "confidence": 68.6
   }
 ]

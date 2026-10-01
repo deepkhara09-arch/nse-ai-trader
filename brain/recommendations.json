@@ -3,10 +3,10 @@
     "ticker": "ADANIPORTS.NS",
     "nse_code": "ADANIPORTS",
     "company_name": "Adani Ports & SEZ",
-    "date": "2026-09-30",
-    "generated_at": "2026-09-30 09:45 UTC",
-    "valid_until": "15:40 IST",
-    "session": "intraday_close",
+    "date": "2026-10-01",
+    "generated_at": "2026-10-01 03:05 UTC",
+    "valid_until": "09:35 IST",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -40,10 +40,10 @@
     "pattern_score": 2.0,
     "confluence_bonus": 10,
     "paper_bonus": 0.0,
-    "success_probability": 0.477,
-    "base_success_prob": 0.497,
-    "profit_probability": 0.491,
-    "composite_score": 51.71,
+    "success_probability": 0.474,
+    "base_success_prob": 0.492,
+    "profit_probability": 0.476,
+    "composite_score": 51.01,
     "focus_rank": 3,
     "rank_delta": 0,
     "intention": "BUY ADANIPORTS for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
@@ -67,7 +67,7 @@
     "data_confidence": "Estimated",
     "data_confidence_key": "estimated",
     "data_confidence_note": "Only 0 paper trade(s) \u2014 probability is an indicator-based estimate, not yet proven",
-    "expected_edge_r": 0.491,
+    "expected_edge_r": 0.476,
     "buy_score": 12.09,
     "sell_score": 3.0,
     "reasons": [
@@ -100,15 +100,15 @@
       "History backtest: this kind of BUY setup worked 43% of the time over ~1 week on this stock (sample: 51)"
     ],
     "patterns_seen": [
+      "stoch_rsi_oversold_reversal",
+      "momentum_continuation",
       "supertrend_bullish",
-      "tweezer_bottom",
       "rsi_bearish_divergence",
+      "tweezer_bottom",
+      "full_bullish_alignment",
       "strong_bullish_marubozu",
       "pivot_r1_breakout",
-      "volume_breakout_bullish",
-      "full_bullish_alignment",
-      "momentum_continuation",
-      "stoch_rsi_oversold_reversal"
+      "volume_breakout_bullish"
     ],
     "reliable_patterns": [],
     "nearest_support": 1703.9,
@@ -136,20 +136,19 @@
     "paper_expectancy": 0,
     "market_mood": "bearish",
     "market_warning": [
-      "VIX=13.4 at 90th percentile vs last 30d \u2014 unusually high stress",
-      "Nifty in downtrend (strong_down) \u2014 only high-confidence BUY signals",
-      "Global macro risk-off (-0.33) \u2014 Overall macro mood is risk-off (-0.33). US Dow -0.3% overnight. Crude -3.5%. USD/INR -0.0%. Notable: Geopolitical confli",
-      "Heavy FII/DII outflow (\u20b9-3,028 Cr) \u2014 institutions selling"
+      "VIX=13.5 at 93th percentile vs last 30d \u2014 unusually high stress",
+      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
+      "Heavy FII/DII outflow (\u20b9+1,123 Cr) \u2014 institutions selling"
     ]
   },
   {
     "ticker": "COALINDIA.NS",
     "nse_code": "COALINDIA",
     "company_name": "Coal India Ltd",
-    "date": "2026-09-30",
-    "generated_at": "2026-09-30 09:45 UTC",
-    "valid_until": "15:40 IST",
-    "session": "intraday_close",
+    "date": "2026-10-01",
+    "generated_at": "2026-10-01 03:05 UTC",
+    "valid_until": "09:35 IST",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -184,9 +183,9 @@
     "confluence_bonus": 7.5,
     "paper_bonus": 0.0,
     "success_probability": 0.442,
-    "base_success_prob": 0.469,
-    "profit_probability": 0.172,
-    "composite_score": 47.13,
+    "base_success_prob": 0.463,
+    "profit_probability": 0.158,
+    "composite_score": 46.41,
     "focus_rank": 4,
     "rank_delta": 0,
     "intention": "BUY COALINDIA for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
@@ -199,9 +198,9 @@
       "fundamentals"
     ],
     "backtest_tested": true,
-    "backtest_hit_5d": 0.38,
-    "backtest_hit_10d": 0.42,
-    "backtest_sample": 50,
+    "backtest_hit_5d": 0.392,
+    "backtest_hit_10d": 0.431,
+    "backtest_sample": 51,
     "hist_long_trend": "strong_downtrend",
     "hist_52w_position": 68.6,
     "hist_personality": "choppy",
@@ -209,7 +208,7 @@
     "data_confidence": "Estimated",
     "data_confidence_key": "estimated",
     "data_confidence_note": "Only 1 paper trade(s) \u2014 probability is an indicator-based estimate, not yet proven",
-    "expected_edge_r": 0.172,
+    "expected_edge_r": 0.158,
     "buy_score": 9.32,
     "sell_score": 0,
     "reasons": [
@@ -238,16 +237,16 @@
       "Resistance at \u20b9431.25 is natural target",
       "Latest news: 'PTC India, Coal India to REC: Top 10 dividend stocks | One beats PPF i'",
       "Confluence: 5 independent signal families agree (trend, momentum, pattern, news, fundamentals)",
-      "History backtest: this kind of BUY setup worked 38% of the time over ~1 week on this stock (sample: 50)"
+      "History backtest: this kind of BUY setup worked 39% of the time over ~1 week on this stock (sample: 51)"
     ],
     "patterns_seen": [
-      "supertrend_bullish",
-      "tweezer_bottom",
-      "pivot_point_test",
-      "strong_bullish_marubozu",
-      "full_bullish_alignment",
+      "stoch_rsi_oversold_reversal",
       "momentum_continuation",
-      "stoch_rsi_oversold_reversal"
+      "supertrend_bullish",
+      "pivot_point_test",
+      "tweezer_bottom",
+      "full_bullish_alignment",
+      "strong_bullish_marubozu"
     ],
     "reliable_patterns": [],
     "nearest_support": 414.8,
@@ -275,10 +274,9 @@
     "paper_expectancy": -124.86,
     "market_mood": "bearish",
     "market_warning": [
-      "VIX=13.4 at 90th percentile vs last 30d \u2014 unusually high stress",
-      "Nifty in downtrend (strong_down) \u2014 only high-confidence BUY signals",
-      "Global macro risk-off (-0.33) \u2014 Overall macro mood is risk-off (-0.33). US Dow -0.3% overnight. Crude -3.5%. USD/INR -0.0%. Notable: Geopolitical confli",
-      "Heavy FII/DII outflow (\u20b9-3,028 Cr) \u2014 institutions selling"
+      "VIX=13.5 at 93th percentile vs last 30d \u2014 unusually high stress",
+      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
+      "Heavy FII/DII outflow (\u20b9+1,123 Cr) \u2014 institutions selling"
     ]
   }
 ]

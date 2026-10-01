@@ -1,129 +1,129 @@
 {
-  "date": "2026-09-30",
-  "session": "intraday_close",
+  "date": "2026-10-01",
+  "session": "preopen",
   "nifty": {
     "symbol": "^NSEI",
-    "value": 22716.2,
-    "day_change_pct": -0.28,
-    "trend_5d": "strong_down",
+    "value": 22620.45,
+    "day_change_pct": -0.42,
+    "trend_5d": "down",
     "trend_20d": "strong_down",
-    "ath_pct_60d": -8.31
+    "ath_pct_60d": -8.69
   },
   "vix": {
-    "value": 13.41,
+    "value": 13.49,
     "level": "normal",
-    "percentile_30d": 90.0,
-    "avg_30d": 11.64
+    "percentile_30d": 93.0,
+    "avg_30d": 11.71
   },
   "bank_nifty": {
     "symbol": "^NSEBANK",
-    "value": 54259.95,
-    "day_change_pct": -0.39,
-    "trend_5d": "strong_down",
+    "value": 54633.05,
+    "day_change_pct": 0.69,
+    "trend_5d": "down",
     "trend_20d": "strong_down",
-    "ath_pct_60d": -6.85,
+    "ath_pct_60d": -6.21,
     "diverging": false
   },
   "sectors": {
     "IT": {
       "symbol": "ITBEES.NS",
-      "value": 31.23,
-      "day_change_pct": -0.22,
+      "value": 30.8,
+      "day_change_pct": -1.38,
       "trend_5d": "down",
       "trend_20d": "strong_down",
-      "ath_pct_60d": -15.55
+      "ath_pct_60d": -16.71
     },
     "Pharma": {
       "symbol": "PHARMABEES.NS",
-      "value": 27.79,
-      "day_change_pct": 0.83,
-      "trend_5d": "sideways",
-      "trend_20d": "up",
-      "ath_pct_60d": -2.76
+      "value": 27.32,
+      "day_change_pct": -1.69,
+      "trend_5d": "down",
+      "trend_20d": "down",
+      "ath_pct_60d": -4.41
     },
     "Bank": {
       "symbol": "BANKBEES.NS",
-      "value": 565.32,
-      "day_change_pct": -1.91,
+      "value": 564.42,
+      "day_change_pct": -0.16,
       "trend_5d": "strong_down",
       "trend_20d": "strong_down",
-      "ath_pct_60d": -7.02
+      "ath_pct_60d": -7.16
     },
     "Infra": {
       "symbol": "INFRABEES.NS",
-      "value": 911.99,
-      "day_change_pct": -1.88,
-      "trend_5d": "down",
+      "value": 908.55,
+      "day_change_pct": -0.38,
+      "trend_5d": "strong_down",
       "trend_20d": "strong_down",
-      "ath_pct_60d": -7.68
+      "ath_pct_60d": -8.02
     }
   },
   "market_mood": "bearish",
   "trade_allowed": true,
   "warnings": [
-    "VIX=13.4 at 90th percentile vs last 30d \u2014 unusually high stress",
-    "Nifty in downtrend (strong_down) \u2014 only high-confidence BUY signals",
-    "Global macro risk-off (-0.33) \u2014 Overall macro mood is risk-off (-0.33). US Dow -0.3% overnight. Crude -3.5%. USD/INR -0.0%. Notable: Geopolitical confli",
-    "Heavy FII/DII outflow (\u20b9-3,028 Cr) \u2014 institutions selling"
+    "VIX=13.5 at 93th percentile vs last 30d \u2014 unusually high stress",
+    "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
+    "Heavy FII/DII outflow (\u20b9+1,123 Cr) \u2014 institutions selling"
   ],
   "leading_sectors": [],
   "market_regime": "normal",
   "sector_breadth": 0.0,
   "lagging_sectors": [
     "IT",
+    "Pharma",
     "Bank",
     "Infra"
   ],
   "intraday_regime": "mixed",
   "macro": {
-    "date": "2026-09-30",
-    "session": "midday",
-    "generated_at": "2026-09-30T06:15:42.607483",
-    "global_score": 0.228,
-    "india_score": -1.0,
-    "overall_score": -0.325,
-    "mood": "risk_off",
+    "date": "2026-10-01",
+    "session": "preopen",
+    "generated_at": "2026-10-01T03:05:37.948783",
+    "global_score": 0.156,
+    "india_score": 0.0,
+    "overall_score": 0.086,
+    "mood": "neutral",
     "drivers": [
-      "\u2018I have $400,000 in equity\u2019: I\u2019m 80. Should I sell my house because of dangerous stairs \u2014 or spend thousands renovating?",
+      "Cars have become unaffordable for many Americans. Here\u2019s what the numbers show.",
       "\u2018I\u2019m never selling\u2019: I\u2019m 47 and buy bitcoin with every dollar I earn. Am I crazy?",
-      "I\u2019m 77, pay rent and live off Social Security, but I help homeless people. Why are so many people going hungry?",
-      "\u2018We lived within our means\u2019: I earned $30,000 as a pastor and still retired comfortably. Why don\u2019t you tell people that?",
-      "\u2018I\u2019d rather be on a beach in Bali\u2019: My husband resents my $8 million net worth. Should I pay for his retirement?",
-      "Hollywood\u2019s big debt deal hits a wall of higher yields as Paramount finances Warner Bros. buyout",
-      "Could SpaceX be worth $12 trillion one day? Citi says Starship gets it a step closer.",
-      "The real prize in AMD\u2019s $8 billion World Labs acquisition isn\u2019t what you\u2019d think"
+      "\u2018I have $400,000 in equity\u2019: I\u2019m 80. Should I sell my house because of dangerous stairs \u2014 or spend thousands renovating?",
+      "I\u2019m 71 and still working. I earn $108,000 a year. Am I doing the right thing?",
+      "Google shows it\u2019s not out of the AI race just yet",
+      "The 15 worst-performing S&P 500 stocks during a dismal September",
+      "Trump touts economic wins in battleground states \u2014 like a $54 billion Alaskan pipeline \u2014 as the midterms draw closer",
+      "How the \u2018AI put\u2019 has become the only thing that matters for stocks"
     ],
     "global_cues": {
       "dow": {
-        "last": 51349.92,
-        "chg_pct": -0.26
+        "last": 50906.05,
+        "chg_pct": -0.86
       },
       "nasdaq": {
-        "last": 26797.54,
-        "chg_pct": -0.09
+        "last": 26861.06,
+        "chg_pct": 0.24
       },
       "sp500": {
-        "last": 7670.84,
-        "chg_pct": -0.17
+        "last": 7651.54,
+        "chg_pct": -0.25
       },
       "nikkei": {
-        "last": 66836.95,
-        "chg_pct": 2.07
+        "last": 68355.81,
+        "chg_pct": 2.4
       },
       "crude": {
-        "last": 89.38,
-        "chg_pct": -3.48
+        "last": 89.65,
+        "chg_pct": -0.85
       },
       "usdinr": {
-        "last": 95.96,
-        "chg_pct": -0.02
+        "last": 95.82,
+        "chg_pct": -0.24
       },
       "gold": {
-        "last": 4179.7,
-        "chg_pct": 0.27
+        "last": 4190.5,
+        "chg_pct": 0.09
       }
     },
-    "summary": "Overall macro mood is risk-off (-0.33). US Dow -0.3% overnight. Crude -3.5%. USD/INR -0.0%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
+    "summary": "Overall macro mood is neutral (+0.09). US Dow -0.9% overnight. Crude -0.8%. USD/INR -0.2%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
       "Trade-war headlines spook global markets; IT & export names react most."
@@ -131,22 +131,16 @@
     "playbook_bias": "risk_off",
     "article_count": 60
   },
-  "macro_risk_factor": 0.7,
+  "macro_risk_factor": 0.75,
   "fii_dii": {
-    "date": "2026-09-30",
-    "fii_net_cr": -9980.22,
-    "dii_net_cr": 6952.71,
-    "combined_net_cr": -3027.51,
+    "date": "2026-10-01",
+    "fii_net_cr": -10148.41,
+    "dii_net_cr": 11271.73,
+    "combined_net_cr": 1123.32,
     "signal": "strong_outflow",
     "ok": true,
     "error": "",
     "history": [
-      {
-        "date": "2026-08-21",
-        "fii": -583.36,
-        "dii": 3537.71,
-        "combined": 2954.35
-      },
       {
         "date": "2026-08-24",
         "fii": -542.71,
@@ -320,20 +314,27 @@
         "fii": -9980.22,
         "dii": 6952.71,
         "combined": -3027.51
+      },
+      {
+        "date": "2026-10-01",
+        "fii": -10148.41,
+        "dii": 11271.73,
+        "combined": 1123.32
       }
     ]
   },
   "pcr": {
-    "date": "2026-09-30",
-    "pcr": 0.882,
-    "reading": "neutral",
-    "total_pe_oi": 2746828,
-    "total_ce_oi": 3114273,
-    "spot": 22716.2,
-    "max_pain": 22750.0,
-    "max_pain_dist_pct": -0.15,
-    "oi_bias": "balanced",
+    "date": "2026-10-01",
+    "pcr": 0.646,
+    "reading": "bearish_bias",
+    "total_pe_oi": 1629584,
+    "total_ce_oi": 2524177,
+    "spot": 22620.45,
+    "max_pain": 22700.0,
+    "max_pain_dist_pct": -0.35,
+    "oi_bias": "call_heavy_resistance",
     "ok": true,
     "error": ""
-  }
+  },
+  "oi_note": "Heavy call OI above spot \u2014 option writers see a lid (bearish lean)"
 }

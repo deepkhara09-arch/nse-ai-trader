@@ -1,92 +1,5 @@
 [
   {
-    "timestamp": "2026-08-13T05:57:06.044948",
-    "date": "2026-08-13",
-    "ticker": "BAJFINANCE.NS",
-    "session": "midday",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 85.3,
-    "entry": 1084.1,
-    "stop_loss": 1033.73,
-    "target": 1184.84,
-    "reason": "paper midday",
-    "patterns": [
-      "evening_star",
-      "pivot_point_test",
-      "full_bullish_alignment",
-      "adx_strong_trend_up",
-      "dragonfly_doji",
-      "rsi_bullish_divergence",
-      "pivot_s1_breakdown",
-      "doji"
-    ]
-  },
-  {
-    "timestamp": "2026-08-13T07:45:51.848076",
-    "date": "2026-08-13",
-    "ticker": "SBIN.NS",
-    "session": "afternoon",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 83.0,
-    "entry": 1080.0,
-    "stop_loss": 1048.52,
-    "target": 1142.96,
-    "reason": "paper afternoon",
-    "patterns": [
-      "pivot_r1_breakout",
-      "strong_bullish_marubozu",
-      "pivot_r2_breakout",
-      "supertrend_bullish",
-      "full_bullish_alignment"
-    ]
-  },
-  {
-    "timestamp": "2026-08-13T07:45:51.849434",
-    "date": "2026-08-13",
-    "ticker": "UNIONBANK.NS",
-    "session": "afternoon",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 95,
-    "entry": 186.68,
-    "stop_loss": 179.17,
-    "target": 201.7,
-    "reason": "paper afternoon",
-    "patterns": [
-      "morning_star",
-      "strong_bullish_marubozu",
-      "pivot_r1_breakout",
-      "rsi_bearish_divergence",
-      "supertrend_bullish",
-      "bb_upper_rejection",
-      "full_bullish_alignment"
-    ]
-  },
-  {
-    "timestamp": "2026-08-13T07:45:51.850989",
-    "date": "2026-08-13",
-    "ticker": "PIDILITIND.NS",
-    "session": "afternoon",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 95,
-    "entry": 1695.9,
-    "stop_loss": 1643.31,
-    "target": 1801.07,
-    "reason": "paper afternoon",
-    "patterns": [
-      "adx_strong_trend_up",
-      "pivot_r1_breakout",
-      "near_52w_high",
-      "rsi_bearish_divergence",
-      "supertrend_bullish",
-      "three_white_soldiers",
-      "full_bullish_alignment"
-    ]
-  },
-  {
     "timestamp": "2026-08-13T07:45:51.851793",
     "date": "2026-08-13",
     "ticker": "ASIANPAINT.NS",
@@ -21178,6 +21091,93 @@
       "tweezer_bottom",
       "stoch_rsi_oversold_reversal",
       "supertrend_bullish"
+    ]
+  },
+  {
+    "timestamp": "2026-10-01T06:17:08.990444",
+    "date": "2026-10-01",
+    "ticker": "PIDILITIND.NS",
+    "session": "midday",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 94.0,
+    "entry": 1478.9,
+    "stop_loss": 1429.09,
+    "target": 1558.6,
+    "reason": "paper midday",
+    "patterns": [
+      "adx_strong_trend_down",
+      "inside_bar",
+      "full_bearish_alignment",
+      "gap_up_reversal",
+      "pivot_r1_breakout",
+      "pivot_point_test",
+      "bb_lower_bounce"
+    ]
+  },
+  {
+    "timestamp": "2026-10-01T06:17:08.993632",
+    "date": "2026-10-01",
+    "ticker": "HOMEFIRST.NS",
+    "session": "midday",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 93.6,
+    "entry": 1101.1,
+    "stop_loss": 1000.69,
+    "target": 1215.85,
+    "reason": "paper midday",
+    "patterns": [
+      "inverted_hammer",
+      "supertrend_bullish",
+      "full_bearish_alignment",
+      "morning_star",
+      "pivot_point_test"
+    ]
+  },
+  {
+    "timestamp": "2026-10-01T06:17:08.995808",
+    "date": "2026-10-01",
+    "ticker": "UNIONBANK.NS",
+    "session": "midday",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 77.8,
+    "entry": 170.33,
+    "stop_loss": 164.25,
+    "target": 180.06,
+    "reason": "paper midday",
+    "patterns": [
+      "gap_up_continuation",
+      "adx_strong_trend_down",
+      "supertrend_bullish",
+      "rsi_bullish_divergence",
+      "volume_breakout_bullish",
+      "full_bearish_alignment",
+      "pivot_r1_breakout",
+      "bullish_harami"
+    ]
+  },
+  {
+    "timestamp": "2026-10-01T06:17:09.002335",
+    "date": "2026-10-01",
+    "ticker": "PAYTM.NS",
+    "session": "midday",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 57.2,
+    "entry": 1678.3,
+    "stop_loss": 1548.36,
+    "target": 1834.23,
+    "reason": "paper midday",
+    "patterns": [
+      "rsi_bearish_divergence",
+      "outside_bar",
+      "full_bullish_alignment",
+      "adx_strong_trend_down",
+      "supertrend_bullish",
+      "stoch_rsi_oversold_reversal",
+      "tweezer_bottom"
     ]
   }
 ]

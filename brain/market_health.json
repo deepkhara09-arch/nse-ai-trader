@@ -1,6 +1,6 @@
 {
   "date": "2026-10-01",
-  "session": "midday",
+  "session": "afternoon",
   "nifty": {
     "symbol": "^NSEI",
     "value": 22620.45,
@@ -63,7 +63,6 @@
   "warnings": [
     "VIX=13.5 at 93th percentile vs last 30d \u2014 unusually high stress",
     "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
-    "Nifty choppy intraday \u2014 wait for cleaner setups",
     "Heavy FII/DII outflow (\u20b9+1,123 Cr) \u2014 institutions selling"
   ],
   "leading_sectors": [],
@@ -75,7 +74,7 @@
     "Bank",
     "Infra"
   ],
-  "intraday_regime": "choppy",
+  "intraday_regime": "mixed",
   "macro": {
     "date": "2026-10-01",
     "session": "midday",

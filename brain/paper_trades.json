@@ -36,8 +36,8 @@
         "\u26a0 Buying against a long-term downtrend \u2014 lower conviction",
         "\u26a0 Daily buy fights the higher-timeframe trend \u2014 needs extra conviction"
       ],
-      "current_price": 424.35,
-      "unrealized_pnl": -9.75,
+      "current_price": 419.3,
+      "unrealized_pnl": -85.5,
       "max_held_days": 40,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -55,7 +55,7 @@
       "view_hist": [
         1,
         1,
-        1,
+        0,
         0
       ]
     },
@@ -91,8 +91,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "Broke below Pivot S1 support \u2014 bearish"
       ],
-      "current_price": 1100.1,
-      "unrealized_pnl": -64.0,
+      "current_price": 1094.6,
+      "unrealized_pnl": -86.0,
       "max_held_days": 40,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -108,7 +108,7 @@
         "hist_long_trend": "strong_uptrend"
       },
       "view_hist": [
-        0,
+        1,
         1,
         1,
         1
@@ -153,8 +153,8 @@
         "Near upper Bollinger Band",
         "RSI bearish divergence \u2014 price higher but RSI lower"
       ],
-      "current_price": 1778.0,
-      "unrealized_pnl": -22.5,
+      "current_price": 1777.8,
+      "unrealized_pnl": -23.1,
       "max_held_days": 40,
       "vol_regime_pct": 0.08399999999999999,
       "entry_market": {
@@ -172,7 +172,8 @@
       "view_hist": [
         1,
         1,
-        1
+        1,
+        0
       ]
     },
     {
@@ -207,8 +208,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "RSI=63 elevated"
       ],
-      "current_price": 178.1,
-      "unrealized_pnl": -131.08,
+      "current_price": 179.38,
+      "unrealized_pnl": -93.96,
       "max_held_days": 40,
       "vol_regime_pct": 0.08399999999999999,
       "entry_market": {
@@ -224,6 +225,7 @@
         "hist_long_trend": "uptrend"
       },
       "view_hist": [
+        0,
         0,
         0,
         0
@@ -267,8 +269,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "All EMAs stacked bearish"
       ],
-      "current_price": 1275.5,
-      "unrealized_pnl": 5.7,
+      "current_price": 1278.3,
+      "unrealized_pnl": 14.1,
       "max_held_days": 40,
       "vol_regime_pct": 0.08399999999999999,
       "entry_market": {
@@ -284,6 +286,7 @@
         "hist_long_trend": "uptrend"
       },
       "view_hist": [
+        0,
         0,
         0,
         0
@@ -325,8 +328,8 @@
         "RSI bearish divergence \u2014 price higher but RSI lower",
         "ADX strong trend \u2014 downside momentum confirmed"
       ],
-      "current_price": 1673.5,
-      "unrealized_pnl": -50.0,
+      "current_price": 1679.5,
+      "unrealized_pnl": -38.0,
       "max_held_days": 40,
       "vol_regime_pct": 0.08399999999999999,
       "entry_market": {
@@ -342,6 +345,7 @@
         "hist_long_trend": "strong_uptrend"
       },
       "view_hist": [
+        0,
         0,
         0,
         0
@@ -4762,7 +4766,7 @@
   "lifetime_wins": 24,
   "lifetime_losses": 37,
   "lifetime_pnl": -3766.96,
-  "last_pnl_reset_date": "2026-09-30",
+  "last_pnl_reset_date": "2026-10-01",
   "max_drawdown_pct": 4.47,
   "current_drawdown_pct": 4.22,
   "portfolio_peak": 101210.28,

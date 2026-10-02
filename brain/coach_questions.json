@@ -1,15 +1,5 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of inverted_hammer, full_bearish_alignment mean for a swing trade on HOMEFIRST? Current RSI=32, MACD hist=-13.1501, Vol=0.9x average. Signal is BUY.",
-    "context": {
-      "ticker": "HOMEFIRST.NS",
-      "signal": "BUY",
-      "patterns": "inverted_hammer, full_bearish_alignment",
-      "rsi": 32.3
-    },
-    "queued_at": "2026-10-01T07:45:44.387278"
-  },
-  {
     "question": "In Indian NSE markets, what does the combination of full_bullish_alignment, outside_bar, stoch_rsi_oversold_reversal mean for a swing trade on PAYTM? Current RSI=44, MACD hist=-23.9420, Vol=0.9x average. Signal is BUY.",
     "context": {
       "ticker": "PAYTM.NS",
@@ -98,5 +88,15 @@
       "rsi": 32.3
     },
     "queued_at": "2026-10-02T06:15:42.177890"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of full_bearish_alignment, inverted_hammer mean for a swing trade on HOMEFIRST? Current RSI=32, MACD hist=-13.1501, Vol=0.9x average. Signal is BUY.",
+    "context": {
+      "ticker": "HOMEFIRST.NS",
+      "signal": "BUY",
+      "patterns": "full_bearish_alignment, inverted_hammer",
+      "rsi": 32.3
+    },
+    "queued_at": "2026-10-02T07:49:35.022694"
   }
 ]

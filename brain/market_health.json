@@ -1,6 +1,6 @@
 {
   "date": "2026-10-02",
-  "session": "morning",
+  "session": "midday",
   "nifty": {
     "symbol": "^NSEI",
     "value": 22421.95,
@@ -77,11 +77,11 @@
   "intraday_regime": "mixed",
   "macro": {
     "date": "2026-10-02",
-    "session": "preopen",
-    "generated_at": "2026-10-02T03:05:40.911990",
-    "global_score": 0.103,
-    "india_score": -0.333,
-    "overall_score": -0.093,
+    "session": "midday",
+    "generated_at": "2026-10-02T06:15:42.072074",
+    "global_score": 0.11,
+    "india_score": -0.5,
+    "overall_score": -0.165,
     "mood": "neutral",
     "drivers": [
       "\u2018I have $400,000 in equity\u2019: I\u2019m 80. Should I sell my house because of dangerous stairs \u2014 or spend thousands renovating?",
@@ -107,25 +107,24 @@
         "chg_pct": 0.19
       },
       "nikkei": {
-        "last": 68326.72,
-        "chg_pct": -0.91
+        "last": 68273.5,
+        "chg_pct": -0.99
       },
       "crude": {
-        "last": 92.69,
-        "chg_pct": -0.19
+        "last": 92.87,
+        "chg_pct": 2.71
       },
       "usdinr": {
         "last": 96.3,
         "chg_pct": 0.39
       },
       "gold": {
-        "last": 4189.3,
-        "chg_pct": -0.31
+        "last": 4202.3,
+        "chg_pct": 0.37
       }
     },
-    "summary": "Overall macro mood is neutral (-0.09). US Dow +0.0% overnight. Crude -0.2%. USD/INR +0.4%. Notable: Crude oil spike; Geopolitical conflict / war; Tariffs / trade war.",
+    "summary": "Overall macro mood is neutral (-0.17). US Dow +0.0% overnight. Crude +2.7%. USD/INR +0.4%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
-      "India imports most of its oil \u2014 crude spikes hurt rupee, inflation, OMCs.",
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
       "Trade-war headlines spook global markets; IT & export names react most."
     ],

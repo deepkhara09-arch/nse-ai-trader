@@ -1,53 +1,54 @@
 {
-  "date": "2026-10-01",
-  "session": "midday",
-  "generated_at": "2026-10-01T06:17:00.960240",
-  "global_score": 0.011,
-  "india_score": 0.0,
-  "overall_score": 0.006,
+  "date": "2026-10-02",
+  "session": "preopen",
+  "generated_at": "2026-10-02T03:05:40.911990",
+  "global_score": 0.103,
+  "india_score": -0.333,
+  "overall_score": -0.093,
   "mood": "neutral",
   "drivers": [
-    "Cars have become unaffordable for many Americans. Here\u2019s what the numbers show.",
-    "\u2018I\u2019m never selling\u2019: I\u2019m 47 and buy bitcoin with every dollar I earn. Am I crazy?",
     "\u2018I have $400,000 in equity\u2019: I\u2019m 80. Should I sell my house because of dangerous stairs \u2014 or spend thousands renovating?",
     "I\u2019m 71 and still working. I earn $108,000 a year. Am I doing the right thing?",
-    "Google shows it\u2019s not out of the AI race just yet",
-    "The 15 worst-performing S&P 500 stocks during a dismal September",
-    "Trump touts economic wins in battleground states \u2014 like a $54 billion Alaskan pipeline \u2014 as the midterms draw closer",
-    "How the \u2018AI put\u2019 has become the only thing that matters for stocks"
+    "My wife never went back to work after raising our kids. Do I have to share my retirement savings 50/50?",
+    "Here\u2019s who\u2019s joining the S&P 500 in the index\u2019s latest shakeup",
+    "This could be the worst year ever for Nike\u2019s stock, with sales set to fall further",
+    "The hidden silver lining of high interest rates: safer, cheaper retirement income",
+    "The stock market is anything but normal right now \u2014 and these charts show it",
+    "Here\u2019s how much more groceries, clothing and household appliances could cost as diesel prices keep surging"
   ],
   "global_cues": {
     "dow": {
-      "last": 50906.05,
-      "chg_pct": -0.86
+      "last": 50926.56,
+      "chg_pct": 0.04
     },
     "nasdaq": {
-      "last": 26861.06,
-      "chg_pct": 0.24
+      "last": 26871.6,
+      "chg_pct": 0.04
     },
     "sp500": {
-      "last": 7651.54,
-      "chg_pct": -0.25
+      "last": 7666.45,
+      "chg_pct": 0.19
     },
     "nikkei": {
-      "last": 68964.0,
-      "chg_pct": 3.31
+      "last": 68326.72,
+      "chg_pct": -0.91
     },
     "crude": {
-      "last": 90.42,
-      "chg_pct": 1.16
+      "last": 92.69,
+      "chg_pct": -0.19
     },
     "usdinr": {
-      "last": 95.98,
-      "chg_pct": -0.07
+      "last": 96.3,
+      "chg_pct": 0.39
     },
     "gold": {
-      "last": 4186.7,
-      "chg_pct": 0.17
+      "last": 4189.3,
+      "chg_pct": -0.31
     }
   },
-  "summary": "Overall macro mood is neutral (+0.01). US Dow -0.9% overnight. Crude +1.2%. USD/INR -0.1%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
+  "summary": "Overall macro mood is neutral (-0.09). US Dow +0.0% overnight. Crude -0.2%. USD/INR +0.4%. Notable: Crude oil spike; Geopolitical conflict / war; Tariffs / trade war.",
   "playbook": [
+    "India imports most of its oil \u2014 crude spikes hurt rupee, inflation, OMCs.",
     "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
     "Trade-war headlines spook global markets; IT & export names react most."
   ],

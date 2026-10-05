@@ -1,13 +1,63 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of inverted_hammer, full_bearish_alignment mean for a swing trade on HOMEFIRST? Current RSI=32, MACD hist=-13.1501, Vol=0.9x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_down, full_bearish_alignment mean for a swing trade on PIDILITIND? Current RSI=29, MACD hist=-9.5146, Vol=1.4x average. Signal is BUY.",
     "context": {
-      "ticker": "HOMEFIRST.NS",
+      "ticker": "PIDILITIND.NS",
       "signal": "BUY",
-      "patterns": "inverted_hammer, full_bearish_alignment",
-      "rsi": 32.3
+      "patterns": "adx_strong_trend_down, full_bearish_alignment",
+      "rsi": 29.1
     },
-    "queued_at": "2026-10-05T03:05:39.330425"
+    "queued_at": "2026-10-05T09:45:39.102979"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of pivot_s1_bounce, pivot_point_test mean for a swing trade on HINDALCO? Current RSI=37, MACD hist=-4.2038, Vol=1.6x average. Signal is BUY.",
+    "context": {
+      "ticker": "HINDALCO.NS",
+      "signal": "BUY",
+      "patterns": "pivot_s1_bounce, pivot_point_test",
+      "rsi": 37.4
+    },
+    "queued_at": "2026-10-05T09:45:39.105196"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of stoch_rsi_oversold_reversal, three_white_soldiers, momentum_continuation mean for a swing trade on VBL? Current RSI=58, MACD hist=+2.1597, Vol=1.5x average. Signal is BUY.",
+    "context": {
+      "ticker": "VBL.NS",
+      "signal": "BUY",
+      "patterns": "stoch_rsi_oversold_reversal, three_white_soldiers, momentum_continuation",
+      "rsi": 57.9
+    },
+    "queued_at": "2026-10-05T09:45:39.112668"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of adx_ranging_market, spinning_top, three_white_soldiers mean for a swing trade on ADANIGREEN? Current RSI=49, MACD hist=+1.2301, Vol=4.5x average. Signal is BUY.",
+    "context": {
+      "ticker": "ADANIGREEN.NS",
+      "signal": "BUY",
+      "patterns": "adx_ranging_market, spinning_top, three_white_soldiers",
+      "rsi": 49.1
+    },
+    "queued_at": "2026-10-05T09:45:39.114043"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of adx_ranging_market, spinning_top, three_white_soldiers mean for a swing trade on ADANIGREEN? Current RSI=49, MACD hist=+1.2301, Vol=4.5x average. Signal is BUY.",
+    "context": {
+      "ticker": "ADANIGREEN.NS",
+      "signal": "BUY",
+      "patterns": "adx_ranging_market, spinning_top, three_white_soldiers",
+      "rsi": 49.1
+    },
+    "queued_at": "2026-10-05T09:45:39.120773"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of pivot_s1_bounce, pivot_point_test mean for a swing trade on HINDALCO? Current RSI=37, MACD hist=-4.2038, Vol=1.6x average. Signal is BUY.",
+    "context": {
+      "ticker": "HINDALCO.NS",
+      "signal": "BUY",
+      "patterns": "pivot_s1_bounce, pivot_point_test",
+      "rsi": 37.4
+    },
+    "queued_at": "2026-10-05T09:45:39.123030"
   },
   {
     "question": "In Indian NSE markets, what does the combination of adx_strong_trend_down, full_bearish_alignment mean for a swing trade on PIDILITIND? Current RSI=29, MACD hist=-9.5146, Vol=1.4x average. Signal is BUY.",
@@ -17,86 +67,36 @@
       "patterns": "adx_strong_trend_down, full_bearish_alignment",
       "rsi": 29.1
     },
-    "queued_at": "2026-10-05T04:05:44.915249"
+    "queued_at": "2026-10-05T09:45:39.246884"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of volume_breakout_bullish, full_bearish_alignment, supertrend_bullish mean for a swing trade on ADANIGREEN? Current RSI=49, MACD hist=+1.2301, Vol=4.5x average. Signal is BUY.",
-    "context": {
-      "ticker": "ADANIGREEN.NS",
-      "signal": "BUY",
-      "patterns": "volume_breakout_bullish, full_bearish_alignment, supertrend_bullish",
-      "rsi": 49.1
-    },
-    "queued_at": "2026-10-05T04:05:44.922739"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of volume_breakout_bullish, full_bearish_alignment, supertrend_bullish mean for a swing trade on ADANIGREEN? Current RSI=49, MACD hist=+1.2301, Vol=4.5x average. Signal is BUY.",
-    "context": {
-      "ticker": "ADANIGREEN.NS",
-      "signal": "BUY",
-      "patterns": "volume_breakout_bullish, full_bearish_alignment, supertrend_bullish",
-      "rsi": 49.1
-    },
-    "queued_at": "2026-10-05T04:05:44.931148"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_down, full_bearish_alignment mean for a swing trade on PIDILITIND? Current RSI=29, MACD hist=-9.5146, Vol=1.4x average. Signal is BUY.",
-    "context": {
-      "ticker": "PIDILITIND.NS",
-      "signal": "BUY",
-      "patterns": "adx_strong_trend_down, full_bearish_alignment",
-      "rsi": 29.1
-    },
-    "queued_at": "2026-10-05T04:05:45.035282"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of volume_breakout_bullish, full_bearish_alignment, supertrend_bullish mean for a swing trade on ADANIGREEN? Current RSI=49, MACD hist=+1.2301, Vol=4.5x average. Signal is BUY.",
-    "context": {
-      "ticker": "ADANIGREEN.NS",
-      "signal": "BUY",
-      "patterns": "volume_breakout_bullish, full_bearish_alignment, supertrend_bullish",
-      "rsi": 49.1
-    },
-    "queued_at": "2026-10-05T04:05:45.047125"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of pivot_s2_bounce, pivot_s1_bounce mean for a swing trade on HINDALCO? Current RSI=37, MACD hist=-4.2038, Vol=1.6x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of pivot_s1_bounce, pivot_point_test mean for a swing trade on HINDALCO? Current RSI=37, MACD hist=-4.2038, Vol=1.6x average. Signal is BUY.",
     "context": {
       "ticker": "HINDALCO.NS",
       "signal": "BUY",
-      "patterns": "pivot_s2_bounce, pivot_s1_bounce",
+      "patterns": "pivot_s1_bounce, pivot_point_test",
       "rsi": 37.4
     },
-    "queued_at": "2026-10-05T06:15:51.292826"
+    "queued_at": "2026-10-05T09:45:39.252239"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of pivot_s2_bounce, pivot_s1_bounce mean for a swing trade on HINDALCO? Current RSI=37, MACD hist=-4.2038, Vol=1.6x average. Signal is BUY.",
-    "context": {
-      "ticker": "HINDALCO.NS",
-      "signal": "BUY",
-      "patterns": "pivot_s2_bounce, pivot_s1_bounce",
-      "rsi": 37.4
-    },
-    "queued_at": "2026-10-05T06:15:51.434384"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of stoch_rsi_oversold_reversal, supertrend_bullish, pivot_r1_breakout mean for a swing trade on VBL? Current RSI=58, MACD hist=+2.1597, Vol=1.5x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of stoch_rsi_oversold_reversal, three_white_soldiers, momentum_continuation mean for a swing trade on VBL? Current RSI=58, MACD hist=+2.1597, Vol=1.5x average. Signal is BUY.",
     "context": {
       "ticker": "VBL.NS",
       "signal": "BUY",
-      "patterns": "stoch_rsi_oversold_reversal, supertrend_bullish, pivot_r1_breakout",
+      "patterns": "stoch_rsi_oversold_reversal, three_white_soldiers, momentum_continuation",
       "rsi": 57.9
     },
-    "queued_at": "2026-10-05T07:45:48.955797"
+    "queued_at": "2026-10-05T09:45:39.262470"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of stoch_rsi_oversold_reversal, supertrend_bullish, pivot_r1_breakout mean for a swing trade on VBL? Current RSI=58, MACD hist=+2.1597, Vol=1.5x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of adx_ranging_market, spinning_top, three_white_soldiers mean for a swing trade on ADANIGREEN? Current RSI=49, MACD hist=+1.2301, Vol=4.5x average. Signal is BUY.",
     "context": {
-      "ticker": "VBL.NS",
+      "ticker": "ADANIGREEN.NS",
       "signal": "BUY",
-      "patterns": "stoch_rsi_oversold_reversal, supertrend_bullish, pivot_r1_breakout",
-      "rsi": 57.9
+      "patterns": "adx_ranging_market, spinning_top, three_white_soldiers",
+      "rsi": 49.1
     },
-    "queued_at": "2026-10-05T07:45:49.085197"
+    "queued_at": "2026-10-05T09:45:39.266749"
   }
 ]

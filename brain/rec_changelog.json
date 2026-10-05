@@ -5,36 +5,6 @@
     "nse_code": "MARICO",
     "signal": "BUY",
     "date": "2026-07-23",
-    "ts": "2026-07-23T04:05:48.346571",
-    "detail": "Rank \u25b25 (#12 \u2192 #7)",
-    "confidence": 76.4
-  },
-  {
-    "type": "updated",
-    "ticker": "ICICIBANK.NS",
-    "nse_code": "ICICIBANK",
-    "signal": "BUY",
-    "date": "2026-07-23",
-    "ts": "2026-07-23T04:05:48.346571",
-    "detail": "Confidence \u25bc14 (80 \u2192 66) | Rank \u25b21 (#2 \u2192 #1)",
-    "confidence": 66.2
-  },
-  {
-    "type": "updated",
-    "ticker": "MARICO.NS",
-    "nse_code": "MARICO",
-    "signal": "BUY",
-    "date": "2026-07-23",
-    "ts": "2026-07-23T06:16:04.766412",
-    "detail": "Stop loss moved \u20b9840.87 \u2192 \u20b9832.09",
-    "confidence": 77.7
-  },
-  {
-    "type": "updated",
-    "ticker": "MARICO.NS",
-    "nse_code": "MARICO",
-    "signal": "BUY",
-    "date": "2026-07-23",
     "ts": "2026-07-23T07:45:48.278117",
     "detail": "Confidence \u25bc10 (78 \u2192 68) | Target 1 moved \u20b9905.17 \u2192 \u20b9895.50",
     "confidence": 67.9
@@ -5998,5 +5968,35 @@
     "ts": "2026-10-05T07:45:49.092128",
     "detail": "Dropped \u2014 no longer meets threshold (was 79/100)",
     "confidence": 0
+  },
+  {
+    "type": "new",
+    "ticker": "PIDILITIND.NS",
+    "nse_code": "PIDILITIND",
+    "signal": "BUY",
+    "date": "2026-10-05",
+    "ts": "2026-10-05T09:45:39.270613",
+    "detail": "New BUY recommendation \u2014 confidence 91/100",
+    "confidence": 90.8
+  },
+  {
+    "type": "new",
+    "ticker": "HINDALCO.NS",
+    "nse_code": "HINDALCO",
+    "signal": "BUY",
+    "date": "2026-10-05",
+    "ts": "2026-10-05T09:45:39.270613",
+    "detail": "New BUY recommendation \u2014 confidence 75/100",
+    "confidence": 74.6
+  },
+  {
+    "type": "updated",
+    "ticker": "VBL.NS",
+    "nse_code": "VBL",
+    "signal": "BUY",
+    "date": "2026-10-05",
+    "ts": "2026-10-05T09:45:39.270613",
+    "detail": "Stop loss moved \u20b9421.90 \u2192 \u20b9427.24 | Target 1 moved \u20b9458.65 \u2192 \u20b9463.42",
+    "confidence": 70.1
   }
 ]

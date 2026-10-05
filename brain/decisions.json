@@ -1,88 +1,5 @@
 [
   {
-    "timestamp": "2026-08-13T09:43:29.889096",
-    "date": "2026-08-13",
-    "ticker": "ASIANPAINT.NS",
-    "session": "intraday_close",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 60.5,
-    "entry": 2740.9,
-    "stop_loss": 2646.5,
-    "target": 2929.71,
-    "reason": "paper intraday_close",
-    "patterns": [
-      "rsi_bullish_divergence",
-      "pivot_point_test",
-      "hammer",
-      "supertrend_bullish",
-      "full_bullish_alignment",
-      "adx_ranging_market",
-      "outside_bar"
-    ]
-  },
-  {
-    "timestamp": "2026-08-13T09:43:29.889909",
-    "date": "2026-08-13",
-    "ticker": "CIPLA.NS",
-    "session": "intraday_close",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 72.5,
-    "entry": 1458.5,
-    "stop_loss": 1419.3,
-    "target": 1536.91,
-    "reason": "paper intraday_close",
-    "patterns": [
-      "rsi_bullish_divergence",
-      "pivot_point_test",
-      "spinning_top",
-      "stoch_rsi_overbought_reversal",
-      "low_volume_drift",
-      "full_bullish_alignment",
-      "pivot_s1_breakdown"
-    ]
-  },
-  {
-    "timestamp": "2026-08-13T09:43:29.891229",
-    "date": "2026-08-13",
-    "ticker": "NIACL.NS",
-    "session": "intraday_close",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 63.2,
-    "entry": 181.56,
-    "stop_loss": 171.68,
-    "target": 201.33,
-    "reason": "paper intraday_close",
-    "patterns": [
-      "full_bullish_alignment",
-      "supertrend_bullish"
-    ]
-  },
-  {
-    "timestamp": "2026-08-13T09:43:29.892531",
-    "date": "2026-08-13",
-    "ticker": "CHOLAFIN.NS",
-    "session": "intraday_close",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 89.3,
-    "entry": 1920.0,
-    "stop_loss": 1821.69,
-    "target": 2116.63,
-    "reason": "paper intraday_close",
-    "patterns": [
-      "rsi_bullish_divergence",
-      "pivot_point_test",
-      "near_52w_high",
-      "hammer",
-      "supertrend_bullish",
-      "low_volume_drift",
-      "full_bullish_alignment"
-    ]
-  },
-  {
     "timestamp": "2026-08-13T09:43:29.893810",
     "date": "2026-08-13",
     "ticker": "BAJFINANCE.NS",
@@ -21178,6 +21095,92 @@
       "pivot_point_test",
       "three_white_soldiers",
       "hammer"
+    ]
+  },
+  {
+    "timestamp": "2026-10-05T09:45:39.103290",
+    "date": "2026-10-05",
+    "ticker": "PIDILITIND.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 92.9,
+    "entry": 1480.9,
+    "stop_loss": 1430.93,
+    "target": 1560.85,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "adx_strong_trend_down",
+      "stoch_rsi_oversold_reversal",
+      "bb_lower_bounce",
+      "full_bearish_alignment",
+      "supertrend_bullish",
+      "pivot_point_test",
+      "pivot_r1_breakout"
+    ]
+  },
+  {
+    "timestamp": "2026-10-05T09:45:39.105557",
+    "date": "2026-10-05",
+    "ticker": "HINDALCO.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 92.1,
+    "entry": 941.1,
+    "stop_loss": 912.08,
+    "target": 987.53,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "rsi_bullish_divergence",
+      "pivot_s1_bounce",
+      "full_bearish_alignment",
+      "supertrend_bullish",
+      "pivot_point_test"
+    ]
+  },
+  {
+    "timestamp": "2026-10-05T09:45:39.113084",
+    "date": "2026-10-05",
+    "ticker": "VBL.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 62.1,
+    "entry": 439.3,
+    "stop_loss": 426.08,
+    "target": 460.45,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "stoch_rsi_oversold_reversal",
+      "three_white_soldiers",
+      "momentum_continuation",
+      "hammer",
+      "supertrend_bullish",
+      "pivot_r1_breakout"
+    ]
+  },
+  {
+    "timestamp": "2026-10-05T09:45:39.114374",
+    "date": "2026-10-05",
+    "ticker": "ADANIGREEN.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 58.5,
+    "entry": 1282.0,
+    "stop_loss": 1212.11,
+    "target": 1365.86,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "adx_ranging_market",
+      "spinning_top",
+      "three_white_soldiers",
+      "volume_breakout_bullish",
+      "full_bearish_alignment",
+      "doji",
+      "supertrend_bullish",
+      "pivot_r1_breakout"
     ]
   }
 ]

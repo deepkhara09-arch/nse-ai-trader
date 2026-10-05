@@ -1,6 +1,6 @@
 {
   "date": "2026-10-05",
-  "session": "preopen",
+  "session": "morning",
   "nifty": {
     "symbol": "^NSEI",
     "value": 22421.95,
@@ -63,6 +63,7 @@
   "warnings": [
     "VIX=14.5 at 97th percentile vs last 30d \u2014 unusually high stress",
     "Nifty in downtrend (strong_down) \u2014 only high-confidence BUY signals",
+    "Nifty choppy intraday \u2014 wait for cleaner setups",
     "Heavy FII/DII outflow (\u20b9+558 Cr) \u2014 institutions selling"
   ],
   "leading_sectors": [],
@@ -72,6 +73,7 @@
     "Pharma",
     "Infra"
   ],
+  "intraday_regime": "choppy",
   "macro": {
     "date": "2026-10-05",
     "session": "preopen",

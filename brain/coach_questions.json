@@ -1,55 +1,5 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of full_bearish_alignment, inverted_hammer mean for a swing trade on HOMEFIRST? Current RSI=32, MACD hist=-13.1501, Vol=0.9x average. Signal is BUY.",
-    "context": {
-      "ticker": "HOMEFIRST.NS",
-      "signal": "BUY",
-      "patterns": "full_bearish_alignment, inverted_hammer",
-      "rsi": 32.3
-    },
-    "queued_at": "2026-10-01T09:45:39.175019"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of full_bearish_alignment, inverted_hammer mean for a swing trade on HOMEFIRST? Current RSI=32, MACD hist=-13.1501, Vol=0.9x average. Signal is BUY.",
-    "context": {
-      "ticker": "HOMEFIRST.NS",
-      "signal": "BUY",
-      "patterns": "full_bearish_alignment, inverted_hammer",
-      "rsi": 32.3
-    },
-    "queued_at": "2026-10-01T09:45:39.186658"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of full_bearish_alignment, inverted_hammer mean for a swing trade on HOMEFIRST? Current RSI=32, MACD hist=-13.1501, Vol=0.9x average. Signal is BUY.",
-    "context": {
-      "ticker": "HOMEFIRST.NS",
-      "signal": "BUY",
-      "patterns": "full_bearish_alignment, inverted_hammer",
-      "rsi": 32.3
-    },
-    "queued_at": "2026-10-01T09:45:39.309506"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of full_bearish_alignment, inverted_hammer mean for a swing trade on HOMEFIRST? Current RSI=32, MACD hist=-13.1501, Vol=0.9x average. Signal is BUY.",
-    "context": {
-      "ticker": "HOMEFIRST.NS",
-      "signal": "BUY",
-      "patterns": "full_bearish_alignment, inverted_hammer",
-      "rsi": 32.3
-    },
-    "queued_at": "2026-10-02T03:05:42.995030"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of inverted_hammer, full_bearish_alignment mean for a swing trade on HOMEFIRST? Current RSI=32, MACD hist=-13.1501, Vol=0.9x average. Signal is BUY.",
-    "context": {
-      "ticker": "HOMEFIRST.NS",
-      "signal": "BUY",
-      "patterns": "inverted_hammer, full_bearish_alignment",
-      "rsi": 32.3
-    },
-    "queued_at": "2026-10-02T04:05:36.777923"
-  },
-  {
     "question": "In Indian NSE markets, what does the combination of inverted_hammer, full_bearish_alignment mean for a swing trade on HOMEFIRST? Current RSI=32, MACD hist=-13.1501, Vol=0.9x average. Signal is BUY.",
     "context": {
       "ticker": "HOMEFIRST.NS",
@@ -98,5 +48,55 @@
       "rsi": 32.3
     },
     "queued_at": "2026-10-05T03:05:39.330425"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_down, full_bearish_alignment mean for a swing trade on PIDILITIND? Current RSI=29, MACD hist=-9.5146, Vol=1.4x average. Signal is BUY.",
+    "context": {
+      "ticker": "PIDILITIND.NS",
+      "signal": "BUY",
+      "patterns": "adx_strong_trend_down, full_bearish_alignment",
+      "rsi": 29.1
+    },
+    "queued_at": "2026-10-05T04:05:44.915249"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of volume_breakout_bullish, full_bearish_alignment, supertrend_bullish mean for a swing trade on ADANIGREEN? Current RSI=49, MACD hist=+1.2301, Vol=4.5x average. Signal is BUY.",
+    "context": {
+      "ticker": "ADANIGREEN.NS",
+      "signal": "BUY",
+      "patterns": "volume_breakout_bullish, full_bearish_alignment, supertrend_bullish",
+      "rsi": 49.1
+    },
+    "queued_at": "2026-10-05T04:05:44.922739"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of volume_breakout_bullish, full_bearish_alignment, supertrend_bullish mean for a swing trade on ADANIGREEN? Current RSI=49, MACD hist=+1.2301, Vol=4.5x average. Signal is BUY.",
+    "context": {
+      "ticker": "ADANIGREEN.NS",
+      "signal": "BUY",
+      "patterns": "volume_breakout_bullish, full_bearish_alignment, supertrend_bullish",
+      "rsi": 49.1
+    },
+    "queued_at": "2026-10-05T04:05:44.931148"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_down, full_bearish_alignment mean for a swing trade on PIDILITIND? Current RSI=29, MACD hist=-9.5146, Vol=1.4x average. Signal is BUY.",
+    "context": {
+      "ticker": "PIDILITIND.NS",
+      "signal": "BUY",
+      "patterns": "adx_strong_trend_down, full_bearish_alignment",
+      "rsi": 29.1
+    },
+    "queued_at": "2026-10-05T04:05:45.035282"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of volume_breakout_bullish, full_bearish_alignment, supertrend_bullish mean for a swing trade on ADANIGREEN? Current RSI=49, MACD hist=+1.2301, Vol=4.5x average. Signal is BUY.",
+    "context": {
+      "ticker": "ADANIGREEN.NS",
+      "signal": "BUY",
+      "patterns": "volume_breakout_bullish, full_bearish_alignment, supertrend_bullish",
+      "rsi": 49.1
+    },
+    "queued_at": "2026-10-05T04:05:45.047125"
   }
 ]

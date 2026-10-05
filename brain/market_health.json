@@ -1,19 +1,19 @@
 {
-  "date": "2026-10-02",
-  "session": "preclose",
+  "date": "2026-10-05",
+  "session": "preopen",
   "nifty": {
     "symbol": "^NSEI",
     "value": 22421.95,
     "day_change_pct": -0.88,
     "trend_5d": "strong_down",
     "trend_20d": "strong_down",
-    "ath_pct_60d": -9.5
+    "ath_pct_60d": -9.14
   },
   "vix": {
     "value": 14.46,
     "level": "normal",
     "percentile_30d": 97.0,
-    "avg_30d": 11.81
+    "avg_30d": 11.85
   },
   "bank_nifty": {
     "symbol": "^NSEBANK",
@@ -21,17 +21,17 @@
     "day_change_pct": -0.33,
     "trend_5d": "down",
     "trend_20d": "strong_down",
-    "ath_pct_60d": -6.52,
+    "ath_pct_60d": -6.24,
     "diverging": false
   },
   "sectors": {
     "IT": {
       "symbol": "ITBEES.NS",
-      "value": 30.86,
-      "day_change_pct": 0.19,
-      "trend_5d": "down",
+      "value": 31.38,
+      "day_change_pct": 0.0,
+      "trend_5d": "sideways",
       "trend_20d": "strong_down",
-      "ath_pct_60d": -16.55
+      "ath_pct_60d": -12.78
     },
     "Pharma": {
       "symbol": "PHARMABEES.NS",
@@ -43,19 +43,19 @@
     },
     "Bank": {
       "symbol": "BANKBEES.NS",
-      "value": 567.42,
-      "day_change_pct": 0.53,
-      "trend_5d": "down",
+      "value": 565.03,
+      "day_change_pct": 0.0,
+      "trend_5d": "sideways",
       "trend_20d": "strong_down",
-      "ath_pct_60d": -6.67
+      "ath_pct_60d": -7.06
     },
     "Infra": {
       "symbol": "INFRABEES.NS",
-      "value": 903.01,
-      "day_change_pct": -0.61,
+      "value": 895.24,
+      "day_change_pct": 0.0,
       "trend_5d": "down",
       "trend_20d": "strong_down",
-      "ath_pct_60d": -8.58
+      "ath_pct_60d": -9.28
     }
   },
   "market_mood": "bearish",
@@ -69,70 +69,68 @@
   "market_regime": "normal",
   "sector_breadth": 0.0,
   "lagging_sectors": [
-    "IT",
     "Pharma",
-    "Bank",
     "Infra"
   ],
   "macro": {
-    "date": "2026-10-02",
-    "session": "midday",
-    "generated_at": "2026-10-02T06:15:42.072074",
-    "global_score": 0.11,
-    "india_score": -0.5,
-    "overall_score": -0.165,
+    "date": "2026-10-05",
+    "session": "preopen",
+    "generated_at": "2026-10-05T03:05:37.837508",
+    "global_score": 0.362,
+    "india_score": 0.0,
+    "overall_score": 0.199,
     "mood": "neutral",
     "drivers": [
-      "\u2018I have $400,000 in equity\u2019: I\u2019m 80. Should I sell my house because of dangerous stairs \u2014 or spend thousands renovating?",
+      "\u2018I\u2019d rather be on a beach in Bali\u2019: My husband resents my $8 million net worth. Should I pay for his retirement?",
       "I\u2019m 71 and still working. I earn $108,000 a year. Am I doing the right thing?",
       "My wife never went back to work after raising our kids. Do I have to share my retirement savings 50/50?",
-      "Here\u2019s who\u2019s joining the S&P 500 in the index\u2019s latest shakeup",
-      "This could be the worst year ever for Nike\u2019s stock, with sales set to fall further",
-      "The hidden silver lining of high interest rates: safer, cheaper retirement income",
-      "The stock market is anything but normal right now \u2014 and these charts show it",
-      "Here\u2019s how much more groceries, clothing and household appliances could cost as diesel prices keep surging"
+      "\u2018I don\u2019t want to die on the sales floor\u2019: I\u2019m 67 and earn $19.50 an hour at a big-box store. When can I finally retire?",
+      "Corporate America has never been this upbeat about future profits",
+      "October can be a scary month for stocks. Here\u2019s what investors need to watch this year.",
+      "Fed minutes coming this week could give markets important clues about future rate hikes",
+      "The government can take 15% of Social Security benefits to repay student loans. These proposals seek to stop it."
     ],
     "global_cues": {
       "dow": {
-        "last": 50926.56,
-        "chg_pct": 0.04
+        "last": 51176.96,
+        "chg_pct": 0.49
       },
       "nasdaq": {
-        "last": 26871.6,
-        "chg_pct": 0.04
+        "last": 27190.86,
+        "chg_pct": 1.19
       },
       "sp500": {
-        "last": 7666.45,
-        "chg_pct": 0.19
+        "last": 7722.72,
+        "chg_pct": 0.73
       },
       "nikkei": {
-        "last": 68273.5,
-        "chg_pct": -0.99
+        "last": 70037.61,
+        "chg_pct": 2.53
       },
       "crude": {
-        "last": 92.87,
-        "chg_pct": 2.71
+        "last": 90.11,
+        "chg_pct": -1.1
       },
       "usdinr": {
         "last": 96.3,
-        "chg_pct": 0.39
+        "chg_pct": 0.08
       },
       "gold": {
-        "last": 4202.3,
-        "chg_pct": 0.37
+        "last": 4168.5,
+        "chg_pct": 0.15
       }
     },
-    "summary": "Overall macro mood is neutral (-0.17). US Dow +0.0% overnight. Crude +2.7%. USD/INR +0.4%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
+    "summary": "Overall macro mood is neutral (+0.20). US Dow +0.5% overnight. Crude -1.1%. USD/INR +0.1%. Notable: US Fed rate hike / hawkish; Geopolitical conflict / war.",
     "playbook": [
-      "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
-      "Trade-war headlines spook global markets; IT & export names react most."
+      "Hawkish Fed pressures Nifty via FII outflows and stronger USD.",
+      "Geopolitical shocks trigger global risk-off; gold up, equities down initially."
     ],
     "playbook_bias": "risk_off",
     "article_count": 60
   },
   "macro_risk_factor": 0.75,
   "fii_dii": {
-    "date": "2026-10-02",
+    "date": "2026-10-05",
     "fii_net_cr": -9484.22,
     "dii_net_cr": 10041.84,
     "combined_net_cr": 557.62,
@@ -140,12 +138,6 @@
     "ok": true,
     "error": "",
     "history": [
-      {
-        "date": "2026-08-25",
-        "fii": 1181.66,
-        "dii": 2493.41,
-        "combined": 3675.07
-      },
       {
         "date": "2026-08-26",
         "fii": 1593.53,
@@ -319,11 +311,17 @@
         "fii": -9484.22,
         "dii": 10041.84,
         "combined": 557.62
+      },
+      {
+        "date": "2026-10-05",
+        "fii": -9484.22,
+        "dii": 10041.84,
+        "combined": 557.62
       }
     ]
   },
   "pcr": {
-    "date": "2026-10-02",
+    "date": "2026-10-05",
     "pcr": 0.685,
     "reading": "bearish_bias",
     "total_pe_oi": 2054451,

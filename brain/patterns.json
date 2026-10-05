@@ -3804,10 +3804,10 @@
         "last_seen": "2026-09-01"
       },
       "pivot_point_test": {
-        "wins": 12.9,
-        "losses": 11.544,
-        "reliability": 0.528,
-        "last_seen": "2026-09-25"
+        "wins": 12.176,
+        "losses": 11.896,
+        "reliability": 0.506,
+        "last_seen": "2026-10-05"
       },
       "adx_strong_trend_up": {
         "wins": 7.771,
@@ -3822,10 +3822,10 @@
         "last_seen": "2026-09-16"
       },
       "supertrend_bullish": {
-        "wins": 15.717,
-        "losses": 23.75,
-        "reliability": 0.398,
-        "last_seen": "2026-09-28"
+        "wins": 15.094,
+        "losses": 23.809,
+        "reliability": 0.388,
+        "last_seen": "2026-10-05"
       },
       "engulfing_bullish": {
         "wins": 0.0,
@@ -3882,10 +3882,10 @@
         "last_seen": "2026-09-29"
       },
       "stoch_rsi_oversold_reversal": {
-        "wins": 4.323,
-        "losses": 5.41,
-        "reliability": 0.444,
-        "last_seen": "2026-09-25"
+        "wins": 4.08,
+        "losses": 6.106,
+        "reliability": 0.401,
+        "last_seen": "2026-10-05"
       },
       "pivot_s1_breakdown": {
         "wins": 4.557,
@@ -4038,10 +4038,10 @@
         "last_seen": "2026-08-28"
       },
       "bullish_harami": {
-        "wins": 2.0,
-        "losses": 0.96,
-        "reliability": 0.63,
-        "last_seen": "2026-09-04"
+        "wins": 1.672,
+        "losses": 1.803,
+        "reliability": 0.484,
+        "last_seen": "2026-10-05"
       },
       "ema_golden_cross": {
         "wins": 3.786,
@@ -4726,9 +4726,9 @@
   "BANDHANBNK.NS": {
     "reliable_patterns": {
       "gap_down_reversal": {
-        "wins": 1.994,
+        "wins": 1.86,
         "losses": 0.0,
-        "reliability": 0.832,
+        "reliability": 0.81,
         "last_seen": "2026-09-23"
       },
       "pivot_r1_breakout": {
@@ -4744,16 +4744,16 @@
         "last_seen": "2026-09-28"
       },
       "full_bearish_alignment": {
-        "wins": 1.994,
+        "wins": 1.86,
         "losses": 0.0,
-        "reliability": 0.832,
+        "reliability": 0.81,
         "last_seen": "2026-09-23"
       },
       "supertrend_bullish": {
-        "wins": 1.937,
-        "losses": 1.0,
-        "reliability": 0.656,
-        "last_seen": "2026-09-28"
+        "wins": 1.86,
+        "losses": 1.96,
+        "reliability": 0.487,
+        "last_seen": "2026-10-05"
       },
       "pivot_r2_breakout": {
         "wins": 1.937,
@@ -4784,19 +4784,37 @@
         "losses": 1.0,
         "reliability": 0.333,
         "last_seen": "2026-09-28"
+      },
+      "bullish_harami": {
+        "wins": 0.0,
+        "losses": 1.0,
+        "reliability": 0.333,
+        "last_seen": "2026-10-05"
+      },
+      "pivot_point_test": {
+        "wins": 0.0,
+        "losses": 1.0,
+        "reliability": 0.333,
+        "last_seen": "2026-10-05"
+      },
+      "stoch_rsi_oversold_reversal": {
+        "wins": 0.0,
+        "losses": 1.0,
+        "reliability": 0.333,
+        "last_seen": "2026-10-05"
       }
     },
     "preferred_style": "swing",
     "swing_wins": 2,
-    "swing_losses": 1,
+    "swing_losses": 2,
     "intraday_wins": 0,
     "intraday_losses": 0,
     "long_term_wins": 0,
     "long_term_losses": 0,
-    "atr_stop_hits": 1,
+    "atr_stop_hits": 2,
     "atr_target_hits": 1,
     "atr_multiplier": 2.0,
-    "last_updated": "2026-09-28"
+    "last_updated": "2026-10-05"
   },
   "POWERGRID.NS": {
     "reliable_patterns": {

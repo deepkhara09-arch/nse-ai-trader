@@ -1,26 +1,5 @@
 [
   {
-    "timestamp": "2026-08-13T09:43:29.888280",
-    "date": "2026-08-13",
-    "ticker": "PIDILITIND.NS",
-    "session": "intraday_close",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 95,
-    "entry": 1686.2,
-    "stop_loss": 1633.4,
-    "target": 1791.8,
-    "reason": "paper intraday_close",
-    "patterns": [
-      "pivot_point_test",
-      "pivot_r1_breakout",
-      "three_white_soldiers",
-      "supertrend_bullish",
-      "near_52w_high",
-      "full_bullish_alignment"
-    ]
-  },
-  {
     "timestamp": "2026-08-13T09:43:29.889096",
     "date": "2026-08-13",
     "ticker": "ASIANPAINT.NS",
@@ -21177,6 +21156,28 @@
       "rsi_bullish_divergence",
       "pivot_s2_bounce",
       "pivot_s1_bounce"
+    ]
+  },
+  {
+    "timestamp": "2026-10-05T07:45:48.956044",
+    "date": "2026-10-05",
+    "ticker": "VBL.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 66.6,
+    "entry": 434.15,
+    "stop_loss": 420.93,
+    "target": 455.3,
+    "reason": "paper afternoon",
+    "patterns": [
+      "stoch_rsi_oversold_reversal",
+      "supertrend_bullish",
+      "pivot_r1_breakout",
+      "momentum_continuation",
+      "pivot_point_test",
+      "three_white_soldiers",
+      "hammer"
     ]
   }
 ]

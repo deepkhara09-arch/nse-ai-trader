@@ -1,91 +1,5 @@
 [
   {
-    "timestamp": "2026-08-13T10:11:20.203649",
-    "date": "2026-08-13",
-    "ticker": "PIDILITIND.NS",
-    "session": "preclose",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 95,
-    "entry": 1684.9,
-    "stop_loss": 1632.31,
-    "target": 1790.07,
-    "reason": "paper preclose",
-    "patterns": [
-      "pivot_r1_breakout",
-      "adx_strong_trend_up",
-      "pivot_point_test",
-      "near_52w_high",
-      "rsi_bearish_divergence",
-      "full_bullish_alignment"
-    ]
-  },
-  {
-    "timestamp": "2026-08-13T10:11:20.204444",
-    "date": "2026-08-13",
-    "ticker": "ASIANPAINT.NS",
-    "session": "preclose",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 95,
-    "entry": 2743.9,
-    "stop_loss": 2649.93,
-    "target": 2931.85,
-    "reason": "paper preclose",
-    "patterns": [
-      "macd_bearish_crossover",
-      "supertrend_bullish",
-      "adx_ranging_market",
-      "engulfing_bullish",
-      "pivot_point_test",
-      "hammer",
-      "outside_bar",
-      "stoch_rsi_oversold_reversal",
-      "full_bullish_alignment"
-    ]
-  },
-  {
-    "timestamp": "2026-08-13T10:11:20.205230",
-    "date": "2026-08-13",
-    "ticker": "CIPLA.NS",
-    "session": "preclose",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 95,
-    "entry": 1460.1,
-    "stop_loss": 1420.9,
-    "target": 1538.51,
-    "reason": "paper preclose",
-    "patterns": [
-      "supertrend_bullish",
-      "pivot_point_test",
-      "spinning_top",
-      "rsi_bullish_divergence",
-      "low_volume_drift",
-      "tweezer_bottom",
-      "full_bullish_alignment",
-      "pivot_s1_bounce"
-    ]
-  },
-  {
-    "timestamp": "2026-08-13T10:11:20.206495",
-    "date": "2026-08-13",
-    "ticker": "NIACL.NS",
-    "session": "preclose",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 68.0,
-    "entry": 180.78,
-    "stop_loss": 170.9,
-    "target": 200.55,
-    "reason": "paper preclose",
-    "patterns": [
-      "pivot_point_test",
-      "supertrend_bullish",
-      "full_bullish_alignment"
-    ]
-  },
-  {
     "timestamp": "2026-08-13T10:11:20.207744",
     "date": "2026-08-13",
     "ticker": "CHOLAFIN.NS",
@@ -21195,6 +21109,99 @@
       "pivot_r1_breakout",
       "doji",
       "full_bullish_alignment"
+    ]
+  },
+  {
+    "timestamp": "2026-10-06T07:45:48.223033",
+    "date": "2026-10-06",
+    "ticker": "PIDILITIND.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 88.2,
+    "entry": 1510.5,
+    "stop_loss": 1463.22,
+    "target": 1586.15,
+    "reason": "paper afternoon",
+    "patterns": [
+      "full_bearish_alignment",
+      "supertrend_bullish",
+      "morning_star",
+      "pivot_r1_breakout",
+      "adx_strong_trend_down",
+      "strong_bullish_marubozu",
+      "outside_bar"
+    ]
+  },
+  {
+    "timestamp": "2026-10-06T07:45:48.225318",
+    "date": "2026-10-06",
+    "ticker": "HINDALCO.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 65.0,
+    "entry": 938.65,
+    "stop_loss": 909.61,
+    "target": 985.11,
+    "reason": "paper afternoon",
+    "patterns": [
+      "full_bearish_alignment",
+      "rsi_bullish_divergence",
+      "pivot_r1_breakout",
+      "pivot_s1_breakdown",
+      "pivot_point_test",
+      "stoch_rsi_overbought_reversal",
+      "gap_up_reversal",
+      "outside_bar"
+    ]
+  },
+  {
+    "timestamp": "2026-10-06T07:45:48.227525",
+    "date": "2026-10-06",
+    "ticker": "ADANIPORTS.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 74.9,
+    "entry": 1781.9,
+    "stop_loss": 1695.91,
+    "target": 1885.08,
+    "reason": "paper afternoon",
+    "patterns": [
+      "doji",
+      "supertrend_bullish",
+      "pivot_r1_breakout",
+      "full_bullish_alignment",
+      "adx_ranging_market",
+      "hammer",
+      "gap_up_continuation",
+      "morning_star"
+    ]
+  },
+  {
+    "timestamp": "2026-10-06T07:45:48.236618",
+    "date": "2026-10-06",
+    "ticker": "ONGC.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 58.4,
+    "entry": 222.6,
+    "stop_loss": 214.59,
+    "target": 232.21,
+    "reason": "paper afternoon",
+    "patterns": [
+      "full_bearish_alignment",
+      "supertrend_bullish",
+      "near_52w_low",
+      "rsi_bearish_divergence",
+      "pivot_s1_bounce",
+      "pivot_r1_breakout",
+      "pivot_point_test",
+      "stoch_rsi_oversold_reversal",
+      "pivot_r2_breakout",
+      "pivot_s2_bounce"
     ]
   }
 ]

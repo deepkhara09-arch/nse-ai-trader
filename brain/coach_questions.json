@@ -1,102 +1,102 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of doji, full_bullish_alignment, adx_ranging_market mean for a swing trade on ADANIPORTS? Current RSI=57, MACD hist=-3.5893, Vol=1.4x average. Signal is BUY.",
-    "context": {
-      "ticker": "ADANIPORTS.NS",
-      "signal": "BUY",
-      "patterns": "doji, full_bullish_alignment, adx_ranging_market",
-      "rsi": 56.9
-    },
-    "queued_at": "2026-10-06T04:06:22.843249"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_down, full_bearish_alignment, morning_star mean for a swing trade on PIDILITIND? Current RSI=43, MACD hist=-6.0429, Vol=1.4x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of full_bearish_alignment, morning_star, adx_strong_trend_down mean for a swing trade on PIDILITIND? Current RSI=43, MACD hist=-6.0429, Vol=1.4x average. Signal is BUY.",
     "context": {
       "ticker": "PIDILITIND.NS",
       "signal": "BUY",
-      "patterns": "adx_strong_trend_down, full_bearish_alignment, morning_star",
+      "patterns": "full_bearish_alignment, morning_star, adx_strong_trend_down",
       "rsi": 42.5
     },
-    "queued_at": "2026-10-06T04:06:22.961649"
+    "queued_at": "2026-10-06T07:45:48.222760"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of doji, full_bullish_alignment, adx_ranging_market mean for a swing trade on ADANIPORTS? Current RSI=57, MACD hist=-3.5893, Vol=1.4x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of pivot_r1_breakout, pivot_s1_breakdown, pivot_point_test mean for a swing trade on HINDALCO? Current RSI=43, MACD hist=-3.8759, Vol=1.2x average. Signal is BUY.",
+    "context": {
+      "ticker": "HINDALCO.NS",
+      "signal": "BUY",
+      "patterns": "pivot_r1_breakout, pivot_s1_breakdown, pivot_point_test",
+      "rsi": 42.6
+    },
+    "queued_at": "2026-10-06T07:45:48.224939"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of doji, supertrend_bullish, pivot_r1_breakout mean for a swing trade on ADANIPORTS? Current RSI=57, MACD hist=-3.5893, Vol=1.4x average. Signal is BUY.",
     "context": {
       "ticker": "ADANIPORTS.NS",
       "signal": "BUY",
-      "patterns": "doji, full_bullish_alignment, adx_ranging_market",
+      "patterns": "doji, supertrend_bullish, pivot_r1_breakout",
       "rsi": 56.9
     },
-    "queued_at": "2026-10-06T04:06:22.968460"
+    "queued_at": "2026-10-06T07:45:48.227185"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of bb_lower_bounce, pivot_s2_bounce, spinning_top mean for a swing trade on NHPC? Current RSI=30, MACD hist=-0.4342, Vol=0.5x average. Signal is BUY.",
-    "context": {
-      "ticker": "NHPC.NS",
-      "signal": "BUY",
-      "patterns": "bb_lower_bounce, pivot_s2_bounce, spinning_top",
-      "rsi": 29.6
-    },
-    "queued_at": "2026-10-06T04:06:22.973139"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of rsi_bearish_divergence, pivot_r2_breakout, stoch_rsi_oversold_reversal mean for a swing trade on ONGC? Current RSI=32, MACD hist=-1.1999, Vol=1.9x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of full_bearish_alignment, supertrend_bullish, near_52w_low mean for a swing trade on ONGC? Current RSI=32, MACD hist=-1.1999, Vol=1.9x average. Signal is BUY.",
     "context": {
       "ticker": "ONGC.NS",
       "signal": "BUY",
-      "patterns": "rsi_bearish_divergence, pivot_r2_breakout, stoch_rsi_oversold_reversal",
+      "patterns": "full_bearish_alignment, supertrend_bullish, near_52w_low",
       "rsi": 32.1
     },
-    "queued_at": "2026-10-06T04:06:22.980223"
+    "queued_at": "2026-10-06T07:45:48.236249"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_down, full_bearish_alignment, morning_star mean for a swing trade on PIDILITIND? Current RSI=43, MACD hist=-6.0429, Vol=1.4x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of doji, supertrend_bullish, pivot_r1_breakout mean for a swing trade on ADANIPORTS? Current RSI=57, MACD hist=-3.5893, Vol=1.4x average. Signal is BUY.",
+    "context": {
+      "ticker": "ADANIPORTS.NS",
+      "signal": "BUY",
+      "patterns": "doji, supertrend_bullish, pivot_r1_breakout",
+      "rsi": 56.9
+    },
+    "queued_at": "2026-10-06T07:45:48.239504"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of pivot_r1_breakout, pivot_s1_breakdown, pivot_point_test mean for a swing trade on HINDALCO? Current RSI=43, MACD hist=-3.8759, Vol=1.2x average. Signal is BUY.",
+    "context": {
+      "ticker": "HINDALCO.NS",
+      "signal": "BUY",
+      "patterns": "pivot_r1_breakout, pivot_s1_breakdown, pivot_point_test",
+      "rsi": 42.6
+    },
+    "queued_at": "2026-10-06T07:45:48.241850"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of full_bearish_alignment, morning_star, adx_strong_trend_down mean for a swing trade on PIDILITIND? Current RSI=43, MACD hist=-6.0429, Vol=1.4x average. Signal is BUY.",
     "context": {
       "ticker": "PIDILITIND.NS",
       "signal": "BUY",
-      "patterns": "adx_strong_trend_down, full_bearish_alignment, morning_star",
+      "patterns": "full_bearish_alignment, morning_star, adx_strong_trend_down",
       "rsi": 42.5
     },
-    "queued_at": "2026-10-06T06:15:58.997710"
+    "queued_at": "2026-10-06T07:45:48.356256"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of supertrend_bullish, hammer, gap_up_continuation mean for a swing trade on ADANIPORTS? Current RSI=57, MACD hist=-3.5893, Vol=1.4x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of pivot_r1_breakout, pivot_s1_breakdown, pivot_point_test mean for a swing trade on HINDALCO? Current RSI=43, MACD hist=-3.8759, Vol=1.2x average. Signal is BUY.",
+    "context": {
+      "ticker": "HINDALCO.NS",
+      "signal": "BUY",
+      "patterns": "pivot_r1_breakout, pivot_s1_breakdown, pivot_point_test",
+      "rsi": 42.6
+    },
+    "queued_at": "2026-10-06T07:45:48.361444"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of doji, supertrend_bullish, pivot_r1_breakout mean for a swing trade on ADANIPORTS? Current RSI=57, MACD hist=-3.5893, Vol=1.4x average. Signal is BUY.",
     "context": {
       "ticker": "ADANIPORTS.NS",
       "signal": "BUY",
-      "patterns": "supertrend_bullish, hammer, gap_up_continuation",
+      "patterns": "doji, supertrend_bullish, pivot_r1_breakout",
       "rsi": 56.9
     },
-    "queued_at": "2026-10-06T06:15:59.001530"
+    "queued_at": "2026-10-06T07:45:48.366399"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of supertrend_bullish, hammer, gap_up_continuation mean for a swing trade on ADANIPORTS? Current RSI=57, MACD hist=-3.5893, Vol=1.4x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of full_bearish_alignment, supertrend_bullish, near_52w_low mean for a swing trade on ONGC? Current RSI=32, MACD hist=-1.1999, Vol=1.9x average. Signal is BUY.",
     "context": {
-      "ticker": "ADANIPORTS.NS",
+      "ticker": "ONGC.NS",
       "signal": "BUY",
-      "patterns": "supertrend_bullish, hammer, gap_up_continuation",
-      "rsi": 56.9
+      "patterns": "full_bearish_alignment, supertrend_bullish, near_52w_low",
+      "rsi": 32.1
     },
-    "queued_at": "2026-10-06T06:15:59.012285"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_down, full_bearish_alignment, morning_star mean for a swing trade on PIDILITIND? Current RSI=43, MACD hist=-6.0429, Vol=1.4x average. Signal is BUY.",
-    "context": {
-      "ticker": "PIDILITIND.NS",
-      "signal": "BUY",
-      "patterns": "adx_strong_trend_down, full_bearish_alignment, morning_star",
-      "rsi": 42.5
-    },
-    "queued_at": "2026-10-06T06:15:59.136507"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of supertrend_bullish, hammer, gap_up_continuation mean for a swing trade on ADANIPORTS? Current RSI=57, MACD hist=-3.5893, Vol=1.4x average. Signal is BUY.",
-    "context": {
-      "ticker": "ADANIPORTS.NS",
-      "signal": "BUY",
-      "patterns": "supertrend_bullish, hammer, gap_up_continuation",
-      "rsi": 56.9
-    },
-    "queued_at": "2026-10-06T06:15:59.143189"
+    "queued_at": "2026-10-06T07:45:48.375422"
   }
 ]

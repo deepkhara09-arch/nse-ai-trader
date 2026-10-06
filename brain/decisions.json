@@ -1,87 +1,5 @@
 [
   {
-    "timestamp": "2026-08-13T09:43:29.893810",
-    "date": "2026-08-13",
-    "ticker": "BAJFINANCE.NS",
-    "session": "intraday_close",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 85.3,
-    "entry": 1089.0,
-    "stop_loss": 1038.63,
-    "target": 1189.74,
-    "reason": "paper intraday_close",
-    "patterns": [
-      "rsi_bullish_divergence",
-      "pivot_point_test",
-      "dragonfly_doji",
-      "adx_strong_trend_up",
-      "pivot_s1_breakdown",
-      "full_bullish_alignment",
-      "evening_star",
-      "doji"
-    ]
-  },
-  {
-    "timestamp": "2026-08-13T10:11:20.199599",
-    "date": "2026-08-13",
-    "ticker": "MARICO.NS",
-    "session": "preclose",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 95,
-    "entry": 861.9,
-    "stop_loss": 834.38,
-    "target": 916.94,
-    "reason": "paper preclose",
-    "patterns": [
-      "supertrend_bullish",
-      "pivot_point_test",
-      "hammer",
-      "doji",
-      "adx_strong_trend_down",
-      "full_bullish_alignment"
-    ]
-  },
-  {
-    "timestamp": "2026-08-13T10:11:20.200467",
-    "date": "2026-08-13",
-    "ticker": "SBIN.NS",
-    "session": "preclose",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 95,
-    "entry": 1076.6,
-    "stop_loss": 1045.12,
-    "target": 1139.56,
-    "reason": "paper preclose",
-    "patterns": [
-      "supertrend_bullish",
-      "pivot_r1_breakout",
-      "pivot_r2_breakout",
-      "strong_bullish_marubozu",
-      "full_bullish_alignment"
-    ]
-  },
-  {
-    "timestamp": "2026-08-13T10:11:20.201016",
-    "date": "2026-08-13",
-    "ticker": "ICICIBANK.NS",
-    "session": "preclose",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 84.8,
-    "entry": 1410.9,
-    "stop_loss": 1372.86,
-    "target": 1486.98,
-    "reason": "paper preclose",
-    "patterns": [
-      "pivot_s1_breakdown",
-      "full_bullish_alignment",
-      "rsi_bullish_divergence"
-    ]
-  },
-  {
     "timestamp": "2026-08-13T10:11:20.201807",
     "date": "2026-08-13",
     "ticker": "UNIONBANK.NS",
@@ -21181,6 +21099,99 @@
       "doji",
       "supertrend_bullish",
       "pivot_r1_breakout"
+    ]
+  },
+  {
+    "timestamp": "2026-10-06T04:06:22.826975",
+    "date": "2026-10-06",
+    "ticker": "PIDILITIND.NS",
+    "session": "morning",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 88.2,
+    "entry": 1475.8,
+    "stop_loss": 1428.52,
+    "target": 1551.45,
+    "reason": "paper morning",
+    "patterns": [
+      "strong_bullish_marubozu",
+      "adx_strong_trend_down",
+      "full_bearish_alignment",
+      "pivot_r1_breakout",
+      "morning_star",
+      "supertrend_bullish",
+      "outside_bar"
+    ]
+  },
+  {
+    "timestamp": "2026-10-06T04:06:22.830928",
+    "date": "2026-10-06",
+    "ticker": "ADANIPORTS.NS",
+    "session": "morning",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 74.9,
+    "entry": 1773.4,
+    "stop_loss": 1687.41,
+    "target": 1876.58,
+    "reason": "paper morning",
+    "patterns": [
+      "doji",
+      "full_bullish_alignment",
+      "adx_ranging_market",
+      "hammer",
+      "gap_up_continuation",
+      "pivot_r1_breakout",
+      "morning_star",
+      "supertrend_bullish"
+    ]
+  },
+  {
+    "timestamp": "2026-10-06T04:06:22.835724",
+    "date": "2026-10-06",
+    "ticker": "NHPC.NS",
+    "session": "morning",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 89.7,
+    "entry": 71.77,
+    "stop_loss": 69.21,
+    "target": 74.84,
+    "reason": "paper morning",
+    "patterns": [
+      "bb_lower_bounce",
+      "pivot_s2_bounce",
+      "spinning_top",
+      "pivot_s1_bounce",
+      "pivot_point_test",
+      "full_bearish_alignment",
+      "low_volume_drift",
+      "near_52w_low",
+      "supertrend_bullish",
+      "outside_bar"
+    ]
+  },
+  {
+    "timestamp": "2026-10-06T04:06:22.840390",
+    "date": "2026-10-06",
+    "ticker": "ONGC.NS",
+    "session": "morning",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 47.6,
+    "entry": 223.99,
+    "stop_loss": 215.98,
+    "target": 233.6,
+    "reason": "paper morning",
+    "patterns": [
+      "rsi_bearish_divergence",
+      "pivot_r2_breakout",
+      "stoch_rsi_oversold_reversal",
+      "full_bearish_alignment",
+      "pivot_r1_breakout",
+      "near_52w_low",
+      "morning_star",
+      "supertrend_bullish"
     ]
   }
 ]

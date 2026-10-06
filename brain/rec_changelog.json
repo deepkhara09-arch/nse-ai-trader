@@ -1,55 +1,5 @@
 [
   {
-    "type": "new",
-    "ticker": "POWERGRID.NS",
-    "nse_code": "POWERGRID",
-    "signal": "BUY",
-    "date": "2026-07-23",
-    "ts": "2026-07-23T10:12:43.288070",
-    "detail": "New BUY recommendation \u2014 confidence 67/100",
-    "confidence": 67.4
-  },
-  {
-    "type": "updated",
-    "ticker": "ICICIBANK.NS",
-    "nse_code": "ICICIBANK",
-    "signal": "BUY",
-    "date": "2026-07-23",
-    "ts": "2026-07-23T10:12:43.288070",
-    "detail": "Confidence \u25b210 (66 \u2192 76)",
-    "confidence": 76.1
-  },
-  {
-    "type": "updated",
-    "ticker": "MARICO.NS",
-    "nse_code": "MARICO",
-    "signal": "BUY",
-    "date": "2026-07-23",
-    "ts": "2026-07-23T10:12:43.288070",
-    "detail": "Confidence \u25b26 (68 \u2192 74) | Rank \u25b21 (#7 \u2192 #6)",
-    "confidence": 74.4
-  },
-  {
-    "type": "removed",
-    "ticker": "MARICO.NS",
-    "nse_code": "MARICO",
-    "signal": "BUY",
-    "date": "2026-07-24",
-    "ts": "2026-07-24T04:05:52.516079",
-    "detail": "Dropped \u2014 no longer meets threshold (was 74/100)",
-    "confidence": 0
-  },
-  {
-    "type": "removed",
-    "ticker": "POWERGRID.NS",
-    "nse_code": "POWERGRID",
-    "signal": "BUY",
-    "date": "2026-07-24",
-    "ts": "2026-07-24T04:05:52.516079",
-    "detail": "Dropped \u2014 no longer meets threshold (was 67/100)",
-    "confidence": 0
-  },
-  {
     "type": "updated",
     "ticker": "ICICIBANK.NS",
     "nse_code": "ICICIBANK",
@@ -5998,5 +5948,55 @@
     "ts": "2026-10-06T03:05:42.584921",
     "detail": "Rank \u25bc1 (#6 \u2192 #7)",
     "confidence": 74.6
+  },
+  {
+    "type": "new",
+    "ticker": "NHPC.NS",
+    "nse_code": "NHPC",
+    "signal": "BUY",
+    "date": "2026-10-06",
+    "ts": "2026-10-06T04:06:22.983613",
+    "detail": "New BUY recommendation \u2014 confidence 71/100",
+    "confidence": 71.0
+  },
+  {
+    "type": "new",
+    "ticker": "ONGC.NS",
+    "nse_code": "ONGC",
+    "signal": "BUY",
+    "date": "2026-10-06",
+    "ts": "2026-10-06T04:06:22.983613",
+    "detail": "New BUY recommendation \u2014 confidence 67/100",
+    "confidence": 67.1
+  },
+  {
+    "type": "removed",
+    "ticker": "HINDALCO.NS",
+    "nse_code": "HINDALCO",
+    "signal": "BUY",
+    "date": "2026-10-06",
+    "ts": "2026-10-06T04:06:22.983613",
+    "detail": "Dropped \u2014 no longer meets threshold (was 75/100)",
+    "confidence": 0
+  },
+  {
+    "type": "removed",
+    "ticker": "VBL.NS",
+    "nse_code": "VBL",
+    "signal": "BUY",
+    "date": "2026-10-06",
+    "ts": "2026-10-06T04:06:22.983613",
+    "detail": "Dropped \u2014 no longer meets threshold (was 70/100)",
+    "confidence": 0
+  },
+  {
+    "type": "updated",
+    "ticker": "PIDILITIND.NS",
+    "nse_code": "PIDILITIND",
+    "signal": "BUY",
+    "date": "2026-10-06",
+    "ts": "2026-10-06T04:06:22.983613",
+    "detail": "Target 1 moved \u20b91614.16 \u2192 \u20b91601.88",
+    "confidence": 90.1
   }
 ]

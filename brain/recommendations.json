@@ -3,10 +3,10 @@
     "ticker": "PIDILITIND.NS",
     "nse_code": "PIDILITIND",
     "company_name": "Pidilite Industries",
-    "date": "2026-10-05",
-    "generated_at": "2026-10-05 09:45 UTC",
-    "valid_until": "15:40 IST",
-    "session": "intraday_close",
+    "date": "2026-10-06",
+    "generated_at": "2026-10-06 03:05 UTC",
+    "valid_until": "09:35 IST",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -40,10 +40,10 @@
     "pattern_score": 10,
     "confluence_bonus": 5.0,
     "paper_bonus": 5.0,
-    "success_probability": 0.599,
-    "base_success_prob": 0.63,
-    "profit_probability": 0.128,
-    "composite_score": 51.48,
+    "success_probability": 0.606,
+    "base_success_prob": 0.64,
+    "profit_probability": 0.146,
+    "composite_score": 52.75,
     "focus_rank": 2,
     "rank_delta": 0,
     "intention": "BUY PIDILITIND for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
@@ -65,15 +65,15 @@
     "data_confidence": "Forming",
     "data_confidence_key": "forming",
     "data_confidence_note": "5 paper trades so far \u2014 probability firming up but still partly estimated",
-    "expected_edge_r": 0.128,
+    "expected_edge_r": 0.146,
     "buy_score": 16.34,
     "sell_score": 5.0,
     "reasons": [
       "RSI=29 oversold \u2014 reversal watch",
       "Near lower Bollinger Band",
-      "Learned bullish pattern: supertrend_bullish (rel=63%)",
-      "Learned bullish pattern: pivot_point_test (rel=72%)",
       "Learned bullish pattern: pivot_r1_breakout (rel=82%)",
+      "Learned bullish pattern: pivot_point_test (rel=72%)",
+      "Learned bullish pattern: supertrend_bullish (rel=63%)",
       "Sector headwind (momentum=-0.31)",
       "Supertrend bullish \u2014 price above trend band",
       "Broke above Pivot R1 with volume \u2014 bullish",
@@ -107,13 +107,13 @@
       "History backtest: this kind of BUY setup worked 53% of the time over ~1 week on this stock (sample: 53)"
     ],
     "patterns_seen": [
-      "adx_strong_trend_down",
+      "full_bearish_alignment",
+      "pivot_r1_breakout",
+      "pivot_point_test",
+      "supertrend_bullish",
       "stoch_rsi_oversold_reversal",
       "bb_lower_bounce",
-      "full_bearish_alignment",
-      "supertrend_bullish",
-      "pivot_point_test",
-      "pivot_r1_breakout"
+      "adx_strong_trend_down"
     ],
     "reliable_patterns": [
       "near_52w_high",
@@ -150,20 +150,20 @@
     "paper_expectancy": -41.78,
     "market_mood": "bearish",
     "market_warning": [
-      "VIX=14.5 at 97th percentile vs last 30d \u2014 unusually high stress",
-      "Nifty in downtrend (strong_down) \u2014 only high-confidence BUY signals",
+      "VIX=14.8 at 97th percentile vs last 30d \u2014 unusually high stress",
+      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
       "Nifty choppy intraday \u2014 wait for cleaner setups",
-      "Heavy FII/DII outflow (\u20b9+558 Cr) \u2014 institutions selling"
+      "Net institutional outflow (\u20b9+482 Cr)"
     ]
   },
   {
     "ticker": "HINDALCO.NS",
     "nse_code": "HINDALCO",
     "company_name": "HINDALCO.NS",
-    "date": "2026-10-05",
-    "generated_at": "2026-10-05 09:45 UTC",
-    "valid_until": "15:40 IST",
-    "session": "intraday_close",
+    "date": "2026-10-06",
+    "generated_at": "2026-10-06 03:05 UTC",
+    "valid_until": "09:35 IST",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -197,12 +197,12 @@
     "pattern_score": 2.0,
     "confluence_bonus": 7.5,
     "paper_bonus": 0.0,
-    "success_probability": 0.46,
-    "base_success_prob": 0.429,
-    "profit_probability": 0.073,
-    "composite_score": 42.85,
-    "focus_rank": 6,
-    "rank_delta": 1,
+    "success_probability": 0.468,
+    "base_success_prob": 0.44,
+    "profit_probability": 0.1,
+    "composite_score": 44.31,
+    "focus_rank": 7,
+    "rank_delta": -1,
     "intention": "BUY HINDALCO for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
     "confluence_count": 5,
     "confluence_families": [
@@ -223,7 +223,7 @@
     "data_confidence": "Estimated",
     "data_confidence_key": "estimated",
     "data_confidence_note": "Only 2 paper trade(s) \u2014 probability is an indicator-based estimate, not yet proven",
-    "expected_edge_r": 0.073,
+    "expected_edge_r": 0.1,
     "buy_score": 11.3,
     "sell_score": 4,
     "reasons": [
@@ -258,11 +258,11 @@
       "History backtest: this kind of BUY setup worked 53% of the time over ~1 week on this stock (sample: 58)"
     ],
     "patterns_seen": [
-      "rsi_bullish_divergence",
-      "pivot_s1_bounce",
       "full_bearish_alignment",
+      "pivot_point_test",
+      "rsi_bullish_divergence",
       "supertrend_bullish",
-      "pivot_point_test"
+      "pivot_s1_bounce"
     ],
     "reliable_patterns": [],
     "nearest_support": 920,
@@ -290,20 +290,20 @@
     "paper_expectancy": -190.16,
     "market_mood": "bearish",
     "market_warning": [
-      "VIX=14.5 at 97th percentile vs last 30d \u2014 unusually high stress",
-      "Nifty in downtrend (strong_down) \u2014 only high-confidence BUY signals",
+      "VIX=14.8 at 97th percentile vs last 30d \u2014 unusually high stress",
+      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
       "Nifty choppy intraday \u2014 wait for cleaner setups",
-      "Heavy FII/DII outflow (\u20b9+558 Cr) \u2014 institutions selling"
+      "Net institutional outflow (\u20b9+482 Cr)"
     ]
   },
   {
     "ticker": "VBL.NS",
     "nse_code": "VBL",
     "company_name": "VBL.NS",
-    "date": "2026-10-05",
-    "generated_at": "2026-10-05 09:45 UTC",
-    "valid_until": "15:40 IST",
-    "session": "intraday_close",
+    "date": "2026-10-06",
+    "generated_at": "2026-10-06 03:05 UTC",
+    "valid_until": "09:35 IST",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -337,10 +337,10 @@
     "pattern_score": 1.0,
     "confluence_bonus": 10,
     "paper_bonus": 0.0,
-    "success_probability": 0.532,
-    "base_success_prob": 0.541,
-    "profit_probability": -0.003,
-    "composite_score": 45.94,
+    "success_probability": 0.543,
+    "base_success_prob": 0.552,
+    "profit_probability": 0.017,
+    "composite_score": 47.27,
     "focus_rank": 4,
     "rank_delta": 0,
     "intention": "BUY VBL for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
@@ -354,9 +354,9 @@
       "regime"
     ],
     "backtest_tested": true,
-    "backtest_hit_5d": 0.511,
-    "backtest_hit_10d": 0.511,
-    "backtest_sample": 45,
+    "backtest_hit_5d": 0.523,
+    "backtest_hit_10d": 0.523,
+    "backtest_sample": 44,
     "hist_long_trend": "strong_downtrend",
     "hist_52w_position": 13.6,
     "hist_personality": "choppy",
@@ -364,7 +364,7 @@
     "data_confidence": "Estimated",
     "data_confidence_key": "estimated",
     "data_confidence_note": "Only 2 paper trade(s) \u2014 probability is an indicator-based estimate, not yet proven",
-    "expected_edge_r": -0.003,
+    "expected_edge_r": 0.017,
     "buy_score": 9.51,
     "sell_score": 0,
     "reasons": [
@@ -397,15 +397,15 @@
       "Resistance at \u20b9450.00 is natural target",
       "Latest news: 'Varun Beverages Share Price Today: price rise and valuation - Univest'",
       "Confluence: 6 independent signal families agree (momentum, volume, pattern, news, fundamentals, regime)",
-      "History backtest: this kind of BUY setup worked 51% of the time over ~1 week on this stock (sample: 45)"
+      "History backtest: this kind of BUY setup worked 52% of the time over ~1 week on this stock (sample: 44)"
     ],
     "patterns_seen": [
-      "stoch_rsi_oversold_reversal",
+      "pivot_r1_breakout",
       "three_white_soldiers",
-      "momentum_continuation",
       "hammer",
+      "momentum_continuation",
       "supertrend_bullish",
-      "pivot_r1_breakout"
+      "stoch_rsi_oversold_reversal"
     ],
     "reliable_patterns": [],
     "nearest_support": 430.69,
@@ -433,10 +433,10 @@
     "paper_expectancy": 55.75,
     "market_mood": "bearish",
     "market_warning": [
-      "VIX=14.5 at 97th percentile vs last 30d \u2014 unusually high stress",
-      "Nifty in downtrend (strong_down) \u2014 only high-confidence BUY signals",
+      "VIX=14.8 at 97th percentile vs last 30d \u2014 unusually high stress",
+      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
       "Nifty choppy intraday \u2014 wait for cleaner setups",
-      "Heavy FII/DII outflow (\u20b9+558 Cr) \u2014 institutions selling"
+      "Net institutional outflow (\u20b9+482 Cr)"
     ]
   }
 ]

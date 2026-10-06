@@ -1,13 +1,13 @@
 {
   "phase": "paper_trading",
   "day": 65,
-  "session": "afternoon",
+  "session": "intraday_close",
   "start_date": "2026-06-22",
   "phase_start_date": "2026-07-15",
   "last_run_date": "2026-09-21",
   "last_counted_date": "2026-09-21",
   "cohort_last_tick_date": "2026-09-21",
-  "last_updated": "2026-10-06T07:45:48.269398",
+  "last_updated": "2026-10-06T09:45:42.807089",
   "focus_stocks": [
     "PIDILITIND.NS",
     "GAIL.NS",
@@ -58,14 +58,14 @@
     "BANDHANBNK.NS"
   ],
   "paper_trade_stats": {
-    "total": 64,
+    "total": 65,
     "wins": 26,
-    "losses": 38,
-    "win_rate": 0.406,
-    "total_pnl": -4066.31,
+    "losses": 39,
+    "win_rate": 0.4,
+    "total_pnl": -4276.1,
     "avg_win": 95.59,
-    "avg_loss": -172.41,
-    "expectancy": -63.54
+    "avg_loss": -173.37,
+    "expectancy": -65.79
   },
   "brain_notes": [
     "[2026-07-31] Pre-open macro: neutral (+0.14)",
@@ -400,6 +400,7 @@
     "preopen": "2026-10-06",
     "morning": "2026-10-06",
     "midday": "2026-10-06",
-    "afternoon": "2026-10-06"
+    "afternoon": "2026-10-06",
+    "intraday_close": "2026-10-06"
   }
 }

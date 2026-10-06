@@ -1,64 +1,6 @@
 {
-  "capital": 63172.31112999999,
+  "capital": 69337.52255499999,
   "open_positions": [
-    {
-      "ticker": "COALINDIA.NS",
-      "sector": "Energy",
-      "open_date": "2026-09-23",
-      "open_session": "morning",
-      "action": "BUY",
-      "entry": 425.0,
-      "qty": 15,
-      "invested": 6375.0,
-      "stop_loss": 412.27,
-      "target": 445.36,
-      "style": "swing",
-      "confidence": 74.8,
-      "patterns": [
-        "supertrend_bullish",
-        "full_bullish_alignment",
-        "gap_up_continuation",
-        "stoch_rsi_oversold_reversal",
-        "pivot_r1_breakout",
-        "pivot_r2_breakout",
-        "macd_bullish_crossover"
-      ],
-      "buy_reasons": [
-        "All EMAs stacked bullish",
-        "MACD histogram positive",
-        "High volume confirmation (1.5x avg)",
-        "Positive news sentiment (0.31, news 1.2x reliable here)",
-        "Supertrend bullish \u2014 price above trend band",
-        "Broke above Pivot R1 with volume \u2014 bullish",
-        "Broke above Pivot R2 \u2014 strong momentum",
-        "StochRSI oversold with bullish candle \u2014 reversal",
-        "Gap up with bullish follow-through \u2014 momentum",
-        "\u26a0 Buying against a long-term downtrend \u2014 lower conviction",
-        "\u26a0 Daily buy fights the higher-timeframe trend \u2014 needs extra conviction"
-      ],
-      "current_price": 413.8,
-      "unrealized_pnl": -168.0,
-      "max_held_days": 40,
-      "vol_regime_pct": 0.12,
-      "entry_market": {
-        "nifty_trend": "up",
-        "vix": 11.25,
-        "mood": "neutral",
-        "regime": "mixed",
-        "sector_momentum": 0.256,
-        "delivery_signal": "neutral",
-        "rsi": 61.7,
-        "mtf_alignment": "conflict",
-        "opposing_ratio": 0.0,
-        "hist_long_trend": "strong_downtrend"
-      },
-      "view_hist": [
-        0,
-        0,
-        0,
-        0
-      ]
-    },
     {
       "ticker": "HOMEFIRST.NS",
       "sector": "Infra Finance",
@@ -91,8 +33,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "Broke below Pivot S1 support \u2014 bearish"
       ],
-      "current_price": 1102.8,
-      "unrealized_pnl": -53.2,
+      "current_price": 1113.7,
+      "unrealized_pnl": -9.6,
       "max_held_days": 40,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -153,8 +95,8 @@
         "Near upper Bollinger Band",
         "RSI bearish divergence \u2014 price higher but RSI lower"
       ],
-      "current_price": 1781.9,
-      "unrealized_pnl": -10.8,
+      "current_price": 1782.7,
+      "unrealized_pnl": -8.4,
       "max_held_days": 40,
       "vol_regime_pct": 0.08399999999999999,
       "entry_market": {
@@ -170,7 +112,7 @@
         "hist_long_trend": "strong_uptrend"
       },
       "view_hist": [
-        0,
+        1,
         1,
         1,
         1
@@ -212,8 +154,8 @@
         "RSI bearish divergence \u2014 price higher but RSI lower",
         "ADX strong trend \u2014 downside momentum confirmed"
       ],
-      "current_price": 1687.6,
-      "unrealized_pnl": -21.8,
+      "current_price": 1688.2,
+      "unrealized_pnl": -20.6,
       "max_held_days": 40,
       "vol_regime_pct": 0.08399999999999999,
       "entry_market": {
@@ -274,8 +216,8 @@
         "MACD histogram negative",
         "High volume confirmation (1.6x avg)"
       ],
-      "current_price": 938.65,
-      "unrealized_pnl": 15.9,
+      "current_price": 936.8,
+      "unrealized_pnl": 4.8,
       "max_held_days": 40,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -291,7 +233,7 @@
         "hist_long_trend": "uptrend"
       },
       "view_hist": [
-        1,
+        0,
         0,
         0,
         0
@@ -336,8 +278,8 @@
         "High volume confirmation (1.4x avg)",
         "ADX strong trend \u2014 downside momentum confirmed"
       ],
-      "current_price": 1510.5,
-      "unrealized_pnl": 0.0,
+      "current_price": 1521.8,
+      "unrealized_pnl": 56.5,
       "max_held_days": 40,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -351,7 +293,10 @@
         "mtf_alignment": "aligned",
         "opposing_ratio": 0.38,
         "hist_long_trend": "uptrend"
-      }
+      },
+      "view_hist": [
+        1
+      ]
     }
   ],
   "closed_trades": [
@@ -4641,6 +4586,74 @@
       "pnl_pct": 0.76,
       "won": true,
       "open_days": 3
+    },
+    {
+      "ticker": "COALINDIA.NS",
+      "sector": "Energy",
+      "open_date": "2026-09-23",
+      "open_session": "morning",
+      "action": "BUY",
+      "entry": 425.0,
+      "qty": 15,
+      "invested": 6375.0,
+      "stop_loss": 412.27,
+      "target": 445.36,
+      "style": "swing",
+      "confidence": 74.8,
+      "patterns": [
+        "supertrend_bullish",
+        "full_bullish_alignment",
+        "gap_up_continuation",
+        "stoch_rsi_oversold_reversal",
+        "pivot_r1_breakout",
+        "pivot_r2_breakout",
+        "macd_bullish_crossover"
+      ],
+      "buy_reasons": [
+        "All EMAs stacked bullish",
+        "MACD histogram positive",
+        "High volume confirmation (1.5x avg)",
+        "Positive news sentiment (0.31, news 1.2x reliable here)",
+        "Supertrend bullish \u2014 price above trend band",
+        "Broke above Pivot R1 with volume \u2014 bullish",
+        "Broke above Pivot R2 \u2014 strong momentum",
+        "StochRSI oversold with bullish candle \u2014 reversal",
+        "Gap up with bullish follow-through \u2014 momentum",
+        "\u26a0 Buying against a long-term downtrend \u2014 lower conviction",
+        "\u26a0 Daily buy fights the higher-timeframe trend \u2014 needs extra conviction"
+      ],
+      "current_price": 411.2,
+      "unrealized_pnl": -207.0,
+      "max_held_days": 40,
+      "vol_regime_pct": 0.12,
+      "entry_market": {
+        "nifty_trend": "up",
+        "vix": 11.25,
+        "mood": "neutral",
+        "regime": "mixed",
+        "sector_momentum": 0.256,
+        "delivery_signal": "neutral",
+        "rsi": 61.7,
+        "mtf_alignment": "conflict",
+        "opposing_ratio": 0.0,
+        "hist_long_trend": "strong_downtrend"
+      },
+      "view_hist": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "close_date": "2026-10-06",
+      "close_session": "intraday_close",
+      "exit_price": 412.27,
+      "exit_reason": "stop_hit",
+      "pnl": -209.79,
+      "pnl_gross": -190.95,
+      "costs": 18.84,
+      "pnl_pct": -3.29,
+      "won": false,
+      "open_days": 8
     }
   ],
   "daily_snapshots": [
@@ -4974,11 +4987,11 @@
       "daily_pnl": 0.0
     }
   ],
-  "daily_pnl_today": 56.197990000000054,
+  "daily_pnl_today": -153.5905850000002,
   "last_snapshot_date": "2026-09-21",
   "lifetime_wins": 26,
-  "lifetime_losses": 38,
-  "lifetime_pnl": -4066.31,
+  "lifetime_losses": 39,
+  "lifetime_pnl": -4276.1,
   "last_pnl_reset_date": "2026-10-06",
   "max_drawdown_pct": 4.47,
   "current_drawdown_pct": 4.22,

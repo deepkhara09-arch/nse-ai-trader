@@ -1,5 +1,5 @@
 {
-  "capital": 66847.81314,
+  "capital": 68158.35313999999,
   "open_positions": [
     {
       "ticker": "COALINDIA.NS",
@@ -36,8 +36,8 @@
         "\u26a0 Buying against a long-term downtrend \u2014 lower conviction",
         "\u26a0 Daily buy fights the higher-timeframe trend \u2014 needs extra conviction"
       ],
-      "current_price": 424.5,
-      "unrealized_pnl": -7.5,
+      "current_price": 417.85,
+      "unrealized_pnl": -107.25,
       "max_held_days": 40,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -91,8 +91,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "Broke below Pivot S1 support \u2014 bearish"
       ],
-      "current_price": 1093.8,
-      "unrealized_pnl": -89.2,
+      "current_price": 1102.7,
+      "unrealized_pnl": -53.6,
       "max_held_days": 40,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -153,8 +153,8 @@
         "Near upper Bollinger Band",
         "RSI bearish divergence \u2014 price higher but RSI lower"
       ],
-      "current_price": 1773.4,
-      "unrealized_pnl": -36.3,
+      "current_price": 1777.4,
+      "unrealized_pnl": -24.3,
       "max_held_days": 40,
       "vol_regime_pct": 0.08399999999999999,
       "entry_market": {
@@ -172,7 +172,7 @@
       "view_hist": [
         0,
         0,
-        0,
+        1,
         1
       ]
     },
@@ -183,9 +183,9 @@
       "open_session": "morning",
       "action": "BUY",
       "entry": 1273.6,
-      "qty": 3,
-      "invested": 3820.8,
-      "stop_loss": 1205.56,
+      "qty": 2,
+      "invested": 2547.2,
+      "stop_loss": 1287.07,
       "target": 1355.25,
       "style": "swing",
       "confidence": 70.0,
@@ -214,8 +214,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "All EMAs stacked bearish"
       ],
-      "current_price": 1307.2,
-      "unrealized_pnl": 100.8,
+      "current_price": 1322.4,
+      "unrealized_pnl": 97.6,
       "max_held_days": 40,
       "vol_regime_pct": 0.08399999999999999,
       "entry_market": {
@@ -235,7 +235,9 @@
         0,
         0,
         0
-      ]
+      ],
+      "t1_booked": true,
+      "trailing_active": true
     },
     {
       "ticker": "PAYTM.NS",
@@ -273,8 +275,8 @@
         "RSI bearish divergence \u2014 price higher but RSI lower",
         "ADX strong trend \u2014 downside momentum confirmed"
       ],
-      "current_price": 1689.9,
-      "unrealized_pnl": -17.2,
+      "current_price": 1680.5,
+      "unrealized_pnl": -36.0,
       "max_held_days": 40,
       "vol_regime_pct": 0.08399999999999999,
       "entry_market": {
@@ -335,8 +337,8 @@
         "MACD histogram negative",
         "High volume confirmation (1.6x avg)"
       ],
-      "current_price": 944.3,
-      "unrealized_pnl": 49.8,
+      "current_price": 943.0,
+      "unrealized_pnl": 42.0,
       "max_held_days": 40,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -354,6 +356,7 @@
       "view_hist": [
         0,
         1,
+        0,
         0
       ]
     }
@@ -4499,6 +4502,79 @@
       "pnl_pct": -6.71,
       "won": false,
       "open_days": 2
+    },
+    {
+      "ticker": "ADANIGREEN.NS",
+      "sector": "Energy",
+      "open_date": "2026-09-30",
+      "open_session": "morning",
+      "action": "BUY",
+      "entry": 1273.6,
+      "qty": 1,
+      "invested": 2547.2,
+      "stop_loss": 1287.07,
+      "target": 1355.25,
+      "style": "swing",
+      "confidence": 70.0,
+      "patterns": [
+        "adx_ranging_market",
+        "full_bearish_alignment",
+        "stoch_rsi_oversold_reversal",
+        "pivot_r1_breakout",
+        "tweezer_bottom",
+        "early_recovery",
+        "supertrend_bullish"
+      ],
+      "buy_reasons": [
+        "RSI=41 in healthy buy zone",
+        "MACD histogram positive",
+        "Positive news sentiment (0.24)",
+        "News sentiment improving across sessions",
+        "Candlestick: tweezer bottom",
+        "Supertrend bullish \u2014 price above trend band",
+        "ADX low \u2014 market ranging, signals less reliable",
+        "Broke above Pivot R1 with volume \u2014 bullish",
+        "StochRSI oversold with bullish candle \u2014 reversal",
+        "In a long-term uptrend (2yr) \u2014 trend on our side",
+        "Clean trender aligned with its long-term uptrend",
+        "\u2713 Daily setup aligned with the higher-timeframe trend",
+        "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
+        "All EMAs stacked bearish"
+      ],
+      "current_price": 1322.4,
+      "unrealized_pnl": 146.4,
+      "max_held_days": 40,
+      "vol_regime_pct": 0.08399999999999999,
+      "entry_market": {
+        "nifty_trend": "strong_down",
+        "vix": 13.41,
+        "mood": "bearish",
+        "regime": "choppy",
+        "sector_momentum": -0.18,
+        "delivery_signal": "neutral",
+        "rsi": 40.8,
+        "mtf_alignment": "aligned",
+        "opposing_ratio": 0.16,
+        "hist_long_trend": "uptrend"
+      },
+      "view_hist": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "t1_booked": true,
+      "trailing_active": true,
+      "close_date": "2026-10-06",
+      "close_session": "midday",
+      "exit_price": 1314.42,
+      "exit_reason": "partial_t1",
+      "pnl": 36.94,
+      "pnl_gross": 40.83,
+      "costs": 3.88,
+      "pnl_pct": 2.9,
+      "won": true,
+      "open_days": 3
     }
   ],
   "daily_snapshots": [
@@ -4832,11 +4908,11 @@
       "daily_pnl": 0.0
     }
   ],
-  "daily_pnl_today": 0.0,
+  "daily_pnl_today": 36.94,
   "last_snapshot_date": "2026-09-21",
-  "lifetime_wins": 24,
+  "lifetime_wins": 25,
   "lifetime_losses": 38,
-  "lifetime_pnl": -4122.51,
+  "lifetime_pnl": -4085.57,
   "last_pnl_reset_date": "2026-10-06",
   "max_drawdown_pct": 4.47,
   "current_drawdown_pct": 4.22,

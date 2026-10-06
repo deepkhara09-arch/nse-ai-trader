@@ -1,35 +1,5 @@
 [
   {
-    "type": "updated",
-    "ticker": "ICICIBANK.NS",
-    "nse_code": "ICICIBANK",
-    "signal": "BUY",
-    "date": "2026-07-24",
-    "ts": "2026-07-24T04:05:52.516079",
-    "detail": "Confidence \u25bc10 (76 \u2192 66) | Target 1 moved \u20b91513.32 \u2192 \u20b91501.30",
-    "confidence": 65.6
-  },
-  {
-    "type": "removed",
-    "ticker": "ICICIBANK.NS",
-    "nse_code": "ICICIBANK",
-    "signal": "BUY",
-    "date": "2026-07-24",
-    "ts": "2026-07-24T06:09:57.789365",
-    "detail": "Dropped \u2014 no longer meets threshold (was 66/100)",
-    "confidence": 0
-  },
-  {
-    "type": "new",
-    "ticker": "ICICIBANK.NS",
-    "nse_code": "ICICIBANK",
-    "signal": "BUY",
-    "date": "2026-07-27",
-    "ts": "2026-07-27T03:05:42.769913",
-    "detail": "New BUY recommendation \u2014 confidence 83/100",
-    "confidence": 83.3
-  },
-  {
     "type": "new",
     "ticker": "FEDERALBNK.NS",
     "nse_code": "FEDERALBNK",
@@ -5998,5 +5968,35 @@
     "ts": "2026-10-06T04:06:22.983613",
     "detail": "Target 1 moved \u20b91614.16 \u2192 \u20b91601.88",
     "confidence": 90.1
+  },
+  {
+    "type": "removed",
+    "ticker": "NHPC.NS",
+    "nse_code": "NHPC",
+    "signal": "BUY",
+    "date": "2026-10-06",
+    "ts": "2026-10-06T06:15:59.151844",
+    "detail": "Dropped \u2014 no longer meets threshold (was 71/100)",
+    "confidence": 0
+  },
+  {
+    "type": "removed",
+    "ticker": "ONGC.NS",
+    "nse_code": "ONGC",
+    "signal": "BUY",
+    "date": "2026-10-06",
+    "ts": "2026-10-06T06:15:59.151844",
+    "detail": "Dropped \u2014 no longer meets threshold (was 67/100)",
+    "confidence": 0
+  },
+  {
+    "type": "updated",
+    "ticker": "PIDILITIND.NS",
+    "nse_code": "PIDILITIND",
+    "signal": "BUY",
+    "date": "2026-10-06",
+    "ts": "2026-10-06T06:15:59.151844",
+    "detail": "Confidence \u25bc4 (90 \u2192 86) | Rank \u25b21 (#2 \u2192 #1) | Stop loss moved \u20b91412.76 \u2192 \u20b91451.66",
+    "confidence": 86.1
   }
 ]

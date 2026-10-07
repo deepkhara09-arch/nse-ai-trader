@@ -1,45 +1,5 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of doji, supertrend_bullish, pivot_r1_breakout mean for a swing trade on ADANIPORTS? Current RSI=57, MACD hist=-3.5893, Vol=1.4x average. Signal is BUY.",
-    "context": {
-      "ticker": "ADANIPORTS.NS",
-      "signal": "BUY",
-      "patterns": "doji, supertrend_bullish, pivot_r1_breakout",
-      "rsi": 56.9
-    },
-    "queued_at": "2026-10-06T07:45:48.366399"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of full_bearish_alignment, supertrend_bullish, near_52w_low mean for a swing trade on ONGC? Current RSI=32, MACD hist=-1.1999, Vol=1.9x average. Signal is BUY.",
-    "context": {
-      "ticker": "ONGC.NS",
-      "signal": "BUY",
-      "patterns": "full_bearish_alignment, supertrend_bullish, near_52w_low",
-      "rsi": 32.1
-    },
-    "queued_at": "2026-10-06T07:45:48.375422"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of full_bearish_alignment, morning_star, adx_strong_trend_down mean for a swing trade on PIDILITIND? Current RSI=43, MACD hist=-6.0429, Vol=1.4x average. Signal is BUY.",
-    "context": {
-      "ticker": "PIDILITIND.NS",
-      "signal": "BUY",
-      "patterns": "full_bearish_alignment, morning_star, adx_strong_trend_down",
-      "rsi": 42.5
-    },
-    "queued_at": "2026-10-06T09:45:42.402013"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of supertrend_bullish, pivot_r1_breakout, morning_star mean for a swing trade on ADANIPORTS? Current RSI=57, MACD hist=-3.5893, Vol=1.4x average. Signal is BUY.",
-    "context": {
-      "ticker": "ADANIPORTS.NS",
-      "signal": "BUY",
-      "patterns": "supertrend_bullish, pivot_r1_breakout, morning_star",
-      "rsi": 56.9
-    },
-    "queued_at": "2026-10-06T09:45:42.404956"
-  },
-  {
     "question": "In Indian NSE markets, what does the combination of pivot_r2_breakout, full_bearish_alignment, supertrend_bullish mean for a swing trade on ONGC? Current RSI=32, MACD hist=-1.1999, Vol=1.9x average. Signal is BUY.",
     "context": {
       "ticker": "ONGC.NS",
@@ -98,5 +58,45 @@
       "rsi": 32.1
     },
     "queued_at": "2026-10-06T09:45:43.391668"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_down, full_bearish_alignment, morning_star mean for a swing trade on PIDILITIND? Current RSI=43, MACD hist=-6.0429, Vol=1.4x average. Signal is BUY.",
+    "context": {
+      "ticker": "PIDILITIND.NS",
+      "signal": "BUY",
+      "patterns": "adx_strong_trend_down, full_bearish_alignment, morning_star",
+      "rsi": 42.5
+    },
+    "queued_at": "2026-10-07T03:05:47.586242"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of adx_ranging_market, morning_star, gap_up_continuation mean for a swing trade on ADANIPORTS? Current RSI=57, MACD hist=-3.5893, Vol=1.4x average. Signal is BUY.",
+    "context": {
+      "ticker": "ADANIPORTS.NS",
+      "signal": "BUY",
+      "patterns": "adx_ranging_market, morning_star, gap_up_continuation",
+      "rsi": 56.9
+    },
+    "queued_at": "2026-10-07T03:05:47.593160"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of low_volume_drift, full_bearish_alignment, near_52w_low mean for a swing trade on NHPC? Current RSI=30, MACD hist=-0.4342, Vol=0.5x average. Signal is BUY.",
+    "context": {
+      "ticker": "NHPC.NS",
+      "signal": "BUY",
+      "patterns": "low_volume_drift, full_bearish_alignment, near_52w_low",
+      "rsi": 29.6
+    },
+    "queued_at": "2026-10-07T03:05:47.597615"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of pivot_r2_breakout, full_bearish_alignment, near_52w_low mean for a swing trade on ONGC? Current RSI=32, MACD hist=-1.1999, Vol=1.9x average. Signal is BUY.",
+    "context": {
+      "ticker": "ONGC.NS",
+      "signal": "BUY",
+      "patterns": "pivot_r2_breakout, full_bearish_alignment, near_52w_low",
+      "rsi": 32.1
+    },
+    "queued_at": "2026-10-07T03:05:47.602041"
   }
 ]

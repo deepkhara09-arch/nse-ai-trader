@@ -3,10 +3,10 @@
     "ticker": "PIDILITIND.NS",
     "nse_code": "PIDILITIND",
     "company_name": "Pidilite Industries",
-    "date": "2026-10-06",
-    "generated_at": "2026-10-06 09:45 UTC",
-    "valid_until": "15:40 IST",
-    "session": "intraday_close",
+    "date": "2026-10-07",
+    "generated_at": "2026-10-07 03:05 UTC",
+    "valid_until": "09:35 IST",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -40,10 +40,10 @@
     "pattern_score": 10,
     "confluence_bonus": 5.0,
     "paper_bonus": 5.0,
-    "success_probability": 0.633,
-    "base_success_prob": 0.678,
-    "profit_probability": 0.214,
-    "composite_score": 57.12,
+    "success_probability": 0.639,
+    "base_success_prob": 0.687,
+    "profit_probability": 0.23,
+    "composite_score": 58.31,
     "focus_rank": 1,
     "rank_delta": 0,
     "intention": "BUY PIDILITIND for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
@@ -65,7 +65,7 @@
     "data_confidence": "Forming",
     "data_confidence_key": "forming",
     "data_confidence_note": "5 paper trades so far \u2014 probability firming up but still partly estimated",
-    "expected_edge_r": 0.214,
+    "expected_edge_r": 0.23,
     "buy_score": 13.24,
     "sell_score": 5.0,
     "reasons": [
@@ -79,7 +79,6 @@
       "In a long-term uptrend (2yr) \u2014 trend on our side",
       "\u2713 Daily setup aligned with the higher-timeframe trend",
       "\u26a0 Sector momentum -0.29 \u2014 buying into a falling sector needs extra conviction",
-      "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
       "Valuation: P/E 60.8x",
       "ROCE: 33.0%",
       "Revenue growing 21.3% YoY",
@@ -101,13 +100,13 @@
       "History backtest: this kind of BUY setup worked 53% of the time over ~1 week on this stock (sample: 53)"
     ],
     "patterns_seen": [
+      "adx_strong_trend_down",
       "full_bearish_alignment",
-      "supertrend_bullish",
-      "outside_bar",
-      "pivot_r1_breakout",
       "morning_star",
       "strong_bullish_marubozu",
-      "adx_strong_trend_down"
+      "supertrend_bullish",
+      "outside_bar",
+      "pivot_r1_breakout"
     ],
     "reliable_patterns": [
       "near_52w_high",
@@ -142,21 +141,19 @@
     "paper_win_rate": 0.6,
     "paper_pnl": -208.92,
     "paper_expectancy": -41.78,
-    "market_mood": "bearish",
+    "market_mood": "neutral",
     "market_warning": [
-      "VIX=14.8 at 97th percentile vs last 30d \u2014 unusually high stress",
-      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
-      "Net institutional outflow (\u20b9+482 Cr)"
+      "VIX=13.6 at 87th percentile vs last 30d \u2014 unusually high stress"
     ]
   },
   {
     "ticker": "ONGC.NS",
     "nse_code": "ONGC",
     "company_name": "Oil & Natural Gas Corp",
-    "date": "2026-10-06",
-    "generated_at": "2026-10-06 09:45 UTC",
-    "valid_until": "15:40 IST",
-    "session": "intraday_close",
+    "date": "2026-10-07",
+    "generated_at": "2026-10-07 03:05 UTC",
+    "valid_until": "09:35 IST",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -190,10 +187,10 @@
     "pattern_score": 3.0,
     "confluence_bonus": 5.0,
     "paper_bonus": 0.0,
-    "success_probability": 0.381,
-    "base_success_prob": 0.348,
-    "profit_probability": 0.044,
-    "composite_score": 32.58,
+    "success_probability": 0.389,
+    "base_success_prob": 0.36,
+    "profit_probability": 0.08,
+    "composite_score": 34.24,
     "focus_rank": 14,
     "rank_delta": 0,
     "intention": "BUY ONGC for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
@@ -215,7 +212,7 @@
     "data_confidence": "Estimated",
     "data_confidence_key": "estimated",
     "data_confidence_note": "Only 0 paper trade(s) \u2014 probability is an indicator-based estimate, not yet proven",
-    "expected_edge_r": 0.044,
+    "expected_edge_r": 0.08,
     "buy_score": 12.2,
     "sell_score": 6.0,
     "reasons": [
@@ -232,7 +229,6 @@
       "StochRSI oversold with bullish candle \u2014 reversal",
       "\u26a0 Buying against a long-term downtrend \u2014 lower conviction",
       "\u26a0 Daily buy fights the higher-timeframe trend \u2014 needs extra conviction",
-      "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
       "Valuation: P/E 6.8x",
       "ROCE: 3.8%",
       "Revenue growing 25.7% YoY",
@@ -254,14 +250,14 @@
     "patterns_seen": [
       "pivot_r2_breakout",
       "full_bearish_alignment",
-      "supertrend_bullish",
-      "pivot_s1_bounce",
-      "pivot_r1_breakout",
-      "rsi_bearish_divergence",
-      "pivot_point_test",
-      "stoch_rsi_oversold_reversal",
       "near_52w_low",
-      "pivot_s2_bounce"
+      "pivot_point_test",
+      "supertrend_bullish",
+      "rsi_bearish_divergence",
+      "stoch_rsi_oversold_reversal",
+      "pivot_r1_breakout",
+      "pivot_s2_bounce",
+      "pivot_s1_bounce"
     ],
     "reliable_patterns": [],
     "nearest_support": 220,
@@ -287,11 +283,9 @@
     "paper_win_rate": 0,
     "paper_pnl": 0,
     "paper_expectancy": 0,
-    "market_mood": "bearish",
+    "market_mood": "neutral",
     "market_warning": [
-      "VIX=14.8 at 97th percentile vs last 30d \u2014 unusually high stress",
-      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
-      "Net institutional outflow (\u20b9+482 Cr)"
+      "VIX=13.6 at 87th percentile vs last 30d \u2014 unusually high stress"
     ]
   }
 ]

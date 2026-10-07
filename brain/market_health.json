@@ -1,6 +1,6 @@
 {
   "date": "2026-10-07",
-  "session": "midday",
+  "session": "afternoon",
   "nifty": {
     "symbol": "^NSEI",
     "value": 22776.1,
@@ -62,6 +62,7 @@
   "trade_allowed": true,
   "warnings": [
     "VIX=13.6 at 87th percentile vs last 30d \u2014 unusually high stress",
+    "Nifty choppy intraday \u2014 wait for cleaner setups",
     "Global macro risk-off (-0.26) \u2014 Overall macro mood is risk-off (-0.26). US Dow +0.5% overnight. Crude +0.0%. USD/INR +0.3%. Notable: Geopolitical confli"
   ],
   "leading_sectors": [
@@ -73,7 +74,7 @@
     "Pharma",
     "Infra"
   ],
-  "intraday_regime": "mixed",
+  "intraday_regime": "choppy",
   "macro": {
     "date": "2026-10-07",
     "session": "midday",

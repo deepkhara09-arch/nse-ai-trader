@@ -1,27 +1,5 @@
 [
   {
-    "timestamp": "2026-08-13T15:42:19.471688+05:30",
-    "date": "2026-08-13",
-    "ticker": "SBIN.NS",
-    "session": "preclose",
-    "action": "RECOMMEND",
-    "signal": "BUY",
-    "confidence": 72.9,
-    "entry": 1078.22,
-    "stop_loss": 1051.52,
-    "target": 1129.06,
-    "reason": "rec snapshot (short_term)",
-    "patterns": [
-      "supertrend_bullish",
-      "pivot_r1_breakout",
-      "pivot_r2_breakout",
-      "strong_bullish_marubozu",
-      "full_bullish_alignment"
-    ],
-    "dry_evaluated": true,
-    "dry_outcome": "loss"
-  },
-  {
     "timestamp": "2026-08-13T15:42:19.471693+05:30",
     "date": "2026-08-13",
     "ticker": "CIPLA.NS",
@@ -21202,6 +21180,26 @@
       "engulfing_bearish",
       "pivot_s1_breakdown",
       "rsi_bearish_divergence"
+    ]
+  },
+  {
+    "timestamp": "2026-10-07T07:45:48.792857",
+    "date": "2026-10-07",
+    "ticker": "ONGC.NS",
+    "session": "afternoon",
+    "action": "SELL",
+    "signal": "SELL",
+    "confidence": 72.6,
+    "entry": 221.75,
+    "stop_loss": 229.84,
+    "target": 212.04,
+    "reason": "paper afternoon",
+    "patterns": [
+      "pivot_s1_breakdown",
+      "full_bearish_alignment",
+      "engulfing_bearish",
+      "rsi_bearish_divergence",
+      "near_52w_low"
     ]
   }
 ]

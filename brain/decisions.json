@@ -1,56 +1,5 @@
 [
   {
-    "timestamp": "2026-08-13T15:42:19.471693+05:30",
-    "date": "2026-08-13",
-    "ticker": "CIPLA.NS",
-    "session": "preclose",
-    "action": "RECOMMEND",
-    "signal": "BUY",
-    "confidence": 70.1,
-    "entry": 1462.29,
-    "stop_loss": 1420.9,
-    "target": 1538.5,
-    "reason": "rec snapshot (short_term)",
-    "patterns": [
-      "supertrend_bullish",
-      "pivot_point_test",
-      "spinning_top",
-      "rsi_bullish_divergence",
-      "low_volume_drift",
-      "tweezer_bottom",
-      "full_bullish_alignment",
-      "pivot_s1_bounce"
-    ],
-    "dry_evaluated": true,
-    "dry_outcome": "loss"
-  },
-  {
-    "timestamp": "2026-08-13T15:42:19.471698+05:30",
-    "date": "2026-08-13",
-    "ticker": "ASIANPAINT.NS",
-    "session": "preclose",
-    "action": "RECOMMEND",
-    "signal": "BUY",
-    "confidence": 65.9,
-    "entry": 2748.01,
-    "stop_loss": 2649.93,
-    "target": 2931.84,
-    "reason": "rec snapshot (short_term)",
-    "patterns": [
-      "macd_bearish_crossover",
-      "supertrend_bullish",
-      "adx_ranging_market",
-      "engulfing_bullish",
-      "pivot_point_test",
-      "hammer",
-      "outside_bar",
-      "stoch_rsi_oversold_reversal",
-      "full_bullish_alignment"
-    ],
-    "dry_evaluated": true,
-    "dry_outcome": "loss"
-  },
-  {
     "timestamp": "2026-08-14T04:05:55.738458",
     "date": "2026-08-14",
     "ticker": "MARICO.NS",
@@ -21199,6 +21148,48 @@
       "full_bearish_alignment",
       "engulfing_bearish",
       "rsi_bearish_divergence",
+      "near_52w_low"
+    ]
+  },
+  {
+    "timestamp": "2026-10-07T09:45:35.981973",
+    "date": "2026-10-07",
+    "ticker": "HOMEFIRST.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 59.0,
+    "entry": 1087.7,
+    "stop_loss": 993.59,
+    "target": 1195.25,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "pivot_point_test",
+      "stoch_rsi_overbought_reversal",
+      "strong_bearish_marubozu",
+      "full_bearish_alignment",
+      "adx_strong_trend_down",
+      "rsi_bullish_divergence",
+      "inside_bar"
+    ]
+  },
+  {
+    "timestamp": "2026-10-07T09:45:35.989173",
+    "date": "2026-10-07",
+    "ticker": "ONGC.NS",
+    "session": "intraday_close",
+    "action": "SELL",
+    "signal": "SELL",
+    "confidence": 72.6,
+    "entry": 221.99,
+    "stop_loss": 230.08,
+    "target": 212.28,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "rsi_bearish_divergence",
+      "pivot_s1_breakdown",
+      "full_bearish_alignment",
+      "engulfing_bearish",
       "near_52w_low"
     ]
   }

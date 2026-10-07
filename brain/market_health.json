@@ -1,6 +1,6 @@
 {
   "date": "2026-10-07",
-  "session": "preopen",
+  "session": "morning",
   "nifty": {
     "symbol": "^NSEI",
     "value": 22776.1,
@@ -58,10 +58,11 @@
       "ath_pct_60d": -6.93
     }
   },
-  "market_mood": "neutral",
+  "market_mood": "bearish",
   "trade_allowed": true,
   "warnings": [
-    "VIX=13.6 at 87th percentile vs last 30d \u2014 unusually high stress"
+    "VIX=13.6 at 87th percentile vs last 30d \u2014 unusually high stress",
+    "Nifty choppy intraday \u2014 wait for cleaner setups"
   ],
   "leading_sectors": [
     "IT"
@@ -72,7 +73,7 @@
     "Pharma",
     "Infra"
   ],
-  "intraday_regime": "mixed",
+  "intraday_regime": "choppy",
   "macro": {
     "date": "2026-10-07",
     "session": "preopen",

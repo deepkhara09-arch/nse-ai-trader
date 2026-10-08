@@ -1,5 +1,5 @@
 {
-  "capital": 66250.854555,
+  "capital": 71351.6151,
   "open_positions": [
     {
       "ticker": "HOMEFIRST.NS",
@@ -33,8 +33,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "Broke below Pivot S1 support \u2014 bearish"
       ],
-      "current_price": 1077.5,
-      "unrealized_pnl": -154.4,
+      "current_price": 1067.1,
+      "unrealized_pnl": -196.0,
       "max_held_days": 40,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -51,68 +51,6 @@
       },
       "view_hist": [
         0,
-        0,
-        0,
-        0
-      ]
-    },
-    {
-      "ticker": "ADANIPORTS.NS",
-      "sector": "Infra",
-      "open_date": "2026-09-30",
-      "open_session": "morning",
-      "action": "BUY",
-      "entry": 1785.5,
-      "qty": 3,
-      "invested": 5356.5,
-      "stop_loss": 1705.49,
-      "target": 1881.52,
-      "style": "swing",
-      "confidence": 88.3,
-      "patterns": [
-        "strong_bullish_marubozu",
-        "stoch_rsi_oversold_reversal",
-        "full_bullish_alignment",
-        "volume_breakout_bullish",
-        "tweezer_bottom",
-        "momentum_continuation",
-        "supertrend_bullish",
-        "pivot_r1_breakout",
-        "rsi_bearish_divergence"
-      ],
-      "buy_reasons": [
-        "All EMAs stacked bullish",
-        "MACD histogram positive",
-        "High volume confirmation (2.1x avg)",
-        "Positive news sentiment (0.27, news 1.2x reliable here)",
-        "Candlestick: tweezer bottom",
-        "Supertrend bullish \u2014 price above trend band",
-        "Broke above Pivot R1 with volume \u2014 bullish",
-        "StochRSI oversold with bullish candle \u2014 reversal",
-        "In a long-term strong uptrend (2yr) \u2014 trend on our side",
-        "\u2713 Daily setup aligned with the higher-timeframe trend",
-        "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
-        "Near upper Bollinger Band",
-        "RSI bearish divergence \u2014 price higher but RSI lower"
-      ],
-      "current_price": 1708.8,
-      "unrealized_pnl": -230.1,
-      "max_held_days": 40,
-      "vol_regime_pct": 0.08399999999999999,
-      "entry_market": {
-        "nifty_trend": "strong_down",
-        "vix": 13.41,
-        "mood": "bearish",
-        "regime": "choppy",
-        "sector_momentum": -0.214,
-        "delivery_signal": "neutral",
-        "rsi": 56.3,
-        "mtf_alignment": "aligned",
-        "opposing_ratio": 0.25,
-        "hist_long_trend": "strong_uptrend"
-      },
-      "view_hist": [
-        1,
         0,
         0,
         0
@@ -157,8 +95,8 @@
         "High volume confirmation (1.4x avg)",
         "ADX strong trend \u2014 downside momentum confirmed"
       ],
-      "current_price": 1491.8,
-      "unrealized_pnl": -93.5,
+      "current_price": 1478.4,
+      "unrealized_pnl": -160.5,
       "max_held_days": 40,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -215,8 +153,8 @@
         "In a long-term strong downtrend (2yr)",
         "\u2713 Daily setup aligned with the higher-timeframe trend"
       ],
-      "current_price": 221.14,
-      "unrealized_pnl": -2.28,
+      "current_price": 220.15,
+      "unrealized_pnl": 16.53,
       "max_held_days": 40,
       "vol_regime_pct": 0.08399999999999999,
       "entry_market": {
@@ -234,6 +172,7 @@
       "view_hist": [
         1,
         1,
+        0,
         0
       ]
     },
@@ -276,8 +215,8 @@
         "High volume confirmation (1.8x avg)",
         "ADX strong trend \u2014 downside momentum confirmed"
       ],
-      "current_price": 173.45,
-      "unrealized_pnl": 0.0,
+      "current_price": 172.96,
+      "unrealized_pnl": -10.78,
       "max_held_days": 40,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -291,7 +230,10 @@
         "mtf_alignment": "aligned",
         "opposing_ratio": 0.48,
         "hist_long_trend": "uptrend"
-      }
+      },
+      "view_hist": [
+        0
+      ]
     },
     {
       "ticker": "HINDALCO.NS",
@@ -327,8 +269,8 @@
         "MACD histogram negative",
         "Broke below Pivot S1 support \u2014 bearish"
       ],
-      "current_price": 906.0,
-      "unrealized_pnl": 0.0,
+      "current_price": 891.5,
+      "unrealized_pnl": -58.0,
       "max_held_days": 40,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -342,7 +284,10 @@
         "mtf_alignment": "aligned",
         "opposing_ratio": 0.66,
         "hist_long_trend": "uptrend"
-      }
+      },
+      "view_hist": [
+        0
+      ]
     }
   ],
   "closed_trades": [
@@ -4841,6 +4786,78 @@
       "pnl_pct": -3.4,
       "won": false,
       "open_days": 3
+    },
+    {
+      "ticker": "ADANIPORTS.NS",
+      "sector": "Infra",
+      "open_date": "2026-09-30",
+      "open_session": "morning",
+      "action": "BUY",
+      "entry": 1785.5,
+      "qty": 3,
+      "invested": 5356.5,
+      "stop_loss": 1705.49,
+      "target": 1881.52,
+      "style": "swing",
+      "confidence": 88.3,
+      "patterns": [
+        "strong_bullish_marubozu",
+        "stoch_rsi_oversold_reversal",
+        "full_bullish_alignment",
+        "volume_breakout_bullish",
+        "tweezer_bottom",
+        "momentum_continuation",
+        "supertrend_bullish",
+        "pivot_r1_breakout",
+        "rsi_bearish_divergence"
+      ],
+      "buy_reasons": [
+        "All EMAs stacked bullish",
+        "MACD histogram positive",
+        "High volume confirmation (2.1x avg)",
+        "Positive news sentiment (0.27, news 1.2x reliable here)",
+        "Candlestick: tweezer bottom",
+        "Supertrend bullish \u2014 price above trend band",
+        "Broke above Pivot R1 with volume \u2014 bullish",
+        "StochRSI oversold with bullish candle \u2014 reversal",
+        "In a long-term strong uptrend (2yr) \u2014 trend on our side",
+        "\u2713 Daily setup aligned with the higher-timeframe trend",
+        "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
+        "Near upper Bollinger Band",
+        "RSI bearish divergence \u2014 price higher but RSI lower"
+      ],
+      "current_price": 1690.1,
+      "unrealized_pnl": -286.2,
+      "max_held_days": 40,
+      "vol_regime_pct": 0.08399999999999999,
+      "entry_market": {
+        "nifty_trend": "strong_down",
+        "vix": 13.41,
+        "mood": "bearish",
+        "regime": "choppy",
+        "sector_momentum": -0.214,
+        "delivery_signal": "neutral",
+        "rsi": 56.3,
+        "mtf_alignment": "aligned",
+        "opposing_ratio": 0.25,
+        "hist_long_trend": "strong_uptrend"
+      },
+      "view_hist": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "close_date": "2026-10-08",
+      "close_session": "midday",
+      "exit_price": 1705.49,
+      "exit_reason": "stop_hit",
+      "pnl": -255.74,
+      "pnl_gross": -240.03,
+      "costs": 15.71,
+      "pnl_pct": -4.77,
+      "won": false,
+      "open_days": 5
     }
   ],
   "daily_snapshots": [
@@ -5174,11 +5191,11 @@
       "daily_pnl": 0.0
     }
   ],
-  "daily_pnl_today": -460.388,
+  "daily_pnl_today": -716.1274549999999,
   "last_snapshot_date": "2026-09-21",
   "lifetime_wins": 26,
-  "lifetime_losses": 41,
-  "lifetime_pnl": -4736.49,
+  "lifetime_losses": 42,
+  "lifetime_pnl": -4992.23,
   "last_pnl_reset_date": "2026-10-08",
   "max_drawdown_pct": 4.47,
   "current_drawdown_pct": 4.22,

@@ -1,49 +1,5 @@
 [
   {
-    "timestamp": "2026-08-14T04:05:55.740823",
-    "date": "2026-08-14",
-    "ticker": "UNIONBANK.NS",
-    "session": "morning",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 74.7,
-    "entry": 186.9,
-    "stop_loss": 179.96,
-    "target": 200.78,
-    "reason": "paper morning",
-    "patterns": [
-      "bb_upper_rejection",
-      "low_volume_drift",
-      "stoch_rsi_overbought_reversal",
-      "full_bullish_alignment",
-      "adx_strong_trend_up",
-      "spinning_top"
-    ]
-  },
-  {
-    "timestamp": "2026-08-14T04:05:55.743946",
-    "date": "2026-08-14",
-    "ticker": "CIPLA.NS",
-    "session": "morning",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 95,
-    "entry": 1466.9,
-    "stop_loss": 1427.7,
-    "target": 1545.31,
-    "reason": "paper morning",
-    "patterns": [
-      "low_volume_drift",
-      "tweezer_bottom",
-      "full_bullish_alignment",
-      "engulfing_bullish",
-      "rsi_bullish_divergence",
-      "pivot_point_test",
-      "spinning_top",
-      "supertrend_bullish"
-    ]
-  },
-  {
     "timestamp": "2026-08-14T04:05:55.745353",
     "date": "2026-08-14",
     "ticker": "NIACL.NS",
@@ -21191,6 +21147,46 @@
       "full_bearish_alignment",
       "supertrend_bullish",
       "engulfing_bullish",
+      "outside_bar"
+    ]
+  },
+  {
+    "timestamp": "2026-10-08T06:15:57.431463",
+    "date": "2026-10-08",
+    "ticker": "HINDALCO.NS",
+    "session": "midday",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 47.2,
+    "entry": 891.5,
+    "stop_loss": 861.81,
+    "target": 939.01,
+    "reason": "paper midday",
+    "patterns": [
+      "pivot_s1_breakdown",
+      "bb_lower_bounce",
+      "full_bearish_alignment"
+    ]
+  },
+  {
+    "timestamp": "2026-10-08T06:15:57.434649",
+    "date": "2026-10-08",
+    "ticker": "UNIONBANK.NS",
+    "session": "midday",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 64.4,
+    "entry": 172.96,
+    "stop_loss": 165.97,
+    "target": 184.14,
+    "reason": "paper midday",
+    "patterns": [
+      "full_bearish_alignment",
+      "pivot_r1_breakout",
+      "engulfing_bullish",
+      "adx_strong_trend_down",
+      "pivot_r2_breakout",
+      "supertrend_bullish",
       "outside_bar"
     ]
   }

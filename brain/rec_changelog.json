@@ -1,15 +1,5 @@
 [
   {
-    "type": "new",
-    "ticker": "PIDILITIND.NS",
-    "nse_code": "PIDILITIND",
-    "signal": "BUY",
-    "date": "2026-07-27",
-    "ts": "2026-07-27T06:15:58.412843",
-    "detail": "New BUY recommendation \u2014 confidence 79/100",
-    "confidence": 79.0
-  },
-  {
     "type": "removed",
     "ticker": "UNIONBANK.NS",
     "nse_code": "UNIONBANK",
@@ -5997,6 +5987,16 @@
     "date": "2026-10-08",
     "ts": "2026-10-08T04:09:05.027664",
     "detail": "New BUY recommendation \u2014 confidence 67/100",
+    "confidence": 67.1
+  },
+  {
+    "type": "updated",
+    "ticker": "UNIONBANK.NS",
+    "nse_code": "UNIONBANK",
+    "signal": "BUY",
+    "date": "2026-10-08",
+    "ts": "2026-10-08T06:15:57.606276",
+    "detail": "Target 1 moved \u20b9186.27 \u2192 \u20b9184.80",
     "confidence": 67.1
   }
 ]

@@ -1,45 +1,5 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of pivot_s1_breakdown, full_bearish_alignment, engulfing_bearish mean for a swing trade on ONGC? Current RSI=30, MACD hist=-1.1018, Vol=1.7x average. Signal is SELL.",
-    "context": {
-      "ticker": "ONGC.NS",
-      "signal": "SELL",
-      "patterns": "pivot_s1_breakdown, full_bearish_alignment, engulfing_bearish",
-      "rsi": 29.5
-    },
-    "queued_at": "2026-10-07T07:45:48.798493"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of pivot_s1_breakdown, full_bearish_alignment, engulfing_bearish mean for a swing trade on ONGC? Current RSI=30, MACD hist=-1.1018, Vol=1.7x average. Signal is SELL.",
-    "context": {
-      "ticker": "ONGC.NS",
-      "signal": "SELL",
-      "patterns": "pivot_s1_breakdown, full_bearish_alignment, engulfing_bearish",
-      "rsi": 29.5
-    },
-    "queued_at": "2026-10-07T07:45:48.938121"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of stoch_rsi_overbought_reversal, full_bearish_alignment, adx_strong_trend_down mean for a swing trade on HOMEFIRST? Current RSI=40, MACD hist=-7.5301, Vol=0.8x average. Signal is BUY.",
-    "context": {
-      "ticker": "HOMEFIRST.NS",
-      "signal": "BUY",
-      "patterns": "stoch_rsi_overbought_reversal, full_bearish_alignment, adx_strong_trend_down",
-      "rsi": 40.2
-    },
-    "queued_at": "2026-10-07T09:45:35.981777"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of rsi_bearish_divergence, pivot_s1_breakdown, full_bearish_alignment mean for a swing trade on ONGC? Current RSI=30, MACD hist=-1.1018, Vol=1.7x average. Signal is SELL.",
-    "context": {
-      "ticker": "ONGC.NS",
-      "signal": "SELL",
-      "patterns": "rsi_bearish_divergence, pivot_s1_breakdown, full_bearish_alignment",
-      "rsi": 29.5
-    },
-    "queued_at": "2026-10-07T09:45:35.988829"
-  },
-  {
     "question": "In Indian NSE markets, what does the combination of stoch_rsi_overbought_reversal, full_bearish_alignment, adx_strong_trend_down mean for a swing trade on HOMEFIRST? Current RSI=40, MACD hist=-7.5301, Vol=0.8x average. Signal is BUY.",
     "context": {
       "ticker": "HOMEFIRST.NS",
@@ -98,5 +58,45 @@
       "rsi": 29.5
     },
     "queued_at": "2026-10-08T03:05:41.616594"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of pivot_s1_breakdown, bb_lower_bounce mean for a swing trade on HINDALCO? Current RSI=26, MACD hist=-4.5206, Vol=1.1x average. Signal is BUY.",
+    "context": {
+      "ticker": "HINDALCO.NS",
+      "signal": "BUY",
+      "patterns": "pivot_s1_breakdown, bb_lower_bounce",
+      "rsi": 26.4
+    },
+    "queued_at": "2026-10-08T04:09:04.877137"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_down, engulfing_bullish mean for a swing trade on UNIONBANK? Current RSI=43, MACD hist=-0.5211, Vol=1.8x average. Signal is BUY.",
+    "context": {
+      "ticker": "UNIONBANK.NS",
+      "signal": "BUY",
+      "patterns": "adx_strong_trend_down, engulfing_bullish",
+      "rsi": 42.9
+    },
+    "queued_at": "2026-10-08T04:09:04.880326"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of pivot_s1_breakdown, bb_lower_bounce mean for a swing trade on HINDALCO? Current RSI=26, MACD hist=-4.5206, Vol=1.1x average. Signal is BUY.",
+    "context": {
+      "ticker": "HINDALCO.NS",
+      "signal": "BUY",
+      "patterns": "pivot_s1_breakdown, bb_lower_bounce",
+      "rsi": 26.4
+    },
+    "queued_at": "2026-10-08T04:09:05.012769"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_down, engulfing_bullish mean for a swing trade on UNIONBANK? Current RSI=43, MACD hist=-0.5211, Vol=1.8x average. Signal is BUY.",
+    "context": {
+      "ticker": "UNIONBANK.NS",
+      "signal": "BUY",
+      "patterns": "adx_strong_trend_down, engulfing_bullish",
+      "rsi": 42.9
+    },
+    "queued_at": "2026-10-08T04:09:05.015907"
   }
 ]

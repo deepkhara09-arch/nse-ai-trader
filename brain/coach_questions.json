@@ -1,65 +1,5 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of pivot_s1_breakdown, bb_lower_bounce mean for a swing trade on HINDALCO? Current RSI=26, MACD hist=-4.5206, Vol=1.1x average. Signal is BUY.",
-    "context": {
-      "ticker": "HINDALCO.NS",
-      "signal": "BUY",
-      "patterns": "pivot_s1_breakdown, bb_lower_bounce",
-      "rsi": 26.4
-    },
-    "queued_at": "2026-10-08T04:09:04.877137"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_down, engulfing_bullish mean for a swing trade on UNIONBANK? Current RSI=43, MACD hist=-0.5211, Vol=1.8x average. Signal is BUY.",
-    "context": {
-      "ticker": "UNIONBANK.NS",
-      "signal": "BUY",
-      "patterns": "adx_strong_trend_down, engulfing_bullish",
-      "rsi": 42.9
-    },
-    "queued_at": "2026-10-08T04:09:04.880326"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of pivot_s1_breakdown, bb_lower_bounce mean for a swing trade on HINDALCO? Current RSI=26, MACD hist=-4.5206, Vol=1.1x average. Signal is BUY.",
-    "context": {
-      "ticker": "HINDALCO.NS",
-      "signal": "BUY",
-      "patterns": "pivot_s1_breakdown, bb_lower_bounce",
-      "rsi": 26.4
-    },
-    "queued_at": "2026-10-08T04:09:05.012769"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_down, engulfing_bullish mean for a swing trade on UNIONBANK? Current RSI=43, MACD hist=-0.5211, Vol=1.8x average. Signal is BUY.",
-    "context": {
-      "ticker": "UNIONBANK.NS",
-      "signal": "BUY",
-      "patterns": "adx_strong_trend_down, engulfing_bullish",
-      "rsi": 42.9
-    },
-    "queued_at": "2026-10-08T04:09:05.015907"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of pivot_s1_breakdown, bb_lower_bounce mean for a swing trade on HINDALCO? Current RSI=26, MACD hist=-4.5206, Vol=1.1x average. Signal is BUY.",
-    "context": {
-      "ticker": "HINDALCO.NS",
-      "signal": "BUY",
-      "patterns": "pivot_s1_breakdown, bb_lower_bounce",
-      "rsi": 26.4
-    },
-    "queued_at": "2026-10-08T06:15:57.430989"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of engulfing_bullish, adx_strong_trend_down mean for a swing trade on UNIONBANK? Current RSI=43, MACD hist=-0.5211, Vol=1.8x average. Signal is BUY.",
-    "context": {
-      "ticker": "UNIONBANK.NS",
-      "signal": "BUY",
-      "patterns": "engulfing_bullish, adx_strong_trend_down",
-      "rsi": 42.9
-    },
-    "queued_at": "2026-10-08T06:15:57.434295"
-  },
-  {
     "question": "In Indian NSE markets, what does the combination of engulfing_bullish, adx_strong_trend_down mean for a swing trade on UNIONBANK? Current RSI=43, MACD hist=-0.5211, Vol=1.8x average. Signal is BUY.",
     "context": {
       "ticker": "UNIONBANK.NS",
@@ -98,5 +38,65 @@
       "rsi": 42.9
     },
     "queued_at": "2026-10-08T06:15:57.593678"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of bb_lower_bounce, pivot_s1_breakdown mean for a swing trade on HINDALCO? Current RSI=26, MACD hist=-4.5206, Vol=1.1x average. Signal is BUY.",
+    "context": {
+      "ticker": "HINDALCO.NS",
+      "signal": "BUY",
+      "patterns": "bb_lower_bounce, pivot_s1_breakdown",
+      "rsi": 26.4
+    },
+    "queued_at": "2026-10-08T07:45:54.864868"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_down, engulfing_bullish mean for a swing trade on UNIONBANK? Current RSI=43, MACD hist=-0.5211, Vol=1.8x average. Signal is BUY.",
+    "context": {
+      "ticker": "UNIONBANK.NS",
+      "signal": "BUY",
+      "patterns": "adx_strong_trend_down, engulfing_bullish",
+      "rsi": 42.9
+    },
+    "queued_at": "2026-10-08T07:45:54.868113"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_down, engulfing_bullish mean for a swing trade on UNIONBANK? Current RSI=43, MACD hist=-0.5211, Vol=1.8x average. Signal is BUY.",
+    "context": {
+      "ticker": "UNIONBANK.NS",
+      "signal": "BUY",
+      "patterns": "adx_strong_trend_down, engulfing_bullish",
+      "rsi": 42.9
+    },
+    "queued_at": "2026-10-08T07:45:54.880546"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of bb_lower_bounce, pivot_s1_breakdown mean for a swing trade on HINDALCO? Current RSI=26, MACD hist=-4.5206, Vol=1.1x average. Signal is BUY.",
+    "context": {
+      "ticker": "HINDALCO.NS",
+      "signal": "BUY",
+      "patterns": "bb_lower_bounce, pivot_s1_breakdown",
+      "rsi": 26.4
+    },
+    "queued_at": "2026-10-08T07:45:54.881929"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of bb_lower_bounce, pivot_s1_breakdown mean for a swing trade on HINDALCO? Current RSI=26, MACD hist=-4.5206, Vol=1.1x average. Signal is BUY.",
+    "context": {
+      "ticker": "HINDALCO.NS",
+      "signal": "BUY",
+      "patterns": "bb_lower_bounce, pivot_s1_breakdown",
+      "rsi": 26.4
+    },
+    "queued_at": "2026-10-08T07:45:55.001185"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_down, engulfing_bullish mean for a swing trade on UNIONBANK? Current RSI=43, MACD hist=-0.5211, Vol=1.8x average. Signal is BUY.",
+    "context": {
+      "ticker": "UNIONBANK.NS",
+      "signal": "BUY",
+      "patterns": "adx_strong_trend_down, engulfing_bullish",
+      "rsi": 42.9
+    },
+    "queued_at": "2026-10-08T07:45:55.004581"
   }
 ]

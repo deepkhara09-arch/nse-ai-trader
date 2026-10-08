@@ -1,48 +1,5 @@
 [
   {
-    "timestamp": "2026-08-14T04:05:55.748150",
-    "date": "2026-08-14",
-    "ticker": "BAJFINANCE.NS",
-    "session": "morning",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 95,
-    "entry": 1096.6,
-    "stop_loss": 1049.04,
-    "target": 1191.72,
-    "reason": "paper morning",
-    "patterns": [
-      "low_volume_drift",
-      "full_bullish_alignment",
-      "rsi_bullish_divergence",
-      "pivot_point_test",
-      "adx_strong_trend_up",
-      "morning_star",
-      "hammer",
-      "supertrend_bullish"
-    ]
-  },
-  {
-    "timestamp": "2026-08-14T05:55:36.357507",
-    "date": "2026-08-14",
-    "ticker": "MARICO.NS",
-    "session": "midday",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 95,
-    "entry": 860.55,
-    "stop_loss": 833.53,
-    "target": 914.59,
-    "reason": "paper midday",
-    "patterns": [
-      "full_bullish_alignment",
-      "adx_strong_trend_up",
-      "supertrend_bullish",
-      "morning_star",
-      "strong_bullish_marubozu"
-    ]
-  },
-  {
     "timestamp": "2026-08-14T05:55:36.358564",
     "date": "2026-08-14",
     "ticker": "ICICIBANK.NS",
@@ -21185,6 +21142,46 @@
       "adx_strong_trend_down",
       "supertrend_bullish",
       "full_bearish_alignment",
+      "engulfing_bullish"
+    ]
+  },
+  {
+    "timestamp": "2026-10-08T09:45:46.841105",
+    "date": "2026-10-08",
+    "ticker": "HINDALCO.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 47.2,
+    "entry": 893.6,
+    "stop_loss": 863.91,
+    "target": 941.11,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "full_bearish_alignment",
+      "pivot_s1_breakdown",
+      "bb_lower_bounce"
+    ]
+  },
+  {
+    "timestamp": "2026-10-08T09:45:46.844214",
+    "date": "2026-10-08",
+    "ticker": "UNIONBANK.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 64.4,
+    "entry": 171.89,
+    "stop_loss": 164.9,
+    "target": 183.07,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "supertrend_bullish",
+      "pivot_r1_breakout",
+      "full_bearish_alignment",
+      "adx_strong_trend_down",
+      "outside_bar",
+      "pivot_r2_breakout",
       "engulfing_bullish"
     ]
   }

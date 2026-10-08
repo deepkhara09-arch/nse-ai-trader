@@ -1,15 +1,5 @@
 [
   {
-    "type": "removed",
-    "ticker": "UNIONBANK.NS",
-    "nse_code": "UNIONBANK",
-    "signal": "BUY",
-    "date": "2026-07-27",
-    "ts": "2026-07-27T06:15:58.412843",
-    "detail": "Dropped \u2014 no longer meets threshold (was 68/100)",
-    "confidence": 0
-  },
-  {
     "type": "updated",
     "ticker": "ICICIBANK.NS",
     "nse_code": "ICICIBANK",
@@ -5997,6 +5987,16 @@
     "date": "2026-10-08",
     "ts": "2026-10-08T06:15:57.606276",
     "detail": "Target 1 moved \u20b9186.27 \u2192 \u20b9184.80",
+    "confidence": 67.1
+  },
+  {
+    "type": "updated",
+    "ticker": "UNIONBANK.NS",
+    "nse_code": "UNIONBANK",
+    "signal": "BUY",
+    "date": "2026-10-08",
+    "ts": "2026-10-08T09:45:46.987823",
+    "detail": "Target 1 moved \u20b9184.49 \u2192 \u20b9183.54",
     "confidence": 67.1
   }
 ]

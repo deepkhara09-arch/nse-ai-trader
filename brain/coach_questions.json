@@ -1,25 +1,5 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of full_bearish_alignment, near_52w_low, engulfing_bearish mean for a swing trade on ONGC? Current RSI=30, MACD hist=-1.1018, Vol=1.7x average. Signal is SELL.",
-    "context": {
-      "ticker": "ONGC.NS",
-      "signal": "SELL",
-      "patterns": "full_bearish_alignment, near_52w_low, engulfing_bearish",
-      "rsi": 29.5
-    },
-    "queued_at": "2026-10-07T06:15:57.780540"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of pivot_s1_breakdown, full_bearish_alignment, engulfing_bearish mean for a swing trade on ONGC? Current RSI=30, MACD hist=-1.1018, Vol=1.7x average. Signal is SELL.",
-    "context": {
-      "ticker": "ONGC.NS",
-      "signal": "SELL",
-      "patterns": "pivot_s1_breakdown, full_bearish_alignment, engulfing_bearish",
-      "rsi": 29.5
-    },
-    "queued_at": "2026-10-07T07:45:48.792430"
-  },
-  {
     "question": "In Indian NSE markets, what does the combination of pivot_s1_breakdown, full_bearish_alignment, engulfing_bearish mean for a swing trade on ONGC? Current RSI=30, MACD hist=-1.1018, Vol=1.7x average. Signal is SELL.",
     "context": {
       "ticker": "ONGC.NS",
@@ -98,5 +78,25 @@
       "rsi": 29.5
     },
     "queued_at": "2026-10-07T09:45:36.095610"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_down, stoch_rsi_overbought_reversal, full_bearish_alignment mean for a swing trade on HOMEFIRST? Current RSI=40, MACD hist=-7.5301, Vol=0.8x average. Signal is BUY.",
+    "context": {
+      "ticker": "HOMEFIRST.NS",
+      "signal": "BUY",
+      "patterns": "adx_strong_trend_down, stoch_rsi_overbought_reversal, full_bearish_alignment",
+      "rsi": 40.2
+    },
+    "queued_at": "2026-10-08T03:05:41.607365"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of near_52w_low, pivot_s1_breakdown, full_bearish_alignment mean for a swing trade on ONGC? Current RSI=30, MACD hist=-1.1018, Vol=1.7x average. Signal is SELL.",
+    "context": {
+      "ticker": "ONGC.NS",
+      "signal": "SELL",
+      "patterns": "near_52w_low, pivot_s1_breakdown, full_bearish_alignment",
+      "rsi": 29.5
+    },
+    "queued_at": "2026-10-08T03:05:41.616594"
   }
 ]

@@ -1,5 +1,5 @@
 {
-  "capital": 71351.6151,
+  "capital": 69601.51509999999,
   "open_positions": [
     {
       "ticker": "HOMEFIRST.NS",
@@ -33,8 +33,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "Broke below Pivot S1 support \u2014 bearish"
       ],
-      "current_price": 1094.8,
-      "unrealized_pnl": -85.2,
+      "current_price": 1091.8,
+      "unrealized_pnl": -97.2,
       "max_held_days": 40,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -95,8 +95,8 @@
         "High volume confirmation (1.4x avg)",
         "ADX strong trend \u2014 downside momentum confirmed"
       ],
-      "current_price": 1474.7,
-      "unrealized_pnl": -179.0,
+      "current_price": 1482.2,
+      "unrealized_pnl": -141.5,
       "max_held_days": 40,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -153,8 +153,8 @@
         "In a long-term strong downtrend (2yr)",
         "\u2713 Daily setup aligned with the higher-timeframe trend"
       ],
-      "current_price": 220.15,
-      "unrealized_pnl": 16.53,
+      "current_price": 220.62,
+      "unrealized_pnl": 7.6,
       "max_held_days": 40,
       "vol_regime_pct": 0.08399999999999999,
       "entry_market": {
@@ -215,8 +215,8 @@
         "High volume confirmation (1.8x avg)",
         "ADX strong trend \u2014 downside momentum confirmed"
       ],
-      "current_price": 173.69,
-      "unrealized_pnl": 5.28,
+      "current_price": 172.12,
+      "unrealized_pnl": -29.26,
       "max_held_days": 40,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -272,8 +272,8 @@
         "MACD histogram negative",
         "Broke below Pivot S1 support \u2014 bearish"
       ],
-      "current_price": 897.0,
-      "unrealized_pnl": -36.0,
+      "current_price": 896.7,
+      "unrealized_pnl": -37.2,
       "max_held_days": 40,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -294,6 +294,59 @@
         0,
         0
       ]
+    },
+    {
+      "ticker": "ADANIPORTS.NS",
+      "sector": "Infra",
+      "open_date": "2026-10-09",
+      "open_session": "midday",
+      "action": "BUY",
+      "entry": 1750.1,
+      "qty": 1,
+      "invested": 1750.1,
+      "stop_loss": 1649.17,
+      "target": 1871.21,
+      "style": "swing",
+      "confidence": 65.4,
+      "patterns": [
+        "pivot_point_test",
+        "adx_ranging_market",
+        "stoch_rsi_oversold_reversal",
+        "full_bullish_alignment",
+        "bb_lower_bounce",
+        "supertrend_bullish"
+      ],
+      "buy_reasons": [
+        "All EMAs stacked bullish",
+        "RSI=47 in healthy buy zone",
+        "Near lower Bollinger Band",
+        "High volume confirmation (1.5x avg)",
+        "Positive news sentiment (0.27, news 1.2x reliable here)",
+        "Supertrend bullish \u2014 price above trend band",
+        "ADX low \u2014 market ranging, signals less reliable",
+        "Testing pivot point \u2014 decision zone",
+        "StochRSI oversold with bullish candle \u2014 reversal",
+        "In a long-term strong uptrend (2yr) \u2014 trend on our side",
+        "\u2713 Daily setup aligned with the higher-timeframe trend",
+        "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
+        "MACD histogram negative"
+      ],
+      "current_price": 1750.1,
+      "unrealized_pnl": 0.0,
+      "max_held_days": 40,
+      "vol_regime_pct": 0.0675,
+      "entry_market": {
+        "nifty_trend": "down",
+        "vix": 15.28,
+        "mood": "bearish",
+        "regime": "mixed",
+        "sector_momentum": -0.24,
+        "delivery_signal": "neutral",
+        "rsi": 46.9,
+        "mtf_alignment": "aligned",
+        "opposing_ratio": 0.1,
+        "hist_long_trend": "strong_uptrend"
+      }
     }
   ],
   "closed_trades": [

@@ -1,24 +1,5 @@
 [
   {
-    "timestamp": "2026-08-14T05:55:36.358564",
-    "date": "2026-08-14",
-    "ticker": "ICICIBANK.NS",
-    "session": "midday",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 75.6,
-    "entry": 1409.1,
-    "stop_loss": 1370.99,
-    "target": 1485.33,
-    "reason": "paper midday",
-    "patterns": [
-      "full_bullish_alignment",
-      "strong_bearish_marubozu",
-      "pivot_s1_breakdown",
-      "rsi_bullish_divergence"
-    ]
-  },
-  {
     "timestamp": "2026-08-14T05:55:36.359431",
     "date": "2026-08-14",
     "ticker": "UNIONBANK.NS",
@@ -21183,6 +21164,27 @@
       "outside_bar",
       "pivot_r2_breakout",
       "engulfing_bullish"
+    ]
+  },
+  {
+    "timestamp": "2026-10-09T06:15:58.431568",
+    "date": "2026-10-09",
+    "ticker": "ADANIPORTS.NS",
+    "session": "midday",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 65.4,
+    "entry": 1750.1,
+    "stop_loss": 1649.17,
+    "target": 1871.21,
+    "reason": "paper midday",
+    "patterns": [
+      "pivot_point_test",
+      "adx_ranging_market",
+      "stoch_rsi_oversold_reversal",
+      "full_bullish_alignment",
+      "bb_lower_bounce",
+      "supertrend_bullish"
     ]
   }
 ]

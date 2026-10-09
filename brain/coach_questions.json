@@ -1,25 +1,5 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of pivot_s1_breakdown, bb_lower_bounce mean for a swing trade on HINDALCO? Current RSI=26, MACD hist=-4.5206, Vol=1.1x average. Signal is BUY.",
-    "context": {
-      "ticker": "HINDALCO.NS",
-      "signal": "BUY",
-      "patterns": "pivot_s1_breakdown, bb_lower_bounce",
-      "rsi": 26.4
-    },
-    "queued_at": "2026-10-08T09:45:46.856835"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of pivot_s1_breakdown, bb_lower_bounce mean for a swing trade on HINDALCO? Current RSI=26, MACD hist=-4.5206, Vol=1.1x average. Signal is BUY.",
-    "context": {
-      "ticker": "HINDALCO.NS",
-      "signal": "BUY",
-      "patterns": "pivot_s1_breakdown, bb_lower_bounce",
-      "rsi": 26.4
-    },
-    "queued_at": "2026-10-08T09:45:46.973247"
-  },
-  {
     "question": "In Indian NSE markets, what does the combination of adx_strong_trend_down, engulfing_bullish mean for a swing trade on UNIONBANK? Current RSI=43, MACD hist=-0.5211, Vol=1.8x average. Signal is BUY.",
     "context": {
       "ticker": "UNIONBANK.NS",
@@ -98,5 +78,25 @@
       "rsi": 46.9
     },
     "queued_at": "2026-10-09T07:45:54.279292"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of bb_lower_bounce, pivot_point_test, adx_ranging_market mean for a swing trade on ADANIPORTS? Current RSI=47, MACD hist=-7.5813, Vol=1.5x average. Signal is BUY.",
+    "context": {
+      "ticker": "ADANIPORTS.NS",
+      "signal": "BUY",
+      "patterns": "bb_lower_bounce, pivot_point_test, adx_ranging_market",
+      "rsi": 46.9
+    },
+    "queued_at": "2026-10-09T09:45:38.222270"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of bb_lower_bounce, pivot_point_test, adx_ranging_market mean for a swing trade on ADANIPORTS? Current RSI=47, MACD hist=-7.5813, Vol=1.5x average. Signal is BUY.",
+    "context": {
+      "ticker": "ADANIPORTS.NS",
+      "signal": "BUY",
+      "patterns": "bb_lower_bounce, pivot_point_test, adx_ranging_market",
+      "rsi": 46.9
+    },
+    "queued_at": "2026-10-09T09:45:38.315397"
   }
 ]

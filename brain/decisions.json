@@ -1,27 +1,5 @@
 [
   {
-    "timestamp": "2026-08-14T05:55:36.362222",
-    "date": "2026-08-14",
-    "ticker": "CIPLA.NS",
-    "session": "midday",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 75.6,
-    "entry": 1457.7,
-    "stop_loss": 1418.5,
-    "target": 1536.11,
-    "reason": "paper midday",
-    "patterns": [
-      "full_bullish_alignment",
-      "rsi_bullish_divergence",
-      "low_volume_drift",
-      "spinning_top",
-      "stoch_rsi_overbought_reversal",
-      "pivot_point_test",
-      "pivot_s1_breakdown"
-    ]
-  },
-  {
     "timestamp": "2026-08-14T05:55:36.363516",
     "date": "2026-08-14",
     "ticker": "NIACL.NS",
@@ -21185,6 +21163,27 @@
       "supertrend_bullish",
       "pivot_point_test",
       "pivot_r1_breakout"
+    ]
+  },
+  {
+    "timestamp": "2026-10-09T09:45:38.222895",
+    "date": "2026-10-09",
+    "ticker": "ADANIPORTS.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 65.4,
+    "entry": 1760.5,
+    "stop_loss": 1659.57,
+    "target": 1881.61,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "supertrend_bullish",
+      "full_bullish_alignment",
+      "bb_lower_bounce",
+      "pivot_point_test",
+      "adx_ranging_market",
+      "stoch_rsi_oversold_reversal"
     ]
   }
 ]

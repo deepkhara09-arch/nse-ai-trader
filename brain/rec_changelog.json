@@ -1,16 +1,6 @@
 [
   {
     "type": "updated",
-    "ticker": "ICICIBANK.NS",
-    "nse_code": "ICICIBANK",
-    "signal": "BUY",
-    "date": "2026-07-27",
-    "ts": "2026-07-27T06:15:58.412843",
-    "detail": "Confidence \u25bc4 (80 \u2192 76) | Stop loss moved \u20b91391.34 \u2192 \u20b91403.38",
-    "confidence": 75.6
-  },
-  {
-    "type": "updated",
     "ticker": "NESTLEIND.NS",
     "nse_code": "NESTLEIND",
     "signal": "BUY",
@@ -5998,5 +5988,15 @@
     "ts": "2026-10-08T09:45:46.987823",
     "detail": "Target 1 moved \u20b9184.49 \u2192 \u20b9183.54",
     "confidence": 67.1
+  },
+  {
+    "type": "removed",
+    "ticker": "UNIONBANK.NS",
+    "nse_code": "UNIONBANK",
+    "signal": "BUY",
+    "date": "2026-10-09",
+    "ts": "2026-10-09T04:05:42.396057",
+    "detail": "Dropped \u2014 no longer meets threshold (was 67/100)",
+    "confidence": 0
   }
 ]

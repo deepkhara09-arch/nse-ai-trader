@@ -3,10 +3,10 @@
     "ticker": "UNIONBANK.NS",
     "nse_code": "UNIONBANK",
     "company_name": "UNIONBANK.NS",
-    "date": "2026-10-08",
-    "generated_at": "2026-10-08 09:45 UTC",
-    "valid_until": "15:40 IST",
-    "session": "intraday_close",
+    "date": "2026-10-09",
+    "generated_at": "2026-10-09 03:05 UTC",
+    "valid_until": "09:35 IST",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -40,10 +40,10 @@
     "pattern_score": 3.0,
     "confluence_bonus": 5.0,
     "paper_bonus": 0.0,
-    "success_probability": 0.467,
-    "base_success_prob": 0.46,
-    "profit_probability": 0.15,
-    "composite_score": 45.95,
+    "success_probability": 0.463,
+    "base_success_prob": 0.455,
+    "profit_probability": 0.138,
+    "composite_score": 45.31,
     "focus_rank": 4,
     "rank_delta": 0,
     "intention": "BUY UNIONBANK for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
@@ -56,7 +56,7 @@
     ],
     "backtest_tested": true,
     "backtest_hit_5d": 0.483,
-    "backtest_hit_10d": 0.5,
+    "backtest_hit_10d": 0.517,
     "backtest_sample": 58,
     "hist_long_trend": "uptrend",
     "hist_52w_position": 78.6,
@@ -65,7 +65,7 @@
     "data_confidence": "Estimated",
     "data_confidence_key": "estimated",
     "data_confidence_note": "Only 2 paper trade(s) \u2014 probability is an indicator-based estimate, not yet proven",
-    "expected_edge_r": 0.15,
+    "expected_edge_r": 0.138,
     "buy_score": 10.46,
     "sell_score": 5.0,
     "reasons": [
@@ -98,12 +98,12 @@
       "History backtest: this kind of BUY setup worked 48% of the time over ~1 week on this stock (sample: 58)"
     ],
     "patterns_seen": [
-      "supertrend_bullish",
-      "pivot_r1_breakout",
-      "full_bearish_alignment",
-      "adx_strong_trend_down",
-      "outside_bar",
       "pivot_r2_breakout",
+      "pivot_r1_breakout",
+      "adx_strong_trend_down",
+      "supertrend_bullish",
+      "outside_bar",
+      "full_bearish_alignment",
       "engulfing_bullish"
     ],
     "reliable_patterns": [],
@@ -132,8 +132,10 @@
     "paper_expectancy": -70.66,
     "market_mood": "bearish",
     "market_warning": [
-      "VIX=13.9 at 90th percentile vs last 30d \u2014 unusually high stress",
-      "Heavy FII/DII outflow (\u20b9-1,525 Cr) \u2014 institutions selling"
+      "VIX=15.3 at 97th percentile vs last 30d \u2014 unusually high stress",
+      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
+      "Nifty down -1.6% today \u2014 likely institutional selling",
+      "Heavy FII/DII outflow (\u20b9-2,240 Cr) \u2014 institutions selling"
     ]
   }
 ]

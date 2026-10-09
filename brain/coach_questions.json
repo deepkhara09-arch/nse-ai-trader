@@ -1,25 +1,5 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_down, engulfing_bullish mean for a swing trade on UNIONBANK? Current RSI=43, MACD hist=-0.5211, Vol=1.8x average. Signal is BUY.",
-    "context": {
-      "ticker": "UNIONBANK.NS",
-      "signal": "BUY",
-      "patterns": "adx_strong_trend_down, engulfing_bullish",
-      "rsi": 42.9
-    },
-    "queued_at": "2026-10-08T07:45:54.880546"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of bb_lower_bounce, pivot_s1_breakdown mean for a swing trade on HINDALCO? Current RSI=26, MACD hist=-4.5206, Vol=1.1x average. Signal is BUY.",
-    "context": {
-      "ticker": "HINDALCO.NS",
-      "signal": "BUY",
-      "patterns": "bb_lower_bounce, pivot_s1_breakdown",
-      "rsi": 26.4
-    },
-    "queued_at": "2026-10-08T07:45:54.881929"
-  },
-  {
     "question": "In Indian NSE markets, what does the combination of bb_lower_bounce, pivot_s1_breakdown mean for a swing trade on HINDALCO? Current RSI=26, MACD hist=-4.5206, Vol=1.1x average. Signal is BUY.",
     "context": {
       "ticker": "HINDALCO.NS",
@@ -98,5 +78,25 @@
       "rsi": 42.9
     },
     "queued_at": "2026-10-08T09:45:46.976285"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of bb_lower_bounce, pivot_s1_breakdown mean for a swing trade on HINDALCO? Current RSI=26, MACD hist=-4.5206, Vol=1.1x average. Signal is BUY.",
+    "context": {
+      "ticker": "HINDALCO.NS",
+      "signal": "BUY",
+      "patterns": "bb_lower_bounce, pivot_s1_breakdown",
+      "rsi": 26.4
+    },
+    "queued_at": "2026-10-09T03:05:46.125616"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_down, engulfing_bullish mean for a swing trade on UNIONBANK? Current RSI=43, MACD hist=-0.5211, Vol=1.8x average. Signal is BUY.",
+    "context": {
+      "ticker": "UNIONBANK.NS",
+      "signal": "BUY",
+      "patterns": "adx_strong_trend_down, engulfing_bullish",
+      "rsi": 42.9
+    },
+    "queued_at": "2026-10-09T03:05:46.127603"
   }
 ]

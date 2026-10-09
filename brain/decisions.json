@@ -1,27 +1,5 @@
 [
   {
-    "timestamp": "2026-08-14T05:55:36.359431",
-    "date": "2026-08-14",
-    "ticker": "UNIONBANK.NS",
-    "session": "midday",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 95,
-    "entry": 187.15,
-    "stop_loss": 180.21,
-    "target": 201.03,
-    "reason": "paper midday",
-    "patterns": [
-      "full_bullish_alignment",
-      "adx_strong_trend_up",
-      "three_white_soldiers",
-      "low_volume_drift",
-      "supertrend_bullish",
-      "spinning_top",
-      "bb_upper_rejection"
-    ]
-  },
-  {
     "timestamp": "2026-08-14T05:55:36.362222",
     "date": "2026-08-14",
     "ticker": "CIPLA.NS",
@@ -21185,6 +21163,28 @@
       "full_bullish_alignment",
       "bb_lower_bounce",
       "supertrend_bullish"
+    ]
+  },
+  {
+    "timestamp": "2026-10-09T07:45:54.129830",
+    "date": "2026-10-09",
+    "ticker": "ADANIPORTS.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 78.2,
+    "entry": 1763.1,
+    "stop_loss": 1662.17,
+    "target": 1884.21,
+    "reason": "paper afternoon",
+    "patterns": [
+      "stoch_rsi_oversold_reversal",
+      "adx_ranging_market",
+      "full_bullish_alignment",
+      "bb_lower_bounce",
+      "supertrend_bullish",
+      "pivot_point_test",
+      "pivot_r1_breakout"
     ]
   }
 ]

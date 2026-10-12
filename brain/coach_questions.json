@@ -1,102 +1,102 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of bb_lower_bounce, pivot_s1_breakdown mean for a swing trade on HINDALCO? Current RSI=26, MACD hist=-4.5206, Vol=1.1x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of full_bearish_alignment, adx_strong_trend_down, inverted_hammer mean for a swing trade on HOMEFIRST? Current RSI=23, MACD hist=-8.5383, Vol=0.4x average. Signal is BUY.",
+    "context": {
+      "ticker": "HOMEFIRST.NS",
+      "signal": "BUY",
+      "patterns": "full_bearish_alignment, adx_strong_trend_down, inverted_hammer",
+      "rsi": 22.6
+    },
+    "queued_at": "2026-10-12T04:05:45.404232"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of inside_bar, pivot_point_test, supertrend_bullish mean for a swing trade on ONGC? Current RSI=32, MACD hist=-1.2134, Vol=0.7x average. Signal is BUY.",
+    "context": {
+      "ticker": "ONGC.NS",
+      "signal": "BUY",
+      "patterns": "inside_bar, pivot_point_test, supertrend_bullish",
+      "rsi": 31.9
+    },
+    "queued_at": "2026-10-12T04:05:45.406669"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of pivot_point_test, bullish_harami, tweezer_bottom mean for a swing trade on HINDALCO? Current RSI=25, MACD hist=-6.9402, Vol=0.9x average. Signal is BUY.",
     "context": {
       "ticker": "HINDALCO.NS",
       "signal": "BUY",
-      "patterns": "bb_lower_bounce, pivot_s1_breakdown",
-      "rsi": 26.4
+      "patterns": "pivot_point_test, bullish_harami, tweezer_bottom",
+      "rsi": 25.0
     },
-    "queued_at": "2026-10-09T03:05:46.125616"
+    "queued_at": "2026-10-12T04:05:45.409070"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_down, engulfing_bullish mean for a swing trade on UNIONBANK? Current RSI=43, MACD hist=-0.5211, Vol=1.8x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of full_bearish_alignment, bb_lower_bounce mean for a swing trade on GAIL? Current RSI=34, MACD hist=-0.4737, Vol=0.8x average. Signal is BUY.",
     "context": {
-      "ticker": "UNIONBANK.NS",
+      "ticker": "GAIL.NS",
       "signal": "BUY",
-      "patterns": "adx_strong_trend_down, engulfing_bullish",
-      "rsi": 42.9
+      "patterns": "full_bearish_alignment, bb_lower_bounce",
+      "rsi": 34.1
     },
-    "queued_at": "2026-10-09T03:05:46.127603"
+    "queued_at": "2026-10-12T04:05:45.525692"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of pivot_point_test, adx_ranging_market, bb_lower_bounce mean for a swing trade on ADANIPORTS? Current RSI=47, MACD hist=-7.5813, Vol=1.5x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of pivot_point_test, bullish_harami, tweezer_bottom mean for a swing trade on HINDALCO? Current RSI=25, MACD hist=-6.9402, Vol=0.9x average. Signal is BUY.",
     "context": {
-      "ticker": "ADANIPORTS.NS",
+      "ticker": "HINDALCO.NS",
       "signal": "BUY",
-      "patterns": "pivot_point_test, adx_ranging_market, bb_lower_bounce",
-      "rsi": 46.9
+      "patterns": "pivot_point_test, bullish_harami, tweezer_bottom",
+      "rsi": 25.0
     },
-    "queued_at": "2026-10-09T06:15:58.431241"
+    "queued_at": "2026-10-12T04:05:45.527804"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of pivot_point_test, adx_ranging_market, bb_lower_bounce mean for a swing trade on ADANIPORTS? Current RSI=47, MACD hist=-7.5813, Vol=1.5x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of full_bearish_alignment, adx_strong_trend_down, inverted_hammer mean for a swing trade on HOMEFIRST? Current RSI=23, MACD hist=-8.5383, Vol=0.4x average. Signal is BUY.",
     "context": {
-      "ticker": "ADANIPORTS.NS",
+      "ticker": "HOMEFIRST.NS",
       "signal": "BUY",
-      "patterns": "pivot_point_test, adx_ranging_market, bb_lower_bounce",
-      "rsi": 46.9
+      "patterns": "full_bearish_alignment, adx_strong_trend_down, inverted_hammer",
+      "rsi": 22.6
     },
-    "queued_at": "2026-10-09T06:15:58.564066"
+    "queued_at": "2026-10-12T04:05:45.532398"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of adx_ranging_market, bb_lower_bounce, pivot_point_test mean for a swing trade on ADANIPORTS? Current RSI=47, MACD hist=-7.5813, Vol=1.5x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of inside_bar, stoch_rsi_oversold_reversal, supertrend_bullish mean for a swing trade on POWERGRID? Current RSI=29, MACD hist=-1.5990, Vol=1.2x average. Signal is BUY.",
     "context": {
-      "ticker": "ADANIPORTS.NS",
+      "ticker": "POWERGRID.NS",
       "signal": "BUY",
-      "patterns": "adx_ranging_market, bb_lower_bounce, pivot_point_test",
-      "rsi": 46.9
+      "patterns": "inside_bar, stoch_rsi_oversold_reversal, supertrend_bullish",
+      "rsi": 28.9
     },
-    "queued_at": "2026-10-09T07:45:54.129504"
+    "queued_at": "2026-10-12T04:05:45.535514"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of adx_ranging_market, bb_lower_bounce, pivot_point_test mean for a swing trade on ADANIPORTS? Current RSI=47, MACD hist=-7.5813, Vol=1.5x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of spinning_top, doji, bb_lower_bounce mean for a swing trade on BANDHANBNK? Current RSI=37, MACD hist=-2.8777, Vol=0.7x average. Signal is BUY.",
     "context": {
-      "ticker": "ADANIPORTS.NS",
+      "ticker": "BANDHANBNK.NS",
       "signal": "BUY",
-      "patterns": "adx_ranging_market, bb_lower_bounce, pivot_point_test",
-      "rsi": 46.9
+      "patterns": "spinning_top, doji, bb_lower_bounce",
+      "rsi": 37.5
     },
-    "queued_at": "2026-10-09T07:45:54.144364"
+    "queued_at": "2026-10-12T04:05:45.537704"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of adx_ranging_market, bb_lower_bounce, pivot_point_test mean for a swing trade on ADANIPORTS? Current RSI=47, MACD hist=-7.5813, Vol=1.5x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of inside_bar, pivot_point_test, bullish_harami mean for a swing trade on ADANIGREEN? Current RSI=39, MACD hist=+0.8571, Vol=1.3x average. Signal is BUY.",
     "context": {
-      "ticker": "ADANIPORTS.NS",
+      "ticker": "ADANIGREEN.NS",
       "signal": "BUY",
-      "patterns": "adx_ranging_market, bb_lower_bounce, pivot_point_test",
-      "rsi": 46.9
+      "patterns": "inside_bar, pivot_point_test, bullish_harami",
+      "rsi": 39.3
     },
-    "queued_at": "2026-10-09T07:45:54.279292"
+    "queued_at": "2026-10-12T04:05:45.540697"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of bb_lower_bounce, pivot_point_test, adx_ranging_market mean for a swing trade on ADANIPORTS? Current RSI=47, MACD hist=-7.5813, Vol=1.5x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of inside_bar, pivot_point_test, supertrend_bullish mean for a swing trade on ONGC? Current RSI=32, MACD hist=-1.2134, Vol=0.7x average. Signal is BUY.",
     "context": {
-      "ticker": "ADANIPORTS.NS",
+      "ticker": "ONGC.NS",
       "signal": "BUY",
-      "patterns": "bb_lower_bounce, pivot_point_test, adx_ranging_market",
-      "rsi": 46.9
+      "patterns": "inside_bar, pivot_point_test, supertrend_bullish",
+      "rsi": 31.9
     },
-    "queued_at": "2026-10-09T09:45:38.222270"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of bb_lower_bounce, pivot_point_test, adx_ranging_market mean for a swing trade on ADANIPORTS? Current RSI=47, MACD hist=-7.5813, Vol=1.5x average. Signal is BUY.",
-    "context": {
-      "ticker": "ADANIPORTS.NS",
-      "signal": "BUY",
-      "patterns": "bb_lower_bounce, pivot_point_test, adx_ranging_market",
-      "rsi": 46.9
-    },
-    "queued_at": "2026-10-09T09:45:38.315397"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of pivot_point_test, bb_lower_bounce, adx_ranging_market mean for a swing trade on ADANIPORTS? Current RSI=47, MACD hist=-7.5813, Vol=1.5x average. Signal is BUY.",
-    "context": {
-      "ticker": "ADANIPORTS.NS",
-      "signal": "BUY",
-      "patterns": "pivot_point_test, bb_lower_bounce, adx_ranging_market",
-      "rsi": 46.9
-    },
-    "queued_at": "2026-10-12T03:05:40.896282"
+    "queued_at": "2026-10-12T04:05:45.543711"
   }
 ]

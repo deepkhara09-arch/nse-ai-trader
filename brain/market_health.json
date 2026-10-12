@@ -1,128 +1,126 @@
 {
-  "date": "2026-10-09",
-  "session": "intraday_close",
+  "date": "2026-10-12",
+  "session": "preopen",
   "nifty": {
     "symbol": "^NSEI",
-    "value": 22231.8,
-    "day_change_pct": -1.64,
-    "trend_5d": "down",
+    "value": 22520.45,
+    "day_change_pct": 1.3,
+    "trend_5d": "sideways",
     "trend_20d": "strong_down",
-    "ath_pct_60d": -9.7
+    "ath_pct_60d": -7.82
   },
   "vix": {
-    "value": 15.28,
+    "value": 14.38,
     "level": "normal",
-    "percentile_30d": 97.0,
-    "avg_30d": 12.24
+    "percentile_30d": 86.0,
+    "avg_30d": 12.42
   },
   "bank_nifty": {
     "symbol": "^NSEBANK",
-    "value": 54515.05,
-    "day_change_pct": -0.98,
-    "trend_5d": "sideways",
-    "trend_20d": "strong_down",
-    "ath_pct_60d": -6.05,
+    "value": 55256.65,
+    "day_change_pct": 1.36,
+    "trend_5d": "up",
+    "trend_20d": "down",
+    "ath_pct_60d": -4.77,
     "diverging": false
   },
   "sectors": {
     "IT": {
       "symbol": "ITBEES.NS",
-      "value": 30.9,
-      "day_change_pct": -0.87,
-      "trend_5d": "sideways",
-      "trend_20d": "strong_down",
-      "ath_pct_60d": -14.12
+      "value": 31.84,
+      "day_change_pct": 3.38,
+      "trend_5d": "up",
+      "trend_20d": "sideways",
+      "ath_pct_60d": -10.76
     },
     "Pharma": {
       "symbol": "PHARMABEES.NS",
-      "value": 26.56,
-      "day_change_pct": -2.21,
-      "trend_5d": "down",
-      "trend_20d": "strong_down",
-      "ath_pct_60d": -7.07
+      "value": 26.72,
+      "day_change_pct": 0.6,
+      "trend_5d": "sideways",
+      "trend_20d": "down",
+      "ath_pct_60d": -6.51
     },
     "Bank": {
       "symbol": "BANKBEES.NS",
-      "value": 570.22,
-      "day_change_pct": 0.14,
-      "trend_5d": "sideways",
-      "trend_20d": "strong_down",
-      "ath_pct_60d": -6.21
+      "value": 572.92,
+      "day_change_pct": 1.5,
+      "trend_5d": "up",
+      "trend_20d": "down",
+      "ath_pct_60d": -5.77
     },
     "Infra": {
       "symbol": "INFRABEES.NS",
-      "value": 881.81,
-      "day_change_pct": -2.64,
+      "value": 889.52,
+      "day_change_pct": 0.87,
       "trend_5d": "strong_down",
       "trend_20d": "strong_down",
-      "ath_pct_60d": -9.73
+      "ath_pct_60d": -8.94
     }
   },
-  "market_mood": "bearish",
+  "market_mood": "neutral",
   "trade_allowed": true,
   "warnings": [
-    "VIX=15.3 at 97th percentile vs last 30d \u2014 unusually high stress",
-    "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
-    "Nifty down -1.6% today \u2014 likely institutional selling",
-    "Heavy FII/DII outflow (\u20b9-2,240 Cr) \u2014 institutions selling"
+    "VIX=14.4 at 86th percentile vs last 30d \u2014 unusually high stress"
   ],
-  "leading_sectors": [],
+  "leading_sectors": [
+    "IT",
+    "Bank"
+  ],
   "market_regime": "normal",
-  "sector_breadth": 0.0,
+  "sector_breadth": 0.5,
   "lagging_sectors": [
-    "Pharma",
     "Infra"
   ],
-  "intraday_regime": "mixed",
   "macro": {
-    "date": "2026-10-09",
-    "session": "midday",
-    "generated_at": "2026-10-09T06:15:48.965174",
-    "global_score": 0.111,
-    "india_score": 1.0,
-    "overall_score": 0.511,
-    "mood": "risk_on",
+    "date": "2026-10-12",
+    "session": "preopen",
+    "generated_at": "2026-10-12T03:05:39.497642",
+    "global_score": 0.227,
+    "india_score": 0.0,
+    "overall_score": 0.125,
+    "mood": "neutral",
     "drivers": [
-      "SpaceX\u2019s Starlink Mobile plans are pressuring AT&T and Verizon shares",
-      "How to downsize like a pro \u2014 and free yourself from being a \u2018prisoner of your possessions\u2019",
-      "Feel like a pumpkin-spice burrito? Analysts try to wrap their heads around a possible Starbucks-Chipotle tie-up.",
-      "Micron, Nvidia and AI chip stocks fall as report on OpenAI\u2019s revenue causes \u2018undue concern\u2019",
-      "My husband inherited $3 million. He wants a vacation home, but I want to save for retirement. Who\u2019s right?",
-      "Why a longtime skeptic of Palantir\u2019s stock is finally saying it\u2019s time to buy",
+      "\u2018I have no children\u2019: My aunt gave me $50,000 for a down payment. Now she wants me to leave my home to her two children.",
+      "\u2018I feel like a loser\u2019: My stock portfolio is swinging wildly. Is it finally time to worry?",
       "My brother-in-law convinced his parents to sign over their home and life savings to buy a $3 million compound. Do I intervene?",
-      "PepsiCo CEO\u2019s message to employees: If you\u2019re not producing growth, you\u2019re out"
+      "I\u2019m a 68-year-old widow and give money to my two adult children. Am I putting my retirement at risk?",
+      "Millions of Americans will have fewer options during Medicare open enrollment this year",
+      "We\u2019re about to get a huge read on whether earnings can keep propping up the stock market",
+      "The bull market is turning 4 years old \u2014 but yields could crash the party",
+      "Bank earnings to shed the first light on how higher yields are affecting the economy"
     ],
     "global_cues": {
       "dow": {
-        "last": 51231.64,
-        "chg_pct": 0.1
+        "last": 51654.95,
+        "chg_pct": 0.83
       },
       "nasdaq": {
-        "last": 27193.34,
-        "chg_pct": -1.25
+        "last": 27366.17,
+        "chg_pct": 0.64
       },
       "sp500": {
-        "last": 7765.36,
-        "chg_pct": -0.47
+        "last": 7811.54,
+        "chg_pct": 0.59
       },
       "nikkei": {
-        "last": 69033.2,
-        "chg_pct": -0.01
+        "last": 69030.92,
+        "chg_pct": -0.02
       },
       "crude": {
-        "last": 91.49,
-        "chg_pct": 3.64
+        "last": 90.08,
+        "chg_pct": -1.93
       },
       "usdinr": {
-        "last": 96.61,
-        "chg_pct": -0.15
+        "last": 96.78,
+        "chg_pct": -0.04
       },
       "gold": {
-        "last": 4157.0,
-        "chg_pct": 0.39
+        "last": 4230.3,
+        "chg_pct": 0.33
       }
     },
-    "summary": "Overall macro mood is risk-on (+0.51). US Dow +0.1% overnight. Crude +3.6%. USD/INR -0.1%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
+    "summary": "Overall macro mood is neutral (+0.12). US Dow +0.8% overnight. Crude -1.9%. USD/INR -0.0%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
       "Trade-war headlines spook global markets; IT & export names react most."
@@ -130,23 +128,16 @@
     "playbook_bias": "risk_off",
     "article_count": 60
   },
-  "macro_tailwind": true,
-  "macro_risk_factor": 0.75,
+  "macro_risk_factor": 1.0,
   "fii_dii": {
-    "date": "2026-10-09",
-    "fii_net_cr": -12943.58,
-    "dii_net_cr": 10703.11,
-    "combined_net_cr": -2240.47,
-    "signal": "strong_outflow",
+    "date": "2026-10-12",
+    "fii_net_cr": -3568.9,
+    "dii_net_cr": 4743.26,
+    "combined_net_cr": 1174.36,
+    "signal": "neutral",
     "ok": true,
     "error": "",
     "history": [
-      {
-        "date": "2026-08-31",
-        "fii": -7985.88,
-        "dii": 4588.88,
-        "combined": -3397.0
-      },
       {
         "date": "2026-09-01",
         "fii": 1143.38,
@@ -320,21 +311,27 @@
         "fii": -12943.58,
         "dii": 10703.11,
         "combined": -2240.47
+      },
+      {
+        "date": "2026-10-12",
+        "fii": -3568.9,
+        "dii": 4743.26,
+        "combined": 1174.36
       }
     ]
   },
   "pcr": {
-    "date": "2026-10-09",
-    "pcr": 0.616,
-    "reading": "bearish_bias",
-    "total_pe_oi": 2144730,
-    "total_ce_oi": 3481892,
-    "spot": 22231.8,
-    "max_pain": 22400.0,
-    "max_pain_dist_pct": -0.76,
-    "oi_bias": "call_heavy_resistance",
+    "date": "2026-10-12",
+    "pcr": 1.27,
+    "reading": "bullish_bias",
+    "total_pe_oi": 3235619,
+    "total_ce_oi": 2548443,
+    "spot": 22520.45,
+    "max_pain": 22500.0,
+    "max_pain_dist_pct": 0.09,
+    "oi_bias": "put_heavy_support",
     "ok": true,
     "error": ""
   },
-  "oi_note": "Heavy call OI above spot \u2014 option writers see a lid (bearish lean)"
+  "oi_note": "Heavy put OI below spot \u2014 option writers see a floor (bullish lean)"
 }

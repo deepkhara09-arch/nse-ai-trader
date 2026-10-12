@@ -1,5 +1,5 @@
 {
-  "capital": 69601.51509999999,
+  "capital": 72934.81219999999,
   "open_positions": [
     {
       "ticker": "HOMEFIRST.NS",
@@ -33,8 +33,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "Broke below Pivot S1 support \u2014 bearish"
       ],
-      "current_price": 1075.6,
-      "unrealized_pnl": -162.0,
+      "current_price": 1066.0,
+      "unrealized_pnl": -200.4,
       "max_held_days": 40,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -52,69 +52,7 @@
       "view_hist": [
         0,
         0,
-        0,
-        1
-      ]
-    },
-    {
-      "ticker": "PIDILITIND.NS",
-      "sector": "Consumer",
-      "open_date": "2026-10-06",
-      "open_session": "midday",
-      "action": "BUY",
-      "entry": 1510.5,
-      "qty": 5,
-      "invested": 7552.5,
-      "stop_loss": 1463.22,
-      "target": 1586.15,
-      "style": "swing",
-      "confidence": 88.2,
-      "patterns": [
-        "full_bearish_alignment",
-        "supertrend_bullish",
-        "morning_star",
-        "pivot_r1_breakout",
-        "adx_strong_trend_down",
-        "strong_bullish_marubozu",
-        "outside_bar"
-      ],
-      "buy_reasons": [
-        "RSI=43 in healthy buy zone",
-        "Learned bullish pattern: supertrend_bullish (rel=63%)",
-        "Learned bullish pattern: pivot_r1_breakout (rel=82%)",
-        "Learned bullish pattern: outside_bar (rel=73%)",
-        "Candlestick: morning star",
-        "Supertrend bullish \u2014 price above trend band",
-        "Broke above Pivot R1 with volume \u2014 bullish",
-        "In a long-term uptrend (2yr) \u2014 trend on our side",
-        "\u2713 Daily setup aligned with the higher-timeframe trend",
-        "\u26a0 Sector momentum -0.29 \u2014 buying into a falling sector needs extra conviction",
-        "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
-        "All EMAs stacked bearish",
-        "MACD histogram negative",
-        "High volume confirmation (1.4x avg)",
-        "ADX strong trend \u2014 downside momentum confirmed"
-      ],
-      "current_price": 1491.7,
-      "unrealized_pnl": -94.0,
-      "max_held_days": 40,
-      "vol_regime_pct": 0.12,
-      "entry_market": {
-        "nifty_trend": "down",
-        "vix": 14.78,
-        "mood": "bearish",
-        "regime": "mixed",
-        "sector_momentum": -0.29,
-        "delivery_signal": "neutral",
-        "rsi": 42.5,
-        "mtf_alignment": "aligned",
-        "opposing_ratio": 0.38,
-        "hist_long_trend": "uptrend"
-      },
-      "view_hist": [
-        0,
-        0,
-        0,
+        1,
         0
       ]
     },
@@ -153,8 +91,8 @@
         "In a long-term strong downtrend (2yr)",
         "\u2713 Daily setup aligned with the higher-timeframe trend"
       ],
-      "current_price": 221.34,
-      "unrealized_pnl": -6.08,
+      "current_price": 219.83,
+      "unrealized_pnl": 22.61,
       "max_held_days": 40,
       "vol_regime_pct": 0.08399999999999999,
       "entry_market": {
@@ -172,8 +110,8 @@
       "view_hist": [
         0,
         0,
-        0,
-        -1
+        -1,
+        0
       ]
     },
     {
@@ -215,8 +153,8 @@
         "High volume confirmation (1.8x avg)",
         "ADX strong trend \u2014 downside momentum confirmed"
       ],
-      "current_price": 172.7,
-      "unrealized_pnl": -16.5,
+      "current_price": 170.8,
+      "unrealized_pnl": -58.3,
       "max_held_days": 40,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -272,8 +210,8 @@
         "MACD histogram negative",
         "Broke below Pivot S1 support \u2014 bearish"
       ],
-      "current_price": 902.1,
-      "unrealized_pnl": -15.6,
+      "current_price": 894.8,
+      "unrealized_pnl": -44.8,
       "max_held_days": 40,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -291,7 +229,7 @@
       "view_hist": [
         0,
         0,
-        0,
+        1,
         1
       ]
     },
@@ -331,8 +269,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "MACD histogram negative"
       ],
-      "current_price": 1766.6,
-      "unrealized_pnl": 16.5,
+      "current_price": 1752.8,
+      "unrealized_pnl": 2.7,
       "max_held_days": 40,
       "vol_regime_pct": 0.0675,
       "entry_market": {
@@ -350,8 +288,63 @@
       "view_hist": [
         1,
         0,
+        1,
         1
       ]
+    },
+    {
+      "ticker": "BANDHANBNK.NS",
+      "sector": "Banking",
+      "open_date": "2026-10-12",
+      "open_session": "midday",
+      "action": "BUY",
+      "entry": 158.42,
+      "qty": 25,
+      "invested": 3960.5,
+      "stop_loss": 143.56,
+      "target": 176.25,
+      "style": "swing",
+      "confidence": 95,
+      "patterns": [
+        "bb_lower_bounce",
+        "doji",
+        "full_bearish_alignment",
+        "supertrend_bullish",
+        "stoch_rsi_oversold_reversal",
+        "spinning_top",
+        "pivot_point_test",
+        "bullish_harami"
+      ],
+      "buy_reasons": [
+        "Near lower Bollinger Band",
+        "Candlestick: bullish harami",
+        "Supertrend bullish \u2014 price above trend band",
+        "Testing pivot point \u2014 decision zone",
+        "StochRSI oversold with bullish candle \u2014 reversal",
+        "In a long-term uptrend (2yr) \u2014 trend on our side",
+        "Mean-reversion dip: 10% below trend average \u2014 buy the pullback",
+        "RSI 37 oversold \u2014 dip is stretched, snap-back likely",
+        "\u2713 Daily setup aligned with the higher-timeframe trend",
+        "\u26a0 Sector momentum -0.29 \u2014 buying into a falling sector needs extra conviction",
+        "All EMAs stacked bearish",
+        "MACD histogram negative"
+      ],
+      "current_price": 158.42,
+      "unrealized_pnl": 0.0,
+      "max_held_days": 40,
+      "vol_regime_pct": 0.12,
+      "entry_market": {
+        "nifty_trend": "sideways",
+        "vix": 14.38,
+        "mood": "neutral",
+        "regime": "mixed",
+        "sector_momentum": -0.286,
+        "delivery_signal": "neutral",
+        "rsi": 37.5,
+        "mtf_alignment": "aligned",
+        "opposing_ratio": 0.27,
+        "hist_long_trend": "uptrend"
+      }
     }
   ],
   "closed_trades": [
@@ -4922,6 +4915,78 @@
       "pnl_pct": -4.77,
       "won": false,
       "open_days": 5
+    },
+    {
+      "ticker": "PIDILITIND.NS",
+      "sector": "Consumer",
+      "open_date": "2026-10-06",
+      "open_session": "midday",
+      "action": "BUY",
+      "entry": 1510.5,
+      "qty": 5,
+      "invested": 7552.5,
+      "stop_loss": 1463.22,
+      "target": 1586.15,
+      "style": "swing",
+      "confidence": 88.2,
+      "patterns": [
+        "full_bearish_alignment",
+        "supertrend_bullish",
+        "morning_star",
+        "pivot_r1_breakout",
+        "adx_strong_trend_down",
+        "strong_bullish_marubozu",
+        "outside_bar"
+      ],
+      "buy_reasons": [
+        "RSI=43 in healthy buy zone",
+        "Learned bullish pattern: supertrend_bullish (rel=63%)",
+        "Learned bullish pattern: pivot_r1_breakout (rel=82%)",
+        "Learned bullish pattern: outside_bar (rel=73%)",
+        "Candlestick: morning star",
+        "Supertrend bullish \u2014 price above trend band",
+        "Broke above Pivot R1 with volume \u2014 bullish",
+        "In a long-term uptrend (2yr) \u2014 trend on our side",
+        "\u2713 Daily setup aligned with the higher-timeframe trend",
+        "\u26a0 Sector momentum -0.29 \u2014 buying into a falling sector needs extra conviction",
+        "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
+        "All EMAs stacked bearish",
+        "MACD histogram negative",
+        "High volume confirmation (1.4x avg)",
+        "ADX strong trend \u2014 downside momentum confirmed"
+      ],
+      "current_price": 1462.9,
+      "unrealized_pnl": -238.0,
+      "max_held_days": 40,
+      "vol_regime_pct": 0.12,
+      "entry_market": {
+        "nifty_trend": "down",
+        "vix": 14.78,
+        "mood": "bearish",
+        "regime": "mixed",
+        "sector_momentum": -0.29,
+        "delivery_signal": "neutral",
+        "rsi": 42.5,
+        "mtf_alignment": "aligned",
+        "opposing_ratio": 0.38,
+        "hist_long_trend": "uptrend"
+      },
+      "view_hist": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "close_date": "2026-10-12",
+      "close_session": "midday",
+      "exit_price": 1463.22,
+      "exit_reason": "stop_hit",
+      "pnl": -258.7,
+      "pnl_gross": -236.4,
+      "costs": 22.3,
+      "pnl_pct": -3.43,
+      "won": false,
+      "open_days": 4
     }
   ],
   "daily_snapshots": [
@@ -5255,11 +5320,11 @@
       "daily_pnl": 0.0
     }
   ],
-  "daily_pnl_today": 0.0,
+  "daily_pnl_today": -258.7028999999999,
   "last_snapshot_date": "2026-09-21",
   "lifetime_wins": 26,
-  "lifetime_losses": 42,
-  "lifetime_pnl": -4992.23,
+  "lifetime_losses": 43,
+  "lifetime_pnl": -5250.93,
   "last_pnl_reset_date": "2026-10-12",
   "max_drawdown_pct": 4.47,
   "current_drawdown_pct": 4.22,

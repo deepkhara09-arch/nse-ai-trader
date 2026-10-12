@@ -1,25 +1,5 @@
 [
   {
-    "type": "removed",
-    "ticker": "NESTLEIND.NS",
-    "nse_code": "NESTLEIND",
-    "signal": "BUY",
-    "date": "2026-07-27",
-    "ts": "2026-07-27T07:45:50.189440",
-    "detail": "Dropped \u2014 no longer meets threshold (was 67/100)",
-    "confidence": 0
-  },
-  {
-    "type": "updated",
-    "ticker": "PIDILITIND.NS",
-    "nse_code": "PIDILITIND",
-    "signal": "BUY",
-    "date": "2026-07-27",
-    "ts": "2026-07-27T07:45:50.189440",
-    "detail": "Stop loss moved \u20b91567.28 \u2192 \u20b91575.45",
-    "confidence": 79.0
-  },
-  {
     "type": "new",
     "ticker": "NESTLEIND.NS",
     "nse_code": "NESTLEIND",
@@ -5998,5 +5978,25 @@
     "ts": "2026-10-12T04:05:45.547125",
     "detail": "New BUY recommendation \u2014 confidence 71/100",
     "confidence": 70.6
+  },
+  {
+    "type": "removed",
+    "ticker": "ONGC.NS",
+    "nse_code": "ONGC",
+    "signal": "BUY",
+    "date": "2026-10-12",
+    "ts": "2026-10-12T06:15:56.198482",
+    "detail": "Dropped \u2014 no longer meets threshold (was 71/100)",
+    "confidence": 0
+  },
+  {
+    "type": "updated",
+    "ticker": "HINDALCO.NS",
+    "nse_code": "HINDALCO",
+    "signal": "BUY",
+    "date": "2026-10-12",
+    "ts": "2026-10-12T06:15:56.198482",
+    "detail": "Target 1 moved \u20b9960.38 \u2192 \u20b9947.55",
+    "confidence": 81.0
   }
 ]

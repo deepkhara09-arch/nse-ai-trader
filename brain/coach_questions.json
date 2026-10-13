@@ -1,102 +1,102 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of stoch_rsi_oversold_reversal, inside_bar, supertrend_bullish mean for a swing trade on POWERGRID? Current RSI=29, MACD hist=-1.5990, Vol=1.2x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of pivot_point_test, adx_strong_trend_down, bb_lower_bounce mean for a swing trade on HINDALCO? Current RSI=25, MACD hist=-6.9402, Vol=0.9x average. Signal is BUY.",
+    "context": {
+      "ticker": "HINDALCO.NS",
+      "signal": "BUY",
+      "patterns": "pivot_point_test, adx_strong_trend_down, bb_lower_bounce",
+      "rsi": 25.0
+    },
+    "queued_at": "2026-10-13T06:15:54.548971"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of pivot_point_test, bb_lower_bounce, bullish_harami mean for a swing trade on POWERGRID? Current RSI=29, MACD hist=-1.5990, Vol=1.2x average. Signal is BUY.",
     "context": {
       "ticker": "POWERGRID.NS",
       "signal": "BUY",
-      "patterns": "stoch_rsi_oversold_reversal, inside_bar, supertrend_bullish",
+      "patterns": "pivot_point_test, bb_lower_bounce, bullish_harami",
       "rsi": 28.9
     },
-    "queued_at": "2026-10-13T03:05:46.114954"
+    "queued_at": "2026-10-13T06:15:54.553214"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of doji, spinning_top, bb_lower_bounce mean for a swing trade on BANDHANBNK? Current RSI=37, MACD hist=-2.8777, Vol=0.7x average. Signal is BUY.",
-    "context": {
-      "ticker": "BANDHANBNK.NS",
-      "signal": "BUY",
-      "patterns": "doji, spinning_top, bb_lower_bounce",
-      "rsi": 37.5
-    },
-    "queued_at": "2026-10-13T03:05:46.117188"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of inside_bar, bullish_harami, pivot_point_test mean for a swing trade on ADANIGREEN? Current RSI=39, MACD hist=+0.8571, Vol=1.3x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of pivot_point_test, bullish_harami, inside_bar mean for a swing trade on ADANIGREEN? Current RSI=39, MACD hist=+0.8571, Vol=1.3x average. Signal is BUY.",
     "context": {
       "ticker": "ADANIGREEN.NS",
       "signal": "BUY",
-      "patterns": "inside_bar, bullish_harami, pivot_point_test",
+      "patterns": "pivot_point_test, bullish_harami, inside_bar",
       "rsi": 39.3
     },
-    "queued_at": "2026-10-13T03:05:46.120240"
+    "queued_at": "2026-10-13T06:15:54.558155"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of bb_lower_bounce, full_bearish_alignment mean for a swing trade on GAIL? Current RSI=34, MACD hist=-0.4737, Vol=0.8x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of pivot_point_test, rsi_bullish_divergence, bullish_harami mean for a swing trade on ONGC? Current RSI=32, MACD hist=-1.2134, Vol=0.7x average. Signal is BUY.",
     "context": {
-      "ticker": "GAIL.NS",
+      "ticker": "ONGC.NS",
       "signal": "BUY",
-      "patterns": "bb_lower_bounce, full_bearish_alignment",
-      "rsi": 34.1
+      "patterns": "pivot_point_test, rsi_bullish_divergence, bullish_harami",
+      "rsi": 31.9
     },
-    "queued_at": "2026-10-13T04:05:50.819849"
+    "queued_at": "2026-10-13T06:15:54.561368"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of near_52w_low, inside_bar, bb_lower_bounce mean for a swing trade on POWERGRID? Current RSI=29, MACD hist=-1.5990, Vol=1.2x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of pivot_point_test, rsi_bullish_divergence, bullish_harami mean for a swing trade on ONGC? Current RSI=32, MACD hist=-1.2134, Vol=0.7x average. Signal is BUY.",
+    "context": {
+      "ticker": "ONGC.NS",
+      "signal": "BUY",
+      "patterns": "pivot_point_test, rsi_bullish_divergence, bullish_harami",
+      "rsi": 31.9
+    },
+    "queued_at": "2026-10-13T06:15:54.563825"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of pivot_point_test, adx_strong_trend_down, bb_lower_bounce mean for a swing trade on HINDALCO? Current RSI=25, MACD hist=-6.9402, Vol=0.9x average. Signal is BUY.",
+    "context": {
+      "ticker": "HINDALCO.NS",
+      "signal": "BUY",
+      "patterns": "pivot_point_test, adx_strong_trend_down, bb_lower_bounce",
+      "rsi": 25.0
+    },
+    "queued_at": "2026-10-13T06:15:54.566291"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of pivot_point_test, adx_strong_trend_down, bb_lower_bounce mean for a swing trade on HINDALCO? Current RSI=25, MACD hist=-6.9402, Vol=0.9x average. Signal is BUY.",
+    "context": {
+      "ticker": "HINDALCO.NS",
+      "signal": "BUY",
+      "patterns": "pivot_point_test, adx_strong_trend_down, bb_lower_bounce",
+      "rsi": 25.0
+    },
+    "queued_at": "2026-10-13T06:15:54.696421"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of pivot_point_test, bb_lower_bounce, bullish_harami mean for a swing trade on POWERGRID? Current RSI=29, MACD hist=-1.5990, Vol=1.2x average. Signal is BUY.",
     "context": {
       "ticker": "POWERGRID.NS",
       "signal": "BUY",
-      "patterns": "near_52w_low, inside_bar, bb_lower_bounce",
+      "patterns": "pivot_point_test, bb_lower_bounce, bullish_harami",
       "rsi": 28.9
     },
-    "queued_at": "2026-10-13T04:05:50.824492"
+    "queued_at": "2026-10-13T06:15:54.700526"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of rsi_bullish_divergence, near_52w_low, inside_bar mean for a swing trade on ONGC? Current RSI=32, MACD hist=-1.2134, Vol=0.7x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of pivot_point_test, bullish_harami, inside_bar mean for a swing trade on ADANIGREEN? Current RSI=39, MACD hist=+0.8571, Vol=1.3x average. Signal is BUY.",
+    "context": {
+      "ticker": "ADANIGREEN.NS",
+      "signal": "BUY",
+      "patterns": "pivot_point_test, bullish_harami, inside_bar",
+      "rsi": 39.3
+    },
+    "queued_at": "2026-10-13T06:15:54.705390"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of pivot_point_test, rsi_bullish_divergence, bullish_harami mean for a swing trade on ONGC? Current RSI=32, MACD hist=-1.2134, Vol=0.7x average. Signal is BUY.",
     "context": {
       "ticker": "ONGC.NS",
       "signal": "BUY",
-      "patterns": "rsi_bullish_divergence, near_52w_low, inside_bar",
+      "patterns": "pivot_point_test, rsi_bullish_divergence, bullish_harami",
       "rsi": 31.9
     },
-    "queued_at": "2026-10-13T04:05:50.831193"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of rsi_bullish_divergence, near_52w_low, inside_bar mean for a swing trade on ONGC? Current RSI=32, MACD hist=-1.2134, Vol=0.7x average. Signal is BUY.",
-    "context": {
-      "ticker": "ONGC.NS",
-      "signal": "BUY",
-      "patterns": "rsi_bullish_divergence, near_52w_low, inside_bar",
-      "rsi": 31.9
-    },
-    "queued_at": "2026-10-13T04:05:50.833443"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of bb_lower_bounce, full_bearish_alignment mean for a swing trade on GAIL? Current RSI=34, MACD hist=-0.4737, Vol=0.8x average. Signal is BUY.",
-    "context": {
-      "ticker": "GAIL.NS",
-      "signal": "BUY",
-      "patterns": "bb_lower_bounce, full_bearish_alignment",
-      "rsi": 34.1
-    },
-    "queued_at": "2026-10-13T04:05:50.956090"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of near_52w_low, inside_bar, bb_lower_bounce mean for a swing trade on POWERGRID? Current RSI=29, MACD hist=-1.5990, Vol=1.2x average. Signal is BUY.",
-    "context": {
-      "ticker": "POWERGRID.NS",
-      "signal": "BUY",
-      "patterns": "near_52w_low, inside_bar, bb_lower_bounce",
-      "rsi": 28.9
-    },
-    "queued_at": "2026-10-13T04:05:50.960703"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of rsi_bullish_divergence, near_52w_low, inside_bar mean for a swing trade on ONGC? Current RSI=32, MACD hist=-1.2134, Vol=0.7x average. Signal is BUY.",
-    "context": {
-      "ticker": "ONGC.NS",
-      "signal": "BUY",
-      "patterns": "rsi_bullish_divergence, near_52w_low, inside_bar",
-      "rsi": 31.9
-    },
-    "queued_at": "2026-10-13T04:05:50.967485"
+    "queued_at": "2026-10-13T06:15:54.708440"
   }
 ]

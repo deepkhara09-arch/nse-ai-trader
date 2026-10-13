@@ -1,6 +1,6 @@
 {
   "date": "2026-10-13",
-  "session": "morning",
+  "session": "midday",
   "nifty": {
     "symbol": "^NSEI",
     "value": 22363.35,
@@ -64,7 +64,7 @@
     "VIX=15.2 at 93th percentile vs last 30d \u2014 unusually high stress",
     "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
     "Nifty choppy intraday \u2014 wait for cleaner setups",
-    "Global macro risk-off (-0.31) \u2014 Overall macro mood is risk-off (-0.31). US Dow +0.4% overnight. Crude -1.3%. USD/INR -1.1%. Notable: US Fed rate hike / ",
+    "Global macro risk-off (-0.35) \u2014 Overall macro mood is risk-off (-0.35). US Dow +0.4% overnight. Crude +2.1%. USD/INR -1.6%. Notable: US Fed rate hike / ",
     "PCR low (0.59) \u2014 market complacent, caution"
   ],
   "leading_sectors": [
@@ -80,11 +80,11 @@
   "intraday_regime": "choppy",
   "macro": {
     "date": "2026-10-13",
-    "session": "preopen",
-    "generated_at": "2026-10-13T03:05:44.564092",
-    "global_score": 0.259,
+    "session": "midday",
+    "generated_at": "2026-10-13T06:15:45.920435",
+    "global_score": 0.19,
     "india_score": -1.0,
-    "overall_score": -0.308,
+    "overall_score": -0.346,
     "mood": "risk_off",
     "drivers": [
       "The global economy is starting to look K-shaped. Here are the winners and losers, and where the U.S. fits.",
@@ -110,23 +110,23 @@
         "chg_pct": -0.06
       },
       "nikkei": {
-        "last": 67292.39,
-        "chg_pct": -2.52
+        "last": 67707.24,
+        "chg_pct": -1.92
       },
       "crude": {
-        "last": 92.48,
-        "chg_pct": -1.34
+        "last": 93.74,
+        "chg_pct": 2.06
       },
       "usdinr": {
-        "last": 95.76,
-        "chg_pct": -1.1
+        "last": 95.27,
+        "chg_pct": -1.6
       },
       "gold": {
-        "last": 4198.6,
-        "chg_pct": 0.19
+        "last": 4190.6,
+        "chg_pct": -0.61
       }
     },
-    "summary": "Overall macro mood is risk-off (-0.31). US Dow +0.4% overnight. Crude -1.3%. USD/INR -1.1%. Notable: US Fed rate hike / hawkish; Geopolitical conflict / war; Tariffs / trade war.",
+    "summary": "Overall macro mood is risk-off (-0.35). US Dow +0.4% overnight. Crude +2.1%. USD/INR -1.6%. Notable: US Fed rate hike / hawkish; Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
       "Hawkish Fed pressures Nifty via FII outflows and stronger USD.",
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",

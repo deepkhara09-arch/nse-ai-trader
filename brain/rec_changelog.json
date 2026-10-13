@@ -1,25 +1,5 @@
 [
   {
-    "type": "new",
-    "ticker": "SBIN.NS",
-    "nse_code": "SBIN",
-    "signal": "BUY",
-    "date": "2026-07-27",
-    "ts": "2026-07-27T10:12:22.847437",
-    "detail": "New BUY recommendation \u2014 confidence 70/100",
-    "confidence": 69.6
-  },
-  {
-    "type": "new",
-    "ticker": "FEDERALBNK.NS",
-    "nse_code": "FEDERALBNK",
-    "signal": "BUY",
-    "date": "2026-07-27",
-    "ts": "2026-07-27T10:12:22.847437",
-    "detail": "New BUY recommendation \u2014 confidence 69/100",
-    "confidence": 69.1
-  },
-  {
     "type": "updated",
     "ticker": "PIDILITIND.NS",
     "nse_code": "PIDILITIND",
@@ -5998,5 +5978,25 @@
     "ts": "2026-10-13T06:15:54.712133",
     "detail": "Confidence \u25b27 (66 \u2192 72)",
     "confidence": 72.5
+  },
+  {
+    "type": "new",
+    "ticker": "HINDALCO.NS",
+    "nse_code": "HINDALCO",
+    "signal": "BUY",
+    "date": "2026-10-13",
+    "ts": "2026-10-13T07:45:58.316708",
+    "detail": "New BUY recommendation \u2014 confidence 81/100",
+    "confidence": 81.0
+  },
+  {
+    "type": "removed",
+    "ticker": "ONGC.NS",
+    "nse_code": "ONGC",
+    "signal": "BUY",
+    "date": "2026-10-13",
+    "ts": "2026-10-13T07:45:58.316708",
+    "detail": "Dropped \u2014 no longer meets threshold (was 71/100)",
+    "confidence": 0
   }
 ]

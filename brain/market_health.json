@@ -1,6 +1,6 @@
 {
   "date": "2026-10-13",
-  "session": "midday",
+  "session": "afternoon",
   "nifty": {
     "symbol": "^NSEI",
     "value": 22363.35,
@@ -63,7 +63,6 @@
   "warnings": [
     "VIX=15.2 at 93th percentile vs last 30d \u2014 unusually high stress",
     "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
-    "Nifty choppy intraday \u2014 wait for cleaner setups",
     "Global macro risk-off (-0.35) \u2014 Overall macro mood is risk-off (-0.35). US Dow +0.4% overnight. Crude +2.1%. USD/INR -1.6%. Notable: US Fed rate hike / ",
     "PCR low (0.59) \u2014 market complacent, caution"
   ],
@@ -77,7 +76,7 @@
     "Pharma",
     "Infra"
   ],
-  "intraday_regime": "choppy",
+  "intraday_regime": "mixed",
   "macro": {
     "date": "2026-10-13",
     "session": "midday",

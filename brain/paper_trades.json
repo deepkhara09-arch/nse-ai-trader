@@ -33,8 +33,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "Broke below Pivot S1 support \u2014 bearish"
       ],
-      "current_price": 1073.9,
-      "unrealized_pnl": -168.8,
+      "current_price": 1071.8,
+      "unrealized_pnl": -177.2,
       "max_held_days": 40,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -50,10 +50,10 @@
         "hist_long_trend": "strong_uptrend"
       },
       "view_hist": [
+        0,
+        0,
         1,
-        0,
-        0,
-        1
+        0
       ]
     },
     {
@@ -91,8 +91,8 @@
         "In a long-term strong downtrend (2yr)",
         "\u2713 Daily setup aligned with the higher-timeframe trend"
       ],
-      "current_price": 219.18,
-      "unrealized_pnl": 34.96,
+      "current_price": 220.34,
+      "unrealized_pnl": 12.92,
       "max_held_days": 40,
       "vol_regime_pct": 0.08399999999999999,
       "entry_market": {
@@ -108,10 +108,10 @@
         "hist_long_trend": "strong_downtrend"
       },
       "view_hist": [
-        -1,
         0,
         0,
-        0
+        0,
+        -1
       ]
     },
     {
@@ -153,8 +153,8 @@
         "High volume confirmation (1.8x avg)",
         "ADX strong trend \u2014 downside momentum confirmed"
       ],
-      "current_price": 170.4,
-      "unrealized_pnl": -67.1,
+      "current_price": 172.6,
+      "unrealized_pnl": -18.7,
       "max_held_days": 40,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -210,8 +210,8 @@
         "MACD histogram negative",
         "Broke below Pivot S1 support \u2014 bearish"
       ],
-      "current_price": 886.0,
-      "unrealized_pnl": -80.0,
+      "current_price": 883.25,
+      "unrealized_pnl": -91.0,
       "max_held_days": 40,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -228,7 +228,7 @@
       },
       "view_hist": [
         1,
-        1,
+        0,
         0,
         0
       ]
@@ -269,8 +269,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "MACD histogram negative"
       ],
-      "current_price": 1756.1,
-      "unrealized_pnl": 6.0,
+      "current_price": 1764.3,
+      "unrealized_pnl": 14.2,
       "max_held_days": 40,
       "vol_regime_pct": 0.0675,
       "entry_market": {
@@ -289,7 +289,7 @@
         1,
         1,
         1,
-        1
+        0
       ]
     },
     {
@@ -301,7 +301,7 @@
       "entry": 158.42,
       "qty": 25,
       "invested": 3960.5,
-      "stop_loss": 143.56,
+      "stop_loss": 161.78,
       "target": 176.25,
       "style": "swing",
       "confidence": 95,
@@ -329,8 +329,8 @@
         "All EMAs stacked bearish",
         "MACD histogram negative"
       ],
-      "current_price": 157.49,
-      "unrealized_pnl": -23.25,
+      "current_price": 170.55,
+      "unrealized_pnl": 303.25,
       "max_held_days": 40,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -347,8 +347,10 @@
       },
       "view_hist": [
         1,
-        1
-      ]
+        1,
+        0
+      ],
+      "trailing_active": true
     }
   ],
   "closed_trades": [
@@ -5324,12 +5326,12 @@
       "daily_pnl": 0.0
     }
   ],
-  "daily_pnl_today": -258.7028999999999,
+  "daily_pnl_today": 0.0,
   "last_snapshot_date": "2026-09-21",
   "lifetime_wins": 26,
   "lifetime_losses": 43,
   "lifetime_pnl": -5250.93,
-  "last_pnl_reset_date": "2026-10-12",
+  "last_pnl_reset_date": "2026-10-13",
   "max_drawdown_pct": 4.47,
   "current_drawdown_pct": 4.22,
   "portfolio_peak": 101210.28,

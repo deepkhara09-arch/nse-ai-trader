@@ -1,16 +1,6 @@
 [
   {
     "type": "updated",
-    "ticker": "PIDILITIND.NS",
-    "nse_code": "PIDILITIND",
-    "signal": "BUY",
-    "date": "2026-07-27",
-    "ts": "2026-07-27T10:12:22.847437",
-    "detail": "Rank \u25b21 (#12 \u2192 #11) | Stop loss moved \u20b91575.45 \u2192 \u20b91567.28",
-    "confidence": 79.9
-  },
-  {
-    "type": "updated",
     "ticker": "NESTLEIND.NS",
     "nse_code": "NESTLEIND",
     "signal": "BUY",
@@ -5997,6 +5987,16 @@
     "date": "2026-10-13",
     "ts": "2026-10-13T07:45:58.316708",
     "detail": "Dropped \u2014 no longer meets threshold (was 71/100)",
+    "confidence": 0
+  },
+  {
+    "type": "removed",
+    "ticker": "PIDILITIND.NS",
+    "nse_code": "PIDILITIND",
+    "signal": "BUY",
+    "date": "2026-10-13",
+    "ts": "2026-10-13T09:45:38.446737",
+    "detail": "Dropped \u2014 no longer meets threshold (was 72/100)",
     "confidence": 0
   }
 ]

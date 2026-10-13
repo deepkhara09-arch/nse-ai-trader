@@ -1,27 +1,27 @@
 {
-  "date": "2026-10-12",
-  "session": "intraday_close",
+  "date": "2026-10-13",
+  "session": "preopen",
   "nifty": {
     "symbol": "^NSEI",
-    "value": 22520.45,
-    "day_change_pct": 1.3,
-    "trend_5d": "sideways",
+    "value": 22363.35,
+    "day_change_pct": -0.7,
+    "trend_5d": "down",
     "trend_20d": "strong_down",
-    "ath_pct_60d": -7.82
+    "ath_pct_60d": -8.37
   },
   "vix": {
-    "value": 14.38,
+    "value": 15.25,
     "level": "normal",
-    "percentile_30d": 86.0,
-    "avg_30d": 12.42
+    "percentile_30d": 93.0,
+    "avg_30d": 12.57
   },
   "bank_nifty": {
     "symbol": "^NSEBANK",
-    "value": 55256.65,
-    "day_change_pct": 1.36,
-    "trend_5d": "up",
+    "value": 54918.0,
+    "day_change_pct": -0.61,
+    "trend_5d": "sideways",
     "trend_20d": "down",
-    "ath_pct_60d": -4.77,
+    "ath_pct_60d": -5.35,
     "diverging": false
   },
   "sectors": {
@@ -35,11 +35,11 @@
     },
     "Pharma": {
       "symbol": "PHARMABEES.NS",
-      "value": 26.72,
-      "day_change_pct": 0.6,
-      "trend_5d": "sideways",
+      "value": 26.78,
+      "day_change_pct": 0.22,
+      "trend_5d": "down",
       "trend_20d": "down",
-      "ath_pct_60d": -6.51
+      "ath_pct_60d": -6.3
     },
     "Bank": {
       "symbol": "BANKBEES.NS",
@@ -51,17 +51,20 @@
     },
     "Infra": {
       "symbol": "INFRABEES.NS",
-      "value": 889.52,
-      "day_change_pct": 0.87,
+      "value": 879.76,
+      "day_change_pct": -1.1,
       "trend_5d": "strong_down",
       "trend_20d": "strong_down",
-      "ath_pct_60d": -8.94
+      "ath_pct_60d": -9.94
     }
   },
-  "market_mood": "neutral",
+  "market_mood": "bearish",
   "trade_allowed": true,
   "warnings": [
-    "VIX=14.4 at 86th percentile vs last 30d \u2014 unusually high stress"
+    "VIX=15.2 at 93th percentile vs last 30d \u2014 unusually high stress",
+    "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
+    "Global macro risk-off (-0.31) \u2014 Overall macro mood is risk-off (-0.31). US Dow +0.4% overnight. Crude -1.3%. USD/INR -1.1%. Notable: US Fed rate hike / ",
+    "PCR low (0.59) \u2014 market complacent, caution"
   ],
   "leading_sectors": [
     "IT",
@@ -70,81 +73,77 @@
   "market_regime": "normal",
   "sector_breadth": 0.5,
   "lagging_sectors": [
+    "Pharma",
     "Infra"
   ],
   "intraday_regime": "mixed",
   "macro": {
-    "date": "2026-10-12",
-    "session": "midday",
-    "generated_at": "2026-10-12T06:15:47.221023",
-    "global_score": 0.239,
-    "india_score": 0.0,
-    "overall_score": 0.131,
-    "mood": "neutral",
+    "date": "2026-10-13",
+    "session": "preopen",
+    "generated_at": "2026-10-13T03:05:44.564092",
+    "global_score": 0.259,
+    "india_score": -1.0,
+    "overall_score": -0.308,
+    "mood": "risk_off",
     "drivers": [
+      "The global economy is starting to look K-shaped. Here are the winners and losers, and where the U.S. fits.",
+      "The SpaceX threat could loom over AT&T\u2019s stock for a prolonged stretch, analyst cautions",
+      "\u2018The house is worth $925,000\u2019: My sister moved in with our mother, 78, and says she deserves the family home. Is she right?",
+      "\u2018The prospectus looks impressive\u2019: My financial adviser wants me to invest $350,000 in a UAE data center. Is this risky?",
+      "Investors worry the bull market is getting old. But history shows it can continue to age gracefully.",
       "\u2018I have no children\u2019: My aunt gave me $50,000 for a down payment. Now she wants me to leave my home to her two children.",
-      "\u2018I feel like a loser\u2019: My stock portfolio is swinging wildly. Is it finally time to worry?",
-      "My brother-in-law convinced his parents to sign over their home and life savings to buy a $3 million compound. Do I intervene?",
-      "I\u2019m a 68-year-old widow and give money to my two adult children. Am I putting my retirement at risk?",
-      "Millions of Americans will have fewer options during Medicare open enrollment this year",
-      "We\u2019re about to get a huge read on whether earnings can keep propping up the stock market",
-      "The bull market is turning 4 years old \u2014 but yields could crash the party",
-      "Bank earnings to shed the first light on how higher yields are affecting the economy"
+      "Brazilian stocks are breaking out as investors look for opportunities beyond tech",
+      "Nvidia and AMD shares fall as new AI announcements fail to re-energize investors"
     ],
     "global_cues": {
       "dow": {
-        "last": 51654.95,
-        "chg_pct": 0.83
+        "last": 51850.55,
+        "chg_pct": 0.38
       },
       "nasdaq": {
-        "last": 27366.17,
-        "chg_pct": 0.64
+        "last": 27245.9,
+        "chg_pct": -0.44
       },
       "sp500": {
-        "last": 7811.54,
-        "chg_pct": 0.59
+        "last": 7807.24,
+        "chg_pct": -0.06
       },
       "nikkei": {
-        "last": 69030.92,
-        "chg_pct": -0.02
+        "last": 67292.39,
+        "chg_pct": -2.52
       },
       "crude": {
-        "last": 91.85,
-        "chg_pct": 0.39
+        "last": 92.48,
+        "chg_pct": -1.34
       },
       "usdinr": {
         "last": 95.76,
         "chg_pct": -1.1
       },
       "gold": {
-        "last": 4216.3,
-        "chg_pct": 1.43
+        "last": 4198.6,
+        "chg_pct": 0.19
       }
     },
-    "summary": "Overall macro mood is neutral (+0.13). US Dow +0.8% overnight. Crude +0.4%. USD/INR -1.1%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
+    "summary": "Overall macro mood is risk-off (-0.31). US Dow +0.4% overnight. Crude -1.3%. USD/INR -1.1%. Notable: US Fed rate hike / hawkish; Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
+      "Hawkish Fed pressures Nifty via FII outflows and stronger USD.",
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
       "Trade-war headlines spook global markets; IT & export names react most."
     ],
     "playbook_bias": "risk_off",
     "article_count": 60
   },
-  "macro_risk_factor": 1.0,
+  "macro_risk_factor": 0.7,
   "fii_dii": {
-    "date": "2026-10-12",
-    "fii_net_cr": -3568.9,
-    "dii_net_cr": 4743.26,
-    "combined_net_cr": 1174.36,
+    "date": "2026-10-13",
+    "fii_net_cr": -1708.48,
+    "dii_net_cr": 3045.02,
+    "combined_net_cr": 1336.54,
     "signal": "neutral",
     "ok": true,
     "error": "",
     "history": [
-      {
-        "date": "2026-09-01",
-        "fii": 1143.38,
-        "dii": 1846.94,
-        "combined": 2990.32
-      },
       {
         "date": "2026-09-02",
         "fii": 6688.37,
@@ -318,21 +317,27 @@
         "fii": -3568.9,
         "dii": 4743.26,
         "combined": 1174.36
+      },
+      {
+        "date": "2026-10-13",
+        "fii": -1708.48,
+        "dii": 3045.02,
+        "combined": 1336.54
       }
     ]
   },
   "pcr": {
-    "date": "2026-10-12",
-    "pcr": 1.27,
-    "reading": "bullish_bias",
-    "total_pe_oi": 3235619,
-    "total_ce_oi": 2548443,
-    "spot": 22520.45,
-    "max_pain": 22500.0,
-    "max_pain_dist_pct": 0.09,
-    "oi_bias": "put_heavy_support",
+    "date": "2026-10-13",
+    "pcr": 0.591,
+    "reading": "complacent_caution",
+    "total_pe_oi": 2352627,
+    "total_ce_oi": 3980072,
+    "spot": 22363.35,
+    "max_pain": 22400.0,
+    "max_pain_dist_pct": -0.16,
+    "oi_bias": "call_heavy_resistance",
     "ok": true,
     "error": ""
   },
-  "oi_note": "Heavy put OI below spot \u2014 option writers see a floor (bullish lean)"
+  "oi_note": "Heavy call OI above spot \u2014 option writers see a lid (bearish lean)"
 }

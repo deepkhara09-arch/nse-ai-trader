@@ -1,53 +1,54 @@
 {
-  "date": "2026-10-12",
-  "session": "midday",
-  "generated_at": "2026-10-12T06:15:47.221023",
-  "global_score": 0.239,
-  "india_score": 0.0,
-  "overall_score": 0.131,
-  "mood": "neutral",
+  "date": "2026-10-13",
+  "session": "preopen",
+  "generated_at": "2026-10-13T03:05:44.564092",
+  "global_score": 0.259,
+  "india_score": -1.0,
+  "overall_score": -0.308,
+  "mood": "risk_off",
   "drivers": [
+    "The global economy is starting to look K-shaped. Here are the winners and losers, and where the U.S. fits.",
+    "The SpaceX threat could loom over AT&T\u2019s stock for a prolonged stretch, analyst cautions",
+    "\u2018The house is worth $925,000\u2019: My sister moved in with our mother, 78, and says she deserves the family home. Is she right?",
+    "\u2018The prospectus looks impressive\u2019: My financial adviser wants me to invest $350,000 in a UAE data center. Is this risky?",
+    "Investors worry the bull market is getting old. But history shows it can continue to age gracefully.",
     "\u2018I have no children\u2019: My aunt gave me $50,000 for a down payment. Now she wants me to leave my home to her two children.",
-    "\u2018I feel like a loser\u2019: My stock portfolio is swinging wildly. Is it finally time to worry?",
-    "My brother-in-law convinced his parents to sign over their home and life savings to buy a $3 million compound. Do I intervene?",
-    "I\u2019m a 68-year-old widow and give money to my two adult children. Am I putting my retirement at risk?",
-    "Millions of Americans will have fewer options during Medicare open enrollment this year",
-    "We\u2019re about to get a huge read on whether earnings can keep propping up the stock market",
-    "The bull market is turning 4 years old \u2014 but yields could crash the party",
-    "Bank earnings to shed the first light on how higher yields are affecting the economy"
+    "Brazilian stocks are breaking out as investors look for opportunities beyond tech",
+    "Nvidia and AMD shares fall as new AI announcements fail to re-energize investors"
   ],
   "global_cues": {
     "dow": {
-      "last": 51654.95,
-      "chg_pct": 0.83
+      "last": 51850.55,
+      "chg_pct": 0.38
     },
     "nasdaq": {
-      "last": 27366.17,
-      "chg_pct": 0.64
+      "last": 27245.9,
+      "chg_pct": -0.44
     },
     "sp500": {
-      "last": 7811.54,
-      "chg_pct": 0.59
+      "last": 7807.24,
+      "chg_pct": -0.06
     },
     "nikkei": {
-      "last": 69030.92,
-      "chg_pct": -0.02
+      "last": 67292.39,
+      "chg_pct": -2.52
     },
     "crude": {
-      "last": 91.85,
-      "chg_pct": 0.39
+      "last": 92.48,
+      "chg_pct": -1.34
     },
     "usdinr": {
       "last": 95.76,
       "chg_pct": -1.1
     },
     "gold": {
-      "last": 4216.3,
-      "chg_pct": 1.43
+      "last": 4198.6,
+      "chg_pct": 0.19
     }
   },
-  "summary": "Overall macro mood is neutral (+0.13). US Dow +0.8% overnight. Crude +0.4%. USD/INR -1.1%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
+  "summary": "Overall macro mood is risk-off (-0.31). US Dow +0.4% overnight. Crude -1.3%. USD/INR -1.1%. Notable: US Fed rate hike / hawkish; Geopolitical conflict / war; Tariffs / trade war.",
   "playbook": [
+    "Hawkish Fed pressures Nifty via FII outflows and stronger USD.",
     "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
     "Trade-war headlines spook global markets; IT & export names react most."
   ],

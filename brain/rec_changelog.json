@@ -1,16 +1,6 @@
 [
   {
     "type": "removed",
-    "ticker": "POWERGRID.NS",
-    "nse_code": "POWERGRID",
-    "signal": "BUY",
-    "date": "2026-07-28",
-    "ts": "2026-07-28T04:05:49.511261",
-    "detail": "Dropped \u2014 no longer meets threshold (was 74/100)",
-    "confidence": 0
-  },
-  {
-    "type": "removed",
     "ticker": "SBIN.NS",
     "nse_code": "SBIN",
     "signal": "BUY",
@@ -5998,5 +5988,15 @@
     "ts": "2026-10-14T06:15:52.296604",
     "detail": "Confidence \u25b27 (72 \u2192 79)",
     "confidence": 79.1
+  },
+  {
+    "type": "removed",
+    "ticker": "HINDALCO.NS",
+    "nse_code": "HINDALCO",
+    "signal": "BUY",
+    "date": "2026-10-14",
+    "ts": "2026-10-14T07:45:48.580238",
+    "detail": "Dropped \u2014 no longer meets threshold (was 79/100)",
+    "confidence": 0
   }
 ]

@@ -63,6 +63,7 @@
   "trade_allowed": true,
   "warnings": [
     "VIX=14.1 at 80th percentile vs last 30d \u2014 unusually high stress",
+    "Nifty choppy intraday \u2014 wait for cleaner setups",
     "Global macro risk-off (-0.34) \u2014 Overall macro mood is risk-off (-0.34). US Dow -0.3% overnight. Crude +0.4%. USD/INR -0.9%. Notable: US Fed rate hike / "
   ],
   "leading_sectors": [
@@ -74,7 +75,7 @@
     "Pharma",
     "Infra"
   ],
-  "intraday_regime": "mixed",
+  "intraday_regime": "choppy",
   "macro": {
     "date": "2026-10-14",
     "session": "midday",

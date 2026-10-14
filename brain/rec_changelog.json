@@ -1,16 +1,6 @@
 [
   {
     "type": "removed",
-    "ticker": "ICICIBANK.NS",
-    "nse_code": "ICICIBANK",
-    "signal": "BUY",
-    "date": "2026-07-28",
-    "ts": "2026-07-28T04:05:49.511261",
-    "detail": "Dropped \u2014 no longer meets threshold (was 76/100)",
-    "confidence": 0
-  },
-  {
-    "type": "removed",
     "ticker": "POWERGRID.NS",
     "nse_code": "POWERGRID",
     "signal": "BUY",
@@ -5998,5 +5988,15 @@
     "ts": "2026-10-14T04:05:42.274216",
     "detail": "Confidence \u25bc8 (81 \u2192 72) | Rank \u25bc1 (#5 \u2192 #6)",
     "confidence": 72.5
+  },
+  {
+    "type": "updated",
+    "ticker": "HINDALCO.NS",
+    "nse_code": "HINDALCO",
+    "signal": "BUY",
+    "date": "2026-10-14",
+    "ts": "2026-10-14T06:15:52.296604",
+    "detail": "Confidence \u25b27 (72 \u2192 79)",
+    "confidence": 79.1
   }
 ]

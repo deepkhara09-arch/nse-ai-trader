@@ -1,6 +1,6 @@
 {
   "date": "2026-10-14",
-  "session": "morning",
+  "session": "midday",
   "nifty": {
     "symbol": "^NSEI",
     "value": 22721.95,
@@ -64,7 +64,7 @@
   "warnings": [
     "VIX=14.1 at 80th percentile vs last 30d \u2014 unusually high stress",
     "Nifty choppy intraday \u2014 wait for cleaner setups",
-    "Global macro risk-off (-0.36) \u2014 Overall macro mood is risk-off (-0.36). US Dow -0.3% overnight. Crude +1.0%. USD/INR -1.0%. Notable: US Fed rate hike / "
+    "Global macro risk-off (-0.34) \u2014 Overall macro mood is risk-off (-0.34). US Dow -0.3% overnight. Crude +0.4%. USD/INR -0.9%. Notable: US Fed rate hike / "
   ],
   "leading_sectors": [
     "IT"
@@ -78,11 +78,11 @@
   "intraday_regime": "choppy",
   "macro": {
     "date": "2026-10-14",
-    "session": "preopen",
-    "generated_at": "2026-10-14T03:05:43.925412",
-    "global_score": 0.156,
+    "session": "midday",
+    "generated_at": "2026-10-14T06:15:43.758772",
+    "global_score": 0.2,
     "india_score": -1.0,
-    "overall_score": -0.364,
+    "overall_score": -0.34,
     "mood": "risk_off",
     "drivers": [
       "\u2018I am a pretty cautious person\u2019: My financial adviser wants me to invest $350,000 in a UAE data center. Is this risky?",
@@ -108,23 +108,23 @@
         "chg_pct": -0.02
       },
       "nikkei": {
-        "last": 68193.13,
-        "chg_pct": 0.61
+        "last": 67750.62,
+        "chg_pct": -0.04
       },
       "crude": {
-        "last": 95.11,
-        "chg_pct": 1.03
+        "last": 94.14,
+        "chg_pct": 0.43
       },
       "usdinr": {
-        "last": 95.78,
-        "chg_pct": -1.03
+        "last": 94.93,
+        "chg_pct": -0.88
       },
       "gold": {
-        "last": 4190.0,
-        "chg_pct": 0.3
+        "last": 4177.3,
+        "chg_pct": -0.32
       }
     },
-    "summary": "Overall macro mood is risk-off (-0.36). US Dow -0.3% overnight. Crude +1.0%. USD/INR -1.0%. Notable: US Fed rate hike / hawkish; Geopolitical conflict / war; Tariffs / trade war.",
+    "summary": "Overall macro mood is risk-off (-0.34). US Dow -0.3% overnight. Crude +0.4%. USD/INR -0.9%. Notable: US Fed rate hike / hawkish; Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
       "Hawkish Fed pressures Nifty via FII outflows and stronger USD.",
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",

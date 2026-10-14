@@ -3,10 +3,10 @@
     "ticker": "HINDALCO.NS",
     "nse_code": "HINDALCO",
     "company_name": "HINDALCO.NS",
-    "date": "2026-10-13",
-    "generated_at": "2026-10-13 09:45 UTC",
-    "valid_until": "15:40 IST",
-    "session": "intraday_close",
+    "date": "2026-10-14",
+    "generated_at": "2026-10-14 03:05 UTC",
+    "valid_until": "09:35 IST",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -40,10 +40,10 @@
     "pattern_score": 1.0,
     "confluence_bonus": 5.0,
     "paper_bonus": 0.0,
-    "success_probability": 0.445,
-    "base_success_prob": 0.411,
-    "profit_probability": 0.027,
-    "composite_score": 41.72,
+    "success_probability": 0.456,
+    "base_success_prob": 0.427,
+    "profit_probability": 0.068,
+    "composite_score": 43.87,
     "focus_rank": 5,
     "rank_delta": 0,
     "intention": "BUY HINDALCO for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
@@ -65,7 +65,7 @@
     "data_confidence": "Estimated",
     "data_confidence_key": "estimated",
     "data_confidence_note": "Only 3 paper trade(s) \u2014 probability is an indicator-based estimate, not yet proven",
-    "expected_edge_r": 0.027,
+    "expected_edge_r": 0.068,
     "buy_score": 15.8,
     "sell_score": 4.0,
     "reasons": [
@@ -103,15 +103,15 @@
       "History backtest: this kind of BUY setup worked 52% of the time over ~1 week on this stock (sample: 59)"
     ],
     "patterns_seen": [
-      "full_bearish_alignment",
-      "adx_strong_trend_down",
       "supertrend_bullish",
+      "full_bearish_alignment",
       "stoch_rsi_oversold_reversal",
-      "bb_lower_bounce",
+      "pivot_point_test",
+      "inside_bar",
+      "adx_strong_trend_down",
       "tweezer_bottom",
       "bullish_harami",
-      "inside_bar",
-      "pivot_point_test"
+      "bb_lower_bounce"
     ],
     "reliable_patterns": [],
     "nearest_support": 880,
@@ -139,10 +139,8 @@
     "paper_expectancy": -190.35,
     "market_mood": "bearish",
     "market_warning": [
-      "VIX=15.2 at 93th percentile vs last 30d \u2014 unusually high stress",
-      "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
-      "Global macro risk-off (-0.35) \u2014 Overall macro mood is risk-off (-0.35). US Dow +0.4% overnight. Crude +2.1%. USD/INR -1.6%. Notable: US Fed rate hike / ",
-      "PCR low (0.59) \u2014 market complacent, caution"
+      "VIX=14.1 at 80th percentile vs last 30d \u2014 unusually high stress",
+      "Global macro risk-off (-0.36) \u2014 Overall macro mood is risk-off (-0.36). US Dow -0.3% overnight. Crude +1.0%. USD/INR -1.0%. Notable: US Fed rate hike / "
     ]
   }
 ]

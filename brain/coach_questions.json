@@ -1,65 +1,5 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of near_52w_low, full_bearish_alignment, supertrend_bullish mean for a swing trade on ONGC? Current RSI=32, MACD hist=-1.2134, Vol=0.7x average. Signal is BUY.",
-    "context": {
-      "ticker": "ONGC.NS",
-      "signal": "BUY",
-      "patterns": "near_52w_low, full_bearish_alignment, supertrend_bullish",
-      "rsi": 31.9
-    },
-    "queued_at": "2026-10-13T09:45:38.296404"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of full_bearish_alignment, adx_strong_trend_down, inverted_hammer mean for a swing trade on HOMEFIRST? Current RSI=23, MACD hist=-8.5383, Vol=0.4x average. Signal is BUY.",
-    "context": {
-      "ticker": "HOMEFIRST.NS",
-      "signal": "BUY",
-      "patterns": "full_bearish_alignment, adx_strong_trend_down, inverted_hammer",
-      "rsi": 22.6
-    },
-    "queued_at": "2026-10-13T09:45:38.297773"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of near_52w_low, full_bearish_alignment, supertrend_bullish mean for a swing trade on ONGC? Current RSI=32, MACD hist=-1.2134, Vol=0.7x average. Signal is BUY.",
-    "context": {
-      "ticker": "ONGC.NS",
-      "signal": "BUY",
-      "patterns": "near_52w_low, full_bearish_alignment, supertrend_bullish",
-      "rsi": 31.9
-    },
-    "queued_at": "2026-10-13T09:45:38.299099"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_down, bb_lower_bounce, tweezer_bottom mean for a swing trade on HINDALCO? Current RSI=25, MACD hist=-6.9402, Vol=0.9x average. Signal is BUY.",
-    "context": {
-      "ticker": "HINDALCO.NS",
-      "signal": "BUY",
-      "patterns": "adx_strong_trend_down, bb_lower_bounce, tweezer_bottom",
-      "rsi": 25.0
-    },
-    "queued_at": "2026-10-13T09:45:38.301365"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of full_bearish_alignment, bb_lower_bounce mean for a swing trade on GAIL? Current RSI=34, MACD hist=-0.4737, Vol=0.8x average. Signal is BUY.",
-    "context": {
-      "ticker": "GAIL.NS",
-      "signal": "BUY",
-      "patterns": "full_bearish_alignment, bb_lower_bounce",
-      "rsi": 34.1
-    },
-    "queued_at": "2026-10-13T09:45:38.426863"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_down, bb_lower_bounce, tweezer_bottom mean for a swing trade on HINDALCO? Current RSI=25, MACD hist=-6.9402, Vol=0.9x average. Signal is BUY.",
-    "context": {
-      "ticker": "HINDALCO.NS",
-      "signal": "BUY",
-      "patterns": "adx_strong_trend_down, bb_lower_bounce, tweezer_bottom",
-      "rsi": 25.0
-    },
-    "queued_at": "2026-10-13T09:45:38.428220"
-  },
-  {
     "question": "In Indian NSE markets, what does the combination of full_bearish_alignment, adx_strong_trend_down, inverted_hammer mean for a swing trade on HOMEFIRST? Current RSI=23, MACD hist=-8.5383, Vol=0.4x average. Signal is BUY.",
     "context": {
       "ticker": "HOMEFIRST.NS",
@@ -98,5 +38,65 @@
       "rsi": 31.9
     },
     "queued_at": "2026-10-13T09:45:38.445865"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of full_bearish_alignment, bb_lower_bounce mean for a swing trade on GAIL? Current RSI=34, MACD hist=-0.4737, Vol=0.8x average. Signal is BUY.",
+    "context": {
+      "ticker": "GAIL.NS",
+      "signal": "BUY",
+      "patterns": "full_bearish_alignment, bb_lower_bounce",
+      "rsi": 34.1
+    },
+    "queued_at": "2026-10-14T03:05:45.223179"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of pivot_point_test, adx_strong_trend_down, tweezer_bottom mean for a swing trade on HINDALCO? Current RSI=25, MACD hist=-6.9402, Vol=0.9x average. Signal is BUY.",
+    "context": {
+      "ticker": "HINDALCO.NS",
+      "signal": "BUY",
+      "patterns": "pivot_point_test, adx_strong_trend_down, tweezer_bottom",
+      "rsi": 25.0
+    },
+    "queued_at": "2026-10-14T03:05:45.224234"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of full_bearish_alignment, inverted_hammer, adx_strong_trend_down mean for a swing trade on HOMEFIRST? Current RSI=23, MACD hist=-8.5383, Vol=0.4x average. Signal is BUY.",
+    "context": {
+      "ticker": "HOMEFIRST.NS",
+      "signal": "BUY",
+      "patterns": "full_bearish_alignment, inverted_hammer, adx_strong_trend_down",
+      "rsi": 22.6
+    },
+    "queued_at": "2026-10-14T03:05:45.227189"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of near_52w_low, supertrend_bullish, stoch_rsi_oversold_reversal mean for a swing trade on POWERGRID? Current RSI=29, MACD hist=-1.5990, Vol=1.2x average. Signal is BUY.",
+    "context": {
+      "ticker": "POWERGRID.NS",
+      "signal": "BUY",
+      "patterns": "near_52w_low, supertrend_bullish, stoch_rsi_oversold_reversal",
+      "rsi": 28.9
+    },
+    "queued_at": "2026-10-14T03:05:45.229257"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of low_volume_drift, full_bearish_alignment, tweezer_bottom mean for a swing trade on IDFCFIRSTB? Current RSI=35, MACD hist=-0.5174, Vol=0.4x average. Signal is BUY.",
+    "context": {
+      "ticker": "IDFCFIRSTB.NS",
+      "signal": "BUY",
+      "patterns": "low_volume_drift, full_bearish_alignment, tweezer_bottom",
+      "rsi": 35.0
+    },
+    "queued_at": "2026-10-14T03:05:45.230193"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of near_52w_low, full_bearish_alignment, inside_bar mean for a swing trade on ONGC? Current RSI=32, MACD hist=-1.2134, Vol=0.7x average. Signal is BUY.",
+    "context": {
+      "ticker": "ONGC.NS",
+      "signal": "BUY",
+      "patterns": "near_52w_low, full_bearish_alignment, inside_bar",
+      "rsi": 31.9
+    },
+    "queued_at": "2026-10-14T03:05:45.234281"
   }
 ]

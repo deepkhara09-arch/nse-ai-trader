@@ -1,69 +1,5 @@
 [
   {
-    "timestamp": "2026-08-17T10:12:45.092968",
-    "date": "2026-08-17",
-    "ticker": "ICICIBANK.NS",
-    "session": "preclose",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 95,
-    "entry": 1421.0,
-    "stop_loss": 1384.09,
-    "target": 1494.81,
-    "reason": "paper preclose",
-    "patterns": [
-      "full_bullish_alignment",
-      "stoch_rsi_oversold_reversal",
-      "pivot_point_test",
-      "piercing_line",
-      "low_volume_drift",
-      "supertrend_bullish",
-      "strong_bullish_marubozu"
-    ]
-  },
-  {
-    "timestamp": "2026-08-17T10:12:45.093943",
-    "date": "2026-08-17",
-    "ticker": "UNIONBANK.NS",
-    "session": "preclose",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 95,
-    "entry": 188.83,
-    "stop_loss": 181.89,
-    "target": 202.71,
-    "reason": "paper preclose",
-    "patterns": [
-      "bb_upper_rejection",
-      "full_bullish_alignment",
-      "spinning_top",
-      "adx_strong_trend_up",
-      "low_volume_drift",
-      "supertrend_bullish",
-      "three_white_soldiers"
-    ]
-  },
-  {
-    "timestamp": "2026-08-17T10:12:45.095856",
-    "date": "2026-08-17",
-    "ticker": "PIDILITIND.NS",
-    "session": "preclose",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 93.7,
-    "entry": 1667.3,
-    "stop_loss": 1620.02,
-    "target": 1761.86,
-    "reason": "paper preclose",
-    "patterns": [
-      "full_bullish_alignment",
-      "shooting_star",
-      "pivot_s1_breakdown",
-      "adx_strong_trend_up",
-      "rsi_bullish_divergence"
-    ]
-  },
-  {
     "timestamp": "2026-08-17T10:12:45.097927",
     "date": "2026-08-17",
     "ticker": "NIACL.NS",
@@ -21251,6 +21187,69 @@
       "low_volume_drift",
       "full_bearish_alignment",
       "spinning_top"
+    ]
+  },
+  {
+    "timestamp": "2026-10-15T04:05:47.110169",
+    "date": "2026-10-15",
+    "ticker": "HINDALCO.NS",
+    "session": "morning",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 52.2,
+    "entry": 871.5,
+    "stop_loss": 840.16,
+    "target": 921.65,
+    "reason": "paper morning",
+    "patterns": [
+      "adx_strong_trend_down",
+      "pivot_s1_breakdown",
+      "full_bearish_alignment",
+      "strong_bearish_marubozu"
+    ]
+  },
+  {
+    "timestamp": "2026-10-15T04:05:47.116469",
+    "date": "2026-10-15",
+    "ticker": "HOMEFIRST.NS",
+    "session": "morning",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 64.6,
+    "entry": 1097.7,
+    "stop_loss": 1012.58,
+    "target": 1194.99,
+    "reason": "paper morning",
+    "patterns": [
+      "full_bearish_alignment",
+      "low_volume_drift",
+      "three_white_soldiers",
+      "adx_strong_trend_down",
+      "supertrend_bullish"
+    ]
+  },
+  {
+    "timestamp": "2026-10-15T04:05:47.120696",
+    "date": "2026-10-15",
+    "ticker": "NHPC.NS",
+    "session": "morning",
+    "action": "SELL",
+    "signal": "SELL",
+    "confidence": 92.0,
+    "entry": 72.5,
+    "stop_loss": 75.48,
+    "target": 68.92,
+    "reason": "paper morning",
+    "patterns": [
+      "full_bearish_alignment",
+      "pivot_s1_breakdown",
+      "rsi_bearish_divergence",
+      "tweezer_top",
+      "near_52w_low",
+      "macd_bullish_crossover",
+      "adx_strong_trend_down",
+      "early_recovery",
+      "inside_bar"
     ]
   }
 ]

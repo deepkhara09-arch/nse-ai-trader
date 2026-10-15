@@ -1,24 +1,5 @@
 [
   {
-    "timestamp": "2026-08-17T10:12:45.098843",
-    "date": "2026-08-17",
-    "ticker": "CHOLAFIN.NS",
-    "session": "preclose",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 76.4,
-    "entry": 1889.6,
-    "stop_loss": 1800.46,
-    "target": 2067.89,
-    "reason": "paper preclose",
-    "patterns": [
-      "spinning_top",
-      "low_volume_drift",
-      "full_bullish_alignment",
-      "pivot_s1_breakdown"
-    ]
-  },
-  {
     "timestamp": "2026-08-17T10:12:45.100379",
     "date": "2026-08-17",
     "ticker": "BAJFINANCE.NS",
@@ -21251,6 +21232,27 @@
       "stoch_rsi_oversold_reversal",
       "outside_bar",
       "bullish_harami",
+      "supertrend_bullish"
+    ]
+  },
+  {
+    "timestamp": "2026-10-15T07:45:52.242996",
+    "date": "2026-10-15",
+    "ticker": "IDFCFIRSTB.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 63.9,
+    "entry": 79.27,
+    "stop_loss": 75.92,
+    "target": 84.63,
+    "reason": "paper afternoon",
+    "patterns": [
+      "full_bearish_alignment",
+      "bullish_harami",
+      "stoch_rsi_oversold_reversal",
+      "pivot_point_test",
+      "outside_bar",
       "supertrend_bullish"
     ]
   }

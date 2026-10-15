@@ -1,25 +1,5 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_down, full_bearish_alignment mean for a swing trade on HOMEFIRST? Current RSI=18, MACD hist=-7.3484, Vol=0.3x average. Signal is BUY.",
-    "context": {
-      "ticker": "HOMEFIRST.NS",
-      "signal": "BUY",
-      "patterns": "adx_strong_trend_down, full_bearish_alignment",
-      "rsi": 18.3
-    },
-    "queued_at": "2026-10-14T06:15:52.285771"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_down, pivot_s1_breakdown, strong_bearish_marubozu mean for a swing trade on HINDALCO? Current RSI=17, MACD hist=-5.7493, Vol=0.8x average. Signal is BUY.",
-    "context": {
-      "ticker": "HINDALCO.NS",
-      "signal": "BUY",
-      "patterns": "adx_strong_trend_down, pivot_s1_breakdown, strong_bearish_marubozu",
-      "rsi": 17.3
-    },
-    "queued_at": "2026-10-15T04:05:47.109771"
-  },
-  {
     "question": "In Indian NSE markets, what does the combination of full_bearish_alignment, adx_strong_trend_down mean for a swing trade on HOMEFIRST? Current RSI=27, MACD hist=-4.9210, Vol=0.2x average. Signal is BUY.",
     "context": {
       "ticker": "HOMEFIRST.NS",
@@ -98,5 +78,25 @@
       "rsi": 25.9
     },
     "queued_at": "2026-10-15T06:15:57.125534"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of full_bearish_alignment, bullish_harami, outside_bar mean for a swing trade on IDFCFIRSTB? Current RSI=26, MACD hist=-0.3540, Vol=0.6x average. Signal is BUY.",
+    "context": {
+      "ticker": "IDFCFIRSTB.NS",
+      "signal": "BUY",
+      "patterns": "full_bearish_alignment, bullish_harami, outside_bar",
+      "rsi": 25.9
+    },
+    "queued_at": "2026-10-15T07:45:52.242635"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of full_bearish_alignment, bullish_harami, outside_bar mean for a swing trade on IDFCFIRSTB? Current RSI=26, MACD hist=-0.3540, Vol=0.6x average. Signal is BUY.",
+    "context": {
+      "ticker": "IDFCFIRSTB.NS",
+      "signal": "BUY",
+      "patterns": "full_bearish_alignment, bullish_harami, outside_bar",
+      "rsi": 25.9
+    },
+    "queued_at": "2026-10-15T07:45:52.379668"
   }
 ]

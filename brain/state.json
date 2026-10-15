@@ -1,13 +1,13 @@
 {
   "phase": "paper_trading",
   "day": 65,
-  "session": "intraday_close",
+  "session": "preopen",
   "start_date": "2026-06-22",
   "phase_start_date": "2026-07-15",
   "last_run_date": "2026-09-21",
   "last_counted_date": "2026-09-21",
   "cohort_last_tick_date": "2026-09-21",
-  "last_updated": "2026-10-14T09:39:01.908943",
+  "last_updated": "2026-10-15T03:05:48.862869",
   "focus_stocks": [
     "PIDILITIND.NS",
     "GAIL.NS",
@@ -68,7 +68,6 @@
     "expectancy": -76.1
   },
   "brain_notes": [
-    "[2026-08-04] Focus refresh \u2014 promoted: ['CIPLA', 'NTPC'] | demoted: ['NESTLEIND', 'HOMEFIRST']",
     "[2026-08-05] Pre-open macro: neutral (+0.18)",
     "[2026-08-06] Pre-open macro: neutral (-0.03)",
     "[2026-08-06] Cohort batch #19 complete \u2014 30 candidates ready",
@@ -167,7 +166,8 @@
     "[2026-10-09] Pre-open macro: neutral (+0.09)",
     "[2026-10-12] Pre-open macro: neutral (+0.12)",
     "[2026-10-13] Pre-open macro: risk_off (-0.31)",
-    "[2026-10-14] Pre-open macro: risk_off (-0.36)"
+    "[2026-10-14] Pre-open macro: risk_off (-0.36)",
+    "[2026-10-15] Pre-open macro: risk_on (+0.46)"
   ],
   "alert_sent": false,
   "schema_version": 11,
@@ -397,10 +397,6 @@
     "scored_date": "2026-09-21"
   },
   "sessions_done": {
-    "preopen": "2026-10-14",
-    "morning": "2026-10-14",
-    "midday": "2026-10-14",
-    "afternoon": "2026-10-14",
-    "intraday_close": "2026-10-14"
+    "preopen": "2026-10-15"
   }
 }

@@ -1,6 +1,6 @@
 {
   "date": "2026-10-16",
-  "session": "preopen",
+  "session": "morning",
   "nifty": {
     "symbol": "^NSEI",
     "value": 22997.35,
@@ -59,9 +59,10 @@
       "ath_pct_60d": -8.26
     }
   },
-  "market_mood": "neutral",
+  "market_mood": "bearish",
   "trade_allowed": true,
   "warnings": [
+    "Nifty choppy intraday \u2014 wait for cleaner setups",
     "Heavy FII/DII outflow (\u20b9-1,966 Cr) \u2014 institutions selling"
   ],
   "leading_sectors": [
@@ -71,7 +72,7 @@
   "market_regime": "normal",
   "sector_breadth": 0.5,
   "lagging_sectors": [],
-  "intraday_regime": "mixed",
+  "intraday_regime": "choppy",
   "macro": {
     "date": "2026-10-16",
     "session": "preopen",

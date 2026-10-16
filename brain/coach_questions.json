@@ -1,65 +1,5 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of full_bearish_alignment, adx_strong_trend_down mean for a swing trade on HOMEFIRST? Current RSI=27, MACD hist=-4.9210, Vol=0.2x average. Signal is BUY.",
-    "context": {
-      "ticker": "HOMEFIRST.NS",
-      "signal": "BUY",
-      "patterns": "full_bearish_alignment, adx_strong_trend_down",
-      "rsi": 26.9
-    },
-    "queued_at": "2026-10-15T04:05:47.110879"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of full_bearish_alignment, pivot_s1_breakdown, rsi_bearish_divergence mean for a swing trade on NHPC? Current RSI=35, MACD hist=+0.0623, Vol=1.6x average. Signal is SELL.",
-    "context": {
-      "ticker": "NHPC.NS",
-      "signal": "SELL",
-      "patterns": "full_bearish_alignment, pivot_s1_breakdown, rsi_bearish_divergence",
-      "rsi": 34.7
-    },
-    "queued_at": "2026-10-15T04:05:47.120365"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of full_bearish_alignment, adx_strong_trend_down mean for a swing trade on HOMEFIRST? Current RSI=27, MACD hist=-4.9210, Vol=0.2x average. Signal is BUY.",
-    "context": {
-      "ticker": "HOMEFIRST.NS",
-      "signal": "BUY",
-      "patterns": "full_bearish_alignment, adx_strong_trend_down",
-      "rsi": 26.9
-    },
-    "queued_at": "2026-10-15T04:05:47.124535"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_down, strong_bearish_marubozu mean for a swing trade on HINDALCO? Current RSI=17, MACD hist=-5.7493, Vol=0.8x average. Signal is BUY.",
-    "context": {
-      "ticker": "HINDALCO.NS",
-      "signal": "BUY",
-      "patterns": "adx_strong_trend_down, strong_bearish_marubozu",
-      "rsi": 17.3
-    },
-    "queued_at": "2026-10-15T04:05:47.222823"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of full_bearish_alignment, adx_strong_trend_down mean for a swing trade on HOMEFIRST? Current RSI=27, MACD hist=-4.9210, Vol=0.2x average. Signal is BUY.",
-    "context": {
-      "ticker": "HOMEFIRST.NS",
-      "signal": "BUY",
-      "patterns": "full_bearish_alignment, adx_strong_trend_down",
-      "rsi": 26.9
-    },
-    "queued_at": "2026-10-15T04:05:47.223912"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of full_bearish_alignment, pivot_s1_breakdown, rsi_bearish_divergence mean for a swing trade on NHPC? Current RSI=35, MACD hist=+0.0623, Vol=1.6x average. Signal is SELL.",
-    "context": {
-      "ticker": "NHPC.NS",
-      "signal": "SELL",
-      "patterns": "full_bearish_alignment, pivot_s1_breakdown, rsi_bearish_divergence",
-      "rsi": 34.7
-    },
-    "queued_at": "2026-10-15T04:05:47.296944"
-  },
-  {
     "question": "In Indian NSE markets, what does the combination of full_bearish_alignment, outside_bar, bullish_harami mean for a swing trade on IDFCFIRSTB? Current RSI=26, MACD hist=-0.3540, Vol=0.6x average. Signal is BUY.",
     "context": {
       "ticker": "IDFCFIRSTB.NS",
@@ -98,5 +38,65 @@
       "rsi": 25.9
     },
     "queued_at": "2026-10-15T07:45:52.379668"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of gap_down_reversal, pivot_point_test, adx_strong_trend_down mean for a swing trade on HINDALCO? Current RSI=25, MACD hist=-4.3788, Vol=1.4x average. Signal is BUY.",
+    "context": {
+      "ticker": "HINDALCO.NS",
+      "signal": "BUY",
+      "patterns": "gap_down_reversal, pivot_point_test, adx_strong_trend_down",
+      "rsi": 24.8
+    },
+    "queued_at": "2026-10-16T04:05:44.522758"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of ema_death_cross, pivot_s1_bounce, pivot_point_test mean for a swing trade on ADANIPORTS? Current RSI=45, MACD hist=-5.1890, Vol=0.8x average. Signal is BUY.",
+    "context": {
+      "ticker": "ADANIPORTS.NS",
+      "signal": "BUY",
+      "patterns": "ema_death_cross, pivot_s1_bounce, pivot_point_test",
+      "rsi": 45.0
+    },
+    "queued_at": "2026-10-16T04:05:44.525035"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of three_black_crows, full_bearish_alignment, stoch_rsi_overbought_reversal mean for a swing trade on IDFCFIRSTB? Current RSI=35, MACD hist=-0.2700, Vol=0.4x average. Signal is SELL.",
+    "context": {
+      "ticker": "IDFCFIRSTB.NS",
+      "signal": "SELL",
+      "patterns": "three_black_crows, full_bearish_alignment, stoch_rsi_overbought_reversal",
+      "rsi": 34.5
+    },
+    "queued_at": "2026-10-16T04:05:44.528295"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of gap_down_reversal, pivot_point_test, adx_strong_trend_down mean for a swing trade on HINDALCO? Current RSI=25, MACD hist=-4.3788, Vol=1.4x average. Signal is BUY.",
+    "context": {
+      "ticker": "HINDALCO.NS",
+      "signal": "BUY",
+      "patterns": "gap_down_reversal, pivot_point_test, adx_strong_trend_down",
+      "rsi": 24.8
+    },
+    "queued_at": "2026-10-16T04:05:44.663306"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of ema_death_cross, pivot_s1_bounce, pivot_point_test mean for a swing trade on ADANIPORTS? Current RSI=45, MACD hist=-5.1890, Vol=0.8x average. Signal is BUY.",
+    "context": {
+      "ticker": "ADANIPORTS.NS",
+      "signal": "BUY",
+      "patterns": "ema_death_cross, pivot_s1_bounce, pivot_point_test",
+      "rsi": 45.0
+    },
+    "queued_at": "2026-10-16T04:05:44.668746"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of three_black_crows, full_bearish_alignment, stoch_rsi_overbought_reversal mean for a swing trade on IDFCFIRSTB? Current RSI=35, MACD hist=-0.2700, Vol=0.4x average. Signal is SELL.",
+    "context": {
+      "ticker": "IDFCFIRSTB.NS",
+      "signal": "SELL",
+      "patterns": "three_black_crows, full_bearish_alignment, stoch_rsi_overbought_reversal",
+      "rsi": 34.5
+    },
+    "queued_at": "2026-10-16T04:05:44.671962"
   }
 ]

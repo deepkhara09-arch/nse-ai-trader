@@ -1,67 +1,68 @@
 {
-  "date": "2026-10-15",
-  "session": "intraday_close",
+  "date": "2026-10-16",
+  "session": "preopen",
   "nifty": {
     "symbol": "^NSEI",
-    "value": 22622.7,
-    "day_change_pct": -0.44,
+    "value": 22997.35,
+    "day_change_pct": 1.66,
     "trend_5d": "up",
     "trend_20d": "down",
-    "ath_pct_60d": -7.2
+    "ath_pct_60d": -5.67,
+    "intraday_surge": true
   },
   "vix": {
-    "value": 14.63,
+    "value": 14.03,
     "level": "normal",
-    "percentile_30d": 87.0,
-    "avg_30d": 12.74
+    "percentile_30d": 73.0,
+    "avg_30d": 12.82
   },
   "bank_nifty": {
     "symbol": "^NSEBANK",
-    "value": 55316.0,
-    "day_change_pct": -0.3,
+    "value": 55810.5,
+    "day_change_pct": 0.89,
     "trend_5d": "up",
-    "trend_20d": "down",
-    "ath_pct_60d": -4.67,
+    "trend_20d": "sideways",
+    "ath_pct_60d": -3.82,
     "diverging": false
   },
   "sectors": {
     "IT": {
       "symbol": "ITBEES.NS",
-      "value": 33.06,
-      "day_change_pct": 5.09,
+      "value": 33.58,
+      "day_change_pct": 1.57,
       "trend_5d": "strong_up",
-      "trend_20d": "sideways",
-      "ath_pct_60d": -7.34
+      "trend_20d": "strong_up",
+      "ath_pct_60d": -5.89
     },
     "Pharma": {
       "symbol": "PHARMABEES.NS",
-      "value": 26.39,
-      "day_change_pct": -1.53,
+      "value": 26.54,
+      "day_change_pct": 0.57,
       "trend_5d": "sideways",
       "trend_20d": "down",
-      "ath_pct_60d": -7.66
+      "ath_pct_60d": -7.14
     },
     "Bank": {
       "symbol": "BANKBEES.NS",
-      "value": 575.49,
-      "day_change_pct": 1.3,
+      "value": 574.32,
+      "day_change_pct": -0.2,
       "trend_5d": "up",
-      "trend_20d": "sideways",
-      "ath_pct_60d": -5.34
+      "trend_20d": "down",
+      "ath_pct_60d": -5.54
     },
     "Infra": {
       "symbol": "INFRABEES.NS",
-      "value": 888.09,
-      "day_change_pct": 0.02,
+      "value": 896.18,
+      "day_change_pct": 0.91,
       "trend_5d": "sideways",
       "trend_20d": "strong_down",
-      "ath_pct_60d": -9.09
+      "ath_pct_60d": -8.26
     }
   },
   "market_mood": "neutral",
   "trade_allowed": true,
   "warnings": [
-    "VIX=14.6 at 87th percentile vs last 30d \u2014 unusually high stress"
+    "Heavy FII/DII outflow (\u20b9-1,966 Cr) \u2014 institutions selling"
   ],
   "leading_sectors": [
     "IT",
@@ -72,54 +73,54 @@
   "lagging_sectors": [],
   "intraday_regime": "mixed",
   "macro": {
-    "date": "2026-10-15",
-    "session": "midday",
-    "generated_at": "2026-10-15T06:15:47.659385",
-    "global_score": -0.036,
-    "india_score": 1.0,
-    "overall_score": 0.43,
-    "mood": "risk_on",
+    "date": "2026-10-16",
+    "session": "preopen",
+    "generated_at": "2026-10-16T03:05:43.757816",
+    "global_score": 0.243,
+    "india_score": 0.0,
+    "overall_score": 0.134,
+    "mood": "neutral",
     "drivers": [
-      "Anthropic\u2019s slowing growth could be the AI trade\u2019s latest red flag",
-      "Rocket Lab\u2019s stock slides as the company pushes back Neutron\u2019s first launch",
-      "The AI trade is splintering as inflation fears rattle hyped-up tech stocks",
-      "My sister moved in with our mother, 78, and says she deserves the $925,000 family home. Is she right?",
+      "Tesla finally delivers on its promise to create a flying car",
+      "Pepsi loses more ground in the soda wars, as KFC switches to Coke",
       "\u2018Some people did everything right\u2019: I lost my home in the Great Recession. I rent in my 50s. Why is that judged as failure?",
-      "You\u2019re probably too invested in equities. Why a 60-40 portfolio is still the smart way to go.",
-      "Your Social Security check will rise an average of $75 a month \u2014 will it be able to keep up with inflation?",
-      "Big banks see risks in financing the AI boom, but are happy to keep writing the checks"
+      "I\u2019m 64 years old, with two sons, but only one works in the family firm. Should I leave him 70% of the business?",
+      "How a midterm sweep by Democrats could turn this tech selloff into a tech crash",
+      "Nvidia and other chip stocks face renewed pressure as AI fears swell",
+      "Don\u2019t ditch tech stocks just yet. Make these moves to take advantage of the latest AI reset.",
+      "CoreWeave\u2019s polarizing stock rebounds as Wall Street squares off about AI spending"
     ],
     "global_cues": {
       "dow": {
-        "last": 51621.48,
-        "chg_pct": -0.09
+        "last": 52177.69,
+        "chg_pct": 1.08
       },
       "nasdaq": {
-        "last": 26692.87,
-        "chg_pct": -1.88
+        "last": 26713.03,
+        "chg_pct": 0.08
       },
       "sp500": {
-        "last": 7718.94,
-        "chg_pct": -1.11
+        "last": 7744.06,
+        "chg_pct": 0.33
       },
       "nikkei": {
-        "last": 64323.02,
-        "chg_pct": -5.05
+        "last": 65550.68,
+        "chg_pct": 1.75
       },
       "crude": {
-        "last": 95.09,
-        "chg_pct": 1.01
+        "last": 95.82,
+        "chg_pct": -2.19
       },
       "usdinr": {
         "last": 95.04,
-        "chg_pct": -0.26
+        "chg_pct": -0.11
       },
       "gold": {
-        "last": 4107.9,
-        "chg_pct": -1.66
+        "last": 4193.5,
+        "chg_pct": 0.56
       }
     },
-    "summary": "Overall macro mood is risk-on (+0.43). US Dow -0.1% overnight. Crude +1.0%. USD/INR -0.3%. Notable: US Fed rate hike / hawkish; Geopolitical conflict / war; Tariffs / trade war.",
+    "summary": "Overall macro mood is neutral (+0.13). US Dow +1.1% overnight. Crude -2.2%. USD/INR -0.1%. Notable: US Fed rate hike / hawkish; Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
       "Hawkish Fed pressures Nifty via FII outflows and stronger USD.",
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
@@ -128,23 +129,16 @@
     "playbook_bias": "risk_off",
     "article_count": 60
   },
-  "macro_tailwind": true,
-  "macro_risk_factor": 1.0,
+  "macro_risk_factor": 0.75,
   "fii_dii": {
-    "date": "2026-10-15",
-    "fii_net_cr": -1857.44,
-    "dii_net_cr": 2670.44,
-    "combined_net_cr": 813.0,
-    "signal": "neutral",
+    "date": "2026-10-16",
+    "fii_net_cr": -5285.37,
+    "dii_net_cr": 3319.39,
+    "combined_net_cr": -1965.98,
+    "signal": "strong_outflow",
     "ok": true,
     "error": "",
     "history": [
-      {
-        "date": "2026-09-04",
-        "fii": -3111.94,
-        "dii": 8930.12,
-        "combined": 5818.18
-      },
       {
         "date": "2026-09-07",
         "fii": 280.13,
@@ -318,20 +312,28 @@
         "fii": -1857.44,
         "dii": 2670.44,
         "combined": 813.0
+      },
+      {
+        "date": "2026-10-16",
+        "fii": -5285.37,
+        "dii": 3319.39,
+        "combined": -1965.98
       }
     ]
   },
   "pcr": {
-    "date": "2026-10-15",
-    "pcr": 0.855,
-    "reading": "neutral",
-    "total_pe_oi": 1853280,
-    "total_ce_oi": 2166381,
-    "spot": 22622.7,
-    "max_pain": 22600.0,
-    "max_pain_dist_pct": 0.1,
-    "oi_bias": "balanced",
+    "date": "2026-10-16",
+    "pcr": 1.662,
+    "reading": "very_high_contrarian_bullish",
+    "total_pe_oi": 3206395,
+    "total_ce_oi": 1928845,
+    "spot": 22997.35,
+    "max_pain": 22900.0,
+    "max_pain_dist_pct": 0.42,
+    "oi_bias": "put_heavy_support",
     "ok": true,
     "error": ""
-  }
+  },
+  "pcr_note": "PCR very high \u2014 excessive put hedging, often a contrarian bullish sign",
+  "oi_note": "Heavy put OI below spot \u2014 option writers see a floor (bullish lean)"
 }

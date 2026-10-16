@@ -1,64 +1,5 @@
 [
   {
-    "timestamp": "2026-08-18T04:05:48.811939",
-    "date": "2026-08-18",
-    "ticker": "NTPC.NS",
-    "session": "morning",
-    "action": "SELL",
-    "signal": "SELL",
-    "confidence": 59.4,
-    "entry": 337.2,
-    "stop_loss": 346.68,
-    "target": 318.24,
-    "reason": "paper morning",
-    "patterns": [
-      "full_bearish_alignment",
-      "pivot_s1_breakdown",
-      "macd_bearish_crossover",
-      "bb_lower_bounce"
-    ]
-  },
-  {
-    "timestamp": "2026-08-18T04:05:48.812956",
-    "date": "2026-08-18",
-    "ticker": "NIACL.NS",
-    "session": "morning",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 73.5,
-    "entry": 183.16,
-    "stop_loss": 173.72,
-    "target": 202.05,
-    "reason": "paper morning",
-    "patterns": [
-      "full_bullish_alignment",
-      "supertrend_bullish",
-      "engulfing_bullish"
-    ]
-  },
-  {
-    "timestamp": "2026-08-18T04:05:48.815288",
-    "date": "2026-08-18",
-    "ticker": "BAJFINANCE.NS",
-    "session": "morning",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 72.8,
-    "entry": 1092.8,
-    "stop_loss": 1046.91,
-    "target": 1184.58,
-    "reason": "paper morning",
-    "patterns": [
-      "outside_bar",
-      "pivot_s1_bounce",
-      "supertrend_bullish",
-      "adx_strong_trend_up",
-      "full_bullish_alignment",
-      "pivot_point_test",
-      "low_volume_drift"
-    ]
-  },
-  {
     "timestamp": "2026-08-18T04:05:48.816126",
     "date": "2026-08-18",
     "ticker": "SIEMENS.NS",
@@ -21257,6 +21198,70 @@
       "near_52w_low",
       "adx_strong_trend_down",
       "supertrend_bullish"
+    ]
+  },
+  {
+    "timestamp": "2026-10-16T07:45:55.608815",
+    "date": "2026-10-16",
+    "ticker": "HINDALCO.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 89.3,
+    "entry": 908.9,
+    "stop_loss": 876.12,
+    "target": 961.35,
+    "reason": "paper afternoon",
+    "patterns": [
+      "supertrend_bullish",
+      "adx_strong_trend_down",
+      "full_bearish_alignment",
+      "gap_down_reversal",
+      "engulfing_bullish",
+      "pivot_r1_breakout"
+    ]
+  },
+  {
+    "timestamp": "2026-10-16T07:45:55.611964",
+    "date": "2026-10-16",
+    "ticker": "ADANIPORTS.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 57.5,
+    "entry": 1739.9,
+    "stop_loss": 1638.36,
+    "target": 1861.75,
+    "reason": "paper afternoon",
+    "patterns": [
+      "inside_bar",
+      "spinning_top",
+      "ema_death_cross",
+      "pivot_point_test",
+      "tweezer_bottom",
+      "supertrend_bullish"
+    ]
+  },
+  {
+    "timestamp": "2026-10-16T07:45:55.613689",
+    "date": "2026-10-16",
+    "ticker": "POWERGRID.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 57.8,
+    "entry": 252.65,
+    "stop_loss": 241.62,
+    "target": 265.88,
+    "reason": "paper afternoon",
+    "patterns": [
+      "near_52w_low",
+      "tweezer_bottom",
+      "supertrend_bullish",
+      "adx_strong_trend_down",
+      "full_bearish_alignment",
+      "engulfing_bullish",
+      "pivot_r1_breakout"
     ]
   }
 ]

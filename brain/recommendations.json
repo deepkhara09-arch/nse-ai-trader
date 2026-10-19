@@ -3,10 +3,10 @@
     "ticker": "HINDALCO.NS",
     "nse_code": "HINDALCO",
     "company_name": "HINDALCO.NS",
-    "date": "2026-10-16",
-    "generated_at": "2026-10-16 09:45 UTC",
-    "valid_until": "15:40 IST",
-    "session": "intraday_close",
+    "date": "2026-10-19",
+    "generated_at": "2026-10-19 03:05 UTC",
+    "valid_until": "09:35 IST",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -45,7 +45,7 @@
     "profit_probability": -0.06,
     "composite_score": 37.18,
     "focus_rank": 11,
-    "rank_delta": 1,
+    "rank_delta": 0,
     "intention": "BUY HINDALCO for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
     "confluence_count": 5,
     "confluence_families": [
@@ -84,6 +84,7 @@
       "Clean trender aligned with its long-term uptrend",
       "\u2713 Daily setup aligned with the higher-timeframe trend",
       "\u26a0 Sector momentum -0.31 \u2014 buying into a falling sector needs extra conviction",
+      "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
       "Valuation: P/E 13.3x",
       "ROCE: 17.1%",
       "Revenue growing 32.1% YoY",
@@ -101,11 +102,11 @@
       "History backtest: this kind of BUY setup worked 54% of the time over ~1 week on this stock (sample: 57)"
     ],
     "patterns_seen": [
-      "engulfing_bullish",
-      "gap_down_reversal",
-      "full_bearish_alignment",
-      "supertrend_bullish",
       "pivot_r1_breakout",
+      "engulfing_bullish",
+      "supertrend_bullish",
+      "full_bearish_alignment",
+      "gap_down_reversal",
       "adx_strong_trend_down"
     ],
     "reliable_patterns": [],
@@ -132,19 +133,20 @@
     "paper_win_rate": 0.0,
     "paper_pnl": -759.45,
     "paper_expectancy": -189.86,
-    "market_mood": "neutral",
+    "market_mood": "bearish",
     "market_warning": [
-      "Heavy FII/DII outflow (\u20b9-1,966 Cr) \u2014 institutions selling"
+      "Global macro risk-off (-0.41) \u2014 Overall macro mood is risk-off (-0.41). US Dow -0.3% overnight. Crude -3.8%. USD/INR +0.5%. Notable: US Fed rate hike / ",
+      "Net institutional outflow (\u20b9-2,495 Cr)"
     ]
   },
   {
     "ticker": "PIDILITIND.NS",
     "nse_code": "PIDILITIND",
     "company_name": "Pidilite Industries",
-    "date": "2026-10-16",
-    "generated_at": "2026-10-16 09:45 UTC",
-    "valid_until": "15:40 IST",
-    "session": "intraday_close",
+    "date": "2026-10-19",
+    "generated_at": "2026-10-19 03:05 UTC",
+    "valid_until": "09:35 IST",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -178,7 +180,7 @@
     "pattern_score": 10,
     "confluence_bonus": 5.0,
     "paper_bonus": 0.0,
-    "success_probability": 0.644,
+    "success_probability": 0.647,
     "base_success_prob": 0.687,
     "profit_probability": 0.23,
     "composite_score": 61.25,
@@ -193,9 +195,9 @@
       "fundamentals"
     ],
     "backtest_tested": true,
-    "backtest_hit_5d": 0.545,
-    "backtest_hit_10d": 0.545,
-    "backtest_sample": 55,
+    "backtest_hit_5d": 0.554,
+    "backtest_hit_10d": 0.554,
+    "backtest_sample": 56,
     "hist_long_trend": "uptrend",
     "hist_52w_position": 52.4,
     "hist_personality": "mean_reverter",
@@ -216,6 +218,7 @@
       "In a long-term uptrend (2yr) \u2014 trend on our side",
       "\u2713 Daily setup aligned with the higher-timeframe trend",
       "\u26a0 Sector momentum -0.28 \u2014 buying into a falling sector needs extra conviction",
+      "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
       "Valuation: P/E 60.8x",
       "ROCE: 33.0%",
       "Revenue growing 21.3% YoY",
@@ -233,13 +236,13 @@
       "Resistance at \u20b91572.10 is natural target",
       "Latest news: 'Pidilite Industries Stock Signals to Watch This Week - Univest'",
       "Confluence: 4 independent signal families agree (trend, momentum, pattern, fundamentals)",
-      "History backtest: this kind of BUY setup worked 55% of the time over ~1 week on this stock (sample: 55)"
+      "History backtest: this kind of BUY setup worked 55% of the time over ~1 week on this stock (sample: 56)"
     ],
     "patterns_seen": [
       "three_white_soldiers",
-      "pivot_point_test",
-      "full_bearish_alignment",
       "supertrend_bullish",
+      "full_bearish_alignment",
+      "pivot_point_test",
       "adx_strong_trend_down"
     ],
     "reliable_patterns": [
@@ -271,9 +274,10 @@
     "paper_win_rate": 0.5,
     "paper_pnl": -467.62,
     "paper_expectancy": -77.94,
-    "market_mood": "neutral",
+    "market_mood": "bearish",
     "market_warning": [
-      "Heavy FII/DII outflow (\u20b9-1,966 Cr) \u2014 institutions selling"
+      "Global macro risk-off (-0.41) \u2014 Overall macro mood is risk-off (-0.41). US Dow -0.3% overnight. Crude -3.8%. USD/INR +0.5%. Notable: US Fed rate hike / ",
+      "Net institutional outflow (\u20b9-2,495 Cr)"
     ]
   }
 ]

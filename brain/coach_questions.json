@@ -7,26 +7,6 @@
       "patterns": "spinning_top, pivot_point_test, pivot_s1_bounce",
       "rsi": 45.0
     },
-    "queued_at": "2026-10-16T09:45:40.482725"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of engulfing_bullish, pivot_point_test, tweezer_bottom mean for a swing trade on POWERGRID? Current RSI=30, MACD hist=-0.7537, Vol=1.3x average. Signal is BUY.",
-    "context": {
-      "ticker": "POWERGRID.NS",
-      "signal": "BUY",
-      "patterns": "engulfing_bullish, pivot_point_test, tweezer_bottom",
-      "rsi": 30.2
-    },
-    "queued_at": "2026-10-16T09:45:40.487191"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of spinning_top, pivot_point_test, pivot_s1_bounce mean for a swing trade on ADANIPORTS? Current RSI=45, MACD hist=-5.1890, Vol=0.8x average. Signal is BUY.",
-    "context": {
-      "ticker": "ADANIPORTS.NS",
-      "signal": "BUY",
-      "patterns": "spinning_top, pivot_point_test, pivot_s1_bounce",
-      "rsi": 45.0
-    },
     "queued_at": "2026-10-16T09:45:40.494965"
   },
   {
@@ -98,5 +78,25 @@
       "rsi": 34.5
     },
     "queued_at": "2026-10-19T03:05:49.122937"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of stoch_rsi_overbought_reversal, tweezer_top, engulfing_bearish mean for a swing trade on PIDILITIND? Current RSI=47, MACD hist=+5.7926, Vol=0.8x average. Signal is SELL.",
+    "context": {
+      "ticker": "PIDILITIND.NS",
+      "signal": "SELL",
+      "patterns": "stoch_rsi_overbought_reversal, tweezer_top, engulfing_bearish",
+      "rsi": 46.9
+    },
+    "queued_at": "2026-10-19T06:15:56.079184"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of stoch_rsi_overbought_reversal, tweezer_top, engulfing_bearish mean for a swing trade on PIDILITIND? Current RSI=47, MACD hist=+5.7926, Vol=0.8x average. Signal is SELL.",
+    "context": {
+      "ticker": "PIDILITIND.NS",
+      "signal": "SELL",
+      "patterns": "stoch_rsi_overbought_reversal, tweezer_top, engulfing_bearish",
+      "rsi": 46.9
+    },
+    "queued_at": "2026-10-19T06:15:56.218914"
   }
 ]

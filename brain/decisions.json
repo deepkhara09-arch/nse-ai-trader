@@ -1,42 +1,5 @@
 [
   {
-    "timestamp": "2026-08-18T06:15:52.963714",
-    "date": "2026-08-18",
-    "ticker": "NTPC.NS",
-    "session": "midday",
-    "action": "SELL",
-    "signal": "SELL",
-    "confidence": 59.4,
-    "entry": 337.65,
-    "stop_loss": 347.13,
-    "target": 318.69,
-    "reason": "paper midday",
-    "patterns": [
-      "bb_lower_bounce",
-      "macd_bearish_crossover",
-      "pivot_s1_breakdown",
-      "full_bearish_alignment"
-    ]
-  },
-  {
-    "timestamp": "2026-08-18T06:15:52.964693",
-    "date": "2026-08-18",
-    "ticker": "NIACL.NS",
-    "session": "midday",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 79.0,
-    "entry": 183.9,
-    "stop_loss": 174.46,
-    "target": 202.79,
-    "reason": "paper midday",
-    "patterns": [
-      "engulfing_bullish",
-      "full_bullish_alignment",
-      "supertrend_bullish"
-    ]
-  },
-  {
     "timestamp": "2026-08-18T06:15:52.966934",
     "date": "2026-08-18",
     "ticker": "BAJFINANCE.NS",
@@ -21262,6 +21225,45 @@
     "patterns": [
       "adx_strong_trend_down",
       "full_bearish_alignment",
+      "supertrend_bullish"
+    ]
+  },
+  {
+    "timestamp": "2026-10-19T06:15:56.079556",
+    "date": "2026-10-19",
+    "ticker": "PIDILITIND.NS",
+    "session": "midday",
+    "action": "SELL",
+    "signal": "SELL",
+    "confidence": 62.1,
+    "entry": 1491.0,
+    "stop_loss": 1543.58,
+    "target": 1412.13,
+    "reason": "paper midday",
+    "patterns": [
+      "stoch_rsi_overbought_reversal",
+      "tweezer_top",
+      "adx_strong_trend_down",
+      "pivot_s1_breakdown",
+      "full_bearish_alignment",
+      "engulfing_bearish"
+    ]
+  },
+  {
+    "timestamp": "2026-10-19T06:15:56.081468",
+    "date": "2026-10-19",
+    "ticker": "HINDALCO.NS",
+    "session": "midday",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 46.9,
+    "entry": 907.35,
+    "stop_loss": 873.78,
+    "target": 961.06,
+    "reason": "paper midday",
+    "patterns": [
+      "full_bearish_alignment",
+      "adx_strong_trend_down",
       "supertrend_bullish"
     ]
   }

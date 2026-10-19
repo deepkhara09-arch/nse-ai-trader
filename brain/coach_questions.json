@@ -1,55 +1,5 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of spinning_top, pivot_point_test, pivot_s1_bounce mean for a swing trade on ADANIPORTS? Current RSI=45, MACD hist=-5.1890, Vol=0.8x average. Signal is BUY.",
-    "context": {
-      "ticker": "ADANIPORTS.NS",
-      "signal": "BUY",
-      "patterns": "spinning_top, pivot_point_test, pivot_s1_bounce",
-      "rsi": 45.0
-    },
-    "queued_at": "2026-10-16T09:45:40.494965"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of gap_down_reversal, pivot_r1_breakout, adx_strong_trend_down mean for a swing trade on HINDALCO? Current RSI=25, MACD hist=-4.3788, Vol=1.4x average. Signal is BUY.",
-    "context": {
-      "ticker": "HINDALCO.NS",
-      "signal": "BUY",
-      "patterns": "gap_down_reversal, pivot_r1_breakout, adx_strong_trend_down",
-      "rsi": 24.8
-    },
-    "queued_at": "2026-10-16T09:45:40.630651"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of spinning_top, pivot_point_test, pivot_s1_bounce mean for a swing trade on ADANIPORTS? Current RSI=45, MACD hist=-5.1890, Vol=0.8x average. Signal is BUY.",
-    "context": {
-      "ticker": "ADANIPORTS.NS",
-      "signal": "BUY",
-      "patterns": "spinning_top, pivot_point_test, pivot_s1_bounce",
-      "rsi": 45.0
-    },
-    "queued_at": "2026-10-16T09:45:40.634720"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of engulfing_bullish, pivot_point_test, tweezer_bottom mean for a swing trade on POWERGRID? Current RSI=30, MACD hist=-0.7537, Vol=1.3x average. Signal is BUY.",
-    "context": {
-      "ticker": "POWERGRID.NS",
-      "signal": "BUY",
-      "patterns": "engulfing_bullish, pivot_point_test, tweezer_bottom",
-      "rsi": 30.2
-    },
-    "queued_at": "2026-10-16T09:45:40.636656"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of pivot_r1_breakout, gap_down_reversal, adx_strong_trend_down mean for a swing trade on HINDALCO? Current RSI=25, MACD hist=-4.3788, Vol=1.4x average. Signal is BUY.",
-    "context": {
-      "ticker": "HINDALCO.NS",
-      "signal": "BUY",
-      "patterns": "pivot_r1_breakout, gap_down_reversal, adx_strong_trend_down",
-      "rsi": 24.8
-    },
-    "queued_at": "2026-10-19T03:05:49.114202"
-  },
-  {
     "question": "In Indian NSE markets, what does the combination of ema_death_cross, spinning_top, pivot_point_test mean for a swing trade on ADANIPORTS? Current RSI=45, MACD hist=-5.1890, Vol=0.8x average. Signal is BUY.",
     "context": {
       "ticker": "ADANIPORTS.NS",
@@ -98,5 +48,55 @@
       "rsi": 46.9
     },
     "queued_at": "2026-10-19T06:15:56.218914"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of tweezer_top, engulfing_bearish, stoch_rsi_overbought_reversal mean for a swing trade on PIDILITIND? Current RSI=47, MACD hist=+5.7926, Vol=0.8x average. Signal is SELL.",
+    "context": {
+      "ticker": "PIDILITIND.NS",
+      "signal": "SELL",
+      "patterns": "tweezer_top, engulfing_bearish, stoch_rsi_overbought_reversal",
+      "rsi": 46.9
+    },
+    "queued_at": "2026-10-19T07:45:51.941626"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of early_recovery, adx_strong_trend_down, stoch_rsi_oversold_reversal mean for a swing trade on UNIONBANK? Current RSI=39, MACD hist=+0.3785, Vol=1.8x average. Signal is BUY.",
+    "context": {
+      "ticker": "UNIONBANK.NS",
+      "signal": "BUY",
+      "patterns": "early_recovery, adx_strong_trend_down, stoch_rsi_oversold_reversal",
+      "rsi": 38.8
+    },
+    "queued_at": "2026-10-19T07:45:51.947020"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of tweezer_top, engulfing_bearish, stoch_rsi_overbought_reversal mean for a swing trade on PIDILITIND? Current RSI=47, MACD hist=+5.7926, Vol=0.8x average. Signal is SELL.",
+    "context": {
+      "ticker": "PIDILITIND.NS",
+      "signal": "SELL",
+      "patterns": "tweezer_top, engulfing_bearish, stoch_rsi_overbought_reversal",
+      "rsi": 46.9
+    },
+    "queued_at": "2026-10-19T07:45:51.960793"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of tweezer_top, engulfing_bearish, stoch_rsi_overbought_reversal mean for a swing trade on PIDILITIND? Current RSI=47, MACD hist=+5.7926, Vol=0.8x average. Signal is SELL.",
+    "context": {
+      "ticker": "PIDILITIND.NS",
+      "signal": "SELL",
+      "patterns": "tweezer_top, engulfing_bearish, stoch_rsi_overbought_reversal",
+      "rsi": 46.9
+    },
+    "queued_at": "2026-10-19T07:45:52.091746"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of early_recovery, stoch_rsi_oversold_reversal mean for a swing trade on UNIONBANK? Current RSI=39, MACD hist=+0.3785, Vol=1.8x average. Signal is BUY.",
+    "context": {
+      "ticker": "UNIONBANK.NS",
+      "signal": "BUY",
+      "patterns": "early_recovery, stoch_rsi_oversold_reversal",
+      "rsi": 38.8
+    },
+    "queued_at": "2026-10-19T07:45:52.096803"
   }
 ]

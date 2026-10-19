@@ -1,69 +1,5 @@
 [
   {
-    "timestamp": "2026-08-18T06:15:52.966934",
-    "date": "2026-08-18",
-    "ticker": "BAJFINANCE.NS",
-    "session": "midday",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 79.4,
-    "entry": 1093.7,
-    "stop_loss": 1047.74,
-    "target": 1185.63,
-    "reason": "paper midday",
-    "patterns": [
-      "low_volume_drift",
-      "full_bullish_alignment",
-      "outside_bar",
-      "supertrend_bullish",
-      "engulfing_bullish",
-      "bb_midline_support",
-      "pivot_point_test"
-    ]
-  },
-  {
-    "timestamp": "2026-08-18T06:15:52.967623",
-    "date": "2026-08-18",
-    "ticker": "SIEMENS.NS",
-    "session": "midday",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 95,
-    "entry": 3945.0,
-    "stop_loss": 3775.18,
-    "target": 4284.64,
-    "reason": "paper midday",
-    "patterns": [
-      "doji",
-      "adx_strong_trend_up",
-      "full_bullish_alignment",
-      "supertrend_bullish",
-      "stoch_rsi_oversold_reversal",
-      "pivot_point_test",
-      "spinning_top"
-    ]
-  },
-  {
-    "timestamp": "2026-08-18T06:15:52.968547",
-    "date": "2026-08-18",
-    "ticker": "DRREDDY.NS",
-    "session": "midday",
-    "action": "SELL",
-    "signal": "SELL",
-    "confidence": 72.2,
-    "entry": 1186.0,
-    "stop_loss": 1218.28,
-    "target": 1121.44,
-    "reason": "paper midday",
-    "patterns": [
-      "adx_strong_trend_down",
-      "full_bearish_alignment",
-      "rsi_bullish_divergence",
-      "pivot_s1_breakdown",
-      "stoch_rsi_overbought_reversal"
-    ]
-  },
-  {
     "timestamp": "2026-08-18T06:15:52.969505",
     "date": "2026-08-18",
     "ticker": "SHRIRAMFIN.NS",
@@ -21264,6 +21200,68 @@
     "patterns": [
       "full_bearish_alignment",
       "adx_strong_trend_down",
+      "supertrend_bullish"
+    ]
+  },
+  {
+    "timestamp": "2026-10-19T07:45:51.942125",
+    "date": "2026-10-19",
+    "ticker": "PIDILITIND.NS",
+    "session": "afternoon",
+    "action": "SELL",
+    "signal": "SELL",
+    "confidence": 62.1,
+    "entry": 1484.0,
+    "stop_loss": 1536.58,
+    "target": 1405.13,
+    "reason": "paper afternoon",
+    "patterns": [
+      "tweezer_top",
+      "full_bearish_alignment",
+      "engulfing_bearish",
+      "stoch_rsi_overbought_reversal",
+      "pivot_s1_breakdown",
+      "adx_strong_trend_down"
+    ]
+  },
+  {
+    "timestamp": "2026-10-19T07:45:51.944142",
+    "date": "2026-10-19",
+    "ticker": "HINDALCO.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 46.9,
+    "entry": 906.0,
+    "stop_loss": 872.43,
+    "target": 959.71,
+    "reason": "paper afternoon",
+    "patterns": [
+      "full_bearish_alignment",
+      "adx_strong_trend_down",
+      "supertrend_bullish"
+    ]
+  },
+  {
+    "timestamp": "2026-10-19T07:45:51.947415",
+    "date": "2026-10-19",
+    "ticker": "UNIONBANK.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 65.8,
+    "entry": 179.57,
+    "stop_loss": 171.04,
+    "target": 193.21,
+    "reason": "paper afternoon",
+    "patterns": [
+      "early_recovery",
+      "full_bearish_alignment",
+      "pivot_r2_breakout",
+      "pivot_r1_breakout",
+      "inside_bar",
+      "adx_strong_trend_down",
+      "stoch_rsi_oversold_reversal",
       "supertrend_bullish"
     ]
   }

@@ -1,5 +1,5 @@
 {
-  "capital": 70346.87314999998,
+  "capital": 72253.60253499998,
   "open_positions": [
     {
       "ticker": "HOMEFIRST.NS",
@@ -33,8 +33,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "Broke below Pivot S1 support \u2014 bearish"
       ],
-      "current_price": 1067.8,
-      "unrealized_pnl": -193.2,
+      "current_price": 1053.4,
+      "unrealized_pnl": -250.8,
       "max_held_days": 40,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -91,8 +91,8 @@
         "In a long-term strong downtrend (2yr)",
         "\u2713 Daily setup aligned with the higher-timeframe trend"
       ],
-      "current_price": 223.69,
-      "unrealized_pnl": -50.73,
+      "current_price": 223.85,
+      "unrealized_pnl": -53.77,
       "max_held_days": 40,
       "vol_regime_pct": 0.08399999999999999,
       "entry_market": {
@@ -113,70 +113,6 @@
         0,
         0
       ]
-    },
-    {
-      "ticker": "UNIONBANK.NS",
-      "sector": "Banking",
-      "open_date": "2026-10-08",
-      "open_session": "morning",
-      "action": "BUY",
-      "entry": 173.45,
-      "qty": 11,
-      "invested": 1907.95,
-      "stop_loss": 175.29,
-      "target": 184.63,
-      "style": "swing",
-      "confidence": 64.4,
-      "patterns": [
-        "adx_strong_trend_down",
-        "pivot_r1_breakout",
-        "pivot_r2_breakout",
-        "full_bearish_alignment",
-        "supertrend_bullish",
-        "engulfing_bullish",
-        "outside_bar"
-      ],
-      "buy_reasons": [
-        "RSI=43 in healthy buy zone",
-        "Positive news sentiment (0.20, news 1.2x reliable here)",
-        "News sentiment improving across sessions",
-        "Candlestick: engulfing bullish",
-        "Supertrend bullish \u2014 price above trend band",
-        "Broke above Pivot R1 with volume \u2014 bullish",
-        "Broke above Pivot R2 \u2014 strong momentum",
-        "In a long-term uptrend (2yr) \u2014 trend on our side",
-        "\u2713 Daily setup aligned with the higher-timeframe trend",
-        "\u26a0 Sector momentum -0.26 \u2014 buying into a falling sector needs extra conviction",
-        "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
-        "All EMAs stacked bearish",
-        "MACD histogram negative",
-        "High volume confirmation (1.8x avg)",
-        "ADX strong trend \u2014 downside momentum confirmed"
-      ],
-      "current_price": 179.57,
-      "unrealized_pnl": 67.32,
-      "max_held_days": 40,
-      "vol_regime_pct": 0.09,
-      "entry_market": {
-        "nifty_trend": "sideways",
-        "vix": 13.89,
-        "mood": "bearish",
-        "regime": "choppy",
-        "sector_momentum": -0.262,
-        "delivery_signal": "neutral",
-        "rsi": 42.9,
-        "mtf_alignment": "aligned",
-        "opposing_ratio": 0.48,
-        "hist_long_trend": "uptrend"
-      },
-      "view_hist": [
-        0,
-        0,
-        0,
-        0
-      ],
-      "t1_booked": true,
-      "trailing_active": true
     },
     {
       "ticker": "ADANIPORTS.NS",
@@ -214,8 +150,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "MACD histogram negative"
       ],
-      "current_price": 1760.2,
-      "unrealized_pnl": 10.1,
+      "current_price": 1766.0,
+      "unrealized_pnl": 15.9,
       "max_held_days": 40,
       "vol_regime_pct": 0.0675,
       "entry_market": {
@@ -275,8 +211,8 @@
         "In a long-term downtrend (2yr)",
         "\u2713 Daily setup aligned with the higher-timeframe trend"
       ],
-      "current_price": 70.72,
-      "unrealized_pnl": 224.28,
+      "current_price": 70.71,
+      "unrealized_pnl": 225.54,
       "max_held_days": 40,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -330,8 +266,8 @@
         "StochRSI overbought with bearish candle \u2014 reversal",
         "\u26a0 Daily sell fights the higher-timeframe uptrend \u2014 needs extra conviction"
       ],
-      "current_price": 1484.0,
-      "unrealized_pnl": 14.0,
+      "current_price": 1478.0,
+      "unrealized_pnl": 26.0,
       "max_held_days": 40,
       "vol_regime_pct": 0.08399999999999999,
       "entry_market": {
@@ -347,6 +283,7 @@
         "hist_long_trend": "uptrend"
       },
       "view_hist": [
+        0,
         0
       ]
     }
@@ -5203,6 +5140,80 @@
       "pnl_pct": 2.92,
       "won": true,
       "open_days": 7
+    },
+    {
+      "ticker": "UNIONBANK.NS",
+      "sector": "Banking",
+      "open_date": "2026-10-08",
+      "open_session": "morning",
+      "action": "BUY",
+      "entry": 173.45,
+      "qty": 11,
+      "invested": 1907.95,
+      "stop_loss": 175.29,
+      "target": 184.63,
+      "style": "swing",
+      "confidence": 64.4,
+      "patterns": [
+        "adx_strong_trend_down",
+        "pivot_r1_breakout",
+        "pivot_r2_breakout",
+        "full_bearish_alignment",
+        "supertrend_bullish",
+        "engulfing_bullish",
+        "outside_bar"
+      ],
+      "buy_reasons": [
+        "RSI=43 in healthy buy zone",
+        "Positive news sentiment (0.20, news 1.2x reliable here)",
+        "News sentiment improving across sessions",
+        "Candlestick: engulfing bullish",
+        "Supertrend bullish \u2014 price above trend band",
+        "Broke above Pivot R1 with volume \u2014 bullish",
+        "Broke above Pivot R2 \u2014 strong momentum",
+        "In a long-term uptrend (2yr) \u2014 trend on our side",
+        "\u2713 Daily setup aligned with the higher-timeframe trend",
+        "\u26a0 Sector momentum -0.26 \u2014 buying into a falling sector needs extra conviction",
+        "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
+        "All EMAs stacked bearish",
+        "MACD histogram negative",
+        "High volume confirmation (1.8x avg)",
+        "ADX strong trend \u2014 downside momentum confirmed"
+      ],
+      "current_price": 181.2,
+      "unrealized_pnl": 85.25,
+      "max_held_days": 40,
+      "vol_regime_pct": 0.09,
+      "entry_market": {
+        "nifty_trend": "sideways",
+        "vix": 13.89,
+        "mood": "bearish",
+        "regime": "choppy",
+        "sector_momentum": -0.262,
+        "delivery_signal": "neutral",
+        "rsi": 42.9,
+        "mtf_alignment": "aligned",
+        "opposing_ratio": 0.48,
+        "hist_long_trend": "uptrend"
+      },
+      "view_hist": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "t1_booked": true,
+      "trailing_active": true,
+      "close_date": "2026-10-19",
+      "close_session": "intraday_close",
+      "exit_price": 173.86,
+      "exit_reason": "stop_hit_gap",
+      "pnl": -1.22,
+      "pnl_gross": 4.51,
+      "costs": 5.73,
+      "pnl_pct": -0.06,
+      "won": false,
+      "open_days": 7
     }
   ],
   "daily_snapshots": [
@@ -5536,11 +5547,11 @@
       "daily_pnl": 0.0
     }
   ],
-  "daily_pnl_today": 225.01625000000047,
+  "daily_pnl_today": 223.79563500000074,
   "last_snapshot_date": "2026-09-21",
   "lifetime_wins": 28,
-  "lifetime_losses": 44,
-  "lifetime_pnl": -5214.32,
+  "lifetime_losses": 45,
+  "lifetime_pnl": -5215.54,
   "last_pnl_reset_date": "2026-10-19",
   "max_drawdown_pct": 4.47,
   "current_drawdown_pct": 4.22,

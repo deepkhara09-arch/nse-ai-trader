@@ -61,7 +61,6 @@
   "market_mood": "bearish",
   "trade_allowed": true,
   "warnings": [
-    "Nifty in intraday downtrend \u2014 avoid new longs this session",
     "Global macro risk-off (-0.47) \u2014 Overall macro mood is risk-off (-0.47). US Dow -0.3% overnight. Crude +3.5%. USD/INR +0.2%. Notable: US Fed rate hike / ",
     "Net institutional outflow (\u20b9-2,495 Cr)"
   ],
@@ -76,7 +75,7 @@
     "Pharma"
   ],
   "broad_market_strength": true,
-  "intraday_regime": "trending_down",
+  "intraday_regime": "mixed",
   "macro": {
     "date": "2026-10-19",
     "session": "midday",

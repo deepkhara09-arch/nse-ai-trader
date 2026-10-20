@@ -27,11 +27,11 @@
   "sectors": {
     "IT": {
       "symbol": "ITBEES.NS",
-      "value": 35.51,
-      "day_change_pct": 4.07,
+      "value": 34.93,
+      "day_change_pct": -1.63,
       "trend_5d": "strong_up",
       "trend_20d": "strong_up",
-      "ath_pct_60d": -0.25
+      "ath_pct_60d": -1.91
     },
     "Pharma": {
       "symbol": "PHARMABEES.NS",
@@ -43,11 +43,11 @@
     },
     "Bank": {
       "symbol": "BANKBEES.NS",
-      "value": 578.69,
-      "day_change_pct": 0.21,
-      "trend_5d": "up",
+      "value": 575.98,
+      "day_change_pct": -0.47,
+      "trend_5d": "sideways",
       "trend_20d": "down",
-      "ath_pct_60d": -4.82
+      "ath_pct_60d": -5.26
     },
     "Infra": {
       "symbol": "INFRABEES.NS",
@@ -64,11 +64,10 @@
     "VIX=14.8 at 86th percentile vs last 30d \u2014 unusually high stress"
   ],
   "leading_sectors": [
-    "IT",
-    "Bank"
+    "IT"
   ],
   "market_regime": "normal",
-  "sector_breadth": 0.5,
+  "sector_breadth": 0.25,
   "lagging_sectors": [
     "Pharma"
   ],

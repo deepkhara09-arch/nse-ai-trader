@@ -79,8 +79,10 @@
       "target": 1917.36,
       "confidence": 66.5,
       "horizon_days": 10,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "flat",
+      "resolved_date": "2026-10-20",
+      "move_pct": -0.23
     },
     {
       "date": "2026-09-21",
@@ -105,8 +107,10 @@
       "target": 1950.76,
       "confidence": 74.9,
       "horizon_days": 10,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "miss",
+      "resolved_date": "2026-10-20",
+      "move_pct": -1.41
     },
     {
       "date": "2026-09-21",
@@ -140,9 +144,9 @@
   "record": {
     "overall": {
       "hit": 0,
-      "miss": 8,
+      "miss": 9,
       "open": 0,
-      "flat": 0
+      "flat": 1
     },
     "by_conf": {
       "80+": {
@@ -153,7 +157,7 @@
       },
       "70-80": {
         "hit": 0,
-        "miss": 3,
+        "miss": 4,
         "open": 0,
         "flat": 0
       },
@@ -161,7 +165,7 @@
         "hit": 0,
         "miss": 1,
         "open": 0,
-        "flat": 0
+        "flat": 1
       }
     }
   }

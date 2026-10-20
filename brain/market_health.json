@@ -1,6 +1,6 @@
 {
   "date": "2026-10-20",
-  "session": "intraday_close",
+  "session": "preclose",
   "nifty": {
     "symbol": "^NSEI",
     "value": 22888.95,
@@ -71,7 +71,6 @@
   "lagging_sectors": [
     "Pharma"
   ],
-  "intraday_regime": "mixed",
   "macro": {
     "date": "2026-10-20",
     "session": "midday",

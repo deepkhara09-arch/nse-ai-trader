@@ -1,15 +1,5 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of tweezer_top, engulfing_bearish, stoch_rsi_overbought_reversal mean for a swing trade on PIDILITIND? Current RSI=47, MACD hist=+5.7926, Vol=0.8x average. Signal is SELL.",
-    "context": {
-      "ticker": "PIDILITIND.NS",
-      "signal": "SELL",
-      "patterns": "tweezer_top, engulfing_bearish, stoch_rsi_overbought_reversal",
-      "rsi": 46.9
-    },
-    "queued_at": "2026-10-19T07:45:51.941626"
-  },
-  {
     "question": "In Indian NSE markets, what does the combination of early_recovery, adx_strong_trend_down, stoch_rsi_oversold_reversal mean for a swing trade on UNIONBANK? Current RSI=39, MACD hist=+0.3785, Vol=1.8x average. Signal is BUY.",
     "context": {
       "ticker": "UNIONBANK.NS",
@@ -98,5 +88,15 @@
       "rsi": 38.8
     },
     "queued_at": "2026-10-19T09:57:12.370921"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of early_recovery, stoch_rsi_oversold_reversal mean for a swing trade on UNIONBANK? Current RSI=39, MACD hist=+0.3785, Vol=1.8x average. Signal is BUY.",
+    "context": {
+      "ticker": "UNIONBANK.NS",
+      "signal": "BUY",
+      "patterns": "early_recovery, stoch_rsi_oversold_reversal",
+      "rsi": 38.8
+    },
+    "queued_at": "2026-10-20T03:05:41.765307"
   }
 ]

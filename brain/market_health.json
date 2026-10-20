@@ -1,6 +1,6 @@
 {
   "date": "2026-10-20",
-  "session": "morning",
+  "session": "midday",
   "nifty": {
     "symbol": "^NSEI",
     "value": 22888.95,
@@ -75,11 +75,11 @@
   "intraday_regime": "mixed",
   "macro": {
     "date": "2026-10-20",
-    "session": "preopen",
-    "generated_at": "2026-10-20T03:05:40.344697",
-    "global_score": 0.178,
+    "session": "midday",
+    "generated_at": "2026-10-20T06:15:46.665732",
+    "global_score": 0.07,
     "india_score": 0.0,
-    "overall_score": 0.098,
+    "overall_score": 0.039,
     "mood": "neutral",
     "drivers": [
       "Blood clots are \u2018incredibly common,\u2019 even for pro athletes like Jalen Hurts. Here\u2019s what to know.",
@@ -105,23 +105,23 @@
         "chg_pct": 0.41
       },
       "nikkei": {
-        "last": 64512.35,
-        "chg_pct": -0.62
+        "last": 63898.7,
+        "chg_pct": -1.57
       },
       "crude": {
-        "last": 98.65,
-        "chg_pct": -4.83
+        "last": 103.66,
+        "chg_pct": 2.22
       },
       "usdinr": {
         "last": 94.92,
-        "chg_pct": -0.07
+        "chg_pct": -0.06
       },
       "gold": {
-        "last": 4155.8,
-        "chg_pct": -0.1
+        "last": 4160.1,
+        "chg_pct": -0.5
       }
     },
-    "summary": "Overall macro mood is neutral (+0.10). US Dow -0.1% overnight. Crude -4.8%. USD/INR -0.1%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
+    "summary": "Overall macro mood is neutral (+0.04). US Dow -0.1% overnight. Crude +2.2%. USD/INR -0.1%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
       "Trade-war headlines spook global markets; IT & export names react most."

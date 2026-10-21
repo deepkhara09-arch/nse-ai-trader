@@ -1,6 +1,6 @@
 {
   "date": "2026-10-21",
-  "session": "midday",
+  "session": "afternoon",
   "nifty": {
     "symbol": "^NSEI",
     "value": 22888.95,
@@ -58,11 +58,10 @@
       "ath_pct_60d": -8.47
     }
   },
-  "market_mood": "bearish",
+  "market_mood": "neutral",
   "trade_allowed": true,
   "warnings": [
-    "VIX=14.8 at 86th percentile vs last 30d \u2014 unusually high stress",
-    "Nifty in intraday downtrend \u2014 avoid new longs this session"
+    "VIX=14.8 at 86th percentile vs last 30d \u2014 unusually high stress"
   ],
   "leading_sectors": [
     "IT"
@@ -72,7 +71,7 @@
   "lagging_sectors": [
     "Pharma"
   ],
-  "intraday_regime": "trending_down",
+  "intraday_regime": "mixed",
   "macro": {
     "date": "2026-10-21",
     "session": "midday",

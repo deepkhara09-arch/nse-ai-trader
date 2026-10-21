@@ -1,47 +1,5 @@
 [
   {
-    "timestamp": "2026-08-18T07:45:40.035744",
-    "date": "2026-08-18",
-    "ticker": "SIEMENS.NS",
-    "session": "afternoon",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 94.2,
-    "entry": 3956.0,
-    "stop_loss": 3783.9,
-    "target": 4300.21,
-    "reason": "paper afternoon",
-    "patterns": [
-      "full_bullish_alignment",
-      "low_volume_drift",
-      "supertrend_bullish",
-      "spinning_top",
-      "doji",
-      "pivot_point_test",
-      "adx_strong_trend_up"
-    ]
-  },
-  {
-    "timestamp": "2026-08-18T07:45:40.036401",
-    "date": "2026-08-18",
-    "ticker": "DRREDDY.NS",
-    "session": "afternoon",
-    "action": "SELL",
-    "signal": "SELL",
-    "confidence": 72.2,
-    "entry": 1185.9,
-    "stop_loss": 1218.18,
-    "target": 1121.34,
-    "reason": "paper afternoon",
-    "patterns": [
-      "pivot_s1_breakdown",
-      "stoch_rsi_overbought_reversal",
-      "rsi_bullish_divergence",
-      "full_bearish_alignment",
-      "adx_strong_trend_down"
-    ]
-  },
-  {
     "timestamp": "2026-08-18T07:45:40.037092",
     "date": "2026-08-18",
     "ticker": "SHRIRAMFIN.NS",
@@ -21265,6 +21223,49 @@
       "adx_strong_trend_up",
       "supertrend_bullish",
       "full_bearish_alignment"
+    ]
+  },
+  {
+    "timestamp": "2026-10-21T09:29:34.609287",
+    "date": "2026-10-21",
+    "ticker": "UNIONBANK.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 64.8,
+    "entry": 181.75,
+    "stop_loss": 172.94,
+    "target": 195.85,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "supertrend_bullish",
+      "pivot_r1_breakout",
+      "volume_breakout_bullish",
+      "full_bearish_alignment",
+      "adx_strong_trend_up",
+      "pivot_r2_breakout"
+    ]
+  },
+  {
+    "timestamp": "2026-10-21T09:29:34.610456",
+    "date": "2026-10-21",
+    "ticker": "POWERGRID.NS",
+    "session": "intraday_close",
+    "action": "SELL",
+    "signal": "SELL",
+    "confidence": 68.4,
+    "entry": 248.05,
+    "stop_loss": 258.94,
+    "target": 234.99,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "tweezer_top",
+      "doji",
+      "full_bearish_alignment",
+      "near_52w_low",
+      "shooting_star",
+      "pivot_s1_breakdown",
+      "adx_strong_trend_down"
     ]
   }
 ]

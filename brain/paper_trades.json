@@ -1,61 +1,6 @@
 {
-  "capital": 65780.35253499998,
+  "capital": 69884.68013499999,
   "open_positions": [
-    {
-      "ticker": "HOMEFIRST.NS",
-      "sector": "Infra Finance",
-      "open_date": "2026-09-25",
-      "open_session": "morning",
-      "action": "BUY",
-      "entry": 1116.1,
-      "qty": 4,
-      "invested": 4464.4,
-      "stop_loss": 1029.3,
-      "target": 1215.31,
-      "style": "swing",
-      "confidence": 83.4,
-      "patterns": [
-        "momentum_continuation",
-        "full_bullish_alignment",
-        "pivot_s1_breakdown",
-        "shooting_star",
-        "low_volume_drift",
-        "inside_bar"
-      ],
-      "buy_reasons": [
-        "All EMAs stacked bullish",
-        "RSI=51 in healthy buy zone",
-        "MACD histogram positive",
-        "Learned bullish pattern: momentum_continuation (rel=73%)",
-        "In a long-term strong uptrend (2yr) \u2014 trend on our side",
-        "Mild pullback: 6% below trend average",
-        "\u2713 Daily setup aligned with the higher-timeframe trend",
-        "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
-        "Broke below Pivot S1 support \u2014 bearish"
-      ],
-      "current_price": 1041.4,
-      "unrealized_pnl": -298.8,
-      "max_held_days": 40,
-      "vol_regime_pct": 0.09,
-      "entry_market": {
-        "nifty_trend": "down",
-        "vix": 12.69,
-        "mood": "bearish",
-        "regime": "mixed",
-        "sector_momentum": 0.178,
-        "delivery_signal": "neutral",
-        "rsi": 50.9,
-        "mtf_alignment": "aligned",
-        "opposing_ratio": 0.18,
-        "hist_long_trend": "strong_uptrend"
-      },
-      "view_hist": [
-        0,
-        0,
-        0,
-        0
-      ]
-    },
     {
       "ticker": "ONGC.NS",
       "sector": "Energy",
@@ -91,8 +36,8 @@
         "In a long-term strong downtrend (2yr)",
         "\u2713 Daily setup aligned with the higher-timeframe trend"
       ],
-      "current_price": 226.16,
-      "unrealized_pnl": -97.66,
+      "current_price": 224.97,
+      "unrealized_pnl": -75.05,
       "max_held_days": 40,
       "vol_regime_pct": 0.08399999999999999,
       "entry_market": {
@@ -150,8 +95,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "MACD histogram negative"
       ],
-      "current_price": 1774.1,
-      "unrealized_pnl": 24.0,
+      "current_price": 1743.3,
+      "unrealized_pnl": -6.8,
       "max_held_days": 40,
       "vol_regime_pct": 0.0675,
       "entry_market": {
@@ -169,8 +114,8 @@
       "view_hist": [
         0,
         0,
-        0,
-        1
+        1,
+        0
       ]
     },
     {
@@ -211,8 +156,8 @@
         "In a long-term downtrend (2yr)",
         "\u2713 Daily setup aligned with the higher-timeframe trend"
       ],
-      "current_price": 72.07,
-      "unrealized_pnl": 54.18,
+      "current_price": 71.6,
+      "unrealized_pnl": 113.4,
       "max_held_days": 40,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -266,8 +211,8 @@
         "StochRSI overbought with bearish candle \u2014 reversal",
         "\u26a0 Daily sell fights the higher-timeframe uptrend \u2014 needs extra conviction"
       ],
-      "current_price": 1485.5,
-      "unrealized_pnl": 11.0,
+      "current_price": 1474.0,
+      "unrealized_pnl": 34.0,
       "max_held_days": 40,
       "vol_regime_pct": 0.08399999999999999,
       "entry_market": {
@@ -283,6 +228,7 @@
         "hist_long_trend": "uptrend"
       },
       "view_hist": [
+        0,
         0,
         0,
         0
@@ -323,8 +269,8 @@
         "Near upper Bollinger Band",
         "High volume confirmation (3.7x avg)"
       ],
-      "current_price": 184.95,
-      "unrealized_pnl": 0.0,
+      "current_price": 181.11,
+      "unrealized_pnl": -134.4,
       "max_held_days": 40,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -338,7 +284,10 @@
         "mtf_alignment": "aligned",
         "opposing_ratio": 0.45,
         "hist_long_trend": "uptrend"
-      }
+      },
+      "view_hist": [
+        0
+      ]
     }
   ],
   "closed_trades": [
@@ -5267,6 +5216,71 @@
       "pnl_pct": -0.06,
       "won": false,
       "open_days": 7
+    },
+    {
+      "ticker": "HOMEFIRST.NS",
+      "sector": "Infra Finance",
+      "open_date": "2026-09-25",
+      "open_session": "morning",
+      "action": "BUY",
+      "entry": 1116.1,
+      "qty": 4,
+      "invested": 4464.4,
+      "stop_loss": 1029.3,
+      "target": 1215.31,
+      "style": "swing",
+      "confidence": 83.4,
+      "patterns": [
+        "momentum_continuation",
+        "full_bullish_alignment",
+        "pivot_s1_breakdown",
+        "shooting_star",
+        "low_volume_drift",
+        "inside_bar"
+      ],
+      "buy_reasons": [
+        "All EMAs stacked bullish",
+        "RSI=51 in healthy buy zone",
+        "MACD histogram positive",
+        "Learned bullish pattern: momentum_continuation (rel=73%)",
+        "In a long-term strong uptrend (2yr) \u2014 trend on our side",
+        "Mild pullback: 6% below trend average",
+        "\u2713 Daily setup aligned with the higher-timeframe trend",
+        "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
+        "Broke below Pivot S1 support \u2014 bearish"
+      ],
+      "current_price": 1020.1,
+      "unrealized_pnl": -384.0,
+      "max_held_days": 40,
+      "vol_regime_pct": 0.09,
+      "entry_market": {
+        "nifty_trend": "down",
+        "vix": 12.69,
+        "mood": "bearish",
+        "regime": "mixed",
+        "sector_momentum": 0.178,
+        "delivery_signal": "neutral",
+        "rsi": 50.9,
+        "mtf_alignment": "aligned",
+        "opposing_ratio": 0.18,
+        "hist_long_trend": "strong_uptrend"
+      },
+      "view_hist": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "close_date": "2026-10-21",
+      "close_session": "midday",
+      "exit_price": 1029.3,
+      "exit_reason": "stop_hit",
+      "pnl": -360.07,
+      "pnl_gross": -347.2,
+      "costs": 12.87,
+      "pnl_pct": -8.07,
+      "won": false,
+      "open_days": 16
     }
   ],
   "daily_snapshots": [
@@ -5600,11 +5614,11 @@
       "daily_pnl": 0.0
     }
   ],
-  "daily_pnl_today": 0.0,
+  "daily_pnl_today": -360.0723999999998,
   "last_snapshot_date": "2026-09-21",
   "lifetime_wins": 28,
-  "lifetime_losses": 45,
-  "lifetime_pnl": -5215.54,
+  "lifetime_losses": 46,
+  "lifetime_pnl": -5575.61,
   "last_pnl_reset_date": "2026-10-21",
   "max_drawdown_pct": 4.47,
   "current_drawdown_pct": 4.22,

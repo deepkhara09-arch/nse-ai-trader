@@ -1,43 +1,5 @@
 [
   {
-    "timestamp": "2026-08-18T07:45:40.032945",
-    "date": "2026-08-18",
-    "ticker": "NTPC.NS",
-    "session": "afternoon",
-    "action": "SELL",
-    "signal": "SELL",
-    "confidence": 63.4,
-    "entry": 338.8,
-    "stop_loss": 347.65,
-    "target": 321.1,
-    "reason": "paper afternoon",
-    "patterns": [
-      "pivot_s1_breakdown",
-      "bb_lower_bounce",
-      "full_bearish_alignment",
-      "macd_bearish_crossover",
-      "pivot_point_test"
-    ]
-  },
-  {
-    "timestamp": "2026-08-18T07:45:40.033644",
-    "date": "2026-08-18",
-    "ticker": "NIACL.NS",
-    "session": "afternoon",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 79.0,
-    "entry": 183.4,
-    "stop_loss": 173.96,
-    "target": 202.29,
-    "reason": "paper afternoon",
-    "patterns": [
-      "engulfing_bullish",
-      "full_bullish_alignment",
-      "supertrend_bullish"
-    ]
-  },
-  {
     "timestamp": "2026-08-18T07:45:40.035245",
     "date": "2026-08-18",
     "ticker": "BAJFINANCE.NS",
@@ -21261,6 +21223,49 @@
       "volume_breakout_bullish",
       "pivot_r1_breakout",
       "pivot_r2_breakout"
+    ]
+  },
+  {
+    "timestamp": "2026-10-21T06:15:51.152107",
+    "date": "2026-10-21",
+    "ticker": "UNIONBANK.NS",
+    "session": "midday",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 64.8,
+    "entry": 181.11,
+    "stop_loss": 172.3,
+    "target": 195.21,
+    "reason": "paper midday",
+    "patterns": [
+      "supertrend_bullish",
+      "full_bearish_alignment",
+      "pivot_r1_breakout",
+      "pivot_r2_breakout",
+      "volume_breakout_bullish",
+      "adx_strong_trend_up"
+    ]
+  },
+  {
+    "timestamp": "2026-10-21T06:15:51.153431",
+    "date": "2026-10-21",
+    "ticker": "POWERGRID.NS",
+    "session": "midday",
+    "action": "SELL",
+    "signal": "SELL",
+    "confidence": 68.4,
+    "entry": 248.35,
+    "stop_loss": 259.24,
+    "target": 235.29,
+    "reason": "paper midday",
+    "patterns": [
+      "adx_strong_trend_down",
+      "full_bearish_alignment",
+      "shooting_star",
+      "near_52w_low",
+      "doji",
+      "tweezer_top",
+      "pivot_s1_breakdown"
     ]
   }
 ]

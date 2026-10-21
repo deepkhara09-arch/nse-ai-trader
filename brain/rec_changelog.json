@@ -5,16 +5,6 @@
     "nse_code": "NESTLEIND",
     "signal": "BUY",
     "date": "2026-07-28",
-    "ts": "2026-07-28T07:45:53.600298",
-    "detail": "Target 1 moved \u20b91585.42 \u2192 \u20b91569.18",
-    "confidence": 76.9
-  },
-  {
-    "type": "updated",
-    "ticker": "NESTLEIND.NS",
-    "nse_code": "NESTLEIND",
-    "signal": "BUY",
-    "date": "2026-07-28",
     "ts": "2026-07-28T09:44:45.162714",
     "detail": "Confidence \u25bc8 (77 \u2192 69) | Rank \u25bc4 (#11 \u2192 #15) | Target 1 moved \u20b91569.18 \u2192 \u20b91560.18",
     "confidence": 68.8
@@ -5997,6 +5987,16 @@
     "date": "2026-10-21",
     "ts": "2026-10-21T04:05:38.805438",
     "detail": "New BUY recommendation \u2014 confidence 67/100",
+    "confidence": 67.1
+  },
+  {
+    "type": "updated",
+    "ticker": "UNIONBANK.NS",
+    "nse_code": "UNIONBANK",
+    "signal": "BUY",
+    "date": "2026-10-21",
+    "ts": "2026-10-21T06:15:51.301401",
+    "detail": "Stop loss moved \u20b9179.02 \u2192 \u20b9172.61 | Target 1 moved \u20b9199.64 \u2192 \u20b9198.11",
     "confidence": 67.1
   }
 ]

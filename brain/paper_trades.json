@@ -1,5 +1,5 @@
 {
-  "capital": 72253.60253499998,
+  "capital": 65780.35253499998,
   "open_positions": [
     {
       "ticker": "HOMEFIRST.NS",
@@ -33,8 +33,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "Broke below Pivot S1 support \u2014 bearish"
       ],
-      "current_price": 1053.4,
-      "unrealized_pnl": -250.8,
+      "current_price": 1041.4,
+      "unrealized_pnl": -298.8,
       "max_held_days": 40,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -91,8 +91,8 @@
         "In a long-term strong downtrend (2yr)",
         "\u2713 Daily setup aligned with the higher-timeframe trend"
       ],
-      "current_price": 223.85,
-      "unrealized_pnl": -53.77,
+      "current_price": 226.16,
+      "unrealized_pnl": -97.66,
       "max_held_days": 40,
       "vol_regime_pct": 0.08399999999999999,
       "entry_market": {
@@ -150,8 +150,8 @@
         "\u26a0 Market mood is bearish \u2014 buying against the tape needs extra conviction",
         "MACD histogram negative"
       ],
-      "current_price": 1766.0,
-      "unrealized_pnl": 15.9,
+      "current_price": 1774.1,
+      "unrealized_pnl": 24.0,
       "max_held_days": 40,
       "vol_regime_pct": 0.0675,
       "entry_market": {
@@ -170,7 +170,7 @@
         0,
         0,
         0,
-        0
+        1
       ]
     },
     {
@@ -211,8 +211,8 @@
         "In a long-term downtrend (2yr)",
         "\u2713 Daily setup aligned with the higher-timeframe trend"
       ],
-      "current_price": 70.71,
-      "unrealized_pnl": 225.54,
+      "current_price": 72.07,
+      "unrealized_pnl": 54.18,
       "max_held_days": 40,
       "vol_regime_pct": 0.12,
       "entry_market": {
@@ -266,8 +266,8 @@
         "StochRSI overbought with bearish candle \u2014 reversal",
         "\u26a0 Daily sell fights the higher-timeframe uptrend \u2014 needs extra conviction"
       ],
-      "current_price": 1478.0,
-      "unrealized_pnl": 26.0,
+      "current_price": 1485.5,
+      "unrealized_pnl": 11.0,
       "max_held_days": 40,
       "vol_regime_pct": 0.08399999999999999,
       "entry_market": {
@@ -284,8 +284,61 @@
       },
       "view_hist": [
         0,
+        0,
         0
       ]
+    },
+    {
+      "ticker": "UNIONBANK.NS",
+      "sector": "Banking",
+      "open_date": "2026-10-21",
+      "open_session": "morning",
+      "action": "BUY",
+      "entry": 184.95,
+      "qty": 35,
+      "invested": 6473.25,
+      "stop_loss": 176.14,
+      "target": 199.05,
+      "style": "swing",
+      "confidence": 74.2,
+      "patterns": [
+        "supertrend_bullish",
+        "full_bearish_alignment",
+        "adx_strong_trend_up",
+        "volume_breakout_bullish",
+        "pivot_r1_breakout",
+        "pivot_r2_breakout"
+      ],
+      "buy_reasons": [
+        "MACD histogram positive",
+        "Positive news sentiment (0.20, news 1.2x reliable here)",
+        "News sentiment improving across sessions",
+        "Supertrend bullish \u2014 price above trend band",
+        "ADX strong trend \u2014 directional move confirmed",
+        "Broke above Pivot R1 with volume \u2014 bullish",
+        "Broke above Pivot R2 \u2014 strong momentum",
+        "In a long-term uptrend (2yr) \u2014 trend on our side",
+        "\u2713 Daily setup aligned with the higher-timeframe trend",
+        "All EMAs stacked bearish",
+        "Near upper Bollinger Band",
+        "High volume confirmation (3.7x avg)"
+      ],
+      "current_price": 184.95,
+      "unrealized_pnl": 0.0,
+      "max_held_days": 40,
+      "vol_regime_pct": 0.12,
+      "entry_market": {
+        "nifty_trend": "sideways",
+        "vix": 14.77,
+        "mood": "neutral",
+        "regime": "mixed",
+        "sector_momentum": -0.227,
+        "delivery_signal": "neutral",
+        "rsi": 61.6,
+        "mtf_alignment": "aligned",
+        "opposing_ratio": 0.45,
+        "hist_long_trend": "uptrend"
+      }
     }
   ],
   "closed_trades": [
@@ -5547,12 +5600,12 @@
       "daily_pnl": 0.0
     }
   ],
-  "daily_pnl_today": 223.79563500000074,
+  "daily_pnl_today": 0.0,
   "last_snapshot_date": "2026-09-21",
   "lifetime_wins": 28,
   "lifetime_losses": 45,
   "lifetime_pnl": -5215.54,
-  "last_pnl_reset_date": "2026-10-19",
+  "last_pnl_reset_date": "2026-10-21",
   "max_drawdown_pct": 4.47,
   "current_drawdown_pct": 4.22,
   "portfolio_peak": 101210.28,

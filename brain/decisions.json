@@ -1,45 +1,5 @@
 [
   {
-    "timestamp": "2026-08-18T07:45:40.031318",
-    "date": "2026-08-18",
-    "ticker": "ABCAPITAL.NS",
-    "session": "afternoon",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 63.7,
-    "entry": 400.75,
-    "stop_loss": 384.41,
-    "target": 433.43,
-    "reason": "paper afternoon",
-    "patterns": [
-      "full_bullish_alignment",
-      "adx_ranging_market",
-      "supertrend_bullish",
-      "pivot_s1_bounce",
-      "hammer",
-      "pivot_point_test",
-      "doji"
-    ]
-  },
-  {
-    "timestamp": "2026-08-18T07:45:40.031812",
-    "date": "2026-08-18",
-    "ticker": "PIDILITIND.NS",
-    "session": "afternoon",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 95,
-    "entry": 1667.0,
-    "stop_loss": 1621.73,
-    "target": 1757.54,
-    "reason": "paper afternoon",
-    "patterns": [
-      "pivot_s1_breakdown",
-      "full_bullish_alignment",
-      "adx_strong_trend_up"
-    ]
-  },
-  {
     "timestamp": "2026-08-18T07:45:40.032945",
     "date": "2026-08-18",
     "ticker": "NTPC.NS",
@@ -21259,6 +21219,48 @@
       "early_recovery",
       "stoch_rsi_oversold_reversal",
       "adx_strong_trend_down"
+    ]
+  },
+  {
+    "timestamp": "2026-10-21T04:05:38.691963",
+    "date": "2026-10-21",
+    "ticker": "ADANIPORTS.NS",
+    "session": "morning",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 81.7,
+    "entry": 1774.1,
+    "stop_loss": 1674.83,
+    "target": 1893.23,
+    "reason": "paper morning",
+    "patterns": [
+      "supertrend_bullish",
+      "spinning_top",
+      "three_white_soldiers",
+      "ema_golden_cross",
+      "full_bullish_alignment",
+      "doji"
+    ]
+  },
+  {
+    "timestamp": "2026-10-21T04:05:38.692607",
+    "date": "2026-10-21",
+    "ticker": "UNIONBANK.NS",
+    "session": "morning",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 74.2,
+    "entry": 184.95,
+    "stop_loss": 176.14,
+    "target": 199.05,
+    "reason": "paper morning",
+    "patterns": [
+      "supertrend_bullish",
+      "full_bearish_alignment",
+      "adx_strong_trend_up",
+      "volume_breakout_bullish",
+      "pivot_r1_breakout",
+      "pivot_r2_breakout"
     ]
   }
 ]

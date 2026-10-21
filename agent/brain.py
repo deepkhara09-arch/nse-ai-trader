@@ -842,39 +842,49 @@ def analyse_stock(
     # Dip proxy: price below the ~50-day EMA trend line, corroborated by the 2-year
     # drawdown-from-high and 3-month return. The deeper the dip on a non-broken
     # stock, the stronger the buy.
+    # The DAILY backtest refined this precisely: a 5% dip LOSES, an 8%+ dip on a
+    # NON-BROKEN stock WINS (+3.2%/62%). Two hard requirements:
+    #   (a) DEEP dip: price >= 8% below its ~50-day average (shallow dips are noise)
+    #   (b) NOT BROKEN: the long-term trend isn't collapsing (filters falling knives
+    #       like PAYTM/HOMEFIRST that kept dropping after we bought the dip).
     ema_trend_val = d.get("ema_trend", 0)
     close_now     = d.get("close", 0)
     dip_vs_ema = ((ema_trend_val - close_now) / ema_trend_val) if ema_trend_val else 0  # +ve = below MA
     drawdown   = hist_drawdown or 0            # % off the 2yr high (positive number)
     ret_3m     = d.get("hist_ret_3m")
-    not_broken = hist_long_trend not in ("strong_downtrend",) and (ret_3m is None or ret_3m > -25)
+    ret_6m     = d.get("hist_ret_6m")
+    # "Not broken" = long-term structure intact: not a strong downtrend, 6m return not
+    # badly negative, and not making fresh 52w lows (a knife). ~mirrors the backtest's
+    # "price above 80% of its 200-day average" filter that made the edge robust.
+    not_broken = (
+        hist_long_trend not in ("strong_downtrend", "downtrend")
+        and (ret_6m is None or ret_6m > -18)
+        and (hist_52w_pos is None or hist_52w_pos > 15)
+    )
     is_dip_buy = False
-    if not_broken and dip_vs_ema >= 0.05:      # price is >=5% below its ~50d average
+    if not_broken and dip_vs_ema >= 0.08:      # DEEP dip only (>=8% below ~50d average)
         is_dip_buy = True
-        if dip_vs_ema >= 0.10:
-            buy_score += 3.5
-            buy_reasons.append(f"MEAN-REVERSION: {dip_vs_ema*100:.0f}% below its trend average on a "
-                               f"non-broken stock — deep-dip buy (backtested +3.3%/63% at this depth)")
-        elif dip_vs_ema >= 0.07:
-            buy_score += 2.5
-            buy_reasons.append(f"Mean-reversion dip: {dip_vs_ema*100:.0f}% below trend average — buy the pullback")
+        if dip_vs_ema >= 0.12:
+            buy_score += 4.5
+            buy_reasons.append(f"DEEP-DIP BUY: {dip_vs_ema*100:.0f}% below trend average on a structurally "
+                               f"intact stock — backtested +3.2%/trade, 62% win at this depth")
         else:
-            buy_score += 1.5
-            buy_reasons.append(f"Mild pullback: {dip_vs_ema*100:.0f}% below trend average")
-        # A deep 2-year drawdown on a stock still in a long-term up/side trend is the
-        # sweet spot — fear overshot, recovery odds are high.
-        if drawdown >= 15 and hist_long_trend in ("uptrend", "strong_uptrend", "sideways", None):
+            buy_score += 3.5
+            buy_reasons.append(f"DEEP-DIP BUY: {dip_vs_ema*100:.0f}% below trend average, trend intact — "
+                               f"mean-reversion setup (backtest-positive)")
+        # A deep 2-year drawdown on a stock still structurally intact is the sweet
+        # spot — fear overshot, recovery odds are high.
+        if drawdown >= 15:
             buy_score += 1.0
-            buy_reasons.append(f"Down {drawdown:.0f}% from 2yr high but trend intact — value reversal")
+            buy_reasons.append(f"Down {drawdown:.0f}% from 2yr high but structure intact — value reversal")
         # RSI oversold confirms the dip is stretched (extra conviction)
         if rsi < 40:
             buy_score += 1.0
             buy_reasons.append(f"RSI {rsi:.0f} oversold — dip is stretched, snap-back likely")
 
-    # De-emphasise breakout/momentum chasing — it backtested NEGATIVE on this market.
-    # Buying strength far ABOVE the average is exactly when reversion works against us.
+    # Chasing strength backtested NEGATIVE on this market — penalise buying extension.
     if dip_vs_ema <= -0.10 and buy_score > sell_score:   # price >=10% ABOVE its average
-        buy_score -= 1.5
+        buy_score -= 2.0
         buy_reasons.append(f"⚠ Extended {abs(dip_vs_ema)*100:.0f}% above trend average — "
                            f"chasing strength here reverts against us (backtest-negative)")
 
@@ -1057,6 +1067,27 @@ def analyse_stock(
     else:
         signal = "WATCH"   # no trade — keep monitoring
 
+    # ── HARD RULE: a BUY must be a DEEP-DIP buy. Nothing else has edge. ──────────
+    # Every non-dip BUY family (momentum, breakout, shallow pullback) backtested
+    # NEGATIVE across two live attempts and the daily backtest. The ONLY long setup
+    # that made money is the >=8% dip on a structurally-intact stock. So the tool no
+    # longer takes any other kind of long — if there's no deep dip, it simply waits.
+    if signal == "BUY" and not is_dip_buy:
+        buy_reasons.append("Held back: not a deep-dip setup — the only long edge "
+                           "proven in backtesting is buying an 8%+ dip on an intact stock")
+        signal = "WATCH"
+
+    # ── DEEP-DIP OVERRIDE: buy the dip even when bearish signals dominate ────────
+    # A deep dip on an intact stock is BY DEFINITION bearish-looking — the sell_score
+    # is high because the price just fell. That's exactly the setup the backtest said
+    # to BUY (+3.2%/62%). So a confirmed deep-dip-on-intact-stock becomes a BUY even
+    # if sell_score > buy_score, provided the stock isn't structurally broken (that
+    # filter, enforced in is_dip_buy, is what separates a recovery from a knife).
+    if signal != "BUY" and is_dip_buy and dip_vs_ema >= 0.08:
+        signal = "BUY"
+        buy_reasons.append("DEEP-DIP OVERRIDE: price fell hard (bearish short-term) but the "
+                           "stock's structure is intact — this is the buy-the-fear edge")
+
     # ── Long-bias gate: don't short against the market's structural up-drift ─────
     # Nifty-100 drifts UP over time, so shorting an individual stock is fighting a
     # tailwind. Live data proved it: SELLs went 2/6 (−₹177) and every short but one
@@ -1102,17 +1133,23 @@ def analyse_stock(
     # noise and gets clipped on a random tick before the thesis can play out. Floor
     # the stop distance so every trade has real room to breathe; the target moves
     # with it to preserve the reward:risk ratio.
-    stop_dist = atr * atr_mult
-    min_dist  = close * MIN_STOP_DISTANCE_PCT
-    if stop_dist < min_dist:
-        stop_dist = min_dist
-    # Target is deliberately CLOSE and reachable (see config redesign). Do NOT force
-    # a wide "≥2:1" floor here — that was the core losing flaw: a far target that
-    # multi-day noise never reached while the stop got clipped. The target tracks
-    # ATR_TARGET_MULTIPLIER directly; we only guard that it clears trading costs.
-    from agent.config import TRADE_COST_PCT_SIDE
-    min_profit_dist = close * TRADE_COST_PCT_SIDE.get("swing", 0.0015) * 3   # >2x round-trip cost
-    target_dist = max(atr * atr_target, min_profit_dist)
+    # DIP-BUYS use the BACKTESTED fixed geometry: a WIDE 10% stop (wider than the
+    # dip itself, so the volatility that created the dip can't immediately clip us)
+    # and a 14% recovery target. This is the single most important fix — the old ATR
+    # stop (~2-4%) sat INSIDE the dip's own noise and guaranteed a stop-out. Other
+    # (non-dip) signals keep the ATR geometry.
+    if is_dip_buy and signal == "BUY":
+        from agent.config import DIP_STOP_PCT, DIP_TARGET_PCT
+        stop_dist   = close * DIP_STOP_PCT
+        target_dist = close * DIP_TARGET_PCT
+    else:
+        stop_dist = atr * atr_mult
+        min_dist  = close * MIN_STOP_DISTANCE_PCT
+        if stop_dist < min_dist:
+            stop_dist = min_dist
+        from agent.config import TRADE_COST_PCT_SIDE
+        min_profit_dist = close * TRADE_COST_PCT_SIDE.get("swing", 0.0015) * 3
+        target_dist = max(atr * atr_target, min_profit_dist)
 
     if signal == "BUY":
         entry     = close

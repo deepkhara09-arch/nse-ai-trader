@@ -130,18 +130,22 @@ TRADE_COST_PCT_SIDE = {
     "long_term": 0.0015,
 }
 
-# ATR-based stop/target (overrides flat % when ATR is available)
-# ── REDESIGNED after 48 trades of data (Sep 2026) ──────────────────────────────
-# The old 1.5x stop / 3.0x target (1:2 R:R) was mathematically near-unwinnable on
-# multi-day swings: over several days, normal ±2% daily volatility CLIPS a 2% stop
-# long before a 6.8% target is ever approached. Result: 30 stop-hits vs 2
-# target-hits. Yet the tool DOES catch small quick moves — nearly every winner was
-# booked at the halfway point (~+2.5%). So: put the target where profit actually
-# appears, and give the stop enough room that noise doesn't take it out first.
-#   stop  = 2.0x ATR  (wider — survives normal daily noise)
-#   target= 2.4x ATR  (~1.2:1, and CLOSE enough to actually be reached)
-ATR_STOP_MULTIPLIER    = 2.0       # stop = entry ± 2.0x ATR (room to breathe)
-ATR_TARGET_MULTIPLIER  = 2.4       # target = entry ± 2.4x ATR (reachable ~1.2:1)
+# ── DEEP-DIP strategy geometry (Oct 2026, from a real daily backtest) ──────────
+# After TWO failed live strategies (momentum, then shallow-dip), I fetched 1yr of
+# real DAILY data for 29 Nifty-100 stocks and backtested head-to-head. Decisive and
+# robust (18/18 parameter combos positive):
+#   • momentum (buy strength):           NEGATIVE every variant
+#   • shallow dip (5%) + tight stop:     NEGATIVE (what the live tool was doing)
+#   • DEEP dip (>=8% below 50d MA) on a non-broken stock (above 80% of 200d MA),
+#     WIDE 10% stop, 14% target, hold 30-40 days:  +3.2%/trade, 62% win
+# The two things the live tool got wrong: the dip was too shallow (5%) and the stop
+# too tight (clipped by the noise of a big dip). Fixed stops/targets as % — ATR
+# multipliers were producing stops narrower than the dip itself.
+DIP_STOP_PCT    = 0.10     # 10% stop — WIDER than the dip, so noise can't clip it
+DIP_TARGET_PCT  = 0.14     # 14% target — recovery back toward/above the mean
+# ATR multipliers kept for the fallback path / non-dip signals, but aligned wider.
+ATR_STOP_MULTIPLIER    = 2.5
+ATR_TARGET_MULTIPLIER  = 3.5
 FLAT_STOP_PCT          = 0.04      # fallback if ATR unavailable
 FLAT_TARGET_PCT        = 0.05
 # Minimum stop DISTANCE as a fraction of price. Low-ATR (quiet) stocks were getting

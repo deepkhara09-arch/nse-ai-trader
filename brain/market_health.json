@@ -1,6 +1,6 @@
 {
   "date": "2026-10-22",
-  "session": "preopen",
+  "session": "morning",
   "nifty": {
     "symbol": "^NSEI",
     "value": 22811.35,
@@ -27,11 +27,11 @@
   "sectors": {
     "IT": {
       "symbol": "ITBEES.NS",
-      "value": 35.95,
-      "day_change_pct": 2.92,
+      "value": 34.93,
+      "day_change_pct": -1.63,
       "trend_5d": "strong_up",
       "trend_20d": "strong_up",
-      "ath_pct_60d": -0.31
+      "ath_pct_60d": -1.91
     },
     "Pharma": {
       "symbol": "PHARMABEES.NS",
@@ -43,11 +43,11 @@
     },
     "Bank": {
       "symbol": "BANKBEES.NS",
-      "value": 568.59,
-      "day_change_pct": -1.28,
-      "trend_5d": "down",
+      "value": 575.98,
+      "day_change_pct": -0.47,
+      "trend_5d": "sideways",
       "trend_20d": "down",
-      "ath_pct_60d": -6.48
+      "ath_pct_60d": -5.26
     },
     "Infra": {
       "symbol": "INFRABEES.NS",
@@ -70,8 +70,7 @@
   "market_regime": "normal",
   "sector_breadth": 0.25,
   "lagging_sectors": [
-    "Pharma",
-    "Bank"
+    "Pharma"
   ],
   "intraday_regime": "mixed",
   "macro": {

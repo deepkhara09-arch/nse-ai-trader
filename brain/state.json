@@ -1,13 +1,13 @@
 {
   "phase": "paper_trading",
   "day": 65,
-  "session": "intraday_close",
+  "session": "preopen",
   "start_date": "2026-06-22",
   "phase_start_date": "2026-07-15",
   "last_run_date": "2026-09-21",
   "last_counted_date": "2026-09-21",
   "cohort_last_tick_date": "2026-09-21",
-  "last_updated": "2026-10-21T09:29:34.643134",
+  "last_updated": "2026-10-22T03:05:47.792416",
   "focus_stocks": [
     "PIDILITIND.NS",
     "GAIL.NS",
@@ -68,7 +68,6 @@
     "expectancy": -75.35
   },
   "brain_notes": [
-    "[2026-08-07] Pre-open macro: neutral (+0.06)",
     "[2026-08-07] Focus refresh \u2014 promoted: ['NIACL', 'GRASIM'] | demoted: ['JSWSTEEL', 'POWERGRID']",
     "[2026-08-07] Cohort batch #20 complete \u2014 30 candidates ready",
     "[2026-08-10] Pre-open macro: neutral (+0.11)",
@@ -167,7 +166,8 @@
     "[2026-10-15] Pre-open macro: risk_on (+0.46)",
     "[2026-10-16] Pre-open macro: neutral (+0.13)",
     "[2026-10-19] Pre-open macro: risk_off (-0.41)",
-    "[2026-10-21] Pre-open macro: neutral (+0.15)"
+    "[2026-10-21] Pre-open macro: neutral (+0.15)",
+    "[2026-10-22] Pre-open macro: risk_on (+0.34)"
   ],
   "alert_sent": false,
   "schema_version": 11,
@@ -397,10 +397,6 @@
     "scored_date": "2026-09-21"
   },
   "sessions_done": {
-    "preopen": "2026-10-21",
-    "morning": "2026-10-21",
-    "midday": "2026-10-21",
-    "afternoon": "2026-10-21",
-    "intraday_close": "2026-10-21"
+    "preopen": "2026-10-22"
   }
 }

@@ -1,45 +1,5 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of early_recovery, stoch_rsi_oversold_reversal mean for a swing trade on UNIONBANK? Current RSI=39, MACD hist=+0.3785, Vol=1.8x average. Signal is BUY.",
-    "context": {
-      "ticker": "UNIONBANK.NS",
-      "signal": "BUY",
-      "patterns": "early_recovery, stoch_rsi_oversold_reversal",
-      "rsi": 38.8
-    },
-    "queued_at": "2026-10-20T09:33:41.839094"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of early_recovery, stoch_rsi_oversold_reversal mean for a swing trade on UNIONBANK? Current RSI=39, MACD hist=+0.3785, Vol=1.8x average. Signal is BUY.",
-    "context": {
-      "ticker": "UNIONBANK.NS",
-      "signal": "BUY",
-      "patterns": "early_recovery, stoch_rsi_oversold_reversal",
-      "rsi": 38.8
-    },
-    "queued_at": "2026-10-20T10:10:47.316050"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of stoch_rsi_oversold_reversal, early_recovery mean for a swing trade on UNIONBANK? Current RSI=39, MACD hist=+0.3785, Vol=1.8x average. Signal is BUY.",
-    "context": {
-      "ticker": "UNIONBANK.NS",
-      "signal": "BUY",
-      "patterns": "stoch_rsi_oversold_reversal, early_recovery",
-      "rsi": 38.8
-    },
-    "queued_at": "2026-10-21T03:05:42.747836"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of spinning_top, three_white_soldiers, ema_golden_cross mean for a swing trade on ADANIPORTS? Current RSI=53, MACD hist=-3.2025, Vol=0.9x average. Signal is BUY.",
-    "context": {
-      "ticker": "ADANIPORTS.NS",
-      "signal": "BUY",
-      "patterns": "spinning_top, three_white_soldiers, ema_golden_cross",
-      "rsi": 52.8
-    },
-    "queued_at": "2026-10-21T04:05:38.691763"
-  },
-  {
     "question": "In Indian NSE markets, what does the combination of spinning_top, three_white_soldiers, ema_golden_cross mean for a swing trade on ADANIPORTS? Current RSI=53, MACD hist=-3.2025, Vol=0.9x average. Signal is BUY.",
     "context": {
       "ticker": "ADANIPORTS.NS",
@@ -98,5 +58,45 @@
       "rsi": 31.9
     },
     "queued_at": "2026-10-21T09:29:34.724161"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of full_bearish_alignment, stoch_rsi_overbought_reversal, adx_strong_trend_down mean for a swing trade on HOMEFIRST? Current RSI=41, MACD hist=-0.7899, Vol=1.5x average. Signal is BUY.",
+    "context": {
+      "ticker": "HOMEFIRST.NS",
+      "signal": "BUY",
+      "patterns": "full_bearish_alignment, stoch_rsi_overbought_reversal, adx_strong_trend_down",
+      "rsi": 41.0
+    },
+    "queued_at": "2026-10-22T03:05:47.902864"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of doji, near_52w_low, tweezer_top mean for a swing trade on POWERGRID? Current RSI=32, MACD hist=-0.2388, Vol=0.9x average. Signal is SELL.",
+    "context": {
+      "ticker": "POWERGRID.NS",
+      "signal": "SELL",
+      "patterns": "doji, near_52w_low, tweezer_top",
+      "rsi": 31.9
+    },
+    "queued_at": "2026-10-22T03:05:47.906039"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of full_bearish_alignment, pivot_s1_breakdown, stoch_rsi_overbought_reversal mean for a swing trade on IDFCFIRSTB? Current RSI=36, MACD hist=-0.3299, Vol=0.6x average. Signal is BUY.",
+    "context": {
+      "ticker": "IDFCFIRSTB.NS",
+      "signal": "BUY",
+      "patterns": "full_bearish_alignment, pivot_s1_breakdown, stoch_rsi_overbought_reversal",
+      "rsi": 35.6
+    },
+    "queued_at": "2026-10-22T03:05:47.907396"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of low_volume_drift, pivot_s1_breakdown mean for a swing trade on BANDHANBNK? Current RSI=36, MACD hist=-0.4196, Vol=0.3x average. Signal is BUY.",
+    "context": {
+      "ticker": "BANDHANBNK.NS",
+      "signal": "BUY",
+      "patterns": "low_volume_drift, pivot_s1_breakdown",
+      "rsi": 36.2
+    },
+    "queued_at": "2026-10-22T03:05:47.908688"
   }
 ]

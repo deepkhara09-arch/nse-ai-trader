@@ -1,67 +1,68 @@
 {
-  "date": "2026-10-21",
-  "session": "intraday_close",
+  "date": "2026-10-22",
+  "session": "preopen",
   "nifty": {
     "symbol": "^NSEI",
-    "value": 22888.95,
-    "day_change_pct": -1.11,
-    "trend_5d": "sideways",
+    "value": 22811.35,
+    "day_change_pct": -0.34,
+    "trend_5d": "up",
     "trend_20d": "down",
-    "ath_pct_60d": -6.11
+    "ath_pct_60d": -6.43
   },
   "vix": {
-    "value": 14.77,
+    "value": 15.68,
     "level": "normal",
-    "percentile_30d": 86.0,
-    "avg_30d": 13.1
+    "percentile_30d": 97.0,
+    "avg_30d": 13.19
   },
   "bank_nifty": {
     "symbol": "^NSEBANK",
-    "value": 55488.1,
-    "day_change_pct": -0.64,
+    "value": 54976.9,
+    "day_change_pct": -0.92,
     "trend_5d": "sideways",
     "trend_20d": "down",
-    "ath_pct_60d": -4.37,
+    "ath_pct_60d": -5.25,
     "diverging": false
   },
   "sectors": {
     "IT": {
       "symbol": "ITBEES.NS",
-      "value": 34.93,
-      "day_change_pct": -1.63,
+      "value": 35.95,
+      "day_change_pct": 2.92,
       "trend_5d": "strong_up",
       "trend_20d": "strong_up",
-      "ath_pct_60d": -1.91
+      "ath_pct_60d": -0.31
     },
     "Pharma": {
       "symbol": "PHARMABEES.NS",
-      "value": 26.34,
-      "day_change_pct": -0.72,
+      "value": 26.16,
+      "day_change_pct": -0.68,
       "trend_5d": "down",
       "trend_20d": "strong_down",
-      "ath_pct_60d": -7.84
+      "ath_pct_60d": -8.47
     },
     "Bank": {
       "symbol": "BANKBEES.NS",
-      "value": 575.98,
-      "day_change_pct": -0.47,
-      "trend_5d": "sideways",
+      "value": 568.59,
+      "day_change_pct": -1.28,
+      "trend_5d": "down",
       "trend_20d": "down",
-      "ath_pct_60d": -5.26
+      "ath_pct_60d": -6.48
     },
     "Infra": {
       "symbol": "INFRABEES.NS",
-      "value": 894.09,
-      "day_change_pct": -1.0,
+      "value": 889.56,
+      "day_change_pct": -0.51,
       "trend_5d": "sideways",
       "trend_20d": "strong_down",
-      "ath_pct_60d": -8.47
+      "ath_pct_60d": -8.94
     }
   },
-  "market_mood": "neutral",
+  "market_mood": "bearish",
   "trade_allowed": true,
   "warnings": [
-    "VIX=14.8 at 86th percentile vs last 30d \u2014 unusually high stress"
+    "VIX=15.7 at 97th percentile vs last 30d \u2014 unusually high stress",
+    "Narrow rally \u2014 only 1/4 sectors up. Fragile move."
   ],
   "leading_sectors": [
     "IT"
@@ -69,82 +70,77 @@
   "market_regime": "normal",
   "sector_breadth": 0.25,
   "lagging_sectors": [
-    "Pharma"
+    "Pharma",
+    "Bank"
   ],
   "intraday_regime": "mixed",
   "macro": {
-    "date": "2026-10-21",
-    "session": "midday",
-    "generated_at": "2026-10-21T06:15:42.779548",
-    "global_score": 0.265,
-    "india_score": 0.0,
-    "overall_score": 0.146,
-    "mood": "neutral",
+    "date": "2026-10-22",
+    "session": "preopen",
+    "generated_at": "2026-10-22T03:05:46.261721",
+    "global_score": 0.211,
+    "india_score": 0.5,
+    "overall_score": 0.341,
+    "mood": "risk_on",
     "drivers": [
-      "Bull markets tend to peak with a whimper, not a bang \u2014 but a 15% correction for the S&P 500 may be next",
-      "Super Micro\u2019s stock soars after surprise update \u2014 with Dell and HPE shares joining the rally",
-      "Tesla\u2019s stock rises as Elon Musk drops new clues about a possible SpaceX merger",
-      "Netflix vows to revive viewership trends, but investors hit \u2018sell\u2019 on the stock",
-      "Why SpaceX\u2019s stock is surging \u2014\u00a0and lifting the broader AI universe along with it",
-      "\u2018I don\u2019t feel sorry for myself\u2019: I\u2019m 64 and will be renting for the rest of my life. Is that so bad?",
-      "My wife says we can\u2019t afford to retire. I vetoed her $8,000 trip to Italy. We\u2019re in our 60s and have $4 million. Do I keep working?",
-      "My partner of 17 years left me his $1 million home. His children say I influenced him to do so. Should I share my inheritance?"
+      "The Social Security Administration wants more babies signed up for \u2018Trump accounts.\u2019 But there\u2019s still a catch.",
+      "This wonky maneuver kept Mark Zuckerberg from fleeing a California billionaire tax",
+      "Tesla\u2019s stock falls as Elon Musk leaves investors wanting more",
+      "Meta\u2019s stock rises as investors glimpse an opportunity that could dwarf the ad business",
+      "Why investors should be skeptical of a potential Tesla-SpaceX merger",
+      "Trump says data centers should generate their own electricity \u2014 but experts say only states can mandate that",
+      "Oil is now flowing out of the Persian Gulf like before the Iran war. Why prices may still not come down anytime soon.",
+      "\u2018I don\u2019t feel sorry for myself\u2019: I\u2019m 64 and will be renting for the rest of my life. Is that so bad?"
     ],
     "global_cues": {
       "dow": {
-        "last": 52495.88,
-        "chg_pct": 1.02
+        "last": 52856.09,
+        "chg_pct": 0.69
       },
       "nasdaq": {
-        "last": 26424.82,
-        "chg_pct": -0.02
+        "last": 26702.86,
+        "chg_pct": 1.05
       },
       "sp500": {
-        "last": 7712.57,
-        "chg_pct": 0.28
+        "last": 7757.17,
+        "chg_pct": 0.58
       },
       "nikkei": {
-        "last": 64706.41,
-        "chg_pct": 0.98
+        "last": 63917.43,
+        "chg_pct": -1.09
       },
       "crude": {
-        "last": 101.79,
-        "chg_pct": -1.8
+        "last": 98.36,
+        "chg_pct": 1.25
       },
       "usdinr": {
-        "last": 94.72,
-        "chg_pct": -0.29
+        "last": 94.45,
+        "chg_pct": -0.28
       },
       "gold": {
-        "last": 4142.6,
-        "chg_pct": -0.42
+        "last": 4130.6,
+        "chg_pct": -0.47
       }
     },
-    "summary": "Overall macro mood is neutral (+0.15). US Dow +1.0% overnight. Crude -1.8%. USD/INR -0.3%. Notable: US Fed rate hike / hawkish; Geopolitical conflict / war; Tariffs / trade war.",
+    "summary": "Overall macro mood is risk-on (+0.34). US Dow +0.7% overnight. Crude +1.2%. USD/INR -0.3%. Notable: US Fed rate hike / hawkish; Geopolitical conflict / war.",
     "playbook": [
       "Hawkish Fed pressures Nifty via FII outflows and stronger USD.",
-      "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
-      "Trade-war headlines spook global markets; IT & export names react most."
+      "Geopolitical shocks trigger global risk-off; gold up, equities down initially."
     ],
     "playbook_bias": "risk_off",
     "article_count": 60
   },
+  "macro_tailwind": true,
   "macro_risk_factor": 1.0,
   "fii_dii": {
-    "date": "2026-10-21",
-    "fii_net_cr": -1148.64,
-    "dii_net_cr": 3201.19,
-    "combined_net_cr": 2052.55,
-    "signal": "inflow",
+    "date": "2026-10-22",
+    "fii_net_cr": 1022.32,
+    "dii_net_cr": 1614.32,
+    "combined_net_cr": 2636.64,
+    "signal": "strong_inflow",
     "ok": true,
     "error": "",
     "history": [
-      {
-        "date": "2026-09-10",
-        "fii": -438.24,
-        "dii": 1025.85,
-        "combined": 587.61
-      },
       {
         "date": "2026-09-11",
         "fii": -930.9,
@@ -318,18 +314,25 @@
         "fii": -1148.64,
         "dii": 3201.19,
         "combined": 2052.55
+      },
+      {
+        "date": "2026-10-22",
+        "fii": 1022.32,
+        "dii": 1614.32,
+        "combined": 2636.64
       }
     ]
   },
+  "flow_tailwind": true,
   "pcr": {
-    "date": "2026-10-21",
-    "pcr": 0.796,
+    "date": "2026-10-22",
+    "pcr": 0.7,
     "reading": "bearish_bias",
-    "total_pe_oi": 2611793,
-    "total_ce_oi": 3280597,
-    "spot": 22888.95,
+    "total_pe_oi": 2535391,
+    "total_ce_oi": 3622399,
+    "spot": 22811.35,
     "max_pain": 22900.0,
-    "max_pain_dist_pct": -0.05,
+    "max_pain_dist_pct": -0.39,
     "oi_bias": "call_heavy_resistance",
     "ok": true,
     "error": ""

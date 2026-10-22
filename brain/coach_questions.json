@@ -1,102 +1,102 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of stoch_rsi_overbought_reversal, adx_strong_trend_down, engulfing_bearish mean for a swing trade on HINDALCO? Current RSI=34, MACD hist=-0.9363, Vol=0.5x average. Signal is BUY.",
-    "context": {
-      "ticker": "HINDALCO.NS",
-      "signal": "BUY",
-      "patterns": "stoch_rsi_overbought_reversal, adx_strong_trend_down, engulfing_bearish",
-      "rsi": 33.8
-    },
-    "queued_at": "2026-10-22T04:05:46.029530"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of full_bearish_alignment, stoch_rsi_overbought_reversal, adx_strong_trend_down mean for a swing trade on HOMEFIRST? Current RSI=41, MACD hist=-0.7538, Vol=1.5x average. Signal is BUY.",
-    "context": {
-      "ticker": "HOMEFIRST.NS",
-      "signal": "BUY",
-      "patterns": "full_bearish_alignment, stoch_rsi_overbought_reversal, adx_strong_trend_down",
-      "rsi": 41.0
-    },
-    "queued_at": "2026-10-22T04:05:46.030893"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of macd_bullish_crossover, stoch_rsi_overbought_reversal, outside_bar mean for a swing trade on POWERGRID? Current RSI=36, MACD hist=+0.0749, Vol=1.1x average. Signal is SELL.",
-    "context": {
-      "ticker": "POWERGRID.NS",
-      "signal": "SELL",
-      "patterns": "macd_bullish_crossover, stoch_rsi_overbought_reversal, outside_bar",
-      "rsi": 35.9
-    },
-    "queued_at": "2026-10-22T04:05:46.034067"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of rsi_bullish_divergence, bb_lower_bounce, stoch_rsi_overbought_reversal mean for a swing trade on IDFCFIRSTB? Current RSI=35, MACD hist=-0.4272, Vol=0.8x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of full_bearish_alignment, rsi_bullish_divergence, bb_lower_bounce mean for a swing trade on IDFCFIRSTB? Current RSI=35, MACD hist=-0.4272, Vol=0.8x average. Signal is BUY.",
     "context": {
       "ticker": "IDFCFIRSTB.NS",
       "signal": "BUY",
-      "patterns": "rsi_bullish_divergence, bb_lower_bounce, stoch_rsi_overbought_reversal",
+      "patterns": "full_bearish_alignment, rsi_bullish_divergence, bb_lower_bounce",
       "rsi": 35.1
     },
-    "queued_at": "2026-10-22T04:05:46.035434"
+    "queued_at": "2026-10-22T06:15:55.004099"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of strong_bearish_marubozu, three_black_crows, pivot_s1_breakdown mean for a swing trade on BANDHANBNK? Current RSI=29, MACD hist=-0.7130, Vol=0.6x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of three_black_crows, strong_bearish_marubozu, pivot_s1_breakdown mean for a swing trade on BANDHANBNK? Current RSI=29, MACD hist=-0.7130, Vol=0.6x average. Signal is BUY.",
     "context": {
       "ticker": "BANDHANBNK.NS",
       "signal": "BUY",
-      "patterns": "strong_bearish_marubozu, three_black_crows, pivot_s1_breakdown",
+      "patterns": "three_black_crows, strong_bearish_marubozu, pivot_s1_breakdown",
       "rsi": 29.1
     },
-    "queued_at": "2026-10-22T04:05:46.036703"
+    "queued_at": "2026-10-22T06:15:55.005131"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of stoch_rsi_overbought_reversal, adx_strong_trend_down, engulfing_bearish mean for a swing trade on HINDALCO? Current RSI=34, MACD hist=-0.9363, Vol=0.5x average. Signal is BUY.",
-    "context": {
-      "ticker": "HINDALCO.NS",
-      "signal": "BUY",
-      "patterns": "stoch_rsi_overbought_reversal, adx_strong_trend_down, engulfing_bearish",
-      "rsi": 33.8
-    },
-    "queued_at": "2026-10-22T04:05:46.152816"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of full_bearish_alignment, stoch_rsi_overbought_reversal, adx_strong_trend_down mean for a swing trade on HOMEFIRST? Current RSI=41, MACD hist=-0.7538, Vol=1.5x average. Signal is BUY.",
-    "context": {
-      "ticker": "HOMEFIRST.NS",
-      "signal": "BUY",
-      "patterns": "full_bearish_alignment, stoch_rsi_overbought_reversal, adx_strong_trend_down",
-      "rsi": 41.0
-    },
-    "queued_at": "2026-10-22T04:05:46.154169"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of macd_bullish_crossover, stoch_rsi_overbought_reversal, outside_bar mean for a swing trade on POWERGRID? Current RSI=36, MACD hist=+0.0749, Vol=1.1x average. Signal is SELL.",
+    "question": "In Indian NSE markets, what does the combination of engulfing_bearish, tweezer_top, adx_strong_trend_down mean for a swing trade on POWERGRID? Current RSI=36, MACD hist=+0.0749, Vol=1.1x average. Signal is SELL.",
     "context": {
       "ticker": "POWERGRID.NS",
       "signal": "SELL",
-      "patterns": "macd_bullish_crossover, stoch_rsi_overbought_reversal, outside_bar",
+      "patterns": "engulfing_bearish, tweezer_top, adx_strong_trend_down",
       "rsi": 35.9
     },
-    "queued_at": "2026-10-22T04:05:46.157228"
+    "queued_at": "2026-10-22T06:15:55.009975"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of rsi_bullish_divergence, bb_lower_bounce, stoch_rsi_overbought_reversal mean for a swing trade on IDFCFIRSTB? Current RSI=35, MACD hist=-0.4272, Vol=0.8x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of full_bearish_alignment, rsi_bullish_divergence, bb_lower_bounce mean for a swing trade on IDFCFIRSTB? Current RSI=35, MACD hist=-0.4272, Vol=0.8x average. Signal is BUY.",
     "context": {
       "ticker": "IDFCFIRSTB.NS",
       "signal": "BUY",
-      "patterns": "rsi_bullish_divergence, bb_lower_bounce, stoch_rsi_overbought_reversal",
+      "patterns": "full_bearish_alignment, rsi_bullish_divergence, bb_lower_bounce",
       "rsi": 35.1
     },
-    "queued_at": "2026-10-22T04:05:46.158537"
+    "queued_at": "2026-10-22T06:15:55.011722"
   },
   {
-    "question": "In Indian NSE markets, what does the combination of strong_bearish_marubozu, three_black_crows, pivot_s1_breakdown mean for a swing trade on BANDHANBNK? Current RSI=29, MACD hist=-0.7130, Vol=0.6x average. Signal is BUY.",
+    "question": "In Indian NSE markets, what does the combination of three_black_crows, strong_bearish_marubozu, pivot_s1_breakdown mean for a swing trade on BANDHANBNK? Current RSI=29, MACD hist=-0.7130, Vol=0.6x average. Signal is BUY.",
     "context": {
       "ticker": "BANDHANBNK.NS",
       "signal": "BUY",
-      "patterns": "strong_bearish_marubozu, three_black_crows, pivot_s1_breakdown",
+      "patterns": "three_black_crows, strong_bearish_marubozu, pivot_s1_breakdown",
       "rsi": 29.1
     },
-    "queued_at": "2026-10-22T04:05:46.159799"
+    "queued_at": "2026-10-22T06:15:55.012835"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of full_bearish_alignment, adx_strong_trend_down, macd_bearish_crossover mean for a swing trade on HOMEFIRST? Current RSI=41, MACD hist=-0.7538, Vol=1.5x average. Signal is BUY.",
+    "context": {
+      "ticker": "HOMEFIRST.NS",
+      "signal": "BUY",
+      "patterns": "full_bearish_alignment, adx_strong_trend_down, macd_bearish_crossover",
+      "rsi": 41.0
+    },
+    "queued_at": "2026-10-22T06:15:55.013883"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of full_bearish_alignment, adx_strong_trend_down, macd_bearish_crossover mean for a swing trade on HOMEFIRST? Current RSI=41, MACD hist=-0.7538, Vol=1.5x average. Signal is BUY.",
+    "context": {
+      "ticker": "HOMEFIRST.NS",
+      "signal": "BUY",
+      "patterns": "full_bearish_alignment, adx_strong_trend_down, macd_bearish_crossover",
+      "rsi": 41.0
+    },
+    "queued_at": "2026-10-22T06:15:55.118983"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of engulfing_bearish, tweezer_top, adx_strong_trend_down mean for a swing trade on POWERGRID? Current RSI=36, MACD hist=+0.0749, Vol=1.1x average. Signal is SELL.",
+    "context": {
+      "ticker": "POWERGRID.NS",
+      "signal": "SELL",
+      "patterns": "engulfing_bearish, tweezer_top, adx_strong_trend_down",
+      "rsi": 35.9
+    },
+    "queued_at": "2026-10-22T06:15:55.121443"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of full_bearish_alignment, rsi_bullish_divergence, bb_lower_bounce mean for a swing trade on IDFCFIRSTB? Current RSI=35, MACD hist=-0.4272, Vol=0.8x average. Signal is BUY.",
+    "context": {
+      "ticker": "IDFCFIRSTB.NS",
+      "signal": "BUY",
+      "patterns": "full_bearish_alignment, rsi_bullish_divergence, bb_lower_bounce",
+      "rsi": 35.1
+    },
+    "queued_at": "2026-10-22T06:15:55.122518"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of three_black_crows, strong_bearish_marubozu, pivot_s1_breakdown mean for a swing trade on BANDHANBNK? Current RSI=29, MACD hist=-0.7130, Vol=0.6x average. Signal is BUY.",
+    "context": {
+      "ticker": "BANDHANBNK.NS",
+      "signal": "BUY",
+      "patterns": "three_black_crows, strong_bearish_marubozu, pivot_s1_breakdown",
+      "rsi": 29.1
+    },
+    "queued_at": "2026-10-22T06:15:55.123582"
   }
 ]

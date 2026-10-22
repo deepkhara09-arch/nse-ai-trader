@@ -1,91 +1,5 @@
 [
   {
-    "timestamp": "2026-08-18T09:45:40.686848",
-    "date": "2026-08-18",
-    "ticker": "BAJFINANCE.NS",
-    "session": "intraday_close",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 82.6,
-    "entry": 1091.0,
-    "stop_loss": 1045.04,
-    "target": 1182.93,
-    "reason": "paper intraday_close",
-    "patterns": [
-      "engulfing_bullish",
-      "outside_bar",
-      "pivot_point_test",
-      "low_volume_drift",
-      "supertrend_bullish",
-      "full_bullish_alignment",
-      "bb_midline_support",
-      "pivot_s1_bounce"
-    ]
-  },
-  {
-    "timestamp": "2026-08-18T09:45:40.687489",
-    "date": "2026-08-18",
-    "ticker": "SIEMENS.NS",
-    "session": "intraday_close",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 90.6,
-    "entry": 3960.0,
-    "stop_loss": 3790.18,
-    "target": 4299.64,
-    "reason": "paper intraday_close",
-    "patterns": [
-      "pivot_point_test",
-      "stoch_rsi_oversold_reversal",
-      "supertrend_bullish",
-      "doji",
-      "full_bullish_alignment",
-      "adx_strong_trend_up",
-      "spinning_top"
-    ]
-  },
-  {
-    "timestamp": "2026-08-18T09:45:40.688354",
-    "date": "2026-08-18",
-    "ticker": "DRREDDY.NS",
-    "session": "intraday_close",
-    "action": "SELL",
-    "signal": "SELL",
-    "confidence": 72.2,
-    "entry": 1183.0,
-    "stop_loss": 1215.28,
-    "target": 1118.44,
-    "reason": "paper intraday_close",
-    "patterns": [
-      "stoch_rsi_overbought_reversal",
-      "pivot_s1_breakdown",
-      "adx_strong_trend_down",
-      "full_bearish_alignment",
-      "rsi_bullish_divergence"
-    ]
-  },
-  {
-    "timestamp": "2026-08-18T10:11:08.634507",
-    "date": "2026-08-18",
-    "ticker": "MARICO.NS",
-    "session": "preclose",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 95,
-    "entry": 844.2,
-    "stop_loss": 817.31,
-    "target": 897.99,
-    "reason": "paper preclose",
-    "patterns": [
-      "pivot_s1_breakdown",
-      "outside_bar",
-      "full_bullish_alignment",
-      "strong_bearish_marubozu",
-      "adx_strong_trend_up",
-      "engulfing_bearish"
-    ]
-  },
-  {
     "timestamp": "2026-08-18T10:11:08.635879",
     "date": "2026-08-18",
     "ticker": "ICICIBANK.NS",
@@ -21274,6 +21188,94 @@
       "three_black_crows",
       "pivot_s1_breakdown",
       "full_bearish_alignment"
+    ]
+  },
+  {
+    "timestamp": "2026-10-22T06:15:54.996470",
+    "date": "2026-10-22",
+    "ticker": "HOMEFIRST.NS",
+    "session": "midday",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 30,
+    "entry": 1022.8,
+    "stop_loss": 920.52,
+    "target": 1165.99,
+    "reason": "paper midday",
+    "patterns": [
+      "full_bearish_alignment",
+      "strong_bearish_marubozu",
+      "adx_strong_trend_down",
+      "rsi_bullish_divergence",
+      "macd_bearish_crossover",
+      "stoch_rsi_overbought_reversal",
+      "pivot_s1_breakdown"
+    ]
+  },
+  {
+    "timestamp": "2026-10-22T06:15:55.003159",
+    "date": "2026-10-22",
+    "ticker": "POWERGRID.NS",
+    "session": "midday",
+    "action": "SELL",
+    "signal": "SELL",
+    "confidence": 91.5,
+    "entry": 247.75,
+    "stop_loss": 258.24,
+    "target": 229.39,
+    "reason": "paper midday",
+    "patterns": [
+      "full_bearish_alignment",
+      "engulfing_bearish",
+      "tweezer_top",
+      "adx_strong_trend_down",
+      "near_52w_low",
+      "gap_up_reversal",
+      "macd_bullish_crossover",
+      "outside_bar",
+      "stoch_rsi_overbought_reversal",
+      "pivot_s1_breakdown",
+      "early_recovery"
+    ]
+  },
+  {
+    "timestamp": "2026-10-22T06:15:55.004424",
+    "date": "2026-10-22",
+    "ticker": "IDFCFIRSTB.NS",
+    "session": "midday",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 31.0,
+    "entry": 74.27,
+    "stop_loss": 66.84,
+    "target": 84.67,
+    "reason": "paper midday",
+    "patterns": [
+      "full_bearish_alignment",
+      "rsi_bullish_divergence",
+      "bb_lower_bounce",
+      "three_black_crows",
+      "stoch_rsi_overbought_reversal",
+      "pivot_s1_breakdown"
+    ]
+  },
+  {
+    "timestamp": "2026-10-22T06:15:55.005441",
+    "date": "2026-10-22",
+    "ticker": "BANDHANBNK.NS",
+    "session": "midday",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 30.3,
+    "entry": 158.77,
+    "stop_loss": 142.89,
+    "target": 181.0,
+    "reason": "paper midday",
+    "patterns": [
+      "three_black_crows",
+      "full_bearish_alignment",
+      "strong_bearish_marubozu",
+      "pivot_s1_breakdown"
     ]
   }
 ]

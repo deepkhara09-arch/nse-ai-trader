@@ -1,78 +1,5 @@
 [
   {
-    "timestamp": "2026-08-18T10:11:08.638663",
-    "date": "2026-08-18",
-    "ticker": "PIDILITIND.NS",
-    "session": "preclose",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 95,
-    "entry": 1665.5,
-    "stop_loss": 1620.23,
-    "target": 1756.04,
-    "reason": "paper preclose",
-    "patterns": [
-      "pivot_s1_breakdown",
-      "adx_strong_trend_up",
-      "full_bullish_alignment"
-    ]
-  },
-  {
-    "timestamp": "2026-08-18T10:11:08.639611",
-    "date": "2026-08-18",
-    "ticker": "CIPLA.NS",
-    "session": "preclose",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 79.1,
-    "entry": 1432.0,
-    "stop_loss": 1399.1,
-    "target": 1497.81,
-    "reason": "paper preclose",
-    "patterns": [
-      "pivot_s1_breakdown",
-      "full_bullish_alignment"
-    ]
-  },
-  {
-    "timestamp": "2026-08-18T10:11:08.640640",
-    "date": "2026-08-18",
-    "ticker": "NTPC.NS",
-    "session": "preclose",
-    "action": "SELL",
-    "signal": "SELL",
-    "confidence": 86.4,
-    "entry": 338.15,
-    "stop_loss": 347.63,
-    "target": 319.19,
-    "reason": "paper preclose",
-    "patterns": [
-      "pivot_s1_breakdown",
-      "macd_bearish_crossover",
-      "full_bearish_alignment",
-      "bearish_harami",
-      "bb_lower_bounce"
-    ]
-  },
-  {
-    "timestamp": "2026-08-18T10:11:08.641636",
-    "date": "2026-08-18",
-    "ticker": "NIACL.NS",
-    "session": "preclose",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 69.1,
-    "entry": 183.36,
-    "stop_loss": 173.92,
-    "target": 202.25,
-    "reason": "paper preclose",
-    "patterns": [
-      "engulfing_bullish",
-      "full_bullish_alignment",
-      "supertrend_bullish"
-    ]
-  },
-  {
     "timestamp": "2026-08-18T10:11:08.642625",
     "date": "2026-08-18",
     "ticker": "CHOLAFIN.NS",
@@ -21281,6 +21208,91 @@
       "pivot_s1_breakdown",
       "three_black_crows",
       "bb_lower_bounce"
+    ]
+  },
+  {
+    "timestamp": "2026-10-22T09:32:46.081243",
+    "date": "2026-10-22",
+    "ticker": "HOMEFIRST.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 33.0,
+    "entry": 1021.9,
+    "stop_loss": 919.71,
+    "target": 1164.97,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "adx_strong_trend_down",
+      "pivot_s1_breakdown",
+      "three_black_crows",
+      "full_bearish_alignment"
+    ]
+  },
+  {
+    "timestamp": "2026-10-22T09:32:46.084517",
+    "date": "2026-10-22",
+    "ticker": "POWERGRID.NS",
+    "session": "intraday_close",
+    "action": "SELL",
+    "signal": "SELL",
+    "confidence": 91.5,
+    "entry": 247.75,
+    "stop_loss": 258.24,
+    "target": 229.39,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "stoch_rsi_overbought_reversal",
+      "gap_up_reversal",
+      "near_52w_low",
+      "full_bearish_alignment",
+      "early_recovery",
+      "outside_bar",
+      "pivot_s1_breakdown",
+      "adx_strong_trend_down",
+      "engulfing_bearish",
+      "macd_bullish_crossover",
+      "tweezer_top"
+    ]
+  },
+  {
+    "timestamp": "2026-10-22T09:32:46.086053",
+    "date": "2026-10-22",
+    "ticker": "IDFCFIRSTB.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 31.0,
+    "entry": 74.63,
+    "stop_loss": 67.17,
+    "target": 85.08,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "stoch_rsi_overbought_reversal",
+      "bb_lower_bounce",
+      "full_bearish_alignment",
+      "three_black_crows",
+      "pivot_s1_breakdown",
+      "rsi_bullish_divergence"
+    ]
+  },
+  {
+    "timestamp": "2026-10-22T09:32:46.087393",
+    "date": "2026-10-22",
+    "ticker": "BANDHANBNK.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 30.3,
+    "entry": 158.81,
+    "stop_loss": 142.93,
+    "target": 181.04,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "pivot_s1_breakdown",
+      "strong_bearish_marubozu",
+      "three_black_crows",
+      "full_bearish_alignment"
     ]
   }
 ]

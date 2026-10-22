@@ -27,11 +27,11 @@
   "sectors": {
     "IT": {
       "symbol": "ITBEES.NS",
-      "value": 34.93,
-      "day_change_pct": -1.63,
+      "value": 35.95,
+      "day_change_pct": 2.92,
       "trend_5d": "strong_up",
       "trend_20d": "strong_up",
-      "ath_pct_60d": -1.91
+      "ath_pct_60d": -0.31
     },
     "Pharma": {
       "symbol": "PHARMABEES.NS",
@@ -43,11 +43,11 @@
     },
     "Bank": {
       "symbol": "BANKBEES.NS",
-      "value": 575.98,
-      "day_change_pct": -0.47,
-      "trend_5d": "sideways",
+      "value": 568.59,
+      "day_change_pct": -1.28,
+      "trend_5d": "down",
       "trend_20d": "down",
-      "ath_pct_60d": -5.26
+      "ath_pct_60d": -6.48
     },
     "Infra": {
       "symbol": "INFRABEES.NS",
@@ -71,7 +71,8 @@
   "market_regime": "normal",
   "sector_breadth": 0.25,
   "lagging_sectors": [
-    "Pharma"
+    "Pharma",
+    "Bank"
   ],
   "intraday_regime": "choppy",
   "macro": {

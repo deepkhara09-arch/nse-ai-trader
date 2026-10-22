@@ -1,69 +1,5 @@
 [
   {
-    "timestamp": "2026-08-18T10:11:08.635879",
-    "date": "2026-08-18",
-    "ticker": "ICICIBANK.NS",
-    "session": "preclose",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 70.1,
-    "entry": 1412.1,
-    "stop_loss": 1376.45,
-    "target": 1483.4,
-    "reason": "paper preclose",
-    "patterns": [
-      "pivot_s1_breakdown",
-      "full_bullish_alignment",
-      "low_volume_drift",
-      "spinning_top",
-      "pivot_point_test"
-    ]
-  },
-  {
-    "timestamp": "2026-08-18T10:11:08.636874",
-    "date": "2026-08-18",
-    "ticker": "UNIONBANK.NS",
-    "session": "preclose",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 95,
-    "entry": 186.01,
-    "stop_loss": 179.05,
-    "target": 199.93,
-    "reason": "paper preclose",
-    "patterns": [
-      "bb_upper_rejection",
-      "pivot_s1_breakdown",
-      "outside_bar",
-      "full_bullish_alignment",
-      "stoch_rsi_overbought_reversal",
-      "pivot_point_test",
-      "adx_strong_trend_up"
-    ]
-  },
-  {
-    "timestamp": "2026-08-18T10:11:08.637909",
-    "date": "2026-08-18",
-    "ticker": "ABCAPITAL.NS",
-    "session": "preclose",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 78.1,
-    "entry": 402.45,
-    "stop_loss": 385.71,
-    "target": 435.93,
-    "reason": "paper preclose",
-    "patterns": [
-      "hammer",
-      "supertrend_bullish",
-      "doji",
-      "stoch_rsi_oversold_reversal",
-      "full_bullish_alignment",
-      "adx_ranging_market",
-      "pivot_point_test"
-    ]
-  },
-  {
     "timestamp": "2026-08-18T10:11:08.638663",
     "date": "2026-08-18",
     "ticker": "PIDILITIND.NS",
@@ -21276,6 +21212,75 @@
       "full_bearish_alignment",
       "strong_bearish_marubozu",
       "pivot_s1_breakdown"
+    ]
+  },
+  {
+    "timestamp": "2026-10-22T07:45:50.770404",
+    "date": "2026-10-22",
+    "ticker": "HOMEFIRST.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 30,
+    "entry": 1025.2,
+    "stop_loss": 922.68,
+    "target": 1168.73,
+    "reason": "paper afternoon",
+    "patterns": [
+      "stoch_rsi_overbought_reversal",
+      "rsi_bullish_divergence",
+      "full_bearish_alignment",
+      "pivot_s1_breakdown",
+      "macd_bearish_crossover",
+      "adx_strong_trend_down",
+      "strong_bearish_marubozu"
+    ]
+  },
+  {
+    "timestamp": "2026-10-22T07:45:50.894499",
+    "date": "2026-10-22",
+    "ticker": "POWERGRID.NS",
+    "session": "afternoon",
+    "action": "SELL",
+    "signal": "SELL",
+    "confidence": 91.5,
+    "entry": 248.2,
+    "stop_loss": 258.69,
+    "target": 229.84,
+    "reason": "paper afternoon",
+    "patterns": [
+      "stoch_rsi_overbought_reversal",
+      "full_bearish_alignment",
+      "pivot_s1_breakdown",
+      "near_52w_low",
+      "macd_bullish_crossover",
+      "adx_strong_trend_down",
+      "gap_up_reversal",
+      "early_recovery",
+      "tweezer_top",
+      "engulfing_bearish",
+      "outside_bar"
+    ]
+  },
+  {
+    "timestamp": "2026-10-22T07:45:51.018190",
+    "date": "2026-10-22",
+    "ticker": "IDFCFIRSTB.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 31.0,
+    "entry": 74.95,
+    "stop_loss": 67.45,
+    "target": 85.44,
+    "reason": "paper afternoon",
+    "patterns": [
+      "stoch_rsi_overbought_reversal",
+      "rsi_bullish_divergence",
+      "full_bearish_alignment",
+      "pivot_s1_breakdown",
+      "three_black_crows",
+      "bb_lower_bounce"
     ]
   }
 ]

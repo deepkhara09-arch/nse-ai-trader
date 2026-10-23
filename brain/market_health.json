@@ -1,6 +1,6 @@
 {
   "date": "2026-10-23",
-  "session": "midday",
+  "session": "afternoon",
   "nifty": {
     "symbol": "^NSEI",
     "value": 22687.65,
@@ -63,7 +63,6 @@
   "warnings": [
     "VIX=15.8 at 97th percentile vs last 30d \u2014 unusually high stress",
     "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
-    "Nifty in intraday downtrend \u2014 avoid new longs this session",
     "Net institutional outflow (\u20b9-567 Cr)"
   ],
   "leading_sectors": [
@@ -75,7 +74,7 @@
     "Pharma",
     "Bank"
   ],
-  "intraday_regime": "trending_down",
+  "intraday_regime": "mixed",
   "macro": {
     "date": "2026-10-23",
     "session": "midday",

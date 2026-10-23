@@ -1,27 +1,27 @@
 {
-  "date": "2026-10-22",
-  "session": "intraday_close",
+  "date": "2026-10-23",
+  "session": "preopen",
   "nifty": {
     "symbol": "^NSEI",
-    "value": 22811.35,
-    "day_change_pct": -0.34,
-    "trend_5d": "up",
-    "trend_20d": "down",
-    "ath_pct_60d": -6.43
+    "value": 22687.65,
+    "day_change_pct": -0.54,
+    "trend_5d": "down",
+    "trend_20d": "strong_down",
+    "ath_pct_60d": -6.94
   },
   "vix": {
-    "value": 15.68,
+    "value": 15.76,
     "level": "normal",
     "percentile_30d": 97.0,
-    "avg_30d": 13.19
+    "avg_30d": 13.34
   },
   "bank_nifty": {
     "symbol": "^NSEBANK",
-    "value": 54976.9,
-    "day_change_pct": -0.92,
-    "trend_5d": "sideways",
+    "value": 54925.7,
+    "day_change_pct": -0.09,
+    "trend_5d": "down",
     "trend_20d": "down",
-    "ath_pct_60d": -5.25,
+    "ath_pct_60d": -5.34,
     "diverging": false
   },
   "sectors": {
@@ -35,11 +35,11 @@
     },
     "Pharma": {
       "symbol": "PHARMABEES.NS",
-      "value": 26.16,
-      "day_change_pct": -0.68,
+      "value": 26.23,
+      "day_change_pct": 0.27,
       "trend_5d": "down",
       "trend_20d": "strong_down",
-      "ath_pct_60d": -8.47
+      "ath_pct_60d": -8.22
     },
     "Bank": {
       "symbol": "BANKBEES.NS",
@@ -51,19 +51,19 @@
     },
     "Infra": {
       "symbol": "INFRABEES.NS",
-      "value": 889.56,
-      "day_change_pct": -0.51,
+      "value": 890.42,
+      "day_change_pct": 0.1,
       "trend_5d": "sideways",
       "trend_20d": "strong_down",
-      "ath_pct_60d": -8.94
+      "ath_pct_60d": -8.85
     }
   },
   "market_mood": "bearish",
   "trade_allowed": true,
   "warnings": [
-    "VIX=15.7 at 97th percentile vs last 30d \u2014 unusually high stress",
-    "Narrow rally \u2014 only 1/4 sectors up. Fragile move.",
-    "Nifty choppy intraday \u2014 wait for cleaner setups"
+    "VIX=15.8 at 97th percentile vs last 30d \u2014 unusually high stress",
+    "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
+    "Net institutional outflow (\u20b9-567 Cr)"
   ],
   "leading_sectors": [
     "IT"
@@ -74,80 +74,72 @@
     "Pharma",
     "Bank"
   ],
-  "intraday_regime": "choppy",
+  "intraday_regime": "mixed",
   "macro": {
-    "date": "2026-10-22",
-    "session": "midday",
-    "generated_at": "2026-10-22T06:15:45.281633",
-    "global_score": 0.258,
-    "india_score": 0.5,
-    "overall_score": 0.367,
-    "mood": "risk_on",
+    "date": "2026-10-23",
+    "session": "preopen",
+    "generated_at": "2026-10-23T03:05:40.299497",
+    "global_score": -0.234,
+    "india_score": 0.0,
+    "overall_score": -0.129,
+    "mood": "neutral",
     "drivers": [
-      "My father-in-law, 81, sold his $75,000 home and paid off his daughter\u2019s $50,000 debt. What happens to him now?",
-      "The Social Security Administration wants more babies signed up for \u2018Trump accounts.\u2019 But there\u2019s still a catch.",
-      "This wonky maneuver kept Mark Zuckerberg from fleeing a California billionaire tax",
-      "Tesla\u2019s stock falls as Elon Musk leaves investors wanting more",
-      "Meta\u2019s stock rises as investors glimpse an opportunity that could dwarf the ad business",
-      "Why investors should be skeptical of a potential Tesla-SpaceX merger",
-      "Trump says data centers should generate their own electricity \u2014 but experts say only states can mandate that",
-      "Oil is now flowing out of the Persian Gulf like before the Iran war. Why prices may still not come down anytime soon."
+      "My partner of 17 years left me his $1 million home. His children are crying foul. Am I obliged to split it with them?",
+      "\u2018I don\u2019t feel sorry for myself\u2019: I\u2019m 64 and will be renting for the rest of my life. Is that so bad?",
+      "CoreWeave set off a wave of anxiety \u2014 but Wall Street\u2019s dire prognosis is premature",
+      "The U.S. stock market is fracturing into two camps, and it\u2019s leaving investors with a brutal case of whiplash",
+      "Treasury yields log biggest drop since the 2023 banking crisis. Here\u2019s what\u2019s going on.",
+      "Americans are having fewer babies \u2014 and pampering them with luxury diapers",
+      "3 big reasons Micron and other chip stocks fell hard on Thursday",
+      "Oil prices approach Iran-war highs as soaring tanker rates trigger a second energy squeeze"
     ],
     "global_cues": {
       "dow": {
-        "last": 52856.09,
-        "chg_pct": 0.69
+        "last": 52867.98,
+        "chg_pct": 0.02
       },
       "nasdaq": {
-        "last": 26702.86,
-        "chg_pct": 1.05
+        "last": 26008.86,
+        "chg_pct": -2.6
       },
       "sp500": {
-        "last": 7757.17,
-        "chg_pct": 0.58
+        "last": 7663.43,
+        "chg_pct": -1.21
       },
       "nikkei": {
-        "last": 62923.21,
-        "chg_pct": -2.63
+        "last": 61825.26,
+        "chg_pct": -1.72
       },
       "crude": {
-        "last": 97.15,
-        "chg_pct": -4.56
+        "last": 99.95,
+        "chg_pct": 0.48
       },
       "usdinr": {
-        "last": 94.67,
-        "chg_pct": -0.05
+        "last": 94.81,
+        "chg_pct": 0.53
       },
       "gold": {
-        "last": 4150.0,
-        "chg_pct": 0.18
+        "last": 4038.0,
+        "chg_pct": -0.55
       }
     },
-    "summary": "Overall macro mood is risk-on (+0.37). US Dow +0.7% overnight. Crude -4.6%. USD/INR -0.1%. Notable: US Fed rate hike / hawkish; Geopolitical conflict / war.",
+    "summary": "Overall macro mood is neutral (-0.13). US Dow +0.0% overnight. Crude +0.5%. USD/INR +0.5%. Notable: Geopolitical conflict / war.",
     "playbook": [
-      "Hawkish Fed pressures Nifty via FII outflows and stronger USD.",
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially."
     ],
     "playbook_bias": "risk_off",
     "article_count": 60
   },
-  "macro_tailwind": true,
   "macro_risk_factor": 1.0,
   "fii_dii": {
-    "date": "2026-10-22",
-    "fii_net_cr": 1022.32,
-    "dii_net_cr": 1614.32,
-    "combined_net_cr": 2636.64,
-    "signal": "strong_inflow",
+    "date": "2026-10-23",
+    "fii_net_cr": -3458.7,
+    "dii_net_cr": 2891.32,
+    "combined_net_cr": -567.38,
+    "signal": "outflow",
     "ok": true,
     "error": "",
     "history": [
-      {
-        "date": "2026-09-11",
-        "fii": -930.9,
-        "dii": 1968.17,
-        "combined": 1037.27
-      },
       {
         "date": "2026-09-14",
         "fii": -930.9,
@@ -321,19 +313,24 @@
         "fii": 1022.32,
         "dii": 1614.32,
         "combined": 2636.64
+      },
+      {
+        "date": "2026-10-23",
+        "fii": -3458.7,
+        "dii": 2891.32,
+        "combined": -567.38
       }
     ]
   },
-  "flow_tailwind": true,
   "pcr": {
-    "date": "2026-10-22",
-    "pcr": 0.7,
-    "reading": "bearish_bias",
-    "total_pe_oi": 2535391,
-    "total_ce_oi": 3622399,
-    "spot": 22811.35,
-    "max_pain": 22900.0,
-    "max_pain_dist_pct": -0.39,
+    "date": "2026-10-23",
+    "pcr": 0.821,
+    "reading": "neutral",
+    "total_pe_oi": 2940998,
+    "total_ce_oi": 3582397,
+    "spot": 22687.65,
+    "max_pain": 22850.0,
+    "max_pain_dist_pct": -0.72,
     "oi_bias": "call_heavy_resistance",
     "ok": true,
     "error": ""

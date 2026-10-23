@@ -1,120 +1,5 @@
 [
   {
-    "timestamp": "2026-08-19T06:15:50.858030",
-    "date": "2026-08-19",
-    "ticker": "UNIONBANK.NS",
-    "session": "midday",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 76.2,
-    "entry": 186.06,
-    "stop_loss": 179.24,
-    "target": 199.7,
-    "reason": "paper midday",
-    "patterns": [
-      "pivot_s1_breakdown",
-      "adx_strong_trend_up",
-      "full_bullish_alignment"
-    ]
-  },
-  {
-    "timestamp": "2026-08-19T06:15:50.859285",
-    "date": "2026-08-19",
-    "ticker": "PIDILITIND.NS",
-    "session": "midday",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 95,
-    "entry": 1661.2,
-    "stop_loss": 1615.93,
-    "target": 1751.74,
-    "reason": "paper midday",
-    "patterns": [
-      "pivot_s1_breakdown",
-      "adx_strong_trend_up",
-      "full_bullish_alignment"
-    ]
-  },
-  {
-    "timestamp": "2026-08-19T06:15:50.863161",
-    "date": "2026-08-19",
-    "ticker": "SIEMENS.NS",
-    "session": "midday",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 73.8,
-    "entry": 3903.6,
-    "stop_loss": 3738.15,
-    "target": 4234.5,
-    "reason": "paper midday",
-    "patterns": [
-      "low_volume_drift",
-      "pivot_s1_breakdown",
-      "adx_strong_trend_up",
-      "shooting_star",
-      "full_bullish_alignment"
-    ]
-  },
-  {
-    "timestamp": "2026-08-19T06:15:50.865214",
-    "date": "2026-08-19",
-    "ticker": "HINDALCO.NS",
-    "session": "midday",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 60.1,
-    "entry": 1030.15,
-    "stop_loss": 988.96,
-    "target": 1112.53,
-    "reason": "paper midday",
-    "patterns": [
-      "pivot_s1_breakdown",
-      "adx_strong_trend_up",
-      "full_bullish_alignment",
-      "inside_bar"
-    ]
-  },
-  {
-    "timestamp": "2026-08-19T07:45:47.538997",
-    "date": "2026-08-19",
-    "ticker": "MARICO.NS",
-    "session": "afternoon",
-    "action": "SELL",
-    "signal": "SELL",
-    "confidence": 56.3,
-    "entry": 850.9,
-    "stop_loss": 877.42,
-    "target": 797.86,
-    "reason": "paper afternoon",
-    "patterns": [
-      "tweezer_top",
-      "strong_bearish_marubozu",
-      "pivot_s1_breakdown",
-      "full_bullish_alignment",
-      "outside_bar",
-      "evening_star"
-    ]
-  },
-  {
-    "timestamp": "2026-08-19T07:45:47.541407",
-    "date": "2026-08-19",
-    "ticker": "UNIONBANK.NS",
-    "session": "afternoon",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 76.2,
-    "entry": 185.45,
-    "stop_loss": 178.45,
-    "target": 199.44,
-    "reason": "paper afternoon",
-    "patterns": [
-      "adx_strong_trend_up",
-      "low_volume_drift",
-      "full_bullish_alignment",
-      "pivot_s1_breakdown"
-    ]
-  },
-  {
     "timestamp": "2026-08-19T07:45:47.542813",
     "date": "2026-08-19",
     "ticker": "PIDILITIND.NS",
@@ -21278,6 +21163,129 @@
       "three_black_crows",
       "adx_ranging_market",
       "doji"
+    ]
+  },
+  {
+    "timestamp": "2026-10-23T09:28:59.208135",
+    "date": "2026-10-23",
+    "ticker": "HINDALCO.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 41.5,
+    "entry": 867.1,
+    "stop_loss": 780.39,
+    "target": 988.49,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "three_black_crows",
+      "pivot_s1_breakdown",
+      "stoch_rsi_overbought_reversal",
+      "adx_strong_trend_down",
+      "full_bearish_alignment"
+    ]
+  },
+  {
+    "timestamp": "2026-10-23T09:28:59.211422",
+    "date": "2026-10-23",
+    "ticker": "HOMEFIRST.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 35.0,
+    "entry": 1002.8,
+    "stop_loss": 902.52,
+    "target": 1143.19,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "low_volume_drift",
+      "three_black_crows",
+      "pivot_s1_breakdown",
+      "inside_bar",
+      "bb_lower_bounce",
+      "adx_strong_trend_down",
+      "full_bearish_alignment"
+    ]
+  },
+  {
+    "timestamp": "2026-10-23T09:28:59.214349",
+    "date": "2026-10-23",
+    "ticker": "IDFCFIRSTB.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 38.0,
+    "entry": 72.34,
+    "stop_loss": 65.11,
+    "target": 82.47,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "three_black_crows",
+      "full_bearish_alignment",
+      "pivot_s1_breakdown"
+    ]
+  },
+  {
+    "timestamp": "2026-10-23T09:28:59.239628",
+    "date": "2026-10-23",
+    "ticker": "BANDHANBNK.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 31.9,
+    "entry": 149.88,
+    "stop_loss": 134.89,
+    "target": 170.86,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "low_volume_drift",
+      "spinning_top",
+      "three_black_crows",
+      "pivot_s1_breakdown",
+      "full_bearish_alignment"
+    ]
+  },
+  {
+    "timestamp": "2026-10-23T09:28:59.240778",
+    "date": "2026-10-23",
+    "ticker": "NHPC.NS",
+    "session": "intraday_close",
+    "action": "SELL",
+    "signal": "SELL",
+    "confidence": 75.5,
+    "entry": 69.47,
+    "stop_loss": 73.41,
+    "target": 63.95,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "pivot_s1_breakdown",
+      "stoch_rsi_overbought_reversal",
+      "adx_strong_trend_down",
+      "full_bearish_alignment",
+      "macd_bullish_crossover",
+      "tweezer_top",
+      "near_52w_low"
+    ]
+  },
+  {
+    "timestamp": "2026-10-23T09:28:59.242427",
+    "date": "2026-10-23",
+    "ticker": "ADANIGREEN.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 30,
+    "entry": 1178.5,
+    "stop_loss": 1060.65,
+    "target": 1343.49,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "three_black_crows",
+      "doji",
+      "pivot_s1_breakdown",
+      "full_bearish_alignment",
+      "adx_ranging_market",
+      "macd_bearish_crossover"
     ]
   }
 ]

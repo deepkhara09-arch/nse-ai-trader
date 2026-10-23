@@ -1,6 +1,6 @@
 {
   "date": "2026-10-23",
-  "session": "morning",
+  "session": "midday",
   "nifty": {
     "symbol": "^NSEI",
     "value": 22687.65,
@@ -63,6 +63,7 @@
   "warnings": [
     "VIX=15.8 at 97th percentile vs last 30d \u2014 unusually high stress",
     "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
+    "Nifty in intraday downtrend \u2014 avoid new longs this session",
     "Net institutional outflow (\u20b9-567 Cr)"
   ],
   "leading_sectors": [
@@ -74,14 +75,14 @@
     "Pharma",
     "Bank"
   ],
-  "intraday_regime": "mixed",
+  "intraday_regime": "trending_down",
   "macro": {
     "date": "2026-10-23",
-    "session": "preopen",
-    "generated_at": "2026-10-23T03:05:40.299497",
-    "global_score": -0.234,
+    "session": "midday",
+    "generated_at": "2026-10-23T06:15:48.111210",
+    "global_score": -0.246,
     "india_score": 0.0,
-    "overall_score": -0.129,
+    "overall_score": -0.135,
     "mood": "neutral",
     "drivers": [
       "My partner of 17 years left me his $1 million home. His children are crying foul. Am I obliged to split it with them?",
@@ -107,23 +108,23 @@
         "chg_pct": -1.21
       },
       "nikkei": {
-        "last": 61825.26,
-        "chg_pct": -1.72
+        "last": 62610.46,
+        "chg_pct": -0.47
       },
       "crude": {
-        "last": 99.95,
-        "chg_pct": 0.48
+        "last": 99.47,
+        "chg_pct": 2.39
       },
       "usdinr": {
-        "last": 94.81,
-        "chg_pct": 0.53
+        "last": 94.93,
+        "chg_pct": 0.65
       },
       "gold": {
-        "last": 4038.0,
-        "chg_pct": -0.55
+        "last": 4060.4,
+        "chg_pct": -2.16
       }
     },
-    "summary": "Overall macro mood is neutral (-0.13). US Dow +0.0% overnight. Crude +0.5%. USD/INR +0.5%. Notable: Geopolitical conflict / war.",
+    "summary": "Overall macro mood is neutral (-0.14). US Dow +0.0% overnight. Crude +2.4%. USD/INR +0.7%. Notable: Geopolitical conflict / war.",
     "playbook": [
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially."
     ],

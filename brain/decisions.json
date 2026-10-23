@@ -1,105 +1,5 @@
 [
   {
-    "timestamp": "2026-08-18T10:11:08.642625",
-    "date": "2026-08-18",
-    "ticker": "CHOLAFIN.NS",
-    "session": "preclose",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 95,
-    "entry": 1870.1,
-    "stop_loss": 1791.09,
-    "target": 2028.11,
-    "reason": "paper preclose",
-    "patterns": [
-      "pivot_s1_breakdown",
-      "low_volume_drift",
-      "full_bullish_alignment"
-    ]
-  },
-  {
-    "timestamp": "2026-08-18T10:11:08.644293",
-    "date": "2026-08-18",
-    "ticker": "BAJFINANCE.NS",
-    "session": "preclose",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 95,
-    "entry": 1091.5,
-    "stop_loss": 1045.61,
-    "target": 1183.28,
-    "reason": "paper preclose",
-    "patterns": [
-      "outside_bar",
-      "supertrend_bullish",
-      "full_bullish_alignment",
-      "pivot_s1_bounce",
-      "low_volume_drift",
-      "pivot_point_test",
-      "adx_strong_trend_up"
-    ]
-  },
-  {
-    "timestamp": "2026-08-18T10:11:08.645017",
-    "date": "2026-08-18",
-    "ticker": "SIEMENS.NS",
-    "session": "preclose",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 95,
-    "entry": 3960.0,
-    "stop_loss": 3790.18,
-    "target": 4299.64,
-    "reason": "paper preclose",
-    "patterns": [
-      "supertrend_bullish",
-      "doji",
-      "stoch_rsi_oversold_reversal",
-      "full_bullish_alignment",
-      "spinning_top",
-      "pivot_point_test",
-      "adx_strong_trend_up"
-    ]
-  },
-  {
-    "timestamp": "2026-08-18T10:11:08.645941",
-    "date": "2026-08-18",
-    "ticker": "DRREDDY.NS",
-    "session": "preclose",
-    "action": "SELL",
-    "signal": "SELL",
-    "confidence": 72.2,
-    "entry": 1183.0,
-    "stop_loss": 1215.28,
-    "target": 1118.44,
-    "reason": "paper preclose",
-    "patterns": [
-      "rsi_bullish_divergence",
-      "pivot_s1_breakdown",
-      "adx_strong_trend_down",
-      "stoch_rsi_overbought_reversal",
-      "full_bearish_alignment"
-    ]
-  },
-  {
-    "timestamp": "2026-08-18T10:11:08.646912",
-    "date": "2026-08-18",
-    "ticker": "SHRIRAMFIN.NS",
-    "session": "preclose",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 71.2,
-    "entry": 1106.5,
-    "stop_loss": 1066.12,
-    "target": 1187.26,
-    "reason": "paper preclose",
-    "patterns": [
-      "pivot_s1_breakdown",
-      "low_volume_drift",
-      "full_bullish_alignment"
-    ]
-  },
-  {
     "timestamp": "2026-08-18T15:42:13.879561+05:30",
     "date": "2026-08-18",
     "ticker": "PIDILITIND.NS",
@@ -21293,6 +21193,105 @@
       "strong_bearish_marubozu",
       "three_black_crows",
       "full_bearish_alignment"
+    ]
+  },
+  {
+    "timestamp": "2026-10-23T04:05:45.868908",
+    "date": "2026-10-23",
+    "ticker": "HINDALCO.NS",
+    "session": "morning",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 48.0,
+    "entry": 868.95,
+    "stop_loss": 782.06,
+    "target": 990.6,
+    "reason": "paper morning",
+    "patterns": [
+      "stoch_rsi_overbought_reversal",
+      "full_bearish_alignment",
+      "pivot_s1_breakdown",
+      "adx_strong_trend_down",
+      "rsi_bullish_divergence"
+    ]
+  },
+  {
+    "timestamp": "2026-10-23T04:05:45.870301",
+    "date": "2026-10-23",
+    "ticker": "HOMEFIRST.NS",
+    "session": "morning",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 31.2,
+    "entry": 1003.5,
+    "stop_loss": 903.15,
+    "target": 1143.99,
+    "reason": "paper morning",
+    "patterns": [
+      "adx_strong_trend_down",
+      "three_black_crows",
+      "full_bearish_alignment",
+      "pivot_s1_breakdown"
+    ]
+  },
+  {
+    "timestamp": "2026-10-23T04:05:45.874375",
+    "date": "2026-10-23",
+    "ticker": "IDFCFIRSTB.NS",
+    "session": "morning",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 38.0,
+    "entry": 73.76,
+    "stop_loss": 66.38,
+    "target": 84.09,
+    "reason": "paper morning",
+    "patterns": [
+      "three_black_crows",
+      "full_bearish_alignment",
+      "pivot_s1_breakdown"
+    ]
+  },
+  {
+    "timestamp": "2026-10-23T04:05:45.875744",
+    "date": "2026-10-23",
+    "ticker": "BANDHANBNK.NS",
+    "session": "morning",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 34.2,
+    "entry": 155.72,
+    "stop_loss": 140.15,
+    "target": 177.52,
+    "reason": "paper morning",
+    "patterns": [
+      "spinning_top",
+      "full_bearish_alignment",
+      "pivot_s1_breakdown",
+      "three_black_crows",
+      "low_volume_drift"
+    ]
+  },
+  {
+    "timestamp": "2026-10-23T04:05:45.877155",
+    "date": "2026-10-23",
+    "ticker": "NHPC.NS",
+    "session": "morning",
+    "action": "SELL",
+    "signal": "SELL",
+    "confidence": 75.5,
+    "entry": 71.48,
+    "stop_loss": 75.42,
+    "target": 65.96,
+    "reason": "paper morning",
+    "patterns": [
+      "stoch_rsi_overbought_reversal",
+      "near_52w_low",
+      "tweezer_top",
+      "full_bearish_alignment",
+      "pivot_s1_breakdown",
+      "adx_strong_trend_down",
+      "macd_bullish_crossover"
     ]
   }
 ]

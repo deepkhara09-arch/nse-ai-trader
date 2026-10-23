@@ -1,5 +1,5 @@
 {
-  "capital": 75370.12,
+  "capital": 70223.56,
   "open_positions": [
     {
       "ticker": "POWERGRID.NS",
@@ -42,8 +42,8 @@
         "In a long-term strong downtrend (2yr)",
         "\u2713 Daily setup aligned with the higher-timeframe trend"
       ],
-      "current_price": 247.75,
-      "unrealized_pnl": -84.6,
+      "current_price": 246.3,
+      "unrealized_pnl": -32.4,
       "max_held_days": 40,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -61,7 +61,8 @@
       "view_hist": [
         1,
         1,
-        1
+        1,
+        0
       ]
     },
     {
@@ -99,8 +100,8 @@
         "\u26a0 Daily sell fights the higher-timeframe uptrend \u2014 needs extra conviction",
         "\u26a0 Strong opposing signals present (opposing evidence 59% of the leading side) \u2014 conflicted setup, needs extra conviction"
       ],
-      "current_price": 888.7,
-      "unrealized_pnl": 86.0,
+      "current_price": 868.95,
+      "unrealized_pnl": -12.75,
       "max_held_days": 40,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -116,6 +117,7 @@
         "hist_long_trend": "uptrend"
       },
       "view_hist": [
+        0,
         0,
         0,
         0
@@ -156,8 +158,8 @@
         "\u26a0 Daily sell fights the higher-timeframe uptrend \u2014 needs extra conviction",
         "\u26a0 Strong opposing signals present (opposing evidence 94% of the leading side) \u2014 conflicted setup, needs extra conviction"
       ],
-      "current_price": 74.63,
-      "unrealized_pnl": 31.32,
+      "current_price": 73.76,
+      "unrealized_pnl": -19.14,
       "max_held_days": 40,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -173,6 +175,7 @@
         "hist_long_trend": "strong_uptrend"
       },
       "view_hist": [
+        0,
         0,
         0,
         0
@@ -209,8 +212,8 @@
         "\u26a0 Daily sell fights the higher-timeframe uptrend \u2014 needs extra conviction",
         "\u26a0 Strong opposing signals present (opposing evidence 86% of the leading side) \u2014 conflicted setup, needs extra conviction"
       ],
-      "current_price": 158.81,
-      "unrealized_pnl": 35.1,
+      "current_price": 155.72,
+      "unrealized_pnl": -45.24,
       "max_held_days": 40,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -226,6 +229,7 @@
         "hist_long_trend": "uptrend"
       },
       "view_hist": [
+        0,
         0,
         0,
         0
@@ -267,8 +271,8 @@
         "\u26a0 Daily sell fights the higher-timeframe uptrend \u2014 needs extra conviction",
         "\u26a0 Strong opposing signals present (opposing evidence 87% of the leading side) \u2014 conflicted setup, needs extra conviction"
       ],
-      "current_price": 1021.9,
-      "unrealized_pnl": 18.9,
+      "current_price": 1003.5,
+      "unrealized_pnl": -36.3,
       "max_held_days": 40,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -286,8 +290,61 @@
       "view_hist": [
         0,
         0,
+        0,
         0
       ]
+    },
+    {
+      "ticker": "NHPC.NS",
+      "sector": "Energy",
+      "open_date": "2026-10-23",
+      "open_session": "morning",
+      "action": "SELL",
+      "entry": 71.48,
+      "qty": 72,
+      "invested": 5146.56,
+      "stop_loss": 75.42,
+      "target": 65.96,
+      "style": "swing",
+      "confidence": 75.5,
+      "patterns": [
+        "stoch_rsi_overbought_reversal",
+        "near_52w_low",
+        "tweezer_top",
+        "full_bearish_alignment",
+        "pivot_s1_breakdown",
+        "adx_strong_trend_down",
+        "macd_bullish_crossover"
+      ],
+      "buy_reasons": [
+        "RSI=48 in healthy buy zone",
+        "MACD histogram positive",
+        "Positive news sentiment (0.29)",
+        "News sentiment improving across sessions",
+        "All EMAs stacked bearish",
+        "Candlestick: tweezer top",
+        "ADX strong trend \u2014 downside momentum confirmed",
+        "Broke below Pivot S1 support \u2014 bearish",
+        "StochRSI overbought with bearish candle \u2014 reversal",
+        "In a long-term downtrend (2yr)",
+        "\u2713 Daily setup aligned with the higher-timeframe trend"
+      ],
+      "current_price": 71.48,
+      "unrealized_pnl": 0.0,
+      "max_held_days": 40,
+      "vol_regime_pct": 0.09,
+      "entry_market": {
+        "nifty_trend": "down",
+        "vix": 15.76,
+        "mood": "bearish",
+        "regime": "mixed",
+        "sector_momentum": -0.218,
+        "delivery_signal": "neutral",
+        "rsi": 48.1,
+        "mtf_alignment": "aligned",
+        "opposing_ratio": 0.31,
+        "hist_long_trend": "downtrend"
+      }
     }
   ],
   "closed_trades": [],
@@ -297,7 +354,7 @@
   "lifetime_wins": 0,
   "lifetime_losses": 0,
   "lifetime_pnl": 0.0,
-  "last_pnl_reset_date": "2026-10-22",
+  "last_pnl_reset_date": "2026-10-23",
   "max_drawdown_pct": 0.0,
   "current_drawdown_pct": 0.0,
   "portfolio_peak": 100000.0,

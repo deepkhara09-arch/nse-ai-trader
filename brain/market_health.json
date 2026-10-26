@@ -1,151 +1,143 @@
 {
-  "date": "2026-10-23",
-  "session": "intraday_close",
+  "date": "2026-10-26",
+  "session": "preopen",
   "nifty": {
     "symbol": "^NSEI",
-    "value": 22687.65,
-    "day_change_pct": -0.54,
+    "value": 22600.0,
+    "day_change_pct": -0.39,
     "trend_5d": "down",
-    "trend_20d": "strong_down",
-    "ath_pct_60d": -6.94
+    "trend_20d": "down",
+    "ath_pct_60d": -6.99
   },
   "vix": {
-    "value": 15.76,
+    "value": 16.86,
     "level": "normal",
-    "percentile_30d": 97.0,
-    "avg_30d": 13.34
+    "percentile_30d": 96.0,
+    "avg_30d": 13.65
   },
   "bank_nifty": {
     "symbol": "^NSEBANK",
-    "value": 54925.7,
-    "day_change_pct": -0.09,
+    "value": 54287.35,
+    "day_change_pct": -1.16,
     "trend_5d": "down",
     "trend_20d": "down",
-    "ath_pct_60d": -5.34,
+    "ath_pct_60d": -6.44,
     "diverging": false
   },
   "sectors": {
     "IT": {
       "symbol": "ITBEES.NS",
-      "value": 35.56,
-      "day_change_pct": -1.08,
-      "trend_5d": "strong_up",
+      "value": 35.62,
+      "day_change_pct": 0.17,
+      "trend_5d": "sideways",
       "trend_20d": "strong_up",
-      "ath_pct_60d": -3.47
+      "ath_pct_60d": -3.39
     },
     "Pharma": {
       "symbol": "PHARMABEES.NS",
-      "value": 26.23,
-      "day_change_pct": 0.27,
+      "value": 25.89,
+      "day_change_pct": -1.3,
       "trend_5d": "down",
       "trend_20d": "strong_down",
-      "ath_pct_60d": -8.22
+      "ath_pct_60d": -9.41
     },
     "Bank": {
       "symbol": "BANKBEES.NS",
-      "value": 568.33,
-      "day_change_pct": -0.05,
-      "trend_5d": "down",
+      "value": 560.74,
+      "day_change_pct": -1.34,
+      "trend_5d": "strong_down",
       "trend_20d": "down",
-      "ath_pct_60d": -6.52
+      "ath_pct_60d": -7.77
     },
     "Infra": {
       "symbol": "INFRABEES.NS",
-      "value": 890.42,
-      "day_change_pct": 0.1,
-      "trend_5d": "sideways",
+      "value": 883.0,
+      "day_change_pct": -0.83,
+      "trend_5d": "down",
       "trend_20d": "strong_down",
-      "ath_pct_60d": -8.85
+      "ath_pct_60d": -8.88
     }
   },
   "market_mood": "bearish",
   "trade_allowed": true,
   "warnings": [
-    "VIX=15.8 at 97th percentile vs last 30d \u2014 unusually high stress",
-    "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
-    "Net institutional outflow (\u20b9-567 Cr)"
+    "VIX=16.9 at 96th percentile vs last 30d \u2014 unusually high stress",
+    "Nifty in downtrend (down) \u2014 only high-confidence BUY signals"
   ],
-  "leading_sectors": [
-    "IT"
-  ],
+  "leading_sectors": [],
   "market_regime": "normal",
-  "sector_breadth": 0.25,
+  "sector_breadth": 0.0,
   "lagging_sectors": [
     "Pharma",
-    "Bank"
+    "Bank",
+    "Infra"
   ],
-  "intraday_regime": "mixed",
   "macro": {
-    "date": "2026-10-23",
-    "session": "midday",
-    "generated_at": "2026-10-23T06:15:48.111210",
-    "global_score": -0.246,
+    "date": "2026-10-26",
+    "session": "preopen",
+    "generated_at": "2026-10-26T03:05:39.921132",
+    "global_score": -0.177,
     "india_score": 0.0,
-    "overall_score": -0.135,
+    "overall_score": -0.097,
     "mood": "neutral",
     "drivers": [
-      "My partner of 17 years left me his $1 million home. His children are crying foul. Am I obliged to split it with them?",
+      "Musk says SpaceX landed a $40 billion debt deal \u2014 and forecasts doom for some AI rivals",
+      "\u2018She\u2019s living the dream\u2019: My stepmother said I can buy my childhood home for $850,000. Is she taking advantage of me?",
       "\u2018I don\u2019t feel sorry for myself\u2019: I\u2019m 64 and will be renting for the rest of my life. Is that so bad?",
-      "CoreWeave set off a wave of anxiety \u2014 but Wall Street\u2019s dire prognosis is premature",
-      "The U.S. stock market is fracturing into two camps, and it\u2019s leaving investors with a brutal case of whiplash",
-      "Treasury yields log biggest drop since the 2023 banking crisis. Here\u2019s what\u2019s going on.",
-      "Americans are having fewer babies \u2014 and pampering them with luxury diapers",
-      "3 big reasons Micron and other chip stocks fell hard on Thursday",
-      "Oil prices approach Iran-war highs as soaring tanker rates trigger a second energy squeeze"
+      "We stopped helping our neighbors with free home repairs and our friendship cooled. Who\u2019s to blame?",
+      "My father-in-law, 81, sold his $75,000 home to pay his daughter\u2019s $50,000 debt. How can I keep him from becoming destitute?",
+      "My partner of 17 years left me his $1 million home. His children are livid. Am I obliged to split it with them?",
+      "We have a $300,000 mortgage with a 2.75% interest rate. I want to pay it off. My husband says I\u2019m crazy. Who\u2019s right?",
+      "My spouse was awarded $90,000 from my 401(k) in our divorce. How is that fair?"
     ],
     "global_cues": {
       "dow": {
-        "last": 52867.98,
-        "chg_pct": 0.02
+        "last": 52215.16,
+        "chg_pct": -1.23
       },
       "nasdaq": {
-        "last": 26008.86,
-        "chg_pct": -2.6
+        "last": 25955.34,
+        "chg_pct": -0.21
       },
       "sp500": {
-        "last": 7663.43,
-        "chg_pct": -1.21
+        "last": 7623.68,
+        "chg_pct": -0.52
       },
       "nikkei": {
-        "last": 62610.46,
-        "chg_pct": -0.47
+        "last": 62214.66,
+        "chg_pct": -0.76
       },
       "crude": {
-        "last": 99.47,
-        "chg_pct": 2.39
+        "last": 101.06,
+        "chg_pct": -2.14
       },
       "usdinr": {
         "last": 94.93,
-        "chg_pct": 0.65
+        "chg_pct": 0.23
       },
       "gold": {
-        "last": 4060.4,
-        "chg_pct": -2.16
+        "last": 4013.5,
+        "chg_pct": 0.14
       }
     },
-    "summary": "Overall macro mood is neutral (-0.14). US Dow +0.0% overnight. Crude +2.4%. USD/INR +0.7%. Notable: Geopolitical conflict / war.",
+    "summary": "Overall macro mood is neutral (-0.10). US Dow -1.2% overnight. Crude -2.1%. USD/INR +0.2%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
-      "Geopolitical shocks trigger global risk-off; gold up, equities down initially."
+      "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
+      "Trade-war headlines spook global markets; IT & export names react most."
     ],
     "playbook_bias": "risk_off",
     "article_count": 60
   },
   "macro_risk_factor": 1.0,
   "fii_dii": {
-    "date": "2026-10-23",
-    "fii_net_cr": -3458.7,
-    "dii_net_cr": 2891.32,
-    "combined_net_cr": -567.38,
-    "signal": "outflow",
+    "date": "2026-10-26",
+    "fii_net_cr": 887.65,
+    "dii_net_cr": 3235.36,
+    "combined_net_cr": 4123.01,
+    "signal": "strong_inflow",
     "ok": true,
     "error": "",
     "history": [
-      {
-        "date": "2026-09-14",
-        "fii": -930.9,
-        "dii": 1968.17,
-        "combined": 1037.27
-      },
       {
         "date": "2026-09-15",
         "fii": -2977.86,
@@ -319,18 +311,25 @@
         "fii": -3458.7,
         "dii": 2891.32,
         "combined": -567.38
+      },
+      {
+        "date": "2026-10-26",
+        "fii": 887.65,
+        "dii": 3235.36,
+        "combined": 4123.01
       }
     ]
   },
+  "flow_tailwind": true,
   "pcr": {
-    "date": "2026-10-23",
-    "pcr": 0.821,
-    "reading": "neutral",
-    "total_pe_oi": 2940998,
-    "total_ce_oi": 3582397,
-    "spot": 22687.65,
-    "max_pain": 22850.0,
-    "max_pain_dist_pct": -0.72,
+    "date": "2026-10-26",
+    "pcr": 0.737,
+    "reading": "bearish_bias",
+    "total_pe_oi": 3018320,
+    "total_ce_oi": 4093052,
+    "spot": 22600.0,
+    "max_pain": 22700.0,
+    "max_pain_dist_pct": -0.44,
     "oi_bias": "call_heavy_resistance",
     "ok": true,
     "error": ""

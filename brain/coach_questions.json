@@ -7,66 +7,6 @@
       "patterns": "three_black_crows, full_bearish_alignment, pivot_s1_breakdown",
       "rsi": 24.8
     },
-    "queued_at": "2026-10-23T09:28:59.246811"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of low_volume_drift, three_black_crows, pivot_s1_breakdown mean for a swing trade on BANDHANBNK? Current RSI=32, MACD hist=-0.8908, Vol=0.4x average. Signal is BUY.",
-    "context": {
-      "ticker": "BANDHANBNK.NS",
-      "signal": "BUY",
-      "patterns": "low_volume_drift, three_black_crows, pivot_s1_breakdown",
-      "rsi": 32.4
-    },
-    "queued_at": "2026-10-23T09:28:59.247922"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of three_black_crows, bb_lower_bounce, adx_strong_trend_down mean for a swing trade on HOMEFIRST? Current RSI=32, MACD hist=-4.8164, Vol=0.5x average. Signal is BUY.",
-    "context": {
-      "ticker": "HOMEFIRST.NS",
-      "signal": "BUY",
-      "patterns": "three_black_crows, bb_lower_bounce, adx_strong_trend_down",
-      "rsi": 32.4
-    },
-    "queued_at": "2026-10-23T09:28:59.248968"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of pivot_s1_breakdown, stoch_rsi_overbought_reversal, adx_strong_trend_down mean for a swing trade on NHPC? Current RSI=48, MACD hist=+0.0168, Vol=0.8x average. Signal is SELL.",
-    "context": {
-      "ticker": "NHPC.NS",
-      "signal": "SELL",
-      "patterns": "pivot_s1_breakdown, stoch_rsi_overbought_reversal, adx_strong_trend_down",
-      "rsi": 48.1
-    },
-    "queued_at": "2026-10-23T09:28:59.250039"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of three_black_crows, stoch_rsi_overbought_reversal, adx_strong_trend_down mean for a swing trade on HINDALCO? Current RSI=34, MACD hist=-0.2177, Vol=0.9x average. Signal is BUY.",
-    "context": {
-      "ticker": "HINDALCO.NS",
-      "signal": "BUY",
-      "patterns": "three_black_crows, stoch_rsi_overbought_reversal, adx_strong_trend_down",
-      "rsi": 33.6
-    },
-    "queued_at": "2026-10-23T09:28:59.345134"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of three_black_crows, bb_lower_bounce, adx_strong_trend_down mean for a swing trade on HOMEFIRST? Current RSI=32, MACD hist=-4.8164, Vol=0.5x average. Signal is BUY.",
-    "context": {
-      "ticker": "HOMEFIRST.NS",
-      "signal": "BUY",
-      "patterns": "three_black_crows, bb_lower_bounce, adx_strong_trend_down",
-      "rsi": 32.4
-    },
-    "queued_at": "2026-10-23T09:28:59.346203"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of three_black_crows, full_bearish_alignment, pivot_s1_breakdown mean for a swing trade on IDFCFIRSTB? Current RSI=25, MACD hist=-0.4624, Vol=0.6x average. Signal is BUY.",
-    "context": {
-      "ticker": "IDFCFIRSTB.NS",
-      "signal": "BUY",
-      "patterns": "three_black_crows, full_bearish_alignment, pivot_s1_breakdown",
-      "rsi": 24.8
-    },
     "queued_at": "2026-10-23T09:28:59.349080"
   },
   {
@@ -98,5 +38,65 @@
       "rsi": 45.7
     },
     "queued_at": "2026-10-23T09:28:59.352860"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_down, stoch_rsi_overbought_reversal, three_black_crows mean for a swing trade on HINDALCO? Current RSI=34, MACD hist=-0.2177, Vol=0.9x average. Signal is BUY.",
+    "context": {
+      "ticker": "HINDALCO.NS",
+      "signal": "BUY",
+      "patterns": "adx_strong_trend_down, stoch_rsi_overbought_reversal, three_black_crows",
+      "rsi": 33.6
+    },
+    "queued_at": "2026-10-26T03:05:41.569693"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of bb_lower_bounce, adx_strong_trend_down, three_black_crows mean for a swing trade on HOMEFIRST? Current RSI=32, MACD hist=-4.8164, Vol=0.5x average. Signal is BUY.",
+    "context": {
+      "ticker": "HOMEFIRST.NS",
+      "signal": "BUY",
+      "patterns": "bb_lower_bounce, adx_strong_trend_down, three_black_crows",
+      "rsi": 32.4
+    },
+    "queued_at": "2026-10-26T03:05:41.570987"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of pivot_s1_breakdown, three_black_crows, full_bearish_alignment mean for a swing trade on IDFCFIRSTB? Current RSI=25, MACD hist=-0.4624, Vol=0.6x average. Signal is BUY.",
+    "context": {
+      "ticker": "IDFCFIRSTB.NS",
+      "signal": "BUY",
+      "patterns": "pivot_s1_breakdown, three_black_crows, full_bearish_alignment",
+      "rsi": 24.8
+    },
+    "queued_at": "2026-10-26T03:05:41.574977"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of three_black_crows, low_volume_drift, pivot_s1_breakdown mean for a swing trade on BANDHANBNK? Current RSI=32, MACD hist=-0.8908, Vol=0.4x average. Signal is BUY.",
+    "context": {
+      "ticker": "BANDHANBNK.NS",
+      "signal": "BUY",
+      "patterns": "three_black_crows, low_volume_drift, pivot_s1_breakdown",
+      "rsi": 32.4
+    },
+    "queued_at": "2026-10-26T03:05:41.576339"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_down, stoch_rsi_overbought_reversal, macd_bullish_crossover mean for a swing trade on NHPC? Current RSI=48, MACD hist=+0.0168, Vol=0.8x average. Signal is SELL.",
+    "context": {
+      "ticker": "NHPC.NS",
+      "signal": "SELL",
+      "patterns": "adx_strong_trend_down, stoch_rsi_overbought_reversal, macd_bullish_crossover",
+      "rsi": 48.1
+    },
+    "queued_at": "2026-10-26T03:05:41.577756"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of macd_bearish_crossover, doji, three_black_crows mean for a swing trade on ADANIGREEN? Current RSI=46, MACD hist=-0.9138, Vol=0.7x average. Signal is BUY.",
+    "context": {
+      "ticker": "ADANIGREEN.NS",
+      "signal": "BUY",
+      "patterns": "macd_bearish_crossover, doji, three_black_crows",
+      "rsi": 45.7
+    },
+    "queued_at": "2026-10-26T03:05:41.579925"
   }
 ]

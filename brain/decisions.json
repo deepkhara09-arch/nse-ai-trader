@@ -1,86 +1,5 @@
 [
   {
-    "timestamp": "2026-08-19T09:45:38.518792",
-    "date": "2026-08-19",
-    "ticker": "PIDILITIND.NS",
-    "session": "intraday_close",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 67.3,
-    "entry": 1648.1,
-    "stop_loss": 1601.34,
-    "target": 1741.61,
-    "reason": "paper intraday_close",
-    "patterns": [
-      "full_bullish_alignment",
-      "pivot_s1_breakdown"
-    ]
-  },
-  {
-    "timestamp": "2026-08-19T09:45:38.521593",
-    "date": "2026-08-19",
-    "ticker": "GAIL.NS",
-    "session": "intraday_close",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 95,
-    "entry": 172.3,
-    "stop_loss": 165.81,
-    "target": 185.29,
-    "reason": "paper intraday_close",
-    "patterns": [
-      "supertrend_bullish",
-      "full_bullish_alignment",
-      "low_volume_drift",
-      "adx_ranging_market",
-      "bullish_harami",
-      "tweezer_bottom",
-      "stoch_rsi_oversold_reversal",
-      "pivot_s1_bounce",
-      "pivot_point_test"
-    ]
-  },
-  {
-    "timestamp": "2026-08-19T09:45:38.523119",
-    "date": "2026-08-19",
-    "ticker": "SIEMENS.NS",
-    "session": "intraday_close",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 73.8,
-    "entry": 3885.5,
-    "stop_loss": 3720.05,
-    "target": 4216.4,
-    "reason": "paper intraday_close",
-    "patterns": [
-      "low_volume_drift",
-      "full_bullish_alignment",
-      "pivot_s1_breakdown",
-      "shooting_star",
-      "adx_strong_trend_up"
-    ]
-  },
-  {
-    "timestamp": "2026-08-19T10:11:10.553773",
-    "date": "2026-08-19",
-    "ticker": "ICICIBANK.NS",
-    "session": "preclose",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 71.9,
-    "entry": 1398.0,
-    "stop_loss": 1364.42,
-    "target": 1465.15,
-    "reason": "paper preclose",
-    "patterns": [
-      "pivot_s1_breakdown",
-      "rsi_bullish_divergence",
-      "full_bullish_alignment",
-      "spinning_top",
-      "evening_star"
-    ]
-  },
-  {
     "timestamp": "2026-08-19T10:11:10.554700",
     "date": "2026-08-19",
     "ticker": "UNIONBANK.NS",
@@ -21292,6 +21211,90 @@
       "strong_bearish_marubozu",
       "three_black_crows",
       "bb_lower_bounce"
+    ]
+  },
+  {
+    "timestamp": "2026-10-26T06:15:53.460496",
+    "date": "2026-10-26",
+    "ticker": "HOMEFIRST.NS",
+    "session": "midday",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 44.1,
+    "entry": 990.5,
+    "stop_loss": 891.45,
+    "target": 1129.17,
+    "reason": "paper midday",
+    "patterns": [
+      "adx_strong_trend_down",
+      "bb_lower_bounce",
+      "full_bearish_alignment",
+      "pivot_s1_breakdown",
+      "three_black_crows"
+    ]
+  },
+  {
+    "timestamp": "2026-10-26T06:15:53.467758",
+    "date": "2026-10-26",
+    "ticker": "IDFCFIRSTB.NS",
+    "session": "midday",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 44.1,
+    "entry": 71.44,
+    "stop_loss": 64.3,
+    "target": 81.44,
+    "reason": "paper midday",
+    "patterns": [
+      "strong_bearish_marubozu",
+      "adx_strong_trend_down",
+      "bb_lower_bounce",
+      "full_bearish_alignment",
+      "pivot_s1_breakdown",
+      "tweezer_top"
+    ]
+  },
+  {
+    "timestamp": "2026-10-26T06:15:53.468559",
+    "date": "2026-10-26",
+    "ticker": "BANDHANBNK.NS",
+    "session": "midday",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 69.7,
+    "entry": 148.49,
+    "stop_loss": 133.64,
+    "target": 169.28,
+    "reason": "paper midday",
+    "patterns": [
+      "strong_bearish_marubozu",
+      "bb_lower_bounce",
+      "full_bearish_alignment",
+      "pivot_s1_breakdown",
+      "rsi_bullish_divergence",
+      "three_black_crows"
+    ]
+  },
+  {
+    "timestamp": "2026-10-26T06:15:53.469326",
+    "date": "2026-10-26",
+    "ticker": "NHPC.NS",
+    "session": "midday",
+    "action": "SELL",
+    "signal": "SELL",
+    "confidence": 86.8,
+    "entry": 70.18,
+    "stop_loss": 74.25,
+    "target": 64.49,
+    "reason": "paper midday",
+    "patterns": [
+      "adx_strong_trend_down",
+      "bb_lower_bounce",
+      "full_bearish_alignment",
+      "pivot_s1_breakdown",
+      "evening_star",
+      "macd_bearish_crossover",
+      "near_52w_low"
     ]
   }
 ]

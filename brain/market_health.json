@@ -1,6 +1,6 @@
 {
   "date": "2026-10-26",
-  "session": "morning",
+  "session": "midday",
   "nifty": {
     "symbol": "^NSEI",
     "value": 22600.0,
@@ -62,8 +62,7 @@
   "trade_allowed": true,
   "warnings": [
     "VIX=16.9 at 96th percentile vs last 30d \u2014 unusually high stress",
-    "Nifty in downtrend (down) \u2014 only high-confidence BUY signals",
-    "Nifty choppy intraday \u2014 wait for cleaner setups"
+    "Nifty in downtrend (down) \u2014 only high-confidence BUY signals"
   ],
   "leading_sectors": [],
   "market_regime": "normal",
@@ -73,14 +72,14 @@
     "Bank",
     "Infra"
   ],
-  "intraday_regime": "choppy",
+  "intraday_regime": "mixed",
   "macro": {
     "date": "2026-10-26",
-    "session": "preopen",
-    "generated_at": "2026-10-26T03:05:39.921132",
-    "global_score": -0.177,
+    "session": "midday",
+    "generated_at": "2026-10-26T06:15:43.865225",
+    "global_score": -0.301,
     "india_score": 0.0,
-    "overall_score": -0.097,
+    "overall_score": -0.166,
     "mood": "neutral",
     "drivers": [
       "Musk says SpaceX landed a $40 billion debt deal \u2014 and forecasts doom for some AI rivals",
@@ -106,23 +105,23 @@
         "chg_pct": -0.52
       },
       "nikkei": {
-        "last": 62214.66,
-        "chg_pct": -0.76
+        "last": 62441.63,
+        "chg_pct": -0.4
       },
       "crude": {
-        "last": 101.06,
-        "chg_pct": -2.14
+        "last": 103.27,
+        "chg_pct": 3.82
       },
       "usdinr": {
-        "last": 94.93,
-        "chg_pct": 0.23
+        "last": 95.16,
+        "chg_pct": 0.47
       },
       "gold": {
-        "last": 4013.5,
-        "chg_pct": 0.14
+        "last": 4007.9,
+        "chg_pct": -1.29
       }
     },
-    "summary": "Overall macro mood is neutral (-0.10). US Dow -1.2% overnight. Crude -2.1%. USD/INR +0.2%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
+    "summary": "Overall macro mood is neutral (-0.17). US Dow -1.2% overnight. Crude +3.8%. USD/INR +0.5%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
       "Trade-war headlines spook global markets; IT & export names react most."

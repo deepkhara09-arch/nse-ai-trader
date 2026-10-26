@@ -1,87 +1,5 @@
 [
   {
-    "timestamp": "2026-08-19T10:11:10.554700",
-    "date": "2026-08-19",
-    "ticker": "UNIONBANK.NS",
-    "session": "preclose",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 80.0,
-    "entry": 185.82,
-    "stop_loss": 178.74,
-    "target": 199.98,
-    "reason": "paper preclose",
-    "patterns": [
-      "full_bullish_alignment",
-      "adx_strong_trend_up",
-      "pivot_s1_breakdown",
-      "low_volume_drift"
-    ]
-  },
-  {
-    "timestamp": "2026-08-19T10:11:10.556000",
-    "date": "2026-08-19",
-    "ticker": "PIDILITIND.NS",
-    "session": "preclose",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 95,
-    "entry": 1648.7,
-    "stop_loss": 1604.02,
-    "target": 1738.06,
-    "reason": "paper preclose",
-    "patterns": [
-      "full_bullish_alignment",
-      "adx_strong_trend_up",
-      "pivot_s1_breakdown"
-    ]
-  },
-  {
-    "timestamp": "2026-08-19T10:11:10.558122",
-    "date": "2026-08-19",
-    "ticker": "CHOLAFIN.NS",
-    "session": "preclose",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 76.7,
-    "entry": 1865.4,
-    "stop_loss": 1793.2,
-    "target": 2009.81,
-    "reason": "paper preclose",
-    "patterns": [
-      "pivot_s1_breakdown",
-      "shooting_star",
-      "macd_bearish_crossover",
-      "low_volume_drift",
-      "full_bullish_alignment",
-      "three_black_crows"
-    ]
-  },
-  {
-    "timestamp": "2026-08-19T10:11:10.559031",
-    "date": "2026-08-19",
-    "ticker": "GAIL.NS",
-    "session": "preclose",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 95,
-    "entry": 172.38,
-    "stop_loss": 165.88,
-    "target": 185.37,
-    "reason": "paper preclose",
-    "patterns": [
-      "pivot_point_test",
-      "stoch_rsi_oversold_reversal",
-      "supertrend_bullish",
-      "bullish_harami",
-      "low_volume_drift",
-      "full_bullish_alignment",
-      "tweezer_bottom",
-      "adx_ranging_market",
-      "pivot_s1_bounce"
-    ]
-  },
-  {
     "timestamp": "2026-08-19T10:11:10.560558",
     "date": "2026-08-19",
     "ticker": "SIEMENS.NS",
@@ -21295,6 +21213,90 @@
       "evening_star",
       "macd_bearish_crossover",
       "near_52w_low"
+    ]
+  },
+  {
+    "timestamp": "2026-10-26T07:45:53.173014",
+    "date": "2026-10-26",
+    "ticker": "HOMEFIRST.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 32.6,
+    "entry": 1008.6,
+    "stop_loss": 907.74,
+    "target": 1149.8,
+    "reason": "paper afternoon",
+    "patterns": [
+      "pivot_s1_breakdown",
+      "bb_lower_bounce",
+      "full_bearish_alignment",
+      "three_black_crows",
+      "adx_strong_trend_down"
+    ]
+  },
+  {
+    "timestamp": "2026-10-26T07:45:53.177088",
+    "date": "2026-10-26",
+    "ticker": "IDFCFIRSTB.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 44.1,
+    "entry": 71.39,
+    "stop_loss": 64.25,
+    "target": 81.38,
+    "reason": "paper afternoon",
+    "patterns": [
+      "strong_bearish_marubozu",
+      "pivot_s1_breakdown",
+      "tweezer_top",
+      "bb_lower_bounce",
+      "full_bearish_alignment",
+      "adx_strong_trend_down"
+    ]
+  },
+  {
+    "timestamp": "2026-10-26T07:45:53.178402",
+    "date": "2026-10-26",
+    "ticker": "BANDHANBNK.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 69.7,
+    "entry": 148.7,
+    "stop_loss": 133.83,
+    "target": 169.52,
+    "reason": "paper afternoon",
+    "patterns": [
+      "strong_bearish_marubozu",
+      "pivot_s1_breakdown",
+      "rsi_bullish_divergence",
+      "bb_lower_bounce",
+      "full_bearish_alignment",
+      "three_black_crows"
+    ]
+  },
+  {
+    "timestamp": "2026-10-26T07:45:53.179807",
+    "date": "2026-10-26",
+    "ticker": "NHPC.NS",
+    "session": "afternoon",
+    "action": "SELL",
+    "signal": "SELL",
+    "confidence": 86.8,
+    "entry": 70.5,
+    "stop_loss": 74.57,
+    "target": 64.81,
+    "reason": "paper afternoon",
+    "patterns": [
+      "macd_bearish_crossover",
+      "pivot_s1_breakdown",
+      "bb_lower_bounce",
+      "full_bearish_alignment",
+      "near_52w_low",
+      "evening_star",
+      "adx_strong_trend_down"
     ]
   }
 ]

@@ -1,124 +1,5 @@
 [
   {
-    "timestamp": "2026-08-19T07:45:47.542813",
-    "date": "2026-08-19",
-    "ticker": "PIDILITIND.NS",
-    "session": "afternoon",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 95,
-    "entry": 1656.1,
-    "stop_loss": 1610.83,
-    "target": 1746.64,
-    "reason": "paper afternoon",
-    "patterns": [
-      "adx_strong_trend_up",
-      "full_bullish_alignment",
-      "pivot_s1_breakdown"
-    ]
-  },
-  {
-    "timestamp": "2026-08-19T07:45:47.544621",
-    "date": "2026-08-19",
-    "ticker": "NTPC.NS",
-    "session": "afternoon",
-    "action": "SELL",
-    "signal": "SELL",
-    "confidence": 86.9,
-    "entry": 336.0,
-    "stop_loss": 344.98,
-    "target": 318.04,
-    "reason": "paper afternoon",
-    "patterns": [
-      "doji",
-      "full_bearish_alignment",
-      "pivot_point_test",
-      "spinning_top",
-      "pivot_s1_breakdown",
-      "rsi_bullish_divergence",
-      "three_black_crows"
-    ]
-  },
-  {
-    "timestamp": "2026-08-19T07:45:47.546053",
-    "date": "2026-08-19",
-    "ticker": "GAIL.NS",
-    "session": "afternoon",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 83.6,
-    "entry": 173.51,
-    "stop_loss": 167.01,
-    "target": 186.5,
-    "reason": "paper afternoon",
-    "patterns": [
-      "pivot_point_test",
-      "stoch_rsi_oversold_reversal",
-      "adx_ranging_market",
-      "supertrend_bullish",
-      "full_bullish_alignment",
-      "tweezer_bottom",
-      "low_volume_drift"
-    ]
-  },
-  {
-    "timestamp": "2026-08-19T07:45:47.547630",
-    "date": "2026-08-19",
-    "ticker": "SIEMENS.NS",
-    "session": "afternoon",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 73.8,
-    "entry": 3902.8,
-    "stop_loss": 3737.35,
-    "target": 4233.7,
-    "reason": "paper afternoon",
-    "patterns": [
-      "shooting_star",
-      "pivot_s1_breakdown",
-      "full_bullish_alignment",
-      "adx_strong_trend_up",
-      "low_volume_drift"
-    ]
-  },
-  {
-    "timestamp": "2026-08-19T07:45:47.549905",
-    "date": "2026-08-19",
-    "ticker": "HINDALCO.NS",
-    "session": "afternoon",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 60.1,
-    "entry": 1031.5,
-    "stop_loss": 990.31,
-    "target": 1113.88,
-    "reason": "paper afternoon",
-    "patterns": [
-      "adx_strong_trend_up",
-      "inside_bar",
-      "full_bullish_alignment",
-      "pivot_s1_breakdown"
-    ]
-  },
-  {
-    "timestamp": "2026-08-19T09:45:38.517503",
-    "date": "2026-08-19",
-    "ticker": "UNIONBANK.NS",
-    "session": "intraday_close",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 76.2,
-    "entry": 185.5,
-    "stop_loss": 178.68,
-    "target": 199.14,
-    "reason": "paper intraday_close",
-    "patterns": [
-      "full_bullish_alignment",
-      "pivot_s1_breakdown",
-      "adx_strong_trend_up"
-    ]
-  },
-  {
     "timestamp": "2026-08-19T09:45:38.518792",
     "date": "2026-08-19",
     "ticker": "PIDILITIND.NS",
@@ -21286,6 +21167,131 @@
       "full_bearish_alignment",
       "adx_ranging_market",
       "macd_bearish_crossover"
+    ]
+  },
+  {
+    "timestamp": "2026-10-26T04:05:46.077938",
+    "date": "2026-10-26",
+    "ticker": "HINDALCO.NS",
+    "session": "morning",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 30.6,
+    "entry": 864.65,
+    "stop_loss": 778.18,
+    "target": 985.7,
+    "reason": "paper morning",
+    "patterns": [
+      "full_bearish_alignment",
+      "pivot_s1_breakdown",
+      "gap_down_continuation",
+      "adx_strong_trend_down",
+      "doji"
+    ]
+  },
+  {
+    "timestamp": "2026-10-26T04:05:46.087290",
+    "date": "2026-10-26",
+    "ticker": "HOMEFIRST.NS",
+    "session": "morning",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 44.1,
+    "entry": 990.1,
+    "stop_loss": 891.09,
+    "target": 1128.71,
+    "reason": "paper morning",
+    "patterns": [
+      "full_bearish_alignment",
+      "pivot_s1_breakdown",
+      "adx_strong_trend_down",
+      "three_black_crows",
+      "bb_lower_bounce"
+    ]
+  },
+  {
+    "timestamp": "2026-10-26T04:05:46.097887",
+    "date": "2026-10-26",
+    "ticker": "IDFCFIRSTB.NS",
+    "session": "morning",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 44.1,
+    "entry": 70.29,
+    "stop_loss": 63.26,
+    "target": 80.13,
+    "reason": "paper morning",
+    "patterns": [
+      "full_bearish_alignment",
+      "pivot_s1_breakdown",
+      "strong_bearish_marubozu",
+      "adx_strong_trend_down",
+      "tweezer_top",
+      "bb_lower_bounce"
+    ]
+  },
+  {
+    "timestamp": "2026-10-26T04:05:46.107417",
+    "date": "2026-10-26",
+    "ticker": "BANDHANBNK.NS",
+    "session": "morning",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 69.7,
+    "entry": 146.95,
+    "stop_loss": 132.25,
+    "target": 167.52,
+    "reason": "paper morning",
+    "patterns": [
+      "full_bearish_alignment",
+      "rsi_bullish_divergence",
+      "pivot_s1_breakdown",
+      "strong_bearish_marubozu",
+      "three_black_crows",
+      "bb_lower_bounce"
+    ]
+  },
+  {
+    "timestamp": "2026-10-26T04:05:46.117137",
+    "date": "2026-10-26",
+    "ticker": "NHPC.NS",
+    "session": "morning",
+    "action": "SELL",
+    "signal": "SELL",
+    "confidence": 86.8,
+    "entry": 69.43,
+    "stop_loss": 73.5,
+    "target": 63.74,
+    "reason": "paper morning",
+    "patterns": [
+      "full_bearish_alignment",
+      "pivot_s1_breakdown",
+      "near_52w_low",
+      "macd_bearish_crossover",
+      "evening_star",
+      "adx_strong_trend_down",
+      "bb_lower_bounce"
+    ]
+  },
+  {
+    "timestamp": "2026-10-26T04:05:46.126918",
+    "date": "2026-10-26",
+    "ticker": "ADANIGREEN.NS",
+    "session": "morning",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 49.5,
+    "entry": 1187.5,
+    "stop_loss": 1068.75,
+    "target": 1353.75,
+    "reason": "paper morning",
+    "patterns": [
+      "adx_ranging_market",
+      "full_bearish_alignment",
+      "pivot_s1_breakdown",
+      "strong_bearish_marubozu",
+      "three_black_crows",
+      "bb_lower_bounce"
     ]
   }
 ]

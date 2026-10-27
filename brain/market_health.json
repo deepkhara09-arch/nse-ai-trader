@@ -1,6 +1,6 @@
 {
   "date": "2026-10-27",
-  "session": "midday",
+  "session": "afternoon",
   "nifty": {
     "symbol": "^NSEI",
     "value": 22753.2,
@@ -58,7 +58,7 @@
       "ath_pct_60d": -7.92
     }
   },
-  "market_mood": "bullish",
+  "market_mood": "neutral",
   "trade_allowed": true,
   "warnings": [
     "VIX=17.2 at 96th percentile vs last 30d \u2014 unusually high stress"
@@ -69,7 +69,7 @@
   "lagging_sectors": [
     "Bank"
   ],
-  "intraday_regime": "trending_up",
+  "intraday_regime": "mixed",
   "macro": {
     "date": "2026-10-27",
     "session": "midday",

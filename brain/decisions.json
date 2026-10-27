@@ -1,67 +1,5 @@
 [
   {
-    "timestamp": "2026-08-20T04:05:45.434325",
-    "date": "2026-08-20",
-    "ticker": "SHRIRAMFIN.NS",
-    "session": "morning",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 81.5,
-    "entry": 1130.7,
-    "stop_loss": 1091.21,
-    "target": 1209.69,
-    "reason": "paper morning",
-    "patterns": [
-      "low_volume_drift",
-      "full_bullish_alignment",
-      "spinning_top",
-      "supertrend_bullish",
-      "tweezer_bottom",
-      "near_52w_high"
-    ]
-  },
-  {
-    "timestamp": "2026-08-20T04:05:45.435305",
-    "date": "2026-08-20",
-    "ticker": "ASIANPAINT.NS",
-    "session": "morning",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 49.8,
-    "entry": 2633.0,
-    "stop_loss": 2552.1,
-    "target": 2794.81,
-    "reason": "paper morning",
-    "patterns": [
-      "adx_ranging_market",
-      "bb_lower_bounce",
-      "pivot_point_test",
-      "hammer",
-      "supertrend_bullish",
-      "stoch_rsi_oversold_reversal"
-    ]
-  },
-  {
-    "timestamp": "2026-08-20T06:15:56.400149",
-    "date": "2026-08-20",
-    "ticker": "MARICO.NS",
-    "session": "midday",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 93.7,
-    "entry": 856.25,
-    "stop_loss": 831.61,
-    "target": 905.54,
-    "reason": "paper midday",
-    "patterns": [
-      "low_volume_drift",
-      "full_bullish_alignment",
-      "pivot_point_test",
-      "supertrend_bullish",
-      "stoch_rsi_oversold_reversal"
-    ]
-  },
-  {
     "timestamp": "2026-08-20T06:15:56.401532",
     "date": "2026-08-20",
     "ticker": "ICICIBANK.NS",
@@ -21286,6 +21224,66 @@
       "pivot_point_test",
       "rsi_bullish_divergence",
       "supertrend_bullish"
+    ]
+  },
+  {
+    "timestamp": "2026-10-27T09:45:44.117396",
+    "date": "2026-10-27",
+    "ticker": "HOMEFIRST.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 92.7,
+    "entry": 1019.2,
+    "stop_loss": 917.28,
+    "target": 1161.89,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "supertrend_bullish",
+      "adx_strong_trend_down",
+      "low_volume_drift",
+      "inside_bar",
+      "bb_lower_bounce",
+      "full_bearish_alignment",
+      "tweezer_bottom"
+    ]
+  },
+  {
+    "timestamp": "2026-10-27T09:45:44.121363",
+    "date": "2026-10-27",
+    "ticker": "IDFCFIRSTB.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 52.9,
+    "entry": 71.71,
+    "stop_loss": 64.54,
+    "target": 81.75,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "full_bearish_alignment",
+      "adx_strong_trend_down",
+      "bb_lower_bounce"
+    ]
+  },
+  {
+    "timestamp": "2026-10-27T09:45:44.123116",
+    "date": "2026-10-27",
+    "ticker": "BANDHANBNK.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 91.9,
+    "entry": 152.48,
+    "stop_loss": 137.23,
+    "target": 173.83,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "supertrend_bullish",
+      "rsi_bullish_divergence",
+      "pivot_point_test",
+      "full_bearish_alignment",
+      "hammer"
     ]
   }
 ]

@@ -1,6 +1,6 @@
 {
   "date": "2026-10-27",
-  "session": "morning",
+  "session": "midday",
   "nifty": {
     "symbol": "^NSEI",
     "value": 22753.2,
@@ -58,7 +58,7 @@
       "ath_pct_60d": -7.92
     }
   },
-  "market_mood": "neutral",
+  "market_mood": "bullish",
   "trade_allowed": true,
   "warnings": [
     "VIX=17.2 at 96th percentile vs last 30d \u2014 unusually high stress"
@@ -69,24 +69,24 @@
   "lagging_sectors": [
     "Bank"
   ],
-  "intraday_regime": "mixed",
+  "intraday_regime": "trending_up",
   "macro": {
     "date": "2026-10-27",
-    "session": "preopen",
-    "generated_at": "2026-10-27T03:05:38.449716",
-    "global_score": 0.213,
+    "session": "midday",
+    "generated_at": "2026-10-27T06:15:44.099089",
+    "global_score": 0.246,
     "india_score": 0.2,
-    "overall_score": 0.207,
+    "overall_score": 0.225,
     "mood": "risk_on",
     "drivers": [
+      "What gave this city its \u2018best place to retire\u2019 crown? You can actually afford to live there.",
       "\u2018You need only watch episodes of Judge Judy\u2019: I\u2019m in my 70s. Why do people keep making the same avoidable financial mistakes?",
       "Dividend stocks are having an excellent October as tech sector struggles",
       "Options traders are seizing control of the S&P 500",
       "TikTok parent ByteDance\u2019s chatbot is now giving travel-booking sites a run for their money. And yours.",
       "Over 40% of Americans are heading toward retirement \u2018blind\u2019 \u2014 with no plan",
       "A possible DoorDash-Instacart deal is all about keeping up with Walmart and Amazon, analysts say",
-      "Nvidia, AMD and Broadcom could buy Meta shares as part of $35 billion stock offering",
-      "Why Lumentum\u2019s stock led the S&P 500 higher on Monday"
+      "Nvidia, AMD and Broadcom could buy Meta shares as part of $35 billion stock offering"
     ],
     "global_cues": {
       "dow": {
@@ -102,23 +102,23 @@
         "chg_pct": 0.7
       },
       "nikkei": {
-        "last": 63381.29,
-        "chg_pct": 1.92
+        "last": 63393.24,
+        "chg_pct": 1.94
       },
       "crude": {
-        "last": 100.88,
-        "chg_pct": -0.86
+        "last": 101.76,
+        "chg_pct": -1.46
       },
       "usdinr": {
-        "last": 95.18,
-        "chg_pct": 0.25
+        "last": 95.17,
+        "chg_pct": 0.24
       },
       "gold": {
-        "last": 4021.5,
-        "chg_pct": -0.42
+        "last": 4038.4,
+        "chg_pct": 0.76
       }
     },
-    "summary": "Overall macro mood is risk-on (+0.21). US Dow +0.3% overnight. Crude -0.9%. USD/INR +0.2%. Notable: US Fed rate hike / hawkish; Geopolitical conflict / war.",
+    "summary": "Overall macro mood is risk-on (+0.23). US Dow +0.3% overnight. Crude -1.5%. USD/INR +0.2%. Notable: US Fed rate hike / hawkish; Geopolitical conflict / war.",
     "playbook": [
       "Hawkish Fed pressures Nifty via FII outflows and stronger USD.",
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially."

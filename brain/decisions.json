@@ -1,90 +1,5 @@
 [
   {
-    "timestamp": "2026-08-20T06:15:56.406515",
-    "date": "2026-08-20",
-    "ticker": "CIPLA.NS",
-    "session": "midday",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 62.4,
-    "entry": 1434.6,
-    "stop_loss": 1405.98,
-    "target": 1491.84,
-    "reason": "paper midday",
-    "patterns": [
-      "doji",
-      "low_volume_drift",
-      "full_bullish_alignment",
-      "pivot_point_test",
-      "supertrend_bullish",
-      "inside_bar",
-      "stoch_rsi_oversold_reversal"
-    ]
-  },
-  {
-    "timestamp": "2026-08-20T06:15:56.410415",
-    "date": "2026-08-20",
-    "ticker": "BAJFINANCE.NS",
-    "session": "midday",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 90.0,
-    "entry": 1095.9,
-    "stop_loss": 1052.09,
-    "target": 1183.52,
-    "reason": "paper midday",
-    "patterns": [
-      "strong_bullish_marubozu",
-      "pivot_s1_bounce",
-      "low_volume_drift",
-      "full_bullish_alignment",
-      "pivot_point_test",
-      "three_white_soldiers",
-      "supertrend_bullish",
-      "stoch_rsi_oversold_reversal"
-    ]
-  },
-  {
-    "timestamp": "2026-08-20T06:15:56.412063",
-    "date": "2026-08-20",
-    "ticker": "SHRIRAMFIN.NS",
-    "session": "midday",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 74.3,
-    "entry": 1130.0,
-    "stop_loss": 1090.51,
-    "target": 1208.99,
-    "reason": "paper midday",
-    "patterns": [
-      "spinning_top",
-      "low_volume_drift",
-      "tweezer_bottom",
-      "full_bullish_alignment",
-      "supertrend_bullish"
-    ]
-  },
-  {
-    "timestamp": "2026-08-20T07:45:48.459525",
-    "date": "2026-08-20",
-    "ticker": "MARICO.NS",
-    "session": "afternoon",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 93.7,
-    "entry": 856.8,
-    "stop_loss": 832.16,
-    "target": 906.09,
-    "reason": "paper afternoon",
-    "patterns": [
-      "low_volume_drift",
-      "pivot_point_test",
-      "stoch_rsi_oversold_reversal",
-      "supertrend_bullish",
-      "full_bullish_alignment"
-    ]
-  },
-  {
     "timestamp": "2026-08-20T07:45:48.461051",
     "date": "2026-08-20",
     "ticker": "UNIONBANK.NS",
@@ -21289,6 +21204,88 @@
       "doji",
       "full_bearish_alignment",
       "shooting_star"
+    ]
+  },
+  {
+    "timestamp": "2026-10-28T06:15:54.083663",
+    "date": "2026-10-28",
+    "ticker": "PIDILITIND.NS",
+    "session": "midday",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 34.8,
+    "entry": 1413.4,
+    "stop_loss": 1272.06,
+    "target": 1611.28,
+    "reason": "paper midday",
+    "patterns": [
+      "inside_bar",
+      "doji",
+      "pivot_s1_breakdown",
+      "adx_strong_trend_down",
+      "full_bearish_alignment"
+    ]
+  },
+  {
+    "timestamp": "2026-10-28T06:15:54.085698",
+    "date": "2026-10-28",
+    "ticker": "HOMEFIRST.NS",
+    "session": "midday",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 92.7,
+    "entry": 1016.0,
+    "stop_loss": 914.4,
+    "target": 1158.24,
+    "reason": "paper midday",
+    "patterns": [
+      "inside_bar",
+      "tweezer_bottom",
+      "supertrend_bullish",
+      "adx_strong_trend_down",
+      "bb_lower_bounce",
+      "low_volume_drift",
+      "full_bearish_alignment"
+    ]
+  },
+  {
+    "timestamp": "2026-10-28T06:15:54.088019",
+    "date": "2026-10-28",
+    "ticker": "IDFCFIRSTB.NS",
+    "session": "midday",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 89.9,
+    "entry": 72.38,
+    "stop_loss": 65.14,
+    "target": 82.51,
+    "reason": "paper midday",
+    "patterns": [
+      "inside_bar",
+      "supertrend_bullish",
+      "adx_strong_trend_down",
+      "stoch_rsi_oversold_reversal",
+      "bb_lower_bounce",
+      "full_bearish_alignment"
+    ]
+  },
+  {
+    "timestamp": "2026-10-28T06:15:54.088521",
+    "date": "2026-10-28",
+    "ticker": "BANDHANBNK.NS",
+    "session": "midday",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 90.1,
+    "entry": 154.48,
+    "stop_loss": 139.03,
+    "target": 176.11,
+    "reason": "paper midday",
+    "patterns": [
+      "doji",
+      "full_bearish_alignment",
+      "pivot_r1_breakout",
+      "supertrend_bullish"
     ]
   }
 ]

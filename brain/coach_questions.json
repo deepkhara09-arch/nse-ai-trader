@@ -1,85 +1,5 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of inside_bar, adx_strong_trend_down, bb_lower_bounce mean for a swing trade on IDFCFIRSTB? Current RSI=11, MACD hist=-0.7079, Vol=1.2x average. Signal is BUY.",
-    "context": {
-      "ticker": "IDFCFIRSTB.NS",
-      "signal": "BUY",
-      "patterns": "inside_bar, adx_strong_trend_down, bb_lower_bounce",
-      "rsi": 10.7
-    },
-    "queued_at": "2026-10-28T06:15:54.092646"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of tweezer_bottom, adx_strong_trend_down, bb_lower_bounce mean for a swing trade on HOMEFIRST? Current RSI=31, MACD hist=-6.8717, Vol=0.4x average. Signal is BUY.",
-    "context": {
-      "ticker": "HOMEFIRST.NS",
-      "signal": "BUY",
-      "patterns": "tweezer_bottom, adx_strong_trend_down, bb_lower_bounce",
-      "rsi": 30.5
-    },
-    "queued_at": "2026-10-28T06:15:54.093997"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of tweezer_bottom, adx_strong_trend_down, bb_lower_bounce mean for a swing trade on HOMEFIRST? Current RSI=31, MACD hist=-6.8717, Vol=0.4x average. Signal is BUY.",
-    "context": {
-      "ticker": "HOMEFIRST.NS",
-      "signal": "BUY",
-      "patterns": "tweezer_bottom, adx_strong_trend_down, bb_lower_bounce",
-      "rsi": 30.5
-    },
-    "queued_at": "2026-10-28T06:15:54.199251"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of inside_bar, adx_strong_trend_down, bb_lower_bounce mean for a swing trade on IDFCFIRSTB? Current RSI=11, MACD hist=-0.7079, Vol=1.2x average. Signal is BUY.",
-    "context": {
-      "ticker": "IDFCFIRSTB.NS",
-      "signal": "BUY",
-      "patterns": "inside_bar, adx_strong_trend_down, bb_lower_bounce",
-      "rsi": 10.7
-    },
-    "queued_at": "2026-10-28T06:15:54.201659"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of bb_lower_bounce, adx_strong_trend_down, full_bearish_alignment mean for a swing trade on HOMEFIRST? Current RSI=31, MACD hist=-6.8717, Vol=0.4x average. Signal is BUY.",
-    "context": {
-      "ticker": "HOMEFIRST.NS",
-      "signal": "BUY",
-      "patterns": "bb_lower_bounce, adx_strong_trend_down, full_bearish_alignment",
-      "rsi": 30.5
-    },
-    "queued_at": "2026-10-28T07:45:53.090371"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of inside_bar, bb_lower_bounce, adx_strong_trend_down mean for a swing trade on IDFCFIRSTB? Current RSI=11, MACD hist=-0.7079, Vol=1.2x average. Signal is BUY.",
-    "context": {
-      "ticker": "IDFCFIRSTB.NS",
-      "signal": "BUY",
-      "patterns": "inside_bar, bb_lower_bounce, adx_strong_trend_down",
-      "rsi": 10.7
-    },
-    "queued_at": "2026-10-28T07:45:53.094452"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of inside_bar, bb_lower_bounce, adx_strong_trend_down mean for a swing trade on IDFCFIRSTB? Current RSI=11, MACD hist=-0.7079, Vol=1.2x average. Signal is BUY.",
-    "context": {
-      "ticker": "IDFCFIRSTB.NS",
-      "signal": "BUY",
-      "patterns": "inside_bar, bb_lower_bounce, adx_strong_trend_down",
-      "rsi": 10.7
-    },
-    "queued_at": "2026-10-28T07:45:53.103757"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of bb_lower_bounce, adx_strong_trend_down, full_bearish_alignment mean for a swing trade on HOMEFIRST? Current RSI=31, MACD hist=-6.8717, Vol=0.4x average. Signal is BUY.",
-    "context": {
-      "ticker": "HOMEFIRST.NS",
-      "signal": "BUY",
-      "patterns": "bb_lower_bounce, adx_strong_trend_down, full_bearish_alignment",
-      "rsi": 30.5
-    },
-    "queued_at": "2026-10-28T07:45:53.106041"
-  },
-  {
     "question": "In Indian NSE markets, what does the combination of bb_lower_bounce, adx_strong_trend_down, full_bearish_alignment mean for a swing trade on HOMEFIRST? Current RSI=31, MACD hist=-6.8717, Vol=0.4x average. Signal is BUY.",
     "context": {
       "ticker": "HOMEFIRST.NS",
@@ -98,5 +18,85 @@
       "rsi": 10.7
     },
     "queued_at": "2026-10-28T07:45:53.324349"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of early_recovery, oversold_macd_reversal mean for a swing trade on PIDILITIND? Current RSI=31, MACD hist=+1.7186, Vol=1.0x average. Signal is BUY.",
+    "context": {
+      "ticker": "PIDILITIND.NS",
+      "signal": "BUY",
+      "patterns": "early_recovery, oversold_macd_reversal",
+      "rsi": 31.1
+    },
+    "queued_at": "2026-10-28T09:45:45.340092"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_down, gap_down_reversal, full_bearish_alignment mean for a swing trade on HOMEFIRST? Current RSI=27, MACD hist=-5.9317, Vol=0.9x average. Signal is BUY.",
+    "context": {
+      "ticker": "HOMEFIRST.NS",
+      "signal": "BUY",
+      "patterns": "adx_strong_trend_down, gap_down_reversal, full_bearish_alignment",
+      "rsi": 27.0
+    },
+    "queued_at": "2026-10-28T09:45:45.342946"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of bb_lower_bounce, inside_bar, full_bearish_alignment mean for a swing trade on IDFCFIRSTB? Current RSI=11, MACD hist=-0.7079, Vol=1.2x average. Signal is BUY.",
+    "context": {
+      "ticker": "IDFCFIRSTB.NS",
+      "signal": "BUY",
+      "patterns": "bb_lower_bounce, inside_bar, full_bearish_alignment",
+      "rsi": 10.7
+    },
+    "queued_at": "2026-10-28T09:45:45.346572"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of bb_lower_bounce, inside_bar, full_bearish_alignment mean for a swing trade on IDFCFIRSTB? Current RSI=11, MACD hist=-0.7079, Vol=1.2x average. Signal is BUY.",
+    "context": {
+      "ticker": "IDFCFIRSTB.NS",
+      "signal": "BUY",
+      "patterns": "bb_lower_bounce, inside_bar, full_bearish_alignment",
+      "rsi": 10.7
+    },
+    "queued_at": "2026-10-28T09:45:45.354752"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_down, gap_down_reversal, full_bearish_alignment mean for a swing trade on HOMEFIRST? Current RSI=27, MACD hist=-5.9317, Vol=0.9x average. Signal is BUY.",
+    "context": {
+      "ticker": "HOMEFIRST.NS",
+      "signal": "BUY",
+      "patterns": "adx_strong_trend_down, gap_down_reversal, full_bearish_alignment",
+      "rsi": 27.0
+    },
+    "queued_at": "2026-10-28T09:45:45.356812"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of early_recovery, oversold_macd_reversal mean for a swing trade on PIDILITIND? Current RSI=31, MACD hist=+1.7186, Vol=1.0x average. Signal is BUY.",
+    "context": {
+      "ticker": "PIDILITIND.NS",
+      "signal": "BUY",
+      "patterns": "early_recovery, oversold_macd_reversal",
+      "rsi": 31.1
+    },
+    "queued_at": "2026-10-28T09:45:45.478701"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_down, gap_down_reversal, full_bearish_alignment mean for a swing trade on HOMEFIRST? Current RSI=27, MACD hist=-5.9317, Vol=0.9x average. Signal is BUY.",
+    "context": {
+      "ticker": "HOMEFIRST.NS",
+      "signal": "BUY",
+      "patterns": "adx_strong_trend_down, gap_down_reversal, full_bearish_alignment",
+      "rsi": 27.0
+    },
+    "queued_at": "2026-10-28T09:45:45.484498"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of bb_lower_bounce, inside_bar, full_bearish_alignment mean for a swing trade on IDFCFIRSTB? Current RSI=11, MACD hist=-0.7079, Vol=1.2x average. Signal is BUY.",
+    "context": {
+      "ticker": "IDFCFIRSTB.NS",
+      "signal": "BUY",
+      "patterns": "bb_lower_bounce, inside_bar, full_bearish_alignment",
+      "rsi": 10.7
+    },
+    "queued_at": "2026-10-28T09:45:45.488092"
   }
 ]

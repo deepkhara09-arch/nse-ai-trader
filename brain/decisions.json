@@ -1,65 +1,5 @@
 [
   {
-    "timestamp": "2026-08-20T07:45:48.468345",
-    "date": "2026-08-20",
-    "ticker": "SHRIRAMFIN.NS",
-    "session": "afternoon",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 74.3,
-    "entry": 1126.6,
-    "stop_loss": 1087.11,
-    "target": 1205.59,
-    "reason": "paper afternoon",
-    "patterns": [
-      "spinning_top",
-      "low_volume_drift",
-      "tweezer_bottom",
-      "supertrend_bullish",
-      "full_bullish_alignment"
-    ]
-  },
-  {
-    "timestamp": "2026-08-20T07:45:48.468953",
-    "date": "2026-08-20",
-    "ticker": "ASIANPAINT.NS",
-    "session": "afternoon",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 49.8,
-    "entry": 2625.7,
-    "stop_loss": 2544.8,
-    "target": 2787.51,
-    "reason": "paper afternoon",
-    "patterns": [
-      "hammer",
-      "pivot_point_test",
-      "adx_ranging_market",
-      "stoch_rsi_oversold_reversal",
-      "supertrend_bullish",
-      "bb_lower_bounce"
-    ]
-  },
-  {
-    "timestamp": "2026-08-20T09:45:36.320367",
-    "date": "2026-08-20",
-    "ticker": "ICICIBANK.NS",
-    "session": "intraday_close",
-    "action": "SELL",
-    "signal": "SELL",
-    "confidence": 41.7,
-    "entry": 1405.5,
-    "stop_loss": 1439.6,
-    "target": 1337.3,
-    "reason": "paper intraday_close",
-    "patterns": [
-      "ema_death_cross",
-      "pivot_point_test",
-      "pivot_s1_breakdown",
-      "tweezer_top"
-    ]
-  },
-  {
     "timestamp": "2026-08-20T09:45:36.321126",
     "date": "2026-08-20",
     "ticker": "UNIONBANK.NS",
@@ -21287,6 +21227,70 @@
       "morning_star",
       "supertrend_bullish",
       "full_bearish_alignment"
+    ]
+  },
+  {
+    "timestamp": "2026-10-28T09:45:45.340341",
+    "date": "2026-10-28",
+    "ticker": "PIDILITIND.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 55.5,
+    "entry": 1396.1,
+    "stop_loss": 1256.49,
+    "target": 1591.55,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "bb_lower_bounce",
+      "adx_strong_trend_down",
+      "strong_bearish_marubozu",
+      "early_recovery",
+      "evening_star",
+      "full_bearish_alignment",
+      "pivot_s1_breakdown",
+      "oversold_macd_reversal"
+    ]
+  },
+  {
+    "timestamp": "2026-10-28T09:45:45.343295",
+    "date": "2026-10-28",
+    "ticker": "HOMEFIRST.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 81.6,
+    "entry": 1016.5,
+    "stop_loss": 914.85,
+    "target": 1158.81,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "adx_strong_trend_down",
+      "gap_down_reversal",
+      "supertrend_bullish",
+      "full_bearish_alignment"
+    ]
+  },
+  {
+    "timestamp": "2026-10-28T09:45:45.346903",
+    "date": "2026-10-28",
+    "ticker": "IDFCFIRSTB.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 92.2,
+    "entry": 73.2,
+    "stop_loss": 65.88,
+    "target": 83.45,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "pivot_r1_breakout",
+      "bb_lower_bounce",
+      "inside_bar",
+      "supertrend_bullish",
+      "full_bearish_alignment",
+      "stoch_rsi_oversold_reversal",
+      "adx_strong_trend_down"
     ]
   }
 ]

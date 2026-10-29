@@ -36,8 +36,8 @@
         "\u26a0 Daily sell fights the higher-timeframe uptrend \u2014 needs extra conviction",
         "\u26a0 Strong opposing signals present (opposing evidence 59% of the leading side) \u2014 conflicted setup, needs extra conviction"
       ],
-      "current_price": 886.3,
-      "unrealized_pnl": 74.0,
+      "current_price": 883.6,
+      "unrealized_pnl": 60.5,
       "max_held_days": 40,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -94,8 +94,8 @@
         "\u26a0 Daily sell fights the higher-timeframe uptrend \u2014 needs extra conviction",
         "\u26a0 Strong opposing signals present (opposing evidence 94% of the leading side) \u2014 conflicted setup, needs extra conviction"
       ],
-      "current_price": 73.27,
-      "unrealized_pnl": -47.56,
+      "current_price": 73.28,
+      "unrealized_pnl": -46.98,
       "max_held_days": 40,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -112,7 +112,7 @@
       },
       "view_hist": [
         1,
-        1,
+        0,
         0,
         0
       ]
@@ -148,8 +148,8 @@
         "\u26a0 Daily sell fights the higher-timeframe uptrend \u2014 needs extra conviction",
         "\u26a0 Strong opposing signals present (opposing evidence 86% of the leading side) \u2014 conflicted setup, needs extra conviction"
       ],
-      "current_price": 157.46,
-      "unrealized_pnl": 0.0,
+      "current_price": 159.17,
+      "unrealized_pnl": 44.46,
       "max_held_days": 40,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -165,7 +165,7 @@
         "hist_long_trend": "uptrend"
       },
       "view_hist": [
-        1,
+        0,
         0,
         0,
         0
@@ -180,7 +180,7 @@
       "entry": 1015.6,
       "qty": 3,
       "invested": 3046.8,
-      "stop_loss": 914.04,
+      "stop_loss": 1003.2,
       "target": 1157.78,
       "style": "swing",
       "confidence": 30,
@@ -207,8 +207,8 @@
         "\u26a0 Daily sell fights the higher-timeframe uptrend \u2014 needs extra conviction",
         "\u26a0 Strong opposing signals present (opposing evidence 87% of the leading side) \u2014 conflicted setup, needs extra conviction"
       ],
-      "current_price": 1025.3,
-      "unrealized_pnl": 29.1,
+      "current_price": 1061.1,
+      "unrealized_pnl": 136.5,
       "max_held_days": 40,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -227,8 +227,9 @@
         1,
         1,
         1,
-        1
-      ]
+        0
+      ],
+      "trailing_active": true
     },
     {
       "ticker": "PIDILITIND.NS",
@@ -266,8 +267,8 @@
         "ADX strong trend \u2014 downside momentum confirmed",
         "Broke below Pivot S1 support \u2014 bearish"
       ],
-      "current_price": 1367.6,
-      "unrealized_pnl": 0.0,
+      "current_price": 1404.2,
+      "unrealized_pnl": 109.8,
       "max_held_days": 40,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -281,7 +282,10 @@
         "mtf_alignment": "aligned",
         "opposing_ratio": 0.86,
         "hist_long_trend": "uptrend"
-      }
+      },
+      "view_hist": [
+        0
+      ]
     }
   ],
   "closed_trades": [

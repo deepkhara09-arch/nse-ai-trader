@@ -1,61 +1,5 @@
 [
   {
-    "timestamp": "2026-08-20T09:45:36.333058",
-    "date": "2026-08-20",
-    "ticker": "SHRIRAMFIN.NS",
-    "session": "intraday_close",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 69.1,
-    "entry": 1121.7,
-    "stop_loss": 1082.21,
-    "target": 1200.69,
-    "reason": "paper intraday_close",
-    "patterns": [
-      "supertrend_bullish",
-      "spinning_top",
-      "full_bullish_alignment",
-      "low_volume_drift",
-      "tweezer_bottom"
-    ]
-  },
-  {
-    "timestamp": "2026-08-20T10:11:13.020751",
-    "date": "2026-08-20",
-    "ticker": "MARICO.NS",
-    "session": "preclose",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 54.9,
-    "entry": 855.0,
-    "stop_loss": 830.27,
-    "target": 904.47,
-    "reason": "paper preclose",
-    "patterns": [
-      "tweezer_bottom",
-      "supertrend_bullish",
-      "ema_death_cross"
-    ]
-  },
-  {
-    "timestamp": "2026-08-20T10:11:13.023219",
-    "date": "2026-08-20",
-    "ticker": "UNIONBANK.NS",
-    "session": "preclose",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 68.8,
-    "entry": 184.76,
-    "stop_loss": 177.88,
-    "target": 198.52,
-    "reason": "paper preclose",
-    "patterns": [
-      "full_bullish_alignment",
-      "adx_strong_trend_up",
-      "pivot_s1_breakdown"
-    ]
-  },
-  {
     "timestamp": "2026-08-20T10:11:13.024296",
     "date": "2026-08-20",
     "ticker": "ABCAPITAL.NS",
@@ -21288,6 +21232,65 @@
       "supertrend_bullish",
       "full_bearish_alignment",
       "adx_strong_trend_down"
+    ]
+  },
+  {
+    "timestamp": "2026-10-29T06:15:53.534150",
+    "date": "2026-10-29",
+    "ticker": "PIDILITIND.NS",
+    "session": "midday",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 48.1,
+    "entry": 1367.6,
+    "stop_loss": 1230.84,
+    "target": 1559.06,
+    "reason": "paper midday",
+    "patterns": [
+      "adx_strong_trend_down",
+      "full_bearish_alignment",
+      "strong_bearish_marubozu",
+      "bb_lower_bounce",
+      "macd_bearish_crossover",
+      "pivot_s1_breakdown"
+    ]
+  },
+  {
+    "timestamp": "2026-10-29T06:15:53.535893",
+    "date": "2026-10-29",
+    "ticker": "HOMEFIRST.NS",
+    "session": "midday",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 81.6,
+    "entry": 1025.3,
+    "stop_loss": 922.77,
+    "target": 1168.84,
+    "reason": "paper midday",
+    "patterns": [
+      "gap_down_reversal",
+      "adx_strong_trend_down",
+      "supertrend_bullish",
+      "full_bearish_alignment"
+    ]
+  },
+  {
+    "timestamp": "2026-10-29T06:15:53.538570",
+    "date": "2026-10-29",
+    "ticker": "IDFCFIRSTB.NS",
+    "session": "midday",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 58.0,
+    "entry": 73.27,
+    "stop_loss": 65.94,
+    "target": 83.53,
+    "reason": "paper midday",
+    "patterns": [
+      "adx_strong_trend_down",
+      "strong_bullish_marubozu",
+      "supertrend_bullish",
+      "full_bearish_alignment"
     ]
   }
 ]

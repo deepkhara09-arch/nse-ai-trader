@@ -1,70 +1,6 @@
 {
-  "capital": 70223.56,
+  "capital": 79397.46514,
   "open_positions": [
-    {
-      "ticker": "POWERGRID.NS",
-      "sector": "Energy",
-      "open_date": "2026-10-22",
-      "open_session": "morning",
-      "action": "SELL",
-      "entry": 245.4,
-      "qty": 36,
-      "invested": 8834.4,
-      "stop_loss": 255.89,
-      "target": 227.04,
-      "style": "swing",
-      "confidence": 91.5,
-      "patterns": [
-        "early_recovery",
-        "macd_bullish_crossover",
-        "stoch_rsi_overbought_reversal",
-        "outside_bar",
-        "near_52w_low",
-        "gap_up_reversal",
-        "adx_strong_trend_down",
-        "pivot_s1_breakdown",
-        "engulfing_bearish",
-        "tweezer_top",
-        "full_bearish_alignment"
-      ],
-      "buy_reasons": [
-        "MACD histogram positive",
-        "Positive news sentiment (0.18, news 0.9x reliable here)",
-        "Near 52-week low with oversold RSI \u2014 reversal setup",
-        "Near 52-week low (7% of range) + oversold \u2014 value reversal setup",
-        "All EMAs stacked bearish",
-        "Candlestick: engulfing bearish",
-        "Candlestick: tweezer top",
-        "ADX strong trend \u2014 downside momentum confirmed",
-        "Broke below Pivot S1 support \u2014 bearish",
-        "StochRSI overbought with bearish candle \u2014 reversal",
-        "Gap up fade \u2014 selling into strength",
-        "In a long-term strong downtrend (2yr)",
-        "\u2713 Daily setup aligned with the higher-timeframe trend"
-      ],
-      "current_price": 254.85,
-      "unrealized_pnl": -340.2,
-      "max_held_days": 40,
-      "vol_regime_pct": 0.09,
-      "entry_market": {
-        "nifty_trend": "up",
-        "vix": 15.68,
-        "mood": "bearish",
-        "regime": "mixed",
-        "sector_momentum": -0.224,
-        "delivery_signal": "neutral",
-        "rsi": 35.9,
-        "mtf_alignment": "aligned",
-        "opposing_ratio": 0.29,
-        "hist_long_trend": "strong_downtrend"
-      },
-      "view_hist": [
-        0,
-        0,
-        0,
-        0
-      ]
-    },
     {
       "ticker": "HINDALCO.NS",
       "sector": "Metals",
@@ -100,8 +36,8 @@
         "\u26a0 Daily sell fights the higher-timeframe uptrend \u2014 needs extra conviction",
         "\u26a0 Strong opposing signals present (opposing evidence 59% of the leading side) \u2014 conflicted setup, needs extra conviction"
       ],
-      "current_price": 885.2,
-      "unrealized_pnl": 68.5,
+      "current_price": 886.3,
+      "unrealized_pnl": 74.0,
       "max_held_days": 40,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -177,7 +113,7 @@
       "view_hist": [
         1,
         1,
-        1,
+        0,
         0
       ]
     },
@@ -212,8 +148,8 @@
         "\u26a0 Daily sell fights the higher-timeframe uptrend \u2014 needs extra conviction",
         "\u26a0 Strong opposing signals present (opposing evidence 86% of the leading side) \u2014 conflicted setup, needs extra conviction"
       ],
-      "current_price": 157.65,
-      "unrealized_pnl": 4.94,
+      "current_price": 157.46,
+      "unrealized_pnl": 0.0,
       "max_held_days": 40,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -230,7 +166,7 @@
       },
       "view_hist": [
         1,
-        1,
+        0,
         0,
         0
       ]
@@ -271,8 +207,8 @@
         "\u26a0 Daily sell fights the higher-timeframe uptrend \u2014 needs extra conviction",
         "\u26a0 Strong opposing signals present (opposing evidence 87% of the leading side) \u2014 conflicted setup, needs extra conviction"
       ],
-      "current_price": 1009.5,
-      "unrealized_pnl": -18.3,
+      "current_price": 1025.3,
+      "unrealized_pnl": 29.1,
       "max_held_days": 40,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -293,6 +229,135 @@
         1,
         1
       ]
+    },
+    {
+      "ticker": "PIDILITIND.NS",
+      "sector": "Consumer",
+      "open_date": "2026-10-29",
+      "open_session": "midday",
+      "action": "BUY",
+      "entry": 1367.6,
+      "qty": 3,
+      "invested": 4102.8,
+      "stop_loss": 1230.84,
+      "target": 1559.06,
+      "style": "swing",
+      "confidence": 48.1,
+      "patterns": [
+        "adx_strong_trend_down",
+        "full_bearish_alignment",
+        "strong_bearish_marubozu",
+        "bb_lower_bounce",
+        "macd_bearish_crossover",
+        "pivot_s1_breakdown"
+      ],
+      "buy_reasons": [
+        "RSI=27 oversold \u2014 reversal watch",
+        "Near lower Bollinger Band",
+        "DEEP-DIP BUY: 11% below trend average, trend intact \u2014 mean-reversion setup (backtest-positive)",
+        "RSI 27 oversold \u2014 dip is stretched, snap-back likely",
+        "Mean-reverting stock at oversold extreme \u2014 fade the dip",
+        "\u2713 Daily setup aligned with the higher-timeframe trend",
+        "\u26a0 Sector momentum -0.32 \u2014 buying into a falling sector needs extra conviction",
+        "DEEP-DIP OVERRIDE: price fell hard (bearish short-term) but the stock's structure is intact \u2014 this is the buy-the-fear edge",
+        "All EMAs stacked bearish",
+        "MACD histogram negative",
+        "High volume confirmation (1.8x avg)",
+        "ADX strong trend \u2014 downside momentum confirmed",
+        "Broke below Pivot S1 support \u2014 bearish"
+      ],
+      "current_price": 1367.6,
+      "unrealized_pnl": 0.0,
+      "max_held_days": 40,
+      "vol_regime_pct": 0.09,
+      "entry_market": {
+        "nifty_trend": "sideways",
+        "vix": 16.25,
+        "mood": "neutral",
+        "regime": "mixed",
+        "sector_momentum": -0.32,
+        "delivery_signal": "neutral",
+        "rsi": 27.0,
+        "mtf_alignment": "aligned",
+        "opposing_ratio": 0.86,
+        "hist_long_trend": "uptrend"
+      }
+    }
+  ],
+  "closed_trades": [
+    {
+      "ticker": "POWERGRID.NS",
+      "sector": "Energy",
+      "open_date": "2026-10-22",
+      "open_session": "morning",
+      "action": "SELL",
+      "entry": 245.4,
+      "qty": 36,
+      "invested": 8834.4,
+      "stop_loss": 255.89,
+      "target": 227.04,
+      "style": "swing",
+      "confidence": 91.5,
+      "patterns": [
+        "early_recovery",
+        "macd_bullish_crossover",
+        "stoch_rsi_overbought_reversal",
+        "outside_bar",
+        "near_52w_low",
+        "gap_up_reversal",
+        "adx_strong_trend_down",
+        "pivot_s1_breakdown",
+        "engulfing_bearish",
+        "tweezer_top",
+        "full_bearish_alignment"
+      ],
+      "buy_reasons": [
+        "MACD histogram positive",
+        "Positive news sentiment (0.18, news 0.9x reliable here)",
+        "Near 52-week low with oversold RSI \u2014 reversal setup",
+        "Near 52-week low (7% of range) + oversold \u2014 value reversal setup",
+        "All EMAs stacked bearish",
+        "Candlestick: engulfing bearish",
+        "Candlestick: tweezer top",
+        "ADX strong trend \u2014 downside momentum confirmed",
+        "Broke below Pivot S1 support \u2014 bearish",
+        "StochRSI overbought with bearish candle \u2014 reversal",
+        "Gap up fade \u2014 selling into strength",
+        "In a long-term strong downtrend (2yr)",
+        "\u2713 Daily setup aligned with the higher-timeframe trend"
+      ],
+      "current_price": 261.05,
+      "unrealized_pnl": -563.4,
+      "max_held_days": 40,
+      "vol_regime_pct": 0.09,
+      "entry_market": {
+        "nifty_trend": "up",
+        "vix": 15.68,
+        "mood": "bearish",
+        "regime": "mixed",
+        "sector_momentum": -0.224,
+        "delivery_signal": "neutral",
+        "rsi": 35.9,
+        "mtf_alignment": "aligned",
+        "opposing_ratio": 0.29,
+        "hist_long_trend": "strong_downtrend"
+      },
+      "view_hist": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "close_date": "2026-10-29",
+      "close_session": "midday",
+      "exit_price": 255.89,
+      "exit_reason": "stop_hit",
+      "pnl": -404.71,
+      "pnl_gross": -377.64,
+      "costs": 27.07,
+      "pnl_pct": -4.58,
+      "won": false,
+      "open_days": 5
     },
     {
       "ticker": "NHPC.NS",
@@ -329,8 +394,8 @@
         "In a long-term downtrend (2yr)",
         "\u2713 Daily setup aligned with the higher-timeframe trend"
       ],
-      "current_price": 74.38,
-      "unrealized_pnl": -208.8,
+      "current_price": 75.84,
+      "unrealized_pnl": -313.92,
       "max_held_days": 40,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -350,16 +415,25 @@
         0,
         0,
         0
-      ]
+      ],
+      "close_date": "2026-10-29",
+      "close_session": "midday",
+      "exit_price": 75.42,
+      "exit_reason": "stop_hit",
+      "pnl": -299.55,
+      "pnl_gross": -283.68,
+      "costs": 15.87,
+      "pnl_pct": -5.82,
+      "won": false,
+      "open_days": 4
     }
   ],
-  "closed_trades": [],
   "daily_snapshots": [],
-  "daily_pnl_today": 0.0,
+  "daily_pnl_today": -704.2548599999991,
   "last_snapshot_date": null,
   "lifetime_wins": 0,
-  "lifetime_losses": 0,
-  "lifetime_pnl": 0.0,
+  "lifetime_losses": 2,
+  "lifetime_pnl": -704.26,
   "last_pnl_reset_date": "2026-10-29",
   "max_drawdown_pct": 0.0,
   "current_drawdown_pct": 0.0,

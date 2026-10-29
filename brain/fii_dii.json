@@ -1,18 +1,12 @@
 {
-  "date": "2026-10-28",
-  "fii_net_cr": 4240.39,
-  "dii_net_cr": -1250.03,
-  "combined_net_cr": 2990.36,
-  "signal": "strong_inflow",
+  "date": "2026-10-29",
+  "fii_net_cr": 871.83,
+  "dii_net_cr": 643.35,
+  "combined_net_cr": 1515.18,
+  "signal": "inflow",
   "ok": true,
   "error": "",
   "history": [
-    {
-      "date": "2026-09-17",
-      "fii": -3208.76,
-      "dii": 3617.75,
-      "combined": 408.99
-    },
     {
       "date": "2026-09-18",
       "fii": 599.54,
@@ -186,6 +180,12 @@
       "fii": 4240.39,
       "dii": -1250.03,
       "combined": 2990.36
+    },
+    {
+      "date": "2026-10-29",
+      "fii": 871.83,
+      "dii": 643.35,
+      "combined": 1515.18
     }
   ]
 }

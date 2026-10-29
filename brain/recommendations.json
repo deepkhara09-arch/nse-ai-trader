@@ -3,10 +3,10 @@
     "ticker": "PIDILITIND.NS",
     "nse_code": "PIDILITIND",
     "company_name": "Pidilite Industries",
-    "date": "2026-10-28",
-    "generated_at": "2026-10-28 09:45 UTC",
-    "valid_until": "15:40 IST",
-    "session": "intraday_close",
+    "date": "2026-10-29",
+    "generated_at": "2026-10-29 03:11 UTC",
+    "valid_until": "09:35 IST",
+    "session": "preopen",
     "is_stale": false,
     "stale_reason": "",
     "signal": "BUY",
@@ -40,10 +40,10 @@
     "pattern_score": 10,
     "confluence_bonus": 2.5,
     "paper_bonus": 0.0,
-    "success_probability": 0.677,
-    "base_success_prob": 0.734,
-    "profit_probability": 1.202,
-    "composite_score": 79.65,
+    "success_probability": 0.668,
+    "base_success_prob": 0.726,
+    "profit_probability": 1.178,
+    "composite_score": 78.59,
     "focus_rank": 1,
     "rank_delta": 0,
     "intention": "BUY PIDILITIND for a SHORT-TERM swing \u2014 buy and hold 5\u201315 days to ride the move, then exit at target or trail the stop.",
@@ -54,9 +54,9 @@
       "fundamentals"
     ],
     "backtest_tested": true,
-    "backtest_hit_5d": 0.544,
-    "backtest_hit_10d": 0.544,
-    "backtest_sample": 57,
+    "backtest_hit_5d": 0.534,
+    "backtest_hit_10d": 0.534,
+    "backtest_sample": 58,
     "hist_long_trend": "uptrend",
     "hist_52w_position": 40.7,
     "hist_personality": "mean_reverter",
@@ -64,7 +64,7 @@
     "data_confidence": "Estimated",
     "data_confidence_key": "estimated",
     "data_confidence_note": "Only 0 paper trade(s) \u2014 probability is an indicator-based estimate, not yet proven",
-    "expected_edge_r": 1.202,
+    "expected_edge_r": 1.178,
     "buy_score": 8.6,
     "sell_score": 7.0,
     "reasons": [
@@ -93,17 +93,17 @@
       "Resistance at \u20b91462.26 is natural target",
       "Latest news: 'Pidilite Industries Stock Signals to Watch This Week - Univest'",
       "Confluence: 3 independent signal families agree (trend, pattern, fundamentals)",
-      "History backtest: this kind of BUY setup worked 54% of the time over ~1 week on this stock (sample: 57)"
+      "History backtest: this kind of BUY setup worked 53% of the time over ~1 week on this stock (sample: 58)"
     ],
     "patterns_seen": [
-      "bb_lower_bounce",
-      "adx_strong_trend_down",
-      "strong_bearish_marubozu",
-      "early_recovery",
-      "evening_star",
-      "full_bearish_alignment",
+      "oversold_macd_reversal",
       "pivot_s1_breakdown",
-      "oversold_macd_reversal"
+      "evening_star",
+      "strong_bearish_marubozu",
+      "full_bearish_alignment",
+      "early_recovery",
+      "bb_lower_bounce",
+      "adx_strong_trend_down"
     ],
     "reliable_patterns": [
       "full_bullish_alignment",
@@ -136,7 +136,7 @@
     "paper_expectancy": 0,
     "market_mood": "neutral",
     "market_warning": [
-      "VIX=16.4 at 90th percentile vs last 30d \u2014 unusually high stress"
+      "VIX=16.2 at 87th percentile vs last 30d \u2014 unusually high stress"
     ]
   }
 ]

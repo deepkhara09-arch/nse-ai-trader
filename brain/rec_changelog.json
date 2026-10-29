@@ -1,16 +1,6 @@
 [
   {
     "type": "new",
-    "ticker": "FEDERALBNK.NS",
-    "nse_code": "FEDERALBNK",
-    "signal": "BUY",
-    "date": "2026-07-28",
-    "ts": "2026-07-28T10:12:26.687563",
-    "detail": "New BUY recommendation \u2014 confidence 72/100",
-    "confidence": 71.9
-  },
-  {
-    "type": "new",
     "ticker": "ICICIBANK.NS",
     "nse_code": "ICICIBANK",
     "signal": "BUY",
@@ -5998,5 +5988,15 @@
     "ts": "2026-10-28T09:45:45.494234",
     "detail": "New BUY recommendation \u2014 confidence 66/100",
     "confidence": 66.2
+  },
+  {
+    "type": "removed",
+    "ticker": "PIDILITIND.NS",
+    "nse_code": "PIDILITIND",
+    "signal": "BUY",
+    "date": "2026-10-29",
+    "ts": "2026-10-29T04:17:12.238758",
+    "detail": "Dropped \u2014 no longer meets threshold (was 66/100)",
+    "confidence": 0
   }
 ]

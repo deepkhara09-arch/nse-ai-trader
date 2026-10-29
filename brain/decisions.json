@@ -1,26 +1,5 @@
 [
   {
-    "timestamp": "2026-08-20T10:11:13.026286",
-    "date": "2026-08-20",
-    "ticker": "CIPLA.NS",
-    "session": "preclose",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 80.6,
-    "entry": 1437.4,
-    "stop_loss": 1408.78,
-    "target": 1494.64,
-    "reason": "paper preclose",
-    "patterns": [
-      "low_volume_drift",
-      "supertrend_bullish",
-      "engulfing_bullish",
-      "ema_death_cross",
-      "pivot_point_test",
-      "stoch_rsi_oversold_reversal"
-    ]
-  },
-  {
     "timestamp": "2026-08-20T10:11:13.028616",
     "date": "2026-08-20",
     "ticker": "BAJFINANCE.NS",
@@ -21288,6 +21267,25 @@
       "full_bearish_alignment",
       "adx_strong_trend_down",
       "supertrend_bullish"
+    ]
+  },
+  {
+    "timestamp": "2026-10-29T09:45:43.420532",
+    "date": "2026-10-29",
+    "ticker": "IDFCFIRSTB.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 58.0,
+    "entry": 73.35,
+    "stop_loss": 66.02,
+    "target": 83.62,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "full_bearish_alignment",
+      "strong_bullish_marubozu",
+      "supertrend_bullish",
+      "adx_strong_trend_down"
     ]
   }
 ]

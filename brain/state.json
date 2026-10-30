@@ -1,13 +1,13 @@
 {
   "phase": "paper_trading",
   "day": 65,
-  "session": "intraday_close",
+  "session": "preopen",
   "start_date": "2026-06-22",
   "phase_start_date": "2026-07-15",
   "last_run_date": "2026-09-21",
   "last_counted_date": "2026-09-21",
   "cohort_last_tick_date": "2026-09-21",
-  "last_updated": "2026-10-29T09:45:43.443900",
+  "last_updated": "2026-10-30T03:05:42.272091",
   "focus_stocks": [
     "PIDILITIND.NS",
     "GAIL.NS",
@@ -68,7 +68,6 @@
     "expectancy": -352.13
   },
   "brain_notes": [
-    "[2026-08-11] Focus refresh \u2014 promoted: ['CHOLAFIN', 'HOMEFIRST', 'GAIL'] | demoted: ['LICI', 'IDFCFIRSTB', 'SIEMENS']",
     "[2026-08-11] Cohort batch #22 complete \u2014 30 candidates ready",
     "[2026-08-12] Pre-open macro: neutral (-0.16)",
     "[2026-08-12] Focus refresh \u2014 promoted: ['BAJFINANCE'] | demoted: ['HOMEFIRST']",
@@ -167,7 +166,8 @@
     "[2026-10-26] Pre-open macro: neutral (-0.10)",
     "[2026-10-27] Pre-open macro: risk_on (+0.21)",
     "[2026-10-28] Pre-open macro: neutral (+0.01)",
-    "[2026-10-29] Pre-open macro: risk_on (+0.67)"
+    "[2026-10-29] Pre-open macro: risk_on (+0.67)",
+    "[2026-10-30] Pre-open macro: neutral (-0.01)"
   ],
   "alert_sent": false,
   "schema_version": 11,
@@ -397,10 +397,6 @@
     "scored_date": "2026-09-21"
   },
   "sessions_done": {
-    "preopen": "2026-10-29",
-    "morning": "2026-10-29",
-    "midday": "2026-10-29",
-    "afternoon": "2026-10-29",
-    "intraday_close": "2026-10-29"
+    "preopen": "2026-10-30"
   }
 }

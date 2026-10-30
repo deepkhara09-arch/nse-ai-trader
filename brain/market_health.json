@@ -1,68 +1,66 @@
 {
-  "date": "2026-10-29",
-  "session": "intraday_close",
+  "date": "2026-10-30",
+  "session": "preopen",
   "nifty": {
     "symbol": "^NSEI",
-    "value": 22698.85,
-    "day_change_pct": -0.22,
-    "trend_5d": "sideways",
-    "trend_20d": "sideways",
-    "ath_pct_60d": -5.98
+    "value": 22936.75,
+    "day_change_pct": 1.05,
+    "trend_5d": "up",
+    "trend_20d": "up",
+    "ath_pct_60d": -5.0
   },
   "vix": {
-    "value": 16.25,
+    "value": 15.12,
     "level": "normal",
-    "percentile_30d": 87.0,
-    "avg_30d": 13.99
+    "percentile_30d": 70.0,
+    "avg_30d": 14.04
   },
   "bank_nifty": {
     "symbol": "^NSEBANK",
-    "value": 54267.4,
-    "day_change_pct": 0.54,
-    "trend_5d": "down",
+    "value": 54909.65,
+    "day_change_pct": 1.18,
+    "trend_5d": "up",
     "trend_20d": "sideways",
-    "ath_pct_60d": -6.48,
+    "ath_pct_60d": -5.37,
     "diverging": false
   },
   "sectors": {
     "IT": {
       "symbol": "ITBEES.NS",
-      "value": 35.66,
-      "day_change_pct": -0.92,
+      "value": 35.01,
+      "day_change_pct": -1.82,
       "trend_5d": "down",
       "trend_20d": "strong_up",
-      "ath_pct_60d": -3.31
+      "ath_pct_60d": -5.07
     },
     "Pharma": {
       "symbol": "PHARMABEES.NS",
-      "value": 27.27,
-      "day_change_pct": 1.04,
+      "value": 27.44,
+      "day_change_pct": 0.62,
       "trend_5d": "strong_up",
-      "trend_20d": "down",
-      "ath_pct_60d": -4.58
+      "trend_20d": "sideways",
+      "ath_pct_60d": -3.99
     },
     "Bank": {
       "symbol": "BANKBEES.NS",
-      "value": 560.88,
-      "day_change_pct": -0.34,
+      "value": 561.83,
+      "day_change_pct": 0.17,
       "trend_5d": "down",
       "trend_20d": "sideways",
-      "ath_pct_60d": -7.75
+      "ath_pct_60d": -7.59
     },
     "Infra": {
       "symbol": "INFRABEES.NS",
-      "value": 899.02,
-      "day_change_pct": -0.34,
-      "trend_5d": "up",
-      "trend_20d": "down",
-      "ath_pct_60d": -7.22
+      "value": 922.08,
+      "day_change_pct": 2.57,
+      "trend_5d": "strong_up",
+      "trend_20d": "up",
+      "ath_pct_60d": -4.84
     }
   },
-  "market_mood": "neutral",
+  "market_mood": "bullish",
   "trade_allowed": true,
-  "warnings": [
-    "VIX=16.2 at 87th percentile vs last 30d \u2014 unusually high stress"
-  ],
+  "warnings": [],
   "leading_sectors": [
     "Pharma",
     "Infra"
@@ -75,77 +73,70 @@
   ],
   "intraday_regime": "mixed",
   "macro": {
-    "date": "2026-10-29",
-    "session": "midday",
-    "generated_at": "2026-10-29T06:15:44.613411",
-    "global_score": 0.313,
-    "india_score": 1.0,
-    "overall_score": 0.622,
-    "mood": "risk_on",
+    "date": "2026-10-30",
+    "session": "preopen",
+    "generated_at": "2026-10-30T03:05:40.355314",
+    "global_score": -0.017,
+    "india_score": 0.0,
+    "overall_score": -0.009,
+    "mood": "neutral",
     "drivers": [
-      "Why Alphabet\u2019s stock could see its worst drop in years after the latest results",
-      "Lumentum\u2019s stock pops as investors cheer a possible sale to Marvell",
-      "\u2018Just watch Judge Judy\u2019: I\u2019m in my 70s. Why do people keep making the same avoidable financial mistakes?",
-      "The major reason Microsoft\u2019s stock is heading higher after earnings",
-      "Fortinet\u2019s stock is taking a dive after earnings. Here\u2019s why.",
-      "ServiceNow\u2019s stock slides as earnings miss overshadows a raised AI outlook",
-      "Is it curtains for COLA? Saving Social Security could mean changing the cost-of-living adjustment.",
-      "Chipotle now has more demand from lower-income diners than higher-income ones"
+      "Amazon\u2019s stock drops \u2014\u00a0even in the face of a bold new cloud forecast",
+      "A Starbucks turnaround is brewing \u2014\u00a0but perhaps not quickly enough for investors",
+      "Sandisk sees revenue nearly quintuple \u2014\u00a0and a stock split is on the way",
+      "Our church has a $1.5 million bequest earning 3.75% in a bank account. Is inflation eroding it?",
+      "Why Intel\u2019s stock is sinking toward its worst drop in two years",
+      "My abusive ex-husband promised $20,000 for our kids\u2019 education. Now he refuses to pay. Is he legally obligated?",
+      "The midterms are crucial to the future of Social Security \u2014 no matter how old you are",
+      "Is it curtains for COLA? Saving Social Security could mean changing the cost-of-living adjustment."
     ],
     "global_cues": {
       "dow": {
-        "last": 52475.1,
-        "chg_pct": 0.19
+        "last": 52342.56,
+        "chg_pct": -0.25
       },
       "nasdaq": {
-        "last": 26549.85,
-        "chg_pct": 0.27
+        "last": 26184.72,
+        "chg_pct": -1.38
       },
       "sp500": {
-        "last": 7743.98,
-        "chg_pct": 0.28
+        "last": 7720.39,
+        "chg_pct": -0.3
       },
       "nikkei": {
-        "last": 64570.59,
-        "chg_pct": 0.96
+        "last": 63019.78,
+        "chg_pct": -2.54
       },
       "crude": {
-        "last": 102.78,
-        "chg_pct": 2.88
+        "last": 103.42,
+        "chg_pct": 1.39
       },
       "usdinr": {
-        "last": 95.36,
-        "chg_pct": 0.19
+        "last": 95.18,
+        "chg_pct": -0.03
       },
       "gold": {
-        "last": 4051.6,
-        "chg_pct": -0.56
+        "last": 4007.8,
+        "chg_pct": -0.59
       }
     },
-    "summary": "Overall macro mood is risk-on (+0.62). US Dow +0.2% overnight. Crude +2.9%. USD/INR +0.2%. Notable: Geopolitical conflict / war.",
+    "summary": "Overall macro mood is neutral (-0.01). US Dow -0.2% overnight. Crude +1.4%. USD/INR -0.0%. Notable: Geopolitical conflict / war.",
     "playbook": [
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially."
     ],
     "playbook_bias": "risk_off",
     "article_count": 60
   },
-  "macro_tailwind": true,
   "macro_risk_factor": 1.0,
   "fii_dii": {
-    "date": "2026-10-29",
-    "fii_net_cr": 871.83,
-    "dii_net_cr": 643.35,
-    "combined_net_cr": 1515.18,
-    "signal": "inflow",
+    "date": "2026-10-30",
+    "fii_net_cr": -943.6,
+    "dii_net_cr": 1924.41,
+    "combined_net_cr": 980.81,
+    "signal": "neutral",
     "ok": true,
     "error": "",
     "history": [
-      {
-        "date": "2026-09-18",
-        "fii": 599.54,
-        "dii": 1019.69,
-        "combined": 1619.23
-      },
       {
         "date": "2026-09-21",
         "fii": -576.2,
@@ -319,20 +310,27 @@
         "fii": 871.83,
         "dii": 643.35,
         "combined": 1515.18
+      },
+      {
+        "date": "2026-10-30",
+        "fii": -943.6,
+        "dii": 1924.41,
+        "combined": 980.81
       }
     ]
   },
   "pcr": {
-    "date": "2026-10-29",
-    "pcr": 1.044,
-    "reading": "neutral",
-    "total_pe_oi": 1969817,
-    "total_ce_oi": 1886541,
-    "spot": 22698.85,
-    "max_pain": 22700.0,
-    "max_pain_dist_pct": -0.01,
-    "oi_bias": "balanced",
+    "date": "2026-10-30",
+    "pcr": 1.441,
+    "reading": "bullish_bias",
+    "total_pe_oi": 2935927,
+    "total_ce_oi": 2037230,
+    "spot": 22936.75,
+    "max_pain": 22900.0,
+    "max_pain_dist_pct": 0.16,
+    "oi_bias": "put_heavy_support",
     "ok": true,
     "error": ""
-  }
+  },
+  "oi_note": "Heavy put OI below spot \u2014 option writers see a floor (bullish lean)"
 }

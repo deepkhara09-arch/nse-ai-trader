@@ -1,15 +1,5 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_down, strong_bullish_marubozu, full_bearish_alignment mean for a swing trade on IDFCFIRSTB? Current RSI=27, MACD hist=-0.5245, Vol=1.1x average. Signal is BUY.",
-    "context": {
-      "ticker": "IDFCFIRSTB.NS",
-      "signal": "BUY",
-      "patterns": "adx_strong_trend_down, strong_bullish_marubozu, full_bearish_alignment",
-      "rsi": 27.1
-    },
-    "queued_at": "2026-10-29T06:15:53.543242"
-  },
-  {
     "question": "In Indian NSE markets, what does the combination of gap_down_reversal, adx_strong_trend_down, full_bearish_alignment mean for a swing trade on HOMEFIRST? Current RSI=27, MACD hist=-5.8787, Vol=0.9x average. Signal is BUY.",
     "context": {
       "ticker": "HOMEFIRST.NS",
@@ -98,5 +88,15 @@
       "rsi": 27.1
     },
     "queued_at": "2026-10-29T09:45:43.529725"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_down, full_bearish_alignment, strong_bullish_marubozu mean for a swing trade on IDFCFIRSTB? Current RSI=27, MACD hist=-0.5245, Vol=1.1x average. Signal is BUY.",
+    "context": {
+      "ticker": "IDFCFIRSTB.NS",
+      "signal": "BUY",
+      "patterns": "adx_strong_trend_down, full_bearish_alignment, strong_bullish_marubozu",
+      "rsi": 27.1
+    },
+    "queued_at": "2026-10-30T03:05:42.363972"
   }
 ]

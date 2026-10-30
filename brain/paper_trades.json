@@ -1,5 +1,5 @@
 {
-  "capital": 79397.46514,
+  "capital": 80481.00514,
   "open_positions": [
     {
       "ticker": "HINDALCO.NS",
@@ -36,8 +36,8 @@
         "\u26a0 Daily sell fights the higher-timeframe uptrend \u2014 needs extra conviction",
         "\u26a0 Strong opposing signals present (opposing evidence 59% of the leading side) \u2014 conflicted setup, needs extra conviction"
       ],
-      "current_price": 889.85,
-      "unrealized_pnl": 91.75,
+      "current_price": 881.35,
+      "unrealized_pnl": 49.25,
       "max_held_days": 40,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -94,8 +94,8 @@
         "\u26a0 Daily sell fights the higher-timeframe uptrend \u2014 needs extra conviction",
         "\u26a0 Strong opposing signals present (opposing evidence 94% of the leading side) \u2014 conflicted setup, needs extra conviction"
       ],
-      "current_price": 73.35,
-      "unrealized_pnl": -42.92,
+      "current_price": 71.46,
+      "unrealized_pnl": -152.54,
       "max_held_days": 40,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -148,8 +148,8 @@
         "\u26a0 Daily sell fights the higher-timeframe uptrend \u2014 needs extra conviction",
         "\u26a0 Strong opposing signals present (opposing evidence 86% of the leading side) \u2014 conflicted setup, needs extra conviction"
       ],
-      "current_price": 162.0,
-      "unrealized_pnl": 118.04,
+      "current_price": 159.9,
+      "unrealized_pnl": 63.44,
       "max_held_days": 40,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -178,9 +178,9 @@
       "open_session": "morning",
       "action": "BUY",
       "entry": 1015.6,
-      "qty": 3,
-      "invested": 3046.8,
-      "stop_loss": 1003.2,
+      "qty": 2,
+      "invested": 2031.2,
+      "stop_loss": 1039.06,
       "target": 1157.78,
       "style": "swing",
       "confidence": 30,
@@ -207,8 +207,8 @@
         "\u26a0 Daily sell fights the higher-timeframe uptrend \u2014 needs extra conviction",
         "\u26a0 Strong opposing signals present (opposing evidence 87% of the leading side) \u2014 conflicted setup, needs extra conviction"
       ],
-      "current_price": 1070.9,
-      "unrealized_pnl": 165.9,
+      "current_price": 1088.7,
+      "unrealized_pnl": 146.2,
       "max_held_days": 40,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -229,7 +229,8 @@
         0,
         0
       ],
-      "trailing_active": true
+      "trailing_active": true,
+      "t1_booked": true
     },
     {
       "ticker": "PIDILITIND.NS",
@@ -240,7 +241,7 @@
       "entry": 1367.6,
       "qty": 3,
       "invested": 4102.8,
-      "stop_loss": 1230.84,
+      "stop_loss": 1368.97,
       "target": 1559.06,
       "style": "swing",
       "confidence": 48.1,
@@ -267,8 +268,8 @@
         "ADX strong trend \u2014 downside momentum confirmed",
         "Broke below Pivot S1 support \u2014 bearish"
       ],
-      "current_price": 1421.4,
-      "unrealized_pnl": 161.4,
+      "current_price": 1424.4,
+      "unrealized_pnl": 170.4,
       "max_held_days": 40,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -285,8 +286,10 @@
       },
       "view_hist": [
         0,
+        0,
         0
-      ]
+      ],
+      "trailing_active": true
     }
   ],
   "closed_trades": [
@@ -431,15 +434,86 @@
       "pnl_pct": -5.82,
       "won": false,
       "open_days": 4
+    },
+    {
+      "ticker": "HOMEFIRST.NS",
+      "sector": "Infra Finance",
+      "open_date": "2026-10-22",
+      "open_session": "morning",
+      "action": "BUY",
+      "entry": 1015.6,
+      "qty": 1,
+      "invested": 2031.2,
+      "stop_loss": 1039.06,
+      "target": 1157.78,
+      "style": "swing",
+      "confidence": 30,
+      "patterns": [
+        "full_bearish_alignment",
+        "rsi_bullish_divergence",
+        "stoch_rsi_overbought_reversal",
+        "adx_strong_trend_down",
+        "pivot_s1_breakdown",
+        "macd_bearish_crossover",
+        "strong_bearish_marubozu"
+      ],
+      "buy_reasons": [
+        "RSI=41 in healthy buy zone",
+        "RSI bullish divergence \u2014 price lower but RSI higher",
+        "DEEP-DIP BUY: 11% below trend average, trend intact \u2014 mean-reversion setup (backtest-positive)",
+        "DEEP-DIP OVERRIDE: price fell hard (bearish short-term) but the stock's structure is intact \u2014 this is the buy-the-fear edge",
+        "All EMAs stacked bearish",
+        "MACD histogram negative",
+        "High volume confirmation (1.5x avg)",
+        "ADX strong trend \u2014 downside momentum confirmed",
+        "Broke below Pivot S1 support \u2014 bearish",
+        "StochRSI overbought with bearish candle \u2014 reversal",
+        "\u26a0 Daily sell fights the higher-timeframe uptrend \u2014 needs extra conviction",
+        "\u26a0 Strong opposing signals present (opposing evidence 87% of the leading side) \u2014 conflicted setup, needs extra conviction"
+      ],
+      "current_price": 1088.7,
+      "unrealized_pnl": 219.3,
+      "max_held_days": 40,
+      "vol_regime_pct": 0.09,
+      "entry_market": {
+        "nifty_trend": "up",
+        "vix": 15.68,
+        "mood": "bearish",
+        "regime": "mixed",
+        "sector_momentum": 0.206,
+        "delivery_signal": "neutral",
+        "rsi": 41.0,
+        "mtf_alignment": "conflict",
+        "opposing_ratio": 0.87,
+        "hist_long_trend": "strong_uptrend"
+      },
+      "view_hist": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "trailing_active": true,
+      "t1_booked": true,
+      "close_date": "2026-10-30",
+      "close_session": "morning",
+      "exit_price": 1086.69,
+      "exit_reason": "partial_t1",
+      "pnl": 67.94,
+      "pnl_gross": 71.09,
+      "costs": 3.15,
+      "pnl_pct": 6.69,
+      "won": true,
+      "open_days": 6
     }
   ],
   "daily_snapshots": [],
-  "daily_pnl_today": -704.2548599999991,
+  "daily_pnl_today": 67.94,
   "last_snapshot_date": null,
-  "lifetime_wins": 0,
+  "lifetime_wins": 1,
   "lifetime_losses": 2,
-  "lifetime_pnl": -704.26,
-  "last_pnl_reset_date": "2026-10-29",
+  "lifetime_pnl": -636.32,
+  "last_pnl_reset_date": "2026-10-30",
   "max_drawdown_pct": 0.0,
   "current_drawdown_pct": 0.0,
   "portfolio_peak": 100000.0,

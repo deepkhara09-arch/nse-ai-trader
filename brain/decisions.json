@@ -1,27 +1,5 @@
 [
   {
-    "timestamp": "2026-08-20T10:11:13.028616",
-    "date": "2026-08-20",
-    "ticker": "BAJFINANCE.NS",
-    "session": "preclose",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 94.2,
-    "entry": 1096.9,
-    "stop_loss": 1053.09,
-    "target": 1184.52,
-    "reason": "paper preclose",
-    "patterns": [
-      "low_volume_drift",
-      "supertrend_bullish",
-      "strong_bullish_marubozu",
-      "full_bullish_alignment",
-      "three_white_soldiers",
-      "pivot_point_test",
-      "stoch_rsi_oversold_reversal"
-    ]
-  },
-  {
     "timestamp": "2026-08-20T10:11:13.030255",
     "date": "2026-08-20",
     "ticker": "SHRIRAMFIN.NS",
@@ -21286,6 +21264,26 @@
       "strong_bullish_marubozu",
       "supertrend_bullish",
       "adx_strong_trend_down"
+    ]
+  },
+  {
+    "timestamp": "2026-10-30T04:05:46.847812",
+    "date": "2026-10-30",
+    "ticker": "IDFCFIRSTB.NS",
+    "session": "morning",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 39.8,
+    "entry": 71.46,
+    "stop_loss": 64.31,
+    "target": 81.46,
+    "reason": "paper morning",
+    "patterns": [
+      "full_bearish_alignment",
+      "engulfing_bearish",
+      "stoch_rsi_overbought_reversal",
+      "adx_strong_trend_down",
+      "pivot_s1_breakdown"
     ]
   }
 ]

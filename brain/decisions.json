@@ -1,47 +1,5 @@
 [
   {
-    "timestamp": "2026-08-20T10:11:13.032162",
-    "date": "2026-08-20",
-    "ticker": "HINDALCO.NS",
-    "session": "preclose",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 67.7,
-    "entry": 1022.95,
-    "stop_loss": 983.08,
-    "target": 1102.69,
-    "reason": "paper preclose",
-    "patterns": [
-      "low_volume_drift",
-      "full_bullish_alignment",
-      "adx_strong_trend_up",
-      "pivot_s1_breakdown"
-    ]
-  },
-  {
-    "timestamp": "2026-08-20T15:42:14.971408+05:30",
-    "date": "2026-08-20",
-    "ticker": "PIDILITIND.NS",
-    "session": "preclose",
-    "action": "RECOMMEND",
-    "signal": "BUY",
-    "confidence": 90.1,
-    "entry": 1662.59,
-    "stop_loss": 1615.23,
-    "target": 1749.84,
-    "reason": "rec snapshot (short_term)",
-    "patterns": [
-      "adx_strong_trend_up",
-      "pivot_s1_breakdown",
-      "full_bullish_alignment",
-      "macd_bearish_crossover",
-      "tweezer_top",
-      "pivot_point_test"
-    ],
-    "dry_evaluated": true,
-    "dry_outcome": "flat"
-  },
-  {
     "timestamp": "2026-08-20T15:42:14.971417+05:30",
     "date": "2026-08-20",
     "ticker": "UNIONBANK.NS",
@@ -21283,6 +21241,43 @@
       "stoch_rsi_overbought_reversal",
       "pivot_s1_breakdown",
       "adx_strong_trend_down"
+    ]
+  },
+  {
+    "timestamp": "2026-10-30T09:45:43.485666",
+    "date": "2026-10-30",
+    "ticker": "IDFCFIRSTB.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 30,
+    "entry": 71.92,
+    "stop_loss": 64.73,
+    "target": 81.99,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "pivot_s1_breakdown",
+      "adx_strong_trend_down",
+      "stoch_rsi_overbought_reversal",
+      "full_bearish_alignment"
+    ]
+  },
+  {
+    "timestamp": "2026-10-30T09:45:43.486625",
+    "date": "2026-10-30",
+    "ticker": "BANDHANBNK.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 23.7,
+    "entry": 154.22,
+    "stop_loss": 138.8,
+    "target": 175.81,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "stoch_rsi_overbought_reversal",
+      "full_bearish_alignment",
+      "pivot_point_test"
     ]
   }
 ]

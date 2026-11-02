@@ -1,15 +1,5 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of full_bearish_alignment, engulfing_bearish, stoch_rsi_overbought_reversal mean for a swing trade on IDFCFIRSTB? Current RSI=29, MACD hist=-0.3695, Vol=0.9x average. Signal is BUY.",
-    "context": {
-      "ticker": "IDFCFIRSTB.NS",
-      "signal": "BUY",
-      "patterns": "full_bearish_alignment, engulfing_bearish, stoch_rsi_overbought_reversal",
-      "rsi": 29.2
-    },
-    "queued_at": "2026-10-30T04:05:46.996512"
-  },
-  {
     "question": "In Indian NSE markets, what does the combination of full_bearish_alignment, stoch_rsi_overbought_reversal, pivot_s1_breakdown mean for a swing trade on IDFCFIRSTB? Current RSI=29, MACD hist=-0.3695, Vol=0.9x average. Signal is BUY.",
     "context": {
       "ticker": "IDFCFIRSTB.NS",
@@ -98,5 +88,15 @@
       "rsi": 29.2
     },
     "queued_at": "2026-10-30T09:45:43.623095"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of full_bearish_alignment, stoch_rsi_overbought_reversal, pivot_s1_breakdown mean for a swing trade on IDFCFIRSTB? Current RSI=29, MACD hist=-0.3695, Vol=0.9x average. Signal is BUY.",
+    "context": {
+      "ticker": "IDFCFIRSTB.NS",
+      "signal": "BUY",
+      "patterns": "full_bearish_alignment, stoch_rsi_overbought_reversal, pivot_s1_breakdown",
+      "rsi": 29.2
+    },
+    "queued_at": "2026-11-02T03:05:40.431835"
   }
 ]

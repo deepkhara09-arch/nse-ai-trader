@@ -1,26 +1,5 @@
 [
   {
-    "timestamp": "2026-08-20T15:42:14.971422+05:30",
-    "date": "2026-08-20",
-    "ticker": "HINDALCO.NS",
-    "session": "preclose",
-    "action": "RECOMMEND",
-    "signal": "BUY",
-    "confidence": 65.5,
-    "entry": 1024.48,
-    "stop_loss": 983.08,
-    "target": 1102.69,
-    "reason": "rec snapshot (short_term)",
-    "patterns": [
-      "low_volume_drift",
-      "full_bullish_alignment",
-      "adx_strong_trend_up",
-      "pivot_s1_breakdown"
-    ],
-    "dry_evaluated": true,
-    "dry_outcome": "flat"
-  },
-  {
     "timestamp": "2026-08-21T04:05:46.064872",
     "date": "2026-08-21",
     "ticker": "MARICO.NS",
@@ -21276,6 +21255,26 @@
       "full_bearish_alignment",
       "adx_strong_trend_down",
       "pivot_s1_breakdown"
+    ]
+  },
+  {
+    "timestamp": "2026-11-02T06:16:00.375606",
+    "date": "2026-11-02",
+    "ticker": "BANDHANBNK.NS",
+    "session": "midday",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 30,
+    "entry": 155.2,
+    "stop_loss": 139.68,
+    "target": 176.93,
+    "reason": "paper midday",
+    "patterns": [
+      "outside_bar",
+      "engulfing_bearish",
+      "pivot_s1_breakdown",
+      "full_bearish_alignment",
+      "rsi_bullish_divergence"
     ]
   }
 ]

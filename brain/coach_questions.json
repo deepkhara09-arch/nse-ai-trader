@@ -1,35 +1,5 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of full_bearish_alignment, stoch_rsi_overbought_reversal, pivot_s1_breakdown mean for a swing trade on IDFCFIRSTB? Current RSI=29, MACD hist=-0.3695, Vol=0.9x average. Signal is BUY.",
-    "context": {
-      "ticker": "IDFCFIRSTB.NS",
-      "signal": "BUY",
-      "patterns": "full_bearish_alignment, stoch_rsi_overbought_reversal, pivot_s1_breakdown",
-      "rsi": 29.2
-    },
-    "queued_at": "2026-10-30T07:45:54.000815"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of full_bearish_alignment, stoch_rsi_overbought_reversal, pivot_s1_breakdown mean for a swing trade on IDFCFIRSTB? Current RSI=29, MACD hist=-0.3695, Vol=0.9x average. Signal is BUY.",
-    "context": {
-      "ticker": "IDFCFIRSTB.NS",
-      "signal": "BUY",
-      "patterns": "full_bearish_alignment, stoch_rsi_overbought_reversal, pivot_s1_breakdown",
-      "rsi": 29.2
-    },
-    "queued_at": "2026-10-30T07:45:54.008853"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of full_bearish_alignment, stoch_rsi_overbought_reversal, pivot_s1_breakdown mean for a swing trade on IDFCFIRSTB? Current RSI=29, MACD hist=-0.3695, Vol=0.9x average. Signal is BUY.",
-    "context": {
-      "ticker": "IDFCFIRSTB.NS",
-      "signal": "BUY",
-      "patterns": "full_bearish_alignment, stoch_rsi_overbought_reversal, pivot_s1_breakdown",
-      "rsi": 29.2
-    },
-    "queued_at": "2026-10-30T07:45:54.131217"
-  },
-  {
     "question": "In Indian NSE markets, what does the combination of pivot_s1_breakdown, adx_strong_trend_down, stoch_rsi_overbought_reversal mean for a swing trade on IDFCFIRSTB? Current RSI=29, MACD hist=-0.3695, Vol=0.9x average. Signal is BUY.",
     "context": {
       "ticker": "IDFCFIRSTB.NS",
@@ -98,5 +68,35 @@
       "rsi": 20.0
     },
     "queued_at": "2026-11-02T04:05:47.499165"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of outside_bar, engulfing_bearish, pivot_s1_breakdown mean for a swing trade on BANDHANBNK? Current RSI=48, MACD hist=-0.4193, Vol=0.6x average. Signal is BUY.",
+    "context": {
+      "ticker": "BANDHANBNK.NS",
+      "signal": "BUY",
+      "patterns": "outside_bar, engulfing_bearish, pivot_s1_breakdown",
+      "rsi": 47.8
+    },
+    "queued_at": "2026-11-02T06:16:00.375231"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of outside_bar, engulfing_bearish, pivot_s1_breakdown mean for a swing trade on BANDHANBNK? Current RSI=48, MACD hist=-0.4193, Vol=0.6x average. Signal is BUY.",
+    "context": {
+      "ticker": "BANDHANBNK.NS",
+      "signal": "BUY",
+      "patterns": "outside_bar, engulfing_bearish, pivot_s1_breakdown",
+      "rsi": 47.8
+    },
+    "queued_at": "2026-11-02T06:16:00.382714"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of outside_bar, engulfing_bearish, pivot_s1_breakdown mean for a swing trade on BANDHANBNK? Current RSI=48, MACD hist=-0.4193, Vol=0.6x average. Signal is BUY.",
+    "context": {
+      "ticker": "BANDHANBNK.NS",
+      "signal": "BUY",
+      "patterns": "outside_bar, engulfing_bearish, pivot_s1_breakdown",
+      "rsi": 47.8
+    },
+    "queued_at": "2026-11-02T06:16:00.511528"
   }
 ]

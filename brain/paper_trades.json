@@ -1,5 +1,5 @@
 {
-  "capital": 81940.08514,
+  "capital": 84032.59029,
   "open_positions": [
     {
       "ticker": "HINDALCO.NS",
@@ -36,8 +36,8 @@
         "\u26a0 Daily sell fights the higher-timeframe uptrend \u2014 needs extra conviction",
         "\u26a0 Strong opposing signals present (opposing evidence 59% of the leading side) \u2014 conflicted setup, needs extra conviction"
       ],
-      "current_price": 894.85,
-      "unrealized_pnl": 116.75,
+      "current_price": 904.55,
+      "unrealized_pnl": 165.25,
       "max_held_days": 40,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -94,8 +94,8 @@
         "\u26a0 Daily sell fights the higher-timeframe uptrend \u2014 needs extra conviction",
         "\u26a0 Strong opposing signals present (opposing evidence 94% of the leading side) \u2014 conflicted setup, needs extra conviction"
       ],
-      "current_price": 72.84,
-      "unrealized_pnl": -72.5,
+      "current_price": 73.79,
+      "unrealized_pnl": -17.4,
       "max_held_days": 40,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -148,8 +148,8 @@
         "\u26a0 Daily sell fights the higher-timeframe uptrend \u2014 needs extra conviction",
         "\u26a0 Strong opposing signals present (opposing evidence 86% of the leading side) \u2014 conflicted setup, needs extra conviction"
       ],
-      "current_price": 155.76,
-      "unrealized_pnl": -44.2,
+      "current_price": 155.2,
+      "unrealized_pnl": -58.76,
       "max_held_days": 40,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -172,67 +172,6 @@
       ]
     },
     {
-      "ticker": "HOMEFIRST.NS",
-      "sector": "Infra Finance",
-      "open_date": "2026-10-22",
-      "open_session": "morning",
-      "action": "BUY",
-      "entry": 1015.6,
-      "qty": 2,
-      "invested": 2031.2,
-      "stop_loss": 1049.35,
-      "target": 1157.78,
-      "style": "swing",
-      "confidence": 30,
-      "patterns": [
-        "full_bearish_alignment",
-        "rsi_bullish_divergence",
-        "stoch_rsi_overbought_reversal",
-        "adx_strong_trend_down",
-        "pivot_s1_breakdown",
-        "macd_bearish_crossover",
-        "strong_bearish_marubozu"
-      ],
-      "buy_reasons": [
-        "RSI=41 in healthy buy zone",
-        "RSI bullish divergence \u2014 price lower but RSI higher",
-        "DEEP-DIP BUY: 11% below trend average, trend intact \u2014 mean-reversion setup (backtest-positive)",
-        "DEEP-DIP OVERRIDE: price fell hard (bearish short-term) but the stock's structure is intact \u2014 this is the buy-the-fear edge",
-        "All EMAs stacked bearish",
-        "MACD histogram negative",
-        "High volume confirmation (1.5x avg)",
-        "ADX strong trend \u2014 downside momentum confirmed",
-        "Broke below Pivot S1 support \u2014 bearish",
-        "StochRSI overbought with bearish candle \u2014 reversal",
-        "\u26a0 Daily sell fights the higher-timeframe uptrend \u2014 needs extra conviction",
-        "\u26a0 Strong opposing signals present (opposing evidence 87% of the leading side) \u2014 conflicted setup, needs extra conviction"
-      ],
-      "current_price": 1068.9,
-      "unrealized_pnl": 106.6,
-      "max_held_days": 40,
-      "vol_regime_pct": 0.09,
-      "entry_market": {
-        "nifty_trend": "up",
-        "vix": 15.68,
-        "mood": "bearish",
-        "regime": "mixed",
-        "sector_momentum": 0.206,
-        "delivery_signal": "neutral",
-        "rsi": 41.0,
-        "mtf_alignment": "conflict",
-        "opposing_ratio": 0.87,
-        "hist_long_trend": "strong_uptrend"
-      },
-      "view_hist": [
-        1,
-        1,
-        0,
-        0
-      ],
-      "trailing_active": true,
-      "t1_booked": true
-    },
-    {
       "ticker": "PIDILITIND.NS",
       "sector": "Consumer",
       "open_date": "2026-10-29",
@@ -241,7 +180,7 @@
       "entry": 1367.6,
       "qty": 2,
       "invested": 2735.2,
-      "stop_loss": 1399.19,
+      "stop_loss": 1420.3,
       "target": 1559.06,
       "style": "swing",
       "confidence": 48.1,
@@ -268,8 +207,8 @@
         "ADX strong trend \u2014 downside momentum confirmed",
         "Broke below Pivot S1 support \u2014 bearish"
       ],
-      "current_price": 1462.7,
-      "unrealized_pnl": 190.2,
+      "current_price": 1473.0,
+      "unrealized_pnl": 210.8,
       "max_held_days": 40,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -578,14 +517,85 @@
       "pnl_pct": 6.69,
       "won": true,
       "open_days": 2
+    },
+    {
+      "ticker": "HOMEFIRST.NS",
+      "sector": "Infra Finance",
+      "open_date": "2026-10-22",
+      "open_session": "morning",
+      "action": "BUY",
+      "entry": 1015.6,
+      "qty": 2,
+      "invested": 2031.2,
+      "stop_loss": 1049.35,
+      "target": 1157.78,
+      "style": "swing",
+      "confidence": 30,
+      "patterns": [
+        "full_bearish_alignment",
+        "rsi_bullish_divergence",
+        "stoch_rsi_overbought_reversal",
+        "adx_strong_trend_down",
+        "pivot_s1_breakdown",
+        "macd_bearish_crossover",
+        "strong_bearish_marubozu"
+      ],
+      "buy_reasons": [
+        "RSI=41 in healthy buy zone",
+        "RSI bullish divergence \u2014 price lower but RSI higher",
+        "DEEP-DIP BUY: 11% below trend average, trend intact \u2014 mean-reversion setup (backtest-positive)",
+        "DEEP-DIP OVERRIDE: price fell hard (bearish short-term) but the stock's structure is intact \u2014 this is the buy-the-fear edge",
+        "All EMAs stacked bearish",
+        "MACD histogram negative",
+        "High volume confirmation (1.5x avg)",
+        "ADX strong trend \u2014 downside momentum confirmed",
+        "Broke below Pivot S1 support \u2014 bearish",
+        "StochRSI overbought with bearish candle \u2014 reversal",
+        "\u26a0 Daily sell fights the higher-timeframe uptrend \u2014 needs extra conviction",
+        "\u26a0 Strong opposing signals present (opposing evidence 87% of the leading side) \u2014 conflicted setup, needs extra conviction"
+      ],
+      "current_price": 1046.2,
+      "unrealized_pnl": 61.2,
+      "max_held_days": 40,
+      "vol_regime_pct": 0.09,
+      "entry_market": {
+        "nifty_trend": "up",
+        "vix": 15.68,
+        "mood": "bearish",
+        "regime": "mixed",
+        "sector_momentum": 0.206,
+        "delivery_signal": "neutral",
+        "rsi": 41.0,
+        "mtf_alignment": "conflict",
+        "opposing_ratio": 0.87,
+        "hist_long_trend": "strong_uptrend"
+      },
+      "view_hist": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "trailing_active": true,
+      "t1_booked": true,
+      "close_date": "2026-11-02",
+      "close_session": "midday",
+      "exit_price": 1049.35,
+      "exit_reason": "stop_hit",
+      "pnl": 61.31,
+      "pnl_gross": 67.5,
+      "costs": 6.19,
+      "pnl_pct": 3.02,
+      "won": true,
+      "open_days": 7
     }
   ],
   "daily_snapshots": [],
-  "daily_pnl_today": 91.48,
+  "daily_pnl_today": 152.78514999999976,
   "last_snapshot_date": null,
-  "lifetime_wins": 2,
+  "lifetime_wins": 3,
   "lifetime_losses": 2,
-  "lifetime_pnl": -544.84,
+  "lifetime_pnl": -483.53,
   "last_pnl_reset_date": "2026-11-02",
   "max_drawdown_pct": 0.0,
   "current_drawdown_pct": 0.0,

@@ -1,27 +1,5 @@
 [
   {
-    "timestamp": "2026-08-21T04:05:46.067928",
-    "date": "2026-08-21",
-    "ticker": "ABCAPITAL.NS",
-    "session": "morning",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 79.1,
-    "entry": 409.4,
-    "stop_loss": 392.26,
-    "target": 443.67,
-    "reason": "paper morning",
-    "patterns": [
-      "pivot_r1_breakout",
-      "strong_bullish_marubozu",
-      "adx_ranging_market",
-      "pivot_r2_breakout",
-      "full_bullish_alignment",
-      "supertrend_bullish",
-      "ema_golden_cross"
-    ]
-  },
-  {
     "timestamp": "2026-08-21T04:05:46.068695",
     "date": "2026-08-21",
     "ticker": "PIDILITIND.NS",
@@ -21276,6 +21254,26 @@
       "outside_bar",
       "rsi_bullish_divergence",
       "engulfing_bearish"
+    ]
+  },
+  {
+    "timestamp": "2026-11-02T09:45:43.733833",
+    "date": "2026-11-02",
+    "ticker": "BANDHANBNK.NS",
+    "session": "intraday_close",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 30,
+    "entry": 154.9,
+    "stop_loss": 139.41,
+    "target": 176.59,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "pivot_s1_breakdown",
+      "full_bearish_alignment",
+      "engulfing_bearish",
+      "outside_bar",
+      "rsi_bullish_divergence"
     ]
   }
 ]

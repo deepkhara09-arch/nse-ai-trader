@@ -10,7 +10,7 @@
       "entry": 871.5,
       "qty": 5,
       "invested": 4357.5,
-      "stop_loss": 784.35,
+      "stop_loss": 872.37,
       "target": 993.51,
       "style": "swing",
       "confidence": 41.5,
@@ -36,8 +36,8 @@
         "\u26a0 Daily sell fights the higher-timeframe uptrend \u2014 needs extra conviction",
         "\u26a0 Strong opposing signals present (opposing evidence 59% of the leading side) \u2014 conflicted setup, needs extra conviction"
       ],
-      "current_price": 907.9,
-      "unrealized_pnl": 182.0,
+      "current_price": 908.85,
+      "unrealized_pnl": 186.75,
       "max_held_days": 40,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -57,7 +57,8 @@
         0,
         0,
         0
-      ]
+      ],
+      "trailing_active": true
     },
     {
       "ticker": "IDFCFIRSTB.NS",
@@ -94,8 +95,8 @@
         "\u26a0 Daily sell fights the higher-timeframe uptrend \u2014 needs extra conviction",
         "\u26a0 Strong opposing signals present (opposing evidence 94% of the leading side) \u2014 conflicted setup, needs extra conviction"
       ],
-      "current_price": 73.56,
-      "unrealized_pnl": -30.74,
+      "current_price": 73.91,
+      "unrealized_pnl": -10.44,
       "max_held_days": 40,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -148,8 +149,8 @@
         "\u26a0 Daily sell fights the higher-timeframe uptrend \u2014 needs extra conviction",
         "\u26a0 Strong opposing signals present (opposing evidence 86% of the leading side) \u2014 conflicted setup, needs extra conviction"
       ],
-      "current_price": 154.9,
-      "unrealized_pnl": -66.56,
+      "current_price": 158.6,
+      "unrealized_pnl": 29.64,
       "max_held_days": 40,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -180,7 +181,7 @@
       "entry": 1367.6,
       "qty": 2,
       "invested": 2735.2,
-      "stop_loss": 1420.3,
+      "stop_loss": 1446.2,
       "target": 1559.06,
       "style": "swing",
       "confidence": 48.1,
@@ -207,8 +208,8 @@
         "ADX strong trend \u2014 downside momentum confirmed",
         "Broke below Pivot S1 support \u2014 bearish"
       ],
-      "current_price": 1478.9,
-      "unrealized_pnl": 222.6,
+      "current_price": 1524.8,
+      "unrealized_pnl": 314.4,
       "max_held_days": 40,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -591,12 +592,12 @@
     }
   ],
   "daily_snapshots": [],
-  "daily_pnl_today": 152.78514999999976,
+  "daily_pnl_today": 0.0,
   "last_snapshot_date": null,
   "lifetime_wins": 3,
   "lifetime_losses": 2,
   "lifetime_pnl": -483.53,
-  "last_pnl_reset_date": "2026-11-02",
+  "last_pnl_reset_date": "2026-11-03",
   "max_drawdown_pct": 0.0,
   "current_drawdown_pct": 0.0,
   "portfolio_peak": 100000.0,

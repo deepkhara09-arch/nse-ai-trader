@@ -1,35 +1,5 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of pivot_s1_breakdown, outside_bar, rsi_bullish_divergence mean for a swing trade on BANDHANBNK? Current RSI=48, MACD hist=-0.4193, Vol=0.6x average. Signal is BUY.",
-    "context": {
-      "ticker": "BANDHANBNK.NS",
-      "signal": "BUY",
-      "patterns": "pivot_s1_breakdown, outside_bar, rsi_bullish_divergence",
-      "rsi": 47.8
-    },
-    "queued_at": "2026-11-02T07:45:49.155525"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of pivot_s1_breakdown, outside_bar, rsi_bullish_divergence mean for a swing trade on BANDHANBNK? Current RSI=48, MACD hist=-0.4193, Vol=0.6x average. Signal is BUY.",
-    "context": {
-      "ticker": "BANDHANBNK.NS",
-      "signal": "BUY",
-      "patterns": "pivot_s1_breakdown, outside_bar, rsi_bullish_divergence",
-      "rsi": 47.8
-    },
-    "queued_at": "2026-11-02T07:45:49.164210"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of pivot_s1_breakdown, outside_bar, rsi_bullish_divergence mean for a swing trade on BANDHANBNK? Current RSI=48, MACD hist=-0.4193, Vol=0.6x average. Signal is BUY.",
-    "context": {
-      "ticker": "BANDHANBNK.NS",
-      "signal": "BUY",
-      "patterns": "pivot_s1_breakdown, outside_bar, rsi_bullish_divergence",
-      "rsi": 47.8
-    },
-    "queued_at": "2026-11-02T07:45:49.266476"
-  },
-  {
     "question": "In Indian NSE markets, what does the combination of pivot_s1_breakdown, engulfing_bearish, outside_bar mean for a swing trade on BANDHANBNK? Current RSI=48, MACD hist=-0.4193, Vol=0.6x average. Signal is BUY.",
     "context": {
       "ticker": "BANDHANBNK.NS",
@@ -98,5 +68,35 @@
       "rsi": 29.4
     },
     "queued_at": "2026-11-03T06:15:51.724174"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_down, full_bearish_alignment, strong_bullish_marubozu mean for a swing trade on IDFCFIRSTB? Current RSI=29, MACD hist=-0.1426, Vol=0.7x average. Signal is BUY.",
+    "context": {
+      "ticker": "IDFCFIRSTB.NS",
+      "signal": "BUY",
+      "patterns": "adx_strong_trend_down, full_bearish_alignment, strong_bullish_marubozu",
+      "rsi": 29.4
+    },
+    "queued_at": "2026-11-03T09:45:41.848233"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_down, full_bearish_alignment, strong_bullish_marubozu mean for a swing trade on IDFCFIRSTB? Current RSI=29, MACD hist=-0.1426, Vol=0.7x average. Signal is BUY.",
+    "context": {
+      "ticker": "IDFCFIRSTB.NS",
+      "signal": "BUY",
+      "patterns": "adx_strong_trend_down, full_bearish_alignment, strong_bullish_marubozu",
+      "rsi": 29.4
+    },
+    "queued_at": "2026-11-03T09:45:41.853105"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of adx_strong_trend_down, full_bearish_alignment, strong_bullish_marubozu mean for a swing trade on IDFCFIRSTB? Current RSI=29, MACD hist=-0.1426, Vol=0.7x average. Signal is BUY.",
+    "context": {
+      "ticker": "IDFCFIRSTB.NS",
+      "signal": "BUY",
+      "patterns": "adx_strong_trend_down, full_bearish_alignment, strong_bullish_marubozu",
+      "rsi": 29.4
+    },
+    "queued_at": "2026-11-03T09:45:41.927850"
   }
 ]

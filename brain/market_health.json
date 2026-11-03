@@ -1,27 +1,28 @@
 {
-  "date": "2026-11-02",
-  "session": "intraday_close",
+  "date": "2026-11-03",
+  "session": "preopen",
   "nifty": {
     "symbol": "^NSEI",
-    "value": 23053.1,
-    "day_change_pct": 0.51,
-    "trend_5d": "up",
-    "trend_20d": "up",
-    "ath_pct_60d": -4.05
+    "value": 23440.8,
+    "day_change_pct": 1.68,
+    "trend_5d": "strong_up",
+    "trend_20d": "strong_up",
+    "ath_pct_60d": -2.35,
+    "intraday_surge": true
   },
   "vix": {
-    "value": 15.3,
+    "value": 15.5,
     "level": "normal",
     "percentile_30d": 76.0,
-    "avg_30d": 14.18
+    "avg_30d": 14.32
   },
   "bank_nifty": {
     "symbol": "^NSEBANK",
-    "value": 54686.95,
-    "day_change_pct": -0.41,
-    "trend_5d": "sideways",
+    "value": 55002.2,
+    "day_change_pct": 0.58,
+    "trend_5d": "up",
     "trend_20d": "sideways",
-    "ath_pct_60d": -5.31,
+    "ath_pct_60d": -4.64,
     "diverging": false
   },
   "sectors": {
@@ -35,11 +36,11 @@
     },
     "Pharma": {
       "symbol": "PHARMABEES.NS",
-      "value": 27.91,
-      "day_change_pct": 1.71,
+      "value": 27.87,
+      "day_change_pct": -0.14,
       "trend_5d": "strong_up",
-      "trend_20d": "up",
-      "ath_pct_60d": -2.34
+      "trend_20d": "strong_up",
+      "ath_pct_60d": -2.48
     },
     "Bank": {
       "symbol": "BANKBEES.NS",
@@ -70,54 +71,54 @@
   "lagging_sectors": [],
   "intraday_regime": "mixed",
   "macro": {
-    "date": "2026-11-02",
-    "session": "midday",
-    "generated_at": "2026-11-02T06:15:50.406072",
-    "global_score": -0.166,
+    "date": "2026-11-03",
+    "session": "preopen",
+    "generated_at": "2026-11-03T03:05:48.027386",
+    "global_score": -0.043,
     "india_score": 0.0,
-    "overall_score": -0.091,
+    "overall_score": -0.024,
     "mood": "neutral",
     "drivers": [
+      "Here\u2019s why Palantir\u2019s stock is down despite a \u2018bombastic\u2019 quarter",
+      "Apple\u2019s iPhone business is booming. Here\u2019s why the stock is falling anyway.",
+      "Nasdaq-100 tumbles into its third correction this year as AI worries mount",
+      "Marvell and Lumentum shareholders unite in panning merger deal: \u2018It\u2019s a trash offer\u2019",
+      "Traders rushing into a leveraged ETF to make a bullish bet on the Nasdaq-100 just got burned",
+      "Wall Street\u2019s most hated stocks are faring far better than its favorites",
       "Want to help your adult kids and grandkids? Give them money while you\u2019re still alive.",
-      "This is the biggest threat to the AI-powered bull market",
-      "Apple\u2019s new earnings era begins at a critical time for Big Tech",
-      "My wife cried when I found out she had only $80,000 in her 401(k). I have $2.2 million. Am I wrong to be shocked?",
-      "\u2018Showy jewelry and fancy cars hold no appeal\u2019: We have a 99% chance of outliving our life savings. Why not spend it all?",
-      "My father has Alzheimer\u2019s and his caregiver is using his debit card for DoorDash. Do I intervene?",
-      "\u2018He was heartbroken\u2019: My husband\u2019s kids abandoned him when he was dying. Was he right to leave everything to me?",
-      "Grand Theft Callout: \u2018GTA 6\u2019 fans are missing work on the game\u2019s release day because they \u2018don\u2019t want to wait\u2019 anymore"
+      "\u2018She\u2019s a Type A personality\u2019: My stepmother wants me to repay my late father\u2019s $40,000 wedding gift. Should I oblige?"
     ],
     "global_cues": {
       "dow": {
-        "last": 51770.31,
-        "chg_pct": -1.09
+        "last": 51983.98,
+        "chg_pct": 0.41
       },
       "nasdaq": {
-        "last": 25437.0,
-        "chg_pct": -2.86
+        "last": 25164.36,
+        "chg_pct": -1.07
       },
       "sp500": {
-        "last": 7580.07,
-        "chg_pct": -1.82
+        "last": 7541.4,
+        "chg_pct": -0.51
       },
       "nikkei": {
-        "last": 63245.7,
-        "chg_pct": -0.07
+        "last": 63081.86,
+        "chg_pct": -0.33
       },
       "crude": {
-        "last": 104.12,
-        "chg_pct": 2.08
+        "last": 96.64,
+        "chg_pct": 0.19
       },
       "usdinr": {
-        "last": 94.88,
-        "chg_pct": -0.29
+        "last": 94.89,
+        "chg_pct": -0.02
       },
       "gold": {
-        "last": 3898.9,
-        "chg_pct": -3.29
+        "last": 3958.5,
+        "chg_pct": -0.28
       }
     },
-    "summary": "Overall macro mood is neutral (-0.09). US Dow -1.1% overnight. Crude +2.1%. USD/INR -0.3%. Notable: Geopolitical conflict / war.",
+    "summary": "Overall macro mood is neutral (-0.02). US Dow +0.4% overnight. Crude +0.2%. USD/INR -0.0%. Notable: Geopolitical conflict / war.",
     "playbook": [
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially."
     ],
@@ -126,20 +127,14 @@
   },
   "macro_risk_factor": 1.0,
   "fii_dii": {
-    "date": "2026-11-02",
-    "fii_net_cr": 3598.54,
-    "dii_net_cr": -817.51,
-    "combined_net_cr": 2781.03,
+    "date": "2026-11-03",
+    "fii_net_cr": 3114.68,
+    "dii_net_cr": -392.2,
+    "combined_net_cr": 2722.48,
     "signal": "strong_inflow",
     "ok": true,
     "error": "",
     "history": [
-      {
-        "date": "2026-09-22",
-        "fii": -576.2,
-        "dii": 2797.27,
-        "combined": 2221.07
-      },
       {
         "date": "2026-09-23",
         "fii": -3809.99,
@@ -313,19 +308,25 @@
         "fii": 3598.54,
         "dii": -817.51,
         "combined": 2781.03
+      },
+      {
+        "date": "2026-11-03",
+        "fii": 3114.68,
+        "dii": -392.2,
+        "combined": 2722.48
       }
     ]
   },
   "flow_tailwind": true,
   "pcr": {
-    "date": "2026-11-02",
-    "pcr": 1.624,
+    "date": "2026-11-03",
+    "pcr": 1.668,
     "reading": "very_high_contrarian_bullish",
-    "total_pe_oi": 3490526,
-    "total_ce_oi": 2149563,
-    "spot": 23053.1,
-    "max_pain": 23000.0,
-    "max_pain_dist_pct": 0.23,
+    "total_pe_oi": 3659590,
+    "total_ce_oi": 2193534,
+    "spot": 23440.8,
+    "max_pain": 23250.0,
+    "max_pain_dist_pct": 0.81,
     "oi_bias": "put_heavy_support",
     "ok": true,
     "error": ""

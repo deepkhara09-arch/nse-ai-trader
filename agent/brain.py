@@ -861,8 +861,25 @@ def analyse_stock(
         and (ret_6m is None or ret_6m > -18)
         and (hist_52w_pos is None or hist_52w_pos > 15)
     )
+    # FUNDAMENTAL QUALITY GATE (idea adapted from the trader-skill screener): a dip
+    # is only safe to buy if the COMPANY is sound. Our worst losers were technically
+    # "not broken" but fundamentally rotten (PAYTM ROCE 1.6/PE 181, HOMEFIRST ROCE 5)
+    # — weak businesses that dipped and kept falling. This gate blocks those and shows
+    # its work. Loaded lazily so analyse_stock's signature is unchanged.
+    quality_ok = True
+    quality_checks = []
+    try:
+        from agent.fundamentals_fetcher import quality_gate, load_fundamentals
+        _fund = load_fundamentals().get(ticker, {})
+        if _fund:
+            _qg = quality_gate(_fund, ticker)
+            quality_ok = _qg["pass"]
+            quality_checks = _qg["checks"]
+    except Exception:
+        quality_ok = True   # no fundamentals -> don't block (fail-open, stays honest)
+
     is_dip_buy = False
-    if not_broken and dip_vs_ema >= 0.08:      # DEEP dip only (>=8% below ~50d average)
+    if not_broken and quality_ok and dip_vs_ema >= 0.08:   # DEEP dip on a QUALITY stock
         is_dip_buy = True
         if dip_vs_ema >= 0.12:
             buy_score += 4.5
@@ -881,6 +898,17 @@ def analyse_stock(
         if rsi < 40:
             buy_score += 1.0
             buy_reasons.append(f"RSI {rsi:.0f} oversold — dip is stretched, snap-back likely")
+        # Quality adds conviction — a top-quality business dipping is the best setup.
+        _qpass = sum(1 for c in quality_checks if c.get("ok"))
+        buy_reasons.append(f"Quality gate PASSED ({_qpass}/{len(quality_checks)} checks) — "
+                           f"sound business, so the dip should recover not keep falling")
+    elif not_broken and dip_vs_ema >= 0.08 and not quality_ok:
+        # A deep dip we are SKIPPING because the business is weak — this is the
+        # falling-knife filter working. Record why, transparently.
+        _ff = ", ".join(c["rule"].split("(")[0].strip() for c in quality_checks
+                        if not c.get("ok") and c.get("fatal", True))
+        buy_reasons.append(f"⚠ Deep dip SKIPPED — fundamentals too weak (failed: {_ff}). "
+                           f"A weak business that dips is a falling knife, not a bargain")
 
     # Chasing strength backtested NEGATIVE on this market — penalise buying extension.
     if dip_vs_ema <= -0.10 and buy_score > sell_score:   # price >=10% ABOVE its average
@@ -1309,6 +1337,8 @@ def analyse_stock(
         "days_to_earnings": days_to_earnings,   # for earnings-aware sizing downstream
         "mtf_alignment": mtf_alignment,         # aligned / conflict / neutral (multi-timeframe)
         "price_is_live": d.get("price_is_live", True),  # gate trading on stale prices
+        "quality_checks": quality_checks,       # transparent fundamental pass/fail (dip-buys)
+        "quality_pass":   quality_ok,           # did the fundamental quality gate pass
         # Decision context, surfaced so paper_trader can snapshot it AT ENTRY and the
         # learning layers can later mine WHY a setup failed (e.g. bought a falling
         # sector). Previously these lived only inside analyse_stock and were lost.

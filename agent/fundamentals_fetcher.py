@@ -150,6 +150,75 @@ def score_fundamentals(fund: dict) -> float:
     return round(score / max_s * 100, 1)
 
 
+def quality_gate(fund: dict, ticker: str = "") -> dict:
+    """Transparent fundamental-quality gate for a DEEP-DIP buy (pattern borrowed
+    from the trader-skill screener: show every rule's number vs its threshold and
+    a plain verdict). A dip is only safe to buy if the COMPANY is sound — a weak
+    business that dips keeps falling (a falling knife). Live proof: our worst
+    losers were fundamentally weak (PAYTM ROCE 1.6/PE 181, HOMEFIRST ROCE 5), while
+    every quality name (MARICO/NESTLEIND/PIDILITIND) had ROCE 25-92.
+
+    Returns {"pass": bool, "checks": [{rule, value, threshold, ok}], "fails": [...]}.
+    A dip-buy proceeds only when this passes; the checks are shown to the user so a
+    recommendation is explainable and replicable.
+    """
+    checks = []
+    def rule(name, value, op, threshold, fatal=True):
+        if value is None:
+            ok = True            # missing data is not a fail, but note it
+            checks.append({"rule": name, "value": None, "threshold": threshold,
+                           "ok": ok, "note": "no data", "fatal": False})
+            return
+        ok = {">=": value >= threshold, "<=": value <= threshold,
+              ">": value > threshold, "<": value < threshold}[op]
+        checks.append({"rule": name, "value": round(float(value), 2), "op": op,
+                       "threshold": threshold, "ok": ok, "fatal": fatal})
+
+    roce   = fund.get("roce")
+    roe    = fund.get("roe")
+    de     = fund.get("debt_equity")
+    pe     = fund.get("pe_ratio")
+    earn_g = fund.get("earnings_growth_pct")
+    rev_g  = fund.get("revenue_growth_pct")
+    margin = fund.get("operating_margin_pct") or fund.get("net_margin_pct")
+
+    # Sector-aware profitability (trader-skill "skip rules that don't fit this
+    # company type"): banks/NBFCs are leveraged by design, so ROCE and Debt/Equity
+    # are the WRONG tests for them — judge a lender on ROE instead. Everyone else is
+    # judged on ROCE (the single best "does this business earn its capital" test;
+    # weak ROCE was the common thread in every big dip-loss).
+    sector = (fund.get("sector") or fund.get("industry") or "")
+    if not sector and ticker:
+        try:
+            from agent.sector_tracker import SECTOR_MAP
+            sector = SECTOR_MAP.get(ticker, SECTOR_MAP.get(ticker + ".NS", ""))
+        except Exception:
+            sector = ""
+    sector = sector.lower()
+    is_financial = any(k in sector for k in ("bank", "financ", "nbfc", "insur", "lend"))
+    if is_financial:
+        # A quality lender earns ROE ~15%+; 5-6% (IDFCFIRSTB, BANDHANBNK) is weak.
+        rule("ROE (lender earns its equity)", roe, ">=", 12, fatal=True)
+        # D/E is meaningless for a bank — skip it (leverage IS their business).
+    else:
+        rule("ROCE (earns its capital)",      roce, ">=", 15, fatal=True)
+        rule("Debt/Equity (not over-levered)", de,  "<=", 2.0, fatal=True)
+    # Not absurdly overvalued — a 180x P/E "dip" is still expensive (PAYTM).
+    rule("P/E (not bubble-priced)",         pe,     "<=", 80, fatal=True)
+    # The business is still growing (earnings OR revenue) — a shrinking business
+    # that dips is value-trapping, not mean-reverting.
+    growing = ((earn_g is not None and earn_g > 0) or
+               (rev_g is not None and rev_g > 5))
+    checks.append({"rule": "Still growing (earnings or revenue)",
+                   "value": f"earn {earn_g}% / rev {rev_g}%", "ok": growing,
+                   "fatal": True})
+    # Decent operating margin — a profitable operation recovers; a thin one may not.
+    rule("Operating margin (profitable)",   margin, ">=", 8, fatal=False)
+
+    fails = [c for c in checks if not c["ok"] and c.get("fatal", True)]
+    return {"pass": len(fails) == 0, "checks": checks, "fails": fails}
+
+
 # ── Internal ──────────────────────────────────────────────────────────────────
 
 def _fetch_one(ticker: str) -> dict:

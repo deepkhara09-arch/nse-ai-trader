@@ -1,28 +1,28 @@
 {
-  "date": "2026-11-03",
-  "session": "intraday_close",
+  "date": "2026-11-04",
+  "session": "preopen",
   "nifty": {
     "symbol": "^NSEI",
-    "value": 23440.8,
-    "day_change_pct": 1.68,
+    "value": 23810.85,
+    "day_change_pct": 1.58,
     "trend_5d": "strong_up",
     "trend_20d": "strong_up",
-    "ath_pct_60d": -2.35,
+    "ath_pct_60d": -0.33,
     "intraday_surge": true
   },
   "vix": {
-    "value": 15.5,
+    "value": 15.72,
     "level": "normal",
-    "percentile_30d": 76.0,
-    "avg_30d": 14.32
+    "percentile_30d": 80.0,
+    "avg_30d": 14.37
   },
   "bank_nifty": {
     "symbol": "^NSEBANK",
-    "value": 55002.2,
-    "day_change_pct": 0.58,
+    "value": 55540.05,
+    "day_change_pct": 0.98,
     "trend_5d": "up",
     "trend_20d": "sideways",
-    "ath_pct_60d": -4.64,
+    "ath_pct_60d": -3.29,
     "diverging": false
   },
   "sectors": {
@@ -36,11 +36,11 @@
     },
     "Pharma": {
       "symbol": "PHARMABEES.NS",
-      "value": 27.87,
-      "day_change_pct": -0.14,
-      "trend_5d": "strong_up",
-      "trend_20d": "strong_up",
-      "ath_pct_60d": -2.48
+      "value": 27.92,
+      "day_change_pct": 0.18,
+      "trend_5d": "up",
+      "trend_20d": "up",
+      "ath_pct_60d": -2.31
     },
     "Bank": {
       "symbol": "BANKBEES.NS",
@@ -61,7 +61,9 @@
   },
   "market_mood": "bullish",
   "trade_allowed": true,
-  "warnings": [],
+  "warnings": [
+    "VIX=15.7 at 80th percentile vs last 30d \u2014 unusually high stress"
+  ],
   "leading_sectors": [
     "IT",
     "Pharma",
@@ -72,56 +74,56 @@
   "sector_breadth": 1.0,
   "lagging_sectors": [],
   "broad_market_strength": true,
-  "intraday_regime": "mixed",
+  "intraday_regime": "trending_up",
   "macro": {
-    "date": "2026-11-03",
-    "session": "midday",
-    "generated_at": "2026-11-03T06:15:42.909710",
-    "global_score": 0.012,
+    "date": "2026-11-04",
+    "session": "preopen",
+    "generated_at": "2026-11-04T03:05:46.616990",
+    "global_score": 0.058,
     "india_score": 0.0,
-    "overall_score": 0.007,
+    "overall_score": 0.032,
     "mood": "neutral",
     "drivers": [
-      "Here\u2019s why Palantir\u2019s stock is down despite a \u2018bombastic\u2019 quarter",
-      "Apple\u2019s iPhone business is booming. Here\u2019s why the stock is falling anyway.",
-      "Nasdaq-100 tumbles into its third correction this year as AI worries mount",
-      "Marvell and Lumentum shareholders unite in panning merger deal: \u2018It\u2019s a trash offer\u2019",
-      "Traders rushing into a leveraged ETF to make a bullish bet on the Nasdaq-100 just got burned",
-      "Wall Street\u2019s most hated stocks are faring far better than its favorites",
-      "Want to help your adult kids and grandkids? Give them money while you\u2019re still alive.",
-      "\u2018She\u2019s a Type A personality\u2019: My stepmother wants me to repay my late father\u2019s $40,000 wedding gift. Should I oblige?"
+      "Here\u2019s why AMD\u2019s stock is rising \u2014 and sending a confident message about the AI trade",
+      "Super Micro\u2019s stock pops as earnings show booming demand for AI servers",
+      "What analysts are telling us while Apple\u2019s stock falls after earnings report",
+      "Shopify\u2019s stock slides after earnings. This is what\u2019s worrying Wall Street.",
+      "AI\u2019s control over the bond market is growing \u2014 even rivaling war and elections",
+      "S&P 500 is looking over the edge of a technical cliff \u2014 what happens if it falls off?",
+      "Depressing, but true: If you want to get ahead at work, embrace virtue signaling",
+      "Anthropic\u2019s IPO is a high-stakes referendum on Big Tech \u2014 and this chart proves it"
     ],
     "global_cues": {
       "dow": {
-        "last": 51983.98,
-        "chg_pct": 0.41
+        "last": 51786.72,
+        "chg_pct": -0.38
       },
       "nasdaq": {
-        "last": 25164.31,
-        "chg_pct": -1.07
+        "last": 25372.01,
+        "chg_pct": 0.83
       },
       "sp500": {
-        "last": 7541.4,
-        "chg_pct": -0.51
+        "last": 7568.92,
+        "chg_pct": 0.36
       },
       "nikkei": {
-        "last": 63081.86,
-        "chg_pct": -0.33
+        "last": 60835.36,
+        "chg_pct": -3.56
       },
       "crude": {
-        "last": 96.46,
-        "chg_pct": -7.36
+        "last": 95.07,
+        "chg_pct": -1.06
       },
       "usdinr": {
-        "last": 94.87,
-        "chg_pct": -0.03
+        "last": 94.73,
+        "chg_pct": 0.0
       },
       "gold": {
-        "last": 3969.6,
-        "chg_pct": 1.81
+        "last": 3945.0,
+        "chg_pct": 0.12
       }
     },
-    "summary": "Overall macro mood is neutral (+0.01). US Dow +0.4% overnight. Crude -7.4%. USD/INR -0.0%. Notable: Geopolitical conflict / war.",
+    "summary": "Overall macro mood is neutral (+0.03). US Dow -0.4% overnight. Crude -1.1%. USD/INR +0.0%. Notable: Geopolitical conflict / war.",
     "playbook": [
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially."
     ],
@@ -130,20 +132,14 @@
   },
   "macro_risk_factor": 1.0,
   "fii_dii": {
-    "date": "2026-11-03",
-    "fii_net_cr": 3114.68,
-    "dii_net_cr": -392.2,
-    "combined_net_cr": 2722.48,
+    "date": "2026-11-04",
+    "fii_net_cr": 6836.81,
+    "dii_net_cr": -3678.85,
+    "combined_net_cr": 3157.96,
     "signal": "strong_inflow",
     "ok": true,
     "error": "",
     "history": [
-      {
-        "date": "2026-09-23",
-        "fii": -3809.99,
-        "dii": 4120.07,
-        "combined": 310.08
-      },
       {
         "date": "2026-09-24",
         "fii": 1617.45,
@@ -317,19 +313,25 @@
         "fii": 3114.68,
         "dii": -392.2,
         "combined": 2722.48
+      },
+      {
+        "date": "2026-11-04",
+        "fii": 6836.81,
+        "dii": -3678.85,
+        "combined": 3157.96
       }
     ]
   },
   "flow_tailwind": true,
   "pcr": {
-    "date": "2026-11-03",
-    "pcr": 1.668,
+    "date": "2026-11-04",
+    "pcr": 1.926,
     "reading": "very_high_contrarian_bullish",
-    "total_pe_oi": 3659590,
-    "total_ce_oi": 2193534,
-    "spot": 23440.8,
-    "max_pain": 23250.0,
-    "max_pain_dist_pct": 0.81,
+    "total_pe_oi": 3932524,
+    "total_ce_oi": 2041579,
+    "spot": 23810.85,
+    "max_pain": 23700.0,
+    "max_pain_dist_pct": 0.47,
     "oi_bias": "put_heavy_support",
     "ok": true,
     "error": ""

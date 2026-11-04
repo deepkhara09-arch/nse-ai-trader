@@ -704,6 +704,10 @@ def generate_recommendations(
             "reasons":           reasons,
             "patterns_seen":     opinion.get("patterns", []),
             "reliable_patterns": reliable_pats,
+            "mc_sim":            opinion.get("mc_sim", {}),      # Monte Carlo odds
+            "mc_grade":          opinion.get("mc_grade", "n/a"),
+            "quality_checks":    opinion.get("quality_checks", []),  # fundamental pass/fail
+            "quality_pass":      opinion.get("quality_pass", True),
 
             "nearest_support":    n_sup,
             "nearest_resistance": n_res,

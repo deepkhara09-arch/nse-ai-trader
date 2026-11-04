@@ -1197,6 +1197,31 @@ def analyse_stock(
     reward_pct = round(abs(target - entry) / entry * 100, 2) if entry > 0 else 0
     rr_ratio   = round(reward_pct / risk_pct, 2) if risk_pct > 0 else 0
 
+    # ── Monte Carlo outcome simulation: project many futures from here ──────────
+    # Generates thousands of possible price paths from this entry using the stock's
+    # OWN recent volatility + the trade's expected drift, and reports how often each
+    # path hits the target vs the stop. This gives a probability-of-success you can
+    # trust, and it automatically flags a JUMPY stock whose wide swings would hit the
+    # stop by noise before the recovery (a coin-flip the raw technicals miss).
+    sim = {}
+    sim_grade = "n/a"
+    if signal in ("BUY", "SELL"):
+        try:
+            from agent.outcome_sim import simulate_trade, sim_grade as _grade, DIP_DAILY_DRIFT
+            _ph = d.get("price_history_60d") or d.get("price_history") or []
+            _drift = DIP_DAILY_DRIFT if is_dip_buy else 0.0   # only dip-buys carry the proven edge
+            sim = simulate_trade(entry, stop_loss, target, price_history=_ph, drift=_drift)
+            sim_grade = _grade(sim)
+            if sim.get("ok"):
+                buy_tgt = (buy_reasons if signal == "BUY" else sell_reasons)
+                win = sim.get("win_if_decided")
+                if win is not None:
+                    buy_tgt.append(f"Monte Carlo (3000 paths): hits target {sim['target_pct']:.0f}% "
+                                   f"vs stop {sim['stop_pct']:.0f}% → {win:.0f}% win when it resolves, "
+                                   f"expected {sim['expected_ret_pct']:+.1f}% [{sim_grade}]")
+        except Exception:
+            sim, sim_grade = {}, "n/a"
+
     # ── Overall confidence (0–100), QUALITY-CALIBRATED ─────────────────────────
     # The old formula was raw_score/10*100 — pure QUANTITY of points. Forward-test
     # data exposed the flaw: the 85+ band hit only ~35% vs ~50% for the 70-85 band,
@@ -1291,6 +1316,19 @@ def analyse_stock(
         elif edge_val > 0:
             confidence = min(round(confidence * (1 + edge_val * 0.03), 1), 95)  # up to +9%
 
+    # ── Monte Carlo reflection: fold the simulated odds into confidence ─────────
+    # A setup the simulation says is a coin-flip or worse (its vol will likely stop
+    # it out before recovery) should read LESS confident even if the technicals look
+    # fine; one the sim says resolves as a strong winner reads a touch more. This is
+    # the forward-looking complement to the backward-looking pattern reliability.
+    if signal != "WATCH" and sim.get("ok"):
+        if sim_grade == "unfavourable":
+            confidence = max(round(confidence * 0.80, 1), 25)
+        elif sim_grade == "coin-flip":
+            confidence = max(round(confidence * 0.90, 1), 30)
+        elif sim_grade == "strong":
+            confidence = min(round(confidence * 1.08, 1), 95)
+
     # ── Queue a question if a rare signal combination appeared ────────────────
     # The tool asks the coach about setups it hasn't seen much of yet.
     try:
@@ -1339,6 +1377,8 @@ def analyse_stock(
         "price_is_live": d.get("price_is_live", True),  # gate trading on stale prices
         "quality_checks": quality_checks,       # transparent fundamental pass/fail (dip-buys)
         "quality_pass":   quality_ok,           # did the fundamental quality gate pass
+        "mc_sim":         sim,                   # Monte Carlo outcome distribution
+        "mc_grade":       sim_grade,             # strong / favourable / coin-flip / unfavourable
         # Decision context, surfaced so paper_trader can snapshot it AT ENTRY and the
         # learning layers can later mine WHY a setup failed (e.g. bought a falling
         # sector). Previously these lived only inside analyse_stock and were lost.

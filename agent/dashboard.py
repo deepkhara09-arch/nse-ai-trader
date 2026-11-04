@@ -2369,6 +2369,37 @@ def _section_recommendations(recs, validated: bool = False, stats: dict = None,
         pt_exp = rec.get("paper_expectancy", 0)
 
         reasons_html = "".join(f"<li>{r}</li>" for r in rec.get("reasons", [])[:6])
+
+        # ── Monte Carlo odds block: the distribution of simulated outcomes ──────
+        mc = rec.get("mc_sim", {}) or {}
+        mc_html = ""
+        if mc.get("ok") and mc.get("win_if_decided") is not None:
+            grade = rec.get("mc_grade", "n/a")
+            gcol = {"strong": "var(--green)", "favourable": "var(--green)",
+                    "coin-flip": "#e6a93a", "unfavourable": "var(--red)"}.get(grade, "var(--muted)")
+            win = mc["win_if_decided"]
+            # a simple stacked bar: target (green) / stop (red) / neither (grey)
+            mc_html = (
+                '<div class="card" style="margin:8px 0;padding:10px 12px;background:var(--card2)">'
+                '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">'
+                '<span style="font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em">'
+                '&#127922; 3,000 simulated futures</span>'
+                f'<span style="font-size:.72rem;font-weight:700;color:{gcol}">{grade.upper()}</span></div>'
+                '<div style="display:flex;height:8px;border-radius:99px;overflow:hidden;margin-bottom:6px">'
+                f'<div style="width:{mc["target_pct"]}%;background:var(--green)"></div>'
+                f'<div style="width:{mc["stop_pct"]}%;background:var(--red)"></div>'
+                f'<div style="width:{mc["neither_pct"]}%;background:var(--border2)"></div></div>'
+                '<div style="display:flex;justify-content:space-between;font-size:.66rem;color:var(--muted)">'
+                f'<span class="green">Target {mc["target_pct"]:.0f}%</span>'
+                f'<span class="red">Stop {mc["stop_pct"]:.0f}%</span>'
+                f'<span>Flat {mc["neither_pct"]:.0f}%</span></div>'
+                f'<div style="font-size:.72rem;margin-top:6px;color:var(--text)">'
+                f'<b style="color:{gcol}">{win:.0f}% win</b> when it resolves &middot; '
+                f'expected <b>{mc["expected_ret_pct"]:+.1f}%</b> &middot; '
+                f'likely range {mc["p25_ret_pct"]:+.0f}% to {mc["p75_ret_pct"]:+.0f}%</div>'
+                '</div>'
+            )
+
         pat_badges   = "".join(
             f'<span class="badge badge-blue" style="margin:2px;font-size:.6rem">{p.replace("_"," ")}</span>'
             for p in rec.get("reliable_patterns", [])[:5]
@@ -2606,6 +2637,8 @@ def _section_recommendations(recs, validated: bool = False, stats: dict = None,
   </div>
 
   {f'<div style="margin-top:7px">{pat_badges}</div>' if pat_badges else ""}
+
+  {mc_html}
 
   <div class="reasons-list">
     <div style="font-size:.68rem;color:var(--muted);margin-bottom:3px;text-transform:uppercase;letter-spacing:.05em">Why this trade</div>

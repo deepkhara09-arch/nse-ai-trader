@@ -110,13 +110,15 @@
       "avg_loss_pct": 0.81
     },
     "clean_setup_still_lost": {
-      "count": 1,
-      "sum_loss_pct": 2.4,
-      "last": "2026-09-02",
+      "count": 3,
+      "sum_loss_pct": 12.8,
+      "last": "2026-11-04",
       "examples": [
-        "COALINDIA"
+        "COALINDIA",
+        "POWERGRID",
+        "NHPC"
       ],
-      "avg_loss_pct": 2.4
+      "avg_loss_pct": 4.27
     },
     "weak_pattern:low_volume_drift": {
       "count": 1,
@@ -193,11 +195,11 @@
       "edge": 0.0
     },
     "rsi_bullish_divergence": {
-      "wins": 2,
+      "wins": 4,
       "losses": 5,
-      "sum_win_pct": 3.3000000000000003,
+      "sum_win_pct": 13.01,
       "sum_loss_pct": 13.32,
-      "edge": -0.477
+      "edge": -0.011
     },
     "inside_bar": {
       "wins": 6,
@@ -256,18 +258,18 @@
       "edge": -0.142
     },
     "pivot_s1_breakdown": {
-      "wins": 4,
-      "losses": 9,
-      "sum_win_pct": 16.79,
-      "sum_loss_pct": 16.36,
-      "edge": 0.011
+      "wins": 8,
+      "losses": 11,
+      "sum_win_pct": 39.88,
+      "sum_loss_pct": 26.759999999999998,
+      "edge": 0.23
     },
     "stoch_rsi_overbought_reversal": {
-      "wins": 1,
-      "losses": 1,
-      "sum_win_pct": 7.93,
-      "sum_loss_pct": 1.17,
-      "edge": 0.0
+      "wins": 4,
+      "losses": 3,
+      "sum_win_pct": 24.330000000000002,
+      "sum_loss_pct": 11.57,
+      "edge": 0.608
     },
     "bb_upper_rejection": {
       "wins": 2,
@@ -312,11 +314,11 @@
       "edge": -0.258
     },
     "bb_lower_bounce": {
-      "wins": 4,
+      "wins": 5,
       "losses": 2,
-      "sum_win_pct": 7.78,
+      "sum_win_pct": 14.47,
       "sum_loss_pct": 4.32,
-      "edge": 0.192
+      "edge": 0.483
     },
     "gravestone_doji": {
       "wins": 2,
@@ -369,24 +371,24 @@
     },
     "outside_bar": {
       "wins": 2,
-      "losses": 5,
+      "losses": 6,
       "sum_win_pct": 3.75,
-      "sum_loss_pct": 13.84,
-      "edge": -0.48
+      "sum_loss_pct": 18.42,
+      "edge": -0.611
     },
     "tweezer_top": {
       "wins": 0,
-      "losses": 1,
+      "losses": 3,
       "sum_win_pct": 0.0,
-      "sum_loss_pct": 0.81,
+      "sum_loss_pct": 11.21,
       "edge": 0.0
     },
     "engulfing_bearish": {
-      "wins": 0,
-      "losses": 3,
-      "sum_win_pct": 0.0,
-      "sum_loss_pct": 5.2700000000000005,
-      "edge": 0.0
+      "wins": 1,
+      "losses": 4,
+      "sum_win_pct": 6.69,
+      "sum_loss_pct": 9.850000000000001,
+      "edge": -0.211
     },
     "strong_bullish_marubozu": {
       "wins": 2,
@@ -396,18 +398,18 @@
       "edge": -0.494
     },
     "macd_bearish_crossover": {
-      "wins": 0,
+      "wins": 3,
       "losses": 2,
-      "sum_win_pct": 0.0,
+      "sum_win_pct": 16.400000000000002,
       "sum_loss_pct": 3.89,
-      "edge": 0.0
+      "edge": 0.834
     },
     "full_bearish_alignment": {
-      "wins": 2,
-      "losses": 3,
-      "sum_win_pct": 4.48,
-      "sum_loss_pct": 6.72,
-      "edge": -0.149
+      "wins": 6,
+      "losses": 5,
+      "sum_win_pct": 27.570000000000004,
+      "sum_loss_pct": 17.12,
+      "edge": 0.317
     },
     "three_black_crows": {
       "wins": 0,
@@ -417,17 +419,17 @@
       "edge": 0.0
     },
     "strong_bearish_marubozu": {
-      "wins": 0,
+      "wins": 3,
       "losses": 3,
-      "sum_win_pct": 0.0,
+      "sum_win_pct": 16.400000000000002,
       "sum_loss_pct": 7.609999999999999,
-      "edge": 0.0
+      "edge": 0.488
     },
     "gap_up_reversal": {
       "wins": 0,
-      "losses": 1,
+      "losses": 2,
       "sum_win_pct": 0.0,
-      "sum_loss_pct": 0.8,
+      "sum_loss_pct": 5.38,
       "edge": 0.0
     },
     "bullish_harami": {
@@ -445,11 +447,11 @@
       "edge": -0.214
     },
     "adx_strong_trend_down": {
-      "wins": 2,
-      "losses": 1,
-      "sum_win_pct": 4.48,
-      "sum_loss_pct": 2.4,
-      "edge": 0.0
+      "wins": 6,
+      "losses": 3,
+      "sum_win_pct": 27.570000000000004,
+      "sum_loss_pct": 12.8,
+      "edge": 0.547
     },
     "oversold_macd_reversal": {
       "wins": 0,
@@ -460,10 +462,10 @@
     },
     "early_recovery": {
       "wins": 2,
-      "losses": 1,
+      "losses": 2,
       "sum_win_pct": 4.48,
-      "sum_loss_pct": 2.4,
-      "edge": 0.0
+      "sum_loss_pct": 6.98,
+      "edge": -0.208
     },
     "volume_breakdown_bearish": {
       "wins": 3,
@@ -474,9 +476,9 @@
     },
     "macd_bullish_crossover": {
       "wins": 0,
-      "losses": 1,
+      "losses": 3,
       "sum_win_pct": 0.0,
-      "sum_loss_pct": 2.35,
+      "sum_loss_pct": 12.75,
       "edge": 0.0
     },
     "evening_star": {
@@ -484,6 +486,13 @@
       "losses": 1,
       "sum_win_pct": 0.0,
       "sum_loss_pct": 3.15,
+      "edge": 0.0
+    },
+    "near_52w_low": {
+      "wins": 0,
+      "losses": 2,
+      "sum_win_pct": 0.0,
+      "sum_loss_pct": 10.4,
       "edge": 0.0
     }
   },
@@ -769,6 +778,22 @@
         "weak_pattern:doji",
         "bought_bearish_tape",
         "no_market_tailwind"
+      ]
+    },
+    {
+      "date": "2026-10-29",
+      "ticker": "POWERGRID",
+      "loss_pct": 4.58,
+      "causes": [
+        "clean_setup_still_lost"
+      ]
+    },
+    {
+      "date": "2026-10-29",
+      "ticker": "NHPC",
+      "loss_pct": 5.82,
+      "causes": [
+        "clean_setup_still_lost"
       ]
     }
   ]

@@ -1,5 +1,5 @@
 {
-  "capital": 84032.59029,
+  "capital": 85892.19029,
   "open_positions": [
     {
       "ticker": "HINDALCO.NS",
@@ -8,9 +8,9 @@
       "open_session": "morning",
       "action": "BUY",
       "entry": 871.5,
-      "qty": 5,
-      "invested": 4357.5,
-      "stop_loss": 872.37,
+      "qty": 3,
+      "invested": 2614.5,
+      "stop_loss": 891.63,
       "target": 993.51,
       "style": "swing",
       "confidence": 41.5,
@@ -36,8 +36,8 @@
         "\u26a0 Daily sell fights the higher-timeframe uptrend \u2014 needs extra conviction",
         "\u26a0 Strong opposing signals present (opposing evidence 59% of the leading side) \u2014 conflicted setup, needs extra conviction"
       ],
-      "current_price": 931.0,
-      "unrealized_pnl": 297.5,
+      "current_price": 935.8,
+      "unrealized_pnl": 192.9,
       "max_held_days": 40,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -58,7 +58,8 @@
         0,
         0
       ],
-      "trailing_active": true
+      "trailing_active": true,
+      "t1_booked": true
     },
     {
       "ticker": "IDFCFIRSTB.NS",
@@ -95,8 +96,8 @@
         "\u26a0 Daily sell fights the higher-timeframe uptrend \u2014 needs extra conviction",
         "\u26a0 Strong opposing signals present (opposing evidence 94% of the leading side) \u2014 conflicted setup, needs extra conviction"
       ],
-      "current_price": 74.54,
-      "unrealized_pnl": 26.1,
+      "current_price": 74.73,
+      "unrealized_pnl": 37.12,
       "max_held_days": 40,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -149,8 +150,8 @@
         "\u26a0 Daily sell fights the higher-timeframe uptrend \u2014 needs extra conviction",
         "\u26a0 Strong opposing signals present (opposing evidence 86% of the leading side) \u2014 conflicted setup, needs extra conviction"
       ],
-      "current_price": 158.09,
-      "unrealized_pnl": 16.38,
+      "current_price": 157.86,
+      "unrealized_pnl": 10.4,
       "max_held_days": 40,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -208,8 +209,8 @@
         "ADX strong trend \u2014 downside momentum confirmed",
         "Broke below Pivot S1 support \u2014 bearish"
       ],
-      "current_price": 1502.5,
-      "unrealized_pnl": 269.8,
+      "current_price": 1510.2,
+      "unrealized_pnl": 285.2,
       "max_held_days": 40,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -307,7 +308,8 @@
       "costs": 27.07,
       "pnl_pct": -4.58,
       "won": false,
-      "open_days": 5
+      "open_days": 5,
+      "forensic_done": true
     },
     {
       "ticker": "NHPC.NS",
@@ -375,7 +377,8 @@
       "costs": 15.87,
       "pnl_pct": -5.82,
       "won": false,
-      "open_days": 4
+      "open_days": 4,
+      "forensic_done": true
     },
     {
       "ticker": "HOMEFIRST.NS",
@@ -446,7 +449,8 @@
       "costs": 3.15,
       "pnl_pct": 6.69,
       "won": true,
-      "open_days": 6
+      "open_days": 6,
+      "forensic_done": true
     },
     {
       "ticker": "PIDILITIND.NS",
@@ -517,7 +521,8 @@
       "costs": 4.25,
       "pnl_pct": 6.69,
       "won": true,
-      "open_days": 2
+      "open_days": 2,
+      "forensic_done": true
     },
     {
       "ticker": "HOMEFIRST.NS",
@@ -588,18 +593,98 @@
       "costs": 6.19,
       "pnl_pct": 3.02,
       "won": true,
-      "open_days": 7
+      "open_days": 7,
+      "forensic_done": true
+    },
+    {
+      "ticker": "HINDALCO.NS",
+      "sector": "Metals",
+      "open_date": "2026-10-22",
+      "open_session": "morning",
+      "action": "BUY",
+      "entry": 871.5,
+      "qty": 2,
+      "invested": 2614.5,
+      "stop_loss": 891.63,
+      "target": 993.51,
+      "style": "swing",
+      "confidence": 41.5,
+      "patterns": [
+        "stoch_rsi_overbought_reversal",
+        "adx_strong_trend_down",
+        "pivot_s1_breakdown",
+        "engulfing_bearish",
+        "full_bearish_alignment"
+      ],
+      "buy_reasons": [
+        "Positive news sentiment (0.28)",
+        "News sentiment improving across sessions",
+        "DEEP-DIP BUY: 9% below trend average, trend intact \u2014 mean-reversion setup (backtest-positive)",
+        "RSI 34 oversold \u2014 dip is stretched, snap-back likely",
+        "DEEP-DIP OVERRIDE: price fell hard (bearish short-term) but the stock's structure is intact \u2014 this is the buy-the-fear edge",
+        "All EMAs stacked bearish",
+        "MACD histogram negative",
+        "Candlestick: engulfing bearish",
+        "ADX strong trend \u2014 downside momentum confirmed",
+        "Broke below Pivot S1 support \u2014 bearish",
+        "StochRSI overbought with bearish candle \u2014 reversal",
+        "\u26a0 Daily sell fights the higher-timeframe uptrend \u2014 needs extra conviction",
+        "\u26a0 Strong opposing signals present (opposing evidence 59% of the leading side) \u2014 conflicted setup, needs extra conviction"
+      ],
+      "current_price": 935.8,
+      "unrealized_pnl": 321.5,
+      "max_held_days": 40,
+      "vol_regime_pct": 0.09,
+      "entry_market": {
+        "nifty_trend": "up",
+        "vix": 15.68,
+        "mood": "bearish",
+        "regime": "mixed",
+        "sector_momentum": -0.331,
+        "delivery_signal": "neutral",
+        "rsi": 33.8,
+        "mtf_alignment": "conflict",
+        "opposing_ratio": 0.59,
+        "hist_long_trend": "uptrend"
+      },
+      "view_hist": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "trailing_active": true,
+      "t1_booked": true,
+      "close_date": "2026-11-04",
+      "close_session": "preclose",
+      "exit_price": 932.5,
+      "exit_reason": "partial_t1",
+      "pnl": 116.6,
+      "pnl_gross": 122.01,
+      "costs": 5.41,
+      "pnl_pct": 6.69,
+      "won": true,
+      "open_days": 9,
+      "forensic_done": true
     }
   ],
-  "daily_snapshots": [],
-  "daily_pnl_today": 0.0,
-  "last_snapshot_date": null,
-  "lifetime_wins": 3,
+  "daily_snapshots": [
+    {
+      "date": "2026-11-04",
+      "portfolio_value": 100158.69,
+      "capital": 85892.19,
+      "open_positions": 4,
+      "daily_pnl": 116.6
+    }
+  ],
+  "daily_pnl_today": 116.6,
+  "last_snapshot_date": "2026-11-04",
+  "lifetime_wins": 4,
   "lifetime_losses": 2,
-  "lifetime_pnl": -483.53,
+  "lifetime_pnl": -366.93,
   "last_pnl_reset_date": "2026-11-04",
   "max_drawdown_pct": 0.0,
   "current_drawdown_pct": 0.0,
-  "portfolio_peak": 100000.0,
+  "portfolio_peak": 100158.69,
   "sessions_since_peak": 0
 }

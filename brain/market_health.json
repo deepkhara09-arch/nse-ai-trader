@@ -1,6 +1,6 @@
 {
   "date": "2026-11-04",
-  "session": "intraday_close",
+  "session": "preclose",
   "nifty": {
     "symbol": "^NSEI",
     "value": 23810.85,
@@ -28,11 +28,11 @@
   "sectors": {
     "IT": {
       "symbol": "ITBEES.NS",
-      "value": 36.06,
-      "day_change_pct": -0.47,
-      "trend_5d": "up",
+      "value": 36.07,
+      "day_change_pct": 0.03,
+      "trend_5d": "strong_up",
       "trend_20d": "strong_up",
-      "ath_pct_60d": -2.51
+      "ath_pct_60d": -2.49
     },
     "Pharma": {
       "symbol": "PHARMABEES.NS",
@@ -44,26 +44,25 @@
     },
     "Bank": {
       "symbol": "BANKBEES.NS",
-      "value": 568.78,
-      "day_change_pct": 0.59,
+      "value": 574.14,
+      "day_change_pct": 0.94,
       "trend_5d": "up",
-      "trend_20d": "sideways",
-      "ath_pct_60d": -5.36
+      "trend_20d": "up",
+      "ath_pct_60d": -4.47
     },
     "Infra": {
       "symbol": "INFRABEES.NS",
-      "value": 933.81,
-      "day_change_pct": 3.13,
+      "value": 946.93,
+      "day_change_pct": 1.4,
       "trend_5d": "strong_up",
       "trend_20d": "strong_up",
-      "ath_pct_60d": -3.63
+      "ath_pct_60d": -2.28
     }
   },
-  "market_mood": "bearish",
+  "market_mood": "neutral",
   "trade_allowed": true,
   "warnings": [
-    "VIX=15.7 at 80th percentile vs last 30d \u2014 unusually high stress",
-    "Nifty choppy intraday \u2014 wait for cleaner setups"
+    "VIX=15.7 at 80th percentile vs last 30d \u2014 unusually high stress"
   ],
   "leading_sectors": [
     "IT",
@@ -75,7 +74,7 @@
   "sector_breadth": 1.0,
   "lagging_sectors": [],
   "broad_market_strength": true,
-  "intraday_regime": "choppy",
+  "intraday_regime": "mixed",
   "macro": {
     "date": "2026-11-04",
     "session": "midday",
@@ -134,9 +133,9 @@
   "macro_risk_factor": 1.0,
   "fii_dii": {
     "date": "2026-11-04",
-    "fii_net_cr": 6836.81,
-    "dii_net_cr": -3678.85,
-    "combined_net_cr": 3157.96,
+    "fii_net_cr": 7284.03,
+    "dii_net_cr": -3712.23,
+    "combined_net_cr": 3571.8,
     "signal": "strong_inflow",
     "ok": true,
     "error": "",
@@ -317,26 +316,25 @@
       },
       {
         "date": "2026-11-04",
-        "fii": 6836.81,
-        "dii": -3678.85,
-        "combined": 3157.96
+        "fii": 7284.03,
+        "dii": -3712.23,
+        "combined": 3571.8
       }
     ]
   },
   "flow_tailwind": true,
   "pcr": {
     "date": "2026-11-04",
-    "pcr": 1.926,
-    "reading": "very_high_contrarian_bullish",
-    "total_pe_oi": 3932524,
-    "total_ce_oi": 2041579,
-    "spot": 23810.85,
-    "max_pain": 23700.0,
-    "max_pain_dist_pct": 0.47,
+    "pcr": 1.074,
+    "reading": "neutral",
+    "total_pe_oi": 2349210,
+    "total_ce_oi": 2187980,
+    "spot": 23960.6,
+    "max_pain": 23800.0,
+    "max_pain_dist_pct": 0.67,
     "oi_bias": "put_heavy_support",
     "ok": true,
     "error": ""
   },
-  "pcr_note": "PCR very high \u2014 excessive put hedging, often a contrarian bullish sign",
   "oi_note": "Heavy put OI below spot \u2014 option writers see a floor (bullish lean)"
 }

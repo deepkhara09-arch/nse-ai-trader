@@ -1,5 +1,5 @@
 # NSE AI Trader — Strategy Report
-> Updated: 2026-10-20 &nbsp;|&nbsp; Day 65 &nbsp;|&nbsp; Phase: paper_trading
+> Updated: 2026-11-04 &nbsp;|&nbsp; Day 66 &nbsp;|&nbsp; Phase: paper_trading
 
 ---
 
@@ -7,12 +7,12 @@
 
 | Metric | Value |
 |--------|-------|
-| Trades | 73 (28 wins / 45 losses) |
-| Win Rate | 38.4% |
-| Total P&L | ₹-5,216 |
-| Avg Win | ₹+97 |
-| Avg Loss | ₹-176 |
-| Expectancy / trade | ₹-71 |
+| Trades | 6 (4 wins / 2 losses) |
+| Win Rate | 66.7% |
+| Total P&L | ₹-367 |
+| Avg Win | ₹+84 |
+| Avg Loss | ₹-352 |
+| Expectancy / trade | ₹-61 |
 
 ---
 
@@ -32,12 +32,12 @@ Check back after the paper trading phase accumulates enough data.
 - POWERGRID.NS
 - IDFCFIRSTB.NS
 - BANDHANBNK.NS
-- NHPC.NS
 - VBL.NS
 - ADANIGREEN.NS
 - PAYTM.NS
 - COALINDIA.NS
 - ONGC.NS
+- LICI.NS
 
 ---
 

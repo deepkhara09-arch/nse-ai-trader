@@ -1,13 +1,13 @@
 {
   "phase": "paper_trading",
   "day": 66,
-  "session": "afternoon",
+  "session": "intraday_close",
   "start_date": "2026-06-22",
   "phase_start_date": "2026-07-15",
   "last_run_date": "2026-11-04",
   "last_counted_date": "2026-11-04",
   "cohort_last_tick_date": "2026-11-04",
-  "last_updated": "2026-11-05T07:45:43.682911",
+  "last_updated": "2026-11-05T09:45:45.463863",
   "focus_stocks": [
     "PIDILITIND.NS",
     "GAIL.NS",
@@ -58,14 +58,14 @@
     "SBIN.NS"
   ],
   "paper_trade_stats": {
-    "total": 6,
-    "wins": 4,
+    "total": 7,
+    "wins": 5,
     "losses": 2,
-    "win_rate": 0.667,
-    "total_pnl": -366.93,
-    "avg_win": 84.33,
+    "win_rate": 0.714,
+    "total_pnl": 7.21,
+    "avg_win": 142.29,
     "avg_loss": -352.13,
-    "expectancy": -61.16
+    "expectancy": 1.03
   },
   "brain_notes": [
     "[2026-08-14] Focus refresh \u2014 promoted: ['TATASTEEL', 'JSWSTEEL'] | demoted: ['GRASIM', 'ASIANPAINT']",
@@ -400,6 +400,7 @@
     "preopen": "2026-11-05",
     "morning": "2026-11-05",
     "midday": "2026-11-05",
-    "afternoon": "2026-11-05"
+    "afternoon": "2026-11-05",
+    "intraday_close": "2026-11-05"
   }
 }

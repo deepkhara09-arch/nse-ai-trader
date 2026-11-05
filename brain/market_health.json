@@ -1,6 +1,6 @@
 {
   "date": "2026-11-05",
-  "session": "morning",
+  "session": "midday",
   "nifty": {
     "symbol": "^NSEI",
     "value": 23960.6,
@@ -61,7 +61,7 @@
   "market_mood": "bearish",
   "trade_allowed": true,
   "warnings": [
-    "Global macro risk-off (-0.24) \u2014 Overall macro mood is risk-off (-0.24). US Dow +3.0% overnight. Crude -1.2%. USD/INR -0.2%. Notable: Geopolitical confli"
+    "Global macro risk-off (-0.27) \u2014 Overall macro mood is risk-off (-0.27). US Dow +3.0% overnight. Crude -8.3%. USD/INR -0.2%. Notable: Geopolitical confli"
   ],
   "leading_sectors": [
     "IT",
@@ -76,11 +76,11 @@
   "intraday_regime": "mixed",
   "macro": {
     "date": "2026-11-05",
-    "session": "preopen",
-    "generated_at": "2026-11-05T03:05:44.723401",
-    "global_score": 0.378,
+    "session": "midday",
+    "generated_at": "2026-11-05T06:15:47.779729",
+    "global_score": 0.332,
     "india_score": -1.0,
-    "overall_score": -0.242,
+    "overall_score": -0.267,
     "mood": "risk_off",
     "drivers": [
       "Qualcomm\u2019s stock falls as twin forces pressure sales",
@@ -106,23 +106,23 @@
         "chg_pct": 1.58
       },
       "nikkei": {
-        "last": 61913.51,
-        "chg_pct": -0.44
+        "last": 60877.11,
+        "chg_pct": -2.11
       },
       "crude": {
-        "last": 87.02,
-        "chg_pct": -1.25
+        "last": 88.12,
+        "chg_pct": -8.29
       },
       "usdinr": {
-        "last": 94.53,
-        "chg_pct": -0.23
+        "last": 94.51,
+        "chg_pct": -0.25
       },
       "gold": {
-        "last": 4137.3,
-        "chg_pct": 1.58
+        "last": 4073.0,
+        "chg_pct": 3.37
       }
     },
-    "summary": "Overall macro mood is risk-off (-0.24). US Dow +3.0% overnight. Crude -1.2%. USD/INR -0.2%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
+    "summary": "Overall macro mood is risk-off (-0.27). US Dow +3.0% overnight. Crude -8.3%. USD/INR -0.2%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
       "Trade-war headlines spook global markets; IT & export names react most."

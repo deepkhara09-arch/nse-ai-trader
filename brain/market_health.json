@@ -1,28 +1,27 @@
 {
-  "date": "2026-11-04",
-  "session": "preclose",
+  "date": "2026-11-05",
+  "session": "preopen",
   "nifty": {
     "symbol": "^NSEI",
-    "value": 23810.85,
-    "day_change_pct": 1.58,
+    "value": 23960.6,
+    "day_change_pct": 0.63,
     "trend_5d": "strong_up",
     "trend_20d": "strong_up",
-    "ath_pct_60d": -0.33,
-    "intraday_surge": true
+    "ath_pct_60d": 0.0
   },
   "vix": {
-    "value": 15.72,
+    "value": 15.19,
     "level": "normal",
-    "percentile_30d": 80.0,
-    "avg_30d": 14.37
+    "percentile_30d": 60.0,
+    "avg_30d": 14.5
   },
   "bank_nifty": {
     "symbol": "^NSEBANK",
-    "value": 55540.05,
-    "day_change_pct": 0.98,
+    "value": 55913.6,
+    "day_change_pct": 0.67,
     "trend_5d": "up",
-    "trend_20d": "sideways",
-    "ath_pct_60d": -3.29,
+    "trend_20d": "up",
+    "ath_pct_60d": -2.64,
     "diverging": false
   },
   "sectors": {
@@ -36,11 +35,11 @@
     },
     "Pharma": {
       "symbol": "PHARMABEES.NS",
-      "value": 27.92,
-      "day_change_pct": 0.18,
+      "value": 28.12,
+      "day_change_pct": 0.72,
       "trend_5d": "up",
-      "trend_20d": "up",
-      "ath_pct_60d": -2.31
+      "trend_20d": "strong_up",
+      "ath_pct_60d": -1.61
     },
     "Bank": {
       "symbol": "BANKBEES.NS",
@@ -59,10 +58,10 @@
       "ath_pct_60d": -2.28
     }
   },
-  "market_mood": "neutral",
+  "market_mood": "bearish",
   "trade_allowed": true,
   "warnings": [
-    "VIX=15.7 at 80th percentile vs last 30d \u2014 unusually high stress"
+    "Global macro risk-off (-0.24) \u2014 Overall macro mood is risk-off (-0.24). US Dow +3.0% overnight. Crude -1.2%. USD/INR -0.2%. Notable: Geopolitical confli"
   ],
   "leading_sectors": [
     "IT",
@@ -76,63 +75,64 @@
   "broad_market_strength": true,
   "intraday_regime": "mixed",
   "macro": {
-    "date": "2026-11-04",
-    "session": "midday",
-    "generated_at": "2026-11-04T06:15:50.587783",
-    "global_score": -0.016,
-    "india_score": 0.0,
-    "overall_score": -0.009,
-    "mood": "neutral",
+    "date": "2026-11-05",
+    "session": "preopen",
+    "generated_at": "2026-11-05T03:05:44.723401",
+    "global_score": 0.378,
+    "india_score": -1.0,
+    "overall_score": -0.242,
+    "mood": "risk_off",
     "drivers": [
-      "Democrats win the Senate but control of the House is still up in the air. Here\u2019s what it means for your finances.",
-      "Here\u2019s why AMD\u2019s stock is rising \u2014 and sending a confident message about the AI trade",
-      "Super Micro\u2019s stock pops as earnings show booming demand for AI servers",
-      "What analysts are telling us while Apple\u2019s stock falls after earnings report",
-      "Shopify\u2019s stock slides after earnings. This is what\u2019s worrying Wall Street.",
-      "AI\u2019s control over the bond market is growing \u2014 even rivaling war and elections",
-      "S&P 500 is looking over the edge of a technical cliff \u2014 what happens if it falls off?",
-      "Depressing, but true: If you want to get ahead at work, embrace virtue signaling"
+      "Qualcomm\u2019s stock falls as twin forces pressure sales",
+      "This year\u2019s worst-performing S&P 500 stock is finally seeing some major relief",
+      "Figma\u2019s stock dips as investors worry that AI momentum is coming at a high price",
+      "McDonald\u2019s tests new value menu as fast-food discount wars heat up",
+      "As Vistra and other energy stocks slide, some analysts warn of an \u2018excessive knee-jerk\u2019 reaction",
+      "\u2018My life could be cut short\u2019: I\u2019m 55, married with $4.3 million and have a brain tumor. Should I buy a $210,000 custom Porsche?",
+      "\u2018It seems bizarre\u2019: We\u2019re in our 80s with $950,000 in traditional IRAs. Why is our adviser pushing Roth conversions?",
+      "How do Americans feel about the midterm results? It depends on how much money they make."
     ],
     "global_cues": {
       "dow": {
-        "last": 51786.72,
-        "chg_pct": -0.38
+        "last": 53356.12,
+        "chg_pct": 3.03
       },
       "nasdaq": {
-        "last": 25372.01,
-        "chg_pct": 0.83
+        "last": 25736.51,
+        "chg_pct": 1.44
       },
       "sp500": {
-        "last": 7568.92,
-        "chg_pct": 0.36
+        "last": 7688.62,
+        "chg_pct": 1.58
       },
       "nikkei": {
-        "last": 61926.18,
-        "chg_pct": -1.83
+        "last": 61913.51,
+        "chg_pct": -0.44
       },
       "crude": {
-        "last": 96.09,
-        "chg_pct": -0.38
+        "last": 87.02,
+        "chg_pct": -1.25
       },
       "usdinr": {
-        "last": 94.84,
-        "chg_pct": 0.12
+        "last": 94.53,
+        "chg_pct": -0.23
       },
       "gold": {
-        "last": 3940.4,
-        "chg_pct": -0.74
+        "last": 4137.3,
+        "chg_pct": 1.58
       }
     },
-    "summary": "Overall macro mood is neutral (-0.01). US Dow -0.4% overnight. Crude -0.4%. USD/INR +0.1%. Notable: Geopolitical conflict / war.",
+    "summary": "Overall macro mood is risk-off (-0.24). US Dow +3.0% overnight. Crude -1.2%. USD/INR -0.2%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
-      "Geopolitical shocks trigger global risk-off; gold up, equities down initially."
+      "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
+      "Trade-war headlines spook global markets; IT & export names react most."
     ],
     "playbook_bias": "risk_off",
     "article_count": 60
   },
-  "macro_risk_factor": 1.0,
+  "macro_risk_factor": 0.7,
   "fii_dii": {
-    "date": "2026-11-04",
+    "date": "2026-11-05",
     "fii_net_cr": 7284.03,
     "dii_net_cr": -3712.23,
     "combined_net_cr": 3571.8,
@@ -140,12 +140,6 @@
     "ok": true,
     "error": "",
     "history": [
-      {
-        "date": "2026-09-24",
-        "fii": 1617.45,
-        "dii": 2341.46,
-        "combined": 3958.91
-      },
       {
         "date": "2026-09-25",
         "fii": -5027.36,
@@ -319,12 +313,18 @@
         "fii": 7284.03,
         "dii": -3712.23,
         "combined": 3571.8
+      },
+      {
+        "date": "2026-11-05",
+        "fii": 7284.03,
+        "dii": -3712.23,
+        "combined": 3571.8
       }
     ]
   },
   "flow_tailwind": true,
   "pcr": {
-    "date": "2026-11-04",
+    "date": "2026-11-05",
     "pcr": 1.074,
     "reading": "neutral",
     "total_pe_oi": 2349210,

@@ -1,151 +1,146 @@
 {
-  "date": "2026-11-05",
-  "session": "intraday_close",
+  "date": "2026-11-06",
+  "session": "preopen",
   "nifty": {
     "symbol": "^NSEI",
-    "value": 23960.6,
-    "day_change_pct": 0.63,
+    "value": 24536.6,
+    "day_change_pct": 2.4,
     "trend_5d": "strong_up",
     "trend_20d": "strong_up",
-    "ath_pct_60d": 0.0
+    "ath_pct_60d": -0.18,
+    "intraday_surge": true
   },
   "vix": {
-    "value": 15.19,
+    "value": 15.58,
     "level": "normal",
-    "percentile_30d": 60.0,
-    "avg_30d": 14.5
+    "percentile_30d": 73.0,
+    "avg_30d": 14.65
   },
   "bank_nifty": {
     "symbol": "^NSEBANK",
-    "value": 55913.6,
-    "day_change_pct": 0.67,
-    "trend_5d": "up",
-    "trend_20d": "up",
-    "ath_pct_60d": -2.64,
+    "value": 57773.65,
+    "day_change_pct": 3.33,
+    "trend_5d": "strong_up",
+    "trend_20d": "strong_up",
+    "ath_pct_60d": -0.13,
     "diverging": false
   },
   "sectors": {
     "IT": {
       "symbol": "ITBEES.NS",
-      "value": 36.07,
-      "day_change_pct": 0.03,
-      "trend_5d": "strong_up",
+      "value": 35.58,
+      "day_change_pct": -1.36,
+      "trend_5d": "sideways",
       "trend_20d": "strong_up",
-      "ath_pct_60d": -2.49
+      "ath_pct_60d": -3.81
     },
     "Pharma": {
       "symbol": "PHARMABEES.NS",
-      "value": 28.12,
-      "day_change_pct": 0.72,
+      "value": 28.41,
+      "day_change_pct": 1.03,
       "trend_5d": "up",
       "trend_20d": "strong_up",
-      "ath_pct_60d": -1.61
+      "ath_pct_60d": -1.7
     },
     "Bank": {
       "symbol": "BANKBEES.NS",
-      "value": 574.14,
-      "day_change_pct": 0.94,
+      "value": 578.21,
+      "day_change_pct": 0.71,
       "trend_5d": "up",
       "trend_20d": "up",
-      "ath_pct_60d": -4.47
+      "ath_pct_60d": -3.79
     },
     "Infra": {
       "symbol": "INFRABEES.NS",
-      "value": 946.93,
-      "day_change_pct": 1.4,
+      "value": 960.51,
+      "day_change_pct": 1.43,
       "trend_5d": "strong_up",
       "trend_20d": "strong_up",
-      "ath_pct_60d": -2.28
+      "ath_pct_60d": -0.88
     }
   },
   "market_mood": "bearish",
-  "trade_allowed": true,
+  "trade_allowed": false,
   "warnings": [
-    "Global macro risk-off (-0.27) \u2014 Overall macro mood is risk-off (-0.27). US Dow +3.0% overnight. Crude -8.3%. USD/INR -0.2%. Notable: Geopolitical confli"
+    "Global macro risk-off (-0.59) \u2014 Overall macro mood is risk-off (-0.59). US Dow -3.4% overnight. Crude +0.9%. USD/INR -0.1%. Notable: US Fed rate hike / ",
+    "Severe global risk-off \u2014 blocking new trades this session"
   ],
   "leading_sectors": [
-    "IT",
     "Pharma",
     "Bank",
     "Infra"
   ],
   "market_regime": "normal",
-  "sector_breadth": 1.0,
+  "sector_breadth": 0.75,
   "lagging_sectors": [],
   "broad_market_strength": true,
   "intraday_regime": "mixed",
   "macro": {
-    "date": "2026-11-05",
-    "session": "midday",
-    "generated_at": "2026-11-05T06:15:47.779729",
-    "global_score": 0.332,
+    "date": "2026-11-06",
+    "session": "preopen",
+    "generated_at": "2026-11-06T03:05:38.893992",
+    "global_score": -0.248,
     "india_score": -1.0,
-    "overall_score": -0.267,
+    "overall_score": -0.586,
     "mood": "risk_off",
     "drivers": [
-      "Qualcomm\u2019s stock falls as twin forces pressure sales",
-      "This year\u2019s worst-performing S&P 500 stock is finally seeing some major relief",
-      "Figma\u2019s stock dips as investors worry that AI momentum is coming at a high price",
-      "McDonald\u2019s tests new value menu as fast-food discount wars heat up",
-      "As Vistra and other energy stocks slide, some analysts warn of an \u2018excessive knee-jerk\u2019 reaction",
-      "\u2018My life could be cut short\u2019: I\u2019m 55, married with $4.3 million and have a brain tumor. Should I buy a $210,000 custom Porsche?",
-      "\u2018It seems bizarre\u2019: We\u2019re in our 80s with $950,000 in traditional IRAs. Why is our adviser pushing Roth conversions?",
-      "How do Americans feel about the midterm results? It depends on how much money they make."
+      "\u2018My life could be cut short\u2019: I\u2019m 55, married and have a brain tumor. Should I splash out on a $210,000 Porsche?",
+      "Here\u2019s what\u2019s driving Iren\u2019s stock higher after a brutal selloff",
+      "Cloudflare\u2019s stock mounts a big comeback after fastest sales surge in nearly 4 years",
+      "Here are the 2027 capital-gains tax rates for each income level",
+      "Tech stocks log worst day since 2020 as carnage comes to the AI trade",
+      "The 2027 tax brackets are out. See what the standard deduction and SALT tax breaks will be.",
+      "How much in Roth conversions can you do in 2027 with the new tax brackets?",
+      "Buy the dip or wait it out? Young investors react as retail stock selling hits one of its highest levels since COVID crash."
     ],
     "global_cues": {
       "dow": {
-        "last": 53356.12,
-        "chg_pct": 3.03
+        "last": 51523.06,
+        "chg_pct": -3.44
       },
       "nasdaq": {
-        "last": 25736.51,
-        "chg_pct": 1.44
+        "last": 24315.0,
+        "chg_pct": -5.52
       },
       "sp500": {
-        "last": 7688.62,
-        "chg_pct": 1.58
+        "last": 7353.73,
+        "chg_pct": -4.36
       },
       "nikkei": {
-        "last": 60877.11,
-        "chg_pct": -2.11
+        "last": 57858.61,
+        "chg_pct": -5.27
       },
       "crude": {
-        "last": 88.12,
-        "chg_pct": -8.29
+        "last": 91.34,
+        "chg_pct": 0.91
       },
       "usdinr": {
-        "last": 94.51,
-        "chg_pct": -0.25
+        "last": 94.46,
+        "chg_pct": -0.05
       },
       "gold": {
-        "last": 4073.0,
-        "chg_pct": 3.37
+        "last": 4071.0,
+        "chg_pct": -1.03
       }
     },
-    "summary": "Overall macro mood is risk-off (-0.27). US Dow +3.0% overnight. Crude -8.3%. USD/INR -0.2%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
+    "summary": "Overall macro mood is risk-off (-0.59). US Dow -3.4% overnight. Crude +0.9%. USD/INR -0.1%. Notable: US Fed rate hike / hawkish; Geopolitical conflict / war.",
     "playbook": [
-      "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
-      "Trade-war headlines spook global markets; IT & export names react most."
+      "Hawkish Fed pressures Nifty via FII outflows and stronger USD.",
+      "Geopolitical shocks trigger global risk-off; gold up, equities down initially."
     ],
     "playbook_bias": "risk_off",
     "article_count": 60
   },
   "macro_risk_factor": 0.7,
   "fii_dii": {
-    "date": "2026-11-05",
-    "fii_net_cr": 7284.03,
-    "dii_net_cr": -3712.23,
-    "combined_net_cr": 3571.8,
+    "date": "2026-11-06",
+    "fii_net_cr": 14974.68,
+    "dii_net_cr": -10444.54,
+    "combined_net_cr": 4530.14,
     "signal": "strong_inflow",
     "ok": true,
     "error": "",
     "history": [
-      {
-        "date": "2026-09-25",
-        "fii": -5027.36,
-        "dii": 4301.18,
-        "combined": -726.18
-      },
       {
         "date": "2026-09-28",
         "fii": -3693.93,
@@ -319,19 +314,25 @@
         "fii": 7284.03,
         "dii": -3712.23,
         "combined": 3571.8
+      },
+      {
+        "date": "2026-11-06",
+        "fii": 14974.68,
+        "dii": -10444.54,
+        "combined": 4530.14
       }
     ]
   },
   "flow_tailwind": true,
   "pcr": {
-    "date": "2026-11-05",
-    "pcr": 1.074,
-    "reading": "neutral",
-    "total_pe_oi": 2349210,
-    "total_ce_oi": 2187980,
-    "spot": 23960.6,
-    "max_pain": 23800.0,
-    "max_pain_dist_pct": 0.67,
+    "date": "2026-11-06",
+    "pcr": 1.345,
+    "reading": "bullish_bias",
+    "total_pe_oi": 2973264,
+    "total_ce_oi": 2210786,
+    "spot": 24536.6,
+    "max_pain": 24350.0,
+    "max_pain_dist_pct": 0.76,
     "oi_bias": "put_heavy_support",
     "ok": true,
     "error": ""

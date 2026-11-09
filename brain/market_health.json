@@ -1,6 +1,6 @@
 {
   "date": "2026-11-09",
-  "session": "afternoon",
+  "session": "intraday_close",
   "nifty": {
     "symbol": "^NSEI",
     "value": 25030.35,
@@ -59,11 +59,10 @@
       "ath_pct_60d": -0.37
     }
   },
-  "market_mood": "bearish",
+  "market_mood": "neutral",
   "trade_allowed": true,
   "warnings": [
-    "VIX=17.5 at 97th percentile vs last 30d \u2014 unusually high stress",
-    "Nifty choppy intraday \u2014 wait for cleaner setups"
+    "VIX=17.5 at 97th percentile vs last 30d \u2014 unusually high stress"
   ],
   "leading_sectors": [
     "IT",
@@ -75,7 +74,7 @@
   "sector_breadth": 1.0,
   "lagging_sectors": [],
   "broad_market_strength": true,
-  "intraday_regime": "choppy",
+  "intraday_regime": "mixed",
   "macro": {
     "date": "2026-11-09",
     "session": "midday",

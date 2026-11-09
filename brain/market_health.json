@@ -1,67 +1,68 @@
 {
-  "date": "2026-11-06",
-  "session": "intraday_close",
+  "date": "2026-11-09",
+  "session": "preopen",
   "nifty": {
     "symbol": "^NSEI",
-    "value": 24536.6,
-    "day_change_pct": 2.4,
+    "value": 24986.4,
+    "day_change_pct": -0.18,
     "trend_5d": "strong_up",
     "trend_20d": "strong_up",
-    "ath_pct_60d": -0.18,
-    "intraday_surge": true
+    "ath_pct_60d": -0.58
   },
   "vix": {
-    "value": 15.58,
+    "value": 18.43,
     "level": "normal",
-    "percentile_30d": 73.0,
-    "avg_30d": 14.65
+    "percentile_30d": 97.0,
+    "avg_30d": 15.08
   },
   "bank_nifty": {
     "symbol": "^NSEBANK",
-    "value": 57773.65,
-    "day_change_pct": 3.33,
+    "value": 58850.65,
+    "day_change_pct": -0.4,
     "trend_5d": "strong_up",
     "trend_20d": "strong_up",
-    "ath_pct_60d": -0.13,
+    "ath_pct_60d": -0.66,
     "diverging": false
   },
   "sectors": {
     "IT": {
       "symbol": "ITBEES.NS",
-      "value": 36.58,
-      "day_change_pct": 2.81,
+      "value": 36.64,
+      "day_change_pct": -0.05,
       "trend_5d": "up",
       "trend_20d": "strong_up",
-      "ath_pct_60d": -1.11
+      "ath_pct_60d": -3.55
     },
     "Pharma": {
       "symbol": "PHARMABEES.NS",
-      "value": 28.41,
-      "day_change_pct": 1.03,
-      "trend_5d": "up",
+      "value": 29.25,
+      "day_change_pct": 1.99,
+      "trend_5d": "strong_up",
       "trend_20d": "strong_up",
-      "ath_pct_60d": -1.7
+      "ath_pct_60d": -0.51
     },
     "Bank": {
       "symbol": "BANKBEES.NS",
-      "value": 597.89,
-      "day_change_pct": 3.4,
+      "value": 609.34,
+      "day_change_pct": -0.0,
       "trend_5d": "strong_up",
       "trend_20d": "strong_up",
-      "ath_pct_60d": -0.52
+      "ath_pct_60d": -2.04
     },
     "Infra": {
       "symbol": "INFRABEES.NS",
-      "value": 968.9,
-      "day_change_pct": 0.87,
-      "trend_5d": "strong_up",
+      "value": 974.61,
+      "day_change_pct": 0.28,
+      "trend_5d": "up",
       "trend_20d": "strong_up",
-      "ath_pct_60d": -0.35
+      "ath_pct_60d": -0.55
     }
   },
-  "market_mood": "bullish",
+  "market_mood": "neutral",
   "trade_allowed": true,
-  "warnings": [],
+  "warnings": [
+    "VIX=18.4 at 97th percentile vs last 30d \u2014 unusually high stress"
+  ],
   "leading_sectors": [
     "IT",
     "Pharma",
@@ -72,78 +73,72 @@
   "sector_breadth": 1.0,
   "lagging_sectors": [],
   "broad_market_strength": true,
-  "intraday_regime": "mixed",
   "macro": {
-    "date": "2026-11-06",
-    "session": "midday",
-    "generated_at": "2026-11-06T06:15:45.143417",
-    "global_score": -0.199,
+    "date": "2026-11-09",
+    "session": "preopen",
+    "generated_at": "2026-11-09T03:05:40.509280",
+    "global_score": -0.003,
     "india_score": 0.0,
-    "overall_score": -0.109,
+    "overall_score": -0.002,
     "mood": "neutral",
     "drivers": [
-      "\u2018It seems bizarre\u2019: We\u2019re in our 80s with $950,000 in traditional IRAs. Why is our adviser pushing Roth conversions?",
       "\u2018My life could be cut short\u2019: I\u2019m 55, married and have a brain tumor. Should I splash out on a $210,000 Porsche?",
-      "Here\u2019s what\u2019s driving Iren\u2019s stock higher after a brutal selloff",
-      "Cloudflare\u2019s stock mounts a big comeback after fastest sales surge in nearly 4 years",
-      "Here are the 2027 capital-gains tax rates for each income level",
-      "Tech stocks log worst day since 2020 as carnage comes to the AI trade",
-      "The 2027 tax brackets are out. See what the standard deduction and SALT tax breaks will be.",
-      "How much in Roth conversions can you do in 2027 with the new tax brackets?"
+      "The S&P 500 could be dangerously exposed to AI. Here are some simple alternatives.",
+      "I\u2019m second-guessing my adviser: Is an annuity the right move in this market?",
+      "\u2018It feels like he\u2019s quietly building a separate life\u2019: My husband inherited $500,000, but he refuses to spend it on our home",
+      "Funeral homes are finding new life hosting weddings and golf outings, as the traditional burial business dies out",
+      "How much in Roth conversions can you do in 2027 with the new tax brackets?",
+      "I\u2019m 65 and worth more than $5.6 million. Can I afford a $200,000 camper?",
+      "This retired professor has reinvented himself \u2014 as a Taylor Swift scholar"
     ],
     "global_cues": {
       "dow": {
-        "last": 51523.06,
-        "chg_pct": -3.44
+        "last": 51285.73,
+        "chg_pct": -0.46
       },
       "nasdaq": {
-        "last": 24315.0,
-        "chg_pct": -5.52
+        "last": 24579.43,
+        "chg_pct": 1.09
       },
       "sp500": {
-        "last": 7353.73,
-        "chg_pct": -4.36
+        "last": 7376.86,
+        "chg_pct": 0.31
       },
       "nikkei": {
-        "last": 57322.91,
-        "chg_pct": -6.15
+        "last": 59411.34,
+        "chg_pct": 3.44
       },
       "crude": {
-        "last": 90.52,
-        "chg_pct": 2.72
+        "last": 90.95,
+        "chg_pct": 0.13
       },
       "usdinr": {
-        "last": 94.1,
-        "chg_pct": -0.44
+        "last": 93.89,
+        "chg_pct": -0.6
       },
       "gold": {
-        "last": 4113.5,
-        "chg_pct": 0.99
+        "last": 4129.3,
+        "chg_pct": 1.33
       }
     },
-    "summary": "Overall macro mood is neutral (-0.11). US Dow -3.4% overnight. Crude +2.7%. USD/INR -0.4%. Notable: Geopolitical conflict / war.",
+    "summary": "Overall macro mood is neutral (-0.00). US Dow -0.5% overnight. Crude +0.1%. USD/INR -0.6%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
-      "Geopolitical shocks trigger global risk-off; gold up, equities down initially."
+      "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
+      "Trade-war headlines spook global markets; IT & export names react most."
     ],
     "playbook_bias": "risk_off",
     "article_count": 60
   },
   "macro_risk_factor": 1.0,
   "fii_dii": {
-    "date": "2026-11-06",
-    "fii_net_cr": 14974.68,
-    "dii_net_cr": -10444.54,
-    "combined_net_cr": 4530.14,
-    "signal": "strong_inflow",
+    "date": "2026-11-09",
+    "fii_net_cr": -0.25,
+    "dii_net_cr": -700.31,
+    "combined_net_cr": -700.56,
+    "signal": "neutral",
     "ok": true,
     "error": "",
     "history": [
-      {
-        "date": "2026-09-28",
-        "fii": -3693.93,
-        "dii": 2838.17,
-        "combined": -855.76
-      },
       {
         "date": "2026-09-29",
         "fii": -5353.22,
@@ -317,19 +312,24 @@
         "fii": 14974.68,
         "dii": -10444.54,
         "combined": 4530.14
+      },
+      {
+        "date": "2026-11-09",
+        "fii": -0.25,
+        "dii": -700.31,
+        "combined": -700.56
       }
     ]
   },
-  "flow_tailwind": true,
   "pcr": {
-    "date": "2026-11-06",
-    "pcr": 1.345,
+    "date": "2026-11-09",
+    "pcr": 1.274,
     "reading": "bullish_bias",
-    "total_pe_oi": 2973264,
-    "total_ce_oi": 2210786,
-    "spot": 24536.6,
-    "max_pain": 24350.0,
-    "max_pain_dist_pct": 0.76,
+    "total_pe_oi": 3707536,
+    "total_ce_oi": 2909207,
+    "spot": 24986.4,
+    "max_pain": 24800.0,
+    "max_pain_dist_pct": 0.75,
     "oi_bias": "put_heavy_support",
     "ok": true,
     "error": ""

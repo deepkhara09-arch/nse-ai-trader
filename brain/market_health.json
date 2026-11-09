@@ -1,6 +1,6 @@
 {
-  "date": "2026-11-09",
-  "session": "intraday_close",
+  "date": "2026-11-10",
+  "session": "preclose",
   "nifty": {
     "symbol": "^NSEI",
     "value": 25030.35,
@@ -13,8 +13,8 @@
   "vix": {
     "value": 17.47,
     "level": "normal",
-    "percentile_30d": 97.0,
-    "avg_30d": 14.96
+    "percentile_30d": 96.0,
+    "avg_30d": 15.06
   },
   "bank_nifty": {
     "symbol": "^NSEBANK",
@@ -28,50 +28,49 @@
   "sectors": {
     "IT": {
       "symbol": "ITBEES.NS",
-      "value": 36.66,
-      "day_change_pct": 0.22,
-      "trend_5d": "up",
+      "value": 36.01,
+      "day_change_pct": -1.77,
+      "trend_5d": "sideways",
       "trend_20d": "strong_up",
-      "ath_pct_60d": -3.5
+      "ath_pct_60d": -5.21
     },
     "Pharma": {
       "symbol": "PHARMABEES.NS",
-      "value": 28.68,
-      "day_change_pct": 0.95,
-      "trend_5d": "up",
+      "value": 29.72,
+      "day_change_pct": 3.63,
+      "trend_5d": "strong_up",
       "trend_20d": "strong_up",
-      "ath_pct_60d": -0.76
+      "ath_pct_60d": -1.23
     },
     "Bank": {
       "symbol": "BANKBEES.NS",
-      "value": 609.37,
-      "day_change_pct": 1.92,
+      "value": 616.82,
+      "day_change_pct": 1.22,
       "trend_5d": "strong_up",
       "trend_20d": "strong_up",
-      "ath_pct_60d": -0.27
+      "ath_pct_60d": -0.28
     },
     "Infra": {
       "symbol": "INFRABEES.NS",
       "value": 971.88,
-      "day_change_pct": 0.31,
-      "trend_5d": "strong_up",
+      "day_change_pct": 0.0,
+      "trend_5d": "up",
       "trend_20d": "strong_up",
-      "ath_pct_60d": -0.37
+      "ath_pct_60d": -0.62
     }
   },
   "market_mood": "neutral",
   "trade_allowed": true,
   "warnings": [
-    "VIX=17.5 at 97th percentile vs last 30d \u2014 unusually high stress"
+    "VIX=17.5 at 96th percentile vs last 30d \u2014 unusually high stress"
   ],
   "leading_sectors": [
-    "IT",
     "Pharma",
     "Bank",
     "Infra"
   ],
   "market_regime": "normal",
-  "sector_breadth": 1.0,
+  "sector_breadth": 0.75,
   "lagging_sectors": [],
   "broad_market_strength": true,
   "intraday_regime": "mixed",
@@ -133,20 +132,14 @@
   },
   "macro_risk_factor": 1.0,
   "fii_dii": {
-    "date": "2026-11-09",
-    "fii_net_cr": -0.25,
-    "dii_net_cr": -700.31,
-    "combined_net_cr": -700.56,
-    "signal": "neutral",
+    "date": "2026-11-10",
+    "fii_net_cr": 7212.22,
+    "dii_net_cr": -7172.53,
+    "combined_net_cr": 39.69,
+    "signal": "strong_inflow",
     "ok": true,
     "error": "",
     "history": [
-      {
-        "date": "2026-09-29",
-        "fii": -5353.22,
-        "dii": 5189.02,
-        "combined": -164.2
-      },
       {
         "date": "2026-09-30",
         "fii": -9980.22,
@@ -320,21 +313,27 @@
         "fii": -0.25,
         "dii": -700.31,
         "combined": -700.56
+      },
+      {
+        "date": "2026-11-10",
+        "fii": 7212.22,
+        "dii": -7172.53,
+        "combined": 39.69
       }
     ]
   },
+  "flow_tailwind": true,
   "pcr": {
-    "date": "2026-11-09",
-    "pcr": 1.274,
-    "reading": "bullish_bias",
-    "total_pe_oi": 3707536,
-    "total_ce_oi": 2909207,
-    "spot": 24986.4,
-    "max_pain": 24800.0,
-    "max_pain_dist_pct": 0.75,
-    "oi_bias": "put_heavy_support",
+    "date": "2026-11-10",
+    "pcr": 1.071,
+    "reading": "neutral",
+    "total_pe_oi": 3265890,
+    "total_ce_oi": 3048074,
+    "spot": 25044.65,
+    "max_pain": 25000.0,
+    "max_pain_dist_pct": 0.18,
+    "oi_bias": "balanced",
     "ok": true,
     "error": ""
-  },
-  "oi_note": "Heavy put OI below spot \u2014 option writers see a floor (bullish lean)"
+  }
 }

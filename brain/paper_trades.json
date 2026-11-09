@@ -36,8 +36,8 @@
         "\u26a0 Daily sell fights the higher-timeframe uptrend \u2014 needs extra conviction",
         "\u26a0 Strong opposing signals present (opposing evidence 94% of the leading side) \u2014 conflicted setup, needs extra conviction"
       ],
-      "current_price": 77.1,
-      "unrealized_pnl": 174.58,
+      "current_price": 76.89,
+      "unrealized_pnl": 162.4,
       "max_held_days": 40,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -68,7 +68,7 @@
       "entry": 157.46,
       "qty": 26,
       "invested": 4093.96,
-      "stop_loss": 141.71,
+      "stop_loss": 162.25,
       "target": 179.5,
       "style": "swing",
       "confidence": 30.3,
@@ -90,8 +90,8 @@
         "\u26a0 Daily sell fights the higher-timeframe uptrend \u2014 needs extra conviction",
         "\u26a0 Strong opposing signals present (opposing evidence 86% of the leading side) \u2014 conflicted setup, needs extra conviction"
       ],
-      "current_price": 165.0,
-      "unrealized_pnl": 196.04,
+      "current_price": 167.05,
+      "unrealized_pnl": 249.34,
       "max_held_days": 40,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -111,7 +111,8 @@
         0,
         0,
         0
-      ]
+      ],
+      "trailing_active": true
     }
   ],
   "closed_trades": [
@@ -697,12 +698,12 @@
       "daily_pnl": 116.6
     }
   ],
-  "daily_pnl_today": 102.30103499999994,
+  "daily_pnl_today": 0.0,
   "last_snapshot_date": "2026-11-04",
   "lifetime_wins": 6,
   "lifetime_losses": 2,
   "lifetime_pnl": 109.51,
-  "last_pnl_reset_date": "2026-11-06",
+  "last_pnl_reset_date": "2026-11-09",
   "max_drawdown_pct": 0.0,
   "current_drawdown_pct": 0.0,
   "portfolio_peak": 100158.69,

@@ -1,6 +1,6 @@
 {
   "date": "2026-11-10",
-  "session": "morning",
+  "session": "midday",
   "nifty": {
     "symbol": "^NSEI",
     "value": 25044.65,
@@ -75,20 +75,20 @@
   "intraday_regime": "mixed",
   "macro": {
     "date": "2026-11-10",
-    "session": "preopen",
-    "generated_at": "2026-11-10T03:05:47.103668",
-    "global_score": 0.225,
+    "session": "midday",
+    "generated_at": "2026-11-10T06:15:45.580128",
+    "global_score": 0.245,
     "india_score": 0.0,
-    "overall_score": 0.124,
+    "overall_score": 0.135,
     "mood": "neutral",
     "drivers": [
+      "\u2018We had the worst fight\u2019: I want my husband to retire at 65, but I don\u2019t want to lose his $280,000 salary. Is that unreasonable?",
       "The short seller who saw signs of Nvidia\u2019s China scandal months ago claims Megaspeed isn\u2019t the only company helping China access chips",
       "This retired professor has reinvented himself \u2014 as a Taylor Swift scholar",
       "Rocket Lab shares dip after the company\u2019s \u2018defining\u2019 quarter misses the mark",
       "Here\u2019s how Bernie Sanders wants to keep Social Security solvent \u2018for generations\u2019",
       "As Nvidia\u2019s stock falls, here\u2019s what Wall Street has to say about the Jensen Huang scandal",
       "Dow sees its third 1,000-point swing in four days. Why the volatility isn\u2019t over yet.",
-      "\u2018We had the worst fight\u2019: I want my husband to retire at 65, but I don\u2019t want to lose his $280,000 salary. Is that unreasonable?",
       "Are AMD and Broadcom the real winners of the Nvidia spy scandal?"
     ],
     "global_cues": {
@@ -105,23 +105,23 @@
         "chg_pct": 2.35
       },
       "nikkei": {
-        "last": 60475.78,
-        "chg_pct": 2.89
+        "last": 60599.53,
+        "chg_pct": 3.1
       },
       "crude": {
-        "last": 85.93,
-        "chg_pct": -1.06
+        "last": 86.85,
+        "chg_pct": -4.38
       },
       "usdinr": {
-        "last": 93.9,
-        "chg_pct": -0.59
+        "last": 93.92,
+        "chg_pct": 0.02
       },
       "gold": {
-        "last": 4120.2,
-        "chg_pct": 0.14
+        "last": 4114.5,
+        "chg_pct": 0.97
       }
     },
-    "summary": "Overall macro mood is neutral (+0.12). US Dow +2.1% overnight. Crude -1.1%. USD/INR -0.6%. Notable: Geopolitical conflict / war.",
+    "summary": "Overall macro mood is neutral (+0.14). US Dow +2.1% overnight. Crude -4.4%. USD/INR +0.0%. Notable: Geopolitical conflict / war.",
     "playbook": [
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially."
     ],

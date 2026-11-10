@@ -1,6 +1,6 @@
 {
   "date": "2026-11-10",
-  "session": "intraday_close",
+  "session": "preclose",
   "nifty": {
     "symbol": "^NSEI",
     "value": 25044.65,
@@ -72,7 +72,6 @@
   "sector_breadth": 0.75,
   "lagging_sectors": [],
   "broad_market_strength": true,
-  "intraday_regime": "mixed",
   "macro": {
     "date": "2026-11-10",
     "session": "midday",

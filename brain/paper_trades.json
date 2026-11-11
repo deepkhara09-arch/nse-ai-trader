@@ -1,5 +1,5 @@
 {
-  "capital": 91718.331345,
+  "capital": 96194.511345,
   "open_positions": [
     {
       "ticker": "IDFCFIRSTB.NS",
@@ -8,9 +8,9 @@
       "open_session": "morning",
       "action": "BUY",
       "entry": 74.09,
-      "qty": 58,
-      "invested": 4297.22,
-      "stop_loss": 74.16,
+      "qty": 29,
+      "invested": 2148.61,
+      "stop_loss": 75.8,
       "target": 84.46,
       "style": "swing",
       "confidence": 31.0,
@@ -36,8 +36,8 @@
         "\u26a0 Daily sell fights the higher-timeframe uptrend \u2014 needs extra conviction",
         "\u26a0 Strong opposing signals present (opposing evidence 94% of the leading side) \u2014 conflicted setup, needs extra conviction"
       ],
-      "current_price": 77.5,
-      "unrealized_pnl": 197.78,
+      "current_price": 79.5,
+      "unrealized_pnl": 156.89,
       "max_held_days": 40,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -58,7 +58,8 @@
         0,
         0
       ],
-      "trailing_active": true
+      "trailing_active": true,
+      "t1_booked": true
     },
     {
       "ticker": "BANDHANBNK.NS",
@@ -67,9 +68,9 @@
       "open_session": "morning",
       "action": "BUY",
       "entry": 157.46,
-      "qty": 26,
-      "invested": 4093.96,
-      "stop_loss": 162.25,
+      "qty": 13,
+      "invested": 2046.98,
+      "stop_loss": 161.1,
       "target": 179.5,
       "style": "swing",
       "confidence": 30.3,
@@ -91,8 +92,8 @@
         "\u26a0 Daily sell fights the higher-timeframe uptrend \u2014 needs extra conviction",
         "\u26a0 Strong opposing signals present (opposing evidence 86% of the leading side) \u2014 conflicted setup, needs extra conviction"
       ],
-      "current_price": 166.16,
-      "unrealized_pnl": 226.2,
+      "current_price": 170.33,
+      "unrealized_pnl": 167.31,
       "max_held_days": 40,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -113,7 +114,8 @@
         0,
         0
       ],
-      "trailing_active": true
+      "trailing_active": true,
+      "t1_booked": true
     }
   ],
   "closed_trades": [
@@ -688,6 +690,142 @@
       "pnl_pct": 3.91,
       "won": true,
       "open_days": 11
+    },
+    {
+      "ticker": "IDFCFIRSTB.NS",
+      "sector": "Banking",
+      "open_date": "2026-10-22",
+      "open_session": "morning",
+      "action": "BUY",
+      "entry": 74.09,
+      "qty": 29,
+      "invested": 2148.61,
+      "stop_loss": 75.8,
+      "target": 84.46,
+      "style": "swing",
+      "confidence": 31.0,
+      "patterns": [
+        "rsi_bullish_divergence",
+        "bb_lower_bounce",
+        "stoch_rsi_overbought_reversal",
+        "three_black_crows",
+        "pivot_s1_breakdown",
+        "full_bearish_alignment"
+      ],
+      "buy_reasons": [
+        "Near lower Bollinger Band",
+        "RSI bullish divergence \u2014 price lower but RSI higher",
+        "DEEP-DIP BUY: 10% below trend average, trend intact \u2014 mean-reversion setup (backtest-positive)",
+        "RSI 35 oversold \u2014 dip is stretched, snap-back likely",
+        "DEEP-DIP OVERRIDE: price fell hard (bearish short-term) but the stock's structure is intact \u2014 this is the buy-the-fear edge",
+        "All EMAs stacked bearish",
+        "MACD histogram negative",
+        "Candlestick: three black crows",
+        "Broke below Pivot S1 support \u2014 bearish",
+        "StochRSI overbought with bearish candle \u2014 reversal",
+        "\u26a0 Daily sell fights the higher-timeframe uptrend \u2014 needs extra conviction",
+        "\u26a0 Strong opposing signals present (opposing evidence 94% of the leading side) \u2014 conflicted setup, needs extra conviction"
+      ],
+      "current_price": 79.5,
+      "unrealized_pnl": 313.78,
+      "max_held_days": 40,
+      "vol_regime_pct": 0.09,
+      "entry_market": {
+        "nifty_trend": "up",
+        "vix": 15.68,
+        "mood": "bearish",
+        "regime": "mixed",
+        "sector_momentum": -0.25,
+        "delivery_signal": "neutral",
+        "rsi": 35.1,
+        "mtf_alignment": "conflict",
+        "opposing_ratio": 0.94,
+        "hist_long_trend": "strong_uptrend"
+      },
+      "view_hist": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "trailing_active": true,
+      "t1_booked": true,
+      "close_date": "2026-11-11",
+      "close_session": "morning",
+      "exit_price": 79.28,
+      "exit_reason": "partial_t1",
+      "pnl": 143.69,
+      "pnl_gross": 150.37,
+      "costs": 6.67,
+      "pnl_pct": 6.69,
+      "won": true,
+      "open_days": 13
+    },
+    {
+      "ticker": "BANDHANBNK.NS",
+      "sector": "Banking",
+      "open_date": "2026-10-22",
+      "open_session": "morning",
+      "action": "BUY",
+      "entry": 157.46,
+      "qty": 13,
+      "invested": 2046.98,
+      "stop_loss": 161.1,
+      "target": 179.5,
+      "style": "swing",
+      "confidence": 30.3,
+      "patterns": [
+        "strong_bearish_marubozu",
+        "three_black_crows",
+        "pivot_s1_breakdown",
+        "full_bearish_alignment"
+      ],
+      "buy_reasons": [
+        "RSI=29 oversold \u2014 reversal watch",
+        "DEEP-DIP BUY: 9% below trend average, trend intact \u2014 mean-reversion setup (backtest-positive)",
+        "RSI 29 oversold \u2014 dip is stretched, snap-back likely",
+        "DEEP-DIP OVERRIDE: price fell hard (bearish short-term) but the stock's structure is intact \u2014 this is the buy-the-fear edge",
+        "All EMAs stacked bearish",
+        "MACD histogram negative",
+        "Candlestick: three black crows",
+        "Broke below Pivot S1 support \u2014 bearish",
+        "\u26a0 Daily sell fights the higher-timeframe uptrend \u2014 needs extra conviction",
+        "\u26a0 Strong opposing signals present (opposing evidence 86% of the leading side) \u2014 conflicted setup, needs extra conviction"
+      ],
+      "current_price": 170.33,
+      "unrealized_pnl": 334.62,
+      "max_held_days": 40,
+      "vol_regime_pct": 0.09,
+      "entry_market": {
+        "nifty_trend": "up",
+        "vix": 15.68,
+        "mood": "bearish",
+        "regime": "mixed",
+        "sector_momentum": -0.25,
+        "delivery_signal": "neutral",
+        "rsi": 29.1,
+        "mtf_alignment": "conflict",
+        "opposing_ratio": 0.86,
+        "hist_long_trend": "uptrend"
+      },
+      "view_hist": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "trailing_active": true,
+      "t1_booked": true,
+      "close_date": "2026-11-11",
+      "close_session": "morning",
+      "exit_price": 168.48,
+      "exit_reason": "partial_t1",
+      "pnl": 136.9,
+      "pnl_gross": 143.26,
+      "costs": 6.36,
+      "pnl_pct": 6.69,
+      "won": true,
+      "open_days": 13
     }
   ],
   "daily_snapshots": [
@@ -699,12 +837,12 @@
       "daily_pnl": 116.6
     }
   ],
-  "daily_pnl_today": 0.0,
+  "daily_pnl_today": 280.59000000000003,
   "last_snapshot_date": "2026-11-04",
-  "lifetime_wins": 6,
+  "lifetime_wins": 8,
   "lifetime_losses": 2,
-  "lifetime_pnl": 109.51,
-  "last_pnl_reset_date": "2026-11-09",
+  "lifetime_pnl": 390.1,
+  "last_pnl_reset_date": "2026-11-11",
   "max_drawdown_pct": 0.0,
   "current_drawdown_pct": 0.0,
   "portfolio_peak": 100158.69,

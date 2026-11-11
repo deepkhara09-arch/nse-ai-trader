@@ -1,13 +1,13 @@
 {
   "phase": "paper_trading",
   "day": 66,
-  "session": "preopen",
+  "session": "morning",
   "start_date": "2026-06-22",
   "phase_start_date": "2026-07-15",
   "last_run_date": "2026-11-04",
   "last_counted_date": "2026-11-04",
   "cohort_last_tick_date": "2026-11-04",
-  "last_updated": "2026-11-11T03:11:14.512750",
+  "last_updated": "2026-11-11T04:05:42.060942",
   "focus_stocks": [
     "PIDILITIND.NS",
     "GAIL.NS",
@@ -58,14 +58,14 @@
     "SBIN.NS"
   ],
   "paper_trade_stats": {
-    "total": 8,
-    "wins": 6,
+    "total": 10,
+    "wins": 8,
     "losses": 2,
-    "win_rate": 0.75,
-    "total_pnl": 109.51,
-    "avg_win": 135.63,
+    "win_rate": 0.8,
+    "total_pnl": 390.1,
+    "avg_win": 136.8,
     "avg_loss": -352.13,
-    "expectancy": 13.69
+    "expectancy": 39.01
   },
   "brain_notes": [
     "[2026-08-17] Cohort batch #24 complete \u2014 30 candidates ready",
@@ -397,6 +397,7 @@
     "scored_date": "2026-11-04"
   },
   "sessions_done": {
-    "preopen": "2026-11-11"
+    "preopen": "2026-11-11",
+    "morning": "2026-11-11"
   }
 }

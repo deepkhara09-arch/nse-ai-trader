@@ -1,6 +1,6 @@
 {
-  "date": "2026-11-10",
-  "session": "preclose",
+  "date": "2026-11-11",
+  "session": "preopen",
   "nifty": {
     "symbol": "^NSEI",
     "value": 25044.65,
@@ -73,63 +73,65 @@
   "lagging_sectors": [],
   "broad_market_strength": true,
   "macro": {
-    "date": "2026-11-10",
-    "session": "midday",
-    "generated_at": "2026-11-10T06:15:45.580128",
-    "global_score": 0.245,
+    "date": "2026-11-11",
+    "session": "preopen",
+    "generated_at": "2026-11-11T03:11:12.504640",
+    "global_score": -0.142,
     "india_score": 0.0,
-    "overall_score": 0.135,
+    "overall_score": -0.078,
     "mood": "neutral",
     "drivers": [
+      "\u2018The thought of living to 100 terrifies me\u2019: Is Social Security a giant Ponzi scheme?",
+      "One reason Children\u2019s Place is filing for bankruptcy? Not enough children.",
+      "CoreWeave\u2019s stock pops as new financing playbook eases debt concerns",
       "\u2018We had the worst fight\u2019: I want my husband to retire at 65, but I don\u2019t want to lose his $280,000 salary. Is that unreasonable?",
-      "The short seller who saw signs of Nvidia\u2019s China scandal months ago claims Megaspeed isn\u2019t the only company helping China access chips",
-      "This retired professor has reinvented himself \u2014 as a Taylor Swift scholar",
-      "Rocket Lab shares dip after the company\u2019s \u2018defining\u2019 quarter misses the mark",
-      "Here\u2019s how Bernie Sanders wants to keep Social Security solvent \u2018for generations\u2019",
-      "As Nvidia\u2019s stock falls, here\u2019s what Wall Street has to say about the Jensen Huang scandal",
-      "Dow sees its third 1,000-point swing in four days. Why the volatility isn\u2019t over yet.",
-      "Are AMD and Broadcom the real winners of the Nvidia spy scandal?"
+      "Should a widow leave her late partner\u2019s home to her stepkids \u2014 or cut off contact with them?",
+      "\u2018I\u2019m sick of flying\u2019: I paid for priority boarding, but the overhead bins were full. Was I duped?",
+      "AMD\u2019s stock fades as investors weigh whether Nvidia\u2019s turmoil will mean lasting wins",
+      "Looking to buy the dip in chip stocks? Here\u2019s how to avoid buying too soon."
     ],
     "global_cues": {
       "dow": {
-        "last": 52389.75,
-        "chg_pct": 2.15
+        "last": 52231.89,
+        "chg_pct": -0.3
       },
       "nasdaq": {
-        "last": 25253.14,
-        "chg_pct": 2.74
+        "last": 25065.88,
+        "chg_pct": -0.74
       },
       "sp500": {
-        "last": 7549.94,
-        "chg_pct": 2.35
+        "last": 7520.93,
+        "chg_pct": -0.38
       },
       "nikkei": {
-        "last": 60599.53,
-        "chg_pct": 3.1
+        "last": 60942.48,
+        "chg_pct": 0.8
       },
       "crude": {
-        "last": 86.85,
-        "chg_pct": -4.38
+        "last": 86.47,
+        "chg_pct": 0.5
       },
       "usdinr": {
         "last": 93.92,
-        "chg_pct": 0.02
+        "chg_pct": -0.03
       },
       "gold": {
-        "last": 4114.5,
-        "chg_pct": 0.97
+        "last": 4051.9,
+        "chg_pct": 0.54
       }
     },
-    "summary": "Overall macro mood is neutral (+0.14). US Dow +2.1% overnight. Crude -4.4%. USD/INR +0.0%. Notable: Geopolitical conflict / war.",
+    "summary": "Overall macro mood is neutral (-0.08). US Dow -0.3% overnight. Crude +0.5%. USD/INR -0.0%. Notable: US Fed rate hike / hawkish; Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
-      "Geopolitical shocks trigger global risk-off; gold up, equities down initially."
+      "Hawkish Fed pressures Nifty via FII outflows and stronger USD.",
+      "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
+      "Trade-war headlines spook global markets; IT & export names react most."
     ],
     "playbook_bias": "risk_off",
     "article_count": 60
   },
   "macro_risk_factor": 1.0,
   "fii_dii": {
-    "date": "2026-11-10",
+    "date": "2026-11-11",
     "fii_net_cr": 7212.22,
     "dii_net_cr": -7172.53,
     "combined_net_cr": 39.69,
@@ -137,12 +139,6 @@
     "ok": true,
     "error": "",
     "history": [
-      {
-        "date": "2026-09-30",
-        "fii": -9980.22,
-        "dii": 6952.71,
-        "combined": -3027.51
-      },
       {
         "date": "2026-10-01",
         "fii": -10148.41,
@@ -316,12 +312,18 @@
         "fii": 7212.22,
         "dii": -7172.53,
         "combined": 39.69
+      },
+      {
+        "date": "2026-11-11",
+        "fii": 7212.22,
+        "dii": -7172.53,
+        "combined": 39.69
       }
     ]
   },
   "flow_tailwind": true,
   "pcr": {
-    "date": "2026-11-10",
+    "date": "2026-11-11",
     "pcr": 1.071,
     "reading": "neutral",
     "total_pe_oi": 3265890,

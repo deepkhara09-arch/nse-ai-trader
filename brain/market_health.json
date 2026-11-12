@@ -1,6 +1,6 @@
 {
   "date": "2026-11-12",
-  "session": "preopen",
+  "session": "morning",
   "nifty": {
     "symbol": "^NSEI",
     "value": 25255.05,
@@ -27,11 +27,11 @@
   "sectors": {
     "IT": {
       "symbol": "ITBEES.NS",
-      "value": 35.76,
-      "day_change_pct": -0.69,
+      "value": 36.01,
+      "day_change_pct": -1.77,
       "trend_5d": "sideways",
       "trend_20d": "strong_up",
-      "ath_pct_60d": -5.87
+      "ath_pct_60d": -5.21
     },
     "Pharma": {
       "symbol": "PHARMABEES.NS",
@@ -43,26 +43,27 @@
     },
     "Bank": {
       "symbol": "BANKBEES.NS",
-      "value": 626.98,
-      "day_change_pct": 1.65,
+      "value": 616.82,
+      "day_change_pct": 1.22,
       "trend_5d": "strong_up",
       "trend_20d": "strong_up",
-      "ath_pct_60d": -1.33
+      "ath_pct_60d": -0.28
     },
     "Infra": {
       "symbol": "INFRABEES.NS",
-      "value": 979.69,
-      "day_change_pct": 0.8,
+      "value": 971.88,
+      "day_change_pct": 0.0,
       "trend_5d": "up",
       "trend_20d": "strong_up",
-      "ath_pct_60d": -1.18
+      "ath_pct_60d": -0.62
     }
   },
   "market_mood": "bearish",
   "trade_allowed": true,
   "warnings": [
     "VIX=17.6 at 97th percentile vs last 30d \u2014 unusually high stress",
-    "Bank Nifty move (+1.8%) outpacing Nifty \u2014 high banking sector volatility"
+    "Bank Nifty move (+1.8%) outpacing Nifty \u2014 high banking sector volatility",
+    "Nifty choppy intraday \u2014 wait for cleaner setups"
   ],
   "leading_sectors": [
     "Pharma",
@@ -73,7 +74,7 @@
   "sector_breadth": 0.75,
   "lagging_sectors": [],
   "broad_market_strength": true,
-  "intraday_regime": "mixed",
+  "intraday_regime": "choppy",
   "macro": {
     "date": "2026-11-12",
     "session": "preopen",

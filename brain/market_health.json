@@ -1,27 +1,27 @@
 {
-  "date": "2026-11-12",
-  "session": "intraday_close",
+  "date": "2026-11-13",
+  "session": "preopen",
   "nifty": {
     "symbol": "^NSEI",
-    "value": 25255.05,
-    "day_change_pct": 0.84,
+    "value": 25299.35,
+    "day_change_pct": 0.18,
     "trend_5d": "strong_up",
     "trend_20d": "strong_up",
-    "ath_pct_60d": -0.67
+    "ath_pct_60d": -0.49
   },
   "vix": {
-    "value": 17.56,
+    "value": 16.62,
     "level": "normal",
-    "percentile_30d": 97.0,
-    "avg_30d": 15.23
+    "percentile_30d": 80.0,
+    "avg_30d": 15.32
   },
   "bank_nifty": {
     "symbol": "^NSEBANK",
-    "value": 60792.4,
-    "day_change_pct": 1.76,
+    "value": 61518.5,
+    "day_change_pct": 1.19,
     "trend_5d": "strong_up",
     "trend_20d": "strong_up",
-    "ath_pct_60d": -0.98,
+    "ath_pct_60d": -0.04,
     "diverging": false
   },
   "sectors": {
@@ -36,7 +36,7 @@
     "Pharma": {
       "symbol": "PHARMABEES.NS",
       "value": 29.54,
-      "day_change_pct": -0.61,
+      "day_change_pct": 0.0,
       "trend_5d": "strong_up",
       "trend_20d": "strong_up",
       "ath_pct_60d": -3.02
@@ -61,8 +61,7 @@
   "market_mood": "bearish",
   "trade_allowed": true,
   "warnings": [
-    "VIX=17.6 at 97th percentile vs last 30d \u2014 unusually high stress",
-    "Bank Nifty move (+1.8%) outpacing Nifty \u2014 high banking sector volatility",
+    "VIX=16.6 at 80th percentile vs last 30d \u2014 unusually high stress",
     "Nifty choppy intraday \u2014 wait for cleaner setups"
   ],
   "leading_sectors": [
@@ -76,55 +75,56 @@
   "broad_market_strength": true,
   "intraday_regime": "choppy",
   "macro": {
-    "date": "2026-11-12",
-    "session": "midday",
-    "generated_at": "2026-11-12T06:15:53.695303",
-    "global_score": -0.154,
+    "date": "2026-11-13",
+    "session": "preopen",
+    "generated_at": "2026-11-13T03:05:47.273616",
+    "global_score": -0.253,
     "india_score": 0.2,
-    "overall_score": 0.005,
+    "overall_score": -0.049,
     "mood": "neutral",
     "drivers": [
-      "Nasdaq futures fall as Nvidia sinks 8% after hours on report board may oust Huang",
-      "\u2018The thought of living to 100 terrifies me\u2019: Is Social Security a giant Ponzi scheme?",
-      "Here\u2019s how Bernie Sanders wants to keep Social Security solvent \u2018for generations\u2019",
-      "Nvidia\u2019s stock drops as the board reportedly prepares to remove CEO Jensen Huang",
-      "\u2018I\u2019m sick of flying\u2019: I paid for priority boarding, but the overhead bins were full. Was I duped?",
-      "I\u2019m 63 and spending $95,000 on a roof deck for my $500,000 home. Am I being extravagant?",
-      "Your holiday credit-card bills are going up. What you can do to ease the pain.",
-      "CoreWeave just gave a shot in the arm to Micron, Lumentum and the rest of the AI trade"
+      "Who can replace Jensen Huang as Nvidia CEO? These four names are buzzing in AI circles.",
+      "Opening trading-card packs has become a $2 billion market",
+      "Bond yields just saw their biggest surge since 2022 as expectations grow for more Fed rate hikes",
+      "\u2018He calls my plans a fantasy\u2019: My husband says we can\u2019t afford our $200,000-a-year dream retirement. I think he\u2019s cheap.",
+      "Am I overpaying for health insurance? How to answer the key question this open-enrollment season.",
+      "The 10 best stocks for a year-end momentum trade",
+      "I inherited $1.4 million from my father. Am I wrong to ask my husband of 25 years for a postnuptial agreement?",
+      "The S&P 500 is shrugging off Nvidia\u2019s selloff this week. Here\u2019s what\u2019s keeping the rest of the market afloat."
     ],
     "global_cues": {
       "dow": {
-        "last": 52486.49,
-        "chg_pct": 0.49
+        "last": 52297.09,
+        "chg_pct": -0.36
       },
       "nasdaq": {
-        "last": 25466.19,
-        "chg_pct": 1.6
+        "last": 25366.09,
+        "chg_pct": -0.39
       },
       "sp500": {
-        "last": 7619.38,
-        "chg_pct": 1.31
+        "last": 7592.4,
+        "chg_pct": -0.35
       },
       "nikkei": {
-        "last": 60656.86,
-        "chg_pct": -0.97
+        "last": 61816.72,
+        "chg_pct": 1.64
       },
       "crude": {
-        "last": 86.53,
-        "chg_pct": 0.57
+        "last": 88.21,
+        "chg_pct": -0.6
       },
       "usdinr": {
-        "last": 93.69,
-        "chg_pct": -0.25
+        "last": 94.03,
+        "chg_pct": 0.35
       },
       "gold": {
-        "last": 4000.5,
-        "chg_pct": -0.74
+        "last": 3913.5,
+        "chg_pct": 0.73
       }
     },
-    "summary": "Overall macro mood is neutral (+0.01). US Dow +0.5% overnight. Crude +0.6%. USD/INR -0.2%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
+    "summary": "Overall macro mood is neutral (-0.05). US Dow -0.4% overnight. Crude -0.6%. USD/INR +0.3%. Notable: US Fed rate hike / hawkish; Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
+      "Hawkish Fed pressures Nifty via FII outflows and stronger USD.",
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
       "Trade-war headlines spook global markets; IT & export names react most."
     ],
@@ -133,20 +133,14 @@
   },
   "macro_risk_factor": 1.0,
   "fii_dii": {
-    "date": "2026-11-12",
-    "fii_net_cr": 12563.33,
-    "dii_net_cr": -8434.53,
-    "combined_net_cr": 4128.8,
+    "date": "2026-11-13",
+    "fii_net_cr": 7830.6,
+    "dii_net_cr": -6331.17,
+    "combined_net_cr": 1499.43,
     "signal": "strong_inflow",
     "ok": true,
     "error": "",
     "history": [
-      {
-        "date": "2026-10-02",
-        "fii": -9484.22,
-        "dii": 10041.84,
-        "combined": 557.62
-      },
       {
         "date": "2026-10-05",
         "fii": -9484.22,
@@ -320,19 +314,25 @@
         "fii": 12563.33,
         "dii": -8434.53,
         "combined": 4128.8
+      },
+      {
+        "date": "2026-11-13",
+        "fii": 7830.6,
+        "dii": -6331.17,
+        "combined": 1499.43
       }
     ]
   },
   "flow_tailwind": true,
   "pcr": {
-    "date": "2026-11-12",
-    "pcr": 0.769,
-    "reading": "bearish_bias",
-    "total_pe_oi": 1780572,
-    "total_ce_oi": 2315524,
-    "spot": 25255.05,
-    "max_pain": 25100.0,
-    "max_pain_dist_pct": 0.61,
+    "date": "2026-11-13",
+    "pcr": 0.849,
+    "reading": "neutral",
+    "total_pe_oi": 2339964,
+    "total_ce_oi": 2756225,
+    "spot": 25299.35,
+    "max_pain": 25200.0,
+    "max_pain_dist_pct": 0.39,
     "oi_bias": "balanced",
     "ok": true,
     "error": ""

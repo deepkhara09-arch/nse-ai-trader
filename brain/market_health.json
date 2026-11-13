@@ -1,6 +1,6 @@
 {
   "date": "2026-11-13",
-  "session": "afternoon",
+  "session": "intraday_close",
   "nifty": {
     "symbol": "^NSEI",
     "value": 25299.35,
@@ -28,8 +28,8 @@
     "IT": {
       "symbol": "ITBEES.NS",
       "value": 35.76,
-      "day_change_pct": -0.69,
-      "trend_5d": "sideways",
+      "day_change_pct": 0.0,
+      "trend_5d": "down",
       "trend_20d": "strong_up",
       "ath_pct_60d": -5.87
     },
@@ -43,19 +43,19 @@
     },
     "Bank": {
       "symbol": "BANKBEES.NS",
-      "value": 626.98,
-      "day_change_pct": 1.65,
+      "value": 636.41,
+      "day_change_pct": 1.5,
       "trend_5d": "strong_up",
       "trend_20d": "strong_up",
-      "ath_pct_60d": -1.33
+      "ath_pct_60d": -0.16
     },
     "Infra": {
       "symbol": "INFRABEES.NS",
-      "value": 979.69,
-      "day_change_pct": 0.8,
+      "value": 980.93,
+      "day_change_pct": 0.13,
       "trend_5d": "up",
       "trend_20d": "strong_up",
-      "ath_pct_60d": -1.18
+      "ath_pct_60d": -1.05
     }
   },
   "market_mood": "bearish",
@@ -71,7 +71,9 @@
   ],
   "market_regime": "normal",
   "sector_breadth": 0.75,
-  "lagging_sectors": [],
+  "lagging_sectors": [
+    "IT"
+  ],
   "broad_market_strength": true,
   "intraday_regime": "choppy",
   "macro": {

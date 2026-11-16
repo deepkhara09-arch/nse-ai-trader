@@ -1,154 +1,140 @@
 {
-  "date": "2026-11-13",
-  "session": "intraday_close",
+  "date": "2026-11-16",
+  "session": "preopen",
   "nifty": {
     "symbol": "^NSEI",
-    "value": 25299.35,
-    "day_change_pct": 0.18,
-    "trend_5d": "strong_up",
+    "value": 25144.3,
+    "day_change_pct": -0.61,
+    "trend_5d": "sideways",
     "trend_20d": "strong_up",
-    "ath_pct_60d": -0.49
+    "ath_pct_60d": -1.1
   },
   "vix": {
-    "value": 16.62,
+    "value": 15.5,
     "level": "normal",
-    "percentile_30d": 80.0,
-    "avg_30d": 15.32
+    "percentile_30d": 50.0,
+    "avg_30d": 15.5
   },
   "bank_nifty": {
     "symbol": "^NSEBANK",
-    "value": 61518.5,
-    "day_change_pct": 1.19,
+    "value": 61034.1,
+    "day_change_pct": -0.79,
     "trend_5d": "strong_up",
     "trend_20d": "strong_up",
-    "ath_pct_60d": -0.04,
+    "ath_pct_60d": -0.83,
     "diverging": false
   },
   "sectors": {
     "IT": {
       "symbol": "ITBEES.NS",
-      "value": 35.76,
-      "day_change_pct": 0.0,
-      "trend_5d": "down",
+      "value": 35.51,
+      "day_change_pct": -0.7,
+      "trend_5d": "strong_down",
       "trend_20d": "strong_up",
-      "ath_pct_60d": -5.87
+      "ath_pct_60d": -6.53
     },
     "Pharma": {
       "symbol": "PHARMABEES.NS",
-      "value": 29.54,
-      "day_change_pct": 0.0,
-      "trend_5d": "strong_up",
+      "value": 29.32,
+      "day_change_pct": -0.74,
+      "trend_5d": "up",
       "trend_20d": "strong_up",
-      "ath_pct_60d": -3.02
+      "ath_pct_60d": -3.74
     },
     "Bank": {
       "symbol": "BANKBEES.NS",
-      "value": 636.41,
-      "day_change_pct": 1.5,
+      "value": 630.73,
+      "day_change_pct": -0.89,
       "trend_5d": "strong_up",
       "trend_20d": "strong_up",
-      "ath_pct_60d": -0.16
+      "ath_pct_60d": -1.05
     },
     "Infra": {
       "symbol": "INFRABEES.NS",
-      "value": 980.93,
-      "day_change_pct": 0.13,
-      "trend_5d": "up",
+      "value": 978.47,
+      "day_change_pct": -0.25,
+      "trend_5d": "sideways",
       "trend_20d": "strong_up",
-      "ath_pct_60d": -1.05
+      "ath_pct_60d": -1.3
     }
   },
-  "market_mood": "bearish",
+  "market_mood": "neutral",
   "trade_allowed": true,
-  "warnings": [
-    "VIX=16.6 at 80th percentile vs last 30d \u2014 unusually high stress",
-    "Nifty choppy intraday \u2014 wait for cleaner setups"
-  ],
+  "warnings": [],
   "leading_sectors": [
     "Pharma",
-    "Bank",
-    "Infra"
+    "Bank"
   ],
   "market_regime": "normal",
-  "sector_breadth": 0.75,
+  "sector_breadth": 0.5,
   "lagging_sectors": [
     "IT"
   ],
-  "broad_market_strength": true,
-  "intraday_regime": "choppy",
   "macro": {
-    "date": "2026-11-13",
-    "session": "midday",
-    "generated_at": "2026-11-13T06:15:47.557766",
-    "global_score": -0.362,
-    "india_score": 0.2,
-    "overall_score": -0.109,
+    "date": "2026-11-16",
+    "session": "preopen",
+    "generated_at": "2026-11-16T03:05:39.122840",
+    "global_score": -0.057,
+    "india_score": 0.0,
+    "overall_score": -0.031,
     "mood": "neutral",
     "drivers": [
-      "\u2018The thought of living to 100 terrifies me\u2019: Is Social Security a giant Ponzi scheme?",
-      "Who can replace Jensen Huang as Nvidia CEO? These four names are buzzing in AI circles.",
-      "Opening trading-card packs has become a $2 billion market",
-      "Bond yields just saw their biggest surge since 2022 as expectations grow for more Fed rate hikes",
-      "\u2018He calls my plans a fantasy\u2019: My husband says we can\u2019t afford our $200,000-a-year dream retirement. I think he\u2019s cheap.",
-      "Am I overpaying for health insurance? How to answer the key question this open-enrollment season.",
-      "The 10 best stocks for a year-end momentum trade",
-      "I inherited $1.4 million from my father. Am I wrong to ask my husband of 25 years for a postnuptial agreement?"
+      "\u2018It leaves me with a sour taste\u2019: My elderly mother gave our cousin $800 for a car repair. Should I be worried?",
+      "Should a widow leave her late partner\u2019s home to her stepkids \u2014 or cut off contact with them?",
+      "My older brother, who has no children, cut our only sister out of his will. I\u2019ll get everything. Do I tell her?",
+      "Nvidia is gearing up for one of Wall Street\u2019s most anticipated earnings calls in years",
+      "Budget airlines are going upscale with first-class seats and faster wifi",
+      "I inherited $1.4 million from my father. Am I wrong to ask my husband of 25 years for a postnuptial agreement?",
+      "\u2018He calls my plans a fantasy\u2019: My husband says we can\u2019t afford a $200,000-a-year retirement. Is he being cheap?",
+      "\u2018We had the worst fight\u2019: I want my husband to retire at 65, but I don\u2019t want to lose his $280,000 salary. Is that unreasonable?"
     ],
     "global_cues": {
       "dow": {
-        "last": 52297.09,
-        "chg_pct": -0.36
+        "last": 52347.55,
+        "chg_pct": 0.1
       },
       "nasdaq": {
-        "last": 25366.09,
-        "chg_pct": -0.39
+        "last": 25136.27,
+        "chg_pct": -0.91
       },
       "sp500": {
-        "last": 7592.4,
-        "chg_pct": -0.35
+        "last": 7561.67,
+        "chg_pct": -0.4
       },
       "nikkei": {
-        "last": 61121.12,
-        "chg_pct": 0.5
+        "last": 60182.5,
+        "chg_pct": -1.57
       },
       "crude": {
-        "last": 88.74,
-        "chg_pct": 2.55
+        "last": 87.86,
+        "chg_pct": -0.79
       },
       "usdinr": {
-        "last": 94.25,
-        "chg_pct": 0.59
+        "last": 94.23,
+        "chg_pct": 0.21
       },
       "gold": {
-        "last": 3885.3,
-        "chg_pct": -2.88
+        "last": 3878.7,
+        "chg_pct": -0.2
       }
     },
-    "summary": "Overall macro mood is neutral (-0.11). US Dow -0.4% overnight. Crude +2.5%. USD/INR +0.6%. Notable: US Fed rate hike / hawkish; Geopolitical conflict / war; Tariffs / trade war.",
+    "summary": "Overall macro mood is neutral (-0.03). US Dow +0.1% overnight. Crude -0.8%. USD/INR +0.2%. Notable: Geopolitical conflict / war.",
     "playbook": [
-      "Hawkish Fed pressures Nifty via FII outflows and stronger USD.",
-      "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
-      "Trade-war headlines spook global markets; IT & export names react most."
+      "Geopolitical shocks trigger global risk-off; gold up, equities down initially."
     ],
     "playbook_bias": "risk_off",
     "article_count": 60
   },
   "macro_risk_factor": 1.0,
   "fii_dii": {
-    "date": "2026-11-13",
-    "fii_net_cr": 7830.6,
-    "dii_net_cr": -6331.17,
-    "combined_net_cr": 1499.43,
+    "date": "2026-11-16",
+    "fii_net_cr": 5736.55,
+    "dii_net_cr": -2253.58,
+    "combined_net_cr": 3482.97,
     "signal": "strong_inflow",
     "ok": true,
     "error": "",
     "history": [
-      {
-        "date": "2026-10-05",
-        "fii": -9484.22,
-        "dii": 10041.84,
-        "combined": 557.62
-      },
       {
         "date": "2026-10-06",
         "fii": -4699.14,
@@ -322,19 +308,25 @@
         "fii": 7830.6,
         "dii": -6331.17,
         "combined": 1499.43
+      },
+      {
+        "date": "2026-11-16",
+        "fii": 5736.55,
+        "dii": -2253.58,
+        "combined": 3482.97
       }
     ]
   },
   "flow_tailwind": true,
   "pcr": {
-    "date": "2026-11-13",
-    "pcr": 0.849,
+    "date": "2026-11-16",
+    "pcr": 0.834,
     "reading": "neutral",
-    "total_pe_oi": 2339964,
-    "total_ce_oi": 2756225,
-    "spot": 25299.35,
-    "max_pain": 25200.0,
-    "max_pain_dist_pct": 0.39,
+    "total_pe_oi": 2550682,
+    "total_ce_oi": 3059475,
+    "spot": 25144.3,
+    "max_pain": 25100.0,
+    "max_pain_dist_pct": 0.18,
     "oi_bias": "balanced",
     "ok": true,
     "error": ""

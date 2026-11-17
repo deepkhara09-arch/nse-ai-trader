@@ -1,6 +1,6 @@
 {
   "date": "2026-11-17",
-  "session": "morning",
+  "session": "midday",
   "nifty": {
     "symbol": "^NSEI",
     "value": 25291.1,
@@ -75,11 +75,11 @@
   "intraday_regime": "mixed",
   "macro": {
     "date": "2026-11-17",
-    "session": "preopen",
-    "generated_at": "2026-11-17T03:11:06.218471",
-    "global_score": -0.22,
+    "session": "midday",
+    "generated_at": "2026-11-17T06:15:46.282727",
+    "global_score": -0.155,
     "india_score": 0.0,
-    "overall_score": -0.121,
+    "overall_score": -0.085,
     "mood": "neutral",
     "drivers": [
       "I\u2019m in my 40s. Should I accept a lower pension in exchange for naming my husband or child as a beneficiary?",
@@ -105,23 +105,23 @@
         "chg_pct": -1.92
       },
       "nikkei": {
-        "last": 58956.67,
-        "chg_pct": -1.18
+        "last": 59060.98,
+        "chg_pct": -1.01
       },
       "crude": {
-        "last": 85.1,
-        "chg_pct": -0.72
+        "last": 85.72,
+        "chg_pct": -3.21
       },
       "usdinr": {
-        "last": 93.91,
-        "chg_pct": -0.35
+        "last": 93.56,
+        "chg_pct": -0.72
       },
       "gold": {
-        "last": 3872.6,
-        "chg_pct": 0.51
+        "last": 3853.0,
+        "chg_pct": -0.86
       }
     },
-    "summary": "Overall macro mood is neutral (-0.12). US Dow -1.4% overnight. Crude -0.7%. USD/INR -0.3%. Notable: Geopolitical conflict / war.",
+    "summary": "Overall macro mood is neutral (-0.09). US Dow -1.4% overnight. Crude -3.2%. USD/INR -0.7%. Notable: Geopolitical conflict / war.",
     "playbook": [
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially."
     ],

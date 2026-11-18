@@ -1,6 +1,6 @@
 {
   "date": "2026-11-18",
-  "session": "preopen",
+  "session": "morning",
   "nifty": {
     "symbol": "^NSEI",
     "value": 25387.4,
@@ -60,9 +60,7 @@
   },
   "market_mood": "neutral",
   "trade_allowed": true,
-  "warnings": [
-    "Nifty choppy intraday \u2014 wait for cleaner setups"
-  ],
+  "warnings": [],
   "leading_sectors": [
     "Bank",
     "Infra"
@@ -73,7 +71,7 @@
     "IT",
     "Pharma"
   ],
-  "intraday_regime": "choppy",
+  "intraday_regime": "mixed",
   "macro": {
     "date": "2026-11-18",
     "session": "preopen",

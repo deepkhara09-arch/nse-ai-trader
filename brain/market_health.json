@@ -1,6 +1,6 @@
 {
   "date": "2026-11-18",
-  "session": "morning",
+  "session": "midday",
   "nifty": {
     "symbol": "^NSEI",
     "value": 25387.4,
@@ -74,11 +74,11 @@
   "intraday_regime": "mixed",
   "macro": {
     "date": "2026-11-18",
-    "session": "preopen",
-    "generated_at": "2026-11-18T03:05:44.190069",
-    "global_score": -0.197,
+    "session": "midday",
+    "generated_at": "2026-11-18T06:21:13.453253",
+    "global_score": -0.227,
     "india_score": 0.0,
-    "overall_score": -0.108,
+    "overall_score": -0.125,
     "mood": "neutral",
     "drivers": [
       "CoreWeave\u2019s stock pops \u2014 even as Nvidia talks up a \u2018disciplined\u2019 approach to financing",
@@ -104,23 +104,23 @@
         "chg_pct": -1.03
       },
       "nikkei": {
-        "last": 58696.54,
-        "chg_pct": -0.28
+        "last": 59072.89,
+        "chg_pct": 0.36
       },
       "crude": {
-        "last": 85.03,
-        "chg_pct": -1.14
+        "last": 86.01,
+        "chg_pct": 0.34
       },
       "usdinr": {
-        "last": 93.46,
-        "chg_pct": -0.54
+        "last": 93.4,
+        "chg_pct": -0.6
       },
       "gold": {
-        "last": 3799.8,
-        "chg_pct": -1.67
+        "last": 3864.2,
+        "chg_pct": 0.29
       }
     },
-    "summary": "Overall macro mood is neutral (-0.11). US Dow -1.6% overnight. Crude -1.1%. USD/INR -0.5%. Notable: US Fed rate hike / hawkish; Geopolitical conflict / war.",
+    "summary": "Overall macro mood is neutral (-0.12). US Dow -1.6% overnight. Crude +0.3%. USD/INR -0.6%. Notable: US Fed rate hike / hawkish; Geopolitical conflict / war.",
     "playbook": [
       "Hawkish Fed pressures Nifty via FII outflows and stronger USD.",
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially."

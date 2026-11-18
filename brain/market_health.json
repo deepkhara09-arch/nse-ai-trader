@@ -1,27 +1,27 @@
 {
-  "date": "2026-11-17",
-  "session": "intraday_close",
+  "date": "2026-11-18",
+  "session": "preopen",
   "nifty": {
     "symbol": "^NSEI",
-    "value": 25291.1,
-    "day_change_pct": 0.58,
-    "trend_5d": "up",
+    "value": 25387.4,
+    "day_change_pct": 0.38,
+    "trend_5d": "sideways",
     "trend_20d": "strong_up",
-    "ath_pct_60d": -0.52
+    "ath_pct_60d": -0.45
   },
   "vix": {
-    "value": 15.68,
+    "value": 15.52,
     "level": "normal",
-    "percentile_30d": 59.0,
+    "percentile_30d": 53.0,
     "avg_30d": 15.5
   },
   "bank_nifty": {
     "symbol": "^NSEBANK",
-    "value": 61575.9,
-    "day_change_pct": 0.89,
-    "trend_5d": "strong_up",
+    "value": 62273.25,
+    "day_change_pct": 1.13,
+    "trend_5d": "up",
     "trend_20d": "strong_up",
-    "ath_pct_60d": -0.22,
+    "ath_pct_60d": -0.27,
     "diverging": false
   },
   "sectors": {
@@ -35,11 +35,11 @@
     },
     "Pharma": {
       "symbol": "PHARMABEES.NS",
-      "value": 28.83,
-      "day_change_pct": -1.67,
+      "value": 28.9,
+      "day_change_pct": 0.24,
       "trend_5d": "down",
       "trend_20d": "strong_up",
-      "ath_pct_60d": -5.35
+      "ath_pct_60d": -5.12
     },
     "Bank": {
       "symbol": "BANKBEES.NS",
@@ -75,55 +75,56 @@
   ],
   "intraday_regime": "choppy",
   "macro": {
-    "date": "2026-11-17",
-    "session": "midday",
-    "generated_at": "2026-11-17T06:15:46.282727",
-    "global_score": -0.155,
+    "date": "2026-11-18",
+    "session": "preopen",
+    "generated_at": "2026-11-18T03:05:44.190069",
+    "global_score": -0.197,
     "india_score": 0.0,
-    "overall_score": -0.085,
+    "overall_score": -0.108,
     "mood": "neutral",
     "drivers": [
-      "I\u2019m in my 40s. Should I accept a lower pension in exchange for naming my husband or child as a beneficiary?",
-      "United Airlines resolves system outage that delayed flights Monday",
-      "Stanley Druckenmiller dumped these chip stocks while buying into SpaceX and Palantir",
-      "Do Amazon\u2019s Black Friday deals really save you money? A new report casts doubt.",
+      "CoreWeave\u2019s stock pops \u2014 even as Nvidia talks up a \u2018disciplined\u2019 approach to financing",
+      "Medicare Part B premiums rise due higher healthcare spending",
+      "Nvidia\u2019s stock rises as blowout numbers help ease CEO transition fears",
       "My husband is happily retired at 64 and thinks I should keep working. Is he being fair?",
-      "U.S. dollar\u2019s AI-driven breakout could become a stock-market wrecking ball",
-      "Berkshire upped its bet on a beleaguered U.S. housing market, while souring on these bank stocks",
-      "\u2018He calls my plans a fantasy\u2019: My husband says we can\u2019t afford a $200,000-a-year retirement. Is he being cheap?"
+      "I\u2019m in my 40s. Should I accept a lower pension in exchange for naming my husband or child as a beneficiary?",
+      "Costco is benefiting from \u2018apocalyptic concerns\u2019 as customers stock up on goods, analysts say",
+      "\u2018It\u2019s downright dirty\u2019: My brother took over our ailing mother\u2019s life and finances. What can I do?",
+      "\u2018Nvidia\u2019s turmoil has me spooked\u2019: Has the time come to sell my stocks?"
     ],
     "global_cues": {
       "dow": {
-        "last": 51608.17,
-        "chg_pct": -1.41
+        "last": 50759.42,
+        "chg_pct": -1.64
       },
       "nasdaq": {
-        "last": 24509.76,
-        "chg_pct": -2.49
+        "last": 24328.38,
+        "chg_pct": -0.74
       },
       "sp500": {
-        "last": 7416.59,
-        "chg_pct": -1.92
+        "last": 7340.53,
+        "chg_pct": -1.03
       },
       "nikkei": {
-        "last": 59060.98,
-        "chg_pct": -1.01
+        "last": 58696.54,
+        "chg_pct": -0.28
       },
       "crude": {
-        "last": 85.72,
-        "chg_pct": -3.21
+        "last": 85.03,
+        "chg_pct": -1.14
       },
       "usdinr": {
-        "last": 93.56,
-        "chg_pct": -0.72
+        "last": 93.46,
+        "chg_pct": -0.54
       },
       "gold": {
-        "last": 3853.0,
-        "chg_pct": -0.86
+        "last": 3799.8,
+        "chg_pct": -1.67
       }
     },
-    "summary": "Overall macro mood is neutral (-0.09). US Dow -1.4% overnight. Crude -3.2%. USD/INR -0.7%. Notable: Geopolitical conflict / war.",
+    "summary": "Overall macro mood is neutral (-0.11). US Dow -1.6% overnight. Crude -1.1%. USD/INR -0.5%. Notable: US Fed rate hike / hawkish; Geopolitical conflict / war.",
     "playbook": [
+      "Hawkish Fed pressures Nifty via FII outflows and stronger USD.",
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially."
     ],
     "playbook_bias": "risk_off",
@@ -131,20 +132,14 @@
   },
   "macro_risk_factor": 1.0,
   "fii_dii": {
-    "date": "2026-11-17",
-    "fii_net_cr": 4864.68,
-    "dii_net_cr": -3519.05,
-    "combined_net_cr": 1345.63,
+    "date": "2026-11-18",
+    "fii_net_cr": 4195.38,
+    "dii_net_cr": 196.93,
+    "combined_net_cr": 4392.31,
     "signal": "strong_inflow",
     "ok": true,
     "error": "",
     "history": [
-      {
-        "date": "2026-10-07",
-        "fii": -2961.3,
-        "dii": 5088.92,
-        "combined": 2127.62
-      },
       {
         "date": "2026-10-08",
         "fii": -6121.37,
@@ -318,19 +313,25 @@
         "fii": 4864.68,
         "dii": -3519.05,
         "combined": 1345.63
+      },
+      {
+        "date": "2026-11-18",
+        "fii": 4195.38,
+        "dii": 196.93,
+        "combined": 4392.31
       }
     ]
   },
   "flow_tailwind": true,
   "pcr": {
-    "date": "2026-11-17",
-    "pcr": 0.944,
+    "date": "2026-11-18",
+    "pcr": 1.003,
     "reading": "neutral",
-    "total_pe_oi": 2791795,
-    "total_ce_oi": 2957484,
-    "spot": 25291.1,
-    "max_pain": 25200.0,
-    "max_pain_dist_pct": 0.36,
+    "total_pe_oi": 2802829,
+    "total_ce_oi": 2794030,
+    "spot": 25387.4,
+    "max_pain": 25400.0,
+    "max_pain_dist_pct": -0.05,
     "oi_bias": "balanced",
     "ok": true,
     "error": ""

@@ -1,27 +1,27 @@
 {
-  "date": "2026-11-18",
-  "session": "intraday_close",
+  "date": "2026-11-19",
+  "session": "preopen",
   "nifty": {
     "symbol": "^NSEI",
-    "value": 25387.4,
-    "day_change_pct": 0.38,
+    "value": 25227.95,
+    "day_change_pct": -0.63,
     "trend_5d": "sideways",
     "trend_20d": "strong_up",
-    "ath_pct_60d": -0.45
+    "ath_pct_60d": -1.07
   },
   "vix": {
-    "value": 15.52,
+    "value": 15.57,
     "level": "normal",
     "percentile_30d": 53.0,
-    "avg_30d": 15.5
+    "avg_30d": 15.53
   },
   "bank_nifty": {
     "symbol": "^NSEBANK",
-    "value": 62273.25,
-    "day_change_pct": 1.13,
+    "value": 62038.65,
+    "day_change_pct": -0.38,
     "trend_5d": "up",
     "trend_20d": "strong_up",
-    "ath_pct_60d": -0.27,
+    "ath_pct_60d": -0.65,
     "diverging": false
   },
   "sectors": {
@@ -35,11 +35,11 @@
     },
     "Pharma": {
       "symbol": "PHARMABEES.NS",
-      "value": 28.9,
-      "day_change_pct": 0.24,
+      "value": 29.12,
+      "day_change_pct": 0.76,
       "trend_5d": "down",
       "trend_20d": "strong_up",
-      "ath_pct_60d": -5.12
+      "ath_pct_60d": -4.4
     },
     "Bank": {
       "symbol": "BANKBEES.NS",
@@ -73,54 +73,54 @@
   ],
   "intraday_regime": "mixed",
   "macro": {
-    "date": "2026-11-18",
-    "session": "midday",
-    "generated_at": "2026-11-18T06:21:13.453253",
-    "global_score": -0.227,
-    "india_score": 0.0,
-    "overall_score": -0.125,
+    "date": "2026-11-19",
+    "session": "preopen",
+    "generated_at": "2026-11-19T03:05:43.043665",
+    "global_score": 0.105,
+    "india_score": -0.2,
+    "overall_score": -0.032,
     "mood": "neutral",
     "drivers": [
-      "CoreWeave\u2019s stock pops \u2014 even as Nvidia talks up a \u2018disciplined\u2019 approach to financing",
-      "Medicare Part B premiums rise due higher healthcare spending",
-      "Nvidia\u2019s stock rises as blowout numbers help ease CEO transition fears",
-      "My husband is happily retired at 64 and thinks I should keep working. Is he being fair?",
-      "I\u2019m in my 40s. Should I accept a lower pension in exchange for naming my husband or child as a beneficiary?",
-      "Costco is benefiting from \u2018apocalyptic concerns\u2019 as customers stock up on goods, analysts say",
-      "\u2018It\u2019s downright dirty\u2019: My brother took over our ailing mother\u2019s life and finances. What can I do?",
-      "\u2018Nvidia\u2019s turmoil has me spooked\u2019: Has the time come to sell my stocks?"
+      "Palo Alto Networks\u2019 stock gets a fresh AI-fueled boost from earnings",
+      "\u2018I\u2019ve been a stay-at-home mom\u2019: I\u2019m 50 and have a chronic illness. My husband lost his job. Should he raid his 401(k)?",
+      "\u2018Nvidia\u2019s turmoil has me spooked\u2019: Should I sell my stocks and buy real estate \u2014 or ride out the storm?",
+      "What the \u2018death cross\u2019 in small-cap stocks means for the rest of the market",
+      "How copper\u2019s plunge could hurt the AI buildout",
+      "The stock market is being rocked by the biggest shake-up in a generation as tech falls behind",
+      "Nvidia\u2019s booming demand is \u2018hard to ignore,\u2019 but these four questions loom over the stock",
+      "Is Social Security a Ponzi scheme? No, but fear is fueling such talk."
     ],
     "global_cues": {
       "dow": {
-        "last": 50759.42,
-        "chg_pct": -1.64
+        "last": 50198.17,
+        "chg_pct": -1.11
       },
       "nasdaq": {
-        "last": 24328.38,
-        "chg_pct": -0.74
+        "last": 24429.88,
+        "chg_pct": 0.42
       },
       "sp500": {
-        "last": 7340.53,
-        "chg_pct": -1.03
+        "last": 7323.63,
+        "chg_pct": -0.23
       },
       "nikkei": {
-        "last": 59072.89,
-        "chg_pct": 0.36
+        "last": 59140.87,
+        "chg_pct": 0.2
       },
       "crude": {
-        "last": 86.01,
-        "chg_pct": 0.34
+        "last": 82.18,
+        "chg_pct": -1.3
       },
       "usdinr": {
-        "last": 93.4,
-        "chg_pct": -0.6
+        "last": 93.44,
+        "chg_pct": -0.04
       },
       "gold": {
-        "last": 3864.2,
-        "chg_pct": 0.29
+        "last": 3722.2,
+        "chg_pct": -0.53
       }
     },
-    "summary": "Overall macro mood is neutral (-0.12). US Dow -1.6% overnight. Crude +0.3%. USD/INR -0.6%. Notable: US Fed rate hike / hawkish; Geopolitical conflict / war.",
+    "summary": "Overall macro mood is neutral (-0.03). US Dow -1.1% overnight. Crude -1.3%. USD/INR -0.0%. Notable: US Fed rate hike / hawkish; Geopolitical conflict / war.",
     "playbook": [
       "Hawkish Fed pressures Nifty via FII outflows and stronger USD.",
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially."
@@ -130,20 +130,14 @@
   },
   "macro_risk_factor": 1.0,
   "fii_dii": {
-    "date": "2026-11-18",
-    "fii_net_cr": 4195.38,
-    "dii_net_cr": 196.93,
-    "combined_net_cr": 4392.31,
+    "date": "2026-11-19",
+    "fii_net_cr": 5866.78,
+    "dii_net_cr": -3159.9,
+    "combined_net_cr": 2706.88,
     "signal": "strong_inflow",
     "ok": true,
     "error": "",
     "history": [
-      {
-        "date": "2026-10-08",
-        "fii": -6121.37,
-        "dii": 4596.57,
-        "combined": -1524.8
-      },
       {
         "date": "2026-10-09",
         "fii": -12943.58,
@@ -317,19 +311,25 @@
         "fii": 4195.38,
         "dii": 196.93,
         "combined": 4392.31
+      },
+      {
+        "date": "2026-11-19",
+        "fii": 5866.78,
+        "dii": -3159.9,
+        "combined": 2706.88
       }
     ]
   },
   "flow_tailwind": true,
   "pcr": {
-    "date": "2026-11-18",
-    "pcr": 1.003,
+    "date": "2026-11-19",
+    "pcr": 0.855,
     "reading": "neutral",
-    "total_pe_oi": 2802829,
-    "total_ce_oi": 2794030,
-    "spot": 25387.4,
-    "max_pain": 25400.0,
-    "max_pain_dist_pct": -0.05,
+    "total_pe_oi": 2423098,
+    "total_ce_oi": 2835070,
+    "spot": 25227.95,
+    "max_pain": 25050.0,
+    "max_pain_dist_pct": 0.71,
     "oi_bias": "balanced",
     "ok": true,
     "error": ""

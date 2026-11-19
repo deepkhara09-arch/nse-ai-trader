@@ -1,6 +1,6 @@
 {
   "date": "2026-11-19",
-  "session": "afternoon",
+  "session": "intraday_close",
   "nifty": {
     "symbol": "^NSEI",
     "value": 25227.95,
@@ -27,11 +27,11 @@
   "sectors": {
     "IT": {
       "symbol": "ITBEES.NS",
-      "value": 35.21,
-      "day_change_pct": -0.68,
+      "value": 34.82,
+      "day_change_pct": -1.11,
       "trend_5d": "down",
-      "trend_20d": "up",
-      "ath_pct_60d": -7.32
+      "trend_20d": "strong_down",
+      "ath_pct_60d": -8.34
     },
     "Pharma": {
       "symbol": "PHARMABEES.NS",
@@ -43,30 +43,27 @@
     },
     "Bank": {
       "symbol": "BANKBEES.NS",
-      "value": 646.22,
-      "day_change_pct": 1.46,
-      "trend_5d": "strong_up",
+      "value": 640.82,
+      "day_change_pct": -0.84,
+      "trend_5d": "sideways",
       "trend_20d": "strong_up",
-      "ath_pct_60d": -0.15
+      "ath_pct_60d": -0.99
     },
     "Infra": {
       "symbol": "INFRABEES.NS",
-      "value": 987.62,
-      "day_change_pct": 0.11,
-      "trend_5d": "up",
+      "value": 982.99,
+      "day_change_pct": -0.47,
+      "trend_5d": "sideways",
       "trend_20d": "strong_up",
-      "ath_pct_60d": -0.45
+      "ath_pct_60d": -0.96
     }
   },
   "market_mood": "bullish",
   "trade_allowed": true,
   "warnings": [],
-  "leading_sectors": [
-    "Bank",
-    "Infra"
-  ],
+  "leading_sectors": [],
   "market_regime": "normal",
-  "sector_breadth": 0.5,
+  "sector_breadth": 0.0,
   "lagging_sectors": [
     "IT",
     "Pharma"

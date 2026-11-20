@@ -1,6 +1,6 @@
 {
-  "date": "2026-11-20",
-  "session": "intraday_close",
+  "date": "2026-11-21",
+  "session": "preclose",
   "nifty": {
     "symbol": "^NSEI",
     "value": 25514.3,
@@ -36,8 +36,8 @@
     "Pharma": {
       "symbol": "PHARMABEES.NS",
       "value": 29.08,
-      "day_change_pct": -0.14,
-      "trend_5d": "down",
+      "day_change_pct": 0.0,
+      "trend_5d": "up",
       "trend_20d": "strong_up",
       "ath_pct_60d": -4.53
     },
@@ -64,15 +64,16 @@
     "Global macro risk-off (-0.40) \u2014 Overall macro mood is risk-off (-0.40). US Dow -2.2% overnight. Crude -0.1%. USD/INR -0.5%. Notable: Geopolitical confli"
   ],
   "leading_sectors": [
+    "Pharma",
     "Bank",
     "Infra"
   ],
   "market_regime": "normal",
-  "sector_breadth": 0.5,
+  "sector_breadth": 0.75,
   "lagging_sectors": [
-    "IT",
-    "Pharma"
+    "IT"
   ],
+  "broad_market_strength": true,
   "intraday_regime": "mixed",
   "macro": {
     "date": "2026-11-20",
@@ -132,20 +133,14 @@
   },
   "macro_risk_factor": 0.7,
   "fii_dii": {
-    "date": "2026-11-20",
-    "fii_net_cr": 7411.41,
-    "dii_net_cr": -1356.57,
-    "combined_net_cr": 6054.84,
+    "date": "2026-11-21",
+    "fii_net_cr": 10308.42,
+    "dii_net_cr": -4859.8,
+    "combined_net_cr": 5448.62,
     "signal": "strong_inflow",
     "ok": true,
     "error": "",
     "history": [
-      {
-        "date": "2026-10-12",
-        "fii": -3568.9,
-        "dii": 4743.26,
-        "combined": 1174.36
-      },
       {
         "date": "2026-10-13",
         "fii": -1708.48,
@@ -319,22 +314,30 @@
         "fii": 7411.41,
         "dii": -1356.57,
         "combined": 6054.84
+      },
+      {
+        "date": "2026-11-21",
+        "fii": 10308.42,
+        "dii": -4859.8,
+        "combined": 5448.62
       }
     ]
   },
   "flow_tailwind": true,
   "pcr": {
-    "date": "2026-11-20",
-    "pcr": 1.473,
-    "reading": "bullish_bias",
-    "total_pe_oi": 3576062,
-    "total_ce_oi": 2427458,
-    "spot": 25514.3,
-    "max_pain": 25300.0,
-    "max_pain_dist_pct": 0.84,
+    "date": "2026-11-21",
+    "pcr": 1.673,
+    "reading": "very_high_contrarian_bullish",
+    "total_pe_oi": 3884403,
+    "total_ce_oi": 2321518,
+    "spot": 25800.6,
+    "max_pain": 25500.0,
+    "max_pain_dist_pct": 1.17,
     "oi_bias": "put_heavy_support",
     "ok": true,
     "error": ""
   },
+  "pcr_note": "PCR very high \u2014 excessive put hedging, often a contrarian bullish sign",
+  "max_pain_note": "Spot 1.2% above max-pain (25500.0) \u2014 option writers pull toward it into expiry",
   "oi_note": "Heavy put OI below spot \u2014 option writers see a floor (bullish lean)"
 }

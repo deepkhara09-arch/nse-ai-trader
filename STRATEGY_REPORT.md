@@ -1,5 +1,5 @@
 # NSE AI Trader — Strategy Report
-> Updated: 2026-11-10 &nbsp;|&nbsp; Day 66 &nbsp;|&nbsp; Phase: paper_trading
+> Updated: 2026-11-21 &nbsp;|&nbsp; Day 66 &nbsp;|&nbsp; Phase: paper_trading
 
 ---
 
@@ -7,12 +7,12 @@
 
 | Metric | Value |
 |--------|-------|
-| Trades | 8 (6 wins / 2 losses) |
-| Win Rate | 75.0% |
-| Total P&L | ₹+110 |
-| Avg Win | ₹+136 |
+| Trades | 11 (9 wins / 2 losses) |
+| Win Rate | 81.8% |
+| Total P&L | ₹+684 |
+| Avg Win | ₹+154 |
 | Avg Loss | ₹-352 |
-| Expectancy / trade | ₹+14 |
+| Expectancy / trade | ₹+62 |
 
 ---
 

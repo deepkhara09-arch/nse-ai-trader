@@ -1,6 +1,6 @@
 {
   "date": "2026-11-20",
-  "session": "afternoon",
+  "session": "intraday_close",
   "nifty": {
     "symbol": "^NSEI",
     "value": 25514.3,
@@ -27,11 +27,11 @@
   "sectors": {
     "IT": {
       "symbol": "ITBEES.NS",
-      "value": 34.82,
-      "day_change_pct": -1.11,
-      "trend_5d": "down",
+      "value": 34.37,
+      "day_change_pct": -1.29,
+      "trend_5d": "strong_down",
       "trend_20d": "strong_down",
-      "ath_pct_60d": -8.34
+      "ath_pct_60d": -9.53
     },
     "Pharma": {
       "symbol": "PHARMABEES.NS",
@@ -43,30 +43,32 @@
     },
     "Bank": {
       "symbol": "BANKBEES.NS",
-      "value": 640.82,
-      "day_change_pct": -0.84,
-      "trend_5d": "sideways",
+      "value": 652.7,
+      "day_change_pct": 1.85,
+      "trend_5d": "strong_up",
       "trend_20d": "strong_up",
-      "ath_pct_60d": -0.99
+      "ath_pct_60d": -0.15
     },
     "Infra": {
       "symbol": "INFRABEES.NS",
-      "value": 982.99,
-      "day_change_pct": -0.47,
-      "trend_5d": "sideways",
+      "value": 992.26,
+      "day_change_pct": 0.94,
+      "trend_5d": "up",
       "trend_20d": "strong_up",
-      "ath_pct_60d": -0.96
+      "ath_pct_60d": -0.33
     }
   },
   "market_mood": "bearish",
   "trade_allowed": true,
   "warnings": [
-    "Narrow rally \u2014 only 0/4 sectors up. Fragile move.",
     "Global macro risk-off (-0.40) \u2014 Overall macro mood is risk-off (-0.40). US Dow -2.2% overnight. Crude -0.1%. USD/INR -0.5%. Notable: Geopolitical confli"
   ],
-  "leading_sectors": [],
+  "leading_sectors": [
+    "Bank",
+    "Infra"
+  ],
   "market_regime": "normal",
-  "sector_breadth": 0.0,
+  "sector_breadth": 0.5,
   "lagging_sectors": [
     "IT",
     "Pharma"

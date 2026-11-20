@@ -1,6 +1,6 @@
 {
   "date": "2026-11-20",
-  "session": "preopen",
+  "session": "morning",
   "nifty": {
     "symbol": "^NSEI",
     "value": 25514.3,
@@ -58,10 +58,11 @@
       "ath_pct_60d": -0.96
     }
   },
-  "market_mood": "neutral",
+  "market_mood": "bearish",
   "trade_allowed": true,
   "warnings": [
-    "Narrow rally \u2014 only 0/4 sectors up. Fragile move."
+    "Narrow rally \u2014 only 0/4 sectors up. Fragile move.",
+    "Nifty choppy intraday \u2014 wait for cleaner setups"
   ],
   "leading_sectors": [],
   "market_regime": "normal",
@@ -70,7 +71,7 @@
     "IT",
     "Pharma"
   ],
-  "intraday_regime": "mixed",
+  "intraday_regime": "choppy",
   "macro": {
     "date": "2026-11-20",
     "session": "preopen",

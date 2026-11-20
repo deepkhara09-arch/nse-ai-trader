@@ -1,13 +1,13 @@
 {
-  "date": "2026-11-19",
-  "session": "intraday_close",
+  "date": "2026-11-20",
+  "session": "preopen",
   "nifty": {
     "symbol": "^NSEI",
-    "value": 25227.95,
-    "day_change_pct": -0.63,
-    "trend_5d": "sideways",
+    "value": 25514.3,
+    "day_change_pct": 1.14,
+    "trend_5d": "up",
     "trend_20d": "strong_up",
-    "ath_pct_60d": -1.07
+    "ath_pct_60d": 0.0
   },
   "vix": {
     "value": 15.57,
@@ -17,11 +17,11 @@
   },
   "bank_nifty": {
     "symbol": "^NSEBANK",
-    "value": 62038.65,
-    "day_change_pct": -0.38,
-    "trend_5d": "up",
+    "value": 63063.0,
+    "day_change_pct": 1.65,
+    "trend_5d": "strong_up",
     "trend_20d": "strong_up",
-    "ath_pct_60d": -0.65,
+    "ath_pct_60d": 0.0,
     "diverging": false
   },
   "sectors": {
@@ -35,11 +35,11 @@
     },
     "Pharma": {
       "symbol": "PHARMABEES.NS",
-      "value": 29.12,
-      "day_change_pct": 0.76,
+      "value": 29.08,
+      "day_change_pct": -0.14,
       "trend_5d": "down",
       "trend_20d": "strong_up",
-      "ath_pct_60d": -4.4
+      "ath_pct_60d": -4.53
     },
     "Bank": {
       "symbol": "BANKBEES.NS",
@@ -58,9 +58,11 @@
       "ath_pct_60d": -0.96
     }
   },
-  "market_mood": "bullish",
+  "market_mood": "neutral",
   "trade_allowed": true,
-  "warnings": [],
+  "warnings": [
+    "Narrow rally \u2014 only 0/4 sectors up. Fragile move."
+  ],
   "leading_sectors": [],
   "market_regime": "normal",
   "sector_breadth": 0.0,
@@ -68,79 +70,73 @@
     "IT",
     "Pharma"
   ],
-  "intraday_regime": "trending_up",
+  "intraday_regime": "mixed",
   "macro": {
-    "date": "2026-11-19",
-    "session": "midday",
-    "generated_at": "2026-11-19T06:15:54.124277",
-    "global_score": 0.127,
+    "date": "2026-11-20",
+    "session": "preopen",
+    "generated_at": "2026-11-20T03:05:45.717065",
+    "global_score": -0.167,
     "india_score": -0.2,
-    "overall_score": -0.02,
+    "overall_score": -0.182,
     "mood": "neutral",
     "drivers": [
-      "My husband is happily retired at 64 and thinks I should keep working. Is he being fair?",
-      "\u2018It\u2019s downright dirty\u2019: My brother took over our ailing mother\u2019s life and finances. What can I do?",
-      "\u2018I\u2019ve been a stay-at-home mom\u2019: I\u2019m 50 and have a chronic illness. My husband lost his job. Should he raid his 401(k)?",
-      "Palo Alto Networks\u2019 stock gets a fresh AI-fueled boost from earnings",
-      "\u2018Nvidia\u2019s turmoil has me spooked\u2019: Should I sell my stocks and buy real estate \u2014 or ride out the storm?",
-      "What the \u2018death cross\u2019 in small-cap stocks means for the rest of the market",
-      "How copper\u2019s plunge could hurt the AI buildout",
-      "The stock market is being rocked by the biggest shake-up in a generation as tech falls behind"
+      "I\u2019m terrified of a market crash. Should I put $400,000 of my $1 million retirement savings into an annuity?",
+      "My wife is bankrolling her family\u2019s trips to New York and it\u2019s draining our savings. Should I ask her to stop?",
+      "After Anthropic\u2019s \u2018bittersweet\u2019 IPO, here\u2019s what lies ahead",
+      "These were the only stocks that rose amid the stock market\u2019s wipeout Thursday",
+      "Intuit\u2019s downbeat outlook deepens Wall Street\u2019s anxiety about software companies",
+      "A CoreWeave co-founder just made an unconventional $30 million wager on its battered bonds",
+      "Anthropic\u2019s stock surges in its debut \u2014 and the rest of the market dives anyway",
+      "Markets are sending troubling signals about the state of the economy"
     ],
     "global_cues": {
       "dow": {
-        "last": 50198.17,
-        "chg_pct": -1.11
+        "last": 49097.06,
+        "chg_pct": -2.19
       },
       "nasdaq": {
-        "last": 24429.88,
-        "chg_pct": 0.42
+        "last": 23879.2,
+        "chg_pct": -2.25
       },
       "sp500": {
-        "last": 7323.63,
-        "chg_pct": -0.23
+        "last": 7175.83,
+        "chg_pct": -2.02
       },
       "nikkei": {
-        "last": 59410.6,
-        "chg_pct": 0.65
+        "last": 56775.04,
+        "chg_pct": -4.49
       },
       "crude": {
-        "last": 83.26,
-        "chg_pct": -3.2
+        "last": 83.1,
+        "chg_pct": -0.13
       },
       "usdinr": {
-        "last": 93.33,
-        "chg_pct": -0.15
+        "last": 93.28,
+        "chg_pct": -0.2
       },
       "gold": {
-        "last": 3741.9,
-        "chg_pct": -3.16
+        "last": 3551.2,
+        "chg_pct": -3.64
       }
     },
-    "summary": "Overall macro mood is neutral (-0.02). US Dow -1.1% overnight. Crude -3.2%. USD/INR -0.1%. Notable: US Fed rate hike / hawkish; Geopolitical conflict / war.",
+    "summary": "Overall macro mood is neutral (-0.18). US Dow -2.2% overnight. Crude -0.1%. USD/INR -0.2%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
-      "Hawkish Fed pressures Nifty via FII outflows and stronger USD.",
-      "Geopolitical shocks trigger global risk-off; gold up, equities down initially."
+      "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
+      "Trade-war headlines spook global markets; IT & export names react most."
     ],
     "playbook_bias": "risk_off",
     "article_count": 60
   },
   "macro_risk_factor": 1.0,
   "fii_dii": {
-    "date": "2026-11-19",
-    "fii_net_cr": 5866.78,
-    "dii_net_cr": -3159.9,
-    "combined_net_cr": 2706.88,
+    "date": "2026-11-20",
+    "fii_net_cr": 7411.41,
+    "dii_net_cr": -1356.57,
+    "combined_net_cr": 6054.84,
     "signal": "strong_inflow",
     "ok": true,
     "error": "",
     "history": [
-      {
-        "date": "2026-10-09",
-        "fii": -12943.58,
-        "dii": 10703.11,
-        "combined": -2240.47
-      },
       {
         "date": "2026-10-12",
         "fii": -3568.9,
@@ -314,21 +310,28 @@
         "fii": 5866.78,
         "dii": -3159.9,
         "combined": 2706.88
+      },
+      {
+        "date": "2026-11-20",
+        "fii": 7411.41,
+        "dii": -1356.57,
+        "combined": 6054.84
       }
     ]
   },
   "flow_tailwind": true,
   "pcr": {
-    "date": "2026-11-19",
-    "pcr": 0.855,
-    "reading": "neutral",
-    "total_pe_oi": 2423098,
-    "total_ce_oi": 2835070,
-    "spot": 25227.95,
-    "max_pain": 25050.0,
-    "max_pain_dist_pct": 0.71,
-    "oi_bias": "balanced",
+    "date": "2026-11-20",
+    "pcr": 1.473,
+    "reading": "bullish_bias",
+    "total_pe_oi": 3576062,
+    "total_ce_oi": 2427458,
+    "spot": 25514.3,
+    "max_pain": 25300.0,
+    "max_pain_dist_pct": 0.84,
+    "oi_bias": "put_heavy_support",
     "ok": true,
     "error": ""
-  }
+  },
+  "oi_note": "Heavy put OI below spot \u2014 option writers see a floor (bullish lean)"
 }

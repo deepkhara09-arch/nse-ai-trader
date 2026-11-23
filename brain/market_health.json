@@ -1,6 +1,6 @@
 {
   "date": "2026-11-23",
-  "session": "preopen",
+  "session": "morning",
   "nifty": {
     "symbol": "^NSEI",
     "value": 25800.6,
@@ -63,6 +63,7 @@
   "warnings": [
     "VIX=17.3 at 86th percentile vs last 30d \u2014 unusually high stress",
     "Bank Nifty move (+2.5%) outpacing Nifty \u2014 high banking sector volatility",
+    "Nifty in intraday downtrend \u2014 avoid new longs this session",
     "Global macro risk-off (-0.42) \u2014 Overall macro mood is risk-off (-0.42). US Dow -1.9% overnight. Crude -1.2%. USD/INR -0.7%. Notable: Geopolitical confli"
   ],
   "leading_sectors": [
@@ -76,6 +77,7 @@
     "IT"
   ],
   "broad_market_strength": true,
+  "intraday_regime": "trending_down",
   "macro": {
     "date": "2026-11-23",
     "session": "preopen",

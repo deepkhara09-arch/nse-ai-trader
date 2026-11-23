@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-08-21T06:15:47.761247",
-    "date": "2026-08-21",
-    "ticker": "MARICO.NS",
-    "session": "midday",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 51.5,
-    "entry": 847.75,
-    "stop_loss": 822.2,
-    "target": 898.85,
-    "reason": "paper midday",
-    "patterns": [
-      "pivot_point_test",
-      "supertrend_bullish",
-      "tweezer_bottom"
-    ]
-  },
-  {
     "timestamp": "2026-08-21T06:15:47.764371",
     "date": "2026-08-21",
     "ticker": "ABCAPITAL.NS",
@@ -21293,6 +21275,27 @@
       "stoch_rsi_overbought_reversal",
       "full_bearish_alignment",
       "adx_strong_trend_down"
+    ]
+  },
+  {
+    "timestamp": "2026-11-23T09:45:47.663015",
+    "date": "2026-11-23",
+    "ticker": "COALINDIA.NS",
+    "session": "intraday_close",
+    "action": "SELL",
+    "signal": "SELL",
+    "confidence": 76.0,
+    "entry": 382.5,
+    "stop_loss": 395.81,
+    "target": 351.44,
+    "reason": "paper intraday_close",
+    "patterns": [
+      "pivot_s1_breakdown",
+      "engulfing_bearish",
+      "tweezer_top",
+      "adx_strong_trend_down",
+      "full_bearish_alignment",
+      "stoch_rsi_overbought_reversal"
     ]
   }
 ]

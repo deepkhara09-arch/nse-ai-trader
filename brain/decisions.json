@@ -1,25 +1,5 @@
 [
   {
-    "timestamp": "2026-08-21T04:05:46.074710",
-    "date": "2026-08-21",
-    "ticker": "HINDALCO.NS",
-    "session": "morning",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 54.9,
-    "entry": 1036.75,
-    "stop_loss": 994.47,
-    "target": 1121.32,
-    "reason": "paper morning",
-    "patterns": [
-      "pivot_s1_breakdown",
-      "pivot_point_test",
-      "adx_strong_trend_up",
-      "full_bullish_alignment",
-      "outside_bar"
-    ]
-  },
-  {
     "timestamp": "2026-08-21T04:05:46.075742",
     "date": "2026-08-21",
     "ticker": "DMART.NS",
@@ -21293,6 +21273,28 @@
       "adx_strong_trend_down",
       "pivot_s1_breakdown",
       "stoch_rsi_overbought_reversal"
+    ]
+  },
+  {
+    "timestamp": "2026-11-23T06:15:53.552707",
+    "date": "2026-11-23",
+    "ticker": "COALINDIA.NS",
+    "session": "midday",
+    "action": "SELL",
+    "signal": "SELL",
+    "confidence": 76.0,
+    "entry": 388.4,
+    "stop_loss": 401.71,
+    "target": 357.34,
+    "reason": "paper midday",
+    "patterns": [
+      "stoch_rsi_overbought_reversal",
+      "pivot_s1_breakdown",
+      "engulfing_bearish",
+      "adx_strong_trend_down",
+      "tweezer_top",
+      "full_bearish_alignment",
+      "pivot_point_test"
     ]
   }
 ]

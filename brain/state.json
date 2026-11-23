@@ -1,13 +1,13 @@
 {
   "phase": "paper_trading",
   "day": 66,
-  "session": "preclose",
+  "session": "preopen",
   "start_date": "2026-06-22",
   "phase_start_date": "2026-07-15",
   "last_run_date": "2026-11-04",
   "last_counted_date": "2026-11-04",
   "cohort_last_tick_date": "2026-11-04",
-  "last_updated": "2026-11-20T18:47:24.737552",
+  "last_updated": "2026-11-23T03:11:15.038063",
   "focus_stocks": [
     "PIDILITIND.NS",
     "GAIL.NS",
@@ -68,7 +68,6 @@
     "expectancy": 62.18
   },
   "brain_notes": [
-    "[2026-08-20] Pre-open macro: risk_on (+0.50)",
     "[2026-08-20] Focus refresh \u2014 promoted: ['DMART'] | demoted: ['LICI']",
     "[2026-08-20] Cohort batch #27 complete \u2014 30 candidates ready",
     "[2026-08-21] Pre-open macro: neutral (-0.09)",
@@ -167,7 +166,8 @@
     "[2026-11-17] Pre-open macro: neutral (-0.12)",
     "[2026-11-18] Pre-open macro: neutral (-0.11)",
     "[2026-11-19] Pre-open macro: neutral (-0.03)",
-    "[2026-11-20] Pre-open macro: neutral (-0.18)"
+    "[2026-11-20] Pre-open macro: neutral (-0.18)",
+    "[2026-11-23] Pre-open macro: risk_off (-0.42)"
   ],
   "alert_sent": false,
   "schema_version": 11,
@@ -397,6 +397,6 @@
     "scored_date": "2026-11-04"
   },
   "sessions_done": {
-    "preclose": "2026-11-21"
+    "preopen": "2026-11-23"
   }
 }

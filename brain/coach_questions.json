@@ -1,15 +1,5 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of tweezer_top, pivot_point_test, engulfing_bearish mean for a swing trade on COALINDIA? Current RSI=59, MACD hist=-0.5304, Vol=1.0x average. Signal is SELL.",
-    "context": {
-      "ticker": "COALINDIA.NS",
-      "signal": "SELL",
-      "patterns": "tweezer_top, pivot_point_test, engulfing_bearish",
-      "rsi": 58.8
-    },
-    "queued_at": "2026-11-23T04:05:45.424952"
-  },
-  {
     "question": "In Indian NSE markets, what does the combination of stoch_rsi_overbought_reversal, engulfing_bearish, tweezer_top mean for a swing trade on COALINDIA? Current RSI=59, MACD hist=-0.5304, Vol=1.0x average. Signal is SELL.",
     "context": {
       "ticker": "COALINDIA.NS",
@@ -98,5 +88,15 @@
       "rsi": 58.8
     },
     "queued_at": "2026-11-23T09:45:47.886307"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of tweezer_top, stoch_rsi_overbought_reversal, engulfing_bearish mean for a swing trade on COALINDIA? Current RSI=59, MACD hist=-0.5304, Vol=1.0x average. Signal is SELL.",
+    "context": {
+      "ticker": "COALINDIA.NS",
+      "signal": "SELL",
+      "patterns": "tweezer_top, stoch_rsi_overbought_reversal, engulfing_bearish",
+      "rsi": 58.8
+    },
+    "queued_at": "2026-11-23T19:11:28.800881"
   }
 ]

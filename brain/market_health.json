@@ -1,6 +1,6 @@
 {
-  "date": "2026-11-23",
-  "session": "intraday_close",
+  "date": "2026-11-24",
+  "session": "preclose",
   "nifty": {
     "symbol": "^NSEI",
     "value": 25800.6,
@@ -13,7 +13,7 @@
     "value": 17.32,
     "level": "normal",
     "percentile_30d": 86.0,
-    "avg_30d": 15.74
+    "avg_30d": 15.79
   },
   "bank_nifty": {
     "symbol": "^NSEBANK",
@@ -35,11 +35,11 @@
     },
     "Pharma": {
       "symbol": "PHARMABEES.NS",
-      "value": 29.08,
-      "day_change_pct": 0.0,
-      "trend_5d": "up",
+      "value": 29.05,
+      "day_change_pct": -0.1,
+      "trend_5d": "sideways",
       "trend_20d": "strong_up",
-      "ath_pct_60d": -4.53
+      "ath_pct_60d": -4.63
     },
     "Bank": {
       "symbol": "BANKBEES.NS",
@@ -63,21 +63,18 @@
   "warnings": [
     "VIX=17.3 at 86th percentile vs last 30d \u2014 unusually high stress",
     "Bank Nifty move (+2.5%) outpacing Nifty \u2014 high banking sector volatility",
-    "Nifty in intraday downtrend \u2014 avoid new longs this session",
     "Global macro risk-off (-0.23) \u2014 Overall macro mood is risk-off (-0.23). US Dow -1.9% overnight. Crude +0.9%. USD/INR -0.6%. Notable: Geopolitical confli"
   ],
   "leading_sectors": [
-    "Pharma",
     "Bank",
     "Infra"
   ],
   "market_regime": "normal",
-  "sector_breadth": 0.75,
+  "sector_breadth": 0.5,
   "lagging_sectors": [
     "IT"
   ],
-  "broad_market_strength": true,
-  "intraday_regime": "trending_down",
+  "intraday_regime": "mixed",
   "macro": {
     "date": "2026-11-23",
     "session": "midday",
@@ -135,20 +132,14 @@
   },
   "macro_risk_factor": 0.7,
   "fii_dii": {
-    "date": "2026-11-23",
-    "fii_net_cr": 10308.42,
-    "dii_net_cr": -4859.8,
-    "combined_net_cr": 5448.62,
+    "date": "2026-11-24",
+    "fii_net_cr": 5672.99,
+    "dii_net_cr": -2760.12,
+    "combined_net_cr": 2912.87,
     "signal": "strong_inflow",
     "ok": true,
     "error": "",
     "history": [
-      {
-        "date": "2026-10-14",
-        "fii": -1305.13,
-        "dii": 2439.24,
-        "combined": 1134.11
-      },
       {
         "date": "2026-10-15",
         "fii": -1857.44,
@@ -322,24 +313,28 @@
         "fii": 10308.42,
         "dii": -4859.8,
         "combined": 5448.62
+      },
+      {
+        "date": "2026-11-24",
+        "fii": 5672.99,
+        "dii": -2760.12,
+        "combined": 2912.87
       }
     ]
   },
   "flow_tailwind": true,
   "pcr": {
-    "date": "2026-11-23",
-    "pcr": 1.673,
-    "reading": "very_high_contrarian_bullish",
-    "total_pe_oi": 3884403,
-    "total_ce_oi": 2321518,
-    "spot": 25800.6,
-    "max_pain": 25500.0,
-    "max_pain_dist_pct": 1.17,
-    "oi_bias": "put_heavy_support",
+    "date": "2026-11-24",
+    "pcr": 0.739,
+    "reading": "bearish_bias",
+    "total_pe_oi": 2463256,
+    "total_ce_oi": 3331163,
+    "spot": 25349.65,
+    "max_pain": 25350.0,
+    "max_pain_dist_pct": -0.0,
+    "oi_bias": "call_heavy_resistance",
     "ok": true,
     "error": ""
   },
-  "pcr_note": "PCR very high \u2014 excessive put hedging, often a contrarian bullish sign",
-  "max_pain_note": "Spot 1.2% above max-pain (25500.0) \u2014 option writers pull toward it into expiry",
-  "oi_note": "Heavy put OI below spot \u2014 option writers see a floor (bullish lean)"
+  "oi_note": "Heavy call OI above spot \u2014 option writers see a lid (bearish lean)"
 }

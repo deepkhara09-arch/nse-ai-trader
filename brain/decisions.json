@@ -1,28 +1,5 @@
 [
   {
-    "timestamp": "2026-08-21T04:05:46.075742",
-    "date": "2026-08-21",
-    "ticker": "DMART.NS",
-    "session": "morning",
-    "action": "SELL",
-    "signal": "SELL",
-    "confidence": 55.2,
-    "entry": 3924.9,
-    "stop_loss": 4047.48,
-    "target": 3679.74,
-    "reason": "paper morning",
-    "patterns": [
-      "pivot_s1_breakdown",
-      "stoch_rsi_overbought_reversal",
-      "adx_ranging_market",
-      "ema_death_cross",
-      "full_bearish_alignment",
-      "rsi_bullish_divergence",
-      "low_volume_drift",
-      "three_black_crows"
-    ]
-  },
-  {
     "timestamp": "2026-08-21T06:15:47.761247",
     "date": "2026-08-21",
     "ticker": "MARICO.NS",
@@ -21295,6 +21272,27 @@
       "tweezer_top",
       "full_bearish_alignment",
       "pivot_point_test"
+    ]
+  },
+  {
+    "timestamp": "2026-11-23T07:45:49.626152",
+    "date": "2026-11-23",
+    "ticker": "COALINDIA.NS",
+    "session": "afternoon",
+    "action": "SELL",
+    "signal": "SELL",
+    "confidence": 76.0,
+    "entry": 383.45,
+    "stop_loss": 396.76,
+    "target": 352.39,
+    "reason": "paper afternoon",
+    "patterns": [
+      "tweezer_top",
+      "engulfing_bearish",
+      "pivot_s1_breakdown",
+      "stoch_rsi_overbought_reversal",
+      "full_bearish_alignment",
+      "adx_strong_trend_down"
     ]
   }
 ]

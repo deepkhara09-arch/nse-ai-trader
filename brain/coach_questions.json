@@ -7,16 +7,6 @@
       "patterns": "stoch_rsi_overbought_reversal, engulfing_bearish, tweezer_top",
       "rsi": 58.8
     },
-    "queued_at": "2026-11-23T06:15:53.574110"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of stoch_rsi_overbought_reversal, engulfing_bearish, tweezer_top mean for a swing trade on COALINDIA? Current RSI=59, MACD hist=-0.5304, Vol=1.0x average. Signal is SELL.",
-    "context": {
-      "ticker": "COALINDIA.NS",
-      "signal": "SELL",
-      "patterns": "stoch_rsi_overbought_reversal, engulfing_bearish, tweezer_top",
-      "rsi": 58.8
-    },
     "queued_at": "2026-11-23T06:15:53.687306"
   },
   {
@@ -98,5 +88,15 @@
       "rsi": 58.8
     },
     "queued_at": "2026-11-24T03:05:55.210444"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of engulfing_bearish, tweezer_top, stoch_rsi_overbought_reversal mean for a swing trade on COALINDIA? Current RSI=59, MACD hist=-0.5304, Vol=1.0x average. Signal is SELL.",
+    "context": {
+      "ticker": "COALINDIA.NS",
+      "signal": "SELL",
+      "patterns": "engulfing_bearish, tweezer_top, stoch_rsi_overbought_reversal",
+      "rsi": 58.8
+    },
+    "queued_at": "2026-11-24T04:05:35.346741"
   }
 ]

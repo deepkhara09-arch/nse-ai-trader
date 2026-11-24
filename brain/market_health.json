@@ -1,6 +1,6 @@
 {
   "date": "2026-11-24",
-  "session": "afternoon",
+  "session": "intraday_close",
   "nifty": {
     "symbol": "^NSEI",
     "value": 25349.65,
@@ -27,11 +27,11 @@
   "sectors": {
     "IT": {
       "symbol": "ITBEES.NS",
-      "value": 34.84,
-      "day_change_pct": 1.37,
-      "trend_5d": "down",
+      "value": 35.48,
+      "day_change_pct": 1.84,
+      "trend_5d": "sideways",
       "trend_20d": "down",
-      "ath_pct_60d": -8.29
+      "ath_pct_60d": -6.61
     },
     "Pharma": {
       "symbol": "PHARMABEES.NS",
@@ -43,19 +43,19 @@
     },
     "Bank": {
       "symbol": "BANKBEES.NS",
-      "value": 669.37,
-      "day_change_pct": 2.55,
-      "trend_5d": "strong_up",
+      "value": 649.6,
+      "day_change_pct": -2.95,
+      "trend_5d": "sideways",
       "trend_20d": "strong_up",
-      "ath_pct_60d": -0.09
+      "ath_pct_60d": -4.0
     },
     "Infra": {
       "symbol": "INFRABEES.NS",
-      "value": 998.35,
-      "day_change_pct": 0.61,
-      "trend_5d": "up",
+      "value": 985.99,
+      "day_change_pct": -1.24,
+      "trend_5d": "sideways",
       "trend_20d": "strong_up",
-      "ath_pct_60d": -0.17
+      "ath_pct_60d": -2.15
     }
   },
   "market_mood": "bearish",
@@ -65,15 +65,10 @@
     "Nifty down -1.8% today \u2014 likely institutional selling",
     "Bank Nifty move (-3.2%) outpacing Nifty \u2014 high banking sector volatility"
   ],
-  "leading_sectors": [
-    "Bank",
-    "Infra"
-  ],
+  "leading_sectors": [],
   "market_regime": "normal",
-  "sector_breadth": 0.5,
-  "lagging_sectors": [
-    "IT"
-  ],
+  "sector_breadth": 0.0,
+  "lagging_sectors": [],
   "intraday_regime": "mixed",
   "macro": {
     "date": "2026-11-24",

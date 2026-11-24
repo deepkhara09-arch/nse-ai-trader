@@ -12438,5 +12438,25 @@
     "open": 2,
     "recs": 0,
     "summary": "Preclose \u2014 NSE closed (NSE holiday); dashboard refreshed, no trading, day unchanged."
+  },
+  {
+    "date": "2026-11-24",
+    "triggered_at": "2026-11-24 08:35 IST",
+    "session": "preopen",
+    "phase": "paper_trading",
+    "day": 66,
+    "stats": {
+      "total": 11,
+      "wins": 9,
+      "losses": 2,
+      "win_rate": 0.818,
+      "total_pnl": 683.93,
+      "avg_win": 154.24,
+      "avg_loss": -352.13,
+      "expectancy": 62.18
+    },
+    "open": 2,
+    "recs": 0,
+    "summary": "Preopen \u2014 NSE closed (NSE holiday); dashboard refreshed, no trading, day unchanged."
   }
 ]

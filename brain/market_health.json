@@ -1,6 +1,6 @@
 {
   "date": "2026-11-24",
-  "session": "morning",
+  "session": "midday",
   "nifty": {
     "symbol": "^NSEI",
     "value": 25349.65,
@@ -77,11 +77,11 @@
   "intraday_regime": "mixed",
   "macro": {
     "date": "2026-11-24",
-    "session": "preopen",
-    "generated_at": "2026-11-24T03:05:53.389387",
-    "global_score": 0.376,
-    "india_score": 0.0,
-    "overall_score": 0.207,
+    "session": "midday",
+    "generated_at": "2026-11-24T06:15:51.163460",
+    "global_score": 0.448,
+    "india_score": 0.2,
+    "overall_score": 0.336,
     "mood": "risk_on",
     "drivers": [
       "I\u2019ve been married for 58 years. It\u2019s \u2018our\u2019 money, not \u2018his\u2019 and \u2018hers.\u2019 Why do so many couples keep their finances separate?",
@@ -107,29 +107,30 @@
         "chg_pct": 4.73
       },
       "nikkei": {
-        "last": 58675.79,
-        "chg_pct": 3.97
+        "last": 58659.47,
+        "chg_pct": 3.94
       },
       "crude": {
-        "last": 80.24,
-        "chg_pct": 0.09
+        "last": 80.17,
+        "chg_pct": -4.54
       },
       "usdinr": {
         "last": 92.9,
         "chg_pct": 0.24
       },
       "gold": {
-        "last": 3642.6,
-        "chg_pct": -0.24
+        "last": 3651.4,
+        "chg_pct": 3.87
       }
     },
-    "summary": "Overall macro mood is risk-on (+0.21). US Dow +3.0% overnight. Crude +0.1%. USD/INR +0.2%. Notable: Geopolitical conflict / war.",
+    "summary": "Overall macro mood is risk-on (+0.34). US Dow +3.0% overnight. Crude -4.5%. USD/INR +0.2%. Notable: Geopolitical conflict / war.",
     "playbook": [
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially."
     ],
     "playbook_bias": "risk_off",
     "article_count": 60
   },
+  "macro_tailwind": true,
   "macro_risk_factor": 1.0,
   "fii_dii": {
     "date": "2026-11-24",

@@ -1,6 +1,6 @@
 {
-  "date": "2026-11-24",
-  "session": "preclose",
+  "date": "2026-11-25",
+  "session": "preopen",
   "nifty": {
     "symbol": "^NSEI",
     "value": 25349.65,
@@ -70,64 +70,63 @@
   "sector_breadth": 0.0,
   "lagging_sectors": [],
   "macro": {
-    "date": "2026-11-24",
-    "session": "midday",
-    "generated_at": "2026-11-24T06:15:51.163460",
-    "global_score": 0.448,
+    "date": "2026-11-25",
+    "session": "preopen",
+    "generated_at": "2026-11-25T03:05:48.333554",
+    "global_score": 0.198,
     "india_score": 0.2,
-    "overall_score": 0.336,
-    "mood": "risk_on",
+    "overall_score": 0.199,
+    "mood": "neutral",
     "drivers": [
-      "I\u2019ve been married for 58 years. It\u2019s \u2018our\u2019 money, not \u2018his\u2019 and \u2018hers.\u2019 Why do so many couples keep their finances separate?",
+      "I\u2019m in my 70s and buying a new BMW X1. Should I put my only son on the title?",
+      "Dell\u2019s stock rises as the AI boom helps sales more than double",
+      "My husband secretly sends his ex-wife $1,500 a month after she lost her job. We have $2.4 million saved. Has he lied by omission?",
+      "Micron boosted CEO Sanjay Mehrotra\u2019s security budget by 2,000%, new filing shows",
+      "12 days of sardines and Croc charms: Are Advent calendars getting out of control?",
+      "Anthropic\u2019s stock just broke below its IPO price for the first time",
       "HPE just posted its strongest growth ever \u2014 but its stock is sinking",
-      "The newest addition to the S&P 500 is a maker of viral ice-cream machines",
-      "Nvidia\u2019s stock is surging again. What to know before chasing the AI rally.",
-      "U.S. stocks see best day in more than a year, as return of Jensen Huang revives AI enthusiasm",
-      "Consumer stocks, seen as safe bet amid cracks in AI trade, were among the S&P 500\u2019s biggest losers Monday",
-      "These stocks are the biggest gainers after Jensen Huang\u2019s return to Nvidia",
-      "Amazon may have just found a \u2018cheap\u2019 way to get a lot more out of its chips"
+      "How much more are richest Americans spending on the holidays compared to everyone else?"
     ],
     "global_cues": {
       "dow": {
-        "last": 49595.31,
-        "chg_pct": 3.01
+        "last": 50018.7,
+        "chg_pct": 0.85
       },
       "nasdaq": {
-        "last": 24089.56,
-        "chg_pct": 6.51
+        "last": 23733.54,
+        "chg_pct": -1.48
       },
       "sp500": {
-        "last": 7237.17,
-        "chg_pct": 4.73
+        "last": 7201.09,
+        "chg_pct": -0.5
       },
       "nikkei": {
-        "last": 58659.47,
-        "chg_pct": 3.94
+        "last": 56710.43,
+        "chg_pct": -3.3
       },
       "crude": {
-        "last": 80.17,
-        "chg_pct": -4.54
+        "last": 80.73,
+        "chg_pct": -1.61
       },
       "usdinr": {
         "last": 92.9,
-        "chg_pct": 0.24
+        "chg_pct": -0.02
       },
       "gold": {
-        "last": 3651.4,
-        "chg_pct": 3.87
+        "last": 3550.6,
+        "chg_pct": -0.32
       }
     },
-    "summary": "Overall macro mood is risk-on (+0.34). US Dow +3.0% overnight. Crude -4.5%. USD/INR +0.2%. Notable: Geopolitical conflict / war.",
+    "summary": "Overall macro mood is neutral (+0.20). US Dow +0.8% overnight. Crude -1.6%. USD/INR -0.0%. Notable: Geopolitical conflict / war.",
     "playbook": [
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially."
     ],
     "playbook_bias": "risk_off",
     "article_count": 60
   },
-  "macro_tailwind": true,
   "macro_risk_factor": 1.0,
   "fii_dii": {
-    "date": "2026-11-24",
+    "date": "2026-11-25",
     "fii_net_cr": 5672.99,
     "dii_net_cr": -2760.12,
     "combined_net_cr": 2912.87,
@@ -135,12 +134,6 @@
     "ok": true,
     "error": "",
     "history": [
-      {
-        "date": "2026-10-15",
-        "fii": -1857.44,
-        "dii": 2670.44,
-        "combined": 813.0
-      },
       {
         "date": "2026-10-16",
         "fii": -5285.37,
@@ -314,12 +307,18 @@
         "fii": 5672.99,
         "dii": -2760.12,
         "combined": 2912.87
+      },
+      {
+        "date": "2026-11-25",
+        "fii": 5672.99,
+        "dii": -2760.12,
+        "combined": 2912.87
       }
     ]
   },
   "flow_tailwind": true,
   "pcr": {
-    "date": "2026-11-24",
+    "date": "2026-11-25",
     "pcr": 0.739,
     "reading": "bearish_bias",
     "total_pe_oi": 2463256,

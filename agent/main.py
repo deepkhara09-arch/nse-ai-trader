@@ -472,8 +472,15 @@ def _run_phase(state, phase, session, market_health, day, focus):
         elif session == "preclose":
             book, patterns = preclose_session(book, tradeable_opinions, merged, patterns, market_health=market_health)
 
-        # Update win rate attribution after each session's trade activity
-        if session == "preclose":
+        # End-of-day learning/recording. Ideally at preclose, but production showed
+        # preclose often doesn't fire (flaky external cron), which silently froze the
+        # equity snapshot, the recommendation tracker and the learning loops. These
+        # steps are all IDEMPOTENT (attribution recomputes from scratch; forensics /
+        # news / rec-tracker dedupe by date), so running them at the reliable
+        # intraday_close too is safe and keeps everything current. The true day
+        # rollover still happens only at preclose (advance_session, below).
+        end_of_day = session in ("preclose", "intraday_close")
+        if end_of_day:
             patterns = update_attribution(patterns, book.get("closed_trades", []))
             # Post-mortem every closed trade: diagnose WHY each loss happened and
             # fold win/loss expectancy into the per-pattern edge memory that the
@@ -917,8 +924,10 @@ def _refresh_outputs(state: dict, market_health: dict, session: str, read_only: 
                 clog = load_changelog()
                 for c in changes:
                     print(f"[changelog] {c['type'].upper()} {c['nse_code']}: {c['detail']}")
-            # Full strategy report only needs refreshing at preclose (heavier write)
-            if session == "preclose":
+            # End-of-day recommendation recording. Runs at preclose OR intraday_close
+            # (preclose is unreliable in production, so we also do it at the reliable
+            # intraday_close; all steps dedupe by date, so running on both is safe).
+            if session in ("preclose", "intraday_close"):
                 generate_report(state, sd, pats, nd, book)
                 # ── Snapshot today's recs for the TRACK RECORD ─────────────────
                 # One RECOMMEND decision per ticker per day (preclose = the day's

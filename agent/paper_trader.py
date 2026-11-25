@@ -126,6 +126,12 @@ def intraday_close_session(book: dict, stock_data: Dict, patterns_db: Dict) -> T
     # …then square off whatever intraday remains at the 3:15 reference price.
     book, patterns_db = _close_intraday_positions(book, stock_data, patterns_db,
                                                   close_session="intraday_close")
+    # Snapshot the equity curve HERE too (idempotent — once per day). Production
+    # data showed preclose often doesn't fire (flaky external cron), so the curve
+    # was freezing. intraday_close runs reliably every trading day, so snapshotting
+    # here keeps the equity curve current even when preclose is missed; preclose's
+    # own snapshot then becomes a harmless no-op.
+    book = _snapshot(book)
     return book, patterns_db
 
 

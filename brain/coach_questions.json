@@ -7,26 +7,6 @@
       "patterns": "engulfing_bearish, tweezer_top, stoch_rsi_overbought_reversal",
       "rsi": 58.8
     },
-    "queued_at": "2026-11-23T09:45:47.662729"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of engulfing_bearish, tweezer_top, stoch_rsi_overbought_reversal mean for a swing trade on COALINDIA? Current RSI=59, MACD hist=-0.5304, Vol=1.0x average. Signal is SELL.",
-    "context": {
-      "ticker": "COALINDIA.NS",
-      "signal": "SELL",
-      "patterns": "engulfing_bearish, tweezer_top, stoch_rsi_overbought_reversal",
-      "rsi": 58.8
-    },
-    "queued_at": "2026-11-23T09:45:47.707190"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of engulfing_bearish, tweezer_top, stoch_rsi_overbought_reversal mean for a swing trade on COALINDIA? Current RSI=59, MACD hist=-0.5304, Vol=1.0x average. Signal is SELL.",
-    "context": {
-      "ticker": "COALINDIA.NS",
-      "signal": "SELL",
-      "patterns": "engulfing_bearish, tweezer_top, stoch_rsi_overbought_reversal",
-      "rsi": 58.8
-    },
     "queued_at": "2026-11-23T09:45:47.886307"
   },
   {
@@ -98,5 +78,25 @@
       "rsi": 58.8
     },
     "queued_at": "2026-11-25T03:05:49.843751"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of doji, bearish_harami, ema_death_cross mean for a swing trade on HINDALCO? Current RSI=47, MACD hist=-1.6259, Vol=1.6x average. Signal is SELL.",
+    "context": {
+      "ticker": "HINDALCO.NS",
+      "signal": "SELL",
+      "patterns": "doji, bearish_harami, ema_death_cross",
+      "rsi": 47.0
+    },
+    "queued_at": "2026-11-25T06:16:01.478445"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of doji, bearish_harami, ema_death_cross mean for a swing trade on HINDALCO? Current RSI=47, MACD hist=-1.6259, Vol=1.6x average. Signal is SELL.",
+    "context": {
+      "ticker": "HINDALCO.NS",
+      "signal": "SELL",
+      "patterns": "doji, bearish_harami, ema_death_cross",
+      "rsi": 47.0
+    },
+    "queued_at": "2026-11-25T06:16:01.649751"
   }
 ]

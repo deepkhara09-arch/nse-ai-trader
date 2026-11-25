@@ -1270,7 +1270,12 @@ def _section_portfolio(stats, portfolio, pnl_total, pnl_pct, book) -> str:
     # Showing 0.0% would look like a failed track record. Use "—" until trades exist.
     has_trades = stats["total"] > 0
     wr_pct  = round(stats["win_rate"] * 100, 1)
-    wr_disp = f"{wr_pct:.1f}%" if has_trades else "—"
+    # Honesty on SMALL samples: a 100% over 6 trades is NOT a reliable 100%. Tag the
+    # win rate as early/unvalidated until there are enough trades to trust it, so the
+    # number never implies more certainty than the data supports.
+    _small_sample = has_trades and stats["total"] < MIN_TRADES_FOR_SIGNAL
+    _ss_tag = f" <span style='font-size:.6rem;color:var(--muted)'>(early · {stats['total']}/{MIN_TRADES_FOR_SIGNAL})</span>" if _small_sample else ""
+    wr_disp = (f"{wr_pct:.1f}%{_ss_tag}") if has_trades else "—"
     wr_cls  = ("green" if stats["win_rate"] >= WIN_RATE_THRESHOLD else "yellow") if has_trades else "muted"
     exp_disp = f"&#8377;{stats['expectancy']:+,.0f}" if has_trades else "—"
     exp_cls = ("green" if stats["expectancy"] > 0 else "red") if has_trades else "muted"

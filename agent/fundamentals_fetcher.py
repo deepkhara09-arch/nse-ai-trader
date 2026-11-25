@@ -163,24 +163,35 @@ def quality_gate(fund: dict, ticker: str = "") -> dict:
     recommendation is explainable and replicable.
     """
     checks = []
+    def _num(x):
+        """Coerce to float, or None if not a usable number (handles strings, '', bad
+        types) — a data glitch must never crash the gate or silently fail a stock."""
+        if x is None:
+            return None
+        try:
+            return float(x)
+        except (TypeError, ValueError):
+            return None
+
     def rule(name, value, op, threshold, fatal=True):
+        value = _num(value)
         if value is None:
-            ok = True            # missing data is not a fail, but note it
+            # missing/unparseable data is not a fail — note it, don't block (fail-open)
             checks.append({"rule": name, "value": None, "threshold": threshold,
-                           "ok": ok, "note": "no data", "fatal": False})
+                           "ok": True, "note": "no data", "fatal": False})
             return
         ok = {">=": value >= threshold, "<=": value <= threshold,
               ">": value > threshold, "<": value < threshold}[op]
-        checks.append({"rule": name, "value": round(float(value), 2), "op": op,
+        checks.append({"rule": name, "value": round(value, 2), "op": op,
                        "threshold": threshold, "ok": ok, "fatal": fatal})
 
-    roce   = fund.get("roce")
-    roe    = fund.get("roe")
-    de     = fund.get("debt_equity")
-    pe     = fund.get("pe_ratio")
-    earn_g = fund.get("earnings_growth_pct")
-    rev_g  = fund.get("revenue_growth_pct")
-    margin = fund.get("operating_margin_pct") or fund.get("net_margin_pct")
+    roce   = _num(fund.get("roce"))
+    roe    = _num(fund.get("roe"))
+    de     = _num(fund.get("debt_equity"))
+    pe     = _num(fund.get("pe_ratio"))
+    earn_g = _num(fund.get("earnings_growth_pct"))
+    rev_g  = _num(fund.get("revenue_growth_pct"))
+    margin = _num(fund.get("operating_margin_pct")) or _num(fund.get("net_margin_pct"))
 
     # Sector-aware profitability (trader-skill "skip rules that don't fit this
     # company type"): banks/NBFCs are leveraged by design, so ROCE and Debt/Equity
@@ -206,14 +217,27 @@ def quality_gate(fund: dict, ticker: str = "") -> dict:
     # Not absurdly overvalued — a 180x P/E "dip" is still expensive (PAYTM).
     rule("P/E (not bubble-priced)",         pe,     "<=", 80, fatal=True)
     # The business is still growing (earnings OR revenue) — a shrinking business
-    # that dips is value-trapping, not mean-reverting.
-    growing = ((earn_g is not None and earn_g > 0) or
-               (rev_g is not None and rev_g > 5))
-    checks.append({"rule": "Still growing (earnings or revenue)",
-                   "value": f"earn {earn_g}% / rev {rev_g}%", "ok": growing,
-                   "fatal": True})
+    # that dips is value-trapping, not mean-reverting. Only fatal when we HAVE the
+    # data: if both growth figures are missing, this is "no data" (fail-open), not a
+    # fail — otherwise a quality stock with a temporary fundamentals gap is blocked.
+    if earn_g is None and rev_g is None:
+        checks.append({"rule": "Still growing (earnings or revenue)",
+                       "value": None, "note": "no data", "ok": True, "fatal": False})
+    else:
+        growing = ((earn_g is not None and earn_g > 0) or
+                   (rev_g is not None and rev_g > 5))
+        checks.append({"rule": "Still growing (earnings or revenue)",
+                       "value": f"earn {earn_g}% / rev {rev_g}%", "ok": growing,
+                       "fatal": True})
     # Decent operating margin — a profitable operation recovers; a thin one may not.
     rule("Operating margin (profitable)",   margin, ">=", 8, fatal=False)
+
+    # Fail-open guard: if essentially NO fundamental data was usable (every fatal
+    # check noted "no data"), don't block the dip — absence of data is not evidence
+    # of weakness. The technical "not broken" filter still applies upstream.
+    usable_fatal = [c for c in checks if c.get("fatal", True) and c.get("note") != "no data"]
+    if not usable_fatal:
+        return {"pass": True, "checks": checks, "fails": [], "note": "no fundamental data — not blocked"}
 
     fails = [c for c in checks if not c["ok"] and c.get("fatal", True)]
     return {"pass": len(fails) == 0, "checks": checks, "fails": fails}

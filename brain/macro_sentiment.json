@@ -1,54 +1,55 @@
 {
-  "date": "2026-11-25",
-  "session": "midday",
-  "generated_at": "2026-11-25T06:15:52.533623",
-  "global_score": 0.153,
-  "india_score": 0.2,
-  "overall_score": 0.174,
-  "mood": "neutral",
+  "date": "2026-11-26",
+  "session": "preopen",
+  "generated_at": "2026-11-26T03:05:49.218797",
+  "global_score": 0.152,
+  "india_score": 0.5,
+  "overall_score": 0.309,
+  "mood": "risk_on",
   "drivers": [
+    "We are living in perilous times if Nvidia\u2019s Jensen Huang dictates your 401(k) balance",
+    "Why this stock-market selloff is probably going to get worse before it gets better",
+    "A 66-year-old nurse is facing down retirement with just $500 saved. Who\u2019s to blame?",
     "I\u2019m in my 70s and buying a new BMW X1. Should I put my only son on the title?",
-    "Dell\u2019s stock rises as the AI boom helps sales more than double",
-    "My husband secretly sends his ex-wife $1,500 a month after she lost her job. We have $2.4 million saved. Has he lied by omission?",
-    "Micron boosted CEO Sanjay Mehrotra\u2019s security budget by 2,000%, new filing shows",
-    "12 days of sardines and Croc charms: Are Advent calendars getting out of control?",
-    "Anthropic\u2019s stock just broke below its IPO price for the first time",
-    "HPE just posted its strongest growth ever \u2014 but its stock is sinking",
-    "How much more are richest Americans spending on the holidays compared to everyone else?"
+    "I\u2019ve been married for 58 years. It\u2019s \u2018our\u2019 money, not \u2018his\u2019 and \u2018hers.\u2019 Why do so many couples keep their finances separate?",
+    "I hate that Jensen Huang is back at Nvidia, but I love what it\u2019s done for my 401(k). Am I a hypocrite?",
+    "Oracle, CoreWeave and other tech stocks bounce back after selloff",
+    "Nvidia\u2019s stock has given back a big chunk of Monday\u2019s rally as dip buyers cash in"
   ],
   "global_cues": {
     "dow": {
-      "last": 50018.7,
-      "chg_pct": 0.85
+      "last": 50182.95,
+      "chg_pct": 0.33
     },
     "nasdaq": {
-      "last": 23733.54,
-      "chg_pct": -1.48
+      "last": 23585.8,
+      "chg_pct": -0.62
     },
     "sp500": {
-      "last": 7201.09,
-      "chg_pct": -0.5
+      "last": 7182.78,
+      "chg_pct": -0.25
     },
     "nikkei": {
-      "last": 56972.42,
-      "chg_pct": -2.85
+      "last": 57886.95,
+      "chg_pct": 1.54
     },
     "crude": {
-      "last": 82.05,
-      "chg_pct": 2.35
+      "last": 83.93,
+      "chg_pct": 0.3
     },
     "usdinr": {
-      "last": 92.49,
-      "chg_pct": -0.46
+      "last": 92.81,
+      "chg_pct": -0.12
     },
     "gold": {
-      "last": 3561.9,
-      "chg_pct": -2.45
+      "last": 3610.8,
+      "chg_pct": 2.12
     }
   },
-  "summary": "Overall macro mood is neutral (+0.17). US Dow +0.8% overnight. Crude +2.4%. USD/INR -0.5%. Notable: Geopolitical conflict / war.",
+  "summary": "Overall macro mood is risk-on (+0.31). US Dow +0.3% overnight. Crude +0.3%. USD/INR -0.1%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
   "playbook": [
-    "Geopolitical shocks trigger global risk-off; gold up, equities down initially."
+    "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
+    "Trade-war headlines spook global markets; IT & export names react most."
   ],
   "playbook_bias": "risk_off",
   "article_count": 60

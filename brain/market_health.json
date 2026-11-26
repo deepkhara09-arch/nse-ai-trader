@@ -1,6 +1,6 @@
 {
   "date": "2026-11-26",
-  "session": "morning",
+  "session": "midday",
   "nifty": {
     "symbol": "^NSEI",
     "value": 25819.25,
@@ -75,12 +75,12 @@
   "intraday_regime": "choppy",
   "macro": {
     "date": "2026-11-26",
-    "session": "preopen",
-    "generated_at": "2026-11-26T03:05:49.218797",
-    "global_score": 0.152,
-    "india_score": 0.5,
-    "overall_score": 0.309,
-    "mood": "risk_on",
+    "session": "midday",
+    "generated_at": "2026-11-26T06:15:48.284483",
+    "global_score": 0.19,
+    "india_score": 0.0,
+    "overall_score": 0.105,
+    "mood": "neutral",
     "drivers": [
       "We are living in perilous times if Nvidia\u2019s Jensen Huang dictates your 401(k) balance",
       "Why this stock-market selloff is probably going to get worse before it gets better",
@@ -105,23 +105,23 @@
         "chg_pct": -0.25
       },
       "nikkei": {
-        "last": 57886.95,
-        "chg_pct": 1.54
+        "last": 57697.98,
+        "chg_pct": 1.2
       },
       "crude": {
-        "last": 83.93,
-        "chg_pct": 0.3
+        "last": 84.41,
+        "chg_pct": 0.87
       },
       "usdinr": {
-        "last": 92.81,
-        "chg_pct": -0.12
+        "last": 92.56,
+        "chg_pct": -0.27
       },
       "gold": {
-        "last": 3610.8,
-        "chg_pct": 2.12
+        "last": 3608.7,
+        "chg_pct": 2.06
       }
     },
-    "summary": "Overall macro mood is risk-on (+0.31). US Dow +0.3% overnight. Crude +0.3%. USD/INR -0.1%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
+    "summary": "Overall macro mood is neutral (+0.10). US Dow +0.3% overnight. Crude +0.9%. USD/INR -0.3%. Notable: Geopolitical conflict / war; Tariffs / trade war.",
     "playbook": [
       "Geopolitical shocks trigger global risk-off; gold up, equities down initially.",
       "Trade-war headlines spook global markets; IT & export names react most."
@@ -129,7 +129,6 @@
     "playbook_bias": "risk_off",
     "article_count": 60
   },
-  "macro_tailwind": true,
   "macro_risk_factor": 1.0,
   "fii_dii": {
     "date": "2026-11-26",

@@ -32,8 +32,8 @@
         "\u26a0 Daily sell fights the higher-timeframe uptrend \u2014 needs extra conviction",
         "\u26a0 Strong opposing signals present (opposing evidence 86% of the leading side) \u2014 conflicted setup, needs extra conviction"
       ],
-      "current_price": 170.59,
-      "unrealized_pnl": 170.69,
+      "current_price": 172.3,
+      "unrealized_pnl": 192.92,
       "max_held_days": 40,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -93,8 +93,8 @@
         "\u26a0 Sector momentum +0.40 \u2014 shorting a rising sector needs extra conviction",
         "Monte Carlo (3000 paths): hits target 12% vs stop 48% \u2192 20% win when it resolves, expected +0.0% [unfavourable]"
       ],
-      "current_price": 384.65,
-      "unrealized_pnl": 53.4,
+      "current_price": 386.8,
+      "unrealized_pnl": 27.6,
       "max_held_days": 40,
       "vol_regime_pct": 0.063,
       "entry_market": {
@@ -154,8 +154,8 @@
         "\u26a0 Sector momentum +0.42 \u2014 shorting a rising sector needs extra conviction",
         "Monte Carlo (3000 paths): hits target 24% vs stop 59% \u2192 29% win when it resolves, expected -0.2% [unfavourable]"
       ],
-      "current_price": 888.5,
-      "unrealized_pnl": 47.25,
+      "current_price": 902.0,
+      "unrealized_pnl": -20.25,
       "max_held_days": 40,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -171,6 +171,7 @@
         "hist_long_trend": "uptrend"
       },
       "view_hist": [
+        0,
         0,
         0
       ]
@@ -610,7 +611,7 @@
   "lifetime_wins": 6,
   "lifetime_losses": 0,
   "lifetime_pnl": 1167.46,
-  "last_pnl_reset_date": "2026-11-25",
+  "last_pnl_reset_date": "2026-11-26",
   "max_drawdown_pct": 0.0,
   "current_drawdown_pct": 0.0,
   "portfolio_peak": 100158.69,

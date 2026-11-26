@@ -1,6 +1,6 @@
 {
   "date": "2026-11-26",
-  "session": "preopen",
+  "session": "morning",
   "nifty": {
     "symbol": "^NSEI",
     "value": 25819.25,
@@ -28,11 +28,11 @@
   "sectors": {
     "IT": {
       "symbol": "ITBEES.NS",
-      "value": 35.75,
-      "day_change_pct": 0.76,
-      "trend_5d": "up",
-      "trend_20d": "sideways",
-      "ath_pct_60d": -5.9
+      "value": 35.48,
+      "day_change_pct": 1.84,
+      "trend_5d": "sideways",
+      "trend_20d": "down",
+      "ath_pct_60d": -6.61
     },
     "Pharma": {
       "symbol": "PHARMABEES.NS",
@@ -44,37 +44,34 @@
     },
     "Bank": {
       "symbol": "BANKBEES.NS",
-      "value": 660.51,
-      "day_change_pct": 1.68,
-      "trend_5d": "strong_up",
+      "value": 649.6,
+      "day_change_pct": -2.95,
+      "trend_5d": "sideways",
       "trend_20d": "strong_up",
-      "ath_pct_60d": -2.38
+      "ath_pct_60d": -4.0
     },
     "Infra": {
       "symbol": "INFRABEES.NS",
-      "value": 991.91,
-      "day_change_pct": 0.6,
-      "trend_5d": "up",
+      "value": 985.99,
+      "day_change_pct": -1.24,
+      "trend_5d": "sideways",
       "trend_20d": "strong_up",
-      "ath_pct_60d": -1.56
+      "ath_pct_60d": -2.15
     }
   },
   "market_mood": "bearish",
   "trade_allowed": true,
   "warnings": [
     "VIX=17.7 at 93th percentile vs last 30d \u2014 unusually high stress",
+    "Narrow rally \u2014 only 1/4 sectors up. Fragile move.",
     "Nifty choppy intraday \u2014 wait for cleaner setups"
   ],
   "leading_sectors": [
-    "IT",
-    "Pharma",
-    "Bank",
-    "Infra"
+    "Pharma"
   ],
   "market_regime": "normal",
-  "sector_breadth": 1.0,
+  "sector_breadth": 0.25,
   "lagging_sectors": [],
-  "broad_market_strength": true,
   "intraday_regime": "choppy",
   "macro": {
     "date": "2026-11-26",

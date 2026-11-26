@@ -32,8 +32,8 @@
         "\u26a0 Daily sell fights the higher-timeframe uptrend \u2014 needs extra conviction",
         "\u26a0 Strong opposing signals present (opposing evidence 86% of the leading side) \u2014 conflicted setup, needs extra conviction"
       ],
-      "current_price": 171.87,
-      "unrealized_pnl": 187.33,
+      "current_price": 169.5,
+      "unrealized_pnl": 156.52,
       "max_held_days": 40,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -93,8 +93,8 @@
         "\u26a0 Sector momentum +0.40 \u2014 shorting a rising sector needs extra conviction",
         "Monte Carlo (3000 paths): hits target 12% vs stop 48% \u2192 20% win when it resolves, expected +0.0% [unfavourable]"
       ],
-      "current_price": 387.2,
-      "unrealized_pnl": 22.8,
+      "current_price": 389.0,
+      "unrealized_pnl": 1.2,
       "max_held_days": 40,
       "vol_regime_pct": 0.063,
       "entry_market": {
@@ -213,8 +213,8 @@
         "MACD histogram negative",
         "Broke below Pivot S1 support \u2014 bearish"
       ],
-      "current_price": 1004.2,
-      "unrealized_pnl": 0.0,
+      "current_price": 1006.5,
+      "unrealized_pnl": 9.2,
       "max_held_days": 40,
       "vol_regime_pct": 0.09,
       "entry_market": {
@@ -228,7 +228,10 @@
         "mtf_alignment": "aligned",
         "opposing_ratio": 0.56,
         "hist_long_trend": "strong_uptrend"
-      }
+      },
+      "view_hist": [
+        0
+      ]
     }
   ],
   "closed_trades": [
@@ -372,7 +375,8 @@
       "costs": 8.78,
       "pnl_pct": 13.68,
       "won": true,
-      "open_days": 5
+      "open_days": 5,
+      "forensic_done": true
     },
     {
       "ticker": "HINDALCO.NS",
@@ -442,7 +446,8 @@
       "costs": 8.01,
       "pnl_pct": 3.91,
       "won": true,
-      "open_days": 11
+      "open_days": 11,
+      "forensic_done": true
     },
     {
       "ticker": "IDFCFIRSTB.NS",
@@ -512,7 +517,8 @@
       "costs": 6.67,
       "pnl_pct": 6.69,
       "won": true,
-      "open_days": 13
+      "open_days": 13,
+      "forensic_done": true
     },
     {
       "ticker": "BANDHANBNK.NS",
@@ -578,7 +584,8 @@
       "costs": 6.36,
       "pnl_pct": 6.69,
       "won": true,
-      "open_days": 13
+      "open_days": 13,
+      "forensic_done": true
     },
     {
       "ticker": "IDFCFIRSTB.NS",
@@ -648,7 +655,8 @@
       "costs": 6.9,
       "pnl_pct": 13.68,
       "won": true,
-      "open_days": 19
+      "open_days": 19,
+      "forensic_done": true
     }
   ],
   "daily_snapshots": [
@@ -658,16 +666,23 @@
       "capital": 85892.19,
       "open_positions": 4,
       "daily_pnl": 116.6
+    },
+    {
+      "date": "2026-11-26",
+      "portfolio_value": 100753.1,
+      "capital": 85461.2,
+      "open_positions": 4,
+      "daily_pnl": 0.0
     }
   ],
   "daily_pnl_today": 0.0,
-  "last_snapshot_date": "2026-11-04",
+  "last_snapshot_date": "2026-11-26",
   "lifetime_wins": 6,
   "lifetime_losses": 0,
   "lifetime_pnl": 1167.46,
   "last_pnl_reset_date": "2026-11-26",
   "max_drawdown_pct": 0.0,
   "current_drawdown_pct": 0.0,
-  "portfolio_peak": 100158.69,
+  "portfolio_peak": 100753.1,
   "sessions_since_peak": 0
 }

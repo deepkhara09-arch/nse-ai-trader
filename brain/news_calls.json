@@ -3606,8 +3606,8 @@
       "direction": 1,
       "score": 0.374,
       "price_at_call": 935.8,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "wrong"
     },
     {
       "date": "2026-11-04",
@@ -3615,8 +3615,8 @@
       "direction": 1,
       "score": 0.313,
       "price_at_call": 1082.3,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "wrong"
     },
     {
       "date": "2026-11-04",
@@ -3624,8 +3624,8 @@
       "direction": 1,
       "score": 0.384,
       "price_at_call": 1910.0,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "flat"
     },
     {
       "date": "2026-11-04",
@@ -3633,8 +3633,8 @@
       "direction": 1,
       "score": 0.303,
       "price_at_call": 183.89,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "right"
     },
     {
       "date": "2026-11-04",
@@ -3642,8 +3642,8 @@
       "direction": 1,
       "score": 0.343,
       "price_at_call": 420.45,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "right"
     },
     {
       "date": "2026-11-04",
@@ -3651,8 +3651,8 @@
       "direction": 1,
       "score": 0.217,
       "price_at_call": 1388.0,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "wrong"
     },
     {
       "date": "2026-11-04",
@@ -3660,8 +3660,8 @@
       "direction": 1,
       "score": 0.36,
       "price_at_call": 399.65,
-      "evaluated": false,
-      "outcome": ""
+      "evaluated": true,
+      "outcome": "wrong"
     },
     {
       "date": "2026-11-04",
@@ -3669,6 +3669,87 @@
       "direction": 1,
       "score": 0.231,
       "price_at_call": 235.0,
+      "evaluated": true,
+      "outcome": "wrong"
+    },
+    {
+      "date": "2026-11-26",
+      "ticker": "HINDALCO.NS",
+      "direction": 1,
+      "score": 0.374,
+      "price_at_call": 917.5,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-11-26",
+      "ticker": "HOMEFIRST.NS",
+      "direction": 1,
+      "score": 0.313,
+      "price_at_call": 1006.5,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-11-26",
+      "ticker": "ADANIPORTS.NS",
+      "direction": 1,
+      "score": 0.384,
+      "price_at_call": 1916.2,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-11-26",
+      "ticker": "UNIONBANK.NS",
+      "direction": 1,
+      "score": 0.303,
+      "price_at_call": 210.29,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-11-26",
+      "ticker": "VBL.NS",
+      "direction": 1,
+      "score": 0.343,
+      "price_at_call": 427.4,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-11-26",
+      "ticker": "ADANIGREEN.NS",
+      "direction": 1,
+      "score": 0.217,
+      "price_at_call": 1349.0,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-11-26",
+      "ticker": "COALINDIA.NS",
+      "direction": 1,
+      "score": 0.36,
+      "price_at_call": 389.0,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-11-26",
+      "ticker": "ONGC.NS",
+      "direction": 1,
+      "score": 0.231,
+      "price_at_call": 223.2,
+      "evaluated": false,
+      "outcome": ""
+    },
+    {
+      "date": "2026-11-26",
+      "ticker": "LICI.NS",
+      "direction": 1,
+      "score": 0.341,
+      "price_at_call": 409.75,
       "evaluated": false,
       "outcome": ""
     }
@@ -3717,10 +3798,10 @@
       "last_seen": "2026-08-07"
     },
     "UNIONBANK.NS": {
-      "wins": 9.537,
-      "losses": 5.782,
-      "reliability": 0.623,
-      "last_seen": "2026-09-15"
+      "wins": 7.292,
+      "losses": 3.815,
+      "reliability": 0.657,
+      "last_seen": "2026-11-26"
     },
     "FEDERALBNK.NS": {
       "wins": 4.798,
@@ -3747,10 +3828,10 @@
       "last_seen": "2026-09-07"
     },
     "HOMEFIRST.NS": {
-      "wins": 1.582,
-      "losses": 7.397,
-      "reliability": 0.176,
-      "last_seen": "2026-09-16"
+      "wins": 1.05,
+      "losses": 5.908,
+      "reliability": 0.151,
+      "last_seen": "2026-11-26"
     },
     "ADANIENT.NS": {
       "wins": 0.0,
@@ -3825,10 +3906,10 @@
       "last_seen": "2026-09-02"
     },
     "HINDALCO.NS": {
-      "wins": 1.331,
-      "losses": 4.346,
-      "reliability": 0.234,
-      "last_seen": "2026-11-04"
+      "wins": 1.172,
+      "losses": 4.827,
+      "reliability": 0.195,
+      "last_seen": "2026-11-26"
     },
     "LT.NS": {
       "wins": 0.0,
@@ -3849,16 +3930,16 @@
       "last_seen": "2026-09-03"
     },
     "COALINDIA.NS": {
-      "wins": 3.832,
-      "losses": 1.994,
-      "reliability": 0.658,
-      "last_seen": "2026-09-16"
+      "wins": 2.543,
+      "losses": 2.323,
+      "reliability": 0.523,
+      "last_seen": "2026-11-26"
     },
     "VBL.NS": {
-      "wins": 0.749,
-      "losses": 2.715,
-      "reliability": 0.216,
-      "last_seen": "2026-11-04"
+      "wins": 1.66,
+      "losses": 2.391,
+      "reliability": 0.41,
+      "last_seen": "2026-11-26"
     },
     "ADANIPORTS.NS": {
       "wins": 4.663,
@@ -3891,10 +3972,16 @@
       "last_seen": "2026-11-04"
     },
     "ADANIGREEN.NS": {
-      "wins": 1.0,
-      "losses": 0.0,
-      "reliability": 0.667,
-      "last_seen": "2026-11-04"
+      "wins": 0.881,
+      "losses": 1.0,
+      "reliability": 0.48,
+      "last_seen": "2026-11-26"
+    },
+    "ONGC.NS": {
+      "wins": 0.0,
+      "losses": 1.0,
+      "reliability": 0.333,
+      "last_seen": "2026-11-26"
     }
   }
 }

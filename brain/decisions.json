@@ -1,25 +1,5 @@
 [
   {
-    "timestamp": "2026-08-21T06:15:47.770976",
-    "date": "2026-08-21",
-    "ticker": "HINDALCO.NS",
-    "session": "midday",
-    "action": "BUY",
-    "signal": "BUY",
-    "confidence": 58.0,
-    "entry": 1032.9,
-    "stop_loss": 991.05,
-    "target": 1116.6,
-    "reason": "paper midday",
-    "patterns": [
-      "pivot_s1_breakdown",
-      "outside_bar",
-      "full_bullish_alignment",
-      "pivot_point_test",
-      "adx_strong_trend_up"
-    ]
-  },
-  {
     "timestamp": "2026-08-21T06:15:47.771934",
     "date": "2026-08-21",
     "ticker": "DMART.NS",
@@ -21295,6 +21275,27 @@
       "full_bearish_alignment",
       "pivot_s1_breakdown",
       "adx_ranging_market"
+    ]
+  },
+  {
+    "timestamp": "2026-11-27T07:45:53.293883",
+    "date": "2026-11-27",
+    "ticker": "HOMEFIRST.NS",
+    "session": "afternoon",
+    "action": "BUY",
+    "signal": "BUY",
+    "confidence": 56.9,
+    "entry": 1005.5,
+    "stop_loss": 904.95,
+    "target": 1146.27,
+    "reason": "paper afternoon",
+    "patterns": [
+      "full_bearish_alignment",
+      "three_black_crows",
+      "adx_ranging_market",
+      "shooting_star",
+      "bb_lower_bounce",
+      "pivot_s1_breakdown"
     ]
   }
 ]

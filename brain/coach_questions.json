@@ -7,36 +7,6 @@
       "patterns": "engulfing_bearish, tweezer_top, stoch_rsi_overbought_reversal",
       "rsi": 58.8
     },
-    "queued_at": "2026-11-23T09:45:47.886307"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of tweezer_top, stoch_rsi_overbought_reversal, engulfing_bearish mean for a swing trade on COALINDIA? Current RSI=59, MACD hist=-0.5304, Vol=1.0x average. Signal is SELL.",
-    "context": {
-      "ticker": "COALINDIA.NS",
-      "signal": "SELL",
-      "patterns": "tweezer_top, stoch_rsi_overbought_reversal, engulfing_bearish",
-      "rsi": 58.8
-    },
-    "queued_at": "2026-11-23T19:11:28.800881"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of tweezer_top, engulfing_bearish, stoch_rsi_overbought_reversal mean for a swing trade on COALINDIA? Current RSI=59, MACD hist=-0.5304, Vol=1.0x average. Signal is SELL.",
-    "context": {
-      "ticker": "COALINDIA.NS",
-      "signal": "SELL",
-      "patterns": "tweezer_top, engulfing_bearish, stoch_rsi_overbought_reversal",
-      "rsi": 58.8
-    },
-    "queued_at": "2026-11-24T03:05:55.210444"
-  },
-  {
-    "question": "In Indian NSE markets, what does the combination of engulfing_bearish, tweezer_top, stoch_rsi_overbought_reversal mean for a swing trade on COALINDIA? Current RSI=59, MACD hist=-0.5304, Vol=1.0x average. Signal is SELL.",
-    "context": {
-      "ticker": "COALINDIA.NS",
-      "signal": "SELL",
-      "patterns": "engulfing_bearish, tweezer_top, stoch_rsi_overbought_reversal",
-      "rsi": 58.8
-    },
     "queued_at": "2026-11-24T04:05:35.346741"
   },
   {
@@ -98,5 +68,35 @@
       "rsi": 47.0
     },
     "queued_at": "2026-11-25T06:16:01.649751"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of bb_lower_bounce, three_black_crows mean for a swing trade on HOMEFIRST? Current RSI=39, MACD hist=-4.0543, Vol=1.0x average. Signal is BUY.",
+    "context": {
+      "ticker": "HOMEFIRST.NS",
+      "signal": "BUY",
+      "patterns": "bb_lower_bounce, three_black_crows",
+      "rsi": 39.0
+    },
+    "queued_at": "2026-11-27T04:05:49.760665"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of bb_lower_bounce, three_black_crows mean for a swing trade on HOMEFIRST? Current RSI=39, MACD hist=-4.0543, Vol=1.0x average. Signal is BUY.",
+    "context": {
+      "ticker": "HOMEFIRST.NS",
+      "signal": "BUY",
+      "patterns": "bb_lower_bounce, three_black_crows",
+      "rsi": 39.0
+    },
+    "queued_at": "2026-11-27T04:05:49.810134"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of bb_lower_bounce, three_black_crows mean for a swing trade on HOMEFIRST? Current RSI=39, MACD hist=-4.0543, Vol=1.0x average. Signal is BUY.",
+    "context": {
+      "ticker": "HOMEFIRST.NS",
+      "signal": "BUY",
+      "patterns": "bb_lower_bounce, three_black_crows",
+      "rsi": 39.0
+    },
+    "queued_at": "2026-11-27T04:05:49.983881"
   }
 ]

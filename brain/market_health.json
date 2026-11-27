@@ -1,6 +1,6 @@
 {
-  "date": "2026-11-27",
-  "session": "intraday_close",
+  "date": "2026-11-28",
+  "session": "preclose",
   "nifty": {
     "symbol": "^NSEI",
     "value": 25884.5,
@@ -12,8 +12,8 @@
   "vix": {
     "value": 16.84,
     "level": "normal",
-    "percentile_30d": 70.0,
-    "avg_30d": 15.97
+    "percentile_30d": 69.0,
+    "avg_30d": 16.03
   },
   "bank_nifty": {
     "symbol": "^NSEBANK",
@@ -35,11 +35,11 @@
     },
     "Pharma": {
       "symbol": "PHARMABEES.NS",
-      "value": 29.87,
-      "day_change_pct": 0.71,
+      "value": 29.71,
+      "day_change_pct": -0.54,
       "trend_5d": "up",
       "trend_20d": "strong_up",
-      "ath_pct_60d": -1.94
+      "ath_pct_60d": -2.94
     },
     "Bank": {
       "symbol": "BANKBEES.NS",
@@ -58,9 +58,11 @@
       "ath_pct_60d": -1.49
     }
   },
-  "market_mood": "bullish",
+  "market_mood": "neutral",
   "trade_allowed": true,
-  "warnings": [],
+  "warnings": [
+    "PCR low (0.59) \u2014 market complacent, caution"
+  ],
   "leading_sectors": [
     "IT",
     "Pharma",
@@ -129,20 +131,14 @@
   },
   "macro_risk_factor": 1.0,
   "fii_dii": {
-    "date": "2026-11-27",
-    "fii_net_cr": 5843.33,
-    "dii_net_cr": 5630.72,
-    "combined_net_cr": 11474.05,
-    "signal": "strong_inflow",
+    "date": "2026-11-28",
+    "fii_net_cr": 1634.33,
+    "dii_net_cr": -556.42,
+    "combined_net_cr": 1077.91,
+    "signal": "inflow",
     "ok": true,
     "error": "",
     "history": [
-      {
-        "date": "2026-10-20",
-        "fii": -1148.64,
-        "dii": 3201.19,
-        "combined": 2052.55
-      },
       {
         "date": "2026-10-21",
         "fii": -1148.64,
@@ -316,21 +312,27 @@
         "fii": 5843.33,
         "dii": 5630.72,
         "combined": 11474.05
+      },
+      {
+        "date": "2026-11-28",
+        "fii": 1634.33,
+        "dii": -556.42,
+        "combined": 1077.91
       }
     ]
   },
-  "flow_tailwind": true,
   "pcr": {
-    "date": "2026-11-27",
-    "pcr": 1.031,
-    "reading": "neutral",
-    "total_pe_oi": 2430841,
-    "total_ce_oi": 2358704,
-    "spot": 25884.5,
-    "max_pain": 25800.0,
-    "max_pain_dist_pct": 0.33,
-    "oi_bias": "balanced",
+    "date": "2026-11-28",
+    "pcr": 0.588,
+    "reading": "complacent_caution",
+    "total_pe_oi": 2332563,
+    "total_ce_oi": 3965365,
+    "spot": 25607.2,
+    "max_pain": 25700.0,
+    "max_pain_dist_pct": -0.36,
+    "oi_bias": "call_heavy_resistance",
     "ok": true,
     "error": ""
-  }
+  },
+  "oi_note": "Heavy call OI above spot \u2014 option writers see a lid (bearish lean)"
 }

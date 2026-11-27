@@ -1,15 +1,5 @@
 [
   {
-    "question": "In Indian NSE markets, what does the combination of bb_lower_bounce, three_black_crows mean for a swing trade on HOMEFIRST? Current RSI=39, MACD hist=-4.0543, Vol=1.0x average. Signal is BUY.",
-    "context": {
-      "ticker": "HOMEFIRST.NS",
-      "signal": "BUY",
-      "patterns": "bb_lower_bounce, three_black_crows",
-      "rsi": 39.0
-    },
-    "queued_at": "2026-11-27T04:05:49.983881"
-  },
-  {
     "question": "In Indian NSE markets, what does the combination of three_black_crows, bb_lower_bounce mean for a swing trade on HOMEFIRST? Current RSI=39, MACD hist=-4.0543, Vol=1.0x average. Signal is BUY.",
     "context": {
       "ticker": "HOMEFIRST.NS",
@@ -98,5 +88,15 @@
       "rsi": 31.0
     },
     "queued_at": "2026-11-27T09:45:44.395380"
+  },
+  {
+    "question": "In Indian NSE markets, what does the combination of three_black_crows, bb_lower_bounce mean for a swing trade on HOMEFIRST? Current RSI=31, MACD hist=-5.8476, Vol=1.6x average. Signal is BUY.",
+    "context": {
+      "ticker": "HOMEFIRST.NS",
+      "signal": "BUY",
+      "patterns": "three_black_crows, bb_lower_bounce",
+      "rsi": 31.0
+    },
+    "queued_at": "2026-11-27T19:19:41.939386"
   }
 ]

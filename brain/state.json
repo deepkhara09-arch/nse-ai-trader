@@ -1,13 +1,13 @@
 {
   "phase": "paper_trading",
   "day": 66,
-  "session": "afternoon",
+  "session": "intraday_close",
   "start_date": "2026-06-22",
   "phase_start_date": "2026-07-15",
   "last_run_date": "2026-11-04",
   "last_counted_date": "2026-11-04",
   "cohort_last_tick_date": "2026-11-04",
-  "last_updated": "2026-11-27T07:45:53.370382",
+  "last_updated": "2026-11-27T09:45:44.266174",
   "focus_stocks": [
     "PIDILITIND.NS",
     "GAIL.NS",
@@ -58,14 +58,14 @@
     "SBIN.NS"
   ],
   "paper_trade_stats": {
-    "total": 6,
-    "wins": 6,
+    "total": 7,
+    "wins": 7,
     "losses": 0,
     "win_rate": 1.0,
-    "total_pnl": 1167.46,
-    "avg_win": 194.58,
+    "total_pnl": 1285.67,
+    "avg_win": 183.67,
     "avg_loss": 0.0,
-    "expectancy": 194.58
+    "expectancy": 183.67
   },
   "brain_notes": [
     "[2026-08-21] Focus refresh \u2014 promoted: ['GRASIM'] | demoted: ['DMART']",
@@ -400,6 +400,7 @@
     "preopen": "2026-11-27",
     "morning": "2026-11-27",
     "midday": "2026-11-27",
-    "afternoon": "2026-11-27"
+    "afternoon": "2026-11-27",
+    "intraday_close": "2026-11-27"
   }
 }
